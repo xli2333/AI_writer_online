@@ -427,31 +427,60 @@ export const CaseViewer: React.FC<CaseViewerProps> = ({ data, onReset, onUpdateC
       }
   };
 
-  const downloadPDF = (elementRef: React.RefObject<HTMLDivElement>, filename: string) => {
+  const downloadPDF = async (elementRef: React.RefObject<HTMLDivElement>, filename: string) => {
       const element = elementRef.current;
       if (!element) return;
       
       setIsDownloading(true);
+      // Wait for web fonts to be fully ready before snapshotting to avoid CJK overlap.
+      if ((document as any).fonts?.ready) {
+          await (document as any).fonts.ready;
+      }
+
+      const captureWidth = Math.ceil(element.scrollWidth || element.getBoundingClientRect().width);
+      const captureId = `pdf-capture-${Date.now()}`;
+      element.setAttribute('data-pdf-capture-id', captureId);
+
       const opt = {
-        margin:       [12, 12, 12, 12], 
+        margin:       [10, 10, 10, 10],
         filename:     filename,
         image:        { type: 'jpeg', quality: 0.98 },
-        html2canvas:  { scale: 2, useCORS: true, letterRendering: true },
+        html2canvas:  {
+            scale: 2,
+            useCORS: true,
+            backgroundColor: '#ffffff',
+            width: captureWidth,
+            windowWidth: captureWidth,
+            scrollX: 0,
+            scrollY: 0,
+            onclone: (doc: Document) => {
+                const clonedRoot = doc.querySelector(`[data-pdf-capture-id="${captureId}"]`) as HTMLElement | null;
+                if (clonedRoot) {
+                    clonedRoot.style.maxWidth = 'none';
+                    clonedRoot.style.overflow = 'visible';
+                    clonedRoot.style.width = `${captureWidth}px`;
+                }
+            }
+        },
         jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' },
-        pagebreak:    { mode: ['avoid-all', 'css', 'legacy'] } 
+        pagebreak:    {
+            mode: ['css', 'legacy'],
+            avoid: ['.break-inside-avoid', 'table', 'tr', 'blockquote', 'h1', 'h2', 'h3']
+        }
       };
 
-      // @ts-ignore
-      if (window.html2pdf) {
+      try {
           // @ts-ignore
-          window.html2pdf().set(opt).from(element).save().then(() => {
-              setIsDownloading(false);
-          }).catch((err: any) => {
-              console.error("PDF Generation Error", err);
-              setIsDownloading(false);
-          });
-      } else {
-          alert("PDF Generator library not loaded. Please refresh.");
+          if (!window.html2pdf) {
+              alert("PDF Generator library not loaded. Please refresh.");
+              return;
+          }
+          // @ts-ignore
+          await window.html2pdf().set(opt).from(element).save();
+      } catch (err) {
+          console.error("PDF Generation Error", err);
+      } finally {
+          element.removeAttribute('data-pdf-capture-id');
           setIsDownloading(false);
       }
   };
