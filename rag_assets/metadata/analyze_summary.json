@@ -1,0 +1,12 @@
+{
+  "model": "gemini-2.5-flash-lite",
+  "processed_in_this_run": 793,
+  "total_indexed_articles": 1193,
+  "failed_in_this_run": 0,
+  "year_filter": null,
+  "force": false,
+  "concurrency": 20,
+  "api_key_count": 6,
+  "shard_count": 1,
+  "shard_index": null
+}

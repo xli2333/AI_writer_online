@@ -56,7 +56,7 @@ export const SelectionMenu: React.FC<SelectionMenuProps> = ({ position, selected
                     type="text"
                     value={instruction}
                     onChange={(e) => setInstruction(e.target.value)}
-                    placeholder="E.g., Make this more concise..."
+                    placeholder="例如：压缩这段、补一个数据、把语气收紧"
                     disabled={isLoading}
                     onKeyDown={(e) => {
                         if (e.key === 'Enter' && !e.shiftKey) {

@@ -1,0 +1,51 @@
+{
+  "id": "f064c18ae5ff",
+  "year": "2023",
+  "date": "2023-02-21",
+  "title": "FBK翻书日签丨2023年2月21日",
+  "relative_path": "2023/2023-02-21_FBK翻书日签丨2023年2月21日.txt",
+  "full_text_path": "C:\\Users\\LXG\\BizCase\\raw_materials\\2023\\2023-02-21_FBK翻书日签丨2023年2月21日.txt",
+  "char_count": 353,
+  "industry": [
+    "互联网"
+  ],
+  "topic": [
+    "社交媒体",
+    "内容营销"
+  ],
+  "genre": "日签",
+  "style": [
+    "通知",
+    "简短"
+  ],
+  "audience": [
+    "社交媒体用户"
+  ],
+  "intent": [
+    "信息传递"
+  ],
+  "tone": [
+    "陈述"
+  ],
+  "structure_pattern": "标题-日期-链接-来源-内容摘要",
+  "core_argument": "提供2023年2月21日的FBK翻书日签链接，并指出该页面触发了图片搜索模式。",
+  "key_points": [
+    "FBK翻书日签，日期为2023年2月21日。",
+    "提供了文章的微信链接。",
+    "文章来源为wechat_fallback_global。",
+    "该页面触发了全局图片搜索，找到1张图片。"
+  ],
+  "opening_pattern": "固定标题格式：FBK翻书日签丨XXXX年XX月XX日",
+  "ending_pattern": "对页面内容（图片搜索）的简单说明。",
+  "notable_phrases": [
+    "FBK翻书日签",
+    "wechat_fallback_global",
+    "全局图片搜索模式"
+  ],
+  "quality_score": 10,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "此内容是关于FBK翻书日签在2023年2月21日的推文。文章提供了微信文章链接，并标注了来源模式为wechat_fallback_global。内容还提到该页面触发了全局图片搜索，并找到了1张图片。整体内容信息量极低，主要为通知和链接指向。",
+  "summary_500": "这篇微信推文的主要内容是发布FBK翻书日签，日期定格在2023年2月21日。文章结构简单，首先是标题和日期，紧接着是文章的微信链接（mp.weixin.qq.com），并指明了信息来源模式为“wechat_fallback_global (Fallback Global)”。文章主体部分极短，只提及“此页面触发全局图片搜索模式，共找到 1 张图片。”，表明该推文可能主要通过图片来传达信息，或者其附带的图片触发了某种自动搜索功能。该文章缺乏深入的观点、详细的介绍或实际的价值信息，其核心功能是作为日签的发布和链接导引，以及一个关于图片搜索模式的附注。因此，其作为一篇独立内容的价值有限，更多是作为系列内容（日签）的更新通知。"
+}

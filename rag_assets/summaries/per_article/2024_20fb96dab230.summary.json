@@ -1,0 +1,58 @@
+{
+  "id": "20fb96dab230",
+  "year": "2024",
+  "date": "2024-03-05",
+  "title": "新城市科学丨FBK翻书日签 2024年3月5日",
+  "relative_path": "2024/2024-03-05_新城市科学丨FBK翻书日签 2024年3月5日.txt",
+  "full_text_path": "C:\\Users\\LXG\\BizCase\\raw_materials\\2024\\2024-03-05_新城市科学丨FBK翻书日签 2024年3月5日.txt",
+  "char_count": 358,
+  "industry": [
+    "科技",
+    "信息技术"
+  ],
+  "topic": [
+    "AI",
+    "城市科学",
+    "数据分析"
+  ],
+  "genre": "日签",
+  "style": [
+    "信息摘要",
+    "科普"
+  ],
+  "audience": [
+    "科技爱好者",
+    "城市规划者",
+    "AI从业者"
+  ],
+  "intent": [
+    "信息传播",
+    "知识分享"
+  ],
+  "tone": [
+    "客观",
+    "信息性"
+  ],
+  "structure_pattern": "标题-日期-链接-来源-内容摘要",
+  "core_argument": "提供每日一个与城市科学或AI相关的知识点或信息。",
+  "key_points": [
+    "FBK翻书日签",
+    "2024年3月5日",
+    "与新城市科学相关",
+    "来源模式为wechat_fallback_global",
+    "共找到1张图片"
+  ],
+  "opening_pattern": "标题和日期",
+  "ending_pattern": "图片搜索结果说明",
+  "notable_phrases": [
+    "新城市科学",
+    "FBK翻书日签",
+    "wechat_fallback_global"
+  ],
+  "quality_score": 25,
+  "reference_value_score": 20,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "这是一篇微信公众号文章的节选，标题为“新城市科学丨FBK翻书日签 2024年3月5日”。文章提供了具体的日期信息（2024年3月5日）和一个微信链接。文章的来源模式标注为“wechat_fallback_global”。正文简短，指出该页面触发了全局图片搜索模式，并找到了1张图片。内容非常简略，主要目的是传递一个日期和链接信息，缺乏实质性的内容深度。",
+  "summary_500": "该文章节选自微信公众号，标题为“新城市科学丨FBK翻书日签 2024年3月5日”，发布于2024年3月5日。文章的核心内容非常有限，主要包括一个指向微信的链接（http://mp.weixin.qq.com/s?__biz=MjM5NzA0MTA4MA==&mid=2650333647&idx=2&sn=76fb6b8087804baa409e3034bc1f9d81&chksm=beec4718899bce0e1abdd7c002a62da488ccf3b26b6aacefb7400d568f98c5a8e4d4f7ac598f#rd）。文章的来源模式被标记为“wechat_fallback_global (Fallback Global)”。正文部分极短，仅提及“此页面触发全局图片搜索模式，共找到1张图片。”。整体来看，这篇文章的信息密度极低，其价值主要体现在作为一个“日签”的简单信息传递，缺乏深入的行业分析、观点阐述或详细的技术介绍。文章更像是一个通知或链接的摘要，而非一篇独立、完整的内容文章。其受众可能主要是对该系列“FBK翻书日签”感兴趣的特定用户，但其内容不足以吸引广泛的读者群体或提供有价值的参考信息。"
+}

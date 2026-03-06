@@ -1,18 +1,24 @@
 {
-  "name": "bizcase-ai",
+  "name": "writing-workspace-ai",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "rag:prepare": "node scripts/rag/prepare-corpus.mjs",
+    "rag:analyze": "node scripts/rag/analyze-articles.mjs",
+    "rag:skills": "node scripts/rag/build-core-skills.mjs",
+    "rag:task": "node scripts/rag/run-writing-task.mjs"
   },
   "dependencies": {
-    "react-dom": "^19.2.0",
-    "@google/genai": "^1.30.0",
+    "@google/genai": "^1.44.0",
+    "@heroicons/react": "^2.2.0",
+    "html2pdf.js": "^0.14.0",
     "react": "^19.2.0",
-    "@heroicons/react": "^2.2.0"
+    "react-dom": "^19.2.0",
+    "undici": "^7.22.0"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",

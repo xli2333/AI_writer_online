@@ -1,0 +1,52 @@
+{
+  "id": "482661df9805",
+  "year": "2023",
+  "date": "2023-02-13",
+  "title": "FBK翻书日签丨2023年2月13日",
+  "relative_path": "2023/2023-02-13_FBK翻书日签丨2023年2月13日.txt",
+  "full_text_path": "C:\\Users\\LXG\\BizCase\\raw_materials\\2023\\2023-02-13_FBK翻书日签丨2023年2月13日.txt",
+  "char_count": 353,
+  "industry": [
+    "互联网"
+  ],
+  "topic": [
+    "日签",
+    "每日一句"
+  ],
+  "genre": "资讯",
+  "style": [
+    "简洁",
+    "日常"
+  ],
+  "audience": [
+    "微信用户",
+    "普通大众"
+  ],
+  "intent": [
+    "信息传递"
+  ],
+  "tone": [
+    "平实"
+  ],
+  "structure_pattern": "标题+日期+链接+来源+内容摘要",
+  "core_argument": "提供当日的日签信息，并附带链接和来源。",
+  "key_points": [
+    "FBK翻书日签",
+    "2023年2月13日",
+    "微信文章链接",
+    "全局图片搜索模式",
+    "找到1张图片"
+  ],
+  "opening_pattern": "标题+日期",
+  "ending_pattern": "图片搜索结果",
+  "notable_phrases": [
+    "FBK翻书日签",
+    "全局图片搜索模式"
+  ],
+  "quality_score": 10,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "此为FBK翻书日签2023年2月13日的微信文章。文章主要包含了标题、日期、原始链接，并注明了来源模式为wechat_fallback_global。此外，文章提到此页面触发了全局图片搜索模式，共找到1张图片。",
+  "summary_500": "此文章是FBK翻书日签在2023年2月13日发布的微信内容。文章结构清晰，首先展示了标题“FBK翻书日签丨2023年2月13日”和发布日期“2023-02-13”。接着提供了原文的微信链接，方便用户跳转查看。来源模式被标记为“wechat_fallback_global (Fallback Global)”，表明其可能为微信公众号的全局回退内容。文章主体部分简短，重点在于告知用户该页面触发了全局图片搜索模式，并且成功找到了一张图片。整体内容信息量不高，更像是一个简单的信息推送或页面状态说明，缺乏深度内容和观点输出。"
+}

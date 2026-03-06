@@ -1,0 +1,44 @@
+{
+  "id": "9d0df139c635",
+  "year": "2023",
+  "date": "2023-09-07",
+  "title": "跨越鸿沟丨FBK翻书日签 2023年9月7日",
+  "relative_path": "2023/2023-09-07_跨越鸿沟丨FBK翻书日签 2023年9月7日.txt",
+  "full_text_path": "C:\\Users\\LXG\\BizCase\\raw_materials\\2023\\2023-09-07_跨越鸿沟丨FBK翻书日签 2023年9月7日.txt",
+  "char_count": 357,
+  "industry": [
+    "互联网"
+  ],
+  "topic": [
+    "社交媒体"
+  ],
+  "genre": "日签",
+  "style": [
+    "简洁"
+  ],
+  "audience": [
+    "普通用户"
+  ],
+  "intent": [
+    "信息传递"
+  ],
+  "tone": [
+    "日常"
+  ],
+  "structure_pattern": "标题+日期+链接+正文",
+  "core_argument": "无",
+  "key_points": [],
+  "opening_pattern": "标题+日期",
+  "ending_pattern": "提取信息",
+  "notable_phrases": [
+    "跨越鸿沟",
+    "FBK翻书日签",
+    "2023年9月7日"
+  ],
+  "quality_score": 10.5,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "这是一篇非常简短的内容，仅包含标题“跨越鸿沟丨FBK翻书日签 2023年9月7日”和日期。文章还提供了一个微信公众号链接，并说明该页面触发了全局图片搜索模式，共找到1张图片。内容价值极低，缺乏实质信息。",
+  "summary_500": "该文章的核心内容是“跨越鸿沟丨FBK翻书日签 2023年9月7日”，并附带了发布日期。文章提供了一个指向微信公众号的链接，其原始来源模式被标记为“wechat_fallback_global”。最后，文章提示该页面触发了全局图片搜索，并成功找到了一张图片。整体而言，这篇文章的信息密度极低，几乎不包含任何有价值的商业洞察或可供深度分析的内容。它更像是一个动态的通知或链接的占位符，而不是一篇具有独立内容的文章。因此，其质量评分和参考价值评分都非常低。"
+}

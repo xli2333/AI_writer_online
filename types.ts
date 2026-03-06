@@ -1,40 +1,92 @@
-
 export enum GenerationStep {
   IDLE = 'IDLE',
-  RESEARCHING = 'RESEARCHING', // Gathering info (General, Quant, Human)
-  SELECTING_OBJECTIVE = 'SELECTING_OBJECTIVE', // User chooses objective
-  REVIEW_FRAMEWORK = 'REVIEW_FRAMEWORK', // New: User reviews and refines framework
-  DRAFTING = 'DRAFTING', // Writing content & notes
+  RESEARCHING = 'RESEARCHING',
+  REVIEWING_RESEARCH = 'REVIEWING_RESEARCH',
+  SELECTING_DIRECTION = 'SELECTING_DIRECTION',
+  REVIEWING_OUTLINE = 'REVIEWING_OUTLINE',
+  WRITING = 'WRITING',
   COMPLETED = 'COMPLETED',
-  ERROR = 'ERROR'
+  ERROR = 'ERROR',
 }
 
 export interface SearchSource {
   title: string;
   uri: string;
-  snippet?: string; // Added optional snippet
+  snippet?: string;
+  track?: string;
 }
 
 export interface UploadedFile {
   name: string;
   mimeType: string;
-  data: string; // Base64 for binary, string for text
+  data: string;
   isText: boolean;
 }
 
-export interface CaseStudyData {
+export interface ResearchDocument {
+  id: string;
+  title: string;
+  content: string;
+}
+
+export interface WritingTaskOptions {
+  genre: string;
+  style: string;
+  audience: string;
+  articleGoal: string;
+  desiredLength: number;
+  chunkLength: number;
+  includeTeachingNotes: boolean;
+  enableDeepResearch: boolean;
+  deepResearchPrompt: string;
+}
+
+export interface WritingChunkPlanItem {
+  index: number;
+  title: string;
+  sections: string[];
+  targetLength: number;
+  purpose: string;
+}
+
+export interface ReferenceTemplateArticle {
+  id: string;
+  title: string;
+  date?: string;
+  genre?: string;
+  style?: string[];
+  summary?: string;
+  structurePattern?: string;
+  openingPattern?: string;
+  endingPattern?: string;
+  coreArgument?: string;
+  relativePath?: string;
+  fullText?: string;
+  whySelected?: string;
+  score?: number;
+}
+
+export interface WritingProjectData {
   topic: string;
   sources: SearchSource[];
-  context: string; // Aggregated info
-  objectives: string[]; // The 5 generated options
-  selectedObjective?: string;
-  framework?: string;
-  caseContent?: string;
+  ammoLibrary: string;
+  researchDocuments: ResearchDocument[];
+  referenceArticles: ReferenceTemplateArticle[];
+  directions: string[];
+  selectedDirection?: string;
+  outline?: string;
+  writingInsights?: string;
+  evidenceCards?: string;
+  chunkPlan?: WritingChunkPlanItem[];
+  critique?: string;
+  articleContent?: string;
   teachingNotes?: string;
+  options: WritingTaskOptions;
 }
 
 export interface GenerationState {
   step: GenerationStep;
-  progress: number; // 0 to 100
+  progress: number;
   message: string;
+  details?: string;
 }

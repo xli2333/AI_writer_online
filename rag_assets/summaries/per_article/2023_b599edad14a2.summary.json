@@ -1,0 +1,52 @@
+{
+  "id": "b599edad14a2",
+  "year": "2023",
+  "date": "2023-09-21",
+  "title": "富种起源丨FBK翻书日签 2023年9月21日",
+  "relative_path": "2023/2023-09-21_富种起源丨FBK翻书日签 2023年9月21日.txt",
+  "full_text_path": "C:\\Users\\LXG\\BizCase\\raw_materials\\2023\\2023-09-21_富种起源丨FBK翻书日签 2023年9月21日.txt",
+  "char_count": 358,
+  "industry": [
+    "互联网"
+  ],
+  "topic": [
+    "社交媒体",
+    "内容运营"
+  ],
+  "genre": "日签",
+  "style": [
+    "信息提示"
+  ],
+  "audience": [
+    "社交媒体用户"
+  ],
+  "intent": [
+    "信息发布"
+  ],
+  "tone": [
+    "中性"
+  ],
+  "structure_pattern": "标题-日期-链接-来源-内容摘要",
+  "core_argument": "此页面为微信公众号文章的链接，触发了全局图片搜索模式，找到一张图片。",
+  "key_points": [
+    "文章标题为“富种起源丨FBK翻书日签 2023年9月21日”。",
+    "发布日期为2023年9月21日。",
+    "提供了一个微信公众号文章的链接。",
+    "文章来源模式为wechat_fallback_global。",
+    "触发了全局图片搜索模式，找到1张图片。"
+  ],
+  "opening_pattern": "标题和日期",
+  "ending_pattern": "关于图片搜索的说明",
+  "notable_phrases": [
+    "富种起源",
+    "FBK翻书日签",
+    "wechat_fallback_global",
+    "全局图片搜索模式"
+  ],
+  "quality_score": 10,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "本文是微信公众号“FBK翻书日签”在2023年9月21日发布的一篇内容，标题为“富种起源”。文章提供了一个微信公众号的链接，并说明此页面触发了全局图片搜索模式，找到了1张图片。其来源模式为wechat_fallback_global。",
+  "summary_500": "此文章的元信息显示，它来自微信公众号平台，标题为“富种起源丨FBK翻书日签 2023年9月21日”，发布日期为2023年9月21日。文章提供了一个指向具体微信公众号文章的链接。根据来源模式“wechat_fallback_global”推测，该链接可能为一个失效或回退链接。文章内容提示，该页面触发了全局图片搜索模式，并成功找到了一张图片。总的来说，该信息本身价值较低，更像是一个内容索引或页面抓取记录，而非提供具体信息的独立文章。"
+}

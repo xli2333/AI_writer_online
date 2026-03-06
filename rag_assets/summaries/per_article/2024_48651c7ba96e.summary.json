@@ -1,0 +1,52 @@
+{
+  "id": "48651c7ba96e",
+  "year": "2024",
+  "date": "2024-01-10",
+  "title": "边界丨FBK翻书日签 2024年1月10日",
+  "relative_path": "2024/2024-01-10_边界丨FBK翻书日签 2024年1月10日.txt",
+  "full_text_path": "C:\\Users\\LXG\\BizCase\\raw_materials\\2024\\2024-01-10_边界丨FBK翻书日签 2024年1月10日.txt",
+  "char_count": 356,
+  "industry": [
+    "互联网"
+  ],
+  "topic": [
+    "内容生产",
+    "社交媒体"
+  ],
+  "genre": "日签",
+  "style": [
+    "简洁",
+    "信息提示"
+  ],
+  "audience": [
+    "社交媒体用户"
+  ],
+  "intent": [
+    "信息分享"
+  ],
+  "tone": [
+    "中性"
+  ],
+  "structure_pattern": "标题 - 日期 - 链接 - 来源信息 - 摘要",
+  "core_argument": "这是一条包含链接和来源信息的社交媒体日签内容。",
+  "key_points": [
+    "标题为'边界丨FBK翻书日签 2024年1月10日'",
+    "发布日期为2024年1月10日",
+    "提供了一个微信文章的链接",
+    "来源模式为'wechat_fallback_global'",
+    "触发了全局图片搜索模式，找到1张图片"
+  ],
+  "opening_pattern": "标题",
+  "ending_pattern": "摘要信息",
+  "notable_phrases": [
+    "边界丨FBK翻书日签",
+    "wechat_fallback_global",
+    "全局图片搜索模式"
+  ],
+  "quality_score": 25,
+  "reference_value_score": 15,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容是一条来自FBK翻书的2024年1月10日的日签，标题为“边界”。文章提供了微信公众号文章的链接，来源模式显示为“wechat_fallback_global”。此外，还提到此页面触发了全局图片搜索模式，并找到了1张图片。整体内容信息量较低，偏向通知和链接指向。",
+  "summary_500": "这篇微信推文，标题为“边界丨FBK翻书日签 2024年1月10日”，发布于2024年1月10日。其核心内容是提供了一个指向微信公众号文章的链接（http://mp.weixin.qq.com/s?__biz=MjM5NzA0MTA4MA==&mid=2650332687&idx=1&sn=8a18fcc8b676a99a6012fd98aa98dc06&chksm=beec78d8899bf1ce246d8375cdbeaaf3b5eba7fc5e7e01d5a3f0f4d3712bf8386b25186dcdb9#rd）。文章的来源模式被标记为“wechat_fallback_global”。特别指出的是，该页面触发了全局图片搜索功能，并成功找到了一张图片。从内容上看，这更像是一条带有元信息和链接的提示性内容，而非深度文章。其目的主要是分享链接，并提供了一些技术层面的信息，如来源模式和图片搜索结果。鉴于其信息密度不高，主要功能是作为日签提醒和链接跳转，其作为独立内容的参考价值有限。"
+}
