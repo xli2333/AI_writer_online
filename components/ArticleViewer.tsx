@@ -347,7 +347,7 @@ const ArticleDocument: React.FC<{ data: ViewerData; exportMode?: boolean }> = ({
         </div>
       </header>
 
-      <section className="mb-12">
+      <section className="article-copy mb-12">
         <MarkdownRenderer content={articleBody} />
       </section>
 
@@ -386,7 +386,7 @@ const PlainTextArticleDocument: React.FC<{ data: ViewerData; exportMode?: boolea
         </div>
       </header>
 
-      <section className="font-serif text-[15px] leading-[1.95] text-slate-900">
+      <section className="article-copy font-serif text-[15px] leading-[1.95] text-slate-900">
         {blocks.map((block, index) => {
           if (block.type === 'heading1') {
             return (

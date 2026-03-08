@@ -251,7 +251,7 @@ export const MarkdownRenderer: React.FC<{ content: string; className?: string }>
       blocks.push(
         <p
           key={index}
-          className="mb-4 text-justify font-serif leading-relaxed"
+          className="mb-4 text-justify font-serif font-normal leading-relaxed"
           dangerouslySetInnerHTML={{ __html: parseInline(line) }}
         />
       );
@@ -260,5 +260,5 @@ export const MarkdownRenderer: React.FC<{ content: string; className?: string }>
     index += 1;
   }
 
-  return <div className={`font-serif ${className || ''}`}>{blocks}</div>;
+  return <div className={`article-copy font-serif ${className || ''}`}>{blocks}</div>;
 };

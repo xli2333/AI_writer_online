@@ -17,7 +17,7 @@ module.exports = {
         'report-secondary': '#4A5568',
       },
       fontFamily: {
-        serif: ['"Source Han Serif SC"', '"Songti SC"', '"STSong"', 'Georgia', 'serif'],
+        serif: ['"Noto Serif SC"', '"Source Han Serif SC"', '"Songti SC"', '"SimSun"', 'Georgia', '"Times New Roman"', 'serif'],
         sans: ['"Microsoft YaHei"', '"PingFang SC"', '"Hiragino Sans GB"', '"Noto Sans SC"', 'system-ui', 'sans-serif'],
       },
       keyframes: {
