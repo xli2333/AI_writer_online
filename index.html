@@ -4,71 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Writing Workspace</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              serif: ['"Noto Serif SC"', 'Merriweather', 'serif'],
-              sans: ['"Noto Sans SC"', 'Inter', 'sans-serif'],
-            },
-            colors: {
-              'report-bg': '#f0f2f5',
-              'report-panel': '#ffffff',
-              'report-text': '#2d3748',
-              'report-accent': '#005f6b',
-              'report-accent-light': '#e6fffa',
-              'report-secondary': '#4A5568',
-            },
-            typography: (theme) => ({
-              DEFAULT: {
-                css: {
-                  color: theme('colors.report-text'),
-                  h1: { fontFamily: theme('fontFamily.serif') },
-                  h2: { fontFamily: theme('fontFamily.serif'), color: theme('colors.report-accent') },
-                  h3: { fontFamily: theme('fontFamily.serif') },
-                  blockquote: { borderLeftColor: theme('colors.report-accent') },
-                },
-              },
-            }),
-          },
-        },
-      }
-    </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@300;400;700&display=swap" rel="stylesheet">
-    <style type="text/tailwindcss">
-      @layer utilities {
-        .animate-fade-in {
-          animation: fadeIn 0.5s ease-in-out;
-        }
-        .animate-slide-in-right {
-          animation: slideInRight 0.3s ease-out;
-        }
-      }
-      @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(10px); }
-        to { opacity: 1; transform: translateY(0); }
-      }
-      @keyframes slideInRight {
-        from { opacity: 0; transform: translateX(20px); }
-        to { opacity: 1; transform: translateX(0); }
-      }
-      
-      /* Table Styles for Markdown */
-      table {
-        @apply w-full text-left border-collapse;
-      }
-      th {
-        @apply border-b border-gray-300 bg-gray-50 p-3 font-sans font-bold text-xs uppercase tracking-wider text-gray-600;
-      }
-      td {
-        @apply border-b border-gray-200 p-3 text-sm text-gray-700;
-      }
-    </style>
-</head>
-  <body class="bg-report-bg text-report-text font-sans antialiased">
+  </head>
+  <body>
     <div id="root"></div>
-  <script type="module" src="/index.tsx"></script>
-</body>
+    <script type="module" src="/index.tsx"></script>
+  </body>
 </html>
