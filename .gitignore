@@ -24,3 +24,9 @@ dist-ssr
 *.sw?
 .env
 .env.*
+tmp_*.json
+tmp_*.out
+tmp_*.err
+Humanizer-zh-main/
+portfolio_management-main/
+rag_assets/cache/current_task/

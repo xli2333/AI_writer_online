@@ -14,6 +14,18 @@ const parseInline = (text: string) => {
 
 const cleanCell = (cell: string) => cell.trim();
 
+const isLikelyCssArtifactLine = (line: string) => {
+  const trimmed = line.trim();
+  if (!trimmed) return false;
+
+  return (
+    trimmed === '{' ||
+    trimmed === '}' ||
+    /^(?:[.#@][\w-]+|[a-z][\w-]*(?:\s+[.#]?[a-z][\w-]*)*)\s*\{$/i.test(trimmed) ||
+    /^(?:--)?[a-z-]{2,}\s*:\s*[^{}]{1,200};?$/i.test(trimmed)
+  );
+};
+
 const splitRow = (row: string) => {
   const trimmed = row.trim();
   let content = trimmed;
@@ -42,7 +54,7 @@ const TableRenderer: React.FC<{ lines: string[]; caption?: string }> = ({ lines,
   const normalizedBody = bodyRows.map(normalize);
 
   return (
-    <div className="my-8 w-full overflow-x-auto rounded-xl border border-slate-200 bg-white shadow-sm break-inside-avoid">
+    <div className="pdf-avoid-break my-8 w-full overflow-x-auto rounded-xl border border-slate-200 bg-white shadow-sm">
       {caption && (
         <div className="border-b border-slate-200 bg-slate-50 px-4 py-2 text-center">
           <span className="text-xs font-bold uppercase tracking-wider text-slate-700">{caption}</span>
@@ -90,6 +102,32 @@ export const MarkdownRenderer: React.FC<{ content: string; className?: string }>
   while (index < lines.length) {
     const rawLine = lines[index];
     const line = rawLine.trim();
+
+    if (isLikelyCssArtifactLine(line)) {
+      const artifactLines: string[] = [];
+      let cursor = index;
+
+      while (cursor < lines.length) {
+        const candidate = lines[cursor].trim();
+        if (candidate && !isLikelyCssArtifactLine(candidate)) break;
+        artifactLines.push(lines[cursor]);
+        cursor += 1;
+      }
+
+      const meaningfulArtifactLines = artifactLines.filter((candidate) => candidate.trim());
+      if (meaningfulArtifactLines.length >= 4) {
+        blocks.push(
+          <div
+            key={`artifact-${index}`}
+            className="my-4 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm leading-relaxed text-amber-800"
+          >
+            已省略疑似页面样式/脚本片段。
+          </div>
+        );
+        index = cursor;
+        continue;
+      }
+    }
 
     if (line.includes('|') && index + 1 < lines.length && lines[index + 1].trim().match(/^\|?[\s\-:|]+\|?$/)) {
       let caption: string | undefined;
@@ -139,7 +177,7 @@ export const MarkdownRenderer: React.FC<{ content: string; className?: string }>
       }
 
       blocks.push(
-        <div key={`list-${index}`} className="my-4 break-inside-avoid">
+        <div key={`list-${index}`} className="pdf-avoid-break my-4">
           {listItems.map((item, itemIndex) => (
             <div key={itemIndex} className="mb-2 flex items-start" style={{ paddingLeft: `${item.indent * 1.5}rem` }}>
               <span className={`mr-2 flex-shrink-0 ${item.type === 'ul' ? 'text-report-accent' : 'font-bold text-slate-900'}`}>
@@ -190,7 +228,7 @@ export const MarkdownRenderer: React.FC<{ content: string; className?: string }>
       blocks.push(
         <blockquote
           key={index}
-          className="my-8 break-inside-avoid rounded-r-lg border-l-4 border-report-accent bg-slate-50 py-2 pl-6 font-serif text-lg italic leading-relaxed text-slate-600"
+          className="pdf-avoid-break my-8 rounded-r-lg border-l-4 border-report-accent bg-slate-50 py-2 pl-6 font-serif text-lg italic leading-relaxed text-slate-600"
         >
           <p dangerouslySetInnerHTML={{ __html: parseInline(line.replace(/^>\s?/, '')) }} />
         </blockquote>
@@ -213,7 +251,7 @@ export const MarkdownRenderer: React.FC<{ content: string; className?: string }>
       blocks.push(
         <p
           key={index}
-          className="mb-4 break-inside-avoid text-justify font-serif leading-relaxed"
+          className="mb-4 text-justify font-serif leading-relaxed"
           dangerouslySetInnerHTML={{ __html: parseInline(line) }}
         />
       );

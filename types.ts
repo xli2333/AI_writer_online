@@ -9,6 +9,25 @@ export enum GenerationStep {
   ERROR = 'ERROR',
 }
 
+export type WorkflowSnapshotType =
+  | 'research_ready'
+  | 'directions_ready'
+  | 'outline_ready'
+  | 'chunk_plan_ready'
+  | 'chunk_draft'
+  | 'draft_assembled'
+  | 'draft_editorial'
+  | 'final_article'
+  | 'teaching_notes';
+
+export type WorkflowResumeAction =
+  | 'review_research'
+  | 'review_outline'
+  | 'continue_from_chunks'
+  | 'continue_from_draft'
+  | 'continue_teaching_notes'
+  | 'view_only';
+
 export interface SearchSource {
   title: string;
   uri: string;
@@ -78,10 +97,29 @@ export interface WritingProjectData {
   writingInsights?: string;
   evidenceCards?: string;
   chunkPlan?: WritingChunkPlanItem[];
+  chunkDrafts?: string[];
+  assembledDraft?: string;
+  workingArticleDraft?: string;
   critique?: string;
   articleContent?: string;
   teachingNotes?: string;
+  workflowSnapshots?: WorkflowSnapshot[];
+  activeSnapshotId?: string;
   options: WritingTaskOptions;
+}
+
+export type WorkflowSnapshotProjectData = Omit<WritingProjectData, 'workflowSnapshots' | 'activeSnapshotId'>;
+
+export interface WorkflowSnapshot {
+  id: string;
+  type: WorkflowSnapshotType;
+  label: string;
+  description: string;
+  createdAt: string;
+  restoreStep: GenerationStep;
+  resumeAction: WorkflowResumeAction;
+  sourceChunkIndex?: number;
+  projectData: WorkflowSnapshotProjectData;
 }
 
 export interface GenerationState {

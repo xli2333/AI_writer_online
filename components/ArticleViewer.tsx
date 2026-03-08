@@ -45,7 +45,7 @@ type ViewerData = WritingProjectData & {
   referenceArticles?: ReferenceTemplateArticle[];
 };
 
-type ViewerPanel = 'article' | 'references' | 'task' | 'outline' | 'research' | 'critique' | 'notes';
+type ViewerPanel = 'article' | 'chunks' | 'references' | 'task' | 'outline' | 'research' | 'critique' | 'notes';
 
 interface ViewerTab {
   id: ViewerPanel;
@@ -83,6 +83,8 @@ const PanelShell: React.FC<{
 );
 
 const EXPORT_PAGE_WIDTH_PX = 794;
+const PLAIN_PDF_FONT_URL = '/fonts/yahei.ttf';
+let plainPdfFontBinaryPromise: Promise<string> | null = null;
 
 const stripMarkdownTitleDecorators = (line: string) =>
   line
@@ -148,9 +150,172 @@ const stripLeadingTitleFromArticle = (content: string, title: string) => {
   return lines.join('\n').trim();
 };
 
+const resolveArticlePreviewContent = (data: ViewerData) => {
+  if (data.articleContent) {
+    return data.articleContent;
+  }
+
+  if (data.workingArticleDraft) {
+    return data.workingArticleDraft;
+  }
+
+  return Array.isArray(data.chunkDrafts) ? data.chunkDrafts.filter(Boolean).join('\n\n') : '';
+};
+
+const decodeHtmlEntities = (value: string) =>
+  value
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'");
+
+const stripInlineMarkdown = (value: string) =>
+  decodeHtmlEntities(
+    value
+      .replace(/!\[([^\]]*)\]\([^)]+\)/g, '$1')
+      .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+      .replace(/`([^`]+)`/g, '$1')
+      .replace(/\*\*([^*]+)\*\*/g, '$1')
+      .replace(/__([^_]+)__/g, '$1')
+      .replace(/\*([^*]+)\*/g, '$1')
+      .replace(/_([^_]+)_/g, '$1')
+      .replace(/~~([^~]+)~~/g, '$1')
+      .replace(/<\/?[^>]+>/g, '')
+  )
+    .replace(/\s+/g, ' ')
+    .trim();
+
+type PlainTextBlock =
+  | { type: 'heading1' | 'heading2' | 'heading3' | 'paragraph' | 'quote' | 'table'; text: string }
+  | { type: 'list'; text: string; ordered: boolean; order?: number };
+
+const buildPlainTextBlocks = (content: string): PlainTextBlock[] => {
+  const blocks: PlainTextBlock[] = [];
+  const lines = String(content || '').replace(/\r\n/g, '\n').split('\n');
+  let paragraphBuffer: string[] = [];
+
+  const flushParagraph = () => {
+    if (paragraphBuffer.length === 0) return;
+    const text = stripInlineMarkdown(paragraphBuffer.join(' '));
+    if (text) {
+      blocks.push({ type: 'paragraph', text });
+    }
+    paragraphBuffer = [];
+  };
+
+  for (const rawLine of lines) {
+    const line = rawLine.trim();
+
+    if (!line) {
+      flushParagraph();
+      continue;
+    }
+
+    if (/^\|?[\s\-:|]+\|?$/.test(line)) {
+      flushParagraph();
+      continue;
+    }
+
+    if (/^###\s+/.test(line)) {
+      flushParagraph();
+      blocks.push({ type: 'heading3', text: stripInlineMarkdown(line.replace(/^###\s+/, '')) });
+      continue;
+    }
+
+    if (/^##\s+/.test(line)) {
+      flushParagraph();
+      blocks.push({ type: 'heading2', text: stripInlineMarkdown(line.replace(/^##\s+/, '')) });
+      continue;
+    }
+
+    if (/^#\s+/.test(line)) {
+      flushParagraph();
+      blocks.push({ type: 'heading1', text: stripInlineMarkdown(line.replace(/^#\s+/, '')) });
+      continue;
+    }
+
+    if (/^>\s?/.test(line)) {
+      flushParagraph();
+      blocks.push({ type: 'quote', text: stripInlineMarkdown(line.replace(/^>\s?/, '')) });
+      continue;
+    }
+
+    if (/^[-*]\s+/.test(line)) {
+      flushParagraph();
+      blocks.push({ type: 'list', text: stripInlineMarkdown(line.replace(/^[-*]\s+/, '')), ordered: false });
+      continue;
+    }
+
+    const orderedMatch = line.match(/^(\d+)\.\s+(.*)$/);
+    if (orderedMatch) {
+      flushParagraph();
+      blocks.push({
+        type: 'list',
+        text: stripInlineMarkdown(orderedMatch[2]),
+        ordered: true,
+        order: Number(orderedMatch[1]),
+      });
+      continue;
+    }
+
+    if (line.includes('|')) {
+      flushParagraph();
+      const text = stripInlineMarkdown(
+        line
+          .replace(/^\|/, '')
+          .replace(/\|$/, '')
+          .split('|')
+          .map((cell) => cell.trim())
+          .join('    ')
+      );
+      if (text) {
+        blocks.push({ type: 'table', text });
+      }
+      continue;
+    }
+
+    paragraphBuffer.push(line);
+  }
+
+  flushParagraph();
+  return blocks;
+};
+
+const arrayBufferToBinaryString = (buffer: ArrayBuffer) => {
+  const bytes = new Uint8Array(buffer);
+  const chunkSize = 0x8000;
+  let binary = '';
+
+  for (let index = 0; index < bytes.length; index += chunkSize) {
+    const chunk = bytes.subarray(index, index + chunkSize);
+    binary += String.fromCharCode(...chunk);
+  }
+
+  return binary;
+};
+
+const loadPlainPdfFontBinary = async () => {
+  if (!plainPdfFontBinaryPromise) {
+    plainPdfFontBinaryPromise = fetch(PLAIN_PDF_FONT_URL)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`Failed to load plain PDF font: ${response.status}`);
+        }
+        return response.arrayBuffer();
+      })
+      .then(arrayBufferToBinaryString);
+  }
+
+  return plainPdfFontBinaryPromise;
+};
+
 const ArticleDocument: React.FC<{ data: ViewerData; exportMode?: boolean }> = ({ data, exportMode = false }) => {
-  const articleTitle = extractArticleTitle(data.topic, data.articleContent);
-  const articleBody = stripLeadingTitleFromArticle(data.articleContent || '', articleTitle);
+  const previewContent = resolveArticlePreviewContent(data);
+  const articleTitle = extractArticleTitle(data.topic, previewContent);
+  const articleBody = stripLeadingTitleFromArticle(previewContent, articleTitle);
+  const isDraftPreview = !data.articleContent && Boolean(previewContent);
 
   return (
     <div
@@ -167,6 +332,11 @@ const ArticleDocument: React.FC<{ data: ViewerData; exportMode?: boolean }> = ({
           <span className="text-xs font-bold uppercase tracking-[0.3em] text-gray-500">Business Article</span>
           <span className="h-px w-12 bg-gray-400" />
         </div>
+        {isDraftPreview && (
+          <div className="mb-5 inline-flex items-center rounded-full border border-amber-200 bg-amber-50 px-4 py-1.5 text-xs font-semibold text-amber-700">
+            当前显示的是阶段草稿预览，尚未进入最终正文状态。
+          </div>
+        )}
         <h1 className="mb-6 font-serif text-4xl font-bold leading-tight tracking-tight text-slate-900 md:text-5xl">
           {articleTitle}
         </h1>
@@ -184,6 +354,96 @@ const ArticleDocument: React.FC<{ data: ViewerData; exportMode?: boolean }> = ({
       <div className="border-t border-gray-100 pt-8 text-center font-sans text-[10px] uppercase tracking-widest text-gray-400">
         Generated by Writing Workspace · {articleTitle}
       </div>
+    </div>
+  );
+};
+
+const PlainTextArticleDocument: React.FC<{ data: ViewerData; exportMode?: boolean }> = ({ data, exportMode = false }) => {
+  const previewContent = resolveArticlePreviewContent(data);
+  const articleTitle = extractArticleTitle(data.topic, previewContent);
+  const articleBody = stripLeadingTitleFromArticle(previewContent, articleTitle);
+  const blocks = buildPlainTextBlocks(articleBody);
+  const isDraftPreview = !data.articleContent && Boolean(previewContent);
+
+  return (
+    <div
+      data-section="article-plain"
+      className={
+        exportMode
+          ? 'mx-auto box-border w-full max-w-none bg-white px-[25mm] py-[24mm]'
+          : 'rounded-[28px] border border-slate-200 bg-white p-6 shadow-sm sm:p-[24mm]'
+      }
+    >
+      <header className="mb-10 pb-5 text-center">
+        {isDraftPreview && (
+          <div className="mb-5 inline-flex items-center rounded-full border border-amber-200 bg-amber-50 px-4 py-1.5 text-xs font-semibold text-amber-700">
+            当前导出的是阶段草稿预览。
+          </div>
+        )}
+        <h1 className="font-serif text-[26px] font-bold leading-tight text-slate-950">{articleTitle}</h1>
+        <div className="mt-3 text-[11px] tracking-[0.18em] text-slate-500">
+          {data.options.genre} · {new Date().getFullYear()}
+        </div>
+      </header>
+
+      <section className="font-serif text-[15px] leading-[1.95] text-slate-900">
+        {blocks.map((block, index) => {
+          if (block.type === 'heading1') {
+            return (
+              <h2 key={index} className="mb-5 mt-8 break-after-avoid text-center text-[20px] font-bold text-slate-950">
+                {block.text}
+              </h2>
+            );
+          }
+
+          if (block.type === 'heading2') {
+            return (
+              <h2 key={index} className="mb-4 mt-8 break-after-avoid text-[17px] font-bold text-slate-950">
+                {block.text}
+              </h2>
+            );
+          }
+
+          if (block.type === 'heading3') {
+            return (
+              <h3 key={index} className="mb-3 mt-6 break-after-avoid text-[15px] font-bold text-slate-900">
+                {block.text}
+              </h3>
+            );
+          }
+
+          if (block.type === 'quote') {
+            return (
+              <p key={index} className="mb-4 border-l-2 border-slate-300 pl-5 italic text-slate-700">
+                {block.text}
+              </p>
+            );
+          }
+
+          if (block.type === 'table') {
+            return (
+              <p key={index} className="mb-3 whitespace-pre-wrap pl-4 text-[13px] leading-[1.85] text-slate-700">
+                {block.text}
+              </p>
+            );
+          }
+
+          if (block.type === 'list') {
+            return (
+              <p key={index} className="mb-2" style={{ paddingLeft: '2em', textIndent: '-1.25em' }}>
+                <span className="mr-2">{block.ordered ? `${block.order}.` : '•'}</span>
+                <span>{block.text}</span>
+              </p>
+            );
+          }
+
+          return (
+            <p key={index} className="mb-4 text-justify" style={{ textIndent: '2em' }}>
+              {block.text}
+            </p>
+          );
+        })}
+      </section>
     </div>
   );
 };
@@ -257,6 +517,51 @@ const TaskSummaryPanel: React.FC<{ data: ViewerData; referenceCount: number }> =
     </div>
   </PanelShell>
 );
+
+const ChunkDraftsPanel: React.FC<{ data: ViewerData }> = ({ data }) => {
+  const chunkDrafts = Array.isArray(data.chunkDrafts) ? data.chunkDrafts : [];
+
+  return (
+    <PanelShell title="Chunk 草稿" description="这里保留每一次分段初稿。恢复到任一节点后，可以从对应位置继续往下跑。">
+      <div className="space-y-6">
+        {chunkDrafts.length === 0 && (
+          <div className="rounded-2xl border border-dashed border-slate-200 bg-slate-50 px-5 py-8 text-sm text-slate-500">
+            当前还没有保存的 chunk 草稿。
+          </div>
+        )}
+
+        {chunkDrafts.map((chunkDraft, index) => {
+          const chunkPlan = data.chunkPlan?.[index];
+          const chunkTitle = chunkPlan?.title || `Chunk ${index + 1}`;
+
+          return (
+            <section key={`${chunkTitle}-${index}`} className="rounded-3xl border border-slate-200 bg-slate-50/70 p-6">
+              <div className="mb-4 flex flex-wrap items-center gap-3">
+                <h3 className="font-serif text-xl font-bold text-slate-900">{chunkTitle}</h3>
+                <span className="rounded-full bg-white px-3 py-1 text-xs font-semibold text-slate-500 ring-1 ring-slate-200">
+                  第 {index + 1} 段
+                </span>
+                {typeof chunkPlan?.targetLength === 'number' && (
+                  <span className="rounded-full bg-white px-3 py-1 text-xs font-semibold text-slate-500 ring-1 ring-slate-200">
+                    目标 {chunkPlan.targetLength} 字
+                  </span>
+                )}
+              </div>
+
+              {chunkPlan?.purpose && (
+                <p className="mb-5 text-sm leading-relaxed text-slate-600">{chunkPlan.purpose}</p>
+              )}
+
+              <div className="rounded-2xl border border-white bg-white p-5">
+                <MarkdownRenderer content={chunkDraft} />
+              </div>
+            </section>
+          );
+        })}
+      </div>
+    </PanelShell>
+  );
+};
 
 const ReferenceTemplatesPanel: React.FC<{ articles: ReferenceTemplateArticle[] }> = ({ articles }) => (
   <PanelShell title="参考模板文章" description="这些文章会整篇提供给模型，用于学习结构、开头、段落推进和语气控制；这里展示的是本次实际采用的模板来源。">
@@ -336,7 +641,12 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
 }) => {
   const viewerData = data as ViewerData;
   const referenceArticles = Array.isArray(viewerData.referenceArticles) ? viewerData.referenceArticles : [];
-  const articleTitle = useMemo(() => extractArticleTitle(data.topic, data.articleContent), [data.articleContent, data.topic]);
+  const previewArticleContent = useMemo(() => resolveArticlePreviewContent(viewerData), [viewerData]);
+  const hasFinalArticle = Boolean(data.articleContent);
+  const articleTitle = useMemo(
+    () => extractArticleTitle(data.topic, previewArticleContent),
+    [data.topic, previewArticleContent]
+  );
 
   const [showCopilot, setShowCopilot] = useState(false);
   const [isDownloading, setIsDownloading] = useState(false);
@@ -348,6 +658,7 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
 
   const abortControllerRef = useRef(false);
   const articleExportRef = useRef<HTMLDivElement>(null);
+  const plainArticleExportRef = useRef<HTMLDivElement>(null);
   const notesExportRef = useRef<HTMLDivElement>(null);
 
   const [history, setHistory] = useState<HistoryItem[]>([]);
@@ -395,11 +706,19 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
     [data.critique, data.outline, data.researchDocuments.length, data.teachingNotes, referenceArticles.length]
   );
 
+  const visibleTabs = useMemo<ViewerTab[]>(
+    () =>
+      (data.chunkDrafts || []).length > 0
+        ? [{ id: 'article', label: tabs[0]?.label || 'Article' }, { id: 'chunks', label: 'Chunk' }, ...tabs.slice(1)]
+        : tabs,
+    [data.chunkDrafts, tabs]
+  );
+
   useEffect(() => {
-    if (!tabs.some((tab) => tab.id === activePanel)) {
+    if (!visibleTabs.some((tab) => tab.id === activePanel)) {
       setActivePanel('article');
     }
-  }, [activePanel, tabs]);
+  }, [activePanel, visibleTabs]);
 
   const handleMouseUp = (event: React.MouseEvent) => {
     if (refineStatus) return;
@@ -461,7 +780,7 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
     } catch (error: any) {
       if (error?.message !== 'STOPPED') {
         console.error(error);
-        alert('内容改写失败，请稍后再试。');
+        alert(error?.message || '内容改写失败，请稍后再试。');
       }
     } finally {
       setRefineStatus(null);
@@ -488,7 +807,10 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
         data.articleContent || '',
         (message) => setRefineStatus(`正文：${message}`),
         () => abortControllerRef.current,
-        referenceArticles
+        referenceArticles,
+        'article',
+        data.outline || '',
+        data.chunkPlan || []
       );
       onUpdateArticleContent(polishedArticle);
 
@@ -498,14 +820,15 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
           data.teachingNotes,
           (message) => setRefineStatus(`TN：${message}`),
           () => abortControllerRef.current,
-          referenceArticles
+          referenceArticles,
+          'notes'
         );
         onUpdateTeachingNotes(polishedNotes);
       }
     } catch (error: any) {
       if (error?.message !== 'STOPPED') {
         console.error(error);
-        alert('终稿审查失败，请稍后再试。');
+        alert(error?.message || '终稿审查失败，请稍后再试。');
       }
     } finally {
       setRefineStatus(null);
@@ -603,8 +926,8 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
           },
           jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
           pagebreak: {
-            mode: ['css', 'legacy'],
-            avoid: ['.break-inside-avoid', 'table', 'tr', 'blockquote', 'h1', 'h2', 'h3'],
+            mode: ['avoid-all', 'css', 'legacy'],
+            avoid: ['.pdf-avoid-break', 'table', 'tr', 'blockquote', 'h1', 'h2', 'h3'],
           },
         })
         .from(clonedRoot)
@@ -618,12 +941,133 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
     }
   };
 
+  const downloadPlainTextPDF = async (filename: string) => {
+    const previewContent = resolveArticlePreviewContent(viewerData);
+    if (!previewContent) return;
+
+    setIsDownloading(true);
+
+    try {
+      const [{ jsPDF }, fontBinary] = await Promise.all([import('jspdf'), loadPlainPdfFontBinary()]);
+      const doc = new jsPDF({ unit: 'mm', format: 'a4', orientation: 'portrait', compress: true });
+      const articleTitleForPdf = extractArticleTitle(data.topic, previewContent);
+      const articleBodyForPdf = stripLeadingTitleFromArticle(previewContent, articleTitleForPdf);
+      const blocks = buildPlainTextBlocks(articleBodyForPdf);
+      const pageWidth = doc.internal.pageSize.getWidth();
+      const pageHeight = doc.internal.pageSize.getHeight();
+      const marginX = 20;
+      const marginTop = 18;
+      const marginBottom = 18;
+      const contentWidth = pageWidth - marginX * 2;
+      const lineHeightFactor = 1.65;
+      const ptToMm = (pt: number) => pt * 0.352778;
+      let cursorY = marginTop;
+
+      doc.addFileToVFS('YaHei.ttf', fontBinary);
+      doc.addFont('YaHei.ttf', 'YaHei', 'normal');
+      doc.setFont('YaHei', 'normal');
+      doc.setLineHeightFactor(lineHeightFactor);
+
+      const ensurePageSpace = (height: number) => {
+        if (cursorY + height <= pageHeight - marginBottom) return;
+        doc.addPage();
+        doc.setFont('YaHei', 'normal');
+        doc.setLineHeightFactor(lineHeightFactor);
+        cursorY = marginTop;
+      };
+
+      const getTextHeight = (lineCount: number, fontSize: number) => lineCount * ptToMm(fontSize) * lineHeightFactor;
+
+      const drawBlock = (
+        text: string,
+        options: {
+          fontSize: number;
+          before?: number;
+          after?: number;
+          align?: 'left' | 'center';
+          color?: [number, number, number];
+        }
+      ) => {
+        const before = options.before ?? 0;
+        const after = options.after ?? 0;
+        const color = options.color ?? [20, 24, 28];
+        doc.setFontSize(options.fontSize);
+        doc.setTextColor(color[0], color[1], color[2]);
+
+        const lines = doc.splitTextToSize(text, contentWidth) as string[];
+        const blockHeight = before + getTextHeight(lines.length, options.fontSize) + after;
+        ensurePageSpace(blockHeight);
+        cursorY += before;
+
+        if (options.align === 'center') {
+          doc.text(lines, pageWidth / 2, cursorY, { align: 'center' });
+        } else {
+          doc.text(lines, marginX, cursorY);
+        }
+
+        cursorY += getTextHeight(lines.length, options.fontSize) + after;
+      };
+
+      drawBlock(articleTitleForPdf, { fontSize: 18, after: 3, align: 'center', color: [15, 23, 42] });
+      drawBlock(`${data.options.genre}  ${new Date().getFullYear()}`, {
+        fontSize: 9.5,
+        after: 5,
+        align: 'center',
+        color: [100, 116, 139],
+      });
+
+      blocks.forEach((block) => {
+        if (block.type === 'heading1') {
+          drawBlock(block.text, { fontSize: 15, before: 2, after: 2, align: 'center', color: [15, 23, 42] });
+          return;
+        }
+
+        if (block.type === 'heading2') {
+          drawBlock(block.text, { fontSize: 13.5, before: 3, after: 1.5, color: [15, 23, 42] });
+          return;
+        }
+
+        if (block.type === 'heading3') {
+          drawBlock(block.text, { fontSize: 12, before: 2.5, after: 1, color: [30, 41, 59] });
+          return;
+        }
+
+        if (block.type === 'quote') {
+          drawBlock(`    ${block.text}`, { fontSize: 11, before: 1, after: 2, color: [71, 85, 105] });
+          return;
+        }
+
+        if (block.type === 'table') {
+          drawBlock(block.text, { fontSize: 10.5, after: 1.5, color: [71, 85, 105] });
+          return;
+        }
+
+        if (block.type === 'list') {
+          const prefix = block.ordered ? `${block.order}. ` : '- ';
+          drawBlock(`${prefix}${block.text}`, { fontSize: 11.5, after: 1 });
+          return;
+        }
+
+        drawBlock(`　　${block.text}`, { fontSize: 11.5, after: 2 });
+      });
+
+      doc.save(filename);
+    } catch (error) {
+      console.error('Plain text PDF export failed', error);
+      alert('纯文字 PDF 导出失败，请稍后再试。');
+    } finally {
+      setIsDownloading(false);
+    }
+  };
+
   const articleFilenameBase = articleTitle.replace(/[\\/:*?"<>|]/g, '_').slice(0, 24) || 'article';
 
   const renderActivePanel = () => {
     switch (activePanel) {
       case 'article':
         return <ArticleDocument data={viewerData} />;
+      case 'chunks':
+        return <ChunkDraftsPanel data={viewerData} />;
       case 'references':
         return <ReferenceTemplatesPanel articles={referenceArticles} />;
       case 'task':
@@ -636,7 +1080,7 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
         );
       case 'research':
         return (
-          <PanelShell title="研究资料" description="这里保留本轮写作调用过的原始研究文档。">
+          <PanelShell title="研究资料" description="三路搜索显示为研究笔记，Deep Research 只保留清洗后的 Agent 文本输出。">
             <div className="space-y-6">
               {data.researchDocuments.map((doc) => (
                 <section key={doc.id} className="rounded-2xl border border-slate-200 bg-slate-50/70 p-6">
@@ -709,11 +1153,12 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
 
             <button
               onClick={() => setShowCopilot(true)}
+              disabled={!hasFinalArticle}
               className={`flex items-center gap-2 rounded-lg border px-4 py-2 text-sm font-medium transition-colors ${
                 showCopilot
                   ? 'border-report-accent bg-teal-50 text-report-accent'
                   : 'border-gray-200 bg-white text-gray-600 hover:bg-gray-50'
-              }`}
+              } disabled:cursor-not-allowed disabled:opacity-50`}
             >
               <ChatBubbleLeftRightIcon className="h-4 w-4" />
               Copilot
@@ -721,7 +1166,7 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
 
             <button
               onClick={handlePolish}
-              disabled={!!refineStatus}
+              disabled={!!refineStatus || !hasFinalArticle}
               className="flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-600 transition-colors hover:bg-gray-50 disabled:opacity-50"
             >
               <ShieldCheckIcon className="h-4 w-4 text-orange-500" />
@@ -729,7 +1174,7 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
             </button>
 
             <button
-              onClick={() => downloadTextFile(`${articleFilenameBase}.md`, data.articleContent || '')}
+              onClick={() => downloadTextFile(`${articleFilenameBase}.md`, previewArticleContent)}
               className="flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm transition-colors hover:bg-gray-50"
             >
               <DocumentDuplicateIcon className="h-4 w-4" />
@@ -743,6 +1188,24 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
             >
               <ArrowDownTrayIcon className="h-4 w-4" />
               正文 PDF
+            </button>
+
+            <button
+              onClick={() => downloadPlainTextPDF(`${articleFilenameBase}_plain.pdf`)}
+              disabled={isDownloading}
+              className="hidden"
+            >
+              <ArrowDownTrayIcon className="h-4 w-4" />
+              纯文字 PDF
+            </button>
+
+            <button
+              onClick={() => downloadPlainTextPDF(`${articleFilenameBase}_plain.pdf`)}
+              disabled={isDownloading}
+              className="flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm transition-colors hover:bg-gray-50 disabled:opacity-60"
+            >
+              <ArrowDownTrayIcon className="h-4 w-4" />
+              Plain PDF
             </button>
 
             {data.teachingNotes && (
@@ -765,7 +1228,7 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
 
       <div className="mx-auto max-w-7xl px-4 pb-20 pt-8">
         <div className="mb-6 flex flex-wrap items-center gap-3 no-print">
-          {tabs.map((tab) => (
+          {visibleTabs.map((tab) => (
             <button
               key={tab.id}
               onClick={() => setActivePanel(tab.id)}
@@ -790,6 +1253,9 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
       >
         <div ref={articleExportRef} style={{ width: `${EXPORT_PAGE_WIDTH_PX}px` }}>
           <ArticleDocument data={viewerData} exportMode />
+        </div>
+        <div ref={plainArticleExportRef} style={{ width: `${EXPORT_PAGE_WIDTH_PX}px` }}>
+          <PlainTextArticleDocument data={viewerData} exportMode />
         </div>
         {data.teachingNotes && (
           <div ref={notesExportRef} style={{ width: `${EXPORT_PAGE_WIDTH_PX}px` }}>

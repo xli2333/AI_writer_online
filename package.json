@@ -16,6 +16,7 @@
     "@google/genai": "^1.44.0",
     "@heroicons/react": "^2.2.0",
     "html2pdf.js": "^0.14.0",
+    "jspdf": "^4.2.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "undici": "^7.22.0"

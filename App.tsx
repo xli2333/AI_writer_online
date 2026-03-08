@@ -11,6 +11,10 @@ import {
   GenerationState,
   GenerationStep,
   UploadedFile,
+  WorkflowResumeAction,
+  WorkflowSnapshot,
+  WorkflowSnapshotProjectData,
+  WorkflowSnapshotType,
   WritingProjectData,
   WritingTaskOptions,
 } from './types';
@@ -22,6 +26,7 @@ import { DirectionSelection } from './components/DirectionSelection';
 import { OutlineReview } from './components/OutlineReview';
 import { ResearchReview } from './components/ResearchReview';
 import { SettingsModal } from './components/SettingsModal';
+import { WorkflowNavigator } from './components/WorkflowNavigator';
 
 const defaultOptions: WritingTaskOptions = {
   genre: '商业分析',
@@ -42,7 +47,29 @@ const createEmptyProject = (options: WritingTaskOptions): WritingProjectData => 
   researchDocuments: [],
   referenceArticles: [],
   directions: [],
+  chunkDrafts: [],
+  workflowSnapshots: [],
   options,
+});
+
+type ArticlePackageResult = Awaited<ReturnType<typeof GeminiService.generateArticlePackage>>;
+
+const cloneProjectDataForSnapshot = (projectData: WritingProjectData): WorkflowSnapshotProjectData => {
+  const { workflowSnapshots, activeSnapshotId, ...rest } = projectData;
+  return structuredClone({
+    ...rest,
+    chunkDrafts: Array.isArray(rest.chunkDrafts) ? rest.chunkDrafts : [],
+  });
+};
+
+const restoreProjectDataFromSnapshot = (
+  snapshotProjectData: WorkflowSnapshotProjectData,
+  existingSnapshots: WorkflowSnapshot[],
+  snapshotId: string
+): WritingProjectData => ({
+  ...structuredClone(snapshotProjectData),
+  workflowSnapshots: existingSnapshots,
+  activeSnapshotId: snapshotId,
 });
 
 const progressFromStatus = (message: string) => {
@@ -152,6 +179,9 @@ const normalizeProjectData = (
     researchDocuments: Array.isArray(projectData?.researchDocuments) ? projectData.researchDocuments : [],
     referenceArticles: Array.isArray(projectData?.referenceArticles) ? projectData.referenceArticles : [],
     directions: Array.isArray(projectData?.directions) ? projectData.directions : [],
+    chunkDrafts: Array.isArray(projectData?.chunkDrafts) ? projectData.chunkDrafts : [],
+    workflowSnapshots: Array.isArray(projectData?.workflowSnapshots) ? projectData.workflowSnapshots : [],
+    activeSnapshotId: typeof projectData?.activeSnapshotId === 'string' ? projectData.activeSnapshotId : undefined,
     options,
   };
 };
@@ -160,6 +190,19 @@ const deriveRestoredGenState = (
   projectData: WritingProjectData,
   previousState?: GenerationState | null
 ): GenerationState => {
+  const activeSnapshot =
+    projectData.activeSnapshotId && Array.isArray(projectData.workflowSnapshots)
+      ? projectData.workflowSnapshots.find((snapshot) => snapshot.id === projectData.activeSnapshotId)
+      : undefined;
+
+  if (activeSnapshot) {
+    return {
+      step: activeSnapshot.restoreStep,
+      progress: activeSnapshot.restoreStep === GenerationStep.COMPLETED ? 100 : activeSnapshot.restoreStep === GenerationStep.REVIEWING_OUTLINE ? 60 : activeSnapshot.restoreStep === GenerationStep.SELECTING_DIRECTION ? 50 : activeSnapshot.restoreStep === GenerationStep.REVIEWING_RESEARCH ? 35 : 0,
+      message: `已从本地缓存恢复到节点：${activeSnapshot.label}`,
+    };
+  }
+
   if (projectData.articleContent) {
     return {
       step: GenerationStep.COMPLETED,
@@ -242,14 +285,32 @@ const shouldPersistCheckpoint = ({
       projectData.writingInsights ||
       projectData.evidenceCards ||
       projectData.chunkPlan?.length ||
+      projectData.chunkDrafts?.length ||
+      projectData.assembledDraft ||
+      projectData.workingArticleDraft ||
       projectData.critique ||
       projectData.articleContent ||
       projectData.teachingNotes ||
+      projectData.workflowSnapshots?.length ||
+      projectData.activeSnapshotId ||
       genState.step !== GenerationStep.IDLE
   );
 
 const genreOptions = ['商业分析', '趋势解读', '案例分析', '行业评论', '人物观察'];
 const styleOptions = ['理性克制', '洞察型', '媒体型', '启发式', '叙事型'];
+
+const getSnapshotRestoreStep = (type: WorkflowSnapshotType): GenerationStep => {
+  switch (type) {
+    case 'research_ready':
+      return GenerationStep.REVIEWING_RESEARCH;
+    case 'directions_ready':
+      return GenerationStep.SELECTING_DIRECTION;
+    case 'outline_ready':
+      return GenerationStep.REVIEWING_OUTLINE;
+    default:
+      return GenerationStep.COMPLETED;
+  }
+};
 
 const App: React.FC = () => {
   const [topic, setTopic] = useState('');
@@ -262,6 +323,7 @@ const App: React.FC = () => {
   const [isGeneratingDirections, setIsGeneratingDirections] = useState(false);
   const [restoreNotice, setRestoreNotice] = useState<string | null>(null);
   const [isCheckpointHydrated, setIsCheckpointHydrated] = useState(false);
+  const [isWorkflowNavigatorOpen, setIsWorkflowNavigatorOpen] = useState(false);
 
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -271,6 +333,491 @@ const App: React.FC = () => {
     progress: 0,
     message: '',
   });
+
+  const appendWorkflowSnapshot = ({
+    type,
+    label,
+    description,
+    resumeAction,
+    sourceChunkIndex,
+    projectPatch,
+  }: {
+    type: WorkflowSnapshotType;
+    label: string;
+    description: string;
+    resumeAction: WorkflowResumeAction;
+    sourceChunkIndex?: number;
+    projectPatch: Partial<WritingProjectData>;
+  }) => {
+    setProjectData((prev) => {
+      const merged: WritingProjectData = {
+        ...prev,
+        ...projectPatch,
+        chunkDrafts: Array.isArray(projectPatch.chunkDrafts)
+          ? projectPatch.chunkDrafts
+          : Array.isArray(prev.chunkDrafts)
+            ? prev.chunkDrafts
+            : [],
+        workflowSnapshots: Array.isArray(prev.workflowSnapshots) ? prev.workflowSnapshots : [],
+        activeSnapshotId: prev.activeSnapshotId,
+      };
+
+      const snapshot: WorkflowSnapshot = {
+        id: `${type}-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+        type,
+        label,
+        description,
+        createdAt: new Date().toISOString(),
+        restoreStep: getSnapshotRestoreStep(type),
+        resumeAction,
+        sourceChunkIndex,
+        projectData: cloneProjectDataForSnapshot(merged),
+      };
+
+      return {
+        ...merged,
+        workflowSnapshots: [...(prev.workflowSnapshots || []), snapshot],
+        activeSnapshotId: snapshot.id,
+      };
+    });
+  };
+
+  const applyWorkflowSnapshot = (snapshot: WorkflowSnapshot) => {
+    const existingSnapshots = Array.isArray(projectData.workflowSnapshots) ? projectData.workflowSnapshots : [];
+    const restoredProject = restoreProjectDataFromSnapshot(snapshot.projectData, existingSnapshots, snapshot.id);
+
+    setTopic(restoredProject.topic || '');
+    setTaskOptions(restoredProject.options);
+    setProjectData(restoredProject);
+    setGenState({
+      step: snapshot.restoreStep,
+      progress:
+        snapshot.restoreStep === GenerationStep.COMPLETED
+          ? 100
+          : snapshot.restoreStep === GenerationStep.REVIEWING_OUTLINE
+            ? 60
+            : snapshot.restoreStep === GenerationStep.SELECTING_DIRECTION
+              ? 50
+              : snapshot.restoreStep === GenerationStep.REVIEWING_RESEARCH
+                ? 35
+                : 0,
+      message: `已恢复到节点：${snapshot.label}`,
+    });
+    setRestoreNotice(`已恢复到节点：${snapshot.label}`);
+  };
+
+  const syncProjectBase = (baseProject: WritingProjectData) => {
+    setTopic(baseProject.topic || '');
+    setTaskOptions(baseProject.options);
+    setProjectData((prev) =>
+      normalizeProjectData(
+        {
+          ...baseProject,
+          workflowSnapshots: prev.workflowSnapshots,
+          activeSnapshotId: prev.activeSnapshotId,
+        },
+        baseProject.options
+      )
+    );
+  };
+
+  const restoreWorkflowSnapshot = (snapshot: WorkflowSnapshot) => {
+    const existingSnapshots = Array.isArray(projectData.workflowSnapshots) ? projectData.workflowSnapshots : [];
+    const restoredProject = restoreProjectDataFromSnapshot(snapshot.projectData, existingSnapshots, snapshot.id);
+    const progress =
+      snapshot.restoreStep === GenerationStep.COMPLETED
+        ? 100
+        : snapshot.restoreStep === GenerationStep.REVIEWING_OUTLINE
+          ? 60
+          : snapshot.restoreStep === GenerationStep.SELECTING_DIRECTION
+            ? 50
+            : snapshot.restoreStep === GenerationStep.REVIEWING_RESEARCH
+              ? 35
+              : 0;
+    const restoreMessage = `已恢复到节点：${snapshot.label}`;
+
+    setTopic(restoredProject.topic || '');
+    setTaskOptions(restoredProject.options);
+    setProjectData(restoredProject);
+    setGenState({
+      step: snapshot.restoreStep,
+      progress,
+      message: restoreMessage,
+    });
+    setRestoreNotice(restoreMessage);
+  };
+
+  const buildSnapshotProjectPatch = (
+    baseProject: WritingProjectData,
+    projectPatch: Partial<WritingProjectData>
+  ): Partial<WritingProjectData> => ({
+    topic: baseProject.topic,
+    sources: baseProject.sources,
+    ammoLibrary: baseProject.ammoLibrary,
+    researchDocuments: baseProject.researchDocuments,
+    directions: baseProject.directions,
+    selectedDirection: baseProject.selectedDirection,
+    outline: baseProject.outline,
+    options: baseProject.options,
+    ...projectPatch,
+  });
+
+  const recordArticleProgressSnapshot = (
+    baseProject: WritingProjectData,
+    snapshot: GeminiService.ArticleProgressSnapshot
+  ) => {
+    appendWorkflowSnapshot({
+      type: snapshot.type,
+      label: snapshot.label,
+      description: snapshot.description,
+      resumeAction: snapshot.resumeAction,
+      sourceChunkIndex: snapshot.sourceChunkIndex,
+      projectPatch: buildSnapshotProjectPatch(baseProject, snapshot.data),
+    });
+  };
+
+  const applyCompletedArticleResult = (baseProject: WritingProjectData, result: ArticlePackageResult) => {
+    const finalTitle = extractTitle(baseProject.topic, result.articleContent);
+
+    setTopic(finalTitle);
+    setTaskOptions(baseProject.options);
+    setProjectData((prev) =>
+      normalizeProjectData(
+        {
+          ...baseProject,
+          topic: finalTitle,
+          referenceArticles: result.referenceArticles,
+          writingInsights: result.writingInsights,
+          evidenceCards: result.evidenceCards,
+          chunkPlan: result.chunkPlan,
+          chunkDrafts: result.chunkDrafts,
+          assembledDraft: result.assembledDraft,
+          workingArticleDraft: result.workingArticleDraft,
+          critique: result.critique,
+          articleContent: result.articleContent,
+          teachingNotes: result.teachingNotes,
+          workflowSnapshots: prev.workflowSnapshots,
+          activeSnapshotId: prev.activeSnapshotId,
+        },
+        baseProject.options
+      )
+    );
+    setGenState({
+      step: GenerationStep.COMPLETED,
+      progress: 100,
+      message: '生成完成。',
+    });
+  };
+
+  const runApproveResearch = async (baseProject: WritingProjectData = projectData) => {
+    setIsGeneratingDirections(true);
+    syncProjectBase(baseProject);
+    setGenState({
+      step: GenerationStep.RESEARCHING,
+      progress: 42,
+      message: '正在基于信息弹药库生成讨论方向...',
+    });
+
+    try {
+      const directions = await GeminiService.generateDiscussionDirections(
+        baseProject.topic,
+        baseProject.ammoLibrary,
+        baseProject.options
+      );
+
+      appendWorkflowSnapshot({
+        type: 'directions_ready',
+        label: '讨论方向',
+        description: '讨论方向已生成，可回到这里重新选择方向。',
+        resumeAction: 'view_only',
+        projectPatch: buildSnapshotProjectPatch(baseProject, { directions }),
+      });
+
+      setGenState({
+        step: GenerationStep.SELECTING_DIRECTION,
+        progress: 50,
+        message: '请选择讨论方向。',
+      });
+    } catch (error) {
+      console.error('Direction generation failed', error);
+      setGenState(buildErrorState('讨论方向生成失败，请重试。', error));
+    } finally {
+      setIsGeneratingDirections(false);
+    }
+  };
+
+  const runDirectionSelect = async (direction: string, baseProject: WritingProjectData = projectData) => {
+    const projectWithDirection = normalizeProjectData(
+      {
+        ...baseProject,
+        selectedDirection: direction,
+      },
+      baseProject.options
+    );
+
+    syncProjectBase(projectWithDirection);
+    setGenState({
+      step: GenerationStep.REVIEWING_OUTLINE,
+      progress: 54,
+      message: '正在生成文章大纲...',
+    });
+
+    try {
+      const outlineResult = await GeminiService.generateArticleOutline(
+        projectWithDirection.topic,
+        projectWithDirection.ammoLibrary,
+        direction,
+        projectWithDirection.options
+      );
+
+      appendWorkflowSnapshot({
+        type: 'outline_ready',
+        label: '文章大纲',
+        description: '文章大纲已生成，可回到这里继续修改后再开始写作。',
+        resumeAction: 'review_outline',
+        projectPatch: buildSnapshotProjectPatch(projectWithDirection, {
+          selectedDirection: direction,
+          outline: outlineResult.outline,
+          referenceArticles: outlineResult.referenceArticles,
+        }),
+      });
+
+      setGenState({
+        step: GenerationStep.REVIEWING_OUTLINE,
+        progress: 60,
+        message: '请审阅大纲。',
+      });
+    } catch (error) {
+      console.error('Outline generation failed', error);
+      setGenState(buildErrorState('大纲生成失败，请重试。', error));
+    }
+  };
+
+  const runApproveOutline = async (baseProject: WritingProjectData = projectData) => {
+    if (!baseProject.selectedDirection || !baseProject.outline) return;
+
+    syncProjectBase(baseProject);
+    setGenState({
+      step: GenerationStep.WRITING,
+      progress: 62,
+      message: '正在进入分段写作...',
+    });
+
+    try {
+      const result = await GeminiService.generateArticlePackage(
+        baseProject.topic,
+        baseProject.ammoLibrary,
+        baseProject.selectedDirection,
+        baseProject.outline,
+        baseProject.referenceArticles,
+        baseProject.options,
+        (message) => {
+          setGenState({
+            step: GenerationStep.WRITING,
+            progress: progressFromStatus(message),
+            message,
+          });
+        },
+        (snapshot) => recordArticleProgressSnapshot(baseProject, snapshot)
+      );
+
+      applyCompletedArticleResult(baseProject, result);
+    } catch (error) {
+      console.error('Writing stage failed', error);
+      setGenState(buildErrorState('写作阶段失败，请稍后重试。', error));
+    }
+  };
+
+  const handleContinueFromSnapshot = async (snapshot: WorkflowSnapshot) => {
+    const existingSnapshots = Array.isArray(projectData.workflowSnapshots) ? projectData.workflowSnapshots : [];
+    const restoredProject = restoreProjectDataFromSnapshot(snapshot.projectData, existingSnapshots, snapshot.id);
+
+    setIsWorkflowNavigatorOpen(false);
+
+    if (snapshot.resumeAction === 'continue_from_chunks') {
+      if (
+        !restoredProject.selectedDirection ||
+        !restoredProject.outline ||
+        !restoredProject.writingInsights ||
+        !restoredProject.evidenceCards ||
+        !restoredProject.chunkPlan
+      ) {
+        setGenState(
+          buildErrorState('该节点缺少继续写作所需的上下文，请重新从大纲开始。', new Error('Missing chunk resume context'))
+        );
+        return;
+      }
+
+      syncProjectBase(restoredProject);
+      setGenState({
+        step: GenerationStep.WRITING,
+        progress: 68,
+        message: '正在从保存的 chunk 草稿继续写作...',
+      });
+
+      try {
+        const result = await GeminiService.continueArticleFromChunkDrafts({
+          topic: restoredProject.topic,
+          ammoLibrary: restoredProject.ammoLibrary,
+          direction: restoredProject.selectedDirection,
+          outline: restoredProject.outline,
+          referenceArticles: restoredProject.referenceArticles,
+          options: restoredProject.options,
+          writingInsights: restoredProject.writingInsights,
+          evidenceCards: restoredProject.evidenceCards,
+          chunkPlan: restoredProject.chunkPlan,
+          chunkDrafts: restoredProject.chunkDrafts || [],
+          onStatus: (message) => {
+            setGenState({
+              step: GenerationStep.WRITING,
+              progress: progressFromStatus(message),
+              message,
+            });
+          },
+          onSnapshot: (nextSnapshot) => recordArticleProgressSnapshot(restoredProject, nextSnapshot),
+        });
+
+        applyCompletedArticleResult(restoredProject, result);
+      } catch (error) {
+        console.error('Resume from chunk drafts failed', error);
+        setGenState(buildErrorState('从 chunk 草稿继续失败，请稍后重试。', error));
+      }
+
+      return;
+    }
+
+    if (snapshot.resumeAction === 'continue_from_draft') {
+      if (
+        !restoredProject.selectedDirection ||
+        !restoredProject.outline ||
+        !restoredProject.writingInsights ||
+        !restoredProject.evidenceCards ||
+        !restoredProject.chunkPlan
+      ) {
+        setGenState(
+          buildErrorState('该节点缺少终稿续写所需的上下文，请重新从大纲开始。', new Error('Missing draft resume context'))
+        );
+        return;
+      }
+
+      const draft =
+        restoredProject.workingArticleDraft ||
+        restoredProject.assembledDraft ||
+        restoredProject.articleContent ||
+        (restoredProject.chunkDrafts || []).join('\n\n');
+
+      if (!draft.trim()) {
+        setGenState(buildErrorState('该节点没有可用草稿，无法从这里继续。', new Error('Missing working draft')));
+        return;
+      }
+
+      syncProjectBase(restoredProject);
+      setGenState({
+        step: GenerationStep.WRITING,
+        progress: 88,
+        message: '正在从保存的草稿继续终审...',
+      });
+
+      try {
+        const result = await GeminiService.continueArticleFromDraft({
+          topic: restoredProject.topic,
+          ammoLibrary: restoredProject.ammoLibrary,
+          direction: restoredProject.selectedDirection,
+          outline: restoredProject.outline,
+          referenceArticles: restoredProject.referenceArticles,
+          options: restoredProject.options,
+          writingInsights: restoredProject.writingInsights,
+          evidenceCards: restoredProject.evidenceCards,
+          chunkPlan: restoredProject.chunkPlan,
+          chunkDrafts: restoredProject.chunkDrafts || [],
+          draft,
+          assembledDraft: restoredProject.assembledDraft,
+          onStatus: (message) => {
+            setGenState({
+              step: GenerationStep.WRITING,
+              progress: progressFromStatus(message),
+              message,
+            });
+          },
+          onSnapshot: (nextSnapshot) => recordArticleProgressSnapshot(restoredProject, nextSnapshot),
+        });
+
+        applyCompletedArticleResult(restoredProject, result);
+      } catch (error) {
+        console.error('Resume from draft failed', error);
+        setGenState(buildErrorState('从草稿继续失败，请稍后重试。', error));
+      }
+
+      return;
+    }
+
+    if (snapshot.resumeAction === 'continue_teaching_notes') {
+      if (!restoredProject.selectedDirection || !restoredProject.articleContent) {
+        setGenState(
+          buildErrorState('该节点缺少正文或方向信息，无法继续生成 TN。', new Error('Missing teaching notes context'))
+        );
+        return;
+      }
+
+      syncProjectBase(restoredProject);
+      setGenState({
+        step: GenerationStep.WRITING,
+        progress: 94,
+        message: '正在从保存的正文继续生成 TN...',
+      });
+
+      try {
+        const teachingNotes = await GeminiService.continueTeachingNotesFromArticle({
+          topic: restoredProject.topic,
+          direction: restoredProject.selectedDirection,
+          articleContent: restoredProject.articleContent,
+          options: restoredProject.options,
+          referenceArticles: restoredProject.referenceArticles,
+          onStatus: (message) => {
+            setGenState({
+              step: GenerationStep.WRITING,
+              progress: 94,
+              message,
+            });
+          },
+        });
+
+        appendWorkflowSnapshot({
+          type: 'teaching_notes',
+          label: 'TN / 讨论指南',
+          description: '讨论指南已生成，可随时回到这里继续人工整理。',
+          resumeAction: 'view_only',
+          projectPatch: buildSnapshotProjectPatch(restoredProject, {
+            teachingNotes,
+          }),
+        });
+
+        setProjectData((prev) =>
+          normalizeProjectData(
+            {
+              ...restoredProject,
+              teachingNotes,
+              workflowSnapshots: prev.workflowSnapshots,
+              activeSnapshotId: prev.activeSnapshotId,
+            },
+            restoredProject.options
+          )
+        );
+        setGenState({
+          step: GenerationStep.COMPLETED,
+          progress: 100,
+          message: '生成完成。',
+        });
+      } catch (error) {
+        console.error('Resume teaching notes failed', error);
+        setGenState(buildErrorState('从正文继续生成 TN 失败，请稍后重试。', error));
+      }
+
+      return;
+    }
+
+    restoreWorkflowSnapshot(snapshot);
+  };
 
   useEffect(() => {
     let isMounted = true;
@@ -423,6 +970,7 @@ const App: React.FC = () => {
     setProjectData(createEmptyProject(defaultOptions));
     setGenState({ step: GenerationStep.IDLE, progress: 0, message: '' });
     setRestoreNotice(null);
+    setIsWorkflowNavigatorOpen(false);
     void clearAppCheckpoint();
   };
 
@@ -448,14 +996,19 @@ const App: React.FC = () => {
         }
       );
 
-      setProjectData((prev) => ({
-        ...prev,
-        topic,
-        ammoLibrary,
-        researchDocuments,
-        sources,
-        options: taskOptions,
-      }));
+      appendWorkflowSnapshot({
+        type: 'research_ready',
+        label: '研究资料库',
+        description: '研究资料已整理完成，可回到这里重新确认资料库再往下走。',
+        resumeAction: 'review_research',
+        projectPatch: {
+          topic,
+          ammoLibrary,
+          researchDocuments,
+          sources,
+          options: taskOptions,
+        },
+      });
 
       setGenState({
         step: GenerationStep.REVIEWING_RESEARCH,
@@ -621,6 +1174,18 @@ const App: React.FC = () => {
     }
   };
 
+  const handleApproveResearchWithSnapshots = async () => {
+    await runApproveResearch();
+  };
+
+  const handleDirectionSelectWithSnapshots = async (direction: string) => {
+    await runDirectionSelect(direction);
+  };
+
+  const handleApproveOutlineWithSnapshots = async () => {
+    await runApproveOutline();
+  };
+
   if (!hasApiKey) {
     return <ApiKeyInput onKeySet={() => setHasApiKey(true)} />;
   }
@@ -635,6 +1200,7 @@ const App: React.FC = () => {
   const isReviewing = genState.step === GenerationStep.REVIEWING_OUTLINE && !!projectData.outline;
   const isCompleted = genState.step === GenerationStep.COMPLETED;
   const isError = genState.step === GenerationStep.ERROR;
+  const workflowSnapshots = Array.isArray(projectData.workflowSnapshots) ? projectData.workflowSnapshots : [];
   const processingReferenceArticles =
     genState.step === GenerationStep.WRITING ? projectData.referenceArticles.slice(0, 3) : [];
 
@@ -661,6 +1227,20 @@ const App: React.FC = () => {
                   />
                 </div>
               </div>
+            )}
+
+            {workflowSnapshots.length > 0 && (
+              <button
+                onClick={() => setIsWorkflowNavigatorOpen(true)}
+                className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-slate-400 transition-colors hover:text-slate-700"
+                title="Workflow Snapshots"
+              >
+                <DocumentTextIcon className="h-4 w-4" />
+                <span className="hidden sm:inline">节点</span>
+                <span className="rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-semibold text-slate-600">
+                  {workflowSnapshots.length}
+                </span>
+              </button>
             )}
 
             <button
@@ -936,7 +1516,7 @@ const App: React.FC = () => {
           <DirectionSelection
             directions={projectData.directions}
             options={taskOptions}
-            onSelect={handleDirectionSelect}
+            onSelect={handleDirectionSelectWithSnapshots}
             onRefine={handleRefineDirections}
             isRefining={isRefiningDirections}
           />
@@ -947,7 +1527,7 @@ const App: React.FC = () => {
             topic={projectData.topic}
             researchDocuments={projectData.researchDocuments}
             options={projectData.options}
-            onApprove={handleApproveResearch}
+            onApprove={handleApproveResearchWithSnapshots}
             isLoading={isGeneratingDirections}
           />
         )}
@@ -957,7 +1537,7 @@ const App: React.FC = () => {
             outline={projectData.outline}
             direction={projectData.selectedDirection}
             ammoLibrary={projectData.ammoLibrary}
-            onApprove={handleApproveOutline}
+            onApprove={handleApproveOutlineWithSnapshots}
             onRefine={handleRefineOutline}
             onUpdateOutline={(outline) => setProjectData((prev) => ({ ...prev, outline }))}
             isRefining={isRefiningOutline}
@@ -997,6 +1577,19 @@ const App: React.FC = () => {
           />
         )}
       </main>
+
+      <WorkflowNavigator
+        isOpen={isWorkflowNavigatorOpen}
+        snapshots={workflowSnapshots}
+        activeSnapshotId={projectData.activeSnapshotId}
+        isBusy={isProcessing || isGeneratingDirections || isRefiningDirections || isRefiningOutline}
+        onClose={() => setIsWorkflowNavigatorOpen(false)}
+        onRestore={(snapshot) => {
+          restoreWorkflowSnapshot(snapshot);
+          setIsWorkflowNavigatorOpen(false);
+        }}
+        onContinue={handleContinueFromSnapshot}
+      />
     </div>
   );
 };

@@ -27,7 +27,7 @@ export const ResearchReview: React.FC<ResearchReviewProps> = ({
         <span className="mb-2 block text-sm font-bold uppercase tracking-wider text-report-accent">Step 2 of 5</span>
         <h2 className="font-serif text-3xl font-bold text-report-text">搜索研究与资料整理</h2>
         <p className="mx-auto mt-3 max-w-3xl text-gray-500">
-          这里展示的是本次任务的资料库。系统会尽量保留多路研究的原始返回和补充材料，供后续方向选择与写作持续调用。
+          这里展示的是本次任务的资料库。普通三路搜索保留研究笔记，Deep Research 只保留清洗后的 Agent 文本输出，供后续方向选择与写作持续调用。
         </p>
       </div>
 
@@ -47,9 +47,9 @@ export const ResearchReview: React.FC<ResearchReviewProps> = ({
       <div className="grid gap-8 xl:grid-cols-[minmax(0,1fr)_340px]">
         <section className="rounded-2xl border border-slate-200 bg-white shadow-sm">
           <div className="border-b border-slate-100 px-6 py-4">
-            <h3 className="font-serif text-xl font-bold text-slate-900">原始研究文档</h3>
+            <h3 className="font-serif text-xl font-bold text-slate-900">研究文档</h3>
             <p className="mt-1 text-sm text-slate-500">
-              这里直接保留各路搜索与 Deep Research 的原始中间文档，不额外做摘要压缩。
+              三路搜索显示为整理后的研究笔记；Deep Research 会硬性清洗，只保留 Agent 文本输出。
             </p>
           </div>
           <div className="max-h-[75vh] space-y-8 overflow-y-auto px-8 py-8">
