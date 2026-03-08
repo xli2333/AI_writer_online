@@ -1,0 +1,10 @@
+node_modules
+dist
+Humanizer-zh-main
+portfolio_management-main
+portfolio-docs
+projects
+scripts
+tmp_*.json
+tmp_*.out
+tmp_*.err

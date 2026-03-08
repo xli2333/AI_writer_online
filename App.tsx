@@ -826,7 +826,7 @@ const App: React.FC = () => {
       localStorage.setItem('GEN_MODEL', normalizedGenModel);
     }
 
-    if (localStorage.getItem('GEMINI_API_KEY')) {
+    if (GeminiService.getStoredGeminiApiKey()) {
       setHasApiKey(true);
     }
 
@@ -896,7 +896,7 @@ const App: React.FC = () => {
 
   const handleClearKey = () => {
     if (confirm('清除当前 API Key 并返回登录页？')) {
-      localStorage.removeItem('GEMINI_API_KEY');
+      GeminiService.clearStoredGeminiApiKey();
       setHasApiKey(false);
     }
   };
@@ -1255,10 +1255,10 @@ const App: React.FC = () => {
             <button
               onClick={handleClearKey}
               className="flex items-center gap-1 text-xs font-bold uppercase tracking-widest text-slate-300 transition-colors hover:text-red-500"
-              title="Disconnect API Key"
+              title="Switch Gemini API Key"
             >
               <LockOpenIcon className="h-4 w-4" />
-              <span className="hidden sm:inline">Disconnect</span>
+              <span className="hidden sm:inline">切换 Key</span>
             </button>
           </div>
         </div>

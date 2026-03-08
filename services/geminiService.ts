@@ -385,16 +385,100 @@ const normalizeGenModel = (model?: string | null) => {
   return model;
 };
 
+const GEMINI_API_KEY_STORAGE_KEY = 'GEMINI_API_KEY';
 const getSearchModel = () => localStorage.getItem('SEARCH_MODEL') || 'gemini-3.1-flash-lite';
 const getGenModel = () => normalizeGenModel(localStorage.getItem('GEN_MODEL'));
 
 const formatStageLogMeta = (meta: Record<string, unknown>) =>
   JSON.stringify(Object.fromEntries(Object.entries(meta).filter(([, value]) => value !== undefined)));
 
+const readStorageValue = (storage: Storage | null | undefined, key: string) => {
+  try {
+    return storage?.getItem(key)?.trim() || '';
+  } catch {
+    return '';
+  }
+};
+
+export const getStoredGeminiApiKey = () => {
+  if (typeof window === 'undefined') return '';
+
+  const sessionValue = readStorageValue(window.sessionStorage, GEMINI_API_KEY_STORAGE_KEY);
+  if (sessionValue) {
+    return sessionValue;
+  }
+
+  const legacyValue = readStorageValue(window.localStorage, GEMINI_API_KEY_STORAGE_KEY);
+  if (legacyValue) {
+    try {
+      window.sessionStorage.setItem(GEMINI_API_KEY_STORAGE_KEY, legacyValue);
+    } catch {
+      return legacyValue;
+    }
+
+    try {
+      window.localStorage.removeItem(GEMINI_API_KEY_STORAGE_KEY);
+    } catch {
+      // Ignore cleanup failures for legacy storage.
+    }
+
+    return legacyValue;
+  }
+
+  return '';
+};
+
+export const setStoredGeminiApiKey = (apiKey: string) => {
+  const normalized = String(apiKey || '').trim();
+  if (!normalized) {
+    throw new Error('请输入 Gemini API Key。');
+  }
+
+  if (typeof window === 'undefined') return;
+
+  window.sessionStorage.setItem(GEMINI_API_KEY_STORAGE_KEY, normalized);
+
+  try {
+    window.localStorage.removeItem(GEMINI_API_KEY_STORAGE_KEY);
+  } catch {
+    // Ignore cleanup failures for legacy storage.
+  }
+};
+
+export const clearStoredGeminiApiKey = () => {
+  if (typeof window === 'undefined') return;
+
+  try {
+    window.sessionStorage.removeItem(GEMINI_API_KEY_STORAGE_KEY);
+  } catch {
+    // Ignore session storage cleanup failures.
+  }
+
+  try {
+    window.localStorage.removeItem(GEMINI_API_KEY_STORAGE_KEY);
+  } catch {
+    // Ignore legacy local storage cleanup failures.
+  }
+};
+
+export const validateGeminiApiKey = async (apiKey: string) => {
+  const normalized = String(apiKey || '').trim();
+  if (!normalized) {
+    throw new Error('请输入 Gemini API Key。');
+  }
+
+  const ai = new GoogleGenAI({ apiKey: normalized });
+
+  await ai.models.countTokens({
+    model: getGenModel(),
+    contents: 'ping',
+  });
+};
+
 const getAiClient = () => {
-  const apiKey = localStorage.getItem('GEMINI_API_KEY');
+  const apiKey = getStoredGeminiApiKey();
   if (!apiKey) {
-    throw new Error('请先输入 Gemini API Key。');
+    throw new Error('请先输入你自己的 Gemini API Key。');
   }
   return new GoogleGenAI({ apiKey });
 };
