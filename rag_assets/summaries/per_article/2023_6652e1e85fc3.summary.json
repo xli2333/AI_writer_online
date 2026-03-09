@@ -1,0 +1,85 @@
+{
+  "id": "6652e1e85fc3",
+  "year": "2023",
+  "date": "2023-11-11",
+  "title": "群体的思维丨FBK翻书日签 2023年11月11日",
+  "relative_path": "2023/2023-11-11_群体的思维丨FBK翻书日签 2023年11月11日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-11-11_群体的思维丨FBK翻书日签 2023年11月11日.txt",
+  "char_count": 354,
+  "content_type": "每日金句",
+  "industry": [
+    "文化传播"
+  ],
+  "topic": [
+    "群体思维",
+    "个人成长"
+  ],
+  "genre": "日签",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "社群订阅者"
+  ],
+  "intent": [
+    "日常打卡",
+    "引流"
+  ],
+  "tone": [
+    "中立"
+  ],
+  "primary_question": "2023年11月11日的FBK日签主题是什么？",
+  "thesis_type": "陈述式",
+  "thesis_sentence": "本文仅作为FBK翻书日签的发布记录，主题为群体的思维。",
+  "structure_pattern": "固定模板式",
+  "section_functions": [
+    "标题标引",
+    "日期标注",
+    "外链指引"
+  ],
+  "argument_moves": [
+    "无实质论证过程"
+  ],
+  "core_argument": "无",
+  "key_points": [
+    "群体的思维",
+    "2023年11月11日发布"
+  ],
+  "opening_pattern": "直陈标题",
+  "ending_pattern": "提供原始链接",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 0,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "中远",
+  "stance_strength": "弱",
+  "sentence_rhythm": "无节奏可言",
+  "abstraction_level": "极高",
+  "transferable_moves": [
+    "使用固定前缀建立内容品牌标识"
+  ],
+  "anti_patterns": [
+    "正文内容缺失",
+    "过度依赖外部链接/图片",
+    "信息密度极低"
+  ],
+  "notable_phrases": [
+    "群体的思维"
+  ],
+  "title_score": 30,
+  "opening_score": 10,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 20,
+  "style_score": 10,
+  "publishability_score": 10,
+  "quality_score": 5,
+  "reference_value_score": 5,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该内容为FBK翻书日签的日常发布记录，日期为2023年11月11日，主题涉及“群体的思维”。原文除了标题、日期和原始微信公众号链接外，没有任何正文文本。这属于典型的运营打卡类内容，主要依赖图片（虽未直接显示文本）传递信息，对文本写作或RAG分析而言，信息价值极低。",
+  "summary_500": "该条目是针对2023年11月11日发布的“FBK翻书日签”的结构化记录。其核心主题被界定为“群体的思维”，但在文本层面，文章并未提供任何深度的阐述、案例或论证过程。内容结构仅包含标准的元数据：标题、日期、原始链接及来源模式。由于其作为“日签”的属性，其实际核心内容可能承载于图片之中，但在文字抓取层面表现为极低的信息密度。在写作机制上，它遵循了品牌社群日常运营的固定模板。对于研究者或AI写作而言，该内容不具备参考价值，属于低价值的通知类或占位类文本，建议在知识库建设中予以过滤或降权处理。"
+}

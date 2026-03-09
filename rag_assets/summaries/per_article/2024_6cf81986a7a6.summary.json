@@ -1,0 +1,88 @@
+{
+  "id": "6cf81986a7a6",
+  "year": "2024",
+  "date": "2024-02-25",
+  "title": "人类动物园丨FBK翻书日签 2024年2月25日",
+  "relative_path": "2024/2024-02-25_人类动物园丨FBK翻书日签 2024年2月25日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2024\\2024-02-25_人类动物园丨FBK翻书日签 2024年2月25日.txt",
+  "char_count": 353,
+  "content_type": "日签",
+  "industry": [
+    "文化",
+    "出版"
+  ],
+  "topic": [
+    "书籍分享",
+    "每日阅读"
+  ],
+  "genre": "日常短讯",
+  "style": [
+    "极简",
+    "碎片化"
+  ],
+  "audience": [
+    "读书人",
+    "品牌粉丝"
+  ],
+  "intent": [
+    "品牌心智建设",
+    "日常互动"
+  ],
+  "tone": [
+    "中性"
+  ],
+  "primary_question": "2024年2月25日的每日阅读推荐是什么？",
+  "thesis_type": "引用呈现型",
+  "thesis_sentence": "通过《人类动物园》一书的视角进行每日阅读打卡。",
+  "structure_pattern": "固定模板结构",
+  "section_functions": [
+    "标题标示主题与日期",
+    "日签图片展示（抓取失败）"
+  ],
+  "argument_moves": [
+    "直接展示",
+    "引用书籍名称"
+  ],
+  "core_argument": "无实质性文字论证，仅为基于书籍名称的日常签到。",
+  "key_points": [
+    "日期：2024年2月25日",
+    "关联书籍：《人类动物园》"
+  ],
+  "opening_pattern": "标题直铺",
+  "ending_pattern": "无结尾",
+  "evidence_types": [
+    "书名引述"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "中性",
+  "stance_strength": "弱",
+  "sentence_rhythm": "无",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "使用固定格式进行每日品牌露出"
+  ],
+  "anti_patterns": [
+    "信息量极低，不适合作为长文参考",
+    "缺乏实质性解读内容"
+  ],
+  "notable_phrases": [
+    "人类动物园",
+    "翻书日签"
+  ],
+  "title_score": 40,
+  "opening_score": 20,
+  "argument_score": 5,
+  "evidence_score": 5,
+  "structure_score": 30,
+  "style_score": 20,
+  "publishability_score": 10,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为FBK（翻书）公众号的每日日签。其核心信息仅包含日期（2024年2月25日）和关联书名《人类动物园》。由于正文内容主要由单张图片构成且抓取缺失，导致文字信息量极度匮乏。这类内容属于典型的品牌高频露出策略，旨在通过碎片化的金句（图片形式）维持用户粘性，但在结构化写作、深度论证或知识传递方面不具备参考价值。",
+  "summary_500": "本篇分析对象属于极简形式的社交媒体日签。其结构仅由标题、日期及一张未显示的图片组成。标题明确指向了德斯蒙德·莫利斯的著作《人类动物园》，意在以此书的观点作为当日的思考切入点。然而，作为结构化分析的对象，该文章在文字层面上几乎没有提供任何论证过程、细节支撑或逻辑推导。其‘写作机制’完全依赖于固定的栏目模板，属于极低信息密度的日常内容。对于内容分析师或RAG写作系统而言，该样本的价值仅在于作为品牌活动的时间戳，而无法提供可用于改写或深度学习的语料。这种‘日签模式’在自媒体运营中虽常见，但由于缺乏实质性的文本产出，其质量分数较低，且存在严重的信息不对称问题（核心内容在图片内而非文本中）。"
+}

@@ -1,0 +1,82 @@
+{
+  "id": "b1ee91f78403",
+  "year": "2024",
+  "date": "2024-03-08",
+  "title": "城市与文化经济丨FBK翻书日签 2024年3月8日",
+  "relative_path": "2024/2024-03-08_城市与文化经济丨FBK翻书日签 2024年3月8日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2024\\2024-03-08_城市与文化经济丨FBK翻书日签 2024年3月8日.txt",
+  "char_count": 354,
+  "content_type": "资讯日签",
+  "industry": [
+    "文化",
+    "出版"
+  ],
+  "topic": [
+    "城市经济",
+    "文化经济"
+  ],
+  "genre": "每日简报",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "大众读者",
+    "出版行业关注者"
+  ],
+  "intent": [
+    "品牌曝光",
+    "日常打卡"
+  ],
+  "tone": [
+    "中立",
+    "客观"
+  ],
+  "primary_question": "无（仅为日期提醒与主题占位）",
+  "thesis_type": "无主题声明",
+  "thesis_sentence": "无",
+  "structure_pattern": "碎片化列表",
+  "section_functions": [
+    "标题标注",
+    "日期说明",
+    "外部链接指引"
+  ],
+  "argument_moves": [],
+  "core_argument": "该内容仅为FBK翻书日签的元数据记录，不包含实质性论点。",
+  "key_points": [
+    "2024年3月8日的FBK翻书日签",
+    "涉及主题为城市与文化经济"
+  ],
+  "opening_pattern": "直叙标题",
+  "ending_pattern": "系统链接展示",
+  "evidence_types": [],
+  "evidence_specificity_score": 0,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "客观描述",
+  "stance_strength": "中立",
+  "sentence_rhythm": "碎片化",
+  "abstraction_level": "低",
+  "transferable_moves": [
+    "采用日签形式进行每日品牌触达"
+  ],
+  "anti_patterns": [
+    "内容空洞",
+    "正文缺失",
+    "信息密度极低"
+  ],
+  "notable_phrases": [],
+  "title_score": 30,
+  "opening_score": 10,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 20,
+  "style_score": 10,
+  "publishability_score": 10,
+  "quality_score": 5,
+  "reference_value_score": 5,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该内容为2024年3月8日的FBK翻书日签，主题标注为‘城市与文化经济’。文本仅包含标题、日期、链接及系统图片搜索提示，完全缺乏正文叙述、论证过程或实质性的行业分析。",
+  "summary_500": "本文是一份极低价值的碎片化信息，实质上是‘翻书党’（FBK）的每日社交媒体卡片元数据。内容聚焦于‘城市与文化经济’这一宏观主题，但未展开任何具体的讨论或信息分享。文章由标题、日期和技术性的外部链接组成，缺乏写作逻辑、论据支撑及结构深度。其主要功能在于品牌在特定日期的日常存在感留存，而非传播具体知识。对于RAG写作或人格提炼而言，该文本除了品牌日常运营节奏外，不具备参考价值。"
+}

@@ -1,0 +1,82 @@
+{
+  "id": "bf04bb1cc7c5",
+  "year": "2021",
+  "date": "2021-02-11",
+  "title": "新春快乐❤",
+  "relative_path": "2021/2021-02-11_新春快乐❤.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2021\\2021-02-11_新春快乐❤.txt",
+  "char_count": 334,
+  "content_type": "节日祝福",
+  "industry": [
+    "通用"
+  ],
+  "topic": [
+    "春节",
+    "社交礼仪"
+  ],
+  "genre": "短讯",
+  "style": [
+    "简约",
+    "口语化"
+  ],
+  "audience": [
+    "订阅用户"
+  ],
+  "intent": [
+    "情感维护"
+  ],
+  "tone": [
+    "喜庆"
+  ],
+  "primary_question": "如何向订阅者表达春节祝福？",
+  "thesis_type": "情感表达型",
+  "thesis_sentence": "新春快乐。",
+  "structure_pattern": "极简式",
+  "section_functions": [
+    "发布祝福语"
+  ],
+  "argument_moves": [
+    "直接表达情感"
+  ],
+  "core_argument": "祝愿读者新春快乐。",
+  "key_points": [
+    "向用户传达节日问候"
+  ],
+  "opening_pattern": "标题点题",
+  "ending_pattern": "直接结束",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 0,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "亲近",
+  "stance_strength": "中立",
+  "sentence_rhythm": "极短",
+  "abstraction_level": "低",
+  "transferable_moves": [
+    "在特定节假日发布简短祝福以维持账号存在感"
+  ],
+  "anti_patterns": [
+    "内容极其空洞",
+    "缺乏实质信息",
+    "无法提供阅读价值"
+  ],
+  "notable_phrases": [
+    "新春快乐"
+  ],
+  "title_score": 20,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 0,
+  "structure_score": 5,
+  "style_score": 20,
+  "publishability_score": 10,
+  "quality_score": 5,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该文章发布于2021年除夕，仅包含标题“新春快乐”及极短的祝福信息（或仅包含图片）。内容完全属于节日礼节性推送，无任何实质性的商业分析、行业见解或逻辑论证。",
+  "summary_500": "该文本是一篇发布于2021年2月11日（农历除夕）的极简节日祝福。内容除标题“新春快乐”外，几乎没有正文叙述，仅作为与订阅用户进行情感联结的礼节性互动。由于缺乏知识密度、案例、逻辑架构和可迁移的写作技巧，该内容在商业分析和写作参考方面具有极低价值。这种类型的文章仅在特定节假日起到维持账号活跃度的作用，不具备可检索或用于RAG生成的实质素材。"
+}

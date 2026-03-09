@@ -1,0 +1,84 @@
+{
+  "id": "ed2b535aa80c",
+  "year": "2023",
+  "date": "2023-07-11",
+  "title": "隐藏的大脑丨FBK翻书日签 2023年7月11日",
+  "relative_path": "2023/2023-07-11_隐藏的大脑丨FBK翻书日签 2023年7月11日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-07-11_隐藏的大脑丨FBK翻书日签 2023年7月11日.txt",
+  "char_count": 353,
+  "content_type": "社交媒体日签",
+  "industry": [
+    "文化",
+    "出版",
+    "新媒体运营"
+  ],
+  "topic": [
+    "书籍推荐",
+    "日常打卡"
+  ],
+  "genre": "日常动态",
+  "style": [
+    "极简",
+    "占位符式"
+  ],
+  "audience": [
+    "公众号粉丝"
+  ],
+  "intent": [
+    "品牌留存",
+    "日常更新"
+  ],
+  "tone": [
+    "中性"
+  ],
+  "primary_question": "无实质性问题",
+  "thesis_type": "无",
+  "thesis_sentence": "无实质性观点陈述",
+  "structure_pattern": "单一元数据结构",
+  "section_functions": [
+    "显示日期与来源",
+    "显示系统提示"
+  ],
+  "argument_moves": [
+    "无"
+  ],
+  "core_argument": "该文本不包含论证内容，仅为日签占位信息。",
+  "key_points": [
+    "FBK翻书日签2023年7月11日",
+    "涉及书名《隐藏的大脑》",
+    "页面触发全局图片搜索模式"
+  ],
+  "opening_pattern": "直述日期与主题",
+  "ending_pattern": "无",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 0,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "第三方观察",
+  "stance_strength": "中立",
+  "sentence_rhythm": "零散",
+  "abstraction_level": "低",
+  "transferable_moves": [],
+  "anti_patterns": [
+    "缺乏实质内容",
+    "信息密度极低",
+    "系统占位符"
+  ],
+  "notable_phrases": [],
+  "title_score": 30,
+  "opening_score": 10,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 10,
+  "style_score": 5,
+  "publishability_score": 5,
+  "quality_score": 5,
+  "reference_value_score": 5,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该内容为2023年7月11日的‘FBK翻书日签’，主题涉及《隐藏的大脑》。文本极其简短，除标题、日期、来源链接和一条关于图片搜索模式的系统提示外，无任何正文内容、书评或金句摘录。属于典型的运营打卡占位符。",
+  "summary_500": "该文本记录了2023年7月11日的‘FBK翻书日签’信息。其内容构成仅限于元数据，包括标题、发布日期（2023-07-11）、微信来源链接以及由于技术抓取产生的系统提示（触发全局图片搜索模式）。文章缺失了作为写作内容的所有核心要素：没有引言、没有核心观点、没有对书籍《隐藏的大脑》的实质性解读或引用，也没有任何启发性的结论。在商业分析或RAG知识库构建中，此类数据被视为低价值噪音，仅具时间戳参考价值，无法提供可迁移的写作技巧或思想洞察。"
+}

@@ -1,0 +1,86 @@
+{
+  "id": "de30cbb278f5",
+  "year": "2023",
+  "date": "2023-08-03",
+  "title": "身份的焦虑从何而来？丨FBK翻书日签 2023年8月3日",
+  "relative_path": "2023/2023-08-03_身份的焦虑从何而来？丨FBK翻书日签 2023年8月3日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-08-03_身份的焦虑从何而来？丨FBK翻书日签 2023年8月3日.txt",
+  "char_count": 357,
+  "content_type": "每日金句",
+  "industry": [
+    "文化",
+    "出版"
+  ],
+  "topic": [
+    "身份焦虑",
+    "阅读推荐"
+  ],
+  "genre": "日签",
+  "style": [
+    "极简",
+    "碎片化"
+  ],
+  "audience": [
+    "读书爱好者",
+    "职场人士"
+  ],
+  "intent": [
+    "日常维护",
+    "引流"
+  ],
+  "tone": [
+    "启发性"
+  ],
+  "primary_question": "身份的焦虑从何而来？",
+  "thesis_type": "问题导向型",
+  "thesis_sentence": "通过每日一问的方式引发读者对身份焦虑根源的思考。",
+  "structure_pattern": "固定模板式",
+  "section_functions": [
+    "标题阐述核心问题",
+    "日期标注记录属性",
+    "来源链接提供完整内容入口"
+  ],
+  "argument_moves": [
+    "提出普遍性的心理困境问题"
+  ],
+  "core_argument": "由于正文内容缺失，仅能推断该文旨在引导读者关注和思考身份焦虑这一主题。",
+  "key_points": [
+    "身份焦虑的来源探讨"
+  ],
+  "opening_pattern": "直奔主题式设问",
+  "ending_pattern": "元数据信息闭环",
+  "evidence_types": [],
+  "evidence_specificity_score": 0,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "中等",
+  "stance_strength": "中等",
+  "sentence_rhythm": "平稳",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "建立品牌化的‘日签’栏目提高用户黏性",
+    "使用‘问题+书名/栏目名’的组合式标题"
+  ],
+  "anti_patterns": [
+    "正文缺失（信息密度过低）",
+    "只有引子没有结论"
+  ],
+  "notable_phrases": [
+    "身份的焦虑",
+    "翻书日签"
+  ],
+  "title_score": 65,
+  "opening_score": 30,
+  "argument_score": 10,
+  "evidence_score": 0,
+  "structure_score": 40,
+  "style_score": 50,
+  "publishability_score": 20,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "本文是FBK‘翻书日签’栏目的日常推送，发布于2023年8月3日。其内容极度简练，仅提供了一个关于‘身份焦虑’的设问标题和元数据，缺乏实质性的正文分析或论证过程。此类内容主要用于品牌日常打卡和社交媒体分享，对于需要深度学习或提取干货的读者来说，信息价值极低。",
+  "summary_500": "这是一篇典型的微信公众号碎片化‘日签’内容。标题《身份的焦虑从何而来？》精准地击中了现代人的普遍心理痛点，并关联了‘翻书日签’这一品牌栏目，显示出其背后的品牌运作逻辑——通过每日一个高质量问题或书摘来维持用户活跃度。然而，从写作机制和内容密度的角度来看，该文本属于典型的‘低价值存根’。正文部分除了标题、日期、原始链接和一张搜索模式的提示外，没有任何关于身份焦虑的深度解析、案例支撑或行动指南。在RAG写作或知识提取场景中，该文本仅能作为‘某日关注了身份焦虑话题’的一个事件标记，无法提供任何实质性的论据、论点或写作手法参考。由于其本质是一个引导读者点击原链接或查看图片的通知性条目，其结构得分与质量得分均较低。对于内容分析师而言，该文章的分析意义在于展示了自媒体如何利用极简模板进行低成本运营，但在知识沉淀方面几乎没有贡献。"
+}

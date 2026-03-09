@@ -1,0 +1,90 @@
+{
+  "id": "caaf57366246",
+  "year": "2023",
+  "date": "2023-05-16",
+  "title": "幸福之路 罗素丨FBK翻书日签 2023年5月16日",
+  "relative_path": "2023/2023-05-16_幸福之路 罗素丨FBK翻书日签 2023年5月16日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-05-16_幸福之路 罗素丨FBK翻书日签 2023年5月16日.txt",
+  "char_count": 355,
+  "content_type": "日签",
+  "industry": [
+    "出版",
+    "个人成长"
+  ],
+  "topic": [
+    "幸福",
+    "人生哲学"
+  ],
+  "genre": "格言卡片",
+  "style": [
+    "极简",
+    "碎片化"
+  ],
+  "audience": [
+    "大众读者"
+  ],
+  "intent": [
+    "品牌互动",
+    "日常打卡"
+  ],
+  "tone": [
+    "启发性"
+  ],
+  "primary_question": "如何通过阅读获得每日启发？",
+  "thesis_type": "描述型",
+  "thesis_sentence": "本文仅作为每日书目引荐及打卡记录，推介罗素的《幸福之路》。",
+  "structure_pattern": "固定模板结构",
+  "section_functions": [
+    "标题日期标记",
+    "核心书名作者展示",
+    "图片占位符"
+  ],
+  "argument_moves": [
+    "建立名家权威关联"
+  ],
+  "core_argument": "无实质论证过程，仅为信息展示。",
+  "key_points": [
+    "书籍：罗素《幸福之路》",
+    "日期：2023年5月16日"
+  ],
+  "opening_pattern": "标题式直接进入",
+  "ending_pattern": "来源标记",
+  "evidence_types": [
+    "名言警句"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 80,
+  "narrative_distance": "客观叙述",
+  "stance_strength": "中性",
+  "sentence_rhythm": "极短促",
+  "abstraction_level": "抽象",
+  "transferable_moves": [
+    "采用日签形式维持社群每日最低活跃度",
+    "利用经典名著背书增强品牌调性"
+  ],
+  "anti_patterns": [
+    "内容极度空洞",
+    "缺乏深度解读",
+    "仅有引文而无背景分析"
+  ],
+  "notable_phrases": [
+    "幸福之路",
+    "罗素",
+    "翻书日签"
+  ],
+  "title_score": 20,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 5,
+  "structure_score": 15,
+  "style_score": 20,
+  "publishability_score": 10,
+  "quality_score": 10,
+  "reference_value_score": 5,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该内容为FBK于2023年5月16日发布的“翻书日签”，主题聚焦罗素的著作《幸福之路》。其形式极简，属于碎片化信息流，主要起到每日打卡和品牌露出的作用。内容本身极度缺乏文本细节，没有实质性的论点展开或深度分析，主要载体推测为图片。对于研究写作机制或内容创作的参考价值极低。",
+  "summary_500": "本文档是一份基于微信公众号平台的“翻书日签”记录。核心内容仅包含标题、日期以及对罗素经典著作《幸福之路》的提及。作为一种高度模板化的社交媒体内容，其设计初衷是利用名著/名人效应进行轻量级的知识传播或社群日常运营。从写作分析的角度来看，该内容不具备完整的文章结构，没有引言、论证、案例或结论等标准组成部分。由于文本信息极少（页面触发全局图片搜索模式说明主要内容承载在图片引文中），无法提炼出有效的逻辑模型或叙事技巧。对于需要深度内容分析、RAG素材提取或文风模仿的用户而言，此内容的价值权重应被设置为最低级。它主要作为品牌活动的流水账记录存在，不包含可供迁移动作学习的商业策略或文学深度。"
+}

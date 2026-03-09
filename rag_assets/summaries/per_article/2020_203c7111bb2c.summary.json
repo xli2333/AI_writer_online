@@ -1,0 +1,79 @@
+{
+  "id": "203c7111bb2c",
+  "year": "2020",
+  "date": "2020-01-23",
+  "title": "分享图片",
+  "relative_path": "2020/2020-01-23_分享图片.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2020\\2020-01-23_分享图片.txt",
+  "char_count": 333,
+  "content_type": "图片占位符",
+  "industry": [
+    "通用"
+  ],
+  "topic": [
+    "图片分享"
+  ],
+  "genre": "社交媒体动态",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "普通读者"
+  ],
+  "intent": [
+    "记录"
+  ],
+  "tone": [
+    "中立"
+  ],
+  "primary_question": "无",
+  "thesis_type": "无",
+  "thesis_sentence": "这是一篇仅包含图片的社交媒体动态，无核心论点。",
+  "structure_pattern": "碎片化结构",
+  "section_functions": [
+    "标记日期",
+    "提示图片内容"
+  ],
+  "argument_moves": [
+    "无"
+  ],
+  "core_argument": "无实质性论证内容",
+  "key_points": [
+    "发布日期为2020-01-23",
+    "标题为分享图片",
+    "内容仅含一张检索到的图片"
+  ],
+  "opening_pattern": "默认系统生成标题",
+  "ending_pattern": "自然截断",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 0,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "中性描述",
+  "stance_strength": "无",
+  "sentence_rhythm": "零散",
+  "abstraction_level": "具象",
+  "transferable_moves": [],
+  "anti_patterns": [
+    "信息密度极低",
+    "缺乏文字说明",
+    "标题雷同化"
+  ],
+  "notable_phrases": [],
+  "title_score": 5,
+  "opening_score": 5,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 10,
+  "style_score": 10,
+  "publishability_score": 5,
+  "quality_score": 5,
+  "reference_value_score": 0,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为2020年1月23日发布的微信公众号动态，标题为“分享图片”。内容极其简略，仅包含系统抓取的图片信息提示，没有任何实质性的文字表述、商业分析或逻辑结构。属于低价值的占位符数据。",
+  "summary_500": "该文档是一篇高度简化的社交媒体内容记录。其核心特征如下：首先，信息密度极低，除基本的发布日期、标题及链接外，不存在任何有效的内容承载；其次，该内容缺乏写作机制，无 primary question 或论点支撑，仅作为图片分享的空壳存在；最后，该数据不具备检索或 RAG 写作的参考价值。在商业分析视角下，此类内容应被标记为噪音或低价值占位符，不建议用于知识库构建或人格提炼。"
+}

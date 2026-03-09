@@ -1,0 +1,86 @@
+{
+  "id": "a5aba90afe05",
+  "year": "2023",
+  "date": "2023-03-06",
+  "title": "越轨与创新丨FBK翻书日签 2023年3月6日",
+  "relative_path": "2023/2023-03-06_越轨与创新丨FBK翻书日签 2023年3月6日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-03-06_越轨与创新丨FBK翻书日签 2023年3月6日.txt",
+  "char_count": 352,
+  "content_type": "日签",
+  "industry": [
+    "文化传播",
+    "出版"
+  ],
+  "topic": [
+    "创新",
+    "职场成长"
+  ],
+  "genre": "短图文",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "职场人士",
+    "知识爱好者"
+  ],
+  "intent": [
+    "品牌触达"
+  ],
+  "tone": [
+    "理性"
+  ],
+  "primary_question": "越轨与创新之间存在何种关系？",
+  "thesis_type": "金句式",
+  "thesis_sentence": "越轨与创新具有内在的逻辑联系。",
+  "structure_pattern": "单图文结构",
+  "section_functions": [
+    "标题揭示主题",
+    "日期标注时间",
+    "链接指向原文"
+  ],
+  "argument_moves": [
+    "提出抽象概念组合"
+  ],
+  "core_argument": "由于正文缺失，仅能推测其核心论点为探讨突破常规对于创新的必要性。",
+  "key_points": [
+    "越轨",
+    "创新"
+  ],
+  "opening_pattern": "标题式开门见山",
+  "ending_pattern": "无",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "远距离",
+  "stance_strength": "中等",
+  "sentence_rhythm": "极简",
+  "abstraction_level": "极高",
+  "transferable_moves": [
+    "利用‘日签’形式进行每日品牌心智占位"
+  ],
+  "anti_patterns": [
+    "信息密度极低",
+    "缺乏实质性论述",
+    "仅提供标题和元数据"
+  ],
+  "notable_phrases": [
+    "越轨与创新"
+  ],
+  "title_score": 45,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 0,
+  "structure_score": 10,
+  "style_score": 20,
+  "publishability_score": 15,
+  "quality_score": 10,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为2023年3月6日的FBK翻书日签，主题为‘越轨与创新’。除标题、日期和链接外，正文内容实质缺失。作为典型的品牌打卡类内容，其信息密度极低，缺乏具体的论据或论证过程。其主要功能是作为每日品牌触达的视觉符号，但在商业分析和RAG写作中属于低价值语料。",
+  "summary_500": "本条目是微信公众号‘FBK’发布的每日日签内容。标题《越轨与创新》提出了一个极具张力的哲学与商业命题，暗示了突破既有规则与创造价值之间的紧密联系。然而，在抓取的文本信息中，除了标题、发布日期（2023年3月6日）和原始URL链接外，并没有包含具体的推导、案例或详细论述。这种形式的内容通常以‘精美图片+简短金句’的形式出现在移动端社交媒体中，旨在通过高频、轻量化的交互维持读者的品牌忠诚度。从结构化分析角度看，该内容的证据特异性分数为0，数据和案例密度极低。它不具备完整的逻辑闭环，无法支撑复杂的深度检索需求。其最大的‘写作机制’参考点在于其品牌运营策略——利用抽象的二元对立概念（如‘越轨’与‘创新’）来引发读者的联想与共鸣。在进行语料库构建或人格分析时，此类内容应被归类为‘极低价值’或‘品牌占位符’，不建议作为核心论点来源或写作模仿样本。"
+}

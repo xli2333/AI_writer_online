@@ -1,0 +1,90 @@
+{
+  "id": "d33ff0dc9ac6",
+  "year": "2023",
+  "date": "2023-09-14",
+  "title": "如何做成一件事？丨FBK翻书日签 2023年9月14日",
+  "relative_path": "2023/2023-09-14_如何做成一件事？丨FBK翻书日签 2023年9月14日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-09-14_如何做成一件事？丨FBK翻书日签 2023年9月14日.txt",
+  "char_count": 356,
+  "content_type": "日签",
+  "industry": [
+    "个人成长",
+    "教育培训"
+  ],
+  "topic": [
+    "方法论",
+    "自律"
+  ],
+  "genre": "文句摘录",
+  "style": [
+    "极简",
+    "语录体"
+  ],
+  "audience": [
+    "职场人",
+    "终身学习者"
+  ],
+  "intent": [
+    "品牌留存",
+    "日常激励"
+  ],
+  "tone": [
+    "平和",
+    "启发式"
+  ],
+  "primary_question": "如何做成一件事？",
+  "thesis_type": "经验法则",
+  "thesis_sentence": "（由于原文为日签图片形式，推测其通过金句提供关于做事方法的单一视角洞察）",
+  "structure_pattern": "问答互动式",
+  "section_functions": [
+    "提出核心问题",
+    "视觉引导",
+    "提供金句解答"
+  ],
+  "argument_moves": [
+    "直截了当提问",
+    "引用书本洞察"
+  ],
+  "core_argument": "通过每日阅读或特定心智模型解决行动力问题。",
+  "key_points": [
+    "对成功做事的追问"
+  ],
+  "opening_pattern": "问题导向法",
+  "ending_pattern": "品牌信息落款",
+  "evidence_types": [
+    "书籍金句"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 90,
+  "narrative_distance": "旁观者",
+  "stance_strength": "中等",
+  "sentence_rhythm": "短促",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "利用每日提问激发读者思考",
+    "日签海报的标准化排版"
+  ],
+  "anti_patterns": [
+    "信息承载量极低",
+    "缺乏逻辑推演",
+    "过度依赖视觉图片而缺失文本深度"
+  ],
+  "notable_phrases": [
+    "如何做成一件事？"
+  ],
+  "title_score": 40,
+  "opening_score": 30,
+  "argument_score": 10,
+  "evidence_score": 10,
+  "structure_score": 20,
+  "style_score": 30,
+  "publishability_score": 20,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "本文为FBK翻书会发布的每日日签。以“如何做成一件事？”为核心提问，采用极简的日签形式（文字+图片）向读者传递碎片化的方法论启示。该内容主要用于品牌日常运营和用户社群互动，信息密度极低。",
+  "summary_500": "该文章属于典型的社交媒体日签内容，发布于2023年9月14日，为“FBK翻书日签”系列之一。其写作机制非常单一，采用一个标准的启发式问题“如何做成一件事？”作为标题和核心锚点，试图引导读者通过翻阅书籍或查看日签图片中的金句来获取答案。这种内容形式侧重于心理激励和品牌打卡，而非深度的商业分析或逻辑论证。由于正文缺失具体的展开说明，且主要信息承载于图片中，从结构化分析角度看，其逻辑链条不完整，缺乏事实证据和数据支持。此类文章在RAG知识库中仅具备较低的标签化价值，无法作为深度写作的素材参考，但在研究社交媒体碎片化运营和用户留存策略方面具有一定的模式代表性。建议将其标记为低价值、低信息密度的内容。"
+}

@@ -1,0 +1,83 @@
+{
+  "id": "45fab8bb781c",
+  "year": "2023",
+  "date": "2023-06-21",
+  "title": "科创大时代丨FBK翻书日签 2023年6月21日",
+  "relative_path": "2023/2023-06-21_科创大时代丨FBK翻书日签 2023年6月21日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-06-21_科创大时代丨FBK翻书日签 2023年6月21日.txt",
+  "char_count": 353,
+  "content_type": "社交媒体日签",
+  "industry": [
+    "科技",
+    "创投"
+  ],
+  "topic": [
+    "每日金句",
+    "行业动态"
+  ],
+  "genre": "碎片化内容",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "科创从业者",
+    "投资人"
+  ],
+  "intent": [
+    "品牌心智建设",
+    "日常活跃"
+  ],
+  "tone": [
+    "中立"
+  ],
+  "primary_question": "无",
+  "thesis_type": "无",
+  "thesis_sentence": "无",
+  "structure_pattern": "固定模板索引",
+  "section_functions": [
+    "品牌标题展示",
+    "发布日期标注",
+    "原始链接索引"
+  ],
+  "argument_moves": [],
+  "core_argument": "无",
+  "key_points": [
+    "2023年6月21日的FBK翻书日签内容索引"
+  ],
+  "opening_pattern": "直述式标题",
+  "ending_pattern": "外链引导",
+  "evidence_types": [],
+  "evidence_specificity_score": 0,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "客观",
+  "stance_strength": "中性",
+  "sentence_rhythm": "无",
+  "abstraction_level": "具体",
+  "transferable_moves": [
+    "使用固定前缀和日期后缀构建系列化内容标题"
+  ],
+  "anti_patterns": [
+    "内容严重缺失",
+    "缺乏实质性文字描述",
+    "过度依赖外部链接或图片载体"
+  ],
+  "notable_phrases": [
+    "科创大时代",
+    "FBK翻书日签"
+  ],
+  "title_score": 40,
+  "opening_score": 10,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 20,
+  "style_score": 10,
+  "publishability_score": 5,
+  "quality_score": 10,
+  "reference_value_score": 5,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该文本为“科创大时代”公众号于2023年6月21日发布的FBK翻书日签记录。内容极度简略，仅包含标题、日期及原始文章链接。由于技术抓取原因（wechat_fallback_global模式），正文核心内容、金句及图片缺失。该内容仅起到索引和占位作用，缺乏实质性的行业分析、观点或知识产出，属于低信息密度的日常维护性质内容，不具备独立阅读和研究价值。",
+  "summary_500": "本分析对象是一篇名为《科创大时代丨FBK翻书日签 2023年6月21日》的社交媒体短内容。从其结构与功能来看，属于品牌方用于维持用户粘性的每日固定栏目。文本中除了品牌标识（FBK翻书日签）、所属领域（科创大时代）以及发布日期外，没有任何实质性的文字信息。该记录显示触发了全局图片搜索模式，意味着核心内容可能承载于单张海报或金句图片中，而采集到的文字部分仅为该内容的元数据和底层链接。在写作机制上，该文无 primary_question，无 thesis_sentence，也完全不具备任何论证逻辑或证据支持。这种内容在商业分析中通常被定义为“占位符内容”或“活动索引”。其唯一的迁移动作是展示了如何通过标准化的命名规则进行内容的系列化管理。由于信息密度极低且关键内容缺失，该条目在知识库中的参考价值极低，建议标记为低价值。对于RAG写作或人格提炼而言，该文本无法提供任何关于品牌价值观、文风或行业洞察的有效特征。仅可作为品牌历史推文频率的记录数据使用。"
+}

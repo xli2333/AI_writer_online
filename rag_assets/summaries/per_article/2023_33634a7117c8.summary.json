@@ -1,0 +1,83 @@
+{
+  "id": "33634a7117c8",
+  "year": "2023",
+  "date": "2023-05-29",
+  "title": "文明的冲突 塞缪尔·亨廷顿丨FBK翻书日签 2023年5月29日",
+  "relative_path": "2023/2023-05-29_文明的冲突 塞缪尔·亨廷顿丨FBK翻书日签 2023年5月29日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-05-29_文明的冲突 塞缪尔·亨廷顿丨FBK翻书日签 2023年5月29日.txt",
+  "char_count": 361,
+  "content_type": "元数据记录",
+  "industry": [
+    "出版",
+    "人文社科"
+  ],
+  "topic": [
+    "文明冲突",
+    "国际政治"
+  ],
+  "genre": "读书日签",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "系统采集器",
+    "存档用户"
+  ],
+  "intent": [
+    "品牌存档"
+  ],
+  "tone": [
+    "中立"
+  ],
+  "primary_question": "塞缪尔·亨廷顿的《文明的冲突》主要观点是什么？（由于正文缺失，此为预设问题）",
+  "thesis_type": "无",
+  "thesis_sentence": "本文仅包含书籍分享日签的标题与系统元数据，未包含书籍核心内容的具体阐述。",
+  "structure_pattern": "标题与链接占位结构",
+  "section_functions": [
+    "标题界定",
+    "来源记录",
+    "系统状态反馈"
+  ],
+  "argument_moves": [
+    "无实质性论证内容"
+  ],
+  "core_argument": "无",
+  "key_points": [
+    "提及塞缪尔·亨廷顿及其著作《文明的冲突》",
+    "记录日期为2023年5月29日"
+  ],
+  "opening_pattern": "标题式开头",
+  "ending_pattern": "系统提示式结尾",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 0,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "零距离",
+  "stance_strength": "无",
+  "sentence_rhythm": "极简",
+  "abstraction_level": "低",
+  "transferable_moves": [],
+  "anti_patterns": [
+    "内容缺失",
+    "占位符文本"
+  ],
+  "notable_phrases": [
+    "文明的冲突"
+  ],
+  "title_score": 30,
+  "opening_score": 0,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 5,
+  "style_score": 5,
+  "publishability_score": 5,
+  "quality_score": 5,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该文本仅为‘FBK翻书日签’的一个标题及相关元数据记录，涉及塞缪尔·亨廷顿的著作《文明的冲突》。内容中并未包含书籍的核心摘要、具体金句或解析文字，仅展示了日期、来源链接及一条关于‘全局图片搜索模式’的系统提示。由于实质性正文内容的缺失，该文本作为知识获取或写作研究的参考价值极低，仅能作为日签活动的历史留痕。",
+  "summary_500": "本分析针对的是一篇极简的日签元数据。标题为‘文明的冲突 塞缪尔·亨廷顿丨FBK翻书日签 2023年5月29日’，但正文部分仅由日期、链接以及系统自动生成的搜索模式提示组成，缺乏关于书籍《文明的冲突》的任何实质性观点提炼、逻辑论证或背景介绍。基于这种严重的信息缺失，该内容被归类为‘低价值占位符’，不具备独立成文的结构或风格特征。在构建RAG写作库或知识图谱时，此类语料应被标记为无效或仅保留元数据用于索引，其质量分、证据分和论证分均为极低水平。文本中没有可迁移动作或显著的写作机制可供参考。"
+}

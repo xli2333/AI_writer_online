@@ -1,0 +1,88 @@
+{
+  "id": "9d0df139c635",
+  "year": "2023",
+  "date": "2023-09-07",
+  "title": "跨越鸿沟丨FBK翻书日签 2023年9月7日",
+  "relative_path": "2023/2023-09-07_跨越鸿沟丨FBK翻书日签 2023年9月7日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-09-07_跨越鸿沟丨FBK翻书日签 2023年9月7日.txt",
+  "char_count": 351,
+  "content_type": "每日日签",
+  "industry": [
+    "知识服务",
+    "出版"
+  ],
+  "topic": [
+    "跨越鸿沟",
+    "每日读书"
+  ],
+  "genre": "资讯",
+  "style": [
+    "简练"
+  ],
+  "audience": [
+    "读书爱好者",
+    "职场人士"
+  ],
+  "intent": [
+    "品牌维护",
+    "日常打卡"
+  ],
+  "tone": [
+    "中立"
+  ],
+  "primary_question": "无内容产出，仅为日期标注及链接导向。",
+  "thesis_type": "描述性",
+  "thesis_sentence": "本文为2023年9月7日的FBK翻书日签，主要作为日常运营的品牌曝光触点。",
+  "structure_pattern": "碎片化",
+  "section_functions": [
+    "核心标题提示",
+    "日期标注",
+    "外部链接引导"
+  ],
+  "argument_moves": [
+    "无论证动作"
+  ],
+  "core_argument": "无实质性论点，仅为日常打卡信息。",
+  "key_points": [
+    "2023年9月7日打卡",
+    "主题涉及跨越鸿沟"
+  ],
+  "opening_pattern": "标题直叙",
+  "ending_pattern": "链接指引",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 0,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "远",
+  "stance_strength": "弱",
+  "sentence_rhythm": "匀称",
+  "abstraction_level": "中",
+  "transferable_moves": [
+    "利用固定格式进行每日品牌触达"
+  ],
+  "anti_patterns": [
+    "内容极度贫乏",
+    "缺乏可读文本",
+    "纯通知导向"
+  ],
+  "notable_phrases": [
+    "跨越鸿沟",
+    "翻书日签"
+  ],
+  "title_score": 40,
+  "opening_score": 10,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 10,
+  "style_score": 20,
+  "publishability_score": 10,
+  "quality_score": 5,
+  "reference_value_score": 2,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该内容为2023年9月7日的FBK翻书日签，属于极简形式的每日品牌打卡页面。正文仅包含标题、日期和跳转链接，实质性知识内容缺失。此类内容主要用于社群活跃和用户习惯培养，但在文本写作、逻辑论证和数据密度方面几乎没有任何分析价值，被判定为极低价值的系统通知类信息。",
+  "summary_500": "该内容为FBK（翻书）公众号在2023年9月7日发布的每日日签。从文本结构上看，该篇内容极度精简，仅作为图片信息的文字载体或链接入口。主要特征包括：1. 形式大于内容：文章不具备完整的起承转合，仅通过标题展示当日主题“跨越鸿沟”，随后附带日期与原始链接。2. 逻辑缺失：由于缺乏正文陈述，不存在论点、论据及论证过程，无法进行写作机制层面的深入解构。3. 低信息密度：除元数据外，无任何有效知识点或行业洞察产出。对于内容分析师而言，此类文章属于过滤范畴，无法为RAG写作或风格提炼提供素材，但在品牌日活跃维护（DAU）策略上具有一定的流程化参考价值。建议在内容挖掘中将其标记为低价值通知，避免干扰核心知识库的构建。"
+}

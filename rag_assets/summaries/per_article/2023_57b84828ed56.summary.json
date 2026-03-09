@@ -1,0 +1,90 @@
+{
+  "id": "57b84828ed56",
+  "year": "2023",
+  "date": "2023-02-01",
+  "title": "FBK翻书日签丨2023年2月1日",
+  "relative_path": "2023/2023-02-01_FBK翻书日签丨2023年2月1日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-02-01_FBK翻书日签丨2023年2月1日.txt",
+  "char_count": 346,
+  "content_type": "日签",
+  "industry": [
+    "文化",
+    "出版"
+  ],
+  "topic": [
+    "每日阅读",
+    "生活方式"
+  ],
+  "genre": "短文",
+  "style": [
+    "极简",
+    "功能性"
+  ],
+  "audience": [
+    "书籍爱好者",
+    "碎片化阅读者"
+  ],
+  "intent": [
+    "品牌维护",
+    "用户留存"
+  ],
+  "tone": [
+    "中性"
+  ],
+  "primary_question": "2023年2月1日的阅读日签内容是什么？",
+  "thesis_type": "描述型",
+  "thesis_sentence": "本文仅作为一个特定日期的阅读日签占位，提供视觉化的每日启发。",
+  "structure_pattern": "单点结构",
+  "section_functions": [
+    "标题指引",
+    "日期标注",
+    "图片展示"
+  ],
+  "argument_moves": [
+    "通过日期进行日常化链接",
+    "利用视觉元素进行内容传达"
+  ],
+  "core_argument": "无实质性论证内容，主要功能为每日打卡式的信息展示。",
+  "key_points": [
+    "日期：2023年2月1日",
+    "形式：FBK翻书日签"
+  ],
+  "opening_pattern": "直陈式标题",
+  "ending_pattern": "无结尾",
+  "evidence_types": [
+    "视觉图像"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "中立观察",
+  "stance_strength": "极弱",
+  "sentence_rhythm": "无句式节奏",
+  "abstraction_level": "具象",
+  "transferable_moves": [
+    "日签式的品牌互动设计",
+    "标准化命名格式"
+  ],
+  "anti_patterns": [
+    "内容极度缺失",
+    "过度依赖外部链接/图片",
+    "缺乏可检索的文本价值"
+  ],
+  "notable_phrases": [
+    "翻书日签"
+  ],
+  "title_score": 40,
+  "opening_score": 20,
+  "argument_score": 0,
+  "evidence_score": 10,
+  "structure_score": 30,
+  "style_score": 30,
+  "publishability_score": 10,
+  "quality_score": 5,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为2023年2月1日的“FBK翻书日签”，属于典型的碎片化社交媒体内容。正文缺乏实质性文字描述，仅包含标题、日期及一张图片的搜索触发标记。其核心功能在于维持每日的品牌存在感，对于深度分析或知识提取而言，信息密度极低，属于低价值的占位符文章。",
+  "summary_500": "该内容是“FBK翻书日签”系列在2023年2月1日的发布记录。从结构上看，它仅由标准化的标题（包含品牌简称、栏目名及日期）和系统生成的抓取说明组成。此类内容通常在微信公众号环境中以图片为核心，文字仅作为辅助标签。由于原文中实质性文本内容缺失（仅提示触发了图片搜索模式），无法进行逻辑论证分析、修辞识别或知识点提取。在商业内容分析中，此类文章被归类为“极低信息密度”或“仅具时间戳价值”的内容。它体现了自媒体运营中的“日更打卡”策略，旨在通过稳定的发布频率维持用户黏性，但对于非即时性的研究、RAG写作或人格建模几乎没有参考价值。分析师建议在构建知识库时忽略此类条目，或仅将其作为发布频率的时间线参考。"
+}

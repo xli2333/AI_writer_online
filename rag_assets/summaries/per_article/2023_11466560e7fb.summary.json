@@ -1,0 +1,87 @@
+{
+  "id": "11466560e7fb",
+  "year": "2023",
+  "date": "2023-08-23",
+  "title": "培养你的整合思维丨FBK翻书日签 2023年8月23日",
+  "relative_path": "2023/2023-08-23_培养你的整合思维丨FBK翻书日签 2023年8月23日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-08-23_培养你的整合思维丨FBK翻书日签 2023年8月23日.txt",
+  "char_count": 356,
+  "content_type": "日签",
+  "industry": [
+    "个人成长",
+    "知识服务"
+  ],
+  "topic": [
+    "思维方式",
+    "整合思维"
+  ],
+  "genre": "微文",
+  "style": [
+    "极简",
+    "碎片化"
+  ],
+  "audience": [
+    "职场人士",
+    "终身学习者"
+  ],
+  "intent": [
+    "品牌维护",
+    "用户活跃"
+  ],
+  "tone": [
+    "启发式",
+    "中立"
+  ],
+  "primary_question": "整合思维是什么或如何培养？",
+  "thesis_type": "概念引导型",
+  "thesis_sentence": "通过每日日签的形式提醒读者关注‘整合思维’的培养。",
+  "structure_pattern": "日签固定格式",
+  "section_functions": [
+    "主题宣告",
+    "日期标识",
+    "平台来源标注"
+  ],
+  "argument_moves": [
+    "陈述主题名称"
+  ],
+  "core_argument": "无实质论证逻辑，仅为主题展示。",
+  "key_points": [
+    "提及‘整合思维’这一概念"
+  ],
+  "opening_pattern": "直陈式标题",
+  "ending_pattern": "无",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 0,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "远距",
+  "stance_strength": "中等",
+  "sentence_rhythm": "无明显节奏",
+  "abstraction_level": "极高",
+  "transferable_moves": [
+    "使用‘主题+日期’的标准化命名法进行每日内容更新"
+  ],
+  "anti_patterns": [
+    "内容过度依赖外部载体（图片）导致文本信息缺失",
+    "缺乏对核心概念的阐释"
+  ],
+  "notable_phrases": [
+    "培养你的整合思维"
+  ],
+  "title_score": 40,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 0,
+  "structure_score": 10,
+  "style_score": 20,
+  "publishability_score": 20,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为FBK翻书日签的每日发布记录，主要通过标题‘培养你的整合思维’向读者传达特定主题。原文除了标题、日期和图片来源标识外，没有任何具体的正文、论证或案例阐述。这种形式属于极简的品牌触达策略，信息密度极低，主要依靠视觉载体进行传播，在纯文本层面几乎不具备参考价值。",
+  "summary_500": "这篇文档代表了社交媒体（微信公众号）中常见的一种内容形态：日签。其核心功能并非提供深度的知识输出，而是通过每日不间断的发布，维持品牌与用户之间的视觉接触。文章标题《培养你的整合思维丨FBK翻书日签 2023年8月23日》指明了当日的思维训练方向，但正文部分处于完全缺失状态，仅显示触发了图片搜索模式。这意味着该文章的实质性内容（如名言、金句、书籍推荐或短评）完全承载在图片之上。由于缺乏文本内容，该数据在作为写作参考或逻辑分析时价值极低。它反映了知识服务类媒体的一种运营习惯：将核心信息视觉化以适应移动端碎片化阅读，但在数据检索和知识管理维度，这种‘空壳化’的内容属于低价值信息。对于RAG写作或知识提取任务，该样本仅能提供‘日期’与‘当日主题词’的对应关系，无法提供任何思维工具论的实际方法论。"
+}

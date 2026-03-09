@@ -1,0 +1,83 @@
+{
+  "id": "ea3182e14c72",
+  "year": "2023",
+  "date": "2023-12-27",
+  "title": "凯·伯德×刚博文：读奥本海默，我们还在读什么",
+  "relative_path": "2023/2023-12-27_凯·伯德×刚博文：读奥本海默，我们还在读什么.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-12-27_凯·伯德×刚博文：读奥本海默，我们还在读什么.txt",
+  "char_count": 293,
+  "content_type": "信息导引",
+  "industry": [
+    "文化传播",
+    "图书出版"
+  ],
+  "topic": [
+    "奥本海默",
+    "凯·伯德",
+    "传记"
+  ],
+  "genre": "活动预告",
+  "style": [
+    "简约"
+  ],
+  "audience": [
+    "一般读者",
+    "历史爱好者"
+  ],
+  "intent": [
+    "告知",
+    "索引"
+  ],
+  "tone": [
+    "客观"
+  ],
+  "primary_question": "该条目提供了哪些关于凯·伯德对话活动的索引信息？",
+  "thesis_type": "事实描述",
+  "thesis_sentence": "本条目仅作为‘凯·伯德与刚博文对话奥本海默’活动的元数据存根，缺乏实质性正文内容。",
+  "structure_pattern": "清单结构",
+  "section_functions": [
+    "标题标识",
+    "时间记录",
+    "来源指引"
+  ],
+  "argument_moves": [
+    "无"
+  ],
+  "core_argument": "无实质论证内容。",
+  "key_points": [
+    "2023年12月27日发布的活动信息",
+    "涉及人物包括《奥本海默》传记作者凯·伯德及刚博文"
+  ],
+  "opening_pattern": "标题直接呈现",
+  "ending_pattern": "来源渠道标注",
+  "evidence_types": [
+    "元数据"
+  ],
+  "evidence_specificity_score": 5,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "客观观察",
+  "stance_strength": "中立",
+  "sentence_rhythm": "零碎",
+  "abstraction_level": "低",
+  "transferable_moves": [],
+  "anti_patterns": [
+    "内容缺失",
+    "信息量极低"
+  ],
+  "notable_phrases": [],
+  "title_score": 40,
+  "opening_score": 5,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 10,
+  "style_score": 10,
+  "publishability_score": 5,
+  "quality_score": 5,
+  "reference_value_score": 5,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该文本仅包含《凯·伯德×刚博文：读奥本海默，我们还在读什么》活动的元数据，提供发布日期、文章链接及来源平台。由于缺乏正文论述，无法对写作机制、风格或核心逻辑进行分析。该内容被判定为低价值信息存根，仅具备索引价值，无法作为人格提炼或深度分析的素材。",
+  "summary_500": "此输入文本是一个典型的内容存根，其正文部分仅重复了标题、日期、链接和来源平台等基础信息，并未包含对话的具体论点、实录或评论。活动主题涉及传记作家凯·伯德与刚博文关于奥本海默的讨论，但因缺乏实质性正文，导致结构化分析中的论证动作、证据特征、语言节奏等维度均无法评估。从商业内容分析角度看，该文本属于低价值的活动通知类信息。其核心用途仅在于记录对话发生的历史节点（2023年12月27日）及提供原始阅读路径。对于旨在进行写作机制研究或RAG知识库构建的任务而言，由于文本不具备逻辑推演和知识深度，属于无效输入材料。"
+}

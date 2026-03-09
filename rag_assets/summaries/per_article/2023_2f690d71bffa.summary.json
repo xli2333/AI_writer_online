@@ -1,0 +1,86 @@
+{
+  "id": "2f690d71bffa",
+  "year": "2023",
+  "date": "2023-06-27",
+  "title": "日常生活批判丨FBK翻书日签 2023年6月28日",
+  "relative_path": "2023/2023-06-27_日常生活批判丨FBK翻书日签 2023年6月28日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-06-27_日常生活批判丨FBK翻书日签 2023年6月28日.txt",
+  "char_count": 354,
+  "content_type": "日签",
+  "industry": [
+    "文化",
+    "出版"
+  ],
+  "topic": [
+    "读书",
+    "日常生活"
+  ],
+  "genre": "碎片化内容",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "阅读爱好者"
+  ],
+  "intent": [
+    "品牌心智建设"
+  ],
+  "tone": [
+    "中立"
+  ],
+  "primary_question": "2023年6月28日的日签内容是什么？",
+  "thesis_type": "引用说明型",
+  "thesis_sentence": "通过每日日签形式进行日常生活的批判与反思（由标题推导）。",
+  "structure_pattern": "固定模板式",
+  "section_functions": [
+    "标题标引",
+    "日期标注",
+    "来源声明"
+  ],
+  "argument_moves": [
+    "通过标题建立主题联系",
+    "利用日期建立时间关联"
+  ],
+  "core_argument": "无（内容缺失）",
+  "key_points": [
+    "FBK翻书日签",
+    "2023年6月28日"
+  ],
+  "opening_pattern": "直接点题",
+  "ending_pattern": "系统自动结束",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 5,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "旁观者",
+  "stance_strength": "中立",
+  "sentence_rhythm": "停顿简短",
+  "abstraction_level": "具象",
+  "transferable_moves": [
+    "建立品牌化的每日日签命名规范"
+  ],
+  "anti_patterns": [
+    "信息密度过低",
+    "正文内容缺失",
+    "仅有元数据无实质内容"
+  ],
+  "notable_phrases": [
+    "日常生活批判"
+  ],
+  "title_score": 40,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 0,
+  "structure_score": 20,
+  "style_score": 10,
+  "publishability_score": 5,
+  "quality_score": 5,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为“FBK翻书”公众号的每日日签占位符，标题标明为2023年6月28日的《日常生活批判》。正文部分缺乏具体引文、评论或深度分析，仅包含日期、链接及后台图片检索模式等元数据。由于信息量极低，不具备独立的阅读或参考价值，仅可作为日签栏目运营的时间线记录使用。",
+  "summary_500": "本篇文本属于“FBK翻书”品牌的日常碎片化栏目。从标题《日常生活批判丨FBK翻书日签 2023年6月28日》可以判断，其设计初衷是结合经典文学或社会学概念（如列斐伏尔的日常生活批判）进行每日阅读分享。然而，提供的正文内容极度贫乏，仅包含标题、发布日期及一条无效的内部链接，并未呈现具体的金句引用、书籍推荐或编辑评述。在结构上，它完全依赖于预设的公众号模板。由于缺乏实质性的文本产出和逻辑论证，该内容在商业分析、内容创作或知识检索场景中均属于“低价值数据”。其唯一的功能是作为品牌在特定日期的内容占位符，无法提供任何可供迁移的写作技巧或思想洞察。建议在RAG写作或人格提炼中忽略此类信息，以免稀释数据质量。"
+}

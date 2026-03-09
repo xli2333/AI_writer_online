@@ -1,0 +1,85 @@
+{
+  "id": "b7cd8bdedf26",
+  "year": "2023",
+  "date": "2023-02-18",
+  "title": "FBK翻书日签丨2023年2月18日",
+  "relative_path": "2023/2023-02-18_FBK翻书日签丨2023年2月18日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-02-18_FBK翻书日签丨2023年2月18日.txt",
+  "char_count": 347,
+  "content_type": "日签",
+  "industry": [
+    "文化传播",
+    "图书出版"
+  ],
+  "topic": [
+    "每日阅读",
+    "品牌日更"
+  ],
+  "genre": "通知公告",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "存量粉丝"
+  ],
+  "intent": [
+    "品牌维护"
+  ],
+  "tone": [
+    "中立"
+  ],
+  "primary_question": "2023年2月18日的日签内容是什么？",
+  "thesis_type": "事实陈述",
+  "thesis_sentence": "本文是FBK品牌于2023年2月18日发布的每日阅读海报记录。",
+  "structure_pattern": "固定模板结构",
+  "section_functions": [
+    "标识内容身份",
+    "记录发布日期",
+    "提供原文链接"
+  ],
+  "argument_moves": [
+    "声明日期",
+    "指向外部链接"
+  ],
+  "core_argument": "无",
+  "key_points": [
+    "该文为每日更新的仪式化内容",
+    "主要信息承载于图片而非文字"
+  ],
+  "opening_pattern": "直陈式标题",
+  "ending_pattern": "链接占位",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "中立观察",
+  "stance_strength": "中立",
+  "sentence_rhythm": "破碎",
+  "abstraction_level": "极低",
+  "transferable_moves": [
+    "使用固定前缀建立品牌日更识别度"
+  ],
+  "anti_patterns": [
+    "正文完全缺失实质性文字内容",
+    "过度依赖外部链接"
+  ],
+  "notable_phrases": [
+    "FBK翻书日签"
+  ],
+  "title_score": 40,
+  "opening_score": 10,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 20,
+  "style_score": 10,
+  "publishability_score": 20,
+  "quality_score": 10,
+  "reference_value_score": 5,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该内容为“FBK翻书”品牌在2023年2月18日发布的每日日签记录。文章仅包含标题、日期和原始链接，实质性内容（如名言、书摘或海报图片）在抓取的文本中缺失。此类内容属于仪式性的品牌日常打卡，旨在维持账号活跃度和粉丝粘性，但不具备独立的文本阅读价值或深度分析意义。",
+  "summary_500": "本文是FBK品牌发布的每日固定栏目“翻书日签”的存档记录。从文本结构来看，它遵循了极简的日更模板，仅由标题、日期及对应的微信公众号原始链接组成。作为一种典型的“视觉优先”型内容，其核心信息（如当日推荐的图书金句、精美设计海报等）通过图片形式承载，而在纯文本层面呈现为高度的信息真空。这类内容的主要功能在于品牌存在的持续宣告和仪式感的建立，对于RAG（检索增强生成）或写作学习而言，其参考价值极低。它反映了自媒体运营中常见的“占位式”更新策略，即通过每日不间断的小体量发布来维持算法权重和用户心理位置，但由于缺乏实质性的论证、证据或叙述，不具备作为商业案例或分析素材的质量。"
+}

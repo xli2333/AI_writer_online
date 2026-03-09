@@ -1,0 +1,89 @@
+{
+  "id": "ba139ba914db",
+  "year": "2023",
+  "date": "2023-02-16",
+  "title": "FBK翻书日签丨2023年2月16日",
+  "relative_path": "2023/2023-02-16_FBK翻书日签丨2023年2月16日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-02-16_FBK翻书日签丨2023年2月16日.txt",
+  "char_count": 347,
+  "content_type": "日签",
+  "industry": [
+    "文化传播",
+    "互联网媒体"
+  ],
+  "topic": [
+    "每日金句",
+    "品牌更新"
+  ],
+  "genre": "碎片化内容",
+  "style": [
+    "极简",
+    "程式化"
+  ],
+  "audience": [
+    "订阅用户",
+    "碎片化阅读者"
+  ],
+  "intent": [
+    "品牌活跃",
+    "习惯培养"
+  ],
+  "tone": [
+    "客观",
+    "中立"
+  ],
+  "primary_question": "该日签传达了什么核心信息？",
+  "thesis_type": "描述性陈述",
+  "thesis_sentence": "该文本仅为日期与标题的仪式性记录，不包含实质性观点。",
+  "structure_pattern": "固定模板结构",
+  "section_functions": [
+    "标题界定内容属性",
+    "日期界定时间维度",
+    "链接提供原文入口"
+  ],
+  "argument_moves": [
+    "无"
+  ],
+  "core_argument": "无",
+  "key_points": [
+    "记录2023年2月16日的翻书日签信息",
+    "提供了微信公众号的原始访问链接"
+  ],
+  "opening_pattern": "标题直接入题",
+  "ending_pattern": "链接或系统提示结尾",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "零距离",
+  "stance_strength": "中立",
+  "sentence_rhythm": "极短",
+  "abstraction_level": "具体",
+  "transferable_moves": [
+    "采用标准化标题进行每日内容占位",
+    "利用日签建立品牌与读者的每日连接"
+  ],
+  "anti_patterns": [
+    "内容过于空洞，缺乏可读性文字",
+    "缺乏对引文或日签核心内容的文字描述"
+  ],
+  "notable_phrases": [
+    "FBK翻书日签"
+  ],
+  "title_score": 40,
+  "opening_score": 10,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 20,
+  "style_score": 20,
+  "publishability_score": 10,
+  "quality_score": 5,
+  "reference_value_score": 5,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该文属于‘FBK翻书日签’系列的每日常规更新，发布日期为2023年2月16日。文本内容极简，仅包含标题、日期及对应的微信链接。它不是一篇完整的文章，而是一种碎片化的品牌互动记录，旨在通过每日更新维持订阅号活跃度。因缺乏实质性的论证、观点或知识点，其作为RAG语料或写作学习的参考价值极低，主要作为系统抓取记录存在。",
+  "summary_500": "此篇内容被界定为2023年2月16日的‘FBK翻书日签’，是典型的自媒体碎片化日更模板。从结构化角度分析，该文完全不具备传统商业文章的论证机制，没有核心命题、论证步骤或证据链条。其写作机制高度程式化，仅包含基本的时间属性和来源标注。作为一种仪式性的内容，其核心功能在于维持品牌在用户端的日常呈现。文中提到的‘触发全局图片搜索模式’表明该内容在处理时是以图片为核心的，文字部分仅作为元数据存在。对于商业内容分析而言，这类文章属于‘低信息密度’或‘占位符’类型。它的存在提示了自媒体运营中一种低成本的维护策略，但在知识提取、情感建模或写作技巧借鉴方面几乎没有贡献。评分方面，除标题具有基本的辨识度外，其余各项分值均因内容匮乏而处于极低水平。建议在知识库建设中将其归类为日常事务性通知，不参与核心论点检索。"
+}

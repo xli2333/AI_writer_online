@@ -1,0 +1,92 @@
+{
+  "id": "faea62c355d0",
+  "year": "2024",
+  "date": "2024-10-16",
+  "title": "中国管理案例深度诠释AI时代丨复旦管理案例库简报",
+  "relative_path": "2024/2024-10-16_中国管理案例深度诠释AI时代丨复旦管理案例库简报.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2024\\2024-10-16_中国管理案例深度诠释AI时代丨复旦管理案例库简报.txt",
+  "char_count": 353,
+  "content_type": "简报",
+  "industry": [
+    "教育培训",
+    "管理咨询",
+    "人工智能"
+  ],
+  "topic": [
+    "管理案例",
+    "AI应用",
+    "中国企业管理"
+  ],
+  "genre": "信息通告",
+  "style": [
+    "客观",
+    "公文式"
+  ],
+  "audience": [
+    "管理研究者",
+    "商学院学生",
+    "企业管理人员"
+  ],
+  "intent": [
+    "信息告知"
+  ],
+  "tone": [
+    "正式"
+  ],
+  "primary_question": "复旦管理案例库在2024年10月16日发布了哪些关于AI时代的内容？",
+  "thesis_type": "陈述型",
+  "thesis_sentence": "复旦管理案例库发布简报，旨在通过中国管理案例深度诠释AI时代下的管理变革。",
+  "structure_pattern": "目录式结构",
+  "section_functions": [
+    "标题传达核心主题",
+    "日期标注时效性",
+    "链接提供溯源"
+  ],
+  "argument_moves": [
+    "告知发布动态"
+  ],
+  "core_argument": "由于正文内容缺失，仅能判断其核心意图是作为复旦管理案例库的定期内容更新通告。",
+  "key_points": [
+    "发布主体为复旦管理案例库",
+    "发布日期为2024年10月16日",
+    "主题聚焦AI时代与中国管理案例"
+  ],
+  "opening_pattern": "直陈式",
+  "ending_pattern": "链接占位式",
+  "evidence_types": [
+    "机构发布"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 5,
+  "quote_density_score": 0,
+  "narrative_distance": "第三人称",
+  "stance_strength": "中立",
+  "sentence_rhythm": "平稳",
+  "abstraction_level": "中等",
+  "transferable_moves": [
+    "使用“深度诠释”等词汇提升推文标题的权威感",
+    "简报类内容的命名公式：[主题]+[动态/简报]"
+  ],
+  "anti_patterns": [
+    "正文信息缺失，无法形成阅读闭环",
+    "依赖外部链接，缺乏独立内容价值"
+  ],
+  "notable_phrases": [
+    "深度诠释",
+    "AI时代"
+  ],
+  "title_score": 65,
+  "opening_score": 20,
+  "argument_score": 10,
+  "evidence_score": 5,
+  "structure_score": 20,
+  "style_score": 30,
+  "publishability_score": 10,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该内容为2024年10月16日发布的“复旦管理案例库简报”的标题与元数据。文章旨在通过中国管理案例探讨AI时代的发展，但原文仅包含标题、日期和链接，缺乏实质性的正文论述与案例详情。属于极低信息密度的活动通知或内容索引，不具备独立的深度阅读价值。",
+  "summary_500": "此文档记录了《中国管理案例深度诠释AI时代丨复旦管理案例库简报》的基本信息。文章发布于2024年10月16日，来源于复旦管理案例库。在写作机制上，其采用标准的简报标题模式，试图传达学术机构对人工智能背景下中国企业管理实践的关注。然而，由于采集内容仅限于标题、发布日期、链接以及一张图片的搜索记录，缺乏具体的内容主体、论证过程或数据支撑。对于研究者而言，该内容的价值仅在于确认复旦大学管理学院在特定时间点发布了相关主题的简报，无法作为深度学习或RAG写作的实质素材。在质量评分上，因其严重的信息缺失和仅具通告功能的属性，各项得分均较低，属于低价值的占位信息。"
+}

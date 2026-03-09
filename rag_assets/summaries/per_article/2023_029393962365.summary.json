@@ -1,0 +1,93 @@
+{
+  "id": "029393962365",
+  "year": "2023",
+  "date": "2023-04-25",
+  "title": "刘擎 出走与留守丨FBK翻书日签 2023年4月25日",
+  "relative_path": "2023/2023-04-25_刘擎 出走与留守丨FBK翻书日签 2023年4月25日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-04-25_刘擎 出走与留守丨FBK翻书日签 2023年4月25日.txt",
+  "char_count": 356,
+  "content_type": "日签",
+  "industry": [
+    "文化",
+    "哲学",
+    "出版"
+  ],
+  "topic": [
+    "刘擎",
+    "个人成长",
+    "翻书日签"
+  ],
+  "genre": "碎片阅读",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "文化爱好者",
+    "哲学思考者"
+  ],
+  "intent": [
+    "品牌展示",
+    "每日触达"
+  ],
+  "tone": [
+    "严肃",
+    "思考性"
+  ],
+  "primary_question": "刘擎关于‘出走与留守’的哲学思考是什么？",
+  "thesis_type": "启发型",
+  "thesis_sentence": "由于正文缺失，无法准确提取核心观点，仅能根据标题推测其探讨人类精神状态的选择。",
+  "structure_pattern": "固定模板",
+  "section_functions": [
+    "标题识别",
+    "日期标注",
+    "来源溯源"
+  ],
+  "argument_moves": [
+    "引用权威人物",
+    "利用特定日期进行仪式化表达"
+  ],
+  "core_argument": "信息密度极低，仅为每日更新的仪式性卡片元数据，缺乏实质性论证逻辑。",
+  "key_points": [
+    "提及刘擎关于‘出走与留守’的主题",
+    "发布日期为2023年4月25日",
+    "属于FBK翻书日签系列"
+  ],
+  "opening_pattern": "固定化标题引导",
+  "ending_pattern": "缺失",
+  "evidence_types": [
+    "名人观点（仅提及）"
+  ],
+  "evidence_specificity_score": 5,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 10,
+  "narrative_distance": "中立",
+  "stance_strength": "中性",
+  "sentence_rhythm": "无",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "利用‘日签’形式构建自媒体内容的每日仪式感",
+    "选取知名学者（刘擎）作为流量标签"
+  ],
+  "anti_patterns": [
+    "只有标题和日期，缺乏核心正文内容",
+    "信息量不足以构成有效阅读价值"
+  ],
+  "notable_phrases": [
+    "出走与留守",
+    "FBK翻书日签"
+  ],
+  "title_score": 40,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 5,
+  "structure_score": 15,
+  "style_score": 20,
+  "publishability_score": 10,
+  "quality_score": 15,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该文本为2023年4月25日的‘FBK翻书日签’元数据，涉及刘擎关于‘出走与留守’的主题。由于正文内容缺失，仅包含标题、日期及抓取链接，无法进行深入的文本分析。其本质上属于碎片化的社交媒体互动卡片，缺乏完整的论证过程或实质性的知识输出，对于知识库构建和写作参考的价值极低。",
+  "summary_500": "本条目是对‘刘擎 出走与留守丨FBK翻书日签’这一特定内容的结构化记录。该内容发布于2023年4月25日，属于微信公众号等社交平台的日常推送片段。从现有信息来看，其核心旨在通过引用学者刘擎的观点（关于出走与留守的哲学讨论）来引发读者的瞬间共鸣或思考。然而，由于采集到的正文为空，仅保留了标题和来源链接，导致其信息密度极度稀疏。在写作机制上，它采用了‘名人+主题+仪式化日期’的模板，通过极简的结构进行品牌传播。作为分析样本，它的‘低价值’属性显著，表现为缺乏论据支撑、无逻辑展开、无实质论点描述。此类数据在知识图谱中仅作为内容索引存在，无法提供写作技巧或行业深度的参考。建议在RAG应用或写作参考中将其标记为‘元数据缺失’，不建议作为核心引文使用。"
+}

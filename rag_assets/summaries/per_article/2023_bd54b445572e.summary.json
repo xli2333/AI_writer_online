@@ -1,0 +1,95 @@
+{
+  "id": "bd54b445572e",
+  "year": "2023",
+  "date": "2023-12-03",
+  "title": "查理·芒格语录丨FBK翻书日签 2023年12月3日",
+  "relative_path": "2023/2023-12-03_查理·芒格语录丨FBK翻书日签 2023年12月3日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-12-03_查理·芒格语录丨FBK翻书日签 2023年12月3日.txt",
+  "char_count": 355,
+  "content_type": "日签",
+  "industry": [
+    "金融投资",
+    "个人成长"
+  ],
+  "topic": [
+    "查理·芒格",
+    "投资哲学",
+    "金句箴言"
+  ],
+  "genre": "碎片化内容",
+  "style": [
+    "极简",
+    "格言式"
+  ],
+  "audience": [
+    "投资者",
+    "终身学习者",
+    "职场人士"
+  ],
+  "intent": [
+    "品牌传播",
+    "激励",
+    "缅怀"
+  ],
+  "tone": [
+    "庄重",
+    "睿智"
+  ],
+  "primary_question": "查理·芒格有哪些核心智慧值得每日温习？",
+  "thesis_type": "汇编型",
+  "thesis_sentence": "通过每日分享查理·芒格的语录，传递深邃的投资哲学与人生智慧。",
+  "structure_pattern": "单点式",
+  "section_functions": [
+    "品牌标识展示",
+    "日期标注",
+    "核心语录呈现"
+  ],
+  "argument_moves": [
+    "引用权威",
+    "诉诸智慧"
+  ],
+  "core_argument": "查理·芒格的散点式智慧具有长期的精神指引价值。",
+  "key_points": [
+    "引用查理·芒格的具体格言（原文未展开）",
+    "品牌日签的仪式感呈现"
+  ],
+  "opening_pattern": "直奔主题",
+  "ending_pattern": "固定落款",
+  "evidence_types": [
+    "名人语录"
+  ],
+  "evidence_specificity_score": 20,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 100,
+  "narrative_distance": "远距离",
+  "stance_strength": "强",
+  "sentence_rhythm": "短促",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "利用高频日签形式建立用户每日访问习惯",
+    "借势大咖语录降低内容生产成本并提升品牌格调"
+  ],
+  "anti_patterns": [
+    "内容极度单薄",
+    "缺乏原创性解读",
+    "过度依赖图片导致文本不可索引"
+  ],
+  "notable_phrases": [
+    "查理·芒格语录",
+    "FBK翻书日签"
+  ],
+  "title_score": 40,
+  "opening_score": 20,
+  "argument_score": 10,
+  "evidence_score": 20,
+  "structure_score": 30,
+  "style_score": 50,
+  "publishability_score": 20,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为“FBK翻书”公众号发布的每日日签。文章除标题外无实质性文字分析，仅作为查理·芒格语录的视觉载体。其主要功能是品牌每日触达，而非提供深度的商业分析或知识建构。由于正文缺失具体语录文本且触发了图片搜索模式，其作为可检索数据的价值极低。",
+  "summary_500": "本文是2023年12月3日的“FBK翻书日签”，主题聚焦于查理·芒格的语录分享。从结构上看，该内容属于典型的社交媒体碎片化分发模式，通过“日期+名人+语录”的固定模板进行品牌输出。在写作机制上，它完全依赖于权威引用（查理·芒格），旨在通过名人效应引发受众的情感共鸣或哲学思考。然而，作为结构化分析的对象，该文章表现出严重的信息贫瘠：缺乏背景铺垫、缺乏逻辑论证、缺乏原创洞察。由于该文章实际上是基于图片的日签，导致文本密度极低，除了作为语录收集的线索外，不具备深入研究或RAG写作的参考价值，属于低价值的自动化填充内容。"
+}

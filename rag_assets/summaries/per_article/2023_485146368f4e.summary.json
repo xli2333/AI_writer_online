@@ -1,0 +1,89 @@
+{
+  "id": "485146368f4e",
+  "year": "2023",
+  "date": "2023-10-24",
+  "title": "创始人精神丨FBK翻书日签 2023年10月24日",
+  "relative_path": "2023/2023-10-24_创始人精神丨FBK翻书日签 2023年10月24日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-10-24_创始人精神丨FBK翻书日签 2023年10月24日.txt",
+  "char_count": 354,
+  "content_type": "社交媒体日签",
+  "industry": [
+    "企业管理",
+    "商业评论"
+  ],
+  "topic": [
+    "创始人精神",
+    "品牌打卡"
+  ],
+  "genre": "微内容",
+  "style": [
+    "极简",
+    "碎片化"
+  ],
+  "audience": [
+    "创业者",
+    "企业管理者"
+  ],
+  "intent": [
+    "品牌触达",
+    "日常运营"
+  ],
+  "tone": [
+    "仪式感"
+  ],
+  "primary_question": "2023年10月24日的每日启发是什么？",
+  "thesis_type": "金句驱动型",
+  "thesis_sentence": "通过每日日签形式传递关于‘创始人精神’的碎片化商业思考。",
+  "structure_pattern": "固定模板化结构",
+  "section_functions": [
+    "标题与日期声明",
+    "内容来源与链接引导"
+  ],
+  "argument_moves": [
+    "声明特定主题",
+    "建立日期索引"
+  ],
+  "core_argument": "由于正文仅为日签索引，缺乏核心论证，其主要价值在于维持每日的知识分发频率。",
+  "key_points": [
+    "创始人精神主题",
+    "FBK翻书日签系列内容"
+  ],
+  "opening_pattern": "固定格式标题开头",
+  "ending_pattern": "来源信息标注",
+  "evidence_types": [
+    "图片"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 20,
+  "narrative_distance": "远端",
+  "stance_strength": "中等",
+  "sentence_rhythm": "停顿简短",
+  "abstraction_level": "中等",
+  "transferable_moves": [
+    "使用‘主题+品牌名+日期’的标题命名规范",
+    "利用微内容进行每日用户心智占领"
+  ],
+  "anti_patterns": [
+    "内容过度缺失（仅有索引无实质正文）",
+    "信息增量极低"
+  ],
+  "notable_phrases": [
+    "创始人精神",
+    "翻书日签"
+  ],
+  "title_score": 40,
+  "opening_score": 20,
+  "argument_score": 5,
+  "evidence_score": 5,
+  "structure_score": 30,
+  "style_score": 20,
+  "publishability_score": 10,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为FBK于2023年10月24日发布的‘翻书日签’，主题定位于‘创始人精神’。正文部分仅包含了标题、日期、原始链接及一张图片的搜索占位符，缺乏具体的文字论证、深度分析或实质性的商业见解。这属于极低信息密度的品牌日常维护内容，主要用于碎片化时间的读者触达。",
+  "summary_500": "这是一篇信息价值极低的商业社交媒体日签记录。文章标题为‘创始人精神丨FBK翻书日签 2023年10月24日’，旨在通过每日打卡的形式向读者输出商业金句或核心理念。然而，在提供的文本中，并未包含任何实际的论述或正文内容，仅作为品牌运营的一个时间节点记录。从写作机制来看，它遵循了固定的模板化结构：主题+品牌标示+日期，这种方式有助于形成品牌记忆，但在缺乏实质内容的情况下，无法提供可供深度学习或分析的逻辑架构。对于RAG（检索增强生成）而言，此类内容的检索参考价值极低，仅能作为‘创始人精神’这一概念在特定日期的传播痕迹。其证据特征几乎为零，没有数据支持、案例分析或引言陈述，仅包含一个无法直接读取的图片占位符。整体而言，该内容不具备独立成文的参考价值，属于低价值的索引信息。"
+}

@@ -1,0 +1,91 @@
+{
+  "id": "f4b93bb19481",
+  "year": "2023",
+  "date": "2023-08-16",
+  "title": "认知升级丨FBK翻书日签 2023年8月16日",
+  "relative_path": "2023/2023-08-16_认知升级丨FBK翻书日签 2023年8月16日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-08-16_认知升级丨FBK翻书日签 2023年8月16日.txt",
+  "char_count": 352,
+  "content_type": "社交媒体日签",
+  "industry": [
+    "文化传播",
+    "个人成长"
+  ],
+  "topic": [
+    "认知升级",
+    "碎片化学习"
+  ],
+  "genre": "碎片化内容",
+  "style": [
+    "极简",
+    "仪式感"
+  ],
+  "audience": [
+    "终身学习者",
+    "职场人士"
+  ],
+  "intent": [
+    "品牌留存",
+    "习惯培养"
+  ],
+  "tone": [
+    "启发性"
+  ],
+  "primary_question": "如何通过每日碎片阅读实现认知升级？",
+  "thesis_type": "无",
+  "thesis_sentence": "由于正文仅包含标题与日期，缺乏核心观点阐述，仅体现一种每日打卡的仪式感。",
+  "structure_pattern": "固定模板结构",
+  "section_functions": [
+    "标题引导内容属性",
+    "日期标记时间属性",
+    "视觉媒介承载核心信息"
+  ],
+  "argument_moves": [
+    "通过品牌IP化标题建立认知"
+  ],
+  "core_argument": "该文案仅作为视觉日签的索引，无具体逻辑论证。",
+  "key_points": [
+    "标注日期：2023年8月16日",
+    "定位标签：认知升级",
+    "IP名称：FBK翻书日签"
+  ],
+  "opening_pattern": "标准化日期标题",
+  "ending_pattern": "无",
+  "evidence_types": [
+    "图片"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 20,
+  "narrative_distance": "中立观察",
+  "stance_strength": "中立",
+  "sentence_rhythm": "极短促",
+  "abstraction_level": "中等",
+  "transferable_moves": [
+    "采用固定标题前缀（IP名+类型）建立读者预期",
+    "利用日期属性增强内容的即时性与仪式感"
+  ],
+  "anti_patterns": [
+    "正文内容缺失导致信息密度极低",
+    "过度依赖外部图片承载信息，不利于文本检索",
+    "缺乏引言或互动引导"
+  ],
+  "notable_phrases": [
+    "认知升级",
+    "翻书日签"
+  ],
+  "title_score": 40,
+  "opening_score": 20,
+  "argument_score": 5,
+  "evidence_score": 10,
+  "structure_score": 30,
+  "style_score": 30,
+  "publishability_score": 20,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为“FBK翻书”频道的每日日签，发布于2023年8月16日。文章正文极短，仅包含标题及日期，核心信息通过图片形式呈现（原文未显示图片文字）。此类内容属于低信息密度的碎片化社交媒体贴文，旨在通过每日打卡的形式维持用户粘性，不具备完整的论证逻辑或深度分析价值。",
+  "summary_500": "该内容属于典型的社交媒体“日签”类短文本。标题采用了“标签+IP名+日期”的标准化格式，明确了“认知升级”的主题定位。从写作结构来看，该文不具备传统意义上的引言、正文和结尾，而是作为一种视觉媒介的载体存在。由于正文缺乏具体的文字陈述，其主要功能是作为品牌IP的每日高频触达工具。在RAG（检索增强生成）或写作参考方面，该文的价值极低，仅能作为日签类产品命名规范的参考案例。评分较低的主要原因在于其内容高度依赖于图片，且文字信息密度严重不足，无法提供独立且连贯的知识点或分析逻辑。对于需要深度内容分析的场景，此类文章属于低价值样本。"
+}

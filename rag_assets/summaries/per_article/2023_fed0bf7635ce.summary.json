@@ -1,0 +1,92 @@
+{
+  "id": "fed0bf7635ce",
+  "year": "2023",
+  "date": "2023-04-07",
+  "title": "当我们不再理解世界丨FBK翻书日签 2023年4月7日",
+  "relative_path": "2023/2023-04-07_当我们不再理解世界丨FBK翻书日签 2023年4月7日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-04-07_当我们不再理解世界丨FBK翻书日签 2023年4月7日.txt",
+  "char_count": 356,
+  "content_type": "日签",
+  "industry": [
+    "出版",
+    "文化传播"
+  ],
+  "topic": [
+    "文学",
+    "阅读",
+    "哲学"
+  ],
+  "genre": "微内容",
+  "style": [
+    "极简",
+    "哲理性"
+  ],
+  "audience": [
+    "阅读爱好者",
+    "知识分子"
+  ],
+  "intent": [
+    "品牌留存",
+    "内容索引"
+  ],
+  "tone": [
+    "冷静",
+    "深沉"
+  ],
+  "primary_question": "在2023年4月7日，FBK翻书推荐了哪种认知视角？",
+  "thesis_type": "语录型",
+  "thesis_sentence": "通过引用具有张力的标题《当我们不再理解世界》，旨在引发读者对认知边界的哲学思考。",
+  "structure_pattern": "固定格式日签结构",
+  "section_functions": [
+    "标题提示核心主题",
+    "日期确立时效性",
+    "来源记录回溯信息"
+  ],
+  "argument_moves": [
+    "以文学名著书名设问",
+    "营造每日阅读仪式感"
+  ],
+  "core_argument": "本文本质为每日阅读打卡，核心论点缺失，仅通过标题借力文学名著的认知冲突感。",
+  "key_points": [
+    "每日推荐机制",
+    "利用书名产生哲学联想"
+  ],
+  "opening_pattern": "书名直击式",
+  "ending_pattern": "来源回溯",
+  "evidence_types": [
+    "文学作品标题"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "客观叙述",
+  "stance_strength": "中立",
+  "sentence_rhythm": "碎片化",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "利用高概念书名作为社交货币",
+    "建立稳定的日更命名体系"
+  ],
+  "anti_patterns": [
+    "内容极度空洞",
+    "缺乏正文阐述",
+    "信息承载力不足"
+  ],
+  "notable_phrases": [
+    "当我们不再理解世界"
+  ],
+  "title_score": 85,
+  "opening_score": 5,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 20,
+  "style_score": 30,
+  "publishability_score": 10,
+  "quality_score": 15,
+  "reference_value_score": 5,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该内容为2023年4月7日的FBK翻书日签，标题引用了知名文学作品《当我们不再理解世界》。内容形式极其精简，除标题、日期及系统来源信息外，无任何正文论述。其主要功能在于品牌日常活跃度的维持，通过借用高厚度的书名标题来传递一种知性的品牌形象，但在知识传递和论证深度上几乎没有实际价值。",
+  "summary_500": "此篇分析对象为典型的微信公众号‘日签’式内容，发布于2023年4月7日。从内容结构上看，它严格遵循了微内容的仪式化特征：以高概念的标题（引自智利作家本哈明·拉巴图特的同名作品）作为视觉和认知的抓手，以此吸引读者的瞬间注意力。写作机制上，该文并未展开任何实质性的论证，而是采用了‘书名借势’的策略，通过‘当我们不再理解世界’这一充满张力的短语，在读者脑中自动勾勒出关于科学、理性和现实边界的宏大叙事。然而，由于正文部分的缺失，该文本在信息分析维度上表现极差，其数据密度、证据密度及论证得分均接近于零。这种内容模式常见于品牌社交媒体运营，旨在建立读者的阅读习惯而非提供深度信息。在可迁移动作方面，运营者可以学习其如何利用具有哲学深度、情感共鸣的‘高概念’标题来提升品牌的质感；但在知识服务或长文本写作中，此类内容被视为‘信息空洞’的反模式。在RAG系统中，此类数据应被标记为低权重，仅作为品牌行为日志或时间戳索引使用。"
+}

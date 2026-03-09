@@ -1,0 +1,89 @@
+{
+  "id": "97d90386d7dc",
+  "year": "2024",
+  "date": "2024-03-09",
+  "title": "飞奔的物种丨FBK翻书日签 2024年3月9日",
+  "relative_path": "2024/2024-03-09_飞奔的物种丨FBK翻书日签 2024年3月9日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2024\\2024-03-09_飞奔的物种丨FBK翻书日签 2024年3月9日.txt",
+  "char_count": 352,
+  "content_type": "社交媒体日签",
+  "industry": [
+    "文化",
+    "出版"
+  ],
+  "topic": [
+    "日常感悟",
+    "书籍分享"
+  ],
+  "genre": "日签",
+  "style": [
+    "极简",
+    "标准化"
+  ],
+  "audience": [
+    "书籍爱好者",
+    "品牌关注者"
+  ],
+  "intent": [
+    "品牌触达",
+    "日常打卡"
+  ],
+  "tone": [
+    "客观",
+    "简明"
+  ],
+  "primary_question": "2024年3月9日的翻书日签展示了什么书籍？",
+  "thesis_type": "事实陈述型",
+  "thesis_sentence": "该内容为FBK品牌每日更新的翻书日签，主要作用是作为书籍《飞奔的物种》的每日触达节点。",
+  "structure_pattern": "元数据式结构",
+  "section_functions": [
+    "品牌标识",
+    "日期标注",
+    "源路径引导"
+  ],
+  "argument_moves": [
+    "告知日期",
+    "指引原始出处"
+  ],
+  "core_argument": "通过每日不间断的日签形式维持品牌与读者间的日常联系。",
+  "key_points": [
+    "发布日期为2024年3月9日",
+    "关联书籍为《飞奔的物种》",
+    "提供了原始微信链接"
+  ],
+  "opening_pattern": "固定模板标题",
+  "ending_pattern": "链接索引",
+  "evidence_types": [],
+  "evidence_specificity_score": 5,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "旁观",
+  "stance_strength": "中立",
+  "sentence_rhythm": "零散",
+  "abstraction_level": "低",
+  "transferable_moves": [
+    "使用标准化的命名约定(品牌名+栏目名+日期)以便于搜索检索"
+  ],
+  "anti_patterns": [
+    "纯链接导流而无实质性导言",
+    "信息密度过低无法构成阅读价值"
+  ],
+  "notable_phrases": [
+    "飞奔的物种",
+    "翻书日签"
+  ],
+  "title_score": 30,
+  "opening_score": 20,
+  "argument_score": 5,
+  "evidence_score": 5,
+  "structure_score": 20,
+  "style_score": 20,
+  "publishability_score": 10,
+  "quality_score": 10,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为2024年3月9日的‘FBK翻书日签’，关联书籍为《飞奔的物种》。文章仅包含标题、日期和原始链接，属于高度碎片化的品牌日常打卡内容。由于缺乏实质性的正文评论、摘录或观点论述，其信息价值极低，主要作为品牌维护粉丝粘性的触达节点存在，不具备深度阅读或写作机制参考的价值。",
+  "summary_500": "这是一篇典型的社交媒体‘日签’式短文，发布于2024年3月9日，由FBK品牌出品。从内容结构上看，该文本完全依赖于标题（飞奔的物种丨FBK翻书日签）和元数据（日期、原始链接）来传达信息，正文部分在抓取中仅显示了系统搜索记录，未见实质性的书籍解析或金句摘抄。这种写作模式属于极简的‘引流+打卡’机制，旨在通过标准化的模板降低内容生产成本，同时在用户端维持高频的品牌曝光。由于正文内容的严重缺失，本文在论证、证据、文风等方面均表现出极低的参考价值。分析认为，此类内容属于低价值数据，仅能作为品牌发布策略中的频率统计参考，无法用于高质量的RAG写作语料或人格特质提取。"
+}

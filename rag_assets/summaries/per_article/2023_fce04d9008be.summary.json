@@ -1,0 +1,94 @@
+{
+  "id": "fce04d9008be",
+  "year": "2023",
+  "date": "2023-07-13",
+  "title": "全面回忆 戈登·贝尔丨FBK翻书日签 2023年7月13日",
+  "relative_path": "2023/2023-07-13_全面回忆 戈登·贝尔丨FBK翻书日签 2023年7月13日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-07-13_全面回忆 戈登·贝尔丨FBK翻书日签 2023年7月13日.txt",
+  "char_count": 358,
+  "content_type": "日签",
+  "industry": [
+    "文化传播",
+    "计算机科学"
+  ],
+  "topic": [
+    "戈登·贝尔",
+    "全面回忆",
+    "书籍推荐"
+  ],
+  "genre": "信息日签",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "读书爱好者",
+    "科技从业者"
+  ],
+  "intent": [
+    "品牌打卡",
+    "信息索引"
+  ],
+  "tone": [
+    "客观",
+    "简明"
+  ],
+  "primary_question": "2023年7月13日的FBK日签推荐了哪本书？",
+  "thesis_type": "描述型",
+  "thesis_sentence": "本文仅作为一个日常书单推荐的索引标记，通过标题和日期记录了对戈登·贝尔《全面回忆》的关注。",
+  "structure_pattern": "固定模板结构",
+  "section_functions": [
+    "标题标识",
+    "时间标记",
+    "资源溯源"
+  ],
+  "argument_moves": [
+    "提及核心主题",
+    "提供原文入口"
+  ],
+  "core_argument": "通过每日日签形式持续输出科技图书推荐信息。",
+  "key_points": [
+    "戈登·贝尔",
+    "《全面回忆》",
+    "发布日期2023-07-13"
+  ],
+  "opening_pattern": "直接陈述主题",
+  "ending_pattern": "链接指引",
+  "evidence_types": [
+    "元数据"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "第三方观察",
+  "stance_strength": "中立",
+  "sentence_rhythm": "短平快",
+  "abstraction_level": "具体",
+  "transferable_moves": [
+    "系列化内容的命名规范",
+    "通过日期驱动的内容管理方式"
+  ],
+  "anti_patterns": [
+    "缺乏正文解析",
+    "有效信息密度过低",
+    "过度依赖外部链接"
+  ],
+  "notable_phrases": [
+    "全面回忆",
+    "戈登·贝尔",
+    "翻书日签"
+  ],
+  "title_score": 40,
+  "opening_score": 20,
+  "argument_score": 10,
+  "evidence_score": 5,
+  "structure_score": 30,
+  "style_score": 30,
+  "publishability_score": 20,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该内容为‘FBK翻书日签’系列的日常记录，发布于2023年7月13日。文中仅提及了戈登·贝尔及其著作《全面回忆》的标题，并附带了原始微信公众号链接。文本本身没有实质性的论述、评价或知识拆解，仅作为书籍推荐的索引节点存在，属于信息密度极低的自动化或半自动化发布内容。",
+  "summary_500": "本篇文本属于典型的品牌社交媒体日签内容。核心内容围绕计算机科学先驱戈登·贝尔（Gordon Bell）的作品《全面回忆》展开，但仅停留在标题提及阶段。其结构极其简单，由标题、日期、原始链接及系统抓取痕迹组成。由于缺乏正文叙述、逻辑推导及证据支撑，该内容不具备独立作为文章阅读的价值。其主要作用在于：1. 品牌每日更新的打卡证明；2. 作为书籍推荐序列的一个时间戳；3. 为读者提供前往深度内容的入口链接。对于AI训练或RAG写作而言，该文本仅能提供基本的实体关联（即‘FBK翻书’与‘戈登·贝尔’的关系），不具备人格提炼或写作技巧学习的价值。鉴于其信息密度极低，被归类为低价值通知类文章。"
+}

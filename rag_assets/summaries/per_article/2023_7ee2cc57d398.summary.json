@@ -1,0 +1,90 @@
+{
+  "id": "7ee2cc57d398",
+  "year": "2023",
+  "date": "2023-12-17",
+  "title": "朝不保夕的人丨FBK翻书日签 2023年12月17日",
+  "relative_path": "2023/2023-12-17_朝不保夕的人丨FBK翻书日签 2023年12月17日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-12-17_朝不保夕的人丨FBK翻书日签 2023年12月17日.txt",
+  "char_count": 355,
+  "content_type": "每日金句",
+  "industry": [
+    "文化",
+    "出版"
+  ],
+  "topic": [
+    "社会观察",
+    "不稳定就业"
+  ],
+  "genre": "日签",
+  "style": [
+    "极简",
+    "碎片化"
+  ],
+  "audience": [
+    "职场人士",
+    "阅读爱好者"
+  ],
+  "intent": [
+    "品牌维护",
+    "情感共鸣"
+  ],
+  "tone": [
+    "严肃",
+    "同情"
+  ],
+  "primary_question": "如何通过碎片化形式传达对‘朝不保夕’群体的关注？",
+  "thesis_type": "概念展示",
+  "thesis_sentence": "通过‘朝不保夕的人’这一主题标签，唤起对不稳定生存状态的关注。",
+  "structure_pattern": "固定模板式",
+  "section_functions": [
+    "主题界定",
+    "日期标记",
+    "资源引导"
+  ],
+  "argument_moves": [
+    "直陈主题",
+    "标注来源"
+  ],
+  "core_argument": "由于正文信息缺失，核心论点仅体现为对特定社会群体（朝不保夕者）的关注点名。",
+  "key_points": [
+    "2023年12月17日的每日阅读分享",
+    "聚焦于不稳定生存状态的主题"
+  ],
+  "opening_pattern": "标题式直入",
+  "ending_pattern": "链接回溯",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 5,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 10,
+  "narrative_distance": "中立旁观",
+  "stance_strength": "中等",
+  "sentence_rhythm": "短促",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "利用日期和日签形式建立每日阅读品牌认知",
+    "使用高概括性的词汇作为内容索引"
+  ],
+  "anti_patterns": [
+    "内容极度匮乏，缺乏有效信息输入",
+    "过度依赖外部链接而导致原生内容单薄"
+  ],
+  "notable_phrases": [
+    "朝不保夕的人"
+  ],
+  "title_score": 40,
+  "opening_score": 20,
+  "argument_score": 10,
+  "evidence_score": 5,
+  "structure_score": 30,
+  "style_score": 40,
+  "publishability_score": 20,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该内容为‘FBK翻书日签’的日常推送记录。其核心主题为‘朝不保夕的人’，旨在通过极简的日签形式进行品牌曝光和情感联结。由于提供的文本仅包含标题、日期和系统链接，缺乏具体的正文描述或深度评论，其主要功能是作为社群或公众号的日常签到内容，而非深度的商业或学术分析。在内容写作上，属于典型的低信息量维护性发文。",
+  "summary_500": "本条目是对‘FBK翻书日签 2023年12月17日’推送文章的结构化分析。该文章属于典型的碎片化社交媒体内容，主题聚焦于‘朝不保夕的人’。从写作机制来看，它采用了‘标题+日期+链接’的固定模板，属于极简主义风格。这种内容的价值不在于逻辑论证或数据支撑，而在于通过高频次、低门槛的‘日签’形式，在读者心中建立持续的品牌存在感，并利用‘朝不保夕’这种具有社会学探讨价值的词汇引发特定受众的共鸣。由于文本并未包含实际的金句或文章正文，其在证据特征和论证深度上表现极低（评分均在10分以下）。对于创作者而言，这种模式的参考价值仅限于了解如何建立日常内容维护机制，而在高质量写作和知识传播方面，因其信息密度过低，被判定为低价值内容。在实际的RAG写作中，此类数据仅能作为特定日期的活动记录或品牌风格参考，无法提供实质性的事实或理论支持。"
+}

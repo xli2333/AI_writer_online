@@ -1,0 +1,92 @@
+{
+  "id": "ab346c240a74",
+  "year": "2024",
+  "date": "2024-03-25",
+  "title": "出圈儿丨FBK翻书日签 2024年3月25日",
+  "relative_path": "2024/2024-03-25_出圈儿丨FBK翻书日签 2024年3月25日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2024\\2024-03-25_出圈儿丨FBK翻书日签 2024年3月25日.txt",
+  "char_count": 351,
+  "content_type": "社交媒体日签",
+  "industry": [
+    "文化传播",
+    "内容运营"
+  ],
+  "topic": [
+    "每日金句",
+    "书籍推荐"
+  ],
+  "genre": "碎片化内容",
+  "style": [
+    "极简",
+    "固定模板"
+  ],
+  "audience": [
+    "书籍爱好者",
+    "日常打卡用户"
+  ],
+  "intent": [
+    "品牌传播",
+    "用户粘性维持"
+  ],
+  "tone": [
+    "文艺",
+    "平淡"
+  ],
+  "primary_question": "2024年3月25日的FBK翻书日签分享了什么内容？",
+  "thesis_type": "展示型",
+  "thesis_sentence": "通过每日分享一张带有书摘或感悟的图文，构建品牌日常化的读者连接。",
+  "structure_pattern": "固定日期索引式",
+  "section_functions": [
+    "品牌系列标识",
+    "日期标注",
+    "内容载体（图片/链接）"
+  ],
+  "argument_moves": [
+    "日期锚定",
+    "品牌标签植入"
+  ],
+  "core_argument": "无实质论证过程，仅为日常性的内容分发。",
+  "key_points": [
+    "每日固定更新频率",
+    "品牌专属系列名称“出圈儿”"
+  ],
+  "opening_pattern": "直陈式标题",
+  "ending_pattern": "元数据信息",
+  "evidence_types": [
+    "名言警句（预期）"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 20,
+  "narrative_distance": "中立",
+  "stance_strength": "中立",
+  "sentence_rhythm": "零散",
+  "abstraction_level": "中等",
+  "transferable_moves": [
+    "使用固定前缀（如‘出圈儿丨’）建立品牌记忆",
+    "日签化的碎片内容运营策略"
+  ],
+  "anti_patterns": [
+    "信息密度极低，缺乏实质性阅读价值",
+    "正文内容缺失，过度依赖外部链接或图片",
+    "无文本互动引导"
+  ],
+  "notable_phrases": [
+    "出圈儿",
+    "FBK翻书日签"
+  ],
+  "title_score": 40,
+  "opening_score": 20,
+  "argument_score": 5,
+  "evidence_score": 5,
+  "structure_score": 30,
+  "style_score": 40,
+  "publishability_score": 20,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为FBK出品的‘出圈儿’系列每日书摘日签，日期为2024年3月25日。原文仅包含标题、日期和图片抓取说明，无实质性正文叙述。这类内容属于高频率、低密度的社交媒体日常运营记录，旨在通过视觉化形式分享金句，维持品牌活跃度，但不具备深度阅读或知识分析价值。",
+  "summary_500": "本篇内容是‘FBK翻书日签’于2024年3月25日的日常发布记录。标题采用统一的‘出圈儿丨FBK翻书日签 + 日期’格式，体现了成熟的品牌化运营思维和标准化的内容输出节奏。从写作机制来看，其核心并非通过文字进行逻辑论证，而是利用‘日签’这一轻量化载体进行情感或观点的瞬时触达。由于所提供的文本仅为元数据信息（如链接、日期及一张图片的存在记录），并未展现具体的书摘文字或感悟点评，因此其信息密度极低。在商业写作分析中，此类内容可作为‘社交媒体碎片化运营’的样本进行观察，学习其固定频率的发布习惯和品牌标签化处理，但无法从中提取有效的证据链或深度观点。对于研究人员或RAG系统而言，该记录属于低价值、仅具索引功能的通知类数据。"
+}

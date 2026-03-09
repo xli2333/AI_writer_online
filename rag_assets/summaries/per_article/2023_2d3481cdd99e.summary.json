@@ -1,0 +1,91 @@
+{
+  "id": "2d3481cdd99e",
+  "year": "2023",
+  "date": "2023-10-12",
+  "title": "那些历史上的重大“崩溃”带来的启示丨FBK翻书日签 2023年10月12日",
+  "relative_path": "2023/2023-10-12_那些历史上的重大“崩溃”带来的启示丨FBK翻书日签 2023年10月12日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-10-12_那些历史上的重大“崩溃”带来的启示丨FBK翻书日签 2023年10月12日.txt",
+  "char_count": 366,
+  "content_type": "每日日签",
+  "industry": [
+    "文化传播",
+    "出版"
+  ],
+  "topic": [
+    "历史",
+    "社会学",
+    "阅读"
+  ],
+  "genre": "短讯",
+  "style": [
+    "碎片化"
+  ],
+  "audience": [
+    "读书人",
+    "历史爱好者"
+  ],
+  "intent": [
+    "品牌展示",
+    "日常维护"
+  ],
+  "tone": [
+    "严肃",
+    "哲思"
+  ],
+  "primary_question": "历史上的重大崩溃能带给现代人什么启示？",
+  "thesis_type": "议题引导型",
+  "thesis_sentence": "通过回顾历史上的重大崩溃事件，获取对当下社会或个人发展的警示与启示。",
+  "structure_pattern": "标题引导式",
+  "section_functions": [
+    "标题界定主题",
+    "日期标注",
+    "来源记录"
+  ],
+  "argument_moves": [
+    "提出历史宏观话题",
+    "建立阅读仪式感"
+  ],
+  "core_argument": "历史上的重大崩溃不仅是灾难，更是理解系统脆弱性与演化逻辑的窗口。",
+  "key_points": [
+    "关注历史重大崩溃事件",
+    "寻找历史规律对当下的借鉴意义"
+  ],
+  "opening_pattern": "仪式感标题开头",
+  "ending_pattern": "来源链接落款",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 5,
+  "quote_density_score": 0,
+  "narrative_distance": "远景",
+  "stance_strength": "中立",
+  "sentence_rhythm": "短促",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "采用“日签”形式进行高频次、轻量化的品牌触达",
+    "利用宏大叙事标题吸引特定受众关注"
+  ],
+  "anti_patterns": [
+    "内容缺失",
+    "信息密度极低",
+    "仅有标题无实质内容"
+  ],
+  "notable_phrases": [
+    "重大“崩溃”带来的启示"
+  ],
+  "title_score": 40,
+  "opening_score": 20,
+  "argument_score": 10,
+  "evidence_score": 5,
+  "structure_score": 30,
+  "style_score": 30,
+  "publishability_score": 20,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该内容仅为FBK翻书日签的记录，除标题涉及“历史重大崩溃的启示”外，无实质性正文、论述或金句。此类内容主要用于社群每日打卡或公众号仪式化运营，信息价值极低，无法提供有效的写作借鉴或知识参考。",
+  "summary_500": "该文本呈现的是一个典型的自媒体日更“日签”占位符。从结构上看，它仅包含标题、日期和来源链接，缺乏任何实质性的知识输出或逻辑论证。其标题虽然切中了“历史崩溃”这一具有深度探讨价值的宏观议题，但由于内容缺位，无法判断其具体论点、论据或写作风格。在商业分析维度下，此类文章被判定为低价值数据，主要功能是维持账号活跃度而非传递有效信息。对于研究写作机制而言，它仅能作为“每日仪式化内容”的样本，不具备RAG写作或人格提炼的参考价值。建议在处理时将其标记为低权重或无效信息。"
+}

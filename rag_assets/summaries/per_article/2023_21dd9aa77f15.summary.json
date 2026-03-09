@@ -1,0 +1,95 @@
+{
+  "id": "21dd9aa77f15",
+  "year": "2023",
+  "date": "2023-04-10",
+  "title": "科学之外，进步只是神话？丨FBK翻书日签 2023年4月10日",
+  "relative_path": "2023/2023-04-10_科学之外，进步只是神话？丨FBK翻书日签 2023年4月10日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-04-10_科学之外，进步只是神话？丨FBK翻书日签 2023年4月10日.txt",
+  "char_count": 360,
+  "content_type": "日签",
+  "industry": [
+    "文化教育",
+    "出版"
+  ],
+  "topic": [
+    "哲学",
+    "进步观",
+    "阅读"
+  ],
+  "genre": "碎片化推文",
+  "style": [
+    "简约",
+    "碎片化"
+  ],
+  "audience": [
+    "读书人",
+    "知识分子",
+    "泛文化爱好者"
+  ],
+  "intent": [
+    "品牌露脸",
+    "日常维护"
+  ],
+  "tone": [
+    "思辨",
+    "庄重"
+  ],
+  "primary_question": "在科学技术领域之外，人类文明是否真的存在进步，还是说那只是一种神话？",
+  "thesis_type": "疑问/质疑型",
+  "thesis_sentence": "文章（通过标题）暗示科学之外的所谓进步可能只是人类构建的一种神话。",
+  "structure_pattern": "日签索引式",
+  "section_functions": [
+    "核心设问抛出",
+    "日期标注",
+    "来源指向"
+  ],
+  "argument_moves": [
+    "利用宏大命题引发读者哲学思考",
+    "通过固定栏目形成阅读仪式感"
+  ],
+  "core_argument": "由于正文内容极度缺失，仅能判断其核心观点在于挑战传统的线性进步观。",
+  "key_points": [
+    "科学进步是可见的实证",
+    "其他领域（如道德、人文）的进步缺乏客观标准",
+    "对‘进步’这一观念本身进行解构"
+  ],
+  "opening_pattern": "设问式",
+  "ending_pattern": "链接指引",
+  "evidence_types": [
+    "无（正文缺失）"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 20,
+  "narrative_distance": "遥远",
+  "stance_strength": "怀疑",
+  "sentence_rhythm": "极其短促",
+  "abstraction_level": "极高",
+  "transferable_moves": [
+    "使用‘概念+反常识’的公式拟定哲学性标题",
+    "建立品牌化的‘日签’栏目以维持用户粘性"
+  ],
+  "anti_patterns": [
+    "无实质内容",
+    "过度依赖外部链接",
+    "缺乏逻辑展开"
+  ],
+  "notable_phrases": [
+    "科学之外",
+    "进步只是神话"
+  ],
+  "title_score": 75,
+  "opening_score": 20,
+  "argument_score": 10,
+  "evidence_score": 5,
+  "structure_score": 20,
+  "style_score": 40,
+  "publishability_score": 15,
+  "quality_score": 10,
+  "reference_value_score": 15,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该内容为2023年4月10日的FBK翻书日签，仅包含一个涉及宏大哲学命题的标题——“科学之外，进步只是神话？”。文章属于极简的碎片化维护内容，缺乏正文论述、证据支持或逻辑链条。其主要功能是作为社交媒体的日常签到与引导，通过思辨性问题维持品牌活跃，但由于信息承载量极低，不具备深度阅读或写作分析价值。",
+  "summary_500": "这是一篇典型的微信公众平台碎片化运营内容，标题为《科学之外，进步只是神话？丨FBK翻书日签 2023年4月10日》。内容结构极其单一，仅包含标题、日期及相关外部链接，实质性文字缺失。从标题分析，其意图引导读者思考人类在人文、道德及社会构建领域的进步是否存在伪命题的可能。这种“日签”模式常见于知识博主或出版机构的社群运营，旨在通过每日一个哲学设问或金句来建立读者的阅读仪式感并保持账号权重。然而，作为一篇可分析的文章，它严重缺乏论据支持、数据引用和逻辑推导。标题具有较强的吸引力，利用了“神话”与“进步”的认知冲突来诱发点击，但内容部分表现为空白。这种内容对于AI写作和RAG提取而言，除了提供一个选题切入点外，几乎没有可迁移的写作机制或证据素材。总体评级为低价值内容，属于活动通知或日常打卡性质。"
+}

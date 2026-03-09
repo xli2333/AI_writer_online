@@ -1,0 +1,90 @@
+{
+  "id": "03fb6a078738",
+  "year": "2023",
+  "date": "2023-05-09",
+  "title": "加缪手记丨FBK翻书日签 2023年5月9日",
+  "relative_path": "2023/2023-05-09_加缪手记丨FBK翻书日签 2023年5月9日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-05-09_加缪手记丨FBK翻书日签 2023年5月9日.txt",
+  "char_count": 351,
+  "content_type": "每日金句",
+  "industry": [
+    "文化出版",
+    "内容创业"
+  ],
+  "topic": [
+    "加缪",
+    "文学语录",
+    "阅读打卡"
+  ],
+  "genre": "读书日签",
+  "style": [
+    "极简",
+    "仪式感"
+  ],
+  "audience": [
+    "文学爱好者",
+    "碎片化阅读群体"
+  ],
+  "intent": [
+    "品牌留存",
+    "情感共鸣"
+  ],
+  "tone": [
+    "文艺",
+    "内省"
+  ],
+  "primary_question": "加缪的哪句名言适合作为今日的阅读启示？",
+  "thesis_type": "审美呈现",
+  "thesis_sentence": "通过每日分享加缪等文学名家的语录，为读者提供精神慰藉和品牌联结。",
+  "structure_pattern": "固定模板式结构",
+  "section_functions": [
+    "标题标引日期与来源",
+    "展示核心语录内容",
+    "提供原文链接参考"
+  ],
+  "argument_moves": [
+    "引用权威文学家语录"
+  ],
+  "core_argument": "加缪的文字在当代仍具有每日回味的哲学价值。",
+  "key_points": [
+    "2023年5月9日日签内容",
+    "出自《加缪手记》"
+  ],
+  "opening_pattern": "标准功能性标题",
+  "ending_pattern": "引导至原文或图片存留",
+  "evidence_types": [
+    "名人语录"
+  ],
+  "evidence_specificity_score": 20,
+  "data_density_score": 10,
+  "case_density_score": 5,
+  "quote_density_score": 95,
+  "narrative_distance": "远",
+  "stance_strength": "中等",
+  "sentence_rhythm": "极简",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "利用经典IP进行每日自动化内容生产",
+    "通过固定栏目培养用户打卡习惯"
+  ],
+  "anti_patterns": [
+    "信息密度极低，缺乏原创解读",
+    "内容过于依赖图片，不便于SEO和检索"
+  ],
+  "notable_phrases": [
+    "FBK翻书日签"
+  ],
+  "title_score": 30,
+  "opening_score": 20,
+  "argument_score": 10,
+  "evidence_score": 30,
+  "structure_score": 40,
+  "style_score": 50,
+  "publishability_score": 40,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为“FBK翻书”公众号于2023年5月9日发布的每日日签。其核心内容为引用《加缪手记》中的一句语录，采用极简的图文形式呈现。这种内容属于高频、低密度的自媒体日常运营动作，旨在通过经典文学符号维持用户粘性。由于缺乏作者原创的深度分析、背景介绍或逻辑论证，其在知识检索和写作借鉴方面的价值极低，仅具仪式性的审美意义。",
+  "summary_500": "该篇短文是典型的自媒体每日语录栏目（FBK翻书日签）。文章结构极为单一，仅包含标题、日期以及指向原图或原贴的元数据。其写作机制完全建立在“权威引用”之上，即利用存在主义文学大师加缪的名望，从其《手记》中抽取片段进行展示。这种内容的创作逻辑在于利用公有领域或经典文学遗产进行低成本的内容分发，为读者提供碎片化的审美体验。从商业内容分析的角度看，该文章的信息密度得分极低，没有提供任何实质性的行业洞察、逻辑推演或实操案例。其价值主要体现在品牌视觉的统一化和栏目化运营的稳定性上。对于RAG（检索增强生成）或人格提炼而言，该文本提供的信息量不足以支撑复杂的建模或写作模拟，属于典型的低信息价值内容。在写作建议上，此类内容应作为日常维护流量的补充，而非作为核心知识沉淀。"
+}

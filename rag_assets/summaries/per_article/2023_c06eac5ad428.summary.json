@@ -1,0 +1,90 @@
+{
+  "id": "c06eac5ad428",
+  "year": "2023",
+  "date": "2023-02-04",
+  "title": "FBK翻书日签丨2023年2月4日",
+  "relative_path": "2023/2023-02-04_FBK翻书日签丨2023年2月4日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-02-04_FBK翻书日签丨2023年2月4日.txt",
+  "char_count": 346,
+  "content_type": "社交媒体日签",
+  "industry": [
+    "文化传播",
+    "媒体"
+  ],
+  "topic": [
+    "每日语录",
+    "阅读习惯"
+  ],
+  "genre": "碎片化语录",
+  "style": [
+    "极简",
+    "仪式化"
+  ],
+  "audience": [
+    "书友",
+    "大众读者"
+  ],
+  "intent": [
+    "品牌留存",
+    "日常互动"
+  ],
+  "tone": [
+    "平实",
+    "中性"
+  ],
+  "primary_question": "今日的阅读金句是什么？",
+  "thesis_type": "无显著论述",
+  "thesis_sentence": "通过每日日签形式进行品牌轻量化展示。",
+  "structure_pattern": "固定模板式（日期+视觉内容）",
+  "section_functions": [
+    "标识特定日期",
+    "作为社交媒体占位内容"
+  ],
+  "argument_moves": [
+    "直接展示",
+    "缺乏逻辑推导"
+  ],
+  "core_argument": "由于正文仅含标题与日期信息，无核心论点提取可能。",
+  "key_points": [
+    "2023年2月4日的日期标记",
+    "FBK翻书品牌日签栏目定位"
+  ],
+  "opening_pattern": "直述标题",
+  "ending_pattern": "无结尾",
+  "evidence_types": [
+    "视觉意象（图片）"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "中立客观",
+  "stance_strength": "弱",
+  "sentence_rhythm": "极简",
+  "abstraction_level": "极低",
+  "transferable_moves": [
+    "使用固定前缀建立品牌专栏标识",
+    "通过日期驱动内容的持续性更新"
+  ],
+  "anti_patterns": [
+    "信息密度缺失",
+    "正文内容空洞",
+    "缺乏可读文本"
+  ],
+  "notable_phrases": [
+    "FBK翻书日签"
+  ],
+  "title_score": 30,
+  "opening_score": 20,
+  "argument_score": 0,
+  "evidence_score": 10,
+  "structure_score": 20,
+  "style_score": 30,
+  "publishability_score": 20,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该内容为FBK翻书平台的每日日签记录，发布于2023年2月4日。文章仅包含标题及日期元数据，实质性文本内容缺失。此类内容属于品牌社群运营中的仪式化动作，旨在通过每日更新维持账号活跃度，但在知识获取、深度分析或写作参考方面不具备实际价值，是极低信息密度的社交媒体占位符。",
+  "summary_500": "该文章属于典型的社交媒体碎片化内容，具体为“FBK翻书日签”系列的每日固定推送。从结构上看，它完全由日期标题构成，正文部分在抓取中仅显示为触发全局图片搜索模式，缺乏任何实质性的文字叙述、观点表达或逻辑论证。在商业内容分析框架下，其content_type被定义为“社交媒体日签”，这类内容的运作逻辑并非传递复杂信息，而是通过标准化的模板进行品牌曝光。由于其核心内容（通常为一张包含语录的图片）无法在文本层面体现，导致其数据密度、案例密度及论点得分均接近于零。对于RAG系统或商业研究而言，此样本属于“低价值/无实质内容”类别，仅能作为自媒体运营频率和栏目设置的观察样本，不具备写作技巧的借鉴意义。在结构化处理时，应标记为low_value并识别其活动/通知属性，以避免对知识库产生噪音。"
+}

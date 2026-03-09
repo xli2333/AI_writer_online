@@ -1,0 +1,86 @@
+{
+  "id": "696978a33c85",
+  "year": "2023",
+  "date": "2023-12-15",
+  "title": "规则的悖论 丨FBK翻书日签 2023年12月16日",
+  "relative_path": "2023/2023-12-15_规则的悖论 丨FBK翻书日签 2023年12月16日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-12-15_规则的悖论 丨FBK翻书日签 2023年12月16日.txt",
+  "char_count": 355,
+  "content_type": "日签",
+  "industry": [
+    "文化",
+    "出版"
+  ],
+  "topic": [
+    "规则",
+    "悖论"
+  ],
+  "genre": "碎片化语录",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "大众读者"
+  ],
+  "intent": [
+    "信息发布",
+    "日常打卡"
+  ],
+  "tone": [
+    "客观"
+  ],
+  "primary_question": "规则背后隐藏着怎样的矛盾性？",
+  "thesis_type": "概念提出",
+  "thesis_sentence": "文章标题暗示了规则并非绝对，其内部存在逻辑或执行上的悖论。",
+  "structure_pattern": "固定模板式",
+  "section_functions": [
+    "标题展示",
+    "日期标注",
+    "溯源链接",
+    "系统状态说明"
+  ],
+  "argument_moves": [
+    "通过标题限定讨论范畴"
+  ],
+  "core_argument": "由于内容缺失，仅能识别出“规则存在悖论”这一预设命题。",
+  "key_points": [
+    "2023年12月16日的FBK翻书日签主题为规则的悖论"
+  ],
+  "opening_pattern": "直陈标题",
+  "ending_pattern": "系统自动提示",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 0,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "远",
+  "stance_strength": "中等",
+  "sentence_rhythm": "破碎",
+  "abstraction_level": "极高",
+  "transferable_moves": [
+    "使用特定日期作为日签标题的命名规范"
+  ],
+  "anti_patterns": [
+    "有效内容严重缺失",
+    "仅有标题而无正文",
+    "过度依赖外部链接和图片"
+  ],
+  "notable_phrases": [
+    "规则的悖论"
+  ],
+  "title_score": 45,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 0,
+  "structure_score": 20,
+  "style_score": 15,
+  "publishability_score": 5,
+  "quality_score": 8,
+  "reference_value_score": 5,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该文本为“FBK翻书日签”的发布占位符。内容极简，仅包含标题“规则的悖论”、日期（2023年12月16日）及一条已失效的原始链接。正文由于触发了图片搜索模式，并未包含实质性的文字论述。此类内容通常作为社交媒体打卡或引流，对深度阅读和知识提取无实际参考价值。",
+  "summary_500": "该文章属于典型的社交媒体日签式内容，主要功能是提供每日更新的仪式感。标题“规则的悖论”具有一定的哲学思辨意味，可能源自某本特定书籍的内容摘录，但在当前文本中，实际的摘录内容并未展示。全文由标题、日期、来源链接以及一条提示系统进入图片搜索模式的备注组成。由于正文文字缺失，无法进行逻辑链条、证据强度或写作风格的深度分析。这种碎片化信息在结构化分析中属于极低价值样本，仅可作为特定账号发布频率或形式的观察样本，无法用于RAG写作或人格提炼。文章缺乏论点支撑、事实论据和结构层次，不具备独立的传播与学习意义。"
+}

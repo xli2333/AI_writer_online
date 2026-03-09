@@ -1,0 +1,93 @@
+{
+  "id": "012f8af4d812",
+  "year": "2023",
+  "date": "2023-04-05",
+  "title": "何为经典？丨FBK翻书日签 2023年4月5日",
+  "relative_path": "2023/2023-04-05_何为经典？丨FBK翻书日签 2023年4月5日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-04-05_何为经典？丨FBK翻书日签 2023年4月5日.txt",
+  "char_count": 352,
+  "content_type": "日签",
+  "industry": [
+    "文化",
+    "出版",
+    "内容运营"
+  ],
+  "topic": [
+    "经典定义",
+    "每日阅读",
+    "碎片化内容"
+  ],
+  "genre": "每日金句",
+  "style": [
+    "极简",
+    "碎片化"
+  ],
+  "audience": [
+    "读书爱好者",
+    "品牌订阅用户"
+  ],
+  "intent": [
+    "品牌触达",
+    "日常运营"
+  ],
+  "tone": [
+    "深沉",
+    "思考性"
+  ],
+  "primary_question": "什么是经典？",
+  "thesis_type": "定义型",
+  "thesis_sentence": "通过每日一问的形式引导读者思考“经典”的本质内涵。",
+  "structure_pattern": "碎片式单一结构",
+  "section_functions": [
+    "标题提出核心议题",
+    "日期标注建立仪式感",
+    "视觉元素填充"
+  ],
+  "argument_moves": [
+    "提出开放式问题"
+  ],
+  "core_argument": "由于正文缺失，仅能推测其核心论点在于引导对经典文化价值的重新审视。",
+  "key_points": [
+    "经典的定义探讨",
+    "FBK品牌每日内容打卡"
+  ],
+  "opening_pattern": "直截了当式提问",
+  "ending_pattern": "日期/版权式结尾",
+  "evidence_types": [
+    "无实质文字证据"
+  ],
+  "evidence_specificity_score": 5,
+  "data_density_score": 5,
+  "case_density_score": 5,
+  "quote_density_score": 10,
+  "narrative_distance": "远景",
+  "stance_strength": "中立",
+  "sentence_rhythm": "停顿感强",
+  "abstraction_level": "极高",
+  "transferable_moves": [
+    "使用‘翻书日签’这种仪式感极强的标题命名法",
+    "以宏大的哲学命题作为每日互动的引子"
+  ],
+  "anti_patterns": [
+    "内容极度单薄（除了标题几乎没有有效文字）",
+    "信息密度极低",
+    "过度依赖外部图片或链接，导致原文无阅读价值"
+  ],
+  "notable_phrases": [
+    "何为经典",
+    "翻书日签"
+  ],
+  "title_score": 45,
+  "opening_score": 30,
+  "argument_score": 10,
+  "evidence_score": 5,
+  "structure_score": 15,
+  "style_score": 30,
+  "publishability_score": 10,
+  "quality_score": 15,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为FBK品牌于2023年4月5日发布的每日翻书日签。文章以“何为经典？”为题，采用极简的碎片化形式呈现。由于原文除标题和日期外缺乏实质性正文论述，主要功能为品牌日常运营和用户触达，而非深度的知识传递或商业分析，属于典型的信息密度极低的内容，不具备深度研究或RAG参考价值。",
+  "summary_500": "该文本属于FBK品牌的日常内容运营组件——“翻书日签”。在2023年4月5日的发布中，其核心主题被设定为“何为经典”。从内容结构上看，文章极度简略，仅包含一个具有哲学思辨色彩的标题和日期信息，并没有展开具体的论证、案例或深度解析。这种写作模式属于典型的“金句+图片”式营销策略，旨在通过碎片化的提问激发读者的瞬间思考，并利用“日签”的形式感建立品牌与用户之间的每日连接。然而，从商业内容分析的角度来看，该文章缺乏核心论点、论据支持及完整的写作逻辑。信息密度极低，数据、案例和引用分项评分均处于极低水平。此类文章对于需要深度逻辑、可迁移策略或实证数据的检索系统（RAG）而言，属于低价值、噪音类信息。其参考意义仅限于观察品牌如何进行社交媒体的极简运营和仪式感打造，而非内容本身的知识产出。由于内容过短且功能仅限于通知与视觉展示，其质量分数和参考价值分数均被如实降低。"
+}

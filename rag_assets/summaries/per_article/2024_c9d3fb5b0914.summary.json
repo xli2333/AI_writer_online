@@ -1,0 +1,90 @@
+{
+  "id": "c9d3fb5b0914",
+  "year": "2024",
+  "date": "2024-01-23",
+  "title": "敏捷基因丨FBK翻书日签 2024年1月23日",
+  "relative_path": "2024/2024-01-23_敏捷基因丨FBK翻书日签 2024年1月23日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2024\\2024-01-23_敏捷基因丨FBK翻书日签 2024年1月23日.txt",
+  "char_count": 352,
+  "content_type": "社交媒体日签",
+  "industry": [
+    "企业管理",
+    "互联网"
+  ],
+  "topic": [
+    "敏捷开发",
+    "品牌推广"
+  ],
+  "genre": "碎片化内容",
+  "style": [
+    "简洁",
+    "碎片化"
+  ],
+  "audience": [
+    "管理人员",
+    "职场专业人士"
+  ],
+  "intent": [
+    "品牌维护",
+    "用户触达"
+  ],
+  "tone": [
+    "客观"
+  ],
+  "primary_question": "如何通过每日日签形式进行品牌触达？",
+  "thesis_type": "描述型",
+  "thesis_sentence": "通过每日更新的“翻书日签”系列图片，传递敏捷相关的价值观或知识片段。",
+  "structure_pattern": "固定模板式",
+  "section_functions": [
+    "标题界定范围",
+    "日期标注时间",
+    "图片引导视觉"
+  ],
+  "argument_moves": [
+    "直接展示",
+    "视觉替代文字"
+  ],
+  "core_argument": "无（文章仅为每日日签的发布载体，核心观点承载于图片中）。",
+  "key_points": [
+    "2024年1月23日的日签发布",
+    "属于敏捷基因FBK系列"
+  ],
+  "opening_pattern": "标准化日期与系列名称",
+  "ending_pattern": "链接指引",
+  "evidence_types": [
+    "视觉图片"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "远",
+  "stance_strength": "中等",
+  "sentence_rhythm": "极简",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "日签打卡式内容生产流",
+    "品牌关键词系列化命名"
+  ],
+  "anti_patterns": [
+    "内容缺失（缺乏正文描述）",
+    "低信息密度"
+  ],
+  "notable_phrases": [
+    "敏捷基因",
+    "翻书日签"
+  ],
+  "title_score": 40,
+  "opening_score": 20,
+  "argument_score": 5,
+  "evidence_score": 5,
+  "structure_score": 30,
+  "style_score": 20,
+  "publishability_score": 20,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为‘敏捷基因’公众号发布的‘FBK翻书日签’。文章形式极度简化，仅包含标题和日期，实际内容高度依赖于图片（本抓取中未包含图片文字）。此类内容属于典型的自媒体日常维护性发文，不具备完整的论点论证结构。",
+  "summary_500": "该篇内容是‘敏捷基因’品牌下的日常内容产出案例，发布于2024年1月23日。其核心定位为社交媒体日签（Daily Quote），主要用于社群活跃和朋友圈传播。从文本分析角度看，由于该推文的核心信息完全由图片承载，其文字部分的逻辑密度和论据支撑几乎为零。文章结构遵循‘系列名+日期’的标准化命名规则，不含任何叙事或议论逻辑。对于商业分析而言，该内容的价值仅在于展示了一种‘轻量化、高频次’的内容运营模式，但在知识检索、RAG写作提炼和深度学习方面，属于典型的低价值信息。"
+}

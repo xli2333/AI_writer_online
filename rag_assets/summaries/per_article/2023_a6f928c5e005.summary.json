@@ -1,0 +1,88 @@
+{
+  "id": "a6f928c5e005",
+  "year": "2023",
+  "date": "2023-04-04",
+  "title": "陌生人社会丨FBK翻书日签 2023年4月4日",
+  "relative_path": "2023/2023-04-04_陌生人社会丨FBK翻书日签 2023年4月4日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-04-04_陌生人社会丨FBK翻书日签 2023年4月4日.txt",
+  "char_count": 352,
+  "content_type": "日签",
+  "industry": [
+    "文化传播",
+    "出版"
+  ],
+  "topic": [
+    "陌生人社会",
+    "阅读分享"
+  ],
+  "genre": "碎片化金句",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "读书爱好者",
+    "社群成员"
+  ],
+  "intent": [
+    "品牌露脸",
+    "每日打卡"
+  ],
+  "tone": [
+    "客观"
+  ],
+  "primary_question": "2023年4月4日的每日阅读主题是什么？",
+  "thesis_type": "事实陈述",
+  "thesis_sentence": "该内容仅作为FBK翻书日的日期记录与“陌生人社会”这一主题的展示载体。",
+  "structure_pattern": "固定模板式",
+  "section_functions": [
+    "展示标题与日期",
+    "提供原文链接",
+    "记录媒体资源信息"
+  ],
+  "argument_moves": [
+    "无实质性论证"
+  ],
+  "core_argument": "无",
+  "key_points": [
+    "日期：2023年4月4日",
+    "核心词：陌生人社会",
+    "内容来源：FBK翻书日签"
+  ],
+  "opening_pattern": "标题直接展示核心主题",
+  "ending_pattern": "系统来源标注",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "旁观",
+  "stance_strength": "中立",
+  "sentence_rhythm": "极短",
+  "abstraction_level": "中等",
+  "transferable_moves": [
+    "利用‘日签’形式进行高频次低成本的品牌心智占领"
+  ],
+  "anti_patterns": [
+    "信息密度极低",
+    "核心内容仅存在于图片中导致文本无法检索",
+    "缺乏引言或导语引导阅读"
+  ],
+  "notable_phrases": [
+    "陌生人社会"
+  ],
+  "title_score": 40,
+  "opening_score": 10,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 20,
+  "style_score": 20,
+  "publishability_score": 5,
+  "quality_score": 5,
+  "reference_value_score": 5,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该内容为‘FBK翻书会’2023年4月4日的日签记录，主题标签为‘陌生人社会’。正文除标题、日期及原始链接外，无具体文字内容。该文本仅起到了活动占位与日期提醒的作用，缺乏实质性的文学分析、观点产出或商业洞察，属于低信息密度的日常运营素材。",
+  "summary_500": "该文档是一篇典型的社群日常运营记录，具体为2023年4月4日的‘FBK翻书日签’。其内容高度依赖视觉化表达（图片），在提供的文本数据中仅保留了‘陌生人社会’这一关键主题词。文章结构极其简单，仅包含标准的元数据信息（标题、日期、来源链接）。从内容价值角度看，该文本无法为RAG写作或知识提取提供实质性支撑，其核心价值在于作为品牌每日打卡的足迹。由于正文缺失具体的论证或金句描述，属于极低价值的碎片化信息，标记为低价值内容。对于内容创作者而言，此类文章仅能作为观察社群运营节奏的参考，而不具备写作技巧的借鉴意义。"
+}

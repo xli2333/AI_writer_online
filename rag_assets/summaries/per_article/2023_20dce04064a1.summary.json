@@ -1,0 +1,87 @@
+{
+  "id": "20dce04064a1",
+  "year": "2023",
+  "date": "2023-12-09",
+  "title": "一人公司丨FBK翻书日签 2023年12月9日",
+  "relative_path": "2023/2023-12-09_一人公司丨FBK翻书日签 2023年12月9日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-12-09_一人公司丨FBK翻书日签 2023年12月9日.txt",
+  "char_count": 352,
+  "content_type": "碎片化内容",
+  "industry": [
+    "文化传播"
+  ],
+  "topic": [
+    "个人成长",
+    "职场习惯"
+  ],
+  "genre": "日签",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "个人创业者",
+    "终身学习者"
+  ],
+  "intent": [
+    "品牌留存",
+    "日常打卡"
+  ],
+  "tone": [
+    "中性"
+  ],
+  "primary_question": "2023年12月9日的翻书日签内容是什么？",
+  "thesis_type": "事实陈述型",
+  "thesis_sentence": "该文章是FBK品牌下“一人公司”系列在2023年12月9日的每日阅读摘录分享。",
+  "structure_pattern": "固定模板式",
+  "section_functions": [
+    "内容标识（标题与日期）",
+    "来源溯源（链接）",
+    "视觉媒介提示（图片说明）"
+  ],
+  "argument_moves": [
+    "展示日常内容碎片"
+  ],
+  "core_argument": "无（仅作为日常内容分发记录，无核心论点论证）",
+  "key_points": [
+    "FBK翻书日签",
+    "2023年12月9日发布",
+    "核心内容以图片形式承载"
+  ],
+  "opening_pattern": "直陈式",
+  "ending_pattern": "系统提示式",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 10,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "中立观察",
+  "stance_strength": "中立",
+  "sentence_rhythm": "无（仅有元数据）",
+  "abstraction_level": "具象",
+  "transferable_moves": [
+    "利用固定日期模板建立用户每日预期"
+  ],
+  "anti_patterns": [
+    "正文缺失（依赖图片，导致文本抓取价值极低）",
+    "信息高度碎片化（缺乏阅读深度）"
+  ],
+  "notable_phrases": [
+    "一人公司",
+    "翻书日签"
+  ],
+  "title_score": 40,
+  "opening_score": 10,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 20,
+  "style_score": 20,
+  "publishability_score": 10,
+  "quality_score": 5,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为2023年12月9日的‘FBK翻书日签’。正文极简，仅包含标题、日期和原始链接，实质性文字内容缺失，其核心信息主要通过一张图片承载。属于高频率、低文本量的品牌触达类内容，对RAG写作或深度人格提炼缺乏参考价值。",
+  "summary_500": "本文是FBK‘一人公司’品牌下的每日日签记录，发布于2023年12月9日。文章采取了极简的发布形式，除了基本的元数据（标题、日期、公众号原始链接）外，并无任何正文论述、金句摘抄或案例分析。根据系统提示，该文主要包含一张图片，文字部分仅作为该图片的引导或索引。由于缺乏具体的文字信息密度，该文章在商业分析、内容创作参考以及知识图谱构建方面的价值极低。其主要的写作机制在于通过每日更新（日签）的形式维持用户的品牌感知，而非传递复杂的逻辑或观点。"
+}

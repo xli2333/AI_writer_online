@@ -1,0 +1,85 @@
+{
+  "id": "b843fd9b54a5",
+  "year": "2023",
+  "date": "2023-12-10",
+  "title": "时间丨FBK翻书日签 2023年12月10日",
+  "relative_path": "2023/2023-12-10_时间丨FBK翻书日签 2023年12月10日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-12-10_时间丨FBK翻书日签 2023年12月10日.txt",
+  "char_count": 351,
+  "content_type": "日签",
+  "industry": [
+    "文化",
+    "出版"
+  ],
+  "topic": [
+    "时间",
+    "生活感悟"
+  ],
+  "genre": "日常碎念",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "大众读者"
+  ],
+  "intent": [
+    "情感联结",
+    "日常打卡"
+  ],
+  "tone": [
+    "中立"
+  ],
+  "primary_question": "2023年12月10日的日签内容是什么？",
+  "thesis_type": "非论述型",
+  "thesis_sentence": "本篇为每日固定推送的文化日签，无特定论点。",
+  "structure_pattern": "固定模板",
+  "section_functions": [
+    "交代日期与标题",
+    "内容展示"
+  ],
+  "argument_moves": [
+    "陈述特定日期"
+  ],
+  "core_argument": "无实质论证过程",
+  "key_points": [
+    "日期：2023年12月10日",
+    "品牌：FBK翻书日签"
+  ],
+  "opening_pattern": "直陈标题",
+  "ending_pattern": "无",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 0,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "远",
+  "stance_strength": "中立",
+  "sentence_rhythm": "无明显节奏",
+  "abstraction_level": "中",
+  "transferable_moves": [
+    "采用品牌化日签作为用户粘性工具"
+  ],
+  "anti_patterns": [
+    "内容极度匮乏",
+    "缺乏文字引导",
+    "纯图片依赖"
+  ],
+  "notable_phrases": [
+    "FBK翻书日签"
+  ],
+  "title_score": 30,
+  "opening_score": 10,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 20,
+  "style_score": 20,
+  "publishability_score": 10,
+  "quality_score": 10,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为2023年12月10日的FBK翻书日签。全文仅包含日期与标题，无实质性文字叙述或论证内容。属于高度模板化的日常品牌推送，其核心价值在于社交媒体的每日出勤，而非提供深度信息或专业观点。",
+  "summary_500": "本文是FBK翻书系列于2023年12月10日发布的日签内容。从写作与内容分析角度看，该文章属于典型的信息极简型内容，几乎没有可分析的文字结构或逻辑链条。文章正文部分仅触发了图片搜索模式的标识，暗示其核心内容以视觉图像形式呈现。由于缺乏文本支撑，其在知识传递、逻辑建模及深度写作参考方面的价值极低。对于此类低价值、纯展示性的内容，在商业内容库中应标记为“低密度”或“仅留存”，不建议作为写作模板或参考案例进行深度学习。"
+}

@@ -1,0 +1,89 @@
+{
+  "id": "0398f6510535",
+  "year": "2023",
+  "date": "2023-05-05",
+  "title": "浪漫机器丨FBK翻书日签 2023年5月5日",
+  "relative_path": "2023/2023-05-05_浪漫机器丨FBK翻书日签 2023年5月5日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-05-05_浪漫机器丨FBK翻书日签 2023年5月5日.txt",
+  "char_count": 351,
+  "content_type": "日签",
+  "industry": [
+    "出版",
+    "传媒"
+  ],
+  "topic": [
+    "每日语录",
+    "阅读分享"
+  ],
+  "genre": "日常动态",
+  "style": [
+    "极简",
+    "文艺"
+  ],
+  "audience": [
+    "书友",
+    "社群用户"
+  ],
+  "intent": [
+    "品牌留存",
+    "日常互动"
+  ],
+  "tone": [
+    "平和"
+  ],
+  "primary_question": "今日书籍分享的主题和日期是什么？",
+  "thesis_type": "阐述型",
+  "thesis_sentence": "通过每日日签形式维持品牌与读者间的日常联系。",
+  "structure_pattern": "模板化结构",
+  "section_functions": [
+    "标题界定内容属性",
+    "日期标注时间线",
+    "链接提供溯源"
+  ],
+  "argument_moves": [
+    "标识品牌标识",
+    "记录特定日期"
+  ],
+  "core_argument": "无实质论证内容。",
+  "key_points": [
+    "日期为2023年5月5日",
+    "内容载体为FBK翻书日签"
+  ],
+  "opening_pattern": "固定品牌前缀引导",
+  "ending_pattern": "系统自动抓取信息展示",
+  "evidence_types": [
+    "图片"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "中立观察",
+  "stance_strength": "弱",
+  "sentence_rhythm": "极短促",
+  "abstraction_level": "具体",
+  "transferable_moves": [
+    "使用标准化的系列标题增强品牌辨识度"
+  ],
+  "anti_patterns": [
+    "内容过度依赖图片导致文字信息缺失",
+    "缺乏引导读者互动的文本描述"
+  ],
+  "notable_phrases": [
+    "浪漫机器",
+    "翻书日签"
+  ],
+  "title_score": 30,
+  "opening_score": 10,
+  "argument_score": 0,
+  "evidence_score": 5,
+  "structure_score": 20,
+  "style_score": 20,
+  "publishability_score": 10,
+  "quality_score": 10,
+  "reference_value_score": 5,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该内容为2023年5月5日的‘FBK翻书’公众号日签，属于极简的品牌每日打卡记录。正文仅包含标题、日期及一个链接，实质性文字内容缺失。其核心功能在于通过视觉图片（本抓取中未显示具体内容）与读者的日常接触，而非传递深度的商业信息或逻辑论证。由于缺乏可读性文字，该条目在知识提取和写作参考方面的价值极低。",
+  "summary_500": "本篇文档记录的是‘浪漫机器丨FBK翻书日签 2023年5月5日’。作为一种典型的社交媒体碎片化内容，它采用了‘标题+日期+视觉元素（链接/图片）’的极简模板。其写作特征表现为：1. 极高的标准化：使用固定的标题格式‘品牌+系列名+日期’，方便用户快速识别和归档；2. 极低的信息密度：文中没有提供任何文字性的书评、语录或解析，完全依赖于外部链接或图片传达信息。这种模式在品牌私域流量运营中较为常见，旨在通过低门槛的内容产出维持每日活跃度，但在文本分析角度下属于典型的‘低价值内容’。其主要的写作反模式在于文本内容的极度贫乏，导致离开原始视觉环境后，信息几乎完全丧失。对于AI学习或内容创作而言，此类样本仅能提供‘自动化发布模板’的参考，不具备论证逻辑、修辞手法或深度思想的参考价值。此外，由于其触发了全局图片搜索模式，说明该日签的核心价值点完全集中在单张视觉海报上，而非文字表述。"
+}

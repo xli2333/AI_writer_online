@@ -1,0 +1,88 @@
+{
+  "id": "cf46dde19fe7",
+  "year": "2023",
+  "date": "2023-06-25",
+  "title": "人性的优点 卡耐基丨FBK翻书日签 2023年6月25日",
+  "relative_path": "2023/2023-06-25_人性的优点 卡耐基丨FBK翻书日签 2023年6月25日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-06-25_人性的优点 卡耐基丨FBK翻书日签 2023年6月25日.txt",
+  "char_count": 357,
+  "content_type": "日签",
+  "industry": [
+    "图书出版",
+    "个人成长"
+  ],
+  "topic": [
+    "人性的优点",
+    "卡耐基",
+    "每日阅读"
+  ],
+  "genre": "碎片化信息",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "大众读者"
+  ],
+  "intent": [
+    "品牌曝光",
+    "日常更新"
+  ],
+  "tone": [
+    "平静"
+  ],
+  "primary_question": "2023年6月25日的推荐书籍是什么？",
+  "thesis_type": "描述性",
+  "thesis_sentence": "本篇为FBK翻书公众号的每日日签，推介书籍为卡耐基的《人性的优点》。",
+  "structure_pattern": "固定模板式",
+  "section_functions": [
+    "书名展示",
+    "日期标注",
+    "来源声明"
+  ],
+  "argument_moves": [
+    "提及经典书名"
+  ],
+  "core_argument": "无实质论证过程，仅为书籍名称的陈列。",
+  "key_points": [
+    "推荐书籍：卡耐基《人性的优点》",
+    "发布日期：2023年6月25日",
+    "发布载体：FBK翻书日签"
+  ],
+  "opening_pattern": "直陈式",
+  "ending_pattern": "链接引用",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 0,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "远",
+  "stance_strength": "弱",
+  "sentence_rhythm": "停顿多",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "利用书名+日期的固定模板进行低成本每日内容产出"
+  ],
+  "anti_patterns": [
+    "内容过度稀疏",
+    "缺乏实质性解读",
+    "无任何附加价值信息"
+  ],
+  "notable_phrases": [
+    "FBK翻书日签"
+  ],
+  "title_score": 20,
+  "opening_score": 10,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 10,
+  "style_score": 10,
+  "publishability_score": 5,
+  "quality_score": 5,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为FBK翻书公众号在2023年6月25日发布的日签，仅列出了书籍名称《人性的优点》及作者卡耐基。文章不存在正文论述、逻辑结构或数据证据，属于极低信息密度的占位式更新，主要用于账号每日打卡，不具备研究或学习价值。",
+  "summary_500": "本次分析的文本属于极简形式的社交媒体日签。其核心信息仅包含三个要素：书名《人性的优点》、作者卡耐基以及发布日期2023年6月25日。由于正文部分完全缺失，仅提供了来源链接和图片搜索模式提示，因此该文本在写作机制、逻辑论证、证据引用等方面完全留白。此类内容在商业运营中通常作为一种仪式性的每日触达工具，旨在维持公众号的活跃度并强化品牌记忆，但对于受众而言，除非配合精美的视觉海报，否则文字本身的知识含金量极低。在结构化数据处理中，此文本应被标记为‘低价值’，在RAG（检索增强生成）系统中应被过滤或降权，因为它不包含任何可供参考的写作技巧、深度观点或案例素材。"
+}

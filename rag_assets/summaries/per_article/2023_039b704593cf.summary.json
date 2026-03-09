@@ -1,0 +1,90 @@
+{
+  "id": "039b704593cf",
+  "year": "2023",
+  "date": "2023-11-26",
+  "title": "房间里的大象丨FBK翻书日签 2023年11月26日",
+  "relative_path": "2023/2023-11-26_房间里的大象丨FBK翻书日签 2023年11月26日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-11-26_房间里的大象丨FBK翻书日签 2023年11月26日.txt",
+  "char_count": 355,
+  "content_type": "日签",
+  "industry": [
+    "文化传播",
+    "出版"
+  ],
+  "topic": [
+    "每日金句",
+    "阅读习惯"
+  ],
+  "genre": "碎片化短文",
+  "style": [
+    "极简",
+    "形式化"
+  ],
+  "audience": [
+    "品牌存量用户",
+    "社交媒体用户"
+  ],
+  "intent": [
+    "品牌维护",
+    "用户留存"
+  ],
+  "tone": [
+    "客观",
+    "平淡"
+  ],
+  "primary_question": "该日签当日推荐的主题是什么？",
+  "thesis_type": "描述性",
+  "thesis_sentence": "该文章仅作为FBK翻书品牌的每日打卡式记录，不包含实质性论证内容。",
+  "structure_pattern": "模板化结构",
+  "section_functions": [
+    "标题呈现",
+    "日期标注",
+    "系统元数据"
+  ],
+  "argument_moves": [
+    "日期识别",
+    "品牌标识"
+  ],
+  "core_argument": "无实质性核心论点。",
+  "key_points": [
+    "2023年11月26日的品牌日签内容",
+    "主题词为‘房间里的大象’"
+  ],
+  "opening_pattern": "标题直入",
+  "ending_pattern": "元数据信息展示",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "中立观察",
+  "stance_strength": "中立",
+  "sentence_rhythm": "短促且断裂",
+  "abstraction_level": "具体",
+  "transferable_moves": [
+    "利用日期和固定主题词建立用户品牌心智"
+  ],
+  "anti_patterns": [
+    "信息密度极低",
+    "正文内容缺失",
+    "仅具通知/仪式功能"
+  ],
+  "notable_phrases": [
+    "房间里的大象"
+  ],
+  "title_score": 30,
+  "opening_score": 10,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 20,
+  "style_score": 15,
+  "publishability_score": 10,
+  "quality_score": 5,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为“FBK翻书”公众号于2023年11月26日发布的每日日签。文章除标题“房间里的大象”和日期外，无实质性正文描述、书籍摘录或深度评论。此类内容主要用于社交媒体的日常打卡与品牌曝光，信息量极小，不具备分析与参考价值。",
+  "summary_500": "该条目属于社交媒体常见的碎片化内容，具体为“FBK翻书”品牌的每日签到卡片。正文仅保留了标题信息“房间里的大象丨FBK翻书日签 2023年11月26日”以及相关的系统元数据。从写作机制分析，该内容缺乏最基本的论证逻辑、证据支撑和表达结构，仅作为一种仪式性的习惯培养工具存在。在商业内容库中，此类数据被归类为低价值样本，因其不具备知识迁移性、叙事深度或修辞美感。对于RAG系统或写作模型而言，其唯一的提取点在于品牌活动的频率记录及当日使用的关键词，无法用于人格提炼或深度学习。"
+}

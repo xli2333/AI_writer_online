@@ -1,0 +1,85 @@
+{
+  "id": "29b6de4af96b",
+  "year": "2024",
+  "date": "2024-03-24",
+  "title": "算法泛灵世界丨FBK翻书日签 2024年3月24日",
+  "relative_path": "2024/2024-03-24_算法泛灵世界丨FBK翻书日签 2024年3月24日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2024\\2024-03-24_算法泛灵世界丨FBK翻书日签 2024年3月24日.txt",
+  "char_count": 354,
+  "content_type": "碎片化短讯",
+  "industry": [
+    "科技",
+    "传媒"
+  ],
+  "topic": [
+    "算法",
+    "泛灵论"
+  ],
+  "genre": "日签",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "数字公民",
+    "读书博主"
+  ],
+  "intent": [
+    "品牌展示"
+  ],
+  "tone": [
+    "中立"
+  ],
+  "primary_question": "什么是算法泛灵世界？",
+  "thesis_type": "描述性",
+  "thesis_sentence": "无正文，仅提供主题关键词。",
+  "structure_pattern": "元数据列表",
+  "section_functions": [
+    "标题界定",
+    "日期标识",
+    "系统备注"
+  ],
+  "argument_moves": [
+    "概念占位"
+  ],
+  "core_argument": "无实质论证。",
+  "key_points": [
+    "2024年3月24日日签",
+    "核心概念为算法泛灵世界"
+  ],
+  "opening_pattern": "标题直接引入",
+  "ending_pattern": "系统元数据结束",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 0,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "中立观察",
+  "stance_strength": "中立",
+  "sentence_rhythm": "零散",
+  "abstraction_level": "高抽象",
+  "transferable_moves": [
+    "利用日签形式进行每日品牌关键词占位"
+  ],
+  "anti_patterns": [
+    "内容空洞",
+    "仅有标题无实质信息"
+  ],
+  "notable_phrases": [
+    "算法泛灵世界"
+  ],
+  "title_score": 45,
+  "opening_score": 10,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 15,
+  "style_score": 20,
+  "publishability_score": 10,
+  "quality_score": 5,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为2024年3月24日的FBK翻书日签。除标题'算法泛灵世界'及日期、链接等元数据外，无实际正文内容。信息密度极低，主要作为每日品牌触点存在。",
+  "summary_500": "该文本为'FBK翻书日签'的碎片化记录，发布于2024年3月24日。核心内容仅为标题'算法泛灵世界'及抓取相关的元数据（链接、来源模式等）。因缺乏实际正文，该文本无法提供有效的逻辑论证、案例支撑或深度见解。其主要存在价值在于作为品牌每日更新的存证及关键词占位。由于信息量极度匮乏，该条目在知识库构建或RAG写作中仅具备低级的标签检索价值，缺乏可迁移的写作技巧、叙事策略或深度商业洞察。"
+}

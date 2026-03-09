@@ -1,0 +1,93 @@
+{
+  "id": "f71f57b98986",
+  "year": "2023",
+  "date": "2023-12-24",
+  "title": "被扭曲的经济学丨FBK翻书日签 2023年12月24日",
+  "relative_path": "2023/2023-12-24_被扭曲的经济学丨FBK翻书日签 2023年12月24日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-12-24_被扭曲的经济学丨FBK翻书日签 2023年12月24日.txt",
+  "char_count": 356,
+  "content_type": "读书日签",
+  "industry": [
+    "出版",
+    "经济学"
+  ],
+  "topic": [
+    "书籍推荐",
+    "知识碎片"
+  ],
+  "genre": "短评",
+  "style": [
+    "极简",
+    "碎片化"
+  ],
+  "audience": [
+    "书籍爱好者",
+    "经济学初学者"
+  ],
+  "intent": [
+    "品牌留存",
+    "内容导流"
+  ],
+  "tone": [
+    "客观",
+    "简练"
+  ],
+  "primary_question": "2023年12月24日的FBK推荐书籍或主题是什么？",
+  "thesis_type": "描述性",
+  "thesis_sentence": "本文为2023年12月24日的FBK翻书日签，主题定位于‘被扭曲的经济学’，用于每日书籍推荐引导。",
+  "structure_pattern": "固定模板式",
+  "section_functions": [
+    "标题揭示主题",
+    "日期标注记录时间",
+    "链接引导原始出处"
+  ],
+  "argument_moves": [
+    "通过标题建立悬念",
+    "利用日期建立连载感"
+  ],
+  "core_argument": "无实质性论证内容，仅作为每日阅读提醒或书籍导流入口。",
+  "key_points": [
+    "发布日期：2023-12-24",
+    "核心主题：被扭曲的经济学",
+    "内容来源：FBK公众号"
+  ],
+  "opening_pattern": "直陈式标题",
+  "ending_pattern": "外链引导",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 5,
+  "data_density_score": 10,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "中性",
+  "stance_strength": "中等",
+  "sentence_rhythm": "停顿多且短促",
+  "abstraction_level": "中等",
+  "transferable_moves": [
+    "日签式内容分发模版",
+    "跨平台链接引导机制"
+  ],
+  "anti_patterns": [
+    "正文缺失",
+    "信息密度极低",
+    "过度依赖外部链接"
+  ],
+  "notable_phrases": [
+    "被扭曲的经济学",
+    "翻书日签"
+  ],
+  "title_score": 40,
+  "opening_score": 20,
+  "argument_score": 5,
+  "evidence_score": 5,
+  "structure_score": 30,
+  "style_score": 30,
+  "publishability_score": 10,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该文本为‘FBK翻书日签’系列的每日推送记录，日期为2023年12月24日。主要内容仅包含一个指向‘被扭曲的经济学’这一主题的标题及原始文章链接。由于正文缺失，该内容仅具有索引价值，不包含具体知识点或深层逻辑论证。",
+  "summary_500": "该内容属于典型的社交媒体日签型碎片化信息。该文档记录了2023年12月24日FBK发布的读书日签，主题名为‘被扭曲的经济学’。从结构上看，它仅由标题、发布日期、微信公众号原始链接以及一个搜索提示组成。此类文本缺乏完整的写作机制、论据支持或深度分析，其主要功能是作为品牌每日互动的触点，引导用户点击链接阅读全文。对于RAG写作或深度知识提取而言，除提供了主题关键词和发布时间线外，参考价值极低。被标记为低价值信息，主要是因为其作为独立文章的完整度严重不足，更接近于一个带有指向性的书签或通知。"
+}

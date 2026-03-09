@@ -1,0 +1,89 @@
+{
+  "id": "ef23156b5298",
+  "year": "2024",
+  "date": "2024-02-03",
+  "title": "技术大全丨FBK翻书日签 2024年2月3日",
+  "relative_path": "2024/2024-02-03_技术大全丨FBK翻书日签 2024年2月3日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2024\\2024-02-03_技术大全丨FBK翻书日签 2024年2月3日.txt",
+  "char_count": 351,
+  "content_type": "每日简报",
+  "industry": [
+    "互联网",
+    "IT服务"
+  ],
+  "topic": [
+    "每日日签",
+    "资讯索引"
+  ],
+  "genre": "社交媒体贴文",
+  "style": [
+    "极简",
+    "程序化"
+  ],
+  "audience": [
+    "品牌关注者",
+    "职场人士"
+  ],
+  "intent": [
+    "用户留存",
+    "仪式感建立"
+  ],
+  "tone": [
+    "中立"
+  ],
+  "primary_question": "该日签对应的具体技术或启发内容是什么？",
+  "thesis_type": "索引性",
+  "thesis_sentence": "本文为FBK品牌提供的2024年2月3日每日技术日签索引，主要功能为导向原始图片或推文链接。",
+  "structure_pattern": "固定模板结构",
+  "section_functions": [
+    "标题识别",
+    "元数据标注",
+    "资源链接导向"
+  ],
+  "argument_moves": [
+    "提供外部内容入口"
+  ],
+  "core_argument": "无实质性论证内容，仅为自动化生成的信息存档。",
+  "key_points": [
+    "日期：2024-02-03",
+    "来源：技术大全 FBK",
+    "包含一张图片资源"
+  ],
+  "opening_pattern": "直陈式标题",
+  "ending_pattern": "链接占位符",
+  "evidence_types": [
+    "外部链接"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "远",
+  "stance_strength": "弱",
+  "sentence_rhythm": "平缓",
+  "abstraction_level": "中等",
+  "transferable_moves": [
+    "标准化的日签命名格式",
+    "元数据自动化抓取模版"
+  ],
+  "anti_patterns": [
+    "内容中空化（仅有外壳无实质文字）",
+    "过度依赖外部链接导航"
+  ],
+  "notable_phrases": [
+    "翻书日签"
+  ],
+  "title_score": 40,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 5,
+  "structure_score": 30,
+  "style_score": 20,
+  "publishability_score": 10,
+  "quality_score": 15,
+  "reference_value_score": 5,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "本文是‘技术大全’公众号于2024年2月3日发布的‘FBK翻书日签’。内容极度精简，仅包含元数据信息如标题、日期、原始微信链接，并记录了页面包含一张图片。该文本属于典型的自动化或半自动化生成的每日打卡信息，不具备实质性的深度内容、观点或行业分析，对RAG写作或知识提取价值极低。",
+  "summary_500": "该文档为‘技术大全丨FBK翻书日签 2024年2月3日’的存档记录。从内容结构上看，它并非一篇完整的分析文章，而是一个基于微信公众平台的资源索引或仪式性发布。文档主体由标题、发布日期、原始推文URL以及系统抓取状态说明（显示触发了全局图片搜索模式并找到1张图片）组成。其核心写作机制表现为高度的程序化和模板化，旨在维持品牌的每日更新频率并为读者提供一个进入完整内容的入口。由于缺乏具体的正文描述、观点阐述或技术细节，该文档在知识传播和逻辑论证方面的价值极低。主要作为品牌运营的频次记录存在，不建议作为专业技术学习或分析的参考资料。"
+}

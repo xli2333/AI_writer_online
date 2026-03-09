@@ -1,0 +1,88 @@
+{
+  "id": "49e0fe2d6a8a",
+  "year": "2023",
+  "date": "2023-02-23",
+  "title": "FBK翻书日签丨2023年2月23日",
+  "relative_path": "2023/2023-02-23_FBK翻书日签丨2023年2月23日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-02-23_FBK翻书日签丨2023年2月23日.txt",
+  "char_count": 347,
+  "content_type": "日签",
+  "industry": [
+    "文化教育",
+    "出版"
+  ],
+  "topic": [
+    "每日金句",
+    "读书"
+  ],
+  "genre": "碎片化内容",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "读书爱好者",
+    "社交媒体订阅者"
+  ],
+  "intent": [
+    "品牌维护",
+    "社交分享"
+  ],
+  "tone": [
+    "励志",
+    "中性"
+  ],
+  "primary_question": "如何通过低成本、高频次的内容占领用户心智？",
+  "thesis_type": "描述性",
+  "thesis_sentence": "通过每日更新带有品牌标识的读书金句图片，建立品牌与用户之间的日常情感联结。",
+  "structure_pattern": "固定模板化结构",
+  "section_functions": [
+    "识别品牌与日期",
+    "展示视觉核心内容"
+  ],
+  "argument_moves": [
+    "情感共鸣"
+  ],
+  "core_argument": "无深度论证，通过视觉化的名言警句进行碎片化价值传递。",
+  "key_points": [
+    "品牌每日触达",
+    "利用名言提升品牌格调",
+    "社交化分享驱动"
+  ],
+  "opening_pattern": "标题直接注明日期与品牌名",
+  "ending_pattern": "品牌标识展示",
+  "evidence_types": [
+    "名言警句"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 90,
+  "narrative_distance": "外层观察",
+  "stance_strength": "中性",
+  "sentence_rhythm": "极其简短",
+  "abstraction_level": "高感性",
+  "transferable_moves": [
+    "采用日签模板进行自动化内容生产",
+    "利用固定栏目培养用户每日点击习惯"
+  ],
+  "anti_patterns": [
+    "内容过于单薄导致无法承载深度搜索需求",
+    "缺乏正文引导导致用户留存时间过短"
+  ],
+  "notable_phrases": [
+    "FBK翻书日签"
+  ],
+  "title_score": 40,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 20,
+  "structure_score": 30,
+  "style_score": 40,
+  "publishability_score": 30,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为“FBK翻书”公众号发布的2023年2月23日日签图片。这类内容属于极简的品牌每日打卡，通常包含一张带有书籍名言或励志文字的配图，旨在通过社交媒体分享，增强品牌曝光并与读者建立每日情感连接。由于缺乏文本内容，其实质信息密度极低。",
+  "summary_500": "本文为“FBK翻书”于2023年2月23日发布的日签式推送。内容极其简单，仅包含标题、日期以及一张作为核心内容的图片。从商业运营角度看，这种“日签”模式是自媒体中常见的低成本、高频次触达手段，核心在于利用碎片化时间占领用户心智，通过极简的视觉呈现（名言+设计）引导用户进行朋友圈转发。然而，从内容写作和深度分析的角度来看，该条目属于极低信息密度的内容，完全依赖图片作为载体，缺乏实质性的逻辑论证、数据支持或详细案例。在结构化处理中，其主要价值在于记录品牌的日常运营节奏。分数值偏低反映了其作为单纯视觉/通知类信息的属性，对写作技巧提升和知识深度检索的参考价值非常有限。建议在RAG系统或写作库中将其标记为“低信息丰度”条目。"
+}

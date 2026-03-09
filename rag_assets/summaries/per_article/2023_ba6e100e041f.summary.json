@@ -1,0 +1,91 @@
+{
+  "id": "ba6e100e041f",
+  "year": "2023",
+  "date": "2023-07-22",
+  "title": "履单 无所不有与一无所有丨FBK翻书日签 2023年7月23日",
+  "relative_path": "2023/2023-07-22_履单 无所不有与一无所有丨FBK翻书日签 2023年7月23日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-07-22_履单 无所不有与一无所有丨FBK翻书日签 2023年7月23日.txt",
+  "char_count": 360,
+  "content_type": "日签",
+  "industry": [
+    "出版",
+    "文化传播"
+  ],
+  "topic": [
+    "书籍推荐",
+    "阅读感悟"
+  ],
+  "genre": "短评",
+  "style": [
+    "极简",
+    "碎片化"
+  ],
+  "audience": [
+    "书籍爱好者",
+    "忙碌的阅读者"
+  ],
+  "intent": [
+    "品牌展示",
+    "每日打卡"
+  ],
+  "tone": [
+    "哲理",
+    "冷静"
+  ],
+  "primary_question": "如何通过对仗的概念呈现一本书的核心冲突？",
+  "thesis_type": "概括型",
+  "thesis_sentence": "通过《履单》一书探讨现代社会中物质的极大丰富与精神意义匮乏之间的矛盾。",
+  "structure_pattern": "标签式结构",
+  "section_functions": [
+    "标题传达核心意向",
+    "日期与归档信息标注",
+    "来源引导"
+  ],
+  "argument_moves": [
+    "利用对仗词汇制造认知冲突",
+    "以书名为锚点进行概念发散"
+  ],
+  "core_argument": "信息密度极低，仅通过“无所不有”与“一无所有”的矛盾对立暗示书籍内容。",
+  "key_points": [
+    "提及书名《履单》",
+    "强调存在状态的极端对立"
+  ],
+  "opening_pattern": "直陈主题式",
+  "ending_pattern": "缺失",
+  "evidence_types": [
+    "书名/副标题"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 5,
+  "quote_density_score": 20,
+  "narrative_distance": "远景",
+  "stance_strength": "中立",
+  "sentence_rhythm": "短促",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "使用矛盾修辞法（Oxymoron）撰写标题",
+    "日签形式的品牌识别系统设计"
+  ],
+  "anti_patterns": [
+    "内容过度贫乏，缺乏实质性观点输出",
+    "依赖外部链接而无正文支撑",
+    "信息增量接近于零"
+  ],
+  "notable_phrases": [
+    "无所不有与一无所有"
+  ],
+  "title_score": 45,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 5,
+  "structure_score": 10,
+  "style_score": 20,
+  "publishability_score": 15,
+  "quality_score": 12,
+  "reference_value_score": 10,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "本文为2023年7月23日的FBK翻书日签，仅提供《履单》一书的标题及“无所不有与一无所有”的对仗式副标题。内容极度简略，属于品牌每日维护性质的碎片化发布，缺乏完整的论证过程或深度分析。",
+  "summary_500": "此文档为典型的社交媒体日签记录，其核心价值在于提供了一个关于书籍《履单》（Fulfilment）的哲学化概括：“无所不有与一无所有”。这种表达方式利用了矛盾修辞法，试图在极短的篇幅内勾勒出商业社会物流发达与个人意义缺失的对立。然而，从写作分析角度看，该文本缺乏任何实质性的正文展开、逻辑论证或证据支持。其结构仅由标题、日期、链接和系统自动抓取信息组成。这类内容的功能更多是作为一种视觉化的社交分享或每日阅读打卡的仪式感，对于需要获取深度洞察或学习写作技巧的用户而言，其参考价值极低。由于正文信息缺失，文章无法形成有效的知识沉淀或RAG写作素材。"
+}

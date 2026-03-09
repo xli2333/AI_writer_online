@@ -1,0 +1,78 @@
+{
+  "id": "7e522a7b3d2f",
+  "year": "2020",
+  "date": "2020-08-14",
+  "title": "分享图片",
+  "relative_path": "2020/2020-08-14_分享图片.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2020\\2020-08-14_分享图片.txt",
+  "char_count": 333,
+  "content_type": "社交媒体动态",
+  "industry": [
+    "互联网"
+  ],
+  "topic": [
+    "图片分享"
+  ],
+  "genre": "简讯",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "一般读者"
+  ],
+  "intent": [
+    "信息记录"
+  ],
+  "tone": [
+    "客观"
+  ],
+  "primary_question": "本文的内容价值是什么？",
+  "thesis_type": "无",
+  "thesis_sentence": "本页面仅包含一张分享的图片，无实质性文字论述。",
+  "structure_pattern": "占位符模式",
+  "section_functions": [
+    "标题指引",
+    "技术状态说明"
+  ],
+  "argument_moves": [
+    "陈述事实"
+  ],
+  "core_argument": "无核心论点",
+  "key_points": [
+    "该文章仅包含一张图片",
+    "内容由系统检索生成"
+  ],
+  "opening_pattern": "直陈式",
+  "ending_pattern": "直陈式",
+  "evidence_types": [
+    "图像证据"
+  ],
+  "evidence_specificity_score": 5,
+  "data_density_score": 0,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "远",
+  "stance_strength": "中立",
+  "sentence_rhythm": "破碎",
+  "abstraction_level": "极低",
+  "transferable_moves": [],
+  "anti_patterns": [
+    "标题空泛",
+    "内容缺失",
+    "零信息密度"
+  ],
+  "notable_phrases": [],
+  "title_score": 10,
+  "opening_score": 5,
+  "argument_score": 0,
+  "evidence_score": 5,
+  "structure_score": 10,
+  "style_score": 5,
+  "publishability_score": 5,
+  "quality_score": 5,
+  "reference_value_score": 2,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为2020年8月14日发布的微信公众号文章，标题为“分享图片”。正文内容极简，仅提及触发了全局图片搜索模式并找到1张图片，缺乏实际的文字信息、论点或分析价值。",
+  "summary_500": "该条目来源于2020年8月14日的微信公众号发布，其内容属性被标记为wechat_fallback_global。整篇文章除了标题“分享图片”外，几乎没有实质性的文字内容。系统记录显示该页面触发了全局图片搜索模式，并仅识别到一张图片。从商业内容分析的角度来看，由于缺乏文本逻辑、数据支持或可迁移的见解，该条目属于极低信息密度的内容，不具备研究、RAG写作或人格提炼的参考价值。其核心功能可能仅作为单图动态的记录。"
+}

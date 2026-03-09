@@ -1,0 +1,88 @@
+{
+  "id": "bd74bf974254",
+  "year": "2023",
+  "date": "2023-02-03",
+  "title": "FBK翻书日签丨2023年2月3日",
+  "relative_path": "2023/2023-02-03_FBK翻书日签丨2023年2月3日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-02-03_FBK翻书日签丨2023年2月3日.txt",
+  "char_count": 346,
+  "content_type": "每日日签",
+  "industry": [
+    "文化",
+    "传媒"
+  ],
+  "topic": [
+    "每日阅读",
+    "品牌日记"
+  ],
+  "genre": "资讯",
+  "style": [
+    "极简",
+    "碎片化"
+  ],
+  "audience": [
+    "社群用户",
+    "品牌关注者"
+  ],
+  "intent": [
+    "品牌心智建设",
+    "日常触达"
+  ],
+  "tone": [
+    "中立"
+  ],
+  "primary_question": "今日的日签内容是什么？",
+  "thesis_type": "描述性",
+  "thesis_sentence": "该文章仅作为FBK品牌每日日签的发布载体，不包含具体论点。",
+  "structure_pattern": "固定模板式",
+  "section_functions": [
+    "品牌及日期标识",
+    "内容展示（图片占位）"
+  ],
+  "argument_moves": [
+    "无论证过程"
+  ],
+  "core_argument": "无核心论点，仅为日常信息更新。",
+  "key_points": [
+    "发布2023年2月3日的日签",
+    "引导用户查看图片内容"
+  ],
+  "opening_pattern": "标题式开场",
+  "ending_pattern": "版权及链接说明",
+  "evidence_types": [
+    "视觉图像"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "客观叙述",
+  "stance_strength": "弱",
+  "sentence_rhythm": "无明显节奏",
+  "abstraction_level": "具象",
+  "transferable_moves": [
+    "固定频次的品牌触达机制",
+    "标准化的日签命名规范"
+  ],
+  "anti_patterns": [
+    "信息密度极低",
+    "缺乏可阅读的文本主体",
+    "过度依赖外部图片加载"
+  ],
+  "notable_phrases": [
+    "FBK翻书日签"
+  ],
+  "title_score": 30,
+  "opening_score": 20,
+  "argument_score": 0,
+  "evidence_score": 10,
+  "structure_score": 20,
+  "style_score": 20,
+  "publishability_score": 10,
+  "quality_score": 15,
+  "reference_value_score": 5,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该内容为“FBK翻书”品牌的每日打卡日签。文章仅包含标题、日期、原始链接及一张自动触发的图片标识。无实质性文字内容、观点或分析。属于高频但低信息密度的品牌日常维护动作。",
+  "summary_500": "该内容发布于2023年2月3日，标题为“FBK翻书日签丨2023年2月3日”，属于该品牌在微信公众平台的固定栏目。文章结构极度简化，仅作为日签图片的发布载体，缺乏正文论述。从商业内容分析的角度看，该文本除了展示其作为“日常触达”的营销策略外，不具备任何深度分析、行业洞察或学习价值。对于RAG写作或知识提取而言，属于可忽略的低价值数据，标记为低价值内容。此类内容的写作模式仅可作为建立每日品牌仪式的参考模板。"
+}

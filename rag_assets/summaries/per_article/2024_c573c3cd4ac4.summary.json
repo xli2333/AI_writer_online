@@ -1,0 +1,90 @@
+{
+  "id": "c573c3cd4ac4",
+  "year": "2024",
+  "date": "2024-01-13",
+  "title": "存在感丨FBK翻书日签 2024年1月13日",
+  "relative_path": "2024/2024-01-13_存在感丨FBK翻书日签 2024年1月13日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2024\\2024-01-13_存在感丨FBK翻书日签 2024年1月13日.txt",
+  "char_count": 351,
+  "content_type": "社交媒体动态",
+  "industry": [
+    "文化传播",
+    "个人成长"
+  ],
+  "topic": [
+    "每日日签",
+    "生活哲学"
+  ],
+  "genre": "日签",
+  "style": [
+    "极简主义",
+    "碎片化"
+  ],
+  "audience": [
+    "读书爱好者",
+    "品牌订阅者"
+  ],
+  "intent": [
+    "日常陪伴",
+    "品牌促活"
+  ],
+  "tone": [
+    "宁静",
+    "克制"
+  ],
+  "primary_question": "2024年1月13日的每日思考关键词是什么？",
+  "thesis_type": "概念化提示",
+  "thesis_sentence": "通过每日日签的形式，将'存在感'作为当日的生活思考锚点。",
+  "structure_pattern": "固定模板结构",
+  "section_functions": [
+    "标题与主题呈现",
+    "日期标注",
+    "元数据说明"
+  ],
+  "argument_moves": [
+    "概念提取"
+  ],
+  "core_argument": "以极简的日签形式进行每日品牌触达，强调生活中的'存在感'。",
+  "key_points": [
+    "明确了日期为2024年1月13日",
+    "确立了主题关键词为'存在感'"
+  ],
+  "opening_pattern": "标题直入",
+  "ending_pattern": "数据元信息结尾",
+  "evidence_types": [
+    "视觉意象（推测）"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "中立观察",
+  "stance_strength": "中性",
+  "sentence_rhythm": "停顿感强",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "采用统一的日签命名格式进行序列化内容生产",
+    "利用关键词驱动读者的碎片化联想"
+  ],
+  "anti_patterns": [
+    "文本内容极度缺失导致的信息空洞",
+    "过度依赖图片而缺乏可索引的文字深度"
+  ],
+  "notable_phrases": [
+    "存在感",
+    "翻书日签"
+  ],
+  "title_score": 50,
+  "opening_score": 30,
+  "argument_score": 10,
+  "evidence_score": 5,
+  "structure_score": 40,
+  "style_score": 50,
+  "publishability_score": 30,
+  "quality_score": 20,
+  "reference_value_score": 15,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该内容为FBK翻书日签的每日更新，主题为“存在感”。内容极度简练，仅包含标题、日期和系统抓取信息，属于典型的品牌打卡式动态。其主要功能在于通过每日固定的关键词与读者产生微弱的视觉或心理链接，缺乏具体的文本阐述或逻辑论证，对于需要深度内容的用户来说参考价值较低。",
+  "summary_500": "这是2024年1月13日发布的FBK翻书日签。文章标题明确标注了日期与主题词“存在感”。从结构上看，这并非一篇标准意义上的分析文章，而是一个基于社交媒体传播的视觉/意象载体。由于正文仅显示了图片搜索模式的系统提示，可以推断核心内容（如金句、书摘或视觉艺术）存在于图片中而非文字层。在写作机制上，它采用了极简主义的固定模板。此类内容的写作价值在于：1. 建立了高度标准化的序列识别系统；2. 通过极高抽象水平的关键词（存在感）触发受众的共鸣或反思。然而，作为结构化数据，其文本信息量极低，逻辑链条缺失，证据密度几乎为零。对于追求知识密度和逻辑推演的读者而言，此类内容属于低价值信息。它更适合作为品牌运营中的“触达工具”而非“知识载体”。在RAG（检索增强生成）系统中，此类数据仅能提供日期与关键词的关联，无法支撑复杂的语义检索或人格提炼。"
+}

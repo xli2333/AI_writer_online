@@ -1,0 +1,92 @@
+{
+  "id": "503d5d7466be",
+  "year": "2023",
+  "date": "2023-07-31",
+  "title": "身份与暴力丨FBK翻书日签 2023年7月31日",
+  "relative_path": "2023/2023-07-31_身份与暴力丨FBK翻书日签 2023年7月31日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-07-31_身份与暴力丨FBK翻书日签 2023年7月31日.txt",
+  "char_count": 353,
+  "content_type": "文化日签",
+  "industry": [
+    "出版",
+    "文化传播"
+  ],
+  "topic": [
+    "身份认同",
+    "社会冲突",
+    "人文社科"
+  ],
+  "genre": "日签",
+  "style": [
+    "极简",
+    "碎片化"
+  ],
+  "audience": [
+    "读书人",
+    "人文爱好者"
+  ],
+  "intent": [
+    "品牌留存",
+    "内容引流"
+  ],
+  "tone": [
+    "严肃",
+    "学术"
+  ],
+  "primary_question": "身份认同与暴力冲突之间存在怎样的关联？",
+  "thesis_type": "概念解构",
+  "thesis_sentence": "由于正文内容缺失，仅能通过标题判定其探讨核心为身份认同的单一化如何导致暴力。",
+  "structure_pattern": "固定模板式",
+  "section_functions": [
+    "标题标引主题",
+    "日期标注时效",
+    "图片/链接提供入口"
+  ],
+  "argument_moves": [
+    "主题公示",
+    "来源指向"
+  ],
+  "core_argument": "通过每日分享经典著作（推测为阿马蒂亚·森的《身份与暴力》）的片段，启发读者对社会冲突根源的思考。",
+  "key_points": [
+    "身份认同的多重性",
+    "单一身份认同的危险性",
+    "暴力与仇恨的根源"
+  ],
+  "opening_pattern": "标题直入",
+  "ending_pattern": "固定后缀",
+  "evidence_types": [
+    "书籍引用"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 5,
+  "quote_density_score": 80,
+  "narrative_distance": "中立观察",
+  "stance_strength": "中立",
+  "sentence_rhythm": "无明显节奏（仅标题）",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "采用固定日签模式进行品牌长效曝光",
+    "利用经典著作标题作为社交分享的切入点"
+  ],
+  "anti_patterns": [
+    "内容极度空洞，缺乏正文展开",
+    "仅有标题和元数据，不具备深度阅读价值"
+  ],
+  "notable_phrases": [
+    "身份与暴力"
+  ],
+  "title_score": 40,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 5,
+  "structure_score": 20,
+  "style_score": 20,
+  "publishability_score": 15,
+  "quality_score": 10,
+  "reference_value_score": 10,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该内容为2023年7月31日的FBK翻书日签，标题为《身份与暴力》。文章实际上仅包含元数据、链接及一张缺失的图片说明，缺乏具体的正文论述。其核心价值在于作为品牌每日留存的标记，指向了阿马蒂亚·森关于身份认同与冲突的社会科学议题，但在当前文本形态下信息密度极低，不具备深度分析或写作参考价值。",
+  "summary_500": "该内容是“FBK翻书”系列下的每日日签推送。从标题《身份与暴力》可以推断其试图推介诺贝尔经济学奖得主阿马蒂亚·森的同名著作。然而，所提供的文本仅包含标题、日期、来源链接以及系统抓取图片的说明，完全缺失了书籍摘录、评述或导读等实质性内容。作为结构化分析对象，其实质是一则低信息量的活动通知或社交媒体占位符。在写作机制上，它采用了典型的碎片化内容模板，旨在通过高频率的简单更新维持品牌曝光，但对于追求深度阅读和知识获取的用户而言，该文本本身不具备论证逻辑、证据支撑或修辞美感。此类内容在RAG（检索增强生成）系统中通常应被归类为低价值数据，仅能作为追踪特定品牌活动轨迹的索引，而无法提供可迁移的写作技巧或核心观点输出。"
+}

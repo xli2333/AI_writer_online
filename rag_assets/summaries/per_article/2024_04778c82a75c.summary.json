@@ -1,0 +1,91 @@
+{
+  "id": "04778c82a75c",
+  "year": "2024",
+  "date": "2024-04-13",
+  "title": "裸城丨FBK翻书日签 2024年4月13日",
+  "relative_path": "2024/2024-04-13_裸城丨FBK翻书日签 2024年4月13日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2024\\2024-04-13_裸城丨FBK翻书日签 2024年4月13日.txt",
+  "char_count": 350,
+  "content_type": "日签",
+  "industry": [
+    "文化传播",
+    "阅读出版"
+  ],
+  "topic": [
+    "碎片化阅读",
+    "品牌仪式感"
+  ],
+  "genre": "社交媒体快讯",
+  "style": [
+    "极简",
+    "视觉驱动"
+  ],
+  "audience": [
+    "书友群",
+    "碎片化内容消费者"
+  ],
+  "intent": [
+    "品牌日更",
+    "用户留存"
+  ],
+  "tone": [
+    "平实",
+    "文艺"
+  ],
+  "primary_question": "2024年4月13日的日签内容是什么？",
+  "thesis_type": "无",
+  "thesis_sentence": "该内容为品牌每日固定的视觉签到形式，无特定论点。",
+  "structure_pattern": "固定模板式",
+  "section_functions": [
+    "标题识别",
+    "日期标注",
+    "视觉呈现"
+  ],
+  "argument_moves": [
+    "建立习惯性关注"
+  ],
+  "core_argument": "无核心论点",
+  "key_points": [
+    "发布日期：2024年4月13日",
+    "发布主体：FBK翻书",
+    "形式：日签图片"
+  ],
+  "opening_pattern": "直述标题",
+  "ending_pattern": "视觉收尾",
+  "evidence_types": [
+    "视觉图像"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 10,
+  "narrative_distance": "中立",
+  "stance_strength": "中立",
+  "sentence_rhythm": "停顿多",
+  "abstraction_level": "中等",
+  "transferable_moves": [
+    "利用固定栏目名称建立品牌辨识度",
+    "高频次、轻量化的内容运营策略"
+  ],
+  "anti_patterns": [
+    "信息密度极低",
+    "缺乏实质性文字探讨",
+    "过度依赖外部图片资源"
+  ],
+  "notable_phrases": [
+    "FBK翻书日签"
+  ],
+  "title_score": 40,
+  "opening_score": 30,
+  "argument_score": 10,
+  "evidence_score": 10,
+  "structure_score": 50,
+  "style_score": 40,
+  "publishability_score": 30,
+  "quality_score": 20,
+  "reference_value_score": 15,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该内容为2024年4月13日的‘FBK翻书日签’，属于社交媒体上的高频轻量化内容。其特点是结构极简，仅包含日期与单张图片，无深度文字论证或实质性商业见解。此类内容的核心价值在于通过每日打卡式的更新，维持读者的心智占领与品牌熟悉度，而非提供深度的知识增量或分析结论。",
+  "summary_500": "本文是‘FBK翻书’品牌在2024年4月13日发布的日签内容。从写作分析角度看，该内容表现出极低的信息密度，其结构完全基于品牌预设的日更模板。由于原文正文部分主要由一张图片构成（触发了全局图片搜索模式），缺乏可供深度检索和逻辑还原的文字链条。在机制层面，它通过‘日签’这一固定栏目建立了一种阅读仪式感，属于典型的低互动、高频次的品牌留存策略。对于商业分析师或内容创作者而言，此类内容的参考价值在于其运营节奏的稳定性，但在写作机制、论证逻辑和知识深度方面不具备学习和迁移价值。建议在内容收录时标记为‘极低价值信息’，主要作为品牌活跃度的观测点，而非RAG写作或人格提炼的素材。"
+}

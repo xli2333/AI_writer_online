@@ -1,0 +1,82 @@
+{
+  "id": "a0e98b5d70d1",
+  "year": "2023",
+  "date": "2023-02-02",
+  "title": "FBK翻书日签丨2023年2月2日",
+  "relative_path": "2023/2023-02-02_FBK翻书日签丨2023年2月2日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-02-02_FBK翻书日签丨2023年2月2日.txt",
+  "char_count": 346,
+  "content_type": "日签",
+  "industry": [
+    "出版",
+    "文化传播"
+  ],
+  "topic": [
+    "每日金句",
+    "品牌运营"
+  ],
+  "genre": "简讯",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "书友",
+    "大众读者"
+  ],
+  "intent": [
+    "品牌维系",
+    "用户活跃"
+  ],
+  "tone": [
+    "平淡"
+  ],
+  "primary_question": "如何通过每日打卡维持品牌存在感？",
+  "thesis_type": "非论证性内容",
+  "thesis_sentence": "本文仅为2023年2月2日的日期记录与品牌占位。",
+  "structure_pattern": "固定模板结构",
+  "section_functions": [
+    "日期标识",
+    "品牌标识"
+  ],
+  "argument_moves": [
+    "无实质论证过程"
+  ],
+  "core_argument": "无",
+  "key_points": [
+    "2023年2月2日的FBK翻书日签"
+  ],
+  "opening_pattern": "标题式开头",
+  "ending_pattern": "无",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "中立",
+  "stance_strength": "弱",
+  "sentence_rhythm": "极短",
+  "abstraction_level": "低",
+  "transferable_moves": [
+    "通过固定频率的内容模版维持用户心智"
+  ],
+  "anti_patterns": [
+    "内容过度稀疏导致缺乏实质阅读价值",
+    "缺乏核心知识点或见解"
+  ],
+  "notable_phrases": [],
+  "title_score": 20,
+  "opening_score": 10,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 10,
+  "style_score": 10,
+  "publishability_score": 10,
+  "quality_score": 5,
+  "reference_value_score": 5,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该内容为2023年2月2日的“FBK翻书日签”，属于高频次、低信息量的品牌维护内容。正文仅包含日期与标题，其主要功能是作为社交媒体的每日打卡或用户唤醒。由于文字内容缺失，无法提供实质性的知识或洞察，主要价值在于展示了一种标准化、模板化的社交媒体运营策略，即利用固定格式的内容进行低成本的日常更新。",
+  "summary_500": "该文本为FBK（翻书）品牌在2023年2月2日发布的日签简报。在结构上，它采用了极简的模板化形式，仅保留了标题和日期，没有实质性的正文论述。在写作机制方面，该文章不存在论点、论证或证据链，属于典型的低密度占位内容。此类内容在商业运营中的意图在于通过高频次（每日）的触达来维持用户心智，确保品牌在受众视线中的存在感。对于内容分析师或创作者而言，该文章的参考价值极低，除了作为一种‘极简运营模式’的案例外，不具备RAG写作或人格提炼的素材价值。在评分上，由于其内容几乎完全缺失，各项指标（如论证得分、证据得分、质量得分）均被设定为极低值。此类文章在内容库中应被标记为‘低价值’，以避免干扰更高质量内容的检索和推荐。"
+}

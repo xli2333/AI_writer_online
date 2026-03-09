@@ -1,0 +1,91 @@
+{
+  "id": "a4f7f60f3355",
+  "year": "2023",
+  "date": "2023-05-21",
+  "title": "理解大众文化丨FBK翻书日签 2023年5月21日",
+  "relative_path": "2023/2023-05-21_理解大众文化丨FBK翻书日签 2023年5月21日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-05-21_理解大众文化丨FBK翻书日签 2023年5月21日.txt",
+  "char_count": 354,
+  "content_type": "日签",
+  "industry": [
+    "文化",
+    "出版"
+  ],
+  "topic": [
+    "大众文化",
+    "读书笔记"
+  ],
+  "genre": "信息通告",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "读书人",
+    "品牌订阅者"
+  ],
+  "intent": [
+    "品牌传播",
+    "内容存档"
+  ],
+  "tone": [
+    "客观"
+  ],
+  "primary_question": "2023年5月21日的FBK翻书内容是什么？",
+  "thesis_type": "信息检索",
+  "thesis_sentence": "本文仅提供FBK翻书日签的标题与链接元数据，不包含实质性正文。",
+  "structure_pattern": "固定模板式",
+  "section_functions": [
+    "标识标题",
+    "标识日期",
+    "记录原始链接",
+    "技术备注"
+  ],
+  "argument_moves": [
+    "展示标题",
+    "提供回溯路径"
+  ],
+  "core_argument": "无",
+  "key_points": [
+    "主题为理解大众文化",
+    "来源为FBK翻书日签",
+    "包含单张图片检索信息"
+  ],
+  "opening_pattern": "直陈标题",
+  "ending_pattern": "技术说明",
+  "evidence_types": [
+    "元数据"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "中立观察",
+  "stance_strength": "中立",
+  "sentence_rhythm": "极简短促",
+  "abstraction_level": "具象",
+  "transferable_moves": [
+    "利用标题+日期的格式化方式进行每日内容留存",
+    "建立标准化的索引模板以便后续回溯"
+  ],
+  "anti_patterns": [
+    "正文缺失导致的价值真空",
+    "缺乏内容导读的纯外部链接展示"
+  ],
+  "notable_phrases": [
+    "理解大众文化",
+    "FBK翻书日签"
+  ],
+  "title_score": 40,
+  "opening_score": 20,
+  "argument_score": 0,
+  "evidence_score": 10,
+  "structure_score": 30,
+  "style_score": 20,
+  "publishability_score": 10,
+  "quality_score": 15,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该文本是2023年5月21日‘FBK翻书日签’的微信元数据记录，主题涉及‘理解大众文化’。内容仅由标题、日期、原始链接及简单的图片搜索说明组成，缺乏实质性的论述、书摘或评论。因其仅作为信息索引存在，不具备独立的文章结构或知识产出，属于极低信息密度的内容存根。",
+  "summary_500": "该内容为一份典型的社交媒体元数据存档，标题为《理解大众文化丨FBK翻书日签 2023年5月21日》。从文本结构来看，它并未包含实际的写作机制或论证逻辑，仅罗列了发布时间、推文链接以及系统处理日志。由于缺乏实质性的正文（如书评、摘录或解析），无法从中提取写作技巧或思想观点。该文本的主要价值在于其索引属性，记录了特定日期下‘FBK翻书’这一品牌的活动动向，但对于需要获取实质性知识的用户而言，该条目信息量严重不足。在商业分析维度下，这种日签模式反映了内容平台通过每日极简内容输出维持品牌露出的策略，但在缺乏二级分析的情况下，无法作为有效的RAG语料或写作参考。整体评分极低，属于典型的‘低价值、非成文’信息记录。"
+}

@@ -1,0 +1,88 @@
+{
+  "id": "2bc84e149a9b",
+  "year": "2023",
+  "date": "2023-04-21",
+  "title": "新新闻 小叙事丨FBK翻书日签 2023年4月21日",
+  "relative_path": "2023/2023-04-21_新新闻 小叙事丨FBK翻书日签 2023年4月21日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-04-21_新新闻 小叙事丨FBK翻书日签 2023年4月21日.txt",
+  "char_count": 355,
+  "content_type": "每日日签",
+  "industry": [
+    "文化",
+    "传媒"
+  ],
+  "topic": [
+    "品牌仪式",
+    "碎片化内容"
+  ],
+  "genre": "简讯",
+  "style": [
+    "极简主义"
+  ],
+  "audience": [
+    "社群粉丝"
+  ],
+  "intent": [
+    "品牌留存",
+    "日常活跃"
+  ],
+  "tone": [
+    "中立"
+  ],
+  "primary_question": "该品牌今日的更新主题是什么？",
+  "thesis_type": "无论点",
+  "thesis_sentence": "无具体核心论点，仅为品牌日常更新的仪式性展示。",
+  "structure_pattern": "固定模板结构",
+  "section_functions": [
+    "标题标识",
+    "日期标注",
+    "来源链接声明"
+  ],
+  "argument_moves": [
+    "无论证动作"
+  ],
+  "core_argument": "无实质性论证内容，仅作为品牌日常打卡记录。",
+  "key_points": [
+    "发布日期：2023年4月21日",
+    "品牌理念关键词：新新闻、小叙事"
+  ],
+  "opening_pattern": "标准化标题",
+  "ending_pattern": "链接占位",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 5,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "中观",
+  "stance_strength": "中立",
+  "sentence_rhythm": "停顿简促",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "利用固定周期（日签）进行品牌心智占领",
+    "标准化标题格式以便于用户快速识别"
+  ],
+  "anti_patterns": [
+    "极度缺乏实质性内容",
+    "无任何可检索的知识信息",
+    "过度依赖外部链接"
+  ],
+  "notable_phrases": [
+    "新新闻",
+    "小叙事"
+  ],
+  "title_score": 30,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 5,
+  "structure_score": 20,
+  "style_score": 20,
+  "publishability_score": 10,
+  "quality_score": 10,
+  "reference_value_score": 5,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该内容为‘FBK翻书’公众号在2023年4月21日发布的每日日签。文章除标题、日期及一个无法直接访问的微信历史链接外，没有任何实质性的文字叙述、案例或观点。这类内容属于低价值、纯占位性质的运营记录，主要功能是维持账号在用户订阅列表中的日常活跃度，不具备可供研究或引用的知识价值。",
+  "summary_500": "本篇结构化分析针对的是一份名为‘FBK翻书日签’的极简信息。该内容于2023年4月21日发布，标题标注为‘新新闻 小叙事’，这可能是该品牌的长期核心理念，但在本篇具体发布内容中并无任何展开论述。文章的正文部分极度匮乏，仅包含了元数据信息如标题、日期、原始链接及一张缺失的图片提示。从写作机制来看，它完全缺失了 primary question、论点、论据及论证结构，属于典型的‘仪式感更新’而非‘知识产出’。在商业分析维度，这种低密度的内容对于 RAG（检索增强生成）系统而言属于噪音，无法提供任何可供提炼的见解。其唯一的参考意义在于品牌运营层面如何利用‘日签’这一轻量化形式进行用户留存。分项评分显示，其在内容质量、论证力度和参考价值方面均处于极低水平（5-10分），被标记为低价值信息。"
+}

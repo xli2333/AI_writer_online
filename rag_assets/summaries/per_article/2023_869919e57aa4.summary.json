@@ -1,0 +1,88 @@
+{
+  "id": "869919e57aa4",
+  "year": "2023",
+  "date": "2023-03-16",
+  "title": "富人的特权与不安丨FBK翻书日签 2023年3月16日",
+  "relative_path": "2023/2023-03-16_富人的特权与不安丨FBK翻书日签 2023年3月16日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-03-16_富人的特权与不安丨FBK翻书日签 2023年3月16日.txt",
+  "char_count": 356,
+  "content_type": "读书日签",
+  "industry": [
+    "文化传播",
+    "出版"
+  ],
+  "topic": [
+    "社会学",
+    "财富心理"
+  ],
+  "genre": "摘录",
+  "style": [
+    "碎片化",
+    "精简"
+  ],
+  "audience": [
+    "大众读者",
+    "碎片化阅读者"
+  ],
+  "intent": [
+    "品牌曝光",
+    "每日留存"
+  ],
+  "tone": [
+    "严肃",
+    "哲理"
+  ],
+  "primary_question": "富人在享有社会特权的同时伴随着怎样的心理状态？",
+  "thesis_type": "描述型",
+  "thesis_sentence": "通过日签形式揭示富裕阶层特权背后的不安感。",
+  "structure_pattern": "单点式",
+  "section_functions": [
+    "标题引入内容主题"
+  ],
+  "argument_moves": [
+    "提出核心概念"
+  ],
+  "core_argument": "富人的生活并非完全被特权填充，其内心同样存在某种形式的不安。",
+  "key_points": [
+    "富人的特权现象",
+    "富人的不安情绪"
+  ],
+  "opening_pattern": "直奔主题",
+  "ending_pattern": "无",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 5,
+  "data_density_score": 5,
+  "case_density_score": 5,
+  "quote_density_score": 0,
+  "narrative_distance": "第三人称视角",
+  "stance_strength": "中立",
+  "sentence_rhythm": "短句为主",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "利用‘日签’形式进行每日轻量化内容输出",
+    "通过强反差标题（特权vs不安）吸引关注"
+  ],
+  "anti_patterns": [
+    "内容极端缺失",
+    "缺乏实质性论据支撑",
+    "过度依赖图片导致文本信息密度极低"
+  ],
+  "notable_phrases": [
+    "富人的特权与不安"
+  ],
+  "title_score": 65,
+  "opening_score": 20,
+  "argument_score": 10,
+  "evidence_score": 5,
+  "structure_score": 10,
+  "style_score": 30,
+  "publishability_score": 15,
+  "quality_score": 10,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为FBK翻书日签的每日更新记录，仅包含标题‘富人的特权与不安’及相关元数据，正文核心内容缺失（可能承载于图片中）。其价值主要在于标题呈现的社会学视角冲突，即财富特权与心理焦虑的共存，但由于文本信息量极度匮乏，不具备深度的写作参考或逻辑分析价值。",
+  "summary_500": "本篇内容为2023年3月16日的FBK翻书日签，属于典型的社交媒体轻量化品牌内容。文章主体结构不完整，仅保留了标题信息、日期及来源链接，实际正文内容疑为单张图片。从标题‘富人的特权与不安’可以推断，其意图是通过简短且具有冲击力的观点摘录，引发读者对阶层、财富与幸福感等社会学议题的瞬间思考。然而，从结构化分析的角度看，该条目由于缺乏具体文本、论证过程及背景案例，属于典型的信息低密度内容。其核心论点仅停留在概念层面，无法为RAG系统提供有效的知识挖掘点，亦无法为写作提供结构性参考。这类内容在商业传播中主要起到维持用户粘性和品牌日常提醒的作用，而非进行深度知识交付。"
+}

@@ -1,0 +1,82 @@
+{
+  "id": "758248fc14c1",
+  "year": "2023",
+  "date": "2023-03-20",
+  "title": "媒体文化之弊丨FBK翻书日签 2023年3月20日",
+  "relative_path": "2023/2023-03-20_媒体文化之弊丨FBK翻书日签 2023年3月20日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-03-20_媒体文化之弊丨FBK翻书日签 2023年3月20日.txt",
+  "char_count": 354,
+  "content_type": "日签",
+  "industry": [
+    "文化",
+    "传媒"
+  ],
+  "topic": [
+    "媒体文化"
+  ],
+  "genre": "文摘",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "品牌关注者"
+  ],
+  "intent": [
+    "日常触达",
+    "品牌存续"
+  ],
+  "tone": [
+    "中立"
+  ],
+  "primary_question": "媒体文化存在哪些弊端？",
+  "thesis_type": "说明型",
+  "thesis_sentence": "原文无正文论述，仅通过标题揭示主题为对媒体文化弊端的关注。",
+  "structure_pattern": "碎片化结构",
+  "section_functions": [
+    "标题指引主题",
+    "日期标记"
+  ],
+  "argument_moves": [
+    "无明确论证逻辑"
+  ],
+  "core_argument": "无实质论点展开",
+  "key_points": [
+    "无"
+  ],
+  "opening_pattern": "直陈式",
+  "ending_pattern": "链接占位",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 0,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "第三方观察",
+  "stance_strength": "弱",
+  "sentence_rhythm": "无",
+  "abstraction_level": "极高",
+  "transferable_moves": [
+    "利用日签形式进行每日品牌更新"
+  ],
+  "anti_patterns": [
+    "内容极度缺失导致无法形成有效阅读",
+    "仅有标题而无实质内容引导"
+  ],
+  "notable_phrases": [
+    "媒体文化之弊"
+  ],
+  "title_score": 30,
+  "opening_score": 5,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 10,
+  "style_score": 10,
+  "publishability_score": 10,
+  "quality_score": 5,
+  "reference_value_score": 5,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该内容为FBK翻书日的每日日签性质推文。标题虽然提出了‘媒体文化之弊’这一具有探讨价值的主题，但正文部分除了基本的元数据（日期、链接、来源）外，缺乏具体的论述、引文或观点分析。此类内容主要用于品牌日常打卡，而非深度知识传播。",
+  "summary_500": "本篇内容属于公众号‘日签’类短文，其结构极简，仅由标题、日期及链接组成。标题‘媒体文化之弊’暗示了其原本可能包含针对当代传媒环境的批判性观点，但实际抓取的内容中并未发现具体的正文文本。由于信息量极度匮乏，该篇目在写作机制、逻辑推导及证据支撑方面均无分析空间。其价值仅在于作为品牌每日触达用户的记录，不具备作为深度分析或RAG写作素材的参考意义。判定为极低价值的通知性内容。"
+}

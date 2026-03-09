@@ -1,0 +1,82 @@
+{
+  "id": "74de15cce9da",
+  "year": "2023",
+  "date": "2023-10-03",
+  "title": "故事效能丨FBK翻书日签 2023年10月3日",
+  "relative_path": "2023/2023-10-03_故事效能丨FBK翻书日签 2023年10月3日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-10-03_故事效能丨FBK翻书日签 2023年10月3日.txt",
+  "char_count": 352,
+  "content_type": "日签",
+  "industry": [
+    "内容创作",
+    "媒体"
+  ],
+  "topic": [
+    "日常互动",
+    "品牌留存"
+  ],
+  "genre": "短内容",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "私域流量",
+    "公众号订阅者"
+  ],
+  "intent": [
+    "日常维护",
+    "品牌触达"
+  ],
+  "tone": [
+    "中立"
+  ],
+  "primary_question": "2023年10月3日的日签内容是什么？",
+  "thesis_type": "事实陈述型",
+  "thesis_sentence": "本文仅作为一个日期标识和视觉符号展示的占位符。",
+  "structure_pattern": "标题式结构",
+  "section_functions": [
+    "标识日期与品牌归属",
+    "展示视觉元素"
+  ],
+  "argument_moves": [],
+  "core_argument": "无明确核心论点，仅为日常打卡性质。",
+  "key_points": [
+    "日期为2023年10月3日",
+    "品牌来源于故事效能FBK"
+  ],
+  "opening_pattern": "直陈式标题",
+  "ending_pattern": "无结尾",
+  "evidence_types": [
+    "视觉符号"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "旁观者",
+  "stance_strength": "中立",
+  "sentence_rhythm": "无句式节奏可言",
+  "abstraction_level": "具象",
+  "transferable_moves": [
+    "建立固定频次的品牌日签机制"
+  ],
+  "anti_patterns": [
+    "正文内容缺失",
+    "信息密度极低",
+    "缺乏可读性文字"
+  ],
+  "notable_phrases": [],
+  "title_score": 30,
+  "opening_score": 10,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 10,
+  "style_score": 10,
+  "publishability_score": 20,
+  "quality_score": 5,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为“故事效能”公众号发布的2023年10月3日“翻书日签”。文中除了标题及日期标识外，正文部分完全缺失文字叙述，仅包含一张图片的占位符，属于极低信息密度的日常品牌留存动作。",
+  "summary_500": "该文章是“故事效能丨FBK翻书日签”系列的每日更新内容。从结构上看，它仅包含一个标准化的标题（包含品牌名、日期信息），正文部分没有任何实质性的文字展开、案例分析或观点表达。这类内容在社交媒体运营中通常作为日常打卡、维持账号活跃度及私域流量留存的一种视觉符号存在。由于缺乏文本逻辑、论据支撑和深层意图，在知识检索、RAG（检索增强生成）或写作模型训练中不具备参考价值。对于内容分析师而言，这被归类为极低价值的占位符式发布，仅能体现出品牌发布频率的规律性。"
+}

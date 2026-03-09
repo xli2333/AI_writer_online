@@ -1,0 +1,87 @@
+{
+  "id": "950ab4d90d0d",
+  "year": "2023",
+  "date": "2023-12-20",
+  "title": "心智社会丨FBK翻书日签 2023年12月20日",
+  "relative_path": "2023/2023-12-20_心智社会丨FBK翻书日签 2023年12月20日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-12-20_心智社会丨FBK翻书日签 2023年12月20日.txt",
+  "char_count": 353,
+  "content_type": "短内容",
+  "industry": [
+    "知识管理",
+    "品牌运营"
+  ],
+  "topic": [
+    "每日金句",
+    "心智社会"
+  ],
+  "genre": "日签",
+  "style": [
+    "极简主义"
+  ],
+  "audience": [
+    "终身学习者",
+    "品牌订阅用户"
+  ],
+  "intent": [
+    "品牌留存",
+    "习惯养成"
+  ],
+  "tone": [
+    "仪式感"
+  ],
+  "primary_question": "今日份的心智启发是什么？",
+  "thesis_type": "归纳型",
+  "thesis_sentence": "暂无文本内容（核心内容承载于图片中）",
+  "structure_pattern": "固定模板化结构",
+  "section_functions": [
+    "品牌标识与栏目定位",
+    "日期索引",
+    "视觉化金句展示"
+  ],
+  "argument_moves": [
+    "无文本论证逻辑"
+  ],
+  "core_argument": "无实质文本论点",
+  "key_points": [
+    "每日更新的启发性金句分享"
+  ],
+  "opening_pattern": "标准化命名（品牌+栏目名+日期）",
+  "ending_pattern": "无",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "零距离",
+  "stance_strength": "中等",
+  "sentence_rhythm": "无",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "建立具有仪式感的固定日期索引栏目",
+    "利用日签形式降低读者的认知负荷"
+  ],
+  "anti_patterns": [
+    "核心信息缺失文本描述导致SEO无法收录",
+    "过度依赖图片导致信息密度极低"
+  ],
+  "notable_phrases": [
+    "心智社会",
+    "FBK翻书日签"
+  ],
+  "title_score": 40,
+  "opening_score": 20,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 30,
+  "style_score": 30,
+  "publishability_score": 20,
+  "quality_score": 10,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为“心智社会”公众号发布的每日固定栏目“FBK翻书日签”。正文极其简短，仅包含品牌栏目名称、日期及一张未提取文字的图片，缺乏实质性的文本叙述。此类内容通常作为社群打卡、每日触达或品牌形象展示之用，不具备深度阅读、逻辑论证或知识传播的写作价值，属于极低信息密度的品牌运营物料。",
+  "summary_500": "本篇内容是“心智社会”于2023年12月20日发布的“FBK翻书日签”。从结构上分析，该文章完全采用模板化命名方式，由“品牌名+栏目名+具体日期”组成，主要功能是作为每日启发内容的索引或存档。由于正文部分仅有元数据和图片触发提示，没有任何文字层面的论点陈述、论据支撑或逻辑推演，因此无法进行常规的写作机制分析。此类内容的商业价值在于其长期坚持的“仪式感”和品牌触达策略，通过每日更新一张具有哲学或心理学启发的图片金句，培养用户的阅读习惯。然而，从内容创作者和RAG语料库的角度来看，该样本存在严重的“信息黑洞”问题：核心知识点高度依赖视觉图像而非文本，导致其在检索、知识关联及深度学习方面的参考价值极低。对于需要进行文案提炼、策略分析或人格化写作的用户而言，本内容属于典型的低价值数据，仅能作为日签类产品运营模板的参考。"
+}

@@ -1,0 +1,87 @@
+{
+  "id": "55bb717b28a3",
+  "year": "2023",
+  "date": "2023-07-02",
+  "title": "发明人类丨FBK翻书日签 2023年7月3日",
+  "relative_path": "2023/2023-07-02_发明人类丨FBK翻书日签 2023年7月3日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-07-02_发明人类丨FBK翻书日签 2023年7月3日.txt",
+  "char_count": 351,
+  "content_type": "日签",
+  "industry": [
+    "文化出版",
+    "自媒体"
+  ],
+  "topic": [
+    "每日日签",
+    "碎片化阅读"
+  ],
+  "genre": "活动通知",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "私域粉丝",
+    "日常打卡用户"
+  ],
+  "intent": [
+    "品牌曝光",
+    "日常维护"
+  ],
+  "tone": [
+    "中性"
+  ],
+  "primary_question": "2023年7月3日的翻书日签内容是什么？",
+  "thesis_type": "无论点",
+  "thesis_sentence": "无明确核心论点句",
+  "structure_pattern": "固定模板化",
+  "section_functions": [
+    "展示日期与品牌标识",
+    "链接外部资源",
+    "触发图片展示逻辑"
+  ],
+  "argument_moves": [
+    "无"
+  ],
+  "core_argument": "该文本不包含逻辑论证，仅为日常打卡海报的索引记录。",
+  "key_points": [
+    "2023年7月3日翻书日签",
+    "关联图片搜索模式"
+  ],
+  "opening_pattern": "直接陈述标题",
+  "ending_pattern": "元数据信息",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "非叙事",
+  "stance_strength": "中立",
+  "sentence_rhythm": "停顿频繁",
+  "abstraction_level": "具象",
+  "transferable_moves": [
+    "利用固定前缀建立系列品牌心智"
+  ],
+  "anti_patterns": [
+    "正文缺失有效信息",
+    "过度依赖外部链接"
+  ],
+  "notable_phrases": [
+    "发明人类",
+    "翻书日签"
+  ],
+  "title_score": 40,
+  "opening_score": 10,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 10,
+  "style_score": 20,
+  "publishability_score": 5,
+  "quality_score": 8,
+  "reference_value_score": 5,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该内容为“FBK翻书日签”的每日推送记录，日期为2023年7月3日。文本仅包含标题、日期和图片抓取说明，缺乏任何实质性的文字论述、知识分享或观点表达。其功能仅限于品牌在社交媒体或私域流量池的日常露面，对写作分析和知识提取不具备参考价值。",
+  "summary_500": "该文章属于极低信息密度的日常动态发布。标题采用了统一的系列化命名方式“发明人类丨FBK翻书日签”，便于用户识别品牌。正文部分完全缺失，仅记录了日期和链接元数据，并标注了触发全局图片搜索模式的结果。在文本写作机制层面，该案例表现出“零论证、零证据、零叙事”的特征。此类内容在商业运作中仅作为视觉海报的载体存在，文字本身不具备传播价值或思想深度，无法用于RAG写作素材或人格特质提炼。属于典型的纯通知类、无成文价值的社交媒体碎片。"
+}

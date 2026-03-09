@@ -1,0 +1,90 @@
+{
+  "id": "83c86789bd41",
+  "year": "2023",
+  "date": "2023-10-29",
+  "title": "自我管理 彼得·德鲁克丨FBK翻书日签 2023年10月29日",
+  "relative_path": "2023/2023-10-29_自我管理 彼得·德鲁克丨FBK翻书日签 2023年10月29日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-10-29_自我管理 彼得·德鲁克丨FBK翻书日签 2023年10月29日.txt",
+  "char_count": 360,
+  "content_type": "日签",
+  "industry": [
+    "管理咨询",
+    "知识管理"
+  ],
+  "topic": [
+    "自我管理",
+    "德鲁克"
+  ],
+  "genre": "摘录分享",
+  "style": [
+    "极简",
+    "碎片化"
+  ],
+  "audience": [
+    "职场人士",
+    "终身学习者",
+    "管理者"
+  ],
+  "intent": [
+    "品牌维护",
+    "心智触达"
+  ],
+  "tone": [
+    "严肃",
+    "客观"
+  ],
+  "primary_question": "彼得·德鲁克关于自我管理的核心观点是什么？",
+  "thesis_type": "引用式",
+  "thesis_sentence": "文章作为日签形式，旨在通过德鲁克的观点提示读者进行自我管理。",
+  "structure_pattern": "模板化结构",
+  "section_functions": [
+    "标题展示主题与来源",
+    "日期标注时间属性",
+    "链接/图片承载核心内容"
+  ],
+  "argument_moves": [
+    "名言背书"
+  ],
+  "core_argument": "通过引用经典管理学大师德鲁克的观点，强调个人在现代组织中自我管理的重要性。",
+  "key_points": [
+    "自我管理",
+    "大师观点引用"
+  ],
+  "opening_pattern": "固定模板式（标题+日期）",
+  "ending_pattern": "链接占位",
+  "evidence_types": [
+    "专家证言"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 80,
+  "narrative_distance": "中立观察",
+  "stance_strength": "中等",
+  "sentence_rhythm": "无（仅有标题信息）",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "利用大师语录作为日签素材进行日常用户触达",
+    "建立系列化的命名规范（品牌名+内容名+日期）"
+  ],
+  "anti_patterns": [
+    "内容极度缺失（正文未提取到具体文字）",
+    "过度依赖外部链接或图片，缺乏原生文字价值"
+  ],
+  "notable_phrases": [
+    "FBK翻书日签"
+  ],
+  "title_score": 50,
+  "opening_score": 20,
+  "argument_score": 10,
+  "evidence_score": 10,
+  "structure_score": 30,
+  "style_score": 30,
+  "publishability_score": 20,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为2023年10月29日的‘FBK翻书日签’，主题聚焦于彼得·德鲁克的‘自我管理’。由于正文缺失，仅保留了标题和基本元数据。此类文章属于典型的低信息密度占位符内容，主要用于社群或自媒体的每日打卡和品牌露脸，不具备深度的逻辑论证或叙事结构，对于希望通过文字获取深度商业见解的读者参考价值极低。",
+  "summary_500": "这篇文章是典型的自媒体‘日签’式输出，标题为《自我管理 彼得·德鲁克丨FBK翻书日签 2023年10月29日》。从结构上看，它并非一篇完整的论说文，而是一个基于固定模板的碎片化分享。其核心意图是通过引用管理学之父彼得·德鲁克的经典观点，来提醒受众关注个人效能与自我管理。然而，由于当前提取的文本仅包含标题、日期及失效的搜索提示，缺乏实际的正文引用语录或解读文字，导致信息密度极低。在写作机制上，它采用了‘名言背书’的单一策略，依靠大师的声望吸引注意力。分项评分显示，其在标题规范性上有一定表现，但在论证、证据和写作质量方面均处于极低水平。此类内容的商业价值主要体现在品牌心智的持续触达而非知识深度的传递。对于研究者而言，该样本可作为‘碎片化内容自动化分发’或‘私域流量运营占位符’的案例，但对于内容创作、RAG写作或逻辑学习则没有实质性参考意义。建议在检索和利用时将其标记为低价值/占位内容。"
+}

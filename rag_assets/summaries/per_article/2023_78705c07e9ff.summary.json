@@ -1,0 +1,92 @@
+{
+  "id": "78705c07e9ff",
+  "year": "2023",
+  "date": "2023-06-05",
+  "title": "陌生人效应丨FBK翻书日签 2023年6月5日",
+  "relative_path": "2023/2023-06-05_陌生人效应丨FBK翻书日签 2023年6月5日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-06-05_陌生人效应丨FBK翻书日签 2023年6月5日.txt",
+  "char_count": 352,
+  "content_type": "日签",
+  "industry": [
+    "心理学",
+    "个人成长"
+  ],
+  "topic": [
+    "陌生人效应",
+    "翻书日签"
+  ],
+  "genre": "社交媒体文案",
+  "style": [
+    "极简",
+    "碎片化"
+  ],
+  "audience": [
+    "读书爱好者",
+    "职场人士"
+  ],
+  "intent": [
+    "品牌留存",
+    "日常更新"
+  ],
+  "tone": [
+    "中性"
+  ],
+  "primary_question": "2023年6月5日的翻书日签推荐了什么内容？",
+  "thesis_type": "信息通告型",
+  "thesis_sentence": "通过每日日签形式分享心理学概念“陌生人效应”并引导用户阅读全文。",
+  "structure_pattern": "标题-元数据-外部链接结构",
+  "section_functions": [
+    "标题展示核心主题",
+    "日期标注时效性",
+    "链接引导深度阅读"
+  ],
+  "argument_moves": [
+    "陈述概念名称",
+    "提供跳转入口"
+  ],
+  "core_argument": "无实质论证过程，仅为日常知识点的微量触达。",
+  "key_points": [
+    "核心概念为陌生人效应",
+    "发布日期为2023年6月5日",
+    "内容载体为FBK翻书日签"
+  ],
+  "opening_pattern": "标题直入",
+  "ending_pattern": "链接占位",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "零度叙事",
+  "stance_strength": "中立",
+  "sentence_rhythm": "停顿感强",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "利用‘日签’建立每日与用户的轻量化品牌连接",
+    "将复杂心理学词汇标签化处理"
+  ],
+  "anti_patterns": [
+    "内容过度缺失（正文为空）",
+    "仅提供外部链接导致用户路径断裂",
+    "缺乏对核心概念的基本阐释"
+  ],
+  "notable_phrases": [
+    "陌生人效应",
+    "翻书日签"
+  ],
+  "title_score": 40,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 0,
+  "structure_score": 20,
+  "style_score": 30,
+  "publishability_score": 20,
+  "quality_score": 10,
+  "reference_value_score": 5,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该内容为2023年6月5日的FBK翻书日签，主题聚焦于‘陌生人效应’。文章本身属于极简的导流型文案，不包含任何实质性的知识解读、案例分析或论证逻辑，仅提供了概念名称、日期以及一个微信公众号跳转链接。作为写作参考价值极低，仅能反映品牌进行每日社群/朋友圈触达的日常运营痕迹。",
+  "summary_500": "本篇内容是一篇典型的低信息密度社交媒体日签占位符。其核心目的是通过‘陌生人效应’这一心理学词汇作为钩子，引导读者点击链接阅读深度内容。从结构上看，它仅包含标题、日期和原始链接，缺乏任何形式的文本展开或逻辑推演。在写作机制方面，它属于‘标签化传播’，依靠短促的视觉标题吸引注意力。由于正文内容的严重缺失，它在证据特征、论证逻辑和叙事风格上均无表现。对于内容分析师而言，此类内容被标记为‘低价值/活动通知’，主要用于追踪品牌更新频率而非内容质量。其唯一的动作迁移动作是展示了如何将一个庞大的知识体系（如书籍）拆解为极简的每日签到标签，但由于缺乏对‘陌生人效应’的基本解释，这种迁移的示范性也较弱。整体分项评分极低，不建议作为写作模板或RAG语料库的深度学习素材。"
+}

@@ -1,0 +1,46 @@
+{
+  "name": "writing-workspace-ai",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "vite",
+    "dev:server": "node server/index.mjs",
+    "server:dev": "node server/index.mjs",
+    "build": "vite build",
+    "preview": "vite preview",
+    "rag:import-latepost": "node scripts/rag/import-latepost-corpus.mjs --profile latepost",
+    "rag:prepare": "node scripts/rag/prepare-corpus.mjs",
+    "rag:analyze": "node scripts/rag/analyze-articles.mjs",
+    "rag:skills": "node scripts/rag/build-core-skills.mjs",
+    "rag:persona": "node scripts/rag/build-master-persona.mjs",
+    "rag:rule-cards": "node scripts/rag/build-rule-cards.mjs",
+    "rag:patches": "node scripts/rag/build-persona-patches.mjs",
+    "rag:eval": "node scripts/rag/evaluate-persona.mjs",
+    "rag:apply-patch": "node scripts/rag/apply-persona-patch.mjs",
+    "rag:evolve": "node scripts/rag/run-evolution-cycle.mjs",
+    "rag:task": "node scripts/rag/run-writing-task.mjs",
+    "test:illustrations": "node scripts/test-article-illustrations.mjs"
+  },
+  "dependencies": {
+    "@google/genai": "^1.44.0",
+    "@heroicons/react": "^2.2.0",
+    "html2pdf.js": "^0.14.0",
+    "jspdf": "^4.2.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "sharp": "^0.34.5",
+    "undici": "^7.22.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "autoprefixer": "^10.4.20",
+    "tailwindcss": "^3.4.17",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
+  }
+}

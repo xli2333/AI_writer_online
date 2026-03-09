@@ -1,0 +1,93 @@
+{
+  "id": "cac7dbd929a3",
+  "year": "2023",
+  "date": "2023-09-18",
+  "title": "心灵的整饰：人类情感的商业化丨FBK翻书日签 2023年9月18日",
+  "relative_path": "2023/2023-09-18_心灵的整饰：人类情感的商业化丨FBK翻书日签 2023年9月18日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-09-18_心灵的整饰：人类情感的商业化丨FBK翻书日签 2023年9月18日.txt",
+  "char_count": 362,
+  "content_type": "短讯/日签",
+  "industry": [
+    "出版业",
+    "社会学",
+    "传媒"
+  ],
+  "topic": [
+    "情感商业化",
+    "社会学理论",
+    "情感劳动"
+  ],
+  "genre": "通知/摘要",
+  "style": [
+    "学术化",
+    "极简"
+  ],
+  "audience": [
+    "社会学爱好者",
+    "职场观察者",
+    "深度阅读者"
+  ],
+  "intent": [
+    "内容导流",
+    "品牌传播"
+  ],
+  "tone": [
+    "客观",
+    "严肃"
+  ],
+  "primary_question": "在现代商业逻辑下，人类的情感是如何被整饰并转化为商品的？",
+  "thesis_type": "阐释性",
+  "thesis_sentence": "该日签引出了“心灵的整饰”这一概念，指明人类的情感正在经历商业化的过程。",
+  "structure_pattern": "极简碎片化结构",
+  "section_functions": [
+    "核心主题陈列"
+  ],
+  "argument_moves": [
+    "通过学术名词建立权威感",
+    "以书籍标题概括核心论点"
+  ],
+  "core_argument": "人类的情感不再仅仅是私人的生理反应，在商业社会中已成为一种经过管理和整饰的劳动工具。",
+  "key_points": [
+    "心灵的整饰",
+    "情感的商业化"
+  ],
+  "opening_pattern": "标题直接引入核心主题",
+  "ending_pattern": "无",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "远距离",
+  "stance_strength": "中立",
+  "sentence_rhythm": "短促",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "使用具有张力的学术术语作为标题吸引注意",
+    "结合日期与品牌标志形成连贯的系列内容"
+  ],
+  "anti_patterns": [
+    "内容空洞无实质细节",
+    "缺乏必要的正文支撑论点",
+    "仅作为引流入口而非独立文章"
+  ],
+  "notable_phrases": [
+    "心灵的整饰",
+    "情感的商业化"
+  ],
+  "title_score": 85,
+  "opening_score": 20,
+  "argument_score": 10,
+  "evidence_score": 0,
+  "structure_score": 15,
+  "style_score": 40,
+  "publishability_score": 20,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该内容为《界面新闻·翻书》栏目的每日签到式微型推送，核心信息仅包含标题《心灵的整饰：人类情感的商业化》。其主要价值在于指引读者关注特定的社会学议题，即“情感劳动”与“情感商业化”。由于原文正文内容缺失（仅见标题与元数据），其作为文本分析的样本价值较低，主要起到占位与主题索引的作用。",
+  "summary_500": "此文本是2023年9月18日发布的‘FBK翻书日签’。标题《心灵的整饰：人类情感的商业化》指向了社会学家阿莉·霍克希尔德（Arlie Hochschild）关于‘情感劳动’的经典讨论，探讨了在现代经济中，情感如何像体力一样被管理、整饰并出售。然而，该输入源本质上是一个极简的导流标签或社交媒体分享卡片，缺乏实质性的正文论证、案例支撑或深度解读。从写作角度看，它体现了‘日签型’内容的特点：高抽象度、强品牌辨识度以及极低的单位阅读门槛。虽然标题本身极具冲击力且准确概括了学术核心，但由于内容极其简略且信息密度低下，该文本被判定为低价值分析样本，仅适用于 RAG 系统中的主题分类或书目推荐索引，不具备作为深度写作范式的参考价值。"
+}

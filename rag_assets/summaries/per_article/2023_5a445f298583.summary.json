@@ -1,0 +1,85 @@
+{
+  "id": "5a445f298583",
+  "year": "2023",
+  "date": "2023-02-07",
+  "title": "FBK翻书日签丨2023年2月7日",
+  "relative_path": "2023/2023-02-07_FBK翻书日签丨2023年2月7日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-02-07_FBK翻书日签丨2023年2月7日.txt",
+  "char_count": 346,
+  "content_type": "日签",
+  "industry": [
+    "文化",
+    "传媒"
+  ],
+  "topic": [
+    "阅读打卡",
+    "每日金句"
+  ],
+  "genre": "碎片化动态",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "公众号订阅者"
+  ],
+  "intent": [
+    "品牌留存",
+    "日常维护"
+  ],
+  "tone": [
+    "中立"
+  ],
+  "primary_question": "2023年2月7日的FBK翻书日签是什么内容？",
+  "thesis_type": "无论点",
+  "thesis_sentence": "本文仅作为2023年2月7日FBK翻书日签的发布记录，其核心内容由图片承载。",
+  "structure_pattern": "固定模板式",
+  "section_functions": [
+    "标题识别",
+    "元数据标注",
+    "系统自动提示"
+  ],
+  "argument_moves": [
+    "单纯信息陈述"
+  ],
+  "core_argument": "无",
+  "key_points": [
+    "发布日期为2023年2月7日",
+    "内容以图片形式存在"
+  ],
+  "opening_pattern": "直陈式标题",
+  "ending_pattern": "系统自动提示",
+  "evidence_types": [
+    "图片"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "客观",
+  "stance_strength": "极弱",
+  "sentence_rhythm": "无感",
+  "abstraction_level": "具体",
+  "transferable_moves": [
+    "采用固定前缀+日期的命名规范进行系列化内容管理"
+  ],
+  "anti_patterns": [
+    "内容过度稀疏，缺乏可读文本",
+    "完全依赖外部图片，无文本冗余备份"
+  ],
+  "notable_phrases": [
+    "FBK翻书日签"
+  ],
+  "title_score": 30,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 5,
+  "structure_score": 20,
+  "style_score": 20,
+  "publishability_score": 10,
+  "quality_score": 10,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为2023年2月7日的‘FBK翻书日签’。全文仅包含标题、日期和抓取到的系统提示，实质性文字内容缺失，其核心信息（如书籍推荐或名言）推测在随附的图片中。作为文本资料，其信息密度极低，主要功能是作为每日规律性的品牌展示，不具备深入的分析或参考价值。",
+  "summary_500": "本文是‘FBK翻书’公众号于2023年2月7日发布的日签记录。从提供的文本来看，该文属于高度模板化的日常动态，其结构仅由标题和日期组成，正文部分主要由系统生成的图片搜索模式提示占位。此类内容通常用于社交媒体的日常打卡和品牌露面，核心价值在于图片中所包含的视觉信息（如书籍插图、名言警句等），而在文本层面几乎没有论点、论据或写作逻辑可言。在商业内容分析中，此类数据被归类为低信息密度素材，对于检索增强生成（RAG）或人格分析几乎没有贡献。其标题评分较低，仅起到了索引作用；开篇、论证及证据评分均处于极低水平，反映了其作为单纯‘通知/展示’类内容的性质。对于希望学习写作机制或获取深度洞察的用户而言，该文章不具备学习价值，应作为低价值数据过滤。"
+}

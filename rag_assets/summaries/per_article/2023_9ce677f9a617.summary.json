@@ -1,0 +1,98 @@
+{
+  "id": "9ce677f9a617",
+  "year": "2023",
+  "date": "2023-02-09",
+  "title": "​FBK翻书日签，但是ChatGPT推荐",
+  "relative_path": "2023/2023-02-09_​FBK翻书日签，但是ChatGPT推荐.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-02-09_​FBK翻书日签，但是ChatGPT推荐.txt",
+  "char_count": 509,
+  "content_type": "社交媒体推文",
+  "industry": [
+    "人工智能",
+    "文化传媒"
+  ],
+  "topic": [
+    "ChatGPT",
+    "人工智能幻觉",
+    "书籍推荐"
+  ],
+  "genre": "随笔",
+  "style": [
+    "亲和",
+    "口语化",
+    "互动性"
+  ],
+  "audience": [
+    "普通大众",
+    "读书爱好者",
+    "AI初学者"
+  ],
+  "intent": [
+    "趣味分享",
+    "互动交流"
+  ],
+  "tone": [
+    "轻松",
+    "调侃"
+  ],
+  "primary_question": "ChatGPT在中文书籍推荐方面的准确性如何？",
+  "thesis_type": "现象描述型",
+  "thesis_sentence": "ChatGPT在书籍推荐中存在严重的幻觉现象，除了少数经典外，会大量编造不存在的中文书名。",
+  "structure_pattern": "起因-转折-互动",
+  "section_functions": [
+    "背景引入：说明产生利用AI辅助工作的念头",
+    "发现揭秘：指出AI推荐书单的虚假性",
+    "常规业务展示：发布真实的日签图片",
+    "互动引导：征集读者的AI使用反馈"
+  ],
+  "argument_moves": [
+    "描述尝试使用新技术的初衷",
+    "通过查证揭示AI推荐的幻觉真相",
+    "利用反差效果制造互动话题"
+  ],
+  "core_argument": "虽然ChatGPT看起来能提供专业的文化内容建议，但在中文特定知识领域存在严重的事实性差错（幻觉）。",
+  "key_points": [
+    "尝试用ChatGPT辅助日常内容创作",
+    "AI给出的书单中只有《论语》是真实的",
+    "AI会虚构书名来满足用户需求"
+  ],
+  "opening_pattern": "场景描述",
+  "ending_pattern": "互动提问",
+  "evidence_types": [
+    "个人亲身实验"
+  ],
+  "evidence_specificity_score": 45,
+  "data_density_score": 5,
+  "case_density_score": 40,
+  "quote_density_score": 0,
+  "narrative_distance": "第一人称",
+  "stance_strength": "温和",
+  "sentence_rhythm": "简短快速",
+  "abstraction_level": "具体描述",
+  "transferable_moves": [
+    "利用热门技术工具的失败案例作为趣味互动话题",
+    "将品牌固定栏目与当下流行热点（AI）结合增加关注度"
+  ],
+  "anti_patterns": [
+    "篇幅过短导致信息密度严重不足",
+    "缺乏对AI幻觉原因的深度分析",
+    "仅有通知和引导互动的浅层价值"
+  ],
+  "notable_phrases": [
+    "何不请ChatGPT来帮忙",
+    "当你认真了……会发现"
+  ],
+  "title_score": 70,
+  "opening_score": 60,
+  "argument_score": 30,
+  "evidence_score": 30,
+  "structure_score": 50,
+  "style_score": 65,
+  "publishability_score": 35,
+  "quality_score": 30,
+  "reference_value_score": 25,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "本文是作者在准备‘FBK翻书日签’时的日常感悟。作者尝试使用ChatGPT生成书籍推荐，发现虽然AI给出的建议看起来很有深度，但经过核实，除《论语》外其他中文书名均为AI虚构。文章通过这一趣味性的‘翻车’经历，向读者展示了当时ChatGPT存在的幻觉问题，并以此引导读者在评论区分享与AI互动的有趣发现，同时完成了当日正式日签的发布。",
+  "summary_500": "该文章属于典型的品牌账号日常互动内容。作者记录了在寻找每日翻书日签素材时，由于缺乏灵感而求助于人工智能ChatGPT的经历。文中详细描述了一个典型的AI幻觉案例：ChatGPT针对书籍推荐任务，生成了一份极具迷惑性的书单，其中的书名听起来都非常符合文化品位，但实际上在现实中并不存在，仅有《论语》一书是真实的。通过这种‘理想与现实’的反差，作者旨在向读者传递两个信息：一是目前AI在处理中文垂直知识时存在不准确性，不能完全依赖；二是利用这一热点话题增加读者的互动热情。文章结构非常简单，由实验起因、揭晓真相、发布原定内容、以及结尾的征集互动组成。虽然文章在学术研究或商业策略上缺乏深度，但作为一种运营技巧，它展示了如何将先进技术的局限性转化为自媒体互动素材的思路。由于其篇幅极短且内容主要服务于当下的互动需求，属于低信息密度、低参考价值的文章，主要起到了日常维护活跃度的作用。"
+}

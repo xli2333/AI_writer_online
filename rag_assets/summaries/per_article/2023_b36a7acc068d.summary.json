@@ -1,0 +1,91 @@
+{
+  "id": "b36a7acc068d",
+  "year": "2023",
+  "date": "2023-03-10",
+  "title": "本雅明 进步在时间的间隔中丨FBK翻书日签 2023年3月10日",
+  "relative_path": "2023/2023-03-10_本雅明 进步在时间的间隔中丨FBK翻书日签 2023年3月10日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-03-10_本雅明 进步在时间的间隔中丨FBK翻书日签 2023年3月10日.txt",
+  "char_count": 361,
+  "content_type": "日签",
+  "industry": [
+    "文化",
+    "哲学"
+  ],
+  "topic": [
+    "本雅明",
+    "进步观",
+    "碎片化阅读"
+  ],
+  "genre": "哲理名言",
+  "style": [
+    "极简主义",
+    "碎片化"
+  ],
+  "audience": [
+    "文艺青年",
+    "哲学爱好者"
+  ],
+  "intent": [
+    "内容引流",
+    "每日打卡"
+  ],
+  "tone": [
+    "理性",
+    "思辨"
+  ],
+  "primary_question": "本雅明对“进步”在时间尺度上是如何定义的？",
+  "thesis_type": "命题式",
+  "thesis_sentence": "进步存在于时间的间隔之中。",
+  "structure_pattern": "单点式结构",
+  "section_functions": [
+    "标题传达核心观点",
+    "提供原始来源链接"
+  ],
+  "argument_moves": [
+    "直接引述哲学观点"
+  ],
+  "core_argument": "通过对本雅明言论的提炼，暗示进步并非连续的线性过程，而是发生于断裂或间隔之中。",
+  "key_points": [
+    "本雅明的主体性",
+    "进步的非线性特征",
+    "时间间隔的重要性"
+  ],
+  "opening_pattern": "直陈式",
+  "ending_pattern": "链接跳转式",
+  "evidence_types": [
+    "哲学语录"
+  ],
+  "evidence_specificity_score": 20,
+  "data_density_score": 10,
+  "case_density_score": 0,
+  "quote_density_score": 90,
+  "narrative_distance": "远距离",
+  "stance_strength": "中等",
+  "sentence_rhythm": "短促且停顿感强",
+  "abstraction_level": "极高",
+  "transferable_moves": [
+    "利用‘日签’形式进行品牌每日心智占领",
+    "采用‘人物+核心观点’的标题命名法"
+  ],
+  "anti_patterns": [
+    "正文内容严重缺失",
+    "导流意图强于内容产出",
+    "缺乏逻辑论证过程"
+  ],
+  "notable_phrases": [
+    "进步在时间的间隔中"
+  ],
+  "title_score": 65,
+  "opening_score": 20,
+  "argument_score": 10,
+  "evidence_score": 20,
+  "structure_score": 30,
+  "style_score": 50,
+  "publishability_score": 30,
+  "quality_score": 25,
+  "reference_value_score": 15,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为FBK翻书品牌的每日日签，以哲学家本雅明的观点为核心。其核心命题为“进步在时间的间隔中”。由于该文本仅包含标题、日期和链接，缺乏具体的论述内容、案例支持或深度解析，属于极低信息密度的碎片化内容。主要功能在于通过高频次的名言分享维持品牌活跃度，而非深度知识输出。",
+  "summary_500": "这篇文章是典型的自媒体日更“日签”形式，旨在通过碎片化的哲学名言吸引特定受众。标题明确指出了内容主体为本雅明，并提炼了其关于“进步”的独到见解——进步并非发生于持续的流动中，而是在“时间的间隔”里。这种表达具有较强的思辨色彩和文学性。然而，从内容深度分析，该文本除了标题和元数据（日期、来源链接）外，完全没有正文论证、背景介绍或现实意义的延伸。作为分析素材，其写作机制价值体现在日签类内容的标准化包装上（如“人物+金句+日期+品牌标示”），但对于RAG写作或深度检索而言，其知识厚度不足，属于低价值的通知性或索引性内容。对于写作学习者，可参考其精炼的标题总结能力，但应规避其内容空洞的反模式。"
+}

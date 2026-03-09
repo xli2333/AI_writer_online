@@ -1,0 +1,94 @@
+{
+  "id": "788bf92a314f",
+  "year": "2023",
+  "date": "2023-09-15",
+  "title": "代码经济：从远古食谱、城市到区块链、人工智能丨FBK翻书日签 2023年9月15日",
+  "relative_path": "2023/2023-09-15_代码经济：从远古食谱、城市到区块链、人工智能丨FBK翻书日签 2023年9月15日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-09-15_代码经济：从远古食谱、城市到区块链、人工智能丨FBK翻书日签 2023年9月15日.txt",
+  "char_count": 370,
+  "content_type": "知识日签",
+  "industry": [
+    "文化",
+    "科技",
+    "经济"
+  ],
+  "topic": [
+    "代码经济",
+    "技术演化",
+    "人工智能",
+    "区块链"
+  ],
+  "genre": "碎片化阅读",
+  "style": [
+    "极简",
+    "索引式"
+  ],
+  "audience": [
+    "科技爱好者",
+    "趋势研究者",
+    "终身学习者"
+  ],
+  "intent": [
+    "信息告知",
+    "书籍推广"
+  ],
+  "tone": [
+    "客观",
+    "简约"
+  ],
+  "primary_question": "什么是代码经济以及它如何贯穿人类文明的发展史？",
+  "thesis_type": "概念演进",
+  "thesis_sentence": "代码经济不仅限于计算机科学，而是从远古食谱到现代人工智能的一脉相承的底层组织逻辑。",
+  "structure_pattern": "时间轴式概念陈列",
+  "section_functions": [
+    "标题：界定研究对象范围",
+    "元数据：提供来源与时间属性",
+    "占位符：记录系统处理状态"
+  ],
+  "argument_moves": [
+    "跨时空范畴界定"
+  ],
+  "core_argument": "代码作为一种组织指令，其经济意义从人类文明初期的规则（食谱、城市）演进到了当代的数字形态（区块链、AI）。",
+  "key_points": [
+    "代码经济的历史维度",
+    "跨领域技术连接"
+  ],
+  "opening_pattern": "宏大叙事式标题引出",
+  "ending_pattern": "链接引用",
+  "evidence_types": [
+    "书名/标题引用"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 10,
+  "quote_density_score": 0,
+  "narrative_distance": "中立观察",
+  "stance_strength": "中性",
+  "sentence_rhythm": "极其简促",
+  "abstraction_level": "高概括",
+  "transferable_moves": [
+    "使用‘从...到...’的句式构建宏大历史跨度感",
+    "利用‘日签’形式进行碎片化知识输出"
+  ],
+  "anti_patterns": [
+    "正文缺失（仅有元数据）",
+    "缺乏逻辑展开",
+    "信息密度极低"
+  ],
+  "notable_phrases": [
+    "代码经济"
+  ],
+  "title_score": 75,
+  "opening_score": 5,
+  "argument_score": 5,
+  "evidence_score": 5,
+  "structure_score": 10,
+  "style_score": 10,
+  "publishability_score": 15,
+  "quality_score": 12,
+  "reference_value_score": 20,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为2023年9月15日的“FBK翻书日签”元数据，核心探讨主题为“代码经济”。其标题揭示了从远古食谱、城市规划到区块链、人工智能的文明演进逻辑。然而，由于原文仅包含标题和基本链接信息，缺乏实际的正文内容、论点展开及证据支持，属于信息量极低的碎片化书签，仅具索引参考价值。",
+  "summary_500": "该条目是名为“代码经济：从远古食谱、城市到区块链、人工智能”的FBK翻书日签记录。其文本结构极其简略，仅保留了标题、日期、原始链接及系统抓取状态。从标题可以推断，其写作意图在于通过一个广大的时间跨度（从远古到未来）和空间领域（从食谱到AI），重新定义“代码”在经济和文明中的地位，暗示了代码作为一种组织和运行规则的普适性。尽管标题具有较强的知识启发性，但由于正文内容完全缺失，无法提供具体的论证过程或实证分析。该条目在当前状态下属于低价值的结构化数据，仅能作为书籍或文章的主题检索标签使用，无法直接用于高质量的RAG写作或深度的人格提炼。"
+}

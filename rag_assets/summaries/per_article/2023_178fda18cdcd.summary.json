@@ -1,0 +1,86 @@
+{
+  "id": "178fda18cdcd",
+  "year": "2023",
+  "date": "2023-07-16",
+  "title": "上瘾的秘密丨FBK翻书日签 2023年7月17日",
+  "relative_path": "2023/2023-07-16_上瘾的秘密丨FBK翻书日签 2023年7月17日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-07-16_上瘾的秘密丨FBK翻书日签 2023年7月17日.txt",
+  "char_count": 353,
+  "content_type": "日签",
+  "industry": [
+    "文化传媒",
+    "心理学"
+  ],
+  "topic": [
+    "上瘾机制",
+    "行为设计"
+  ],
+  "genre": "日签",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "终身学习者",
+    "社交媒体用户"
+  ],
+  "intent": [
+    "内容打卡",
+    "品牌触达"
+  ],
+  "tone": [
+    "启发性"
+  ],
+  "primary_question": "什么是上瘾的秘密？",
+  "thesis_type": "阐释型",
+  "thesis_sentence": "通过每日日签形式，揭示关于‘上瘾’这一行为背后的核心秘密。",
+  "structure_pattern": "单点式",
+  "section_functions": [
+    "标题引导",
+    "日期标注",
+    "媒体来源说明"
+  ],
+  "argument_moves": [
+    "提出诱导性话题"
+  ],
+  "core_argument": "由于正文内容缺失，仅能推断其旨在传递一个关于上瘾机制的单一核心观点。",
+  "key_points": [
+    "上瘾的秘密"
+  ],
+  "opening_pattern": "直陈主题",
+  "ending_pattern": "元数据标注",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "远",
+  "stance_strength": "中性",
+  "sentence_rhythm": "无",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "利用‘日签’形式进行每日用户激活",
+    "使用‘XX的秘密’作为标题吸引注意力"
+  ],
+  "anti_patterns": [
+    "内容过度依赖图片，导致文本信息严重缺失",
+    "缺乏实质性论证过程"
+  ],
+  "notable_phrases": [
+    "上瘾的秘密"
+  ],
+  "title_score": 65,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 0,
+  "structure_score": 20,
+  "style_score": 30,
+  "publishability_score": 15,
+  "quality_score": 10,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为2023年7月17日的‘FBK翻书日签’，主题为‘上瘾的秘密’。文中除标题、日期及图片搜索模式提示外，无任何实质性正文描述。此类内容属于高度依赖视觉呈现的社交媒体日课，其文本信息密度极低，不具备独立的逻辑论证价值。",
+  "summary_500": "这是一份关于‘上瘾的秘密’的日签记录，发布于2023年7月16日，对应次日日签。文章采用了典型的社交媒体‘打卡’或‘日课’形式。从标题‘上瘾的秘密’可以看出，其试图探讨心理学或行为学中的成瘾机制。然而，提供的正文信息极度匮乏，仅包含了标题、日期、原始链接及一张图片的检索说明。这种内容形态在商业分析中属于‘极低信息密度’样本，其核心价值在于品牌每日触达，而非深度的知识传递。由于缺乏论据、案例、数据及具体的论证逻辑，无法从中提取可复用的知识体系或写作机制。对于RAG写作或人格提炼而言，该样本仅能反映其品牌在特定时间点的发布动态，无法提供实质性的内容支持。建议在信息处理中将其标记为低价值数据，重点关注其标题的吸引力设计，而非正文逻辑。"
+}

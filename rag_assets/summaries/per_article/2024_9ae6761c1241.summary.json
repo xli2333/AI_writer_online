@@ -1,0 +1,90 @@
+{
+  "id": "9ae6761c1241",
+  "year": "2024",
+  "date": "2024-01-22",
+  "title": "用户的本质丨FBK翻书日签 2024年1月22日",
+  "relative_path": "2024/2024-01-22_用户的本质丨FBK翻书日签 2024年1月22日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2024\\2024-01-22_用户的本质丨FBK翻书日签 2024年1月22日.txt",
+  "char_count": 353,
+  "content_type": "社交媒体日签",
+  "industry": [
+    "互联网",
+    "内容创业"
+  ],
+  "topic": [
+    "用户研究",
+    "阅读分享"
+  ],
+  "genre": "碎片化内容",
+  "style": [
+    "简约",
+    "工具化"
+  ],
+  "audience": [
+    "产品经理",
+    "互联网从业者"
+  ],
+  "intent": [
+    "内容引流",
+    "品牌留存"
+  ],
+  "tone": [
+    "客观"
+  ],
+  "primary_question": "用户的本质是什么？",
+  "thesis_type": "观点式",
+  "thesis_sentence": "该文章仅提供标题与链接，未在正文中给出具体论点，核心论点预计承载于其图片或外部链接中。",
+  "structure_pattern": "固定模板式",
+  "section_functions": [
+    "主题公示",
+    "时间戳标记",
+    "原始链接指引"
+  ],
+  "argument_moves": [
+    "通过标题界定讨论范畴",
+    "利用日期建立更新心智"
+  ],
+  "core_argument": "由于正文缺失，无法提取核心论据，仅体现了“用户的本质”这一研究主题。",
+  "key_points": [
+    "讨论主题为用户的本质",
+    "作为FBK翻书日签系列发布"
+  ],
+  "opening_pattern": "标题直入",
+  "ending_pattern": "外链跳转",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 0,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "中立",
+  "stance_strength": "中立",
+  "sentence_rhythm": "无",
+  "abstraction_level": "极高",
+  "transferable_moves": [
+    "使用‘主题+日期’的命名规范提高检索效率",
+    "通过‘日签’形式建立用户每日访问的期待"
+  ],
+  "anti_patterns": [
+    "正文内容空洞，仅作为外链或图片的引流媒介",
+    "信息密度极低，不具备文字阅读价值"
+  ],
+  "notable_phrases": [
+    "用户的本质",
+    "翻书日签"
+  ],
+  "title_score": 40,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 0,
+  "structure_score": 30,
+  "style_score": 20,
+  "publishability_score": 20,
+  "quality_score": 10,
+  "reference_value_score": 15,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该内容为2024年1月22日的“FBK翻书日签”发布记录，主题指向“用户的本质”。正文无实际分析文字，仅保留了标题、日期、原始微信公众号链接及一张搜索到的图片信息。该内容在写作分析层面信息密度极低，属于典型的活动通知或内容占位符。",
+  "summary_500": "本文是一篇典型的社交媒体碎片化内容占位符，其核心功能并非进行深度文学或商业论述，而是作为“FBK翻书日签”这一系列化内容的发布索引。标题“用户的本质”具有较高的行业吸引力，但具体的知识产出未在文字正文中体现，而是引导读者通过链接或图片获取完整信息。从写作机制看，其采用了极其简化的“标题+日期+链接”模板，不具备完整的论证过程或证据链条。对于内容分析师而言，此类内容属于低价值样本，仅能作为品牌每日更新节奏及标题命名策略的参考，不具备RAG写作或人格提炼的实质性素材。文章评分在质量、论证和证据维度均为极低分，主要因其作为通知性内容的本质所致。"
+}

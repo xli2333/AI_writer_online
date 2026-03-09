@@ -1,0 +1,86 @@
+{
+  "id": "53a14949b563",
+  "year": "2023",
+  "date": "2023-07-06",
+  "title": "奇云：媒介即存有丨FBK翻书日签 2023年7月6日",
+  "relative_path": "2023/2023-07-06_奇云：媒介即存有丨FBK翻书日签 2023年7月6日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-07-06_奇云：媒介即存有丨FBK翻书日签 2023年7月6日.txt",
+  "char_count": 355,
+  "content_type": "日签",
+  "industry": [
+    "媒介研究",
+    "哲学"
+  ],
+  "topic": [
+    "媒介理论",
+    "存在论"
+  ],
+  "genre": "微内容",
+  "style": [
+    "极简主义"
+  ],
+  "audience": [
+    "读书人",
+    "知识分子"
+  ],
+  "intent": [
+    "日常互动",
+    "品牌触达"
+  ],
+  "tone": [
+    "哲思性"
+  ],
+  "primary_question": "媒介与存在的本质关系是什么？",
+  "thesis_type": "命题式",
+  "thesis_sentence": "媒介即存有。",
+  "structure_pattern": "元数据结构",
+  "section_functions": [
+    "标题揭示主题",
+    "日期标注",
+    "来源引导"
+  ],
+  "argument_moves": [
+    "提出核心概念命题"
+  ],
+  "core_argument": "通过“媒介即存有”这一命题，将媒介从工具论层面提升到本体论层面。",
+  "key_points": [
+    "媒介不仅是信息的载体，更是存在的方式"
+  ],
+  "opening_pattern": "直陈标题",
+  "ending_pattern": "外链引导",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 100,
+  "narrative_distance": "中立客观",
+  "stance_strength": "强硬",
+  "sentence_rhythm": "短促有力",
+  "abstraction_level": "极高",
+  "transferable_moves": [
+    "采用'XX即XX'的强定义公式制造思想冲击力",
+    "利用日签形式进行每日品牌占位"
+  ],
+  "anti_patterns": [
+    "缺乏实质性论证内容",
+    "信息量过低导致用户获取成本与价值不成正比"
+  ],
+  "notable_phrases": [
+    "媒介即存有"
+  ],
+  "title_score": 60,
+  "opening_score": 20,
+  "argument_score": 10,
+  "evidence_score": 0,
+  "structure_score": 20,
+  "style_score": 40,
+  "publishability_score": 15,
+  "quality_score": 10,
+  "reference_value_score": 5,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该内容为“FBK翻书日签”的日常更新，主要呈现了一个哲学命题“媒介即存有”。文章缺乏正文论述，仅包含标题、日期及原始链接。作为一种社交媒体互动形式，其目的是通过每日一句深度名言或命题来维持用户粘性，但从文本分析角度看，其信息密度极低，不具备完整的论证结构或证据链，属于典型的低信息价值通知类内容。",
+  "summary_500": "该内容属于FBK（翻书）机构发布的每日阅读日签，发布日期为2023年7月6日。其核心内容由一句话命题“媒介即存有”构成，这显然是对麦克卢汉“媒介即讯息”理论的延伸或哲学升华，尝试探讨媒介作为人类存在基础的本体论意义。然而，该文本仅提供了标题和基本元数据（如链接和日期），完全缺失了对该命题的阐释、背景引申或论据支持。在写作机制上，它采用了极简主义的视觉/文本策略，通过高度抽象的断言来引发读者思考或品牌认同。从商业分析角度看，此类内容属于低生产成本、高频次的品牌触达手段，旨在利用社交媒体的碎片化特征进行知识化包装。但对于追求深度内容、数据支持或逻辑推演的读者而言，该内容不具备参考价值，且存在明显的“反模式”：即过度依赖金句而忽略了必要的逻辑交付。评分方面，除标题具有一定的思想张力外，其余分项指标均因内容缺失而处于极低水平。此类文章主要用于RAG系统中作为品牌动态的记录，而非高质量写作模板或知识库的核心素材。"
+}

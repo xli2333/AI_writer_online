@@ -1,0 +1,87 @@
+{
+  "id": "aba18e5727d5",
+  "year": "2023",
+  "date": "2023-04-12",
+  "title": "弃猫 村上春树丨FBK翻书日签 2023年4月12日",
+  "relative_path": "2023/2023-04-12_弃猫 村上春树丨FBK翻书日签 2023年4月12日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-04-12_弃猫 村上春树丨FBK翻书日签 2023年4月12日.txt",
+  "char_count": 355,
+  "content_type": "社交媒体日签",
+  "industry": [
+    "文化艺术",
+    "出版"
+  ],
+  "topic": [
+    "村上春树",
+    "阅读推广"
+  ],
+  "genre": "碎片化语录",
+  "style": [
+    "极简",
+    "碎片化"
+  ],
+  "audience": [
+    "文学爱好者",
+    "村上春树读者"
+  ],
+  "intent": [
+    "品牌留存",
+    "内容引流"
+  ],
+  "tone": [
+    "客观",
+    "平淡"
+  ],
+  "primary_question": "2023年4月12日的FBK翻书日签内容是什么？",
+  "thesis_type": "无",
+  "thesis_sentence": "无",
+  "structure_pattern": "固定模板式",
+  "section_functions": [
+    "标题与日期声明",
+    "原始链接指向",
+    "资源状态标注"
+  ],
+  "argument_moves": [],
+  "core_argument": "由于内容仅为日签元数据，不包含实质性论点。",
+  "key_points": [
+    "提及村上春树的作品《弃猫》",
+    "标注了特定的日期（2023年4月12日）",
+    "提供了原文访问链接"
+  ],
+  "opening_pattern": "直陈式标题",
+  "ending_pattern": "系统提示式结尾",
+  "evidence_types": [],
+  "evidence_specificity_score": 0,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "中性",
+  "stance_strength": "无",
+  "sentence_rhythm": "无感",
+  "abstraction_level": "具象",
+  "transferable_moves": [
+    "使用固定前缀（如‘FBK翻书日签’）建立系列感",
+    "在标题中包含明确的日期戳以方便索引"
+  ],
+  "anti_patterns": [
+    "有效信息严重不足",
+    "缺乏引言或导读",
+    "完全依赖外部链接"
+  ],
+  "notable_phrases": [
+    "FBK翻书日签"
+  ],
+  "title_score": 40,
+  "opening_score": 10,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 15,
+  "style_score": 10,
+  "publishability_score": 5,
+  "quality_score": 10,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该文本为“FBK翻书日签”系列的元数据记录，发布于2023年4月12日，主题关联村上春树的《弃猫》。内容仅包含标题、日期及原始链接，缺乏正文、摘要或文学评论。作为分析对象，其信息密度极低，主要价值在于展示了一种每日内容更新的占位符模式，不具备实质性的写作参考或知识传递价值。",
+  "summary_500": "本条目是关于“FBK翻书日签”在2023年4月12日的发布记录。内容指向村上春树的作品《弃猫》，但文本主体并未提供该书的精彩语录、深度书评或任何创作背景，仅保留了标题、日期、微信公众号链接以及图片抓取提示等元数据。在内容生态中，这类文本通常属于自动化同步或简易导流入口，其质量评分较低。从写作角度看，它体现了品牌通过“日签”形式维持用户触达的策略，但在目前的文本形态下，它无法提供可供检索的深度知识或可用于RAG写作的实质素材。由于核心文字内容的缺失，它被标记为低价值信息，仅作为存档数据存在。"
+}

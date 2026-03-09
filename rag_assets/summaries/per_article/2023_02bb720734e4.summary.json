@@ -1,0 +1,93 @@
+{
+  "id": "02bb720734e4",
+  "year": "2023",
+  "date": "2023-08-20",
+  "title": "合作的进化丨FBK翻书日签 2023年8月20日",
+  "relative_path": "2023/2023-08-20_合作的进化丨FBK翻书日签 2023年8月20日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-08-20_合作的进化丨FBK翻书日签 2023年8月20日.txt",
+  "char_count": 353,
+  "content_type": "日签",
+  "industry": [
+    "知识服务",
+    "文化传媒"
+  ],
+  "topic": [
+    "合作进化",
+    "博弈论",
+    "每日读书"
+  ],
+  "genre": "摘录",
+  "style": [
+    "极简",
+    "碎片化"
+  ],
+  "audience": [
+    "终身学习者",
+    "职场人士"
+  ],
+  "intent": [
+    "品牌维护",
+    "每日启发"
+  ],
+  "tone": [
+    "客观",
+    "启发性"
+  ],
+  "primary_question": "合作是如何产生与进化的？",
+  "thesis_type": "概念推介型",
+  "thesis_sentence": "通过每日日签形式分享关于‘合作的进化’的知识碎片或金句。",
+  "structure_pattern": "固定模板式",
+  "section_functions": [
+    "标题引导",
+    "日期标识",
+    "核心内容展示（图片形式）"
+  ],
+  "argument_moves": [
+    "通过经典命题吸引注意",
+    "利用碎片化时间进行知识渗透"
+  ],
+  "core_argument": "由于正文内容缺失，仅能通过标题判定其核心在于探讨合作机制的演变过程。",
+  "key_points": [
+    "2023年8月20日日签",
+    "主题聚焦于‘合作的进化’"
+  ],
+  "opening_pattern": "直陈式",
+  "ending_pattern": "引导式",
+  "evidence_types": [
+    "理论命题"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 5,
+  "quote_density_score": 0,
+  "narrative_distance": "中性观察",
+  "stance_strength": "中立",
+  "sentence_rhythm": "无（仅有标题和元数据）",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "使用‘日签’形式建立用户每日打卡心智",
+    "结合经典书籍/理论主题进行系列化输出"
+  ],
+  "anti_patterns": [
+    "内容极度贫乏",
+    "关键信息缺失（仅有图片占位符）",
+    "缺乏对主题的深度解读"
+  ],
+  "notable_phrases": [
+    "合作的进化",
+    "FBK翻书日签"
+  ],
+  "title_score": 40,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 5,
+  "structure_score": 20,
+  "style_score": 30,
+  "publishability_score": 10,
+  "quality_score": 10,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为2023年8月20日的‘FBK翻书日签’，主题为‘合作的进化’。文章本身缺乏实质性的文字描述，仅包含了标题、日期及一个指向微信公众号的链接和图片占位符。这种形式主要用于社交媒体的每日品牌展示和知识碎片传播，但作为独立的结构化信息，其文本密度极低，缺乏阅读和深入分析的价值。",
+  "summary_500": "本文是‘翻书（FBK）’品牌发布的每日知识日签，日期标注为2023年8月20日。其核心主题指向了博弈论与社会科学中的经典命题——‘合作的进化’。然而，从提供的文本来看，该条目属于典型的‘低信息密度’内容，仅保留了元数据（标题、日期、来源链接）而缺失了实际的文字解读或金句摘录。在写作机制上，它采用了标准的日签模板，旨在利用碎片化时间为受众提供一点思考启发，或引导用户点击链接阅读原文。由于正文内容的缺失（仅提示存在图片），其论据、证据和逻辑结构无法在文本层面体现。对于此类内容，其主要价值在于品牌存在感的刷脸以及对经典书籍主题的阶段性索引。作为可检索或可用于写作RAG的数据，其参考价值极低，主要应将其标记为‘低价值/占位符型内容’，在人格提炼中仅能体现其‘坚持每日更新’和‘关注经典商业/社会科学命题’的行为特征。"
+}

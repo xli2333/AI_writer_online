@@ -1,0 +1,89 @@
+{
+  "id": "20b3ebe6bd18",
+  "year": "2023",
+  "date": "2023-11-27",
+  "title": "状态的科学丨FBK翻书日签 2023年11月27日",
+  "relative_path": "2023/2023-11-27_状态的科学丨FBK翻书日签 2023年11月27日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-11-27_状态的科学丨FBK翻书日签 2023年11月27日.txt",
+  "char_count": 354,
+  "content_type": "每日语录",
+  "industry": [
+    "个人成长",
+    "内容创作"
+  ],
+  "topic": [
+    "心理状态",
+    "阅读分享"
+  ],
+  "genre": "日签",
+  "style": [
+    "极简",
+    "碎片化"
+  ],
+  "audience": [
+    "职场人士",
+    "心理学爱好者"
+  ],
+  "intent": [
+    "品牌留存",
+    "内容分发"
+  ],
+  "tone": [
+    "客观"
+  ],
+  "primary_question": "2023年11月27日的FBK推荐内容是什么？",
+  "thesis_type": "信息展示",
+  "thesis_sentence": "该文章是FBK频道的每日日签，以‘状态的科学’为主题进行书籍内容的视觉化展示。",
+  "structure_pattern": "固定模板式",
+  "section_functions": [
+    "标题与日期标识",
+    "核心图片/语录内容展示",
+    "来源链接与追溯"
+  ],
+  "argument_moves": [
+    "提供日期信息",
+    "引用书籍语录（推测）"
+  ],
+  "core_argument": "暂无（该内容为视觉日签，缺乏文字论证过程）。",
+  "key_points": [
+    "日签主题：状态的科学",
+    "日期：2023年11月27日"
+  ],
+  "opening_pattern": "固定格式化开头",
+  "ending_pattern": "来源标注与链接引导",
+  "evidence_types": [
+    "书籍摘录"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 80,
+  "narrative_distance": "中立观察",
+  "stance_strength": "中立",
+  "sentence_rhythm": "固定短句",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "利用‘日签’形式建立品牌与用户的每日连接",
+    "通过极简标题吸引特定兴趣领域人群"
+  ],
+  "anti_patterns": [
+    "内容极度单薄，无法作为阅读主体",
+    "对图片依赖过高，文字部分缺乏信息增量"
+  ],
+  "notable_phrases": [
+    "状态的科学"
+  ],
+  "title_score": 40,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 10,
+  "structure_score": 20,
+  "style_score": 30,
+  "publishability_score": 20,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为FBK于2023年11月27日发布的‘翻书日签’。文章形式为典型的社交媒体碎片化分发，核心内容以‘状态的科学’为主题的单张图片形式呈现。文中仅包含基础的元数据信息（标题、日期、链接），缺乏实质性的文字论述、案例分析或逻辑推演。此类内容的主要功能是品牌维护及作为每日阅读激励的视觉触点，对研究写作技巧或获取深度行业见解的参考价值极低。",
+  "summary_500": "该内容是FBK（可能是某知识博主或机构）的每日固定栏目‘翻书日签’。2023年11月27日的日签主题定为‘状态的科学’。从文章结构上看，它属于极简主义的内容模板，由标题、日期、原始链接以及提示存在的一张核心图片组成。作为一种商业内容分发策略，其写作机制表现为：通过极简的固定标题（主题+日签+日期）建立用户预期，利用视觉化的日签形式降低用户认知负担，并以此保持品牌活跃度。然而，由于该文本仅是图片的载体或索引，其文字信息密度极低，缺乏核心论点、论据支持及逻辑框架。对于分析师而言，此类内容的价值不在于文本本身，而在于其‘轻量化运营’的动作模式。在评分系统中，由于其缺乏成文价值和信息实质，各分项指标均较低。它不适合作为RAG写作的参考素材，仅能作为品牌社群运营中‘每日打卡’模式的案例参考。该文被标记为低价值信息，主要原因在于其仅具有通知或索引功能，不具备独立的阅读深度。"
+}

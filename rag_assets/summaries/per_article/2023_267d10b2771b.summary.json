@@ -1,0 +1,93 @@
+{
+  "id": "267d10b2771b",
+  "year": "2023",
+  "date": "2023-06-16",
+  "title": "影响力 西奥迪尼丨FBK翻书日签 2023年6月16日",
+  "relative_path": "2023/2023-06-16_影响力 西奥迪尼丨FBK翻书日签 2023年6月16日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-06-16_影响力 西奥迪尼丨FBK翻书日签 2023年6月16日.txt",
+  "char_count": 356,
+  "content_type": "日签",
+  "industry": [
+    "知识付费",
+    "出版"
+  ],
+  "topic": [
+    "影响力",
+    "社会心理学"
+  ],
+  "genre": "日常动态",
+  "style": [
+    "极简",
+    "碎片化"
+  ],
+  "audience": [
+    "读书爱好者",
+    "品牌订阅读者"
+  ],
+  "intent": [
+    "品牌心智维护",
+    "内容引流"
+  ],
+  "tone": [
+    "中性",
+    "仪式感"
+  ],
+  "primary_question": "2023年6月16日的FBK翻书日签推荐了哪本书？",
+  "thesis_type": "无明确论题",
+  "thesis_sentence": "内容仅为日常签到，缺乏核心论点叙述。",
+  "structure_pattern": "日更卡片式",
+  "section_functions": [
+    "日期标记",
+    "核心主题标识",
+    "来源链接提供"
+  ],
+  "argument_moves": [
+    "通过提及名著作者建立权威感",
+    "利用日签形式维持用户黏性"
+  ],
+  "core_argument": "无实质论证内容。",
+  "key_points": [
+    "提及西奥迪尼的《影响力》",
+    "标注日期为2023年6月16日",
+    "来源为FBK翻书日签"
+  ],
+  "opening_pattern": "标准化标题引导",
+  "ending_pattern": "外部链接跳转",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "非叙事",
+  "stance_strength": "极弱",
+  "sentence_rhythm": "短促且不完整",
+  "abstraction_level": "中",
+  "transferable_moves": [
+    "日更内容的标准化命名格式",
+    "以经典著作作为品牌每日打卡的背书"
+  ],
+  "anti_patterns": [
+    "缺乏实质性正文内容",
+    "信息量过低导致无法形成检索价值",
+    "过度依赖图片展示而忽略文本描述"
+  ],
+  "notable_phrases": [
+    "FBK翻书日签",
+    "西奥迪尼"
+  ],
+  "title_score": 40,
+  "opening_score": 20,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 30,
+  "style_score": 20,
+  "publishability_score": 10,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该内容属于‘FBK翻书日签’系列的每日动态，主题为西奥迪尼的《影响力》。其文本内容极其匮乏，仅包含标题、日期及一张图片的搜索记录，缺乏具体书摘或深度解析。主要作用是作为品牌曝光的日常打卡，对于需要提取知识干货或写作技巧的用户而言，该条目信息密度极低，无实质性参考价值。",
+  "summary_500": "本条内容为2023年6月16日的‘FBK翻书日签’，关联的主题是经典心理学著作《影响力》及其作者罗伯特·西奥迪尼。从结构上看，该内容并非一篇完整的文章，而是一个以图片为主体的社交媒体分享卡片或简易通告。正文中除了基本的标题和外部链接信息外，没有任何实质性的文字叙述、论证过程或数据支撑。对于商业内容分析而言，这类文章属于‘低价值/纯通知’类型。其写作机制仅体现了日更栏目的仪式感，通过固定格式输出降低运营成本。在RAG（检索增强生成）或人格提炼中，除了能标记该品牌曾分享过《影响力》这一事实外，无法提供任何有深度的知识输入。分值评定上，其质量、论据及参考价值均处于极低水平，属于典型的弱文本内容，不建议作为写作模板或知识源使用。"
+}

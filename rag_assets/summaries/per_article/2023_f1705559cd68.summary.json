@@ -1,0 +1,91 @@
+{
+  "id": "f1705559cd68",
+  "year": "2023",
+  "date": "2023-04-08",
+  "title": "柏拉图 洞穴之喻丨FBK翻书日签 2023年4月8日",
+  "relative_path": "2023/2023-04-08_柏拉图 洞穴之喻丨FBK翻书日签 2023年4月8日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-04-08_柏拉图 洞穴之喻丨FBK翻书日签 2023年4月8日.txt",
+  "char_count": 355,
+  "content_type": "日签",
+  "industry": [
+    "文化",
+    "哲学",
+    "出版"
+  ],
+  "topic": [
+    "柏拉图",
+    "洞穴之喻",
+    "每日阅读"
+  ],
+  "genre": "摘要",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "哲学爱好者",
+    "碎片化阅读者"
+  ],
+  "intent": [
+    "信息告知",
+    "品牌展示"
+  ],
+  "tone": [
+    "中立"
+  ],
+  "primary_question": "2023年4月8日的FBK翻书日签主题是什么？",
+  "thesis_type": "陈述句",
+  "thesis_sentence": "该文章仅作为FBK翻书日签的发布记录，其核心主题为柏拉图的洞穴之喻，但正文缺乏实质性论述。",
+  "structure_pattern": "固定模板",
+  "section_functions": [
+    "标题标识",
+    "日期标注",
+    "来源引用"
+  ],
+  "argument_moves": [
+    "无"
+  ],
+  "core_argument": "无实质论证过程，仅为文化概念的标签化展示。",
+  "key_points": [
+    "日期：2023年4月8日",
+    "主题：柏拉图 洞穴之喻",
+    "来源：FBK翻书日签"
+  ],
+  "opening_pattern": "直陈式标题",
+  "ending_pattern": "链接占位",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "远距离",
+  "stance_strength": "中立",
+  "sentence_rhythm": "无节奏可言",
+  "abstraction_level": "极高",
+  "transferable_moves": [
+    "使用固定格式进行每日内容分发",
+    "通过关键词标签化哲学概念"
+  ],
+  "anti_patterns": [
+    "内容极度空洞",
+    "只有标题没有正文",
+    "缺乏背景解释"
+  ],
+  "notable_phrases": [
+    "洞穴之喻"
+  ],
+  "title_score": 40,
+  "opening_score": 10,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 20,
+  "style_score": 10,
+  "publishability_score": 10,
+  "quality_score": 5,
+  "reference_value_score": 5,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该内容为2023年4月8日的FBK翻书日签记录，主题标注为‘柏拉图 洞穴之喻’。然而，原文仅包含标题、日期、链接及系统抓取提示，完全缺失正文内容及对哲学概念的阐述。作为写作参考，其信息量极低，仅能作为日签类产品运营的格式参考。",
+  "summary_500": "本文档是一篇典型的低信息密度记录，属于‘FBK翻书日签’的每日发布存档。标题指出了核心文化符号——柏拉图的‘洞穴之喻’，但在实际的抓取内容中，并未提供任何关于该隐喻的解释、引用或分析。正文仅由标题、日期、原始微信公众号链接以及一条关于全局图片搜索模式的系统提示组成。从商业内容分析的角度看，该文章不具备成文价值，无法提供论证逻辑、证据链条或文采风格的参考。其存在的意义主要在于作为日历式运营的索引，对于研究者或RAG系统而言，除了贡献一个时间戳和主题词外，没有实质性的文本挖掘潜力。在评估中，其质量分数与参考价值分数均处于极低水平。"
+}

@@ -1,0 +1,89 @@
+{
+  "id": "d5eb52cabe4d",
+  "year": "2023",
+  "date": "2023-12-05",
+  "title": "反脆弱丨FBK翻书日签 2023年12月5日",
+  "relative_path": "2023/2023-12-05_反脆弱丨FBK翻书日签 2023年12月5日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-12-05_反脆弱丨FBK翻书日签 2023年12月5日.txt",
+  "char_count": 351,
+  "content_type": "日签",
+  "industry": [
+    "文化教育",
+    "个人成长"
+  ],
+  "topic": [
+    "读书",
+    "反脆弱"
+  ],
+  "genre": "碎片化内容",
+  "style": [
+    "极简主义",
+    "模板化"
+  ],
+  "audience": [
+    "社群成员",
+    "读书爱好者"
+  ],
+  "intent": [
+    "品牌曝光",
+    "日常提醒"
+  ],
+  "tone": [
+    "冷静"
+  ],
+  "primary_question": "暂无（该内容仅为每日打卡标识）",
+  "thesis_type": "观点引用",
+  "thesis_sentence": "暂无具体正文内容，核心指向为《反脆弱》一书的主题。",
+  "structure_pattern": "固定模板",
+  "section_functions": [
+    "提供主题标签",
+    "标识日期",
+    "展示品牌身份"
+  ],
+  "argument_moves": [
+    "通过重复出现建立品牌节奏感"
+  ],
+  "core_argument": "无实质论证过程",
+  "key_points": [
+    "每日日签打卡",
+    "反脆弱主题导向"
+  ],
+  "opening_pattern": "直述标题",
+  "ending_pattern": "元数据展示",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "远距",
+  "stance_strength": "中立",
+  "sentence_rhythm": "固定短语",
+  "abstraction_level": "高抽象",
+  "transferable_moves": [
+    "使用固定前缀建立内容系列感",
+    "利用日期和特定主题词进行每日定投"
+  ],
+  "anti_patterns": [
+    "信息量极低",
+    "缺乏互动引导",
+    "内容过度依赖视觉图片而导致文本空洞"
+  ],
+  "notable_phrases": [
+    "FBK翻书日签"
+  ],
+  "title_score": 30,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 0,
+  "structure_score": 20,
+  "style_score": 20,
+  "publishability_score": 10,
+  "quality_score": 10,
+  "reference_value_score": 5,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该内容为“FBK翻书”机构发布的每日日签，日期为2023年12月5日。文章呈现高度的模板化特征，仅包含主题词“反脆弱”、日期及来源信息。其主要功能在于维持公众号的日常更新频率和品牌仪式感，而非传递深度知识或进行逻辑论证。由于正文缺乏具体的文字摘录或解读，该文章作为阅读素材的价值极低，属于典型的低信息密度运营动作。",
+  "summary_500": "本篇名为《反脆弱丨FBK翻书日签 2023年12月5日》的内容是典型的社交媒体每日运营物料。从结构上看，它属于极简主义的碎片化内容，完全依赖于“日期+主题词+品牌名”的固定公式。在写作机制上，它不具备传统文章的论证结构，没有提出问题、分析问题或提供证据的过程。其核心意图是通过每日定时的内容推送，在用户心智中建立一种持续学习的品牌形象（FBK翻书）。标题中的“反脆弱”暗示了当日或当阶段的学习主题，但由于提供的文本中除了元数据外并无实质性的书摘或感悟，因此其信息密度和参考价值均处于极低水平。此类内容在RAG（检索增强生成）系统中通常应被标记为低优先级或过滤掉，因为其无法提供有效的知识实体或逻辑推导过程。对于创作者而言，唯一的借鉴点在于如何利用标准化的命名规则和视觉标签来实现内容的系列化管理。"
+}

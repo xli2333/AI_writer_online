@@ -1,0 +1,91 @@
+{
+  "id": "ab60387882b4",
+  "year": "2023",
+  "date": "2023-12-29",
+  "title": "赫伯特·西蒙自传丨FBK翻书日签 2023年12月29日",
+  "relative_path": "2023/2023-12-29_赫伯特·西蒙自传丨FBK翻书日签 2023年12月29日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-12-29_赫伯特·西蒙自传丨FBK翻书日签 2023年12月29日.txt",
+  "char_count": 357,
+  "content_type": "每日签到",
+  "industry": [
+    "出版",
+    "学术研究"
+  ],
+  "topic": [
+    "赫伯特·西蒙",
+    "自传",
+    "书籍推荐"
+  ],
+  "genre": "简报",
+  "style": [
+    "极简",
+    "碎片化"
+  ],
+  "audience": [
+    "书籍收藏者",
+    "社群成员"
+  ],
+  "intent": [
+    "信息告知",
+    "品牌露出"
+  ],
+  "tone": [
+    "平淡",
+    "客观"
+  ],
+  "primary_question": "今日推荐的书籍是什么？",
+  "thesis_type": "陈述型",
+  "thesis_sentence": "今日翻书日签推荐的书籍是《赫伯特·西蒙自传》。",
+  "structure_pattern": "固定模板式",
+  "section_functions": [
+    "标题指引主题",
+    "日期标注时效",
+    "链接提供溯源"
+  ],
+  "argument_moves": [
+    "无实质论证过程"
+  ],
+  "core_argument": "无",
+  "key_points": [
+    "赫伯特·西蒙自传",
+    "2023年12月29日日签内容"
+  ],
+  "opening_pattern": "标题直接切入",
+  "ending_pattern": "原始链接结束",
+  "evidence_types": [
+    "元数据"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "远景",
+  "stance_strength": "中立",
+  "sentence_rhythm": "短促",
+  "abstraction_level": "低",
+  "transferable_moves": [
+    "使用固定标题格式（书籍+日期）进行每日内容沉淀",
+    "保留原始链接作为可追溯的数字足迹"
+  ],
+  "anti_patterns": [
+    "内容过度匮乏，缺乏书籍摘要或推荐理由",
+    "信息密度极低，不具备独立阅读价值",
+    "纯导向型内容，缺乏原创性分析"
+  ],
+  "notable_phrases": [
+    "翻书日签"
+  ],
+  "title_score": 40,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 5,
+  "structure_score": 20,
+  "style_score": 20,
+  "publishability_score": 10,
+  "quality_score": 15,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该文章为“FBK翻书日签”系列的每日推送记录，日期为2023年12月29日。正文仅包含书籍名称《赫伯特·西蒙自传》及原始微信公众号链接。由于缺乏对书籍内容的解读、金句摘要或评价，该文本仅起到书目索引的作用，信息密度极低，不具备独立的商业或学术分析价值。",
+  "summary_500": "本篇内容属于社交媒体每日运营的“日签”类短内容，其核心功能是作为书籍推荐的占位符。2023年12月29日的日签指向了《赫伯特·西蒙自传》，但文章本身并未提供任何实质性的文字叙述、背景介绍或核心观点提炼。这种内容模式常见于社群运营，旨在通过每日低成本的打卡维持关注度。从结构上看，它仅由标题、日期和元数据组成，完全丧失了作为文章的论证、叙事或说服功能。对于知识管理或RAG写作而言，此类数据仅可作为“某日推荐了某书”的时间戳记录，缺乏可迁移的知识点或深度的思想内涵。其质量分数较低，主要原因在于其极度依赖外部链接或图片传达信息，而文本本身为空壳。"
+}

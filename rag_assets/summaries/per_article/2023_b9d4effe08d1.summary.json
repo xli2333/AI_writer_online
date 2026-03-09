@@ -1,0 +1,91 @@
+{
+  "id": "b9d4effe08d1",
+  "year": "2023",
+  "date": "2023-03-04",
+  "title": "人类—自然二元论丨FBK翻书日签 2023年3月4日",
+  "relative_path": "2023/2023-03-04_人类—自然二元论丨FBK翻书日签 2023年3月4日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-03-04_人类—自然二元论丨FBK翻书日签 2023年3月4日.txt",
+  "char_count": 355,
+  "content_type": "日签",
+  "industry": [
+    "人文社科",
+    "环境保护"
+  ],
+  "topic": [
+    "人类—自然二元论",
+    "哲学",
+    "生态环境"
+  ],
+  "genre": "短评",
+  "style": [
+    "极简",
+    "哲思"
+  ],
+  "audience": [
+    "知识分子",
+    "读书人"
+  ],
+  "intent": [
+    "知识分享"
+  ],
+  "tone": [
+    "客观",
+    "冷静"
+  ],
+  "primary_question": "什么是人类—自然二元论？",
+  "thesis_type": "定义型",
+  "thesis_sentence": "本文仅作为一个日常知识卡片，旨在引出“人类—自然二元论”这一哲学/社会学术语。",
+  "structure_pattern": "碎片式",
+  "section_functions": [
+    "标题界定主题",
+    "日期标注",
+    "索引链接"
+  ],
+  "argument_moves": [
+    "提出核心术语",
+    "建立时间索引"
+  ],
+  "core_argument": "人类与自然的二元论是理解人地关系的核心视角（注：因原文正文缺失，仅能根据标题推断）。",
+  "key_points": [
+    "人类—自然二元论的概念提及",
+    "FBK翻书日签的品牌露出"
+  ],
+  "opening_pattern": "标题直接点题",
+  "ending_pattern": "链接重定向",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 0,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "客观描述",
+  "stance_strength": "中立",
+  "sentence_rhythm": "破碎",
+  "abstraction_level": "高抽象",
+  "transferable_moves": [
+    "采用日签形式进行每日知识点打卡",
+    "利用简洁的标题+日期组合进行内容归档"
+  ],
+  "anti_patterns": [
+    "内容空洞",
+    "缺乏正文阐述",
+    "信息密度极低"
+  ],
+  "notable_phrases": [
+    "人类—自然二元论"
+  ],
+  "title_score": 60,
+  "opening_score": 20,
+  "argument_score": 10,
+  "evidence_score": 0,
+  "structure_score": 20,
+  "style_score": 30,
+  "publishability_score": 30,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "本文为FBK（翻书党）于2023年3月4日发布的每日分享卡片。其核心内容仅包含“人类—自然二元论”这一概念标签，并配有相关链接。这类内容主要用于社群运营中的每日打卡和品牌存在感维护，不具备实质性的深度分析或叙述。",
+  "summary_500": "该文档属于典型的社交媒体日签式内容，主要用于FBK（翻书党）的日常运营。文章标题提出了“人类—自然二元论”这一跨学科的重要学术概念，但在正文中并未展开任何形式的定义、论证或案例说明。除日期、来源模式和链接信息外，无任何 substantive（实质性）文字。由于信息密度极低且缺乏正文，其主要价值在于作为品牌每日更新的索引。对于研究者或写作者而言，除了提供一个选题词（人类—自然二元论）外，不具备参考、学习或RAG写作的实质价值。在结构化分析中，这种类型的内容通常被标记为低价值。"
+}

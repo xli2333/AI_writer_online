@@ -1,0 +1,90 @@
+{
+  "id": "d0f30b7c42f2",
+  "year": "2024",
+  "date": "2024-03-07",
+  "title": "引人兴趣的媒介丨FBK翻书日签 2024年3月7日",
+  "relative_path": "2024/2024-03-07_引人兴趣的媒介丨FBK翻书日签 2024年3月7日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2024\\2024-03-07_引人兴趣的媒介丨FBK翻书日签 2024年3月7日.txt",
+  "char_count": 354,
+  "content_type": "社交媒体动态",
+  "industry": [
+    "文化传播",
+    "出版零售"
+  ],
+  "topic": [
+    "每日日签",
+    "阅读激励"
+  ],
+  "genre": "日签",
+  "style": [
+    "极简",
+    "仪式感"
+  ],
+  "audience": [
+    "读书爱好者",
+    "品牌订阅用户"
+  ],
+  "intent": [
+    "品牌心智建设",
+    "社群活跃"
+  ],
+  "tone": [
+    "文艺",
+    "平实"
+  ],
+  "primary_question": "2024年3月7日的每日阅读激励是什么？",
+  "thesis_type": "事实陈述",
+  "thesis_sentence": "通过每日一张图片和特定主题（引人兴趣的媒介）进行文化品牌曝光。",
+  "structure_pattern": "固定模板化结构",
+  "section_functions": [
+    "核心主题展示",
+    "发布时间标注",
+    "来源标识"
+  ],
+  "argument_moves": [
+    "通过重复性的品牌日签建立用户粘性"
+  ],
+  "core_argument": "由于正文主体为图片且文本内容极少，缺乏逻辑论证，仅作为日常内容分发的一个节点。",
+  "key_points": [
+    "主题为引人兴趣的媒介",
+    "内容形式为FBK翻书日签"
+  ],
+  "opening_pattern": "标题直入",
+  "ending_pattern": "系统自动抓取信息展示",
+  "evidence_types": [
+    "视觉媒介"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "客观叙述",
+  "stance_strength": "中立",
+  "sentence_rhythm": "短促",
+  "abstraction_level": "具象",
+  "transferable_moves": [
+    "采用固定命名格式（主题+品牌名+日期）增强搜索权重",
+    "利用‘日签’形式建立低成本、高频次的用户触达"
+  ],
+  "anti_patterns": [
+    "正文缺失文本导致SEO和RAG系统难以有效提取信息",
+    "完全依赖图片作为信息载体在内容失效时无法回溯"
+  ],
+  "notable_phrases": [
+    "引人兴趣的媒介",
+    "FBK翻书日签"
+  ],
+  "title_score": 40,
+  "opening_score": 20,
+  "argument_score": 5,
+  "evidence_score": 10,
+  "structure_score": 30,
+  "style_score": 20,
+  "publishability_score": 15,
+  "quality_score": 10,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为2024年3月7日的‘FBK翻书日签’，主题为‘引人兴趣的媒介’。其核心载体为图片，文本仅包含标题、日期和系统自动抓取的链接信息。作为典型的社交媒体日常打卡内容，其文本价值极低，缺乏深度的逻辑论证、事实证据或可迁移的专业洞见，仅能作为品牌视觉传播的一个样本存在，不具备实质性的阅读研究价值。",
+  "summary_500": "这篇文章是典型的社交媒体每日更新（日签）的存根或记录。其标题为‘引人兴趣的媒介丨FBK翻书日签 2024年3月7日’，明确了内容的主题、品牌来源及发布时间。然而，由于采集到的正文信息显示‘此页面触发全局图片搜索模式’，意味着核心内容（可能是一段名言、一张艺术海报或一本书籍推荐）完全承载于图片之中，而没有任何补充性的文本描述。从商业内容分析的角度看，这类内容的写作机制高度模板化，旨在通过每日低成本的视觉触达来维持用户活跃度。其结构仅由标题和系统链接组成，不具备分析价值。对于RAG或写作参考而言，此类样本的‘反模式’意义大于‘学习意义’，即：在构建数字化内容资产时，纯图片内容会导致语义索引失效，降低了内容的长期留存价值。除非是为了研究该品牌的视觉排版或日更策略，否则该文本在信息密度、证据特异性及论证强度等方面均属于极低水平，属于典型的低价值检索条目。"
+}

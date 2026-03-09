@@ -1,0 +1,89 @@
+{
+  "id": "4c4bea209b83",
+  "year": "2023",
+  "date": "2023-10-18",
+  "title": "诺贝尔经济学奖得主著作 钓愚 操纵与欺骗的经济学丨FBK翻书日签 2023年10月18日",
+  "relative_path": "2023/2023-10-18_诺贝尔经济学奖得主著作 钓愚 操纵与欺骗的经济学丨FBK翻书日签 2023年10月18日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-10-18_诺贝尔经济学奖得主著作 钓愚 操纵与欺骗的经济学丨FBK翻书日签 2023年10月18日.txt",
+  "char_count": 373,
+  "content_type": "书籍推荐日签",
+  "industry": [
+    "经济金融出版",
+    "学术研究"
+  ],
+  "topic": [
+    "经济学",
+    "行为经济学",
+    "市场监管"
+  ],
+  "genre": "信息卡片",
+  "style": [
+    "极简",
+    "资讯"
+  ],
+  "audience": [
+    "大众读者",
+    "财经专业人士"
+  ],
+  "intent": [
+    "书籍推广",
+    "每日阅读引导"
+  ],
+  "tone": [
+    "中立",
+    "庄重"
+  ],
+  "primary_question": "《钓愚》这本书的核心主题是什么？",
+  "thesis_type": "陈述型",
+  "thesis_sentence": "本书由诺贝尔经济学奖得主撰写，旨在揭示市场中普遍存在的操纵与欺骗行为。",
+  "structure_pattern": "极简型（标题+日期+元数据）",
+  "section_functions": [
+    "识别核心推荐书籍",
+    "标注日期与来源"
+  ],
+  "argument_moves": [
+    "利用诺贝尔奖得主的权威性进行背书"
+  ],
+  "core_argument": "由于内容极度缺失，无法提炼核心论证过程，仅表达了对特定书籍的关注。",
+  "key_points": [
+    "推荐书目：《钓愚：操纵与欺骗的经济学》",
+    "作者身份：诺贝尔经济学奖得主"
+  ],
+  "opening_pattern": "直陈式标题",
+  "ending_pattern": "链接标注",
+  "evidence_types": [
+    "权威背书"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "旁观",
+  "stance_strength": "中性",
+  "sentence_rhythm": "短促",
+  "abstraction_level": "中等",
+  "transferable_moves": [
+    "采用“日签”形式进行高频次的内容触达",
+    "利用诺奖等顶级标签进行书籍导流"
+  ],
+  "anti_patterns": [
+    "内容荒漠化：缺乏实质性文字描述",
+    "信息量极低：仅有标题而无书籍摘要或书评"
+  ],
+  "notable_phrases": [
+    "操纵与欺骗的经济学"
+  ],
+  "title_score": 65,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 10,
+  "structure_score": 20,
+  "style_score": 30,
+  "publishability_score": 20,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为2023年10月18日的“FBK翻书日签”，仅推荐了诺贝尔经济学奖得主的著作《钓愚：操纵与欺骗的经济学》。文章除书名、作者荣誉头衔和日期外，没有提供任何正文分析、背景介绍或核心观点解读，属于极低信息密度的内容导向片段。",
+  "summary_500": "这是一篇典型的低信息价值的微型导读卡片（日签）。其主要内容聚焦于推介由诺贝尔经济学奖得主乔治·阿克洛夫和罗伯特·希勒合著的《钓愚：操纵与欺骗的经济学》一书。正文部分极度匮乏，仅包含标题、发布日期以及指向微信公众号原始页面的链接。该内容没有展开论述，也没有提取书中的具体案例或理论框架，其存在形式更像是一种社交媒体上的每日阅读提醒或书目索引，而非具有深度阅读价值的文章。在RAG（检索增强生成）或人格提炼中，该条目仅能作为“某日期推荐过某书”的事实性元数据，不具备写作技巧的参考价值。"
+}

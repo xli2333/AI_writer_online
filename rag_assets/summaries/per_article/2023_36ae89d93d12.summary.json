@@ -1,0 +1,84 @@
+{
+  "id": "36ae89d93d12",
+  "year": "2023",
+  "date": "2023-02-05",
+  "title": "FBK翻书日签丨2023年2月5日",
+  "relative_path": "2023/2023-02-05_FBK翻书日签丨2023年2月5日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-02-05_FBK翻书日签丨2023年2月5日.txt",
+  "char_count": 346,
+  "content_type": "日签",
+  "industry": [
+    "文化",
+    "传媒"
+  ],
+  "topic": [
+    "每日阅读",
+    "品牌日常"
+  ],
+  "genre": "碎片化内容",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "品牌订阅用户"
+  ],
+  "intent": [
+    "品牌维护",
+    "日常打卡"
+  ],
+  "tone": [
+    "中性"
+  ],
+  "primary_question": "2023年2月5日的翻书日签内容是什么？",
+  "thesis_type": "无论点",
+  "thesis_sentence": "该文仅为每日固定的视觉卡片发布，无核心论点。",
+  "structure_pattern": "固定模板",
+  "section_functions": [
+    "日期标记",
+    "视觉元素展示"
+  ],
+  "argument_moves": [
+    "无"
+  ],
+  "core_argument": "无",
+  "key_points": [
+    "记录日期为2023年2月5日",
+    "包含一张日签图片"
+  ],
+  "opening_pattern": "固定化标题",
+  "ending_pattern": "无",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "中等",
+  "stance_strength": "中性",
+  "sentence_rhythm": "无",
+  "abstraction_level": "中等",
+  "transferable_moves": [
+    "利用日期建立仪式感",
+    "采用固定模板降低内容生产成本"
+  ],
+  "anti_patterns": [
+    "信息密度极低",
+    "缺乏文字交互",
+    "过度依赖视觉图片"
+  ],
+  "notable_phrases": [],
+  "title_score": 40,
+  "opening_score": 10,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 20,
+  "style_score": 30,
+  "publishability_score": 20,
+  "quality_score": 10,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为“FBK翻书”公众号于2023年2月5日发布的每日日签。文章除标题与日期外，正文仅包含一张图片，缺乏可供分析的文本内容。此类内容属于品牌运营中的低成本日常维护，主要作用是保持粉丝触达和品牌仪式感，不具备商业分析、写作借鉴或深度的参考价值。",
+  "summary_500": "本篇为2023年2月5日的“FBK翻书”日签推送。从结构上看，这属于极简的碎片化内容发布，采用标准化的命名规则和日期标记。正文部分完全由图片承载信息，没有任何文字阐述或逻辑论证，因此在知识提取和论证分析维度上属于极低价值数据。其核心功能在于通过每日打卡建立与读者的长期情感链接，而非传递信息或观点。在RAG（检索增强生成）系统中，此类内容通常被标记为低信息密度，仅适用于分析该品牌的发布频率和运营习惯，不推荐作为写作模板或知识点引用。"
+}

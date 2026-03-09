@@ -1,0 +1,90 @@
+{
+  "id": "b51ff6d0f6db",
+  "year": "2024",
+  "date": "2024-04-06",
+  "title": "过度暴露的城市丨FBK翻书日签 2024年4月6日",
+  "relative_path": "2024/2024-04-06_过度暴露的城市丨FBK翻书日签 2024年4月6日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2024\\2024-04-06_过度暴露的城市丨FBK翻书日签 2024年4月6日.txt",
+  "char_count": 354,
+  "content_type": "日签摘录",
+  "industry": [
+    "文化",
+    "出版",
+    "传媒"
+  ],
+  "topic": [
+    "城市研究",
+    "社会学",
+    "每日阅读"
+  ],
+  "genre": "文摘",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "阅读爱好者",
+    "城市研究者"
+  ],
+  "intent": [
+    "分享知识",
+    "品牌推广"
+  ],
+  "tone": [
+    "严肃",
+    "思辨"
+  ],
+  "primary_question": "当代城市在社会与空间意义上是如何被‘过度暴露’的？",
+  "thesis_type": "阐述型",
+  "thesis_sentence": "由于正文内容缺失，仅能根据标题‘过度暴露的城市’推测其探讨城市在当代环境下的透明度、监控或过度社交化问题。",
+  "structure_pattern": "碎片化结构",
+  "section_functions": [
+    "标题引导",
+    "元数据标注",
+    "视觉引导"
+  ],
+  "argument_moves": [
+    "提出核心概念"
+  ],
+  "core_argument": "由于内容缺失，无法提炼核心论点，仅能识别‘过度暴露的城市’这一主题方向。",
+  "key_points": [
+    "2024年4月6日日签",
+    "过度暴露的城市主题"
+  ],
+  "opening_pattern": "直叙式",
+  "ending_pattern": "信息占位式",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "远距离",
+  "stance_strength": "中立",
+  "sentence_rhythm": "无节奏感",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "使用‘日期+主题’的固定日签命名模板"
+  ],
+  "anti_patterns": [
+    "内容缺失",
+    "仅提供元数据而无实质正文",
+    "过度依赖外部链接"
+  ],
+  "notable_phrases": [
+    "过度暴露的城市"
+  ],
+  "title_score": 40,
+  "opening_score": 5,
+  "argument_score": 5,
+  "evidence_score": 0,
+  "structure_score": 10,
+  "style_score": 10,
+  "publishability_score": 5,
+  "quality_score": 10,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为2024年4月6日的‘FBK翻书日签’，主题为‘过度暴露的城市’。原文仅包含标题、日期和抓取链接，缺乏实质性正文内容。推测其原本形式可能为包含金句或书籍片段的图片。此类内容在文本层面信息密度极低，属于低价值数据。",
+  "summary_500": "这份文档记录了名为‘过度暴露的城市’的FBK翻书日签元数据，发布日期为2024年4月6日。从文本结构看，该页面并未包含实际的分析论证、案例或引用文字，仅保留了来源链接和一张缺失的图片提示。基于标题推测，其内容可能涉及社会学或城市研究中关于隐私、监控及城市透明度的探讨。然而，作为结构化分析的对象，由于缺乏核心文本支持，无法提炼写作机制、逻辑脉络或证据特征。在RAG（检索增强生成）或内容创作场景中，该文章由于信息量极度匮乏，不具备参考价值，建议标记为低质量数据。对于自动化处理而言，此类条目主要作为日签系列的发布日志记录，而非知识载体。"
+}

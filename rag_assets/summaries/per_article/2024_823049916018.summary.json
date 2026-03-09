@@ -1,0 +1,92 @@
+{
+  "id": "823049916018",
+  "year": "2024",
+  "date": "2024-03-12",
+  "title": "大象与跳蚤丨FBK翻书日签 2024年3月12日",
+  "relative_path": "2024/2024-03-12_大象与跳蚤丨FBK翻书日签 2024年3月12日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2024\\2024-03-12_大象与跳蚤丨FBK翻书日签 2024年3月12日.txt",
+  "char_count": 353,
+  "content_type": "每日日签",
+  "industry": [
+    "文化传媒",
+    "个人成长"
+  ],
+  "topic": [
+    "读书",
+    "思维方式"
+  ],
+  "genre": "碎片化短文",
+  "style": [
+    "极简",
+    "语录体"
+  ],
+  "audience": [
+    "职场人士",
+    "读书爱好者"
+  ],
+  "intent": [
+    "品牌留存",
+    "每日提醒"
+  ],
+  "tone": [
+    "沉静",
+    "启发性"
+  ],
+  "primary_question": "如何通过碎片化的每日金句与读者建立持续的连接？",
+  "thesis_type": "描述型",
+  "thesis_sentence": "通过系列化的日签形式，将经典书籍意象（如大象与跳蚤）转化为每日的仪式感内容。",
+  "structure_pattern": "固定模板结构",
+  "section_functions": [
+    "标题与日期标识",
+    "内容来源与链接引导"
+  ],
+  "argument_moves": [
+    "借用经典书籍意象进行隐喻",
+    "通过固定频率建立品牌共鸣"
+  ],
+  "core_argument": "通过每日更新的阅读金句，利用碎片时间为用户提供文化暗示和心理慰藉。",
+  "key_points": [
+    "固定栏目名称：FBK翻书日签",
+    "日期驱动的即时性内容",
+    "以《大象与跳蚤》等管理学/社会学意象作为当日主题"
+  ],
+  "opening_pattern": "直陈式标题",
+  "ending_pattern": "版权/来源标识",
+  "evidence_types": [
+    "书籍标题/意象引用"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 20,
+  "narrative_distance": "中立",
+  "stance_strength": "弱",
+  "sentence_rhythm": "破碎",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "建立标准化的内容输出模版",
+    "使用系列化的标题命名规则（标题+子栏目+日期）"
+  ],
+  "anti_patterns": [
+    "正文内容严重缺失",
+    "过度依赖外部链接或图片",
+    "信息密度极低，缺乏实质性论述"
+  ],
+  "notable_phrases": [
+    "大象与跳蚤",
+    "翻书日签"
+  ],
+  "title_score": 40,
+  "opening_score": 20,
+  "argument_score": 10,
+  "evidence_score": 10,
+  "structure_score": 30,
+  "style_score": 30,
+  "publishability_score": 20,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为FBK平台的每日阅读日签，主要以《大象与跳蚤》为当日主题。文章本身仅作为引子或图片的元数据展示，缺乏实质性的文字论述。其核心价值在于通过固定频率的“日签”形式进行品牌留存，但作为阅读材料，其信息密度极低，主要依赖图片或外部链接承载核心信息。",
+  "summary_500": "这是一篇典型的社交媒体碎片化内容，属于“FBK翻书日签”系列。文章由标题、日期、原始链接及系统抓取说明组成。其主要特征表现为：1. 极简主义结构：仅保留最基本的元数据信息，如日期（2024年3月12日）和主题意象（大象与跳蚤）。2. 品牌化运作：通过统一的栏目标识（FBK）和每日更新的频率，试图在读者心中建立阅读习惯的联想。3. 媒介错位：由于正文主要由图片承载，导致文本层面的可检索价值和分析价值极低。在写作机制上，该文展示了如何通过简单的标题模版进行内容系列化管理，但对于追求深度阅读或RAG语料库构建的用户而言，此类内容属于低价值数据，缺乏逻辑推演、论据支撑及明确的观点提炼。评价等级为低，主要作为一种运营动作而非知识传播文本存在。"
+}

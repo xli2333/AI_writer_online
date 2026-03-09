@@ -1,0 +1,86 @@
+{
+  "id": "d47815f6e1bd",
+  "year": "2023",
+  "date": "2023-10-15",
+  "title": "个人智造的最大障碍是？丨FBK翻书日签 2023年10月15日",
+  "relative_path": "2023/2023-10-15_个人智造的最大障碍是？丨FBK翻书日签 2023年10月15日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-10-15_个人智造的最大障碍是？丨FBK翻书日签 2023年10月15日.txt",
+  "char_count": 360,
+  "content_type": "日签",
+  "industry": [
+    "知识管理",
+    "个人成长"
+  ],
+  "topic": [
+    "个人智造",
+    "认知障碍"
+  ],
+  "genre": "格言/短语",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "知识工作者",
+    "终身学习者"
+  ],
+  "intent": [
+    "品牌传播",
+    "日常打卡"
+  ],
+  "tone": [
+    "启发性"
+  ],
+  "primary_question": "个人智造的最大障碍是？",
+  "thesis_type": "未充分展开",
+  "thesis_sentence": "原文仅提供标题及提问，未给出具体的论点或正文回答。",
+  "structure_pattern": "极简点状结构",
+  "section_functions": [
+    "通过标题引出核心思考题",
+    "标注发布日期与来源"
+  ],
+  "argument_moves": [
+    "提出问题"
+  ],
+  "core_argument": "由于正文缺失，无实质论证过程，仅停留在提出问题阶段。",
+  "key_points": [
+    "提出关于个人智造障碍的疑问"
+  ],
+  "opening_pattern": "提问式",
+  "ending_pattern": "日期标注式",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 0,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "远距离",
+  "stance_strength": "中性",
+  "sentence_rhythm": "极短促",
+  "abstraction_level": "高抽象",
+  "transferable_moves": [
+    "使用日签形式进行品牌日常内容输出",
+    "在标题中采用悬念式提问激发用户好奇心"
+  ],
+  "anti_patterns": [
+    "内容极度匮乏",
+    "仅提供标题而无实质正文",
+    "主要内容位于图片中导致文本无法检索"
+  ],
+  "notable_phrases": [
+    "个人智造"
+  ],
+  "title_score": 40,
+  "opening_score": 10,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 10,
+  "style_score": 10,
+  "publishability_score": 5,
+  "quality_score": 5,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为2023年10月15日的“FBK翻书日签”推送。标题提出了关于“个人智造最大障碍”的问题，意在引导读者思考，但全文除标题外无任何正文内容、逻辑论证或具体观点。这属于一种极简的品牌日常打卡形式，依赖图片展示核心信息，但在文本层面不具备实质性的阅读、检索或参考价值，是一篇信息密度极低、仅具占位作用的短文。",
+  "summary_500": "本篇文本属于极简的每日品牌内容输出（日签形式）。标题《个人智造的最大障碍是？》虽然通过提问的方式触及了个人成长和知识管理领域的一个深度话题，但遗憾的是，正文部分并没有提供任何具体的解答、案例、理论支持或文字论述。从数据分析的角度来看，由于该内容高度依赖于文中所附的（且当前不可见的）图片，其文本数据的信息密度几乎为零。其结构仅由一个问句式标题和日期信息构成，不符合常规文章的论证逻辑。在写作机制上，它采用了典型的悬念式开场，却缺乏后续的展开。对于AI模型、RAG系统或内容创作者而言，此类文本无法提供可供提取的知识点、论据或写作样态，除了作为品牌维护日常更新频率的案例外，不具备学习和迁徙的价值。因此，该文在质量评分、证据评分和论点评分等多个维度均处于极低水平，被判定为低价值信息。"
+}

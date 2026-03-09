@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  #root {
+    min-height: 100%;
+  }
+
+  body {
+    @apply bg-report-bg font-sans text-report-text antialiased;
+  }
+
+  table {
+    @apply w-full border-collapse text-left;
+  }
+
+  th {
+    @apply border-b border-gray-300 bg-gray-50 p-3 font-sans text-xs font-bold uppercase tracking-wider text-gray-600;
+  }
+
+  td {
+    @apply border-b border-gray-200 p-3 text-sm text-gray-700;
+  }
+}
+
+@layer utilities {
+  .pdf-avoid-break {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .article-copy {
+    font-weight: 400;
+    font-synthesis: none;
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}

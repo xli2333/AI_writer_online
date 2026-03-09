@@ -1,0 +1,93 @@
+{
+  "id": "dbdd853327c7",
+  "year": "2024",
+  "date": "2024-07-17",
+  "title": "你支持在当下发展Robotaxi无人出租车吗？（投票赢好礼）",
+  "relative_path": "2024/2024-07-17_你支持在当下发展Robotaxi无人出租车吗？（投票赢好礼）.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2024\\2024-07-17_你支持在当下发展Robotaxi无人出租车吗？（投票赢好礼）.txt",
+  "char_count": 386,
+  "content_type": "互动推文",
+  "industry": [
+    "自动驾驶",
+    "共享出行"
+  ],
+  "topic": [
+    "Robotaxi",
+    "无人驾驶",
+    "公众态度"
+  ],
+  "genre": "活动通知",
+  "style": [
+    "极简",
+    "互动式"
+  ],
+  "audience": [
+    "大众读者",
+    "社群粉丝"
+  ],
+  "intent": [
+    "用户互动",
+    "品牌推广"
+  ],
+  "tone": [
+    "询问式"
+  ],
+  "primary_question": "在当下环境里，大众是否支持Robotaxi无人出租车的发展？",
+  "thesis_type": "问题驱动型",
+  "thesis_sentence": "通过投票形式征集公众对Robotaxi发展的支持态度，以增强读者互动并推广杂志订阅。",
+  "structure_pattern": "互动触达结构",
+  "section_functions": [
+    "提出话题（标题引导）",
+    "互动转化（呼吁点赞、转发）",
+    "商业引流（扫码订阅杂志）",
+    "版权声明（转载说明）"
+  ],
+  "argument_moves": [
+    "利用热门科技争议点引起关注",
+    "通过利益点（赢好礼）驱动互动行为"
+  ],
+  "core_argument": "无实质论证过程，仅为话题发起。",
+  "key_points": [
+    "Robotaxi当下发展的社会接受度调查",
+    "引导用户关注并参与投票",
+    "杂志全年订阅征订宣传"
+  ],
+  "opening_pattern": "直接提问法",
+  "ending_pattern": "版权与推广说明",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 0,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "直接对话",
+  "stance_strength": "中立",
+  "sentence_rhythm": "短促",
+  "abstraction_level": "中等",
+  "transferable_moves": [
+    "使用（投票赢好礼）后缀增加点击率",
+    "在文末快速集成多项转化入口（订阅、转发、点赞）"
+  ],
+  "anti_patterns": [
+    "内容严重缺失（只有标题和互动入口，无实质观点）",
+    "信息密度过低，不具备阅读深度"
+  ],
+  "notable_phrases": [
+    "都看到这儿啦，点个赞",
+    "投票赢好礼"
+  ],
+  "title_score": 60,
+  "opening_score": 10,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 20,
+  "style_score": 30,
+  "publishability_score": 10,
+  "quality_score": 5,
+  "reference_value_score": 5,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "本文是“复旦商业知识”发布的一篇互动投票通知，旨在通过探讨Robotaxi（无人出租车）发展现状的热点话题吸引读者参与。文章正文极简，主要由标题、投票预告以及引导关注和征订杂志的运营信息组成。由于缺乏深度分析、数据支撑或逻辑论证，其实质商业内容价值极低，仅作为社群运营的互动工具使用。",
+  "summary_500": "此文为典型的自媒体互动类短贴，核心功能在于利用当时热门的Robotaxi（无人驾驶出租车）争议性话题，通过“投票赢好礼”的方式增加用户粘性。文章标题采用直接提问法，切入当下科技与社会矛盾的交汇点，具有较好的点击诱导性。然而，从内容结构来看，该文并无实质性的商业分析、行业观察或背景介绍，正文部分仅包含了编辑排版人员名单、点赞转发呼吁、杂志订阅广告以及转载声明。这种内容模式属于典型的“话题钩子”，其目的并非传递知识或深度洞察，而是为了提升公众号的活跃指标并引导线下杂志征订。对于寻求RAG语料或深度行业研究的分析师而言，此类内容属于低价值噪音，仅在研究公众号运营策略或社会舆论调查方法时具有一定的参考意义。"
+}

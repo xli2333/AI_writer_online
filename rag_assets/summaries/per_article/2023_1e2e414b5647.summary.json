@@ -1,0 +1,89 @@
+{
+  "id": "1e2e414b5647",
+  "year": "2023",
+  "date": "2023-03-21",
+  "title": "理念的力量丨FBK翻书日签 2023年3月21日",
+  "relative_path": "2023/2023-03-21_理念的力量丨FBK翻书日签 2023年3月21日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-03-21_理念的力量丨FBK翻书日签 2023年3月21日.txt",
+  "char_count": 353,
+  "content_type": "新媒体视觉日签",
+  "industry": [
+    "文化教育",
+    "个人成长"
+  ],
+  "topic": [
+    "思维理念",
+    "每日感悟"
+  ],
+  "genre": "日签",
+  "style": [
+    "极简",
+    "碎片化"
+  ],
+  "audience": [
+    "读书社群成员",
+    "知识付费用户"
+  ],
+  "intent": [
+    "品牌留存",
+    "日常触达"
+  ],
+  "tone": [
+    "启发性",
+    "仪式感"
+  ],
+  "primary_question": "如何通过每日金句传达品牌理念？",
+  "thesis_type": "宣称型",
+  "thesis_sentence": "通过标题“理念的力量”传达一种抽象的价值观导向。",
+  "structure_pattern": "固定模板式",
+  "section_functions": [
+    "标题引导",
+    "日期存证",
+    "视觉内容承载"
+  ],
+  "argument_moves": [
+    "通过标题建立心智暗示"
+  ],
+  "core_argument": "由于正文缺失，其核心逻辑仅存在于标题暗示的理念驱动力中。",
+  "key_points": [
+    "强调理念的力量",
+    "维持每日更新的节奏感"
+  ],
+  "opening_pattern": "直叙式标题",
+  "ending_pattern": "日期落款",
+  "evidence_types": [
+    "视觉图片"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 30,
+  "narrative_distance": "旁观者",
+  "stance_strength": "中立",
+  "sentence_rhythm": "极短",
+  "abstraction_level": "极高",
+  "transferable_moves": [
+    "利用‘日期+固定栏目名’构建社群仪式感"
+  ],
+  "anti_patterns": [
+    "正文无实质性文本内容",
+    "过度依赖图片导致文本可搜索性差",
+    "信息密度极低"
+  ],
+  "notable_phrases": [
+    "理念的力量"
+  ],
+  "title_score": 40,
+  "opening_score": 20,
+  "argument_score": 10,
+  "evidence_score": 5,
+  "structure_score": 30,
+  "style_score": 40,
+  "publishability_score": 20,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "本文为‘FBK翻书’社群发布的2023年3月21日日签。文章仅含标题‘理念的力量’及日期，核心语录或内容承载于图片中。由于缺乏正文论述，其功能仅限于社群日常打卡与品牌心智的微量维护，不具备文本层面的写作分析价值或深度知识含量。",
+  "summary_500": "该内容属于典型的社交媒体运营素材‘日签’。其结构由品牌标识、核心标题及日期组成。标题‘理念的力量’反映了内容定位在哲学思考或个人成长领域。然而，作为文本分析对象，该文信息密度极低，缺乏起承转合、证据支撑及论证逻辑。其主要价值在于作为社群运营的‘视觉触达’工具，通过每日不间断的更新维持用户感知。在RAG（检索增强生成）场景下，该类内容属于噪声或低权重数据，无法提供可迁移的写作技巧或事实证据。对于创作者而言，唯一的借鉴点在于其标准化的命名格式，便于自动化管理归档。"
+}

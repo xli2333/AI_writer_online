@@ -1,0 +1,83 @@
+{
+  "id": "8e8e4f6b7deb",
+  "year": "2024",
+  "date": "2024-02-27",
+  "title": "什么是文化？丨FBK翻书日签 2024年2月27日",
+  "relative_path": "2024/2024-02-27_什么是文化？丨FBK翻书日签 2024年2月27日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2024\\2024-02-27_什么是文化？丨FBK翻书日签 2024年2月27日.txt",
+  "char_count": 354,
+  "content_type": "日签",
+  "industry": [
+    "文化",
+    "出版"
+  ],
+  "topic": [
+    "文化定义"
+  ],
+  "genre": "微型文案",
+  "style": [
+    "简约"
+  ],
+  "audience": [
+    "大众读者"
+  ],
+  "intent": [
+    "品牌心智建设"
+  ],
+  "tone": [
+    "客观"
+  ],
+  "primary_question": "什么是文化？",
+  "thesis_type": "定义型",
+  "thesis_sentence": "原文未提供具体论点，仅以标题形式提出关于文化定义的疑问。",
+  "structure_pattern": "固定模板式",
+  "section_functions": [
+    "标题标识话题",
+    "日期标记时效",
+    "来源指向原文"
+  ],
+  "argument_moves": [
+    "提出开放性问题"
+  ],
+  "core_argument": "由于正文缺失，无法提炼核心论点。",
+  "key_points": [
+    "以‘什么是文化’为探讨主题",
+    "作为FBK翻书日签的系列内容"
+  ],
+  "opening_pattern": "直陈式标题",
+  "ending_pattern": "来源标注",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "远距离",
+  "stance_strength": "弱",
+  "sentence_rhythm": "无节奏",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "利用‘日签’形式进行每日话题打卡"
+  ],
+  "anti_patterns": [
+    "信息缺失（仅有标题无正文）",
+    "过度依赖外部链接"
+  ],
+  "notable_phrases": [
+    "什么是文化？"
+  ],
+  "title_score": 40,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 0,
+  "structure_score": 20,
+  "style_score": 20,
+  "publishability_score": 10,
+  "quality_score": 10,
+  "reference_value_score": 5,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该文本为“FBK翻书日签”的存档元数据，标题为“什么是文化？”，日期为2024年2月27日。文章正文内容缺失，仅包含标题、日期及系统自动生成的抓取信息。其主要作为活动记录存在，不具备实质性的阅读、论证或写作参考价值。",
+  "summary_500": "该内容属于典型的社交媒体微型内容存档，以“日签”形式呈现。其核心目标是通过每日一问或每日引言来维持品牌在读者面前的曝光度。本次分析的文本显示其标题探讨的是宏大的哲学与社会学命题——“什么是文化”。然而，由于输入数据仅包含了标题、日期、原始链接以及系统抓取说明，缺乏核心的引用语、解析或观点阐述，因此无法对其写作逻辑或论证深度进行分析。该文本在当前的形态下，主要功能是作为活动索引，而非知识传播或写作借鉴的素材。对于RAG系统或写作模型而言，该条目属于极低信息密度的低价值数据。"
+}

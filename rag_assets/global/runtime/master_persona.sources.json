@@ -1,0 +1,224 @@
+{
+  "model": "gemini-3-flash-preview",
+  "source_count": 36,
+  "updated_at": "2026-03-09T02:39:40.455Z",
+  "selected_articles": [
+    {
+      "id": "6baf8a4308a3",
+      "title": "要解锁新地图，先提升战斗力：建立有全球化思维的人才团队",
+      "quality_score": 88,
+      "reference_value_score": 90,
+      "publishability_score": 92
+    },
+    {
+      "id": "d7359b788e46",
+      "title": "回到工厂：那些诞生于制造业的管理传奇",
+      "quality_score": 95.5,
+      "reference_value_score": 98
+    },
+    {
+      "id": "e07d911493d4",
+      "title": "“万字拆解”：超172亿美元融资、51家最具颠覆性的初创企业",
+      "quality_score": 95.5,
+      "reference_value_score": 92
+    },
+    {
+      "id": "dd8fed917418",
+      "title": "一个与马斯克生活了近两年的男人，告诉你一个全新的马斯克",
+      "quality_score": 95,
+      "reference_value_score": 92
+    },
+    {
+      "id": "90ca655abc98",
+      "title": "大家都在讨论穿越周期，到底周期是怎么来的？（万字拆解“周期”）",
+      "quality_score": 95,
+      "reference_value_score": 92
+    },
+    {
+      "id": "8cc7cac3ad44",
+      "title": "万字拆解丨能源大变局：赵东元院士的远虑与创新",
+      "quality_score": 95,
+      "reference_value_score": 92
+    },
+    {
+      "id": "4026f18bbf88",
+      "title": "鲍勇剑：如何借用哲学思辨认识危机？",
+      "quality_score": 92.5,
+      "reference_value_score": 95
+    },
+    {
+      "id": "44faf0543e95",
+      "title": "张勇：海底捞商业帝国的底层逻辑",
+      "quality_score": 92.5,
+      "reference_value_score": 95
+    },
+    {
+      "id": "fede6fa56e75",
+      "title": "大卫•史文森：不走寻常路的投资大师",
+      "quality_score": 92.5,
+      "reference_value_score": 95
+    },
+    {
+      "id": "0026cfad629f",
+      "title": "中国AI制药第一股或将诞生，克服衰老是终极目标丨专访英矽智能创始人",
+      "quality_score": 92.5,
+      "reference_value_score": 95
+    },
+    {
+      "id": "e74e6024a669",
+      "title": "沃尔沃汽车CEO骆文襟：汽车行业的竞争最终仍将回归汽车的本质",
+      "quality_score": 92.5,
+      "reference_value_score": 95
+    },
+    {
+      "id": "87a83e059d59",
+      "title": "褚健丨中控三十年，如何铸就流程工业大国重器？",
+      "quality_score": 92.5,
+      "reference_value_score": 95
+    },
+    {
+      "id": "43618f5f8194",
+      "title": "陈晓萍×阿尼尔·赛斯丨意识是一种受控的幻觉？",
+      "quality_score": 92.5,
+      "reference_value_score": 95
+    },
+    {
+      "id": "994ae33d8126",
+      "title": "普利策奖得主悉达多·穆克吉的“新人类”探索丨前沿细胞科学为组织管理提供哪些启示？",
+      "quality_score": 92.5,
+      "reference_value_score": 95
+    },
+    {
+      "id": "615f5d807508",
+      "title": "OpenAI山姆·奥尔特曼最新专访：大公司对AI的无知与科创公司的巨大机遇丨AI最前沿",
+      "quality_score": 92.5,
+      "reference_value_score": 95
+    },
+    {
+      "id": "da926d0fb4c2",
+      "title": "全景拆解：李嘉诚要打包卖出的43个港口是怎么一回事？",
+      "quality_score": 92.5,
+      "reference_value_score": 95
+    },
+    {
+      "id": "5ff5e311764d",
+      "title": "张亚勤：后ChatGPT时代，中国人工智能产业的机遇、5大发展方向与3个预测",
+      "quality_score": 92.5,
+      "reference_value_score": 95
+    },
+    {
+      "id": "a27898011497",
+      "title": "中国AI医疗如何跨越专利悬崖与死亡之谷？",
+      "quality_score": 92.5,
+      "reference_value_score": 95
+    },
+    {
+      "id": "cedf4d5a8da4",
+      "title": "精益生产：从差不多主义到完美主义",
+      "quality_score": 92.5,
+      "reference_value_score": 95
+    },
+    {
+      "id": "8cfffa01b2e3",
+      "title": "林小英丨我听见回响",
+      "quality_score": 92.5,
+      "reference_value_score": 95
+    },
+    {
+      "id": "6c86ad384ef7",
+      "title": "胡佳丨做个会提供情绪价值的领导",
+      "quality_score": 92.5,
+      "reference_value_score": 95
+    },
+    {
+      "id": "fc7d54a6c904",
+      "title": "陈天桥最新撰文：管理学的黄昏与智能的黎明——重写企业的生物学基因",
+      "quality_score": 92.5,
+      "reference_value_score": 95
+    },
+    {
+      "id": "931e0f913fac",
+      "title": "红海危机、楼市变动、猪周期，背后都是谁在主导？（万字拆解“价格”）",
+      "quality_score": 92,
+      "reference_value_score": 95
+    },
+    {
+      "id": "6fd74c5b13b7",
+      "title": "当竞争对手敲钟上市，为什么你可以“开香槟”？",
+      "quality_score": 92,
+      "reference_value_score": 95
+    },
+    {
+      "id": "186560b2b56a",
+      "title": "一只兔子、一只狐狸和一条蛇的生意经",
+      "quality_score": 92,
+      "reference_value_score": 95
+    },
+    {
+      "id": "8f65fb43cd36",
+      "title": "陈天桥丨系统的融化：从AI赋能到AI原生",
+      "quality_score": 95,
+      "reference_value_score": 90
+    },
+    {
+      "id": "6ae520f36bbc",
+      "title": "张文宏、陆雄文、胡建强“关于生命的对话”：精准防控路在何方",
+      "quality_score": 90,
+      "reference_value_score": 95
+    },
+    {
+      "id": "47cab8afbbbb",
+      "title": "比亚迪出海：坐大巴出发，乘小车登陆",
+      "quality_score": 90,
+      "reference_value_score": 95
+    },
+    {
+      "id": "2a90d02e52ee",
+      "title": "英矽智能 亚历克斯：思维方式才是AI制药的底层逻辑",
+      "quality_score": 90,
+      "reference_value_score": 95
+    },
+    {
+      "id": "8b16bb94f0e9",
+      "title": "“任人唯亲”还会拐弯？管理者“爱屋及乌”的底层逻辑及其影响",
+      "quality_score": 90,
+      "reference_value_score": 95
+    },
+    {
+      "id": "a2a2b4804843",
+      "title": "沉迷荣誉会杀死创新？从格莱美新人奖“诅咒”看团队创新力",
+      "quality_score": 90,
+      "reference_value_score": 95
+    },
+    {
+      "id": "70ed552ac0ab",
+      "title": "周鸿祎：未来属于正确使用大模型的人",
+      "quality_score": 90,
+      "reference_value_score": 95
+    },
+    {
+      "id": "cfc4a78eb158",
+      "title": "全球管理思想家名人堂，为何向他打开？",
+      "quality_score": 90,
+      "reference_value_score": 95
+    },
+    {
+      "id": "84ba7042b541",
+      "title": "宁高宁：用使命和愿景驱动组织变革",
+      "quality_score": 90,
+      "reference_value_score": 95
+    },
+    {
+      "id": "2acf8af31c3b",
+      "title": "张乐天 宋怡明丨中国家族企业的文化底色",
+      "quality_score": 90,
+      "reference_value_score": 95
+    },
+    {
+      "id": "205dd10f0c5e",
+      "title": "中国电动车企出海受阻，“鲶鱼”特斯拉十年开路",
+      "quality_score": 90,
+      "reference_value_score": 95
+    }
+  ]
+}

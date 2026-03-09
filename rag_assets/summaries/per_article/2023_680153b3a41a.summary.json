@@ -1,0 +1,85 @@
+{
+  "id": "680153b3a41a",
+  "year": "2023",
+  "date": "2023-10-28",
+  "title": "基于数据分析力的竞争丨FBK翻书日签 2023年10月28日",
+  "relative_path": "2023/2023-10-28_基于数据分析力的竞争丨FBK翻书日签 2023年10月28日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-10-28_基于数据分析力的竞争丨FBK翻书日签 2023年10月28日.txt",
+  "char_count": 359,
+  "content_type": "社交媒体日签",
+  "industry": [
+    "通用商业",
+    "数据分析"
+  ],
+  "topic": [
+    "数据分析",
+    "竞争优势",
+    "商业洞察"
+  ],
+  "genre": "简讯",
+  "style": [
+    "极简",
+    "碎片化"
+  ],
+  "audience": [
+    "职场人士",
+    "数据工作者"
+  ],
+  "intent": [
+    "品牌曝光",
+    "每日打卡"
+  ],
+  "tone": [
+    "专业"
+  ],
+  "primary_question": "数据分析能力在现代企业竞争中占据什么地位？",
+  "thesis_type": "观点式",
+  "thesis_sentence": "现代商业竞争的核心维度之一在于企业对数据的深度分析与应用能力。",
+  "structure_pattern": "单点结构",
+  "section_functions": [
+    "标题界定主题"
+  ],
+  "argument_moves": [
+    "通过标题直接点明核心竞争要素"
+  ],
+  "core_argument": "数据分析力是当代企业竞争的关键驱动力。",
+  "key_points": [
+    "数据分析力作为竞争的基石"
+  ],
+  "opening_pattern": "标题直叙式",
+  "ending_pattern": "无",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "远距离",
+  "stance_strength": "中等",
+  "sentence_rhythm": "平缓",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "采用“日签”形式进行每日知识碎片输出以维持品牌活跃度"
+  ],
+  "anti_patterns": [
+    "内容过于空洞，缺乏实质性论述",
+    "链接占比较高而文本内容缺失"
+  ],
+  "notable_phrases": [
+    "基于数据分析力的竞争"
+  ],
+  "title_score": 40,
+  "opening_score": 10,
+  "argument_score": 10,
+  "evidence_score": 0,
+  "structure_score": 10,
+  "style_score": 20,
+  "publishability_score": 20,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "本文为FBK发布的2023年10月28日翻书日签，主题为“基于数据分析力的竞争”。内容形式极度简略，仅包含一个核心主题概念，旨在向读者传达数据分析能力在商业环境中的重要性。",
+  "summary_500": "该内容是典型的社交媒体每日打卡日签。正文缺失具体的论证过程、案例研究或详细的数据支持，仅通过标题“基于数据分析力的竞争”提出了一个宏观的商业观察点。其核心价值在于品牌日频的触达，而非深度的知识传递。在RAG写作或知识提取场景下，此类文本仅能作为一个主题标签使用，无法提供结构化的逻辑支撑或事实证据。"
+}

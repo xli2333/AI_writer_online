@@ -1,0 +1,82 @@
+{
+  "id": "d96fff367f2b",
+  "year": "2023",
+  "date": "2023-12-15",
+  "title": "上海，为什么是上海？",
+  "relative_path": "2023/2023-12-15_上海，为什么是上海？.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-12-15_上海，为什么是上海？.txt",
+  "char_count": 281,
+  "content_type": "文章索引",
+  "industry": [
+    "城市研究",
+    "宏观经济"
+  ],
+  "topic": [
+    "上海",
+    "城市发展"
+  ],
+  "genre": "分析报告",
+  "style": [
+    "简洁"
+  ],
+  "audience": [
+    "政策研究者",
+    "商业分析师",
+    "大众读者"
+  ],
+  "intent": [
+    "分析"
+  ],
+  "tone": [
+    "理性"
+  ],
+  "primary_question": "上海的城市地位及其独特性背后的逻辑是什么？",
+  "thesis_type": "因果分析",
+  "thesis_sentence": "由于正文内容缺失，仅提供标题，无法提取核心论点句。",
+  "structure_pattern": "未知",
+  "section_functions": [
+    "元数据展示: 提供标题、日期与来源链接"
+  ],
+  "argument_moves": [
+    "提出问题: 通过标题发出对上海独特性的追问"
+  ],
+  "core_argument": "信息不足，无法推导核心论点。",
+  "key_points": [
+    "标题：上海，为什么是上海？",
+    "日期：2023-12-15",
+    "来源：微信公众号（WeChat）"
+  ],
+  "opening_pattern": "提问式",
+  "ending_pattern": "无",
+  "evidence_types": [],
+  "evidence_specificity_score": 0,
+  "data_density_score": 0,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "中性",
+  "stance_strength": "中性",
+  "sentence_rhythm": "简洁",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "标题设计：使用'地点+追问'的格式引发读者的探索欲望"
+  ],
+  "anti_patterns": [
+    "内容缺失：文章仅包含元数据，缺乏实际论证过程"
+  ],
+  "notable_phrases": [
+    "上海，为什么是上海？"
+  ],
+  "title_score": 75,
+  "opening_score": 10,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 0,
+  "style_score": 20,
+  "publishability_score": 10,
+  "quality_score": 5,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该条目仅提供了标题、发布日期及链接信息，缺乏实际正文内容。从标题《上海，为什么是上海？》推测，这可能是一篇分析上海城市竞争力或文化底蕴的评论性文章。由于缺乏具体的论据、逻辑链条和段落结构，目前无法作为写作参考或深度分析素材。建议补充完整正文以进行有效的结构化提取。",
+  "summary_500": "本条目属于极低信息密度的内容存根。其主要包含以下信息：标题为《上海，为什么是上海？》，发布于2023年12月15日，来源为微信平台。文章标题采用了经典的‘现象+反问’结构，通常此类文章会从历史地位、经济政策、营商环境或文化特色等多个维度探讨上海作为超一线城市的独特性。然而，由于所给输入完全缺失正文，无法识别其论点（Thesis）、论证机制（Argument Moves）以及具体证据（Evidence Types）。从写作角度看，该标题具有较强的吸引力，属于典型的深度分析文章命名风格。但在目前的缺失状态下，该条目不具备RAG写作参考价值或人格提炼价值。建议在获取全文后，重点分析其在解释上海城市发展逻辑时所使用的案例和数据密度，从而判断其专业深度。"
+}

@@ -1,0 +1,90 @@
+{
+  "id": "43ee3de3cf08",
+  "year": "2023",
+  "date": "2023-08-14",
+  "title": "如何想到又做到丨FBK翻书日签 2023年8月14日",
+  "relative_path": "2023/2023-08-14_如何想到又做到丨FBK翻书日签 2023年8月14日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-08-14_如何想到又做到丨FBK翻书日签 2023年8月14日.txt",
+  "char_count": 355,
+  "content_type": "日签",
+  "industry": [
+    "个人成长",
+    "文化传播"
+  ],
+  "topic": [
+    "执行力",
+    "习惯养成"
+  ],
+  "genre": "碎片化语录",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "终身学习者",
+    "职场人士"
+  ],
+  "intent": [
+    "品牌留存",
+    "习惯提醒"
+  ],
+  "tone": [
+    "励志",
+    "平和"
+  ],
+  "primary_question": "如何克服从想法到行动之间的障碍？",
+  "thesis_type": "行动导向型",
+  "thesis_sentence": "通过每日一签的形式提醒用户关注《如何想到又做到》中的核心逻辑，促进从思维到行动的转化。",
+  "structure_pattern": "单点提示结构",
+  "section_functions": [
+    "标题展示主题",
+    "日期标记时效",
+    "链接提供溯源"
+  ],
+  "argument_moves": [
+    "利用书名直接点出核心痛点"
+  ],
+  "core_argument": "由于正文缺失，仅能推断其核心逻辑在于强调“做到”比“想到”更重要。",
+  "key_points": [
+    "2023年8月14日日签",
+    "推荐书籍/主题《如何想到又做到》"
+  ],
+  "opening_pattern": "直奔主题",
+  "ending_pattern": "信息截断",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 0,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "中性观察",
+  "stance_strength": "中等",
+  "sentence_rhythm": "极短促",
+  "abstraction_level": "高概括",
+  "transferable_moves": [
+    "采用‘书名+日期’的命名规范进行每日内容输出",
+    "利用‘日签’形式建立用户每日打卡的认知惯性"
+  ],
+  "anti_patterns": [
+    "内容过度稀疏，缺乏正文支撑",
+    "仅有标题无法构成完整的知识闭环",
+    "信息载体单一（依赖图片）"
+  ],
+  "notable_phrases": [
+    "如何想到又做到",
+    "FBK翻书日签"
+  ],
+  "title_score": 40,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 0,
+  "structure_score": 20,
+  "style_score": 30,
+  "publishability_score": 10,
+  "quality_score": 10,
+  "reference_value_score": 15,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为2023年8月14日的“FBK翻书日签”，其核心内容缺失，仅保留了标题《如何想到又做到》、日期及原始链接。这是一种碎片化的社交媒体激励内容，旨在通过书名传达“行动力”这一主题。由于缺乏正文论述、案例或具体方法论，作为文章阅读的价值极低，主要作为品牌打卡或导流入口存在。",
+  "summary_500": "本文档记录的是2023年8月14日发布的“FBK翻书日签”。从结构上看，该内容属于极简的碎片化信息，由标题、日期和外部链接组成，缺乏实质性的正文论证或细节描述。其标题《如何想到又做到》指向个人成长领域的执行力话题，暗示了内容可能来源于同名书籍的观点提炼。然而，由于采集到的数据仅包含元数据和图片搜索提示，没有具体的文字论据、逻辑推导或行动建议，因此在商业分析、RAG写作或深度知识检索中属于低价值条目。其唯一可参考的价值在于观察品牌如何利用“日签”这一产品形态进行高频次、轻量化的用户触达与品牌心智占据。对于AI分析而言，此样本提供了反面教材，即信息密度过低会导致无法提取有效的知识点或写作技巧。建议在实际应用中将其标记为占位符或低价值信息过滤掉。"
+}

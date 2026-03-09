@@ -1,0 +1,88 @@
+{
+  "id": "718d355d4c53",
+  "year": "2023",
+  "date": "2023-03-26",
+  "title": "艺术的敌人丨FBK翻书日签 2023年3月26日",
+  "relative_path": "2023/2023-03-26_艺术的敌人丨FBK翻书日签 2023年3月26日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-03-26_艺术的敌人丨FBK翻书日签 2023年3月26日.txt",
+  "char_count": 353,
+  "content_type": "社交媒体日签",
+  "industry": [
+    "文化艺术"
+  ],
+  "topic": [
+    "艺术哲学",
+    "名人名言"
+  ],
+  "genre": "格言日签",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "艺术爱好者",
+    "文艺青年"
+  ],
+  "intent": [
+    "审美分享",
+    "日常运营"
+  ],
+  "tone": [
+    "文艺",
+    "简约"
+  ],
+  "primary_question": "什么是艺术的敌人？",
+  "thesis_type": "引用式",
+  "thesis_sentence": "由于该内容为日签形式，其核心观点通常通过单张图片中的名言表达，正文无文字论述。",
+  "structure_pattern": "单图单句式",
+  "section_functions": [
+    "标题揭示主题",
+    "日期标记",
+    "视觉内容呈现"
+  ],
+  "argument_moves": [
+    "通过标题预设议题"
+  ],
+  "core_argument": "由于正文缺失，推测为探讨影响艺术创作或审美感知的负面因素。",
+  "key_points": [
+    "艺术的定义",
+    "创作的阻碍",
+    "审美与现实的冲突"
+  ],
+  "opening_pattern": "标题直入主题",
+  "ending_pattern": "留白式",
+  "evidence_types": [
+    "名人名言"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 5,
+  "quote_density_score": 90,
+  "narrative_distance": "中远距离",
+  "stance_strength": "中立",
+  "sentence_rhythm": "无明显节奏",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "利用垂直话题日签进行每日用户触达",
+    "通过悬念式标题（xx的敌人）引发读者好奇"
+  ],
+  "anti_patterns": [
+    "信息量极低，无法形成完整表达",
+    "过度依赖外部图片链接，正文缺乏留存价值"
+  ],
+  "notable_phrases": [
+    "艺术的敌人"
+  ],
+  "title_score": 65,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 5,
+  "structure_score": 20,
+  "style_score": 40,
+  "publishability_score": 15,
+  "quality_score": 10,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "本文是FBK公众号于2023年3月26日发布的每日日签，主题为“艺术的敌人”。文章仅包含标题、日期和一张图片的抓取记录，无实质性正文内容。这类内容在社交媒体运营中常作为图片卡片分发，通过引用艺术格言来实现每日品牌触达。但从文本分析的角度来看，由于缺乏论据、逻辑推演和具体文字内容，信息密度极低，不具备深度的内容参考价值。",
+  "summary_500": "此文档记录了“FBK翻书”公众号的一则日签推送。其标题定名为“艺术的敌人”，旨在通过极具张力的艺术哲学话题吸引特定受众的注意力。然而，该记录呈现出明显的“低信息密度”特征：正文除了基本的元数据（标题、日期、来源链接）以及系统生成的图片搜索提示外，没有任何实际的文本展开。这种“日签”模式的写作机制极度简化，仅作为一种视觉内容的引导，依靠读者的瞬间感悟而非逻辑说服。在知识管理和RAG（检索增强生成）场景中，该内容缺乏核心论点、事实证据或可迁移的深刻洞见。评分方面，因其作为“文章”的完整性极差，各项分值均被评定为低分。它仅能作为一个社交媒体运营的样式案例，展示如何利用固定栏目（如日签）维持低成本的每日更新频率，但在内容创作和思想传播层面，其实际价值接近于零。建议在构建知识库时将其标记为低价值占位符。"
+}

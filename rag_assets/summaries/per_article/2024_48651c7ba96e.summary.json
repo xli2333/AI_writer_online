@@ -1,0 +1,90 @@
+{
+  "id": "48651c7ba96e",
+  "year": "2024",
+  "date": "2024-01-10",
+  "title": "边界丨FBK翻书日签 2024年1月10日",
+  "relative_path": "2024/2024-01-10_边界丨FBK翻书日签 2024年1月10日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2024\\2024-01-10_边界丨FBK翻书日签 2024年1月10日.txt",
+  "char_count": 350,
+  "content_type": "日签",
+  "industry": [
+    "文化",
+    "传媒"
+  ],
+  "topic": [
+    "每日金句",
+    "阅读分享"
+  ],
+  "genre": "日签",
+  "style": [
+    "简约",
+    "碎片化"
+  ],
+  "audience": [
+    "品牌关注者",
+    "书友"
+  ],
+  "intent": [
+    "品牌维护",
+    "日常打卡"
+  ],
+  "tone": [
+    "中性",
+    "平实"
+  ],
+  "primary_question": "2024年1月10日的FBK翻书日签是什么内容？",
+  "thesis_type": "信息传达型",
+  "thesis_sentence": "本文系FBK翻书2024年1月10日的每日日签展示。",
+  "structure_pattern": "固定模板",
+  "section_functions": [
+    "标题标识内容属性",
+    "日期明确时效性",
+    "图片占位标识核心载体"
+  ],
+  "argument_moves": [
+    "通过日期进行序列化管理"
+  ],
+  "core_argument": "无实质性文字论点，核心信息由图片承载。",
+  "key_points": [
+    "2024年1月10日",
+    "FBK翻书品牌内容",
+    "边界主题"
+  ],
+  "opening_pattern": "直陈式标题",
+  "ending_pattern": "无",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "中立观察者",
+  "stance_strength": "中立",
+  "sentence_rhythm": "无",
+  "abstraction_level": "极低",
+  "transferable_moves": [
+    "系列化标题命名公式（主题+品牌名+日期）"
+  ],
+  "anti_patterns": [
+    "内容极度贫乏",
+    "缺乏文本解释导致无法检索核心信息"
+  ],
+  "notable_phrases": [
+    "边界",
+    "FBK翻书日签"
+  ],
+  "title_score": 40,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 5,
+  "structure_score": 20,
+  "style_score": 20,
+  "publishability_score": 10,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为“FBK翻书”于2024年1月10日发布的日签页面。由于原始文本仅包含标题和日期，且主要内容（金句或画面）以图片形式呈现，在文本层面缺乏可供分析的论点、证据或深度信息。此类内容属于高频、低密度的品牌日常运营碎片。",
+  "summary_500": "该条目属于“FBK翻书”系列日签的常规发布。文章标题采用了“主题（边界）+品牌名（FBK翻书日签）+日期（2024年1月10日）”的标准结构。正文部分仅包含日期信息及图片占位符，无任何实质性的文字论述、案例分析或逻辑推演。从写作机制来看，其核心价值仅在于品牌序列的完整性与日常活跃度展示。对于文本挖掘、RAG写作提炼或人格分析而言，该内容信息密度极低，不具备参考价值。唯一的迁移动作是其标准化的系列命名规范。对于此类内容，在知识库建设中建议作为低价值碎片处理。"
+}

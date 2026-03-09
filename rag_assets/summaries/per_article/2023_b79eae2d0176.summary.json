@@ -1,0 +1,90 @@
+{
+  "id": "b79eae2d0176",
+  "year": "2023",
+  "date": "2023-07-01",
+  "title": "世界是平的 托马斯·弗里德曼丨FBK翻书日签 2023年7月2日",
+  "relative_path": "2023/2023-07-01_世界是平的 托马斯·弗里德曼丨FBK翻书日签 2023年7月2日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-07-01_世界是平的 托马斯·弗里德曼丨FBK翻书日签 2023年7月2日.txt",
+  "char_count": 361,
+  "content_type": "读书日签",
+  "industry": [
+    "出版",
+    "新媒体"
+  ],
+  "topic": [
+    "全球化",
+    "推荐书目"
+  ],
+  "genre": "社交媒体简讯",
+  "style": [
+    "极简",
+    "模板化"
+  ],
+  "audience": [
+    "大众读者",
+    "职场人士"
+  ],
+  "intent": [
+    "品牌宣传",
+    "每日打卡"
+  ],
+  "tone": [
+    "客观"
+  ],
+  "primary_question": "今天推荐哪本书？",
+  "thesis_type": "信息展示型",
+  "thesis_sentence": "向读者推荐托马斯·弗里德曼的经典著作《世界是平的》并作为当日阅读指引。",
+  "structure_pattern": "标签化结构",
+  "section_functions": [
+    "提供日期定位",
+    "展示核心推荐内容（书名与作者）",
+    "标注内容来源"
+  ],
+  "argument_moves": [
+    "引用权威书目名号进行无声背书"
+  ],
+  "core_argument": "无实质性论证，仅为书目展示。",
+  "key_points": [
+    "书名：世界是平的",
+    "作者：托马斯·弗里德曼",
+    "日期：2023年7月2日"
+  ],
+  "opening_pattern": "直接罗列要素",
+  "ending_pattern": "元数据信息展示",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 5,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "中立观察",
+  "stance_strength": "中立",
+  "sentence_rhythm": "断裂感",
+  "abstraction_level": "具象",
+  "transferable_moves": [
+    "利用‘日签’形式进行高频次、低门槛的品牌露出",
+    "结合经典书目进行长尾内容运营"
+  ],
+  "anti_patterns": [
+    "正文内容极度缺失，缺乏实质阅读价值",
+    "信息高度碎片化，难以形成知识沉淀"
+  ],
+  "notable_phrases": [
+    "世界是平的",
+    "翻书日签"
+  ],
+  "title_score": 40,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 5,
+  "structure_score": 30,
+  "style_score": 20,
+  "publishability_score": 15,
+  "quality_score": 10,
+  "reference_value_score": 5,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该内容为FBK（冯仑风马牛）公众号的‘翻书日签’。发布于2023年7月1日，预告7月2日的阅读推荐。内容仅包含书名《世界是平的》、作者托马斯·弗里德曼以及日期信息。这是一种极简的社交媒体内容运营形式，旨在通过每日打卡增强品牌粘性。由于缺乏实质性的书评、摘要或导读，其信息密度极低，对深度学习或商业分析无直接参考价值。",
+  "summary_500": "该内容是针对移动社交媒体环境设计的极简‘日签’。其结构由品牌标识（FBK）、栏目名称（翻书日签）、书籍名称（世界是平的）、作者（托马斯·弗里德曼）及特定日期组成。从写作机制来看，它不具备传统意义上的论证或叙事，而是利用经典书名的权威性进行品牌关联。文章没有提供任何关于书籍核心观点、时代背景或现实意义的解析，也没有通过文字引导读者产生共鸣。这种内容的生产成本极低，主要作为一种自动化或标准化的视觉物料存在，用于填补每日推送的碎片化时间，或作为社群活跃的触达工具。在信息价值评级中，因其极度缺乏有效信息载体，被归类为低价值通知类内容。对于RAG系统或人格提炼而言，除了提供‘该品牌关注全球化经典书目’这一线索外，无法提供更多逻辑或修辞上的素材。"
+}

@@ -1,0 +1,85 @@
+{
+  "id": "5193d1c3ce26",
+  "year": "2023",
+  "date": "2023-02-11",
+  "title": "FBK翻书日签丨2023年2月12日",
+  "relative_path": "2023/2023-02-11_FBK翻书日签丨2023年2月12日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-02-11_FBK翻书日签丨2023年2月12日.txt",
+  "char_count": 347,
+  "content_type": "社交媒体日签",
+  "industry": [
+    "文化",
+    "传媒"
+  ],
+  "topic": [
+    "每日日签",
+    "碎片化阅读"
+  ],
+  "genre": "信息通告",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "公众号订阅者"
+  ],
+  "intent": [
+    "品牌触达",
+    "日常维护"
+  ],
+  "tone": [
+    "中立"
+  ],
+  "primary_question": "该文本仅为日期占位和链接记录，无核心探讨问题。",
+  "thesis_type": "无",
+  "thesis_sentence": "无",
+  "structure_pattern": "固定模板式",
+  "section_functions": [
+    "标识内容所属系列",
+    "标注发布日期",
+    "提供原文链接"
+  ],
+  "argument_moves": [
+    "无"
+  ],
+  "core_argument": "无",
+  "key_points": [
+    "FBK品牌于2023年2月12日发布的日签内容记录"
+  ],
+  "opening_pattern": "标题直入",
+  "ending_pattern": "链接收尾",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "远距离",
+  "stance_strength": "中立",
+  "sentence_rhythm": "短促",
+  "abstraction_level": "中等",
+  "transferable_moves": [
+    "使用固定前缀（FBK翻书日签）建立品牌辨识度"
+  ],
+  "anti_patterns": [
+    "内容极度缺失",
+    "无实质性文本信息",
+    "依赖外部链接"
+  ],
+  "notable_phrases": [
+    "FBK翻书日签"
+  ],
+  "title_score": 30,
+  "opening_score": 10,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 20,
+  "style_score": 10,
+  "publishability_score": 5,
+  "quality_score": 5,
+  "reference_value_score": 5,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该内容为2023年2月12日的FBK翻书日签记录。文中仅包含标题、发布日期及一个微信公众号链接，没有任何实质性的文字分析、观点表达或引用内容。从信息密度来看，属于极低价值的占位符式内容，仅起到留存和跳转指引的作用。",
+  "summary_500": "本条目记录了FBK翻书日签在2023年2月12日的发布动态。正文部分完全缺失实质性论述，主要由元数据组成，包括标题“FBK翻书日签丨2023年2月12日”、日期以及一个通往微信公众号的链接。根据解析结果，该页面核心内容可能是一张图片，导致文本层面的可读性极低。该文稿不具备写作参考价值，无任何逻辑架构、论据支持或修辞手法。在商业内容分析中，此类数据被归类为“低价值/通知类”，仅能用于品牌发文频次的统计，无法用于RAG写作辅助或人格特征提炼。"
+}

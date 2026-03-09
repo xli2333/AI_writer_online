@@ -1,0 +1,90 @@
+{
+  "id": "3f0608afa558",
+  "year": "2024",
+  "date": "2024-02-21",
+  "title": "重构人文学科和素养丨FBK翻书日签 2024年2月21日",
+  "relative_path": "2024/2024-02-21_重构人文学科和素养丨FBK翻书日签 2024年2月21日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2024\\2024-02-21_重构人文学科和素养丨FBK翻书日签 2024年2月21日.txt",
+  "char_count": 357,
+  "content_type": "日签",
+  "industry": [
+    "教育",
+    "文化传播"
+  ],
+  "topic": [
+    "人文学科",
+    "素养教育"
+  ],
+  "genre": "文摘",
+  "style": [
+    "极简",
+    "碎片化"
+  ],
+  "audience": [
+    "人文爱好者",
+    "教育从业者"
+  ],
+  "intent": [
+    "品牌心智建设",
+    "日常提醒"
+  ],
+  "tone": [
+    "严肃",
+    "启示性"
+  ],
+  "primary_question": "人文学科和素养在当代需要如何被重新审视？",
+  "thesis_type": "主张型",
+  "thesis_sentence": "在新的时代背景下，有必要重构人文学科的定义与个人的基本素养。",
+  "structure_pattern": "单点固定式",
+  "section_functions": [
+    "标题主题声明",
+    "日期与溯源标记"
+  ],
+  "argument_moves": [
+    "通过宏大命题吸引注意力",
+    "利用日签形式进行碎片化价值传递"
+  ],
+  "core_argument": "由于正文缺失，仅从标题推断其核心主张为“人文学科与素养需要进行重构”。",
+  "key_points": [
+    "重构人文学科",
+    "重构素养"
+  ],
+  "opening_pattern": "直接展示日期与核心命题",
+  "ending_pattern": "无",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "极远",
+  "stance_strength": "强",
+  "sentence_rhythm": "短促",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "日签这种极简的内容分发形式",
+    "将宏大叙事碎片化处理的技巧"
+  ],
+  "anti_patterns": [
+    "信息量严重不足",
+    "缺乏论证过程",
+    "过度依赖标题吸引力"
+  ],
+  "notable_phrases": [
+    "重构人文学科和素养"
+  ],
+  "title_score": 45,
+  "opening_score": 20,
+  "argument_score": 10,
+  "evidence_score": 0,
+  "structure_score": 20,
+  "style_score": 30,
+  "publishability_score": 20,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该内容为“FBK翻书”公众号的每日日签，发布于2024年2月21日。其标题提出了“重构人文学科和素养”的宏大命题，但内容形式仅为一张带有标题和日期的示意图或简短文字，缺乏实质性的论证、案例或深度分析。对于研究者而言，该内容仅具品牌运营参考意义，不具备学术或商业分析价值。",
+  "summary_500": "本文属于典型的社交媒体碎片化内容，以“日签”形式呈现。其核心主题定位于“重构人文学科和素养”，反映了出版或教育自媒体试图通过宏大话题维持社群活跃度的策略。然而，从写作机制角度看，该文本极度贫瘠：它没有提供任何逻辑推导、数据支持或具体案例，仅仅是一个观点标签的抛出。分项评分显示，其在论证、证据和结构得分上均处于极低水平（低于20分），属于信息密度极低、仅具通知或仪式感作用的内容。在RAG（检索增强生成）系统中，这类数据通常应被过滤或标记为低权重，因为其无法提供有效的知识支撑。对于写作者而言，唯一的迁移动作是观察其如何利用品牌统一格式进行每日打卡，而在内容深度上没有学习价值。"
+}

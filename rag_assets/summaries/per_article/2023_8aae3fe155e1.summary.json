@@ -1,0 +1,83 @@
+{
+  "id": "8aae3fe155e1",
+  "year": "2023",
+  "date": "2023-02-15",
+  "title": "FBK翻书日签丨2023年2月15日",
+  "relative_path": "2023/2023-02-15_FBK翻书日签丨2023年2月15日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-02-15_FBK翻书日签丨2023年2月15日.txt",
+  "char_count": 347,
+  "content_type": "日签",
+  "industry": [
+    "文化传播"
+  ],
+  "topic": [
+    "每日语录",
+    "品牌留存"
+  ],
+  "genre": "碎片化内容",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "社群订阅用户"
+  ],
+  "intent": [
+    "品牌触达"
+  ],
+  "tone": [
+    "中立"
+  ],
+  "primary_question": "今日的日签内容是什么？",
+  "thesis_type": "描述型",
+  "thesis_sentence": "该文章仅为FBK翻书日签的每日固定发布，主要通过图片形式传递信息。",
+  "structure_pattern": "固定模板",
+  "section_functions": [
+    "展示标题与日期",
+    "提示图片内容"
+  ],
+  "argument_moves": [
+    "无实质性论证"
+  ],
+  "core_argument": "无实质性核心观点",
+  "key_points": [
+    "FBK翻书品牌每日打卡",
+    "包含一张日签图片"
+  ],
+  "opening_pattern": "固定标题式",
+  "ending_pattern": "无结尾",
+  "evidence_types": [
+    "图片证据"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "中远",
+  "stance_strength": "中立",
+  "sentence_rhythm": "无",
+  "abstraction_level": "具象",
+  "transferable_moves": [
+    "利用固定日期标题维持发布节奏"
+  ],
+  "anti_patterns": [
+    "正文无实质内容",
+    "过度依赖图片导致信息检索困难",
+    "低信息密度"
+  ],
+  "notable_phrases": [
+    "FBK翻书日签"
+  ],
+  "title_score": 30,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 5,
+  "structure_score": 20,
+  "style_score": 20,
+  "publishability_score": 10,
+  "quality_score": 10,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为FBK翻书机构在2023年2月15日发布的每日日签。文章主体仅包含标题、日期及一张图片提示，缺乏文字性的商业分析、观点陈述或实质性信息。此类内容主要用于社群运营中的日常打卡和品牌存在感维护，对于研究写作机制或获取深度知识无参考价值。",
+  "summary_500": "该内容属于典型的品牌每日运营碎片。标题采取‘品牌+产品名+日期’的标准格式，正文极简，基本无有效文字信息。通过分析，其发布目的在于维持订阅用户的日常品牌触达，而非传递复杂的逻辑或数据。由于该文章在抓取时仅呈现了图片占位符且无任何文字导读，其信息密度处于极低水平。在商业写作分析中，此类内容被归类为‘低价值存量’，无法提供可迁移的论证模式或深度的行业洞察。建议在RAG写作或知识库构建中将其标记为低权重，仅作为品牌发布频率的统计参考。"
+}

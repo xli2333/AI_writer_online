@@ -1,0 +1,86 @@
+{
+  "id": "5121e7595ee0",
+  "year": "2023",
+  "date": "2023-09-02",
+  "title": "齐格蒙特·鲍曼：工作、消费主义和新穷人丨FBK翻书日签 2023年9月2日",
+  "relative_path": "2023/2023-09-02_齐格蒙特·鲍曼：工作、消费主义和新穷人丨FBK翻书日签 2023年9月2日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-09-02_齐格蒙特·鲍曼：工作、消费主义和新穷人丨FBK翻书日签 2023年9月2日.txt",
+  "char_count": 366,
+  "content_type": "读书日签",
+  "industry": [
+    "出版",
+    "社会科学"
+  ],
+  "topic": [
+    "齐格蒙特·鲍曼",
+    "消费主义",
+    "社会学"
+  ],
+  "genre": "摘要",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "读书爱好者",
+    "社科研究者"
+  ],
+  "intent": [
+    "内容引荐",
+    "品牌留存"
+  ],
+  "tone": [
+    "中立"
+  ],
+  "primary_question": "本文的主要内容是什么？",
+  "thesis_type": "描述性陈述",
+  "thesis_sentence": "本文仅作为一个每日读书日签的记录，提及了齐格蒙特·鲍曼的书籍名称。",
+  "structure_pattern": "单点式",
+  "section_functions": [
+    "标题展示核心书籍",
+    "记录发布日期"
+  ],
+  "argument_moves": [
+    "提及经典著作名称"
+  ],
+  "core_argument": "由于正文内容缺失，本文无核心论点。",
+  "key_points": [
+    "提及鲍曼及其著作《工作、消费主义和新穷人》"
+  ],
+  "opening_pattern": "标题直入式",
+  "ending_pattern": "元数据结尾",
+  "evidence_types": [
+    "书名"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "远观",
+  "stance_strength": "中立",
+  "sentence_rhythm": "无节奏感",
+  "abstraction_level": "中等",
+  "transferable_moves": [
+    "利用‘日签’形式进行每日内容分发和读者触达"
+  ],
+  "anti_patterns": [
+    "正文内容严重缺失",
+    "缺乏深度解读",
+    "属于无效采集片段"
+  ],
+  "notable_phrases": [
+    "工作、消费主义和新穷人"
+  ],
+  "title_score": 40,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 5,
+  "structure_score": 10,
+  "style_score": 10,
+  "publishability_score": 10,
+  "quality_score": 10,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为2023年9月2日的FBK翻书日签，仅列出了齐格蒙特·鲍曼及其著作《工作、消费主义和新穷人》的标题，正文内容缺失，除书名信息外不具备实质性的阅读或分析价值。",
+  "summary_500": "本条目是对名为《齐格蒙特·鲍曼：工作、消费主义和新穷人丨FBK翻书日签 2023年9月2日》的内容分析。该文本实质上是一个读书社群的每日签到记录，主要功能是向读者推荐或提醒社会学家齐格蒙特·鲍曼的经典作品。鲍曼的《工作、消费主义和新穷人》是探讨现代性、消费社会及社会分层的重要著作。然而，由于提供的原始文本仅包含标题、日期和链接信息，且正文部分提示为全局图片搜索模式而无文字叙述，因此该内容在写作机制上处于真空状态。从结构上看，它属于极简的单点式，缺乏论证、证据和叙述。在各项评分中，由于信息密度极低且不具备完整的成文价值，其质量分数和参考价值分数均处于极低水平。此类内容在RAG（检索增强生成）系统中仅可作为书名关联的索引，而不具备深度学习或风格迁移的参考意义。"
+}

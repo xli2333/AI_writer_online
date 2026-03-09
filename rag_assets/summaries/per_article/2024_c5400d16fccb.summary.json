@@ -1,0 +1,87 @@
+{
+  "id": "c5400d16fccb",
+  "year": "2024",
+  "date": "2024-03-15",
+  "title": "品牌社会学丨FBK翻书日签 2024年3月15日",
+  "relative_path": "2024/2024-03-15_品牌社会学丨FBK翻书日签 2024年3月15日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2024\\2024-03-15_品牌社会学丨FBK翻书日签 2024年3月15日.txt",
+  "char_count": 353,
+  "content_type": "日签",
+  "industry": [
+    "广告营销",
+    "品牌管理"
+  ],
+  "topic": [
+    "品牌社会学",
+    "每日打卡"
+  ],
+  "genre": "碎片化短文",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "营销从业者",
+    "社群成员"
+  ],
+  "intent": [
+    "品牌建设",
+    "用户留存"
+  ],
+  "tone": [
+    "事务性"
+  ],
+  "primary_question": "该内容无具体问题陈述。",
+  "thesis_type": "描述性",
+  "thesis_sentence": "该文仅作为品牌日签的发布记录，无明确中心论点。",
+  "structure_pattern": "固定模板结构",
+  "section_functions": [
+    "标识内容系列与日期",
+    "提供原始来源链接"
+  ],
+  "argument_moves": [
+    "无实质论证动作"
+  ],
+  "core_argument": "无实质论证内容。",
+  "key_points": [
+    "标记了2024年3月15日的日签发布",
+    "涉及品牌社会学主题"
+  ],
+  "opening_pattern": "直陈式标题",
+  "ending_pattern": "缺失",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 0,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "中立",
+  "stance_strength": "中立",
+  "sentence_rhythm": "无",
+  "abstraction_level": "中",
+  "transferable_moves": [
+    "利用系列化标题进行每日内容的品牌化管理"
+  ],
+  "anti_patterns": [
+    "信息高度缺失",
+    "依赖外部链接而无正文解释",
+    "低信息密度占位"
+  ],
+  "notable_phrases": [
+    "品牌社会学",
+    "FBK翻书日签"
+  ],
+  "title_score": 30,
+  "opening_score": 10,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 20,
+  "style_score": 20,
+  "publishability_score": 10,
+  "quality_score": 5,
+  "reference_value_score": 5,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该文本仅为“FBK翻书日签”在2024年3月15日的发布记录，除了标题、日期和原始链接外，不包含任何实质性的正文内容、观点陈述或逻辑论证。其功能仅为品牌在特定日期的占位或记录，对于需要获取行业深度见解、写作技巧或案例分析的用户而言，该内容不具备参考价值。",
+  "summary_500": "本条目记录了标题为“品牌社会学丨FBK翻书日签 2024年3月15日”的内容发布信息。从抓取到的正文来看，该页面主要触发了图片的全局搜索模式，并未包含可供分析的文本论据或思想输出。这类内容在公众号运营中通常以“日签图”形式存在，其核心价值在于视觉设计和每日金句，而非文字分析。因此，在结构化数据分析中，其在逻辑论证、证据强度及写作参考度等维度的得分极低。此类信息仅适用于追踪品牌发布频率，不适合作为RAG（检索增强生成）写作的素材来源或商业逻辑分析的样本。对于商业分析师而言，这属于无效或低价值信息，建议在知识库建设中予以过滤或降权。"
+}

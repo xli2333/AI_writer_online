@@ -1,0 +1,92 @@
+{
+  "id": "7db4808b59cb",
+  "year": "2023",
+  "date": "2023-03-18",
+  "title": "人居与景观想象丨FBK翻书日签 2023年3月18日",
+  "relative_path": "2023/2023-03-18_人居与景观想象丨FBK翻书日签 2023年3月18日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-03-18_人居与景观想象丨FBK翻书日签 2023年3月18日.txt",
+  "char_count": 355,
+  "content_type": "日签",
+  "industry": [
+    "建筑设计",
+    "景观设计",
+    "文化传媒"
+  ],
+  "topic": [
+    "人居环境",
+    "景观想象"
+  ],
+  "genre": "文摘",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "设计师",
+    "建筑爱好者",
+    "文化关注者"
+  ],
+  "intent": [
+    "品牌宣发",
+    "日常更新"
+  ],
+  "tone": [
+    "客观",
+    "文艺"
+  ],
+  "primary_question": "2023年3月18日的翻书日签主题是什么？",
+  "thesis_type": "阐述型",
+  "thesis_sentence": "文章作为FBK品牌的日签内容，旨在通过“人居与景观想象”这一主题进行每日品牌触达。",
+  "structure_pattern": "单体式",
+  "section_functions": [
+    "主题公示：标注讨论的核心范畴",
+    "日期标注：明确内容的实效性",
+    "引导跳转：提供外部原文链接"
+  ],
+  "argument_moves": [
+    "仅提供主题关键词，无实质论证步骤"
+  ],
+  "core_argument": "该文本不包含实质性论证，仅为特定日期下的主题词展示。",
+  "key_points": [
+    "主题为人居与景观想象",
+    "发布时间为2023年3月18日",
+    "属于FBK翻书日签系列"
+  ],
+  "opening_pattern": "直白标题",
+  "ending_pattern": "来源说明",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "远距离",
+  "stance_strength": "中性",
+  "sentence_rhythm": "短促",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "利用‘日签’形式进行品牌每日触达和心智占领",
+    "结合日期与核心行业关键词进行微型内容分发"
+  ],
+  "anti_patterns": [
+    "内容极度空泛，缺乏实质性信息",
+    "过度依赖外部链接而无本地核心内容",
+    "纯通知性文字，缺乏阅读获得感"
+  ],
+  "notable_phrases": [
+    "人居与景观想象"
+  ],
+  "title_score": 40,
+  "opening_score": 20,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 30,
+  "style_score": 30,
+  "publishability_score": 10,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该文本为FBK发布的2023年3月18日“翻书日签”，主题聚焦于“人居与景观想象”。内容极简，仅包含标题、日期及跳转链接，缺乏具体的正文描述、案例分析或逻辑论证。属于信息密度极低的日常维护性内容，主要用于品牌在社交媒体的持续存在感及简单的主题指引，对于研究或深度学习不具备参考价值。",
+  "summary_500": "本次分析的对象是一篇极简形式的社交媒体“日签”记录。标题明确标注为《人居与景观想象丨FBK翻书日签 2023年3月18日》，其核心功能在于品牌每日的仪式感呈现与内容导流。在内容层面，该文本几乎没有提供任何实质性的知识输出，仅提出了“人居”与“景观想象”两个宏观概念，并附带了微信公众号的原始链接。由于正文缺失论点展开、背景说明或任何实质性的见解，其写作机制仅表现为最基础的单体结构，不涉及复杂的论证逻辑。在质量评分上，由于该内容完全属于通知性质且信息量极小，各项专业写作指标均处于极低区间。其主要价值仅在于作为品牌运营的时间戳，而非可供学习的文本范式。对于RAG系统或知识库而言，此类内容应被标记为“低信息密度”，在检索优先级中置底。建议仅将其视为品牌动态记录，无需深入分析其修辞或结构。"
+}

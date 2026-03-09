@@ -1,0 +1,83 @@
+{
+  "id": "856cc8defb9d",
+  "year": "2023",
+  "date": "2023-02-20",
+  "title": "FBK翻书日签丨2023年2月20日",
+  "relative_path": "2023/2023-02-20_FBK翻书日签丨2023年2月20日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-02-20_FBK翻书日签丨2023年2月20日.txt",
+  "char_count": 347,
+  "content_type": "社交媒体动态",
+  "industry": [
+    "文化传播"
+  ],
+  "topic": [
+    "每日日签",
+    "碎片化阅读"
+  ],
+  "genre": "日签",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "泛大众"
+  ],
+  "intent": [
+    "品牌留存",
+    "日常更新"
+  ],
+  "tone": [
+    "中性"
+  ],
+  "primary_question": "2023年2月20日的日签内容是什么？",
+  "thesis_type": "记录型",
+  "thesis_sentence": "本文仅作为2023年2月20日FBK翻书日签的发布载体。",
+  "structure_pattern": "固定模板",
+  "section_functions": [
+    "标题标识",
+    "日期标注",
+    "来源指向"
+  ],
+  "argument_moves": [
+    "展示日期",
+    "提供原始链接"
+  ],
+  "core_argument": "无实质性文本论证，仅为日常性的仪式化内容发布。",
+  "key_points": [
+    "发布日期为2023年2月20日",
+    "内容形式为图片导向的日签"
+  ],
+  "opening_pattern": "直陈式标题",
+  "ending_pattern": "系统提示",
+  "evidence_types": [
+    "时间戳"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "客观叙述",
+  "stance_strength": "中立",
+  "sentence_rhythm": "短促",
+  "abstraction_level": "具象",
+  "transferable_moves": [
+    "使用统一的日签命名规范进行品牌日常运营"
+  ],
+  "anti_patterns": [
+    "正文缺失：除了标题和日期外没有实质性文字内容",
+    "过度依赖外部链接：主要信息承载于无法直接在文本中查看的图片或链接"
+  ],
+  "notable_phrases": [],
+  "title_score": 40,
+  "opening_score": 20,
+  "argument_score": 0,
+  "evidence_score": 10,
+  "structure_score": 30,
+  "style_score": 20,
+  "publishability_score": 10,
+  "quality_score": 15,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该文章是FBK平台于2023年2月20日发布的每日日签动态。文章内容极度简略，仅包含标题、日期和原始微信链接，实质性的内容（日签图片）在当前文本中无法体现。这类内容通常属于高频次、低信息量的品牌留存手段，旨在通过每日更新维持账号活跃度，但对于RAG写作或深度内容提炼而言，几乎不具备参考价值。",
+  "summary_500": "本条目为2023年2月20日的“FBK翻书日签”。从结构化分析的角度看，该文本属于典型的“极简仪式化发布”。其内容构成仅限于标题、发布日期以及指向微信公众平台的原始链接。文中明确标注“此页面触发全局图片搜索模式”，暗示其实际核心信息是以图片形式呈现的日签内容，而文本部分仅作为元数据存在。由于缺乏实质性的观点陈述、论据支撑或案例分析，该文章在信息密度和证据特征上的得分极低。其写作机制完全遵循固定模板，通过日期化的命名方式进行管理。这种模式的主要作用是品牌留存和用户习惯养成，但在学术或商业分析层面，其参考价值仅限于研究账号的日常运营节奏，而非内容本身。文章属于低价值信息，不具备转化为高质量知识库条目的条件。"
+}

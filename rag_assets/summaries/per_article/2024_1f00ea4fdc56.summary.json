@@ -1,0 +1,81 @@
+{
+  "id": "1f00ea4fdc56",
+  "year": "2024",
+  "date": "2024-02-28",
+  "title": "FBK翻书日签 2024年2月28日",
+  "relative_path": "2024/2024-02-28_FBK翻书日签 2024年2月28日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2024\\2024-02-28_FBK翻书日签 2024年2月28日.txt",
+  "char_count": 347,
+  "content_type": "每日资讯",
+  "industry": [
+    "文化传播"
+  ],
+  "topic": [
+    "日签",
+    "阅读"
+  ],
+  "genre": "简报",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "日常读者"
+  ],
+  "intent": [
+    "日常维护"
+  ],
+  "tone": [
+    "中立"
+  ],
+  "primary_question": "2024年2月28日的翻书日签内容是什么？",
+  "thesis_type": "描述性",
+  "thesis_sentence": "本文仅提供2024年2月28日FBK翻书日签的检索索引及外部链接。",
+  "structure_pattern": "列表式",
+  "section_functions": [
+    "信息定位",
+    "外部链接跳转"
+  ],
+  "argument_moves": [
+    "提供元数据"
+  ],
+  "core_argument": "无实质性文字论点，仅为日常更新的占位符或索引。",
+  "key_points": [
+    "日期：2024年2月28日",
+    "来源：微信公众号原文链接"
+  ],
+  "opening_pattern": "直奔主题",
+  "ending_pattern": "缺失",
+  "evidence_types": [
+    "外部链接"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "远",
+  "stance_strength": "中立",
+  "sentence_rhythm": "零散",
+  "abstraction_level": "中",
+  "transferable_moves": [
+    "使用标准化的元数据记录方式"
+  ],
+  "anti_patterns": [
+    "正文内容缺失",
+    "过度依赖外部链接",
+    "无实质性文字描述"
+  ],
+  "notable_phrases": [],
+  "title_score": 20,
+  "opening_score": 10,
+  "argument_score": 0,
+  "evidence_score": 5,
+  "structure_score": 10,
+  "style_score": 10,
+  "publishability_score": 5,
+  "quality_score": 5,
+  "reference_value_score": 2,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该文章为2024年2月28日的“FBK翻书日签”日常索引，主要内容仅包含标题、发布日期、微信原始链接以及图片识别状态说明。正文缺乏任何文字叙述、观点分享或实质性内容。对于文字写作与知识传播而言，该篇内容属于极低信息密度的占位性信息，其主要功能是作为日签图片的外部导航，不具备深度阅读或分析的价值。",
+  "summary_500": "该文档是2024年2月28日发布的“FBK翻书日签”记录。在结构上，它采用了极简的元数据展示方式，包括标题、具体日期和来源链接。由于该内容在抓取或展示时被识别为触发了图片搜索模式且仅找到一张图片，导致其文字部分除了基本的元信息外处于真空状态。此类文章在商业内容分析中属于典型的“占位符”或“活动通知”类低价值内容，无法从中提取写作机制、论证逻辑或特定的语言风格。其存在仅具有档案检索意义，即证明该品牌在特定日期进行了内容更新，但对RAG写作或人格提炼不提供实质性支撑。"
+}

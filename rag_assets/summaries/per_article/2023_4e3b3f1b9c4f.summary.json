@@ -1,0 +1,91 @@
+{
+  "id": "4e3b3f1b9c4f",
+  "year": "2023",
+  "date": "2023-07-24",
+  "title": "想象的全球化丨FBK翻书日签 2023年7月25日",
+  "relative_path": "2023/2023-07-24_想象的全球化丨FBK翻书日签 2023年7月25日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-07-24_想象的全球化丨FBK翻书日签 2023年7月25日.txt",
+  "char_count": 354,
+  "content_type": "日签",
+  "industry": [
+    "文化传播",
+    "自媒体"
+  ],
+  "topic": [
+    "全球化",
+    "书籍摘录"
+  ],
+  "genre": "碎片化推文",
+  "style": [
+    "极简",
+    "意识流"
+  ],
+  "audience": [
+    "书籍爱好者",
+    "文化消费者"
+  ],
+  "intent": [
+    "品牌维护",
+    "用户活跃"
+  ],
+  "tone": [
+    "文艺",
+    "哲理"
+  ],
+  "primary_question": "“想象的全球化”这一概念在当下有何文化内涵？",
+  "thesis_type": "描述性",
+  "thesis_sentence": "通过每日日签的形式，以“想象的全球化”为题，触发读者的文化联想。",
+  "structure_pattern": "视觉中心模式",
+  "section_functions": [
+    "主题展示",
+    "元数据呈现",
+    "视觉引导"
+  ],
+  "argument_moves": [
+    "提出抽象概念",
+    "利用视觉留白"
+  ],
+  "core_argument": "文章缺乏文本论证，仅通过标题输出一个关于“全球化”的抽象概念，属于品牌每日仪式感输出。",
+  "key_points": [
+    "全球化的想象性定义",
+    "每日阅读仪式的建立"
+  ],
+  "opening_pattern": "固定模板标题",
+  "ending_pattern": "元数据信息展示",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 5,
+  "data_density_score": 2,
+  "case_density_score": 0,
+  "quote_density_score": 5,
+  "narrative_distance": "极远",
+  "stance_strength": "弱",
+  "sentence_rhythm": "停顿性",
+  "abstraction_level": "极高",
+  "transferable_moves": [
+    "采用日签形式进行品牌轻量化运营",
+    "利用抽象词汇组合吸引特定审美群体"
+  ],
+  "anti_patterns": [
+    "内容极度空洞",
+    "缺乏文本逻辑",
+    "过度依赖图片链接"
+  ],
+  "notable_phrases": [
+    "想象的全球化"
+  ],
+  "title_score": 45,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 0,
+  "structure_score": 15,
+  "style_score": 30,
+  "publishability_score": 10,
+  "quality_score": 12,
+  "reference_value_score": 8,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "本文是FBK翻书公众号的每日日签内容。标题提出了“想象的全球化”这一概念，但正文部分除了基本的日期、链接和系统生成的图片搜索说明外，无任何实质性的文字内容。这种内容形式属于极低信息密度的品牌打卡，主要通过视觉符号或抽象词汇触达用户，不具备独立阅读或知识传播的价值。",
+  "summary_500": "这是一篇信息密度极低的“日签”类自媒体内容，标题为《想象的全球化丨FBK翻书日签 2023年7月25日》。文章在结构上完全缺失，仅包含基本的元数据（日期、链接、来源模式）以及一条关于图片搜索触发的系统提示。作为商业内容分析，该文本反映了当前文化类公众号的一种轻量化运营策略，即通过每日发布一个具有哲理性或文艺感的标题（如“想象的全球化”），配合视觉图像，来维持品牌在订阅列表中的存在感。然而，由于正文完全没有对该标题进行展开、论证或提供背景信息，该文章在知识传递、逻辑构建和实证支撑方面得分为零。对于寻求实质性见解的读者而言，此类内容属于无效信息，仅在品牌仪式感建立和UI设计参考方面有微弱价值。其核心写作机制是利用读者的联想能力，而非主动提供内容产出。在RAG写作或知识库构建中，此类文章应标记为低价值过滤项。"
+}

@@ -1,0 +1,89 @@
+{
+  "id": "50a38ffa2f7b",
+  "year": "2023",
+  "date": "2023-03-01",
+  "title": "黑塞 “玻璃球游戏”丨FBK翻书日签 2023年3月1日",
+  "relative_path": "2023/2023-03-01_黑塞 “玻璃球游戏”丨FBK翻书日签 2023年3月1日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-03-01_黑塞 “玻璃球游戏”丨FBK翻书日签 2023年3月1日.txt",
+  "char_count": 357,
+  "content_type": "日签",
+  "industry": [
+    "文化出版",
+    "文学"
+  ],
+  "topic": [
+    "黑塞",
+    "玻璃球游戏",
+    "每日阅读"
+  ],
+  "genre": "社交媒体碎片",
+  "style": [
+    "极简",
+    "静态"
+  ],
+  "audience": [
+    "文学爱好者",
+    "品牌关注者"
+  ],
+  "intent": [
+    "品牌维护",
+    "审美传达"
+  ],
+  "tone": [
+    "宁静",
+    "克制"
+  ],
+  "primary_question": "无",
+  "thesis_type": "引述型",
+  "thesis_sentence": "通过每日分享文学经典作品（如黑塞的《玻璃球游戏》）建立品牌调性。",
+  "structure_pattern": "固定模板结构",
+  "section_functions": [
+    "标题/来源说明",
+    "核心意象呈现（图片）"
+  ],
+  "argument_moves": [
+    "借用文学经典权威"
+  ],
+  "core_argument": "无实质性文本论证，仅为视觉与碎片的文学导向。",
+  "key_points": [
+    "黑塞作品《玻璃球游戏》的关联展示"
+  ],
+  "opening_pattern": "直述式标题",
+  "ending_pattern": "自然截断",
+  "evidence_types": [
+    "文学作品引申"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 80,
+  "narrative_distance": "遥远",
+  "stance_strength": "中立",
+  "sentence_rhythm": "零散",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "建立固定周期的文化日签栏目",
+    "利用经典文学IP增强品牌文艺感"
+  ],
+  "anti_patterns": [
+    "文字内容缺失导致搜索价值极低",
+    "过度依赖图片承载信息"
+  ],
+  "notable_phrases": [
+    "玻璃球游戏",
+    "FBK翻书日签"
+  ],
+  "title_score": 40,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 10,
+  "structure_score": 30,
+  "style_score": 40,
+  "publishability_score": 20,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为2023年3月1日的“FBK翻书日签”，主题关联黑塞的《玻璃球游戏》。文章仅包含标题、日期和一张图片的搜索提示，缺乏实质性的正文论述。其功能在于社交媒体的品牌日常打卡与文学审美传达，信息密度极低。",
+  "summary_500": "本内容属于典型的社交媒体碎片化阅读材料，即“日签”形式。其核心价值在于品牌建设而非知识传递。文章标题明确指出涉及黑塞及其作品《玻璃球游戏》，但正文部分并没有提供关于该书的解析、评论或详细摘录，仅作为元数据存在。从写作机制分析，该内容采用了固定模板化的结构，依赖视觉意象（图片）而非文字逻辑。由于文字信息量严重不足，对于检索、RAG写作或人格提炼几乎没有参考意义，属于高噪声、低价值的结构化对象。"
+}

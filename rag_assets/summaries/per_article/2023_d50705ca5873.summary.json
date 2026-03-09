@@ -1,0 +1,90 @@
+{
+  "id": "d50705ca5873",
+  "year": "2023",
+  "date": "2023-09-06",
+  "title": "从0到1：找到合适的问题丨FBK翻书日签 2023年9月6日",
+  "relative_path": "2023/2023-09-06_从0到1：找到合适的问题丨FBK翻书日签 2023年9月6日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-09-06_从0到1：找到合适的问题丨FBK翻书日签 2023年9月6日.txt",
+  "char_count": 359,
+  "content_type": "知识卡片",
+  "industry": [
+    "个人成长",
+    "企业管理"
+  ],
+  "topic": [
+    "问题定义",
+    "创业思维"
+  ],
+  "genre": "简报",
+  "style": [
+    "极简",
+    "格言式"
+  ],
+  "audience": [
+    "创业者",
+    "管理者",
+    "职场人士"
+  ],
+  "intent": [
+    "启发思考"
+  ],
+  "tone": [
+    "凝练"
+  ],
+  "primary_question": "在从0到1的过程中，什么才是最关键的起点？",
+  "thesis_type": "观点型",
+  "thesis_sentence": "找到合适的问题是实现从0到1跨越的核心逻辑起点。",
+  "structure_pattern": "日签式结构",
+  "section_functions": [
+    "标题点出主题",
+    "日期标记来源"
+  ],
+  "argument_moves": [
+    "强调问题导向的重要性",
+    "将复杂创新抽象为对‘合适问题’的寻找"
+  ],
+  "core_argument": "解决问题的前提是定义问题，找到正确的问题比寻找答案更重要。",
+  "key_points": [
+    "从0到1需要找准切入点",
+    "合适的问题决定了解决方案的价值"
+  ],
+  "opening_pattern": "直击核心主题",
+  "ending_pattern": "缺失",
+  "evidence_types": [
+    "名言/口号"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 60,
+  "narrative_distance": "中性观察",
+  "stance_strength": "坚定",
+  "sentence_rhythm": "短促有力",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "使用日签形式进行每日品牌触达",
+    "利用经典商业概念（从0到1）进行价值绑定"
+  ],
+  "anti_patterns": [
+    "信息密度极低",
+    "缺乏具体论证过程",
+    "过度依赖外部图像内容"
+  ],
+  "notable_phrases": [
+    "从0到1",
+    "找到合适的问题"
+  ],
+  "title_score": 60,
+  "opening_score": 30,
+  "argument_score": 20,
+  "evidence_score": 10,
+  "structure_score": 40,
+  "style_score": 50,
+  "publishability_score": 20,
+  "quality_score": 25,
+  "reference_value_score": 15,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "本文为2023年9月6日的FBK翻书日签，核心观点在于强调在“从0到1”的阶段，找到“合适的问题”至关重要。作为典型的知识碎片内容，它仅提供了一个思维维度的提示，缺乏深度展开。由于正文大部分信息可能存在于图像中，文本层面的信息密度极低，主要起到每日学习打卡和心理暗示的作用。",
+  "summary_500": "该内容是FBK（翻书）平台发布的每日日签式短讯。主题聚焦于创新与创业中的核心逻辑：即如何从无到有地建立事业。文章（日签）通过“从0到1：找到合适的问题”这一标题，直接向受众传达了一个管理学与逻辑学结合的观点：问题的定义优先于问题的解决。然而，从写作分析的角度看，该文本属于典型的“极低信息密度”类别。它不具备完整的论证链条，没有数据支持、案例分析或详细的逻辑推演。其结构极其简单，仅包含标题、日期和来源模式说明。对于RAG（检索增强生成）而言，其价值主要在于作为一个“金句钩子”或“思考维度”被索引，而非作为深度学习或写作参考的样本。这种形式的内容通常用于社交媒体的快速传播和品牌日常露面，而非深度知识传递。在处理此类数据时，应识别其作为“思维启发点”的属性，而非实质性的分析报告。"
+}

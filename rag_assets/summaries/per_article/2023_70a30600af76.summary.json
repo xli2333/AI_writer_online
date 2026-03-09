@@ -1,0 +1,91 @@
+{
+  "id": "70a30600af76",
+  "year": "2023",
+  "date": "2023-06-12",
+  "title": "往事与随想 赫尔岑丨FBK翻书日签 2023年6月12日",
+  "relative_path": "2023/2023-06-12_往事与随想 赫尔岑丨FBK翻书日签 2023年6月12日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-06-12_往事与随想 赫尔岑丨FBK翻书日签 2023年6月12日.txt",
+  "char_count": 357,
+  "content_type": "读书日签",
+  "industry": [
+    "文化教育",
+    "图书出版"
+  ],
+  "topic": [
+    "经典文学",
+    "名句摘录"
+  ],
+  "genre": "日签",
+  "style": [
+    "极简",
+    "碎片化"
+  ],
+  "audience": [
+    "书籍爱好者",
+    "文艺青年"
+  ],
+  "intent": [
+    "品牌日常维护",
+    "内容分发"
+  ],
+  "tone": [
+    "庄重",
+    "文学性"
+  ],
+  "primary_question": "赫尔岑在《往事与随想》中表达了怎样的文学价值？",
+  "thesis_type": "名句引导型",
+  "thesis_sentence": "通过每日分享文学经典中的片段，维持读者对文学经典的感知与品牌关注度。",
+  "structure_pattern": "固定模版式",
+  "section_functions": [
+    "标题与作者识别",
+    "日期锚点",
+    "视觉内容呈现"
+  ],
+  "argument_moves": [
+    "引用权威经典",
+    "利用日期建立连贯性"
+  ],
+  "core_argument": "《往事与随想》作为经典作品，其文字具有每日阅读与思考的价值。",
+  "key_points": [
+    "推介赫尔岑作品《往事与随想》",
+    "建立FBK品牌的每日内容产出序列"
+  ],
+  "opening_pattern": "直接展示作品名与日期",
+  "ending_pattern": "日期戳记",
+  "evidence_types": [
+    "文学引述"
+  ],
+  "evidence_specificity_score": 30,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 90,
+  "narrative_distance": "客观呈现",
+  "stance_strength": "中立",
+  "sentence_rhythm": "极短",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "采用‘作品名+作者+日期’的标准化命名规范",
+    "利用经典著作进行系列化内容产出以降低创作成本"
+  ],
+  "anti_patterns": [
+    "内容过于稀疏导致单篇阅读价值极低",
+    "缺乏对引文的解读导致读者理解成本增加"
+  ],
+  "notable_phrases": [
+    "往事与随想",
+    "FBK翻书日签"
+  ],
+  "title_score": 40,
+  "opening_score": 20,
+  "argument_score": 10,
+  "evidence_score": 30,
+  "structure_score": 40,
+  "style_score": 50,
+  "publishability_score": 30,
+  "quality_score": 20,
+  "reference_value_score": 10,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该内容为FBK出品的2023年6月12日读书日签，核心内容仅涉及赫尔岑的名著《往事与随想》。这类内容属于典型的碎片化社交媒体产物，旨在通过每日更新经典名句来维持用户粘性，而非提供深度的文学批评或逻辑论证。文章信息密度极低，主要作为视觉化海报的配套文本存在，不具备完整的写作结构或论证逻辑。",
+  "summary_500": "本文属于自媒体日常运维中的‘日签’类内容。其结构高度标准化，仅包含作品标题（《往事与随想》）、作者（赫尔岑）、品牌标识（FBK）及日期信息。由于原文触发了图片搜索模式，说明其核心信息承载于图片而非文字。从内容分析角度看，此类文章的‘写作’属性极弱，属于功能性的信息发布。其主要目的是在目标受众的社交空间中进行高频次的品牌露脸，利用经典文学的文化光环为品牌背书。对于AI训练或RAG系统而言，此类数据除了作为‘日期序列’或‘书名索引’外，参考价值较低。其主要缺陷在于：第一，缺乏对原文金句的引用和深度解读；第二，不具备任何论点展开的过程；第三，受众互动性与信息增量极小。在评估分值时，因其信息量严重不足且功能单一，各项质量指标均处于较低水平。建议在处理此类数据时将其标记为低价值，仅保留其书名与作者的关联关系。"
+}

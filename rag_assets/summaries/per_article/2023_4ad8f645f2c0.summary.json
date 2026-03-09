@@ -1,0 +1,91 @@
+{
+  "id": "4ad8f645f2c0",
+  "year": "2023",
+  "date": "2023-04-16",
+  "title": "我们自身的外人丨FBK翻书日签 2023年4月16日",
+  "relative_path": "2023/2023-04-16_我们自身的外人丨FBK翻书日签 2023年4月16日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-04-16_我们自身的外人丨FBK翻书日签 2023年4月16日.txt",
+  "char_count": 355,
+  "content_type": "日签",
+  "industry": [
+    "文化",
+    "艺术",
+    "出版"
+  ],
+  "topic": [
+    "哲学",
+    "自我探索"
+  ],
+  "genre": "碎片化内容",
+  "style": [
+    "极简主义",
+    "文艺"
+  ],
+  "audience": [
+    "书籍爱好者",
+    "文化消费者",
+    "追求精神共鸣的职场人"
+  ],
+  "intent": [
+    "品牌留存",
+    "情感联结"
+  ],
+  "tone": [
+    "内省",
+    "冷静"
+  ],
+  "primary_question": "个体如何面对与自身的疏离感？",
+  "thesis_type": "概念阐述型",
+  "thesis_sentence": "通过‘自身的外人’这一隐喻，暗示人与自我之间存在的认知隔阂与疏离状态。",
+  "structure_pattern": "固定模板式",
+  "section_functions": [
+    "标题传达主题",
+    "日期锚定时间",
+    "视觉线索占位"
+  ],
+  "argument_moves": [
+    "通过抽象命题引发读者的瞬间思考"
+  ],
+  "core_argument": "信息不足，仅通过标题表达一种存在主义的疏离感。",
+  "key_points": [
+    "我们自身的外人这一命题",
+    "2023年4月16日的特定时刻标记"
+  ],
+  "opening_pattern": "直陈式",
+  "ending_pattern": "开放式（无结尾）",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "远",
+  "stance_strength": "中等",
+  "sentence_rhythm": "停顿感强",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "利用每日日签的形式建立品牌打卡习惯",
+    "使用极具哲学张力的标题作为视觉/认知抓手"
+  ],
+  "anti_patterns": [
+    "信息承载量过低，缺乏实质性论证",
+    "过度依赖元数据而非内容本身"
+  ],
+  "notable_phrases": [
+    "我们自身的外人"
+  ],
+  "title_score": 75,
+  "opening_score": 20,
+  "argument_score": 10,
+  "evidence_score": 5,
+  "structure_score": 30,
+  "style_score": 60,
+  "publishability_score": 40,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该内容为‘FBK翻书’公众号的每日日签。其核心仅由一个哲学化命题标题‘我们自身的外人’及日期组成。这类内容主要用于通过高频、轻量的视觉与文字组合，维持读者对品牌的关注，但不具备完整的商业分析或写作论证结构。",
+  "summary_500": "本篇内容属于社交媒体平台（微信公众号）中常见的极简日签形式，发布日期为2023年4月16日。文章标题‘我们自身的外人’具有较强的文学性和哲学张力，试图引发读者关于‘自我疏离’、‘本我与他者’等深层次命题的联想。然而，作为结构化内容，其正文部分除元数据和技术占位符外完全缺失，无法构成严密的论证或叙事闭环。在写作机制上，它依赖于读者的二次联想而非文字本身的输出，属于信息密度极低的品牌留存手段。对于RAG写作或人格提炼而言，该文本仅能作为‘极简/文艺风格’人格的一个标签样本，不具备提供深度逻辑或事实证据的价值。"
+}

@@ -1,0 +1,2219 @@
+import React, { useEffect, useMemo, useRef, useState } from 'react';
+import {
+  ArrowDownTrayIcon,
+  ArrowPathIcon,
+  ChatBubbleLeftRightIcon,
+  ChevronLeftIcon,
+  ChevronRightIcon,
+  DocumentDuplicateIcon,
+  ShieldCheckIcon,
+  StopIcon,
+  TrashIcon,
+} from '@heroicons/react/24/outline';
+import {
+  ArticleIllustrationAsset,
+  ArticleIllustrationBundle,
+  ArticleIllustrationJobStatus,
+  ArticleIllustrationSlot,
+  WritingProjectData,
+} from '../types';
+import * as GeminiService from '../services/geminiService';
+import {
+  deleteIllustrationSlotImage,
+  getArticleIllustrationStatus,
+  regenerateIllustrationSlot,
+  startArticleIllustrationGeneration,
+  switchIllustrationSlotVersion,
+} from '../services/articleIllustrationService';
+import { MarkdownRenderer } from './MarkdownRenderer';
+import { SelectionMenu } from './SelectionMenu';
+import { WritingCopilot } from './WritingCopilot';
+
+interface ArticleViewerProps {
+  data: WritingProjectData;
+  onReset: () => void;
+  onUpdateArticleContent: (content: string) => void;
+  onUpdateTeachingNotes: (notes: string) => void;
+  onUpdateIllustrationBundle: (bundle?: ArticleIllustrationBundle) => void;
+}
+
+interface HistoryItem {
+  articleContent: string;
+  teachingNotes: string;
+}
+
+interface ReferenceTemplateArticle {
+  id?: string;
+  title: string;
+  date?: string;
+  genre?: string;
+  style?: string[];
+  summary?: string;
+  structurePattern?: string;
+  openingPattern?: string;
+  coreArgument?: string;
+  whySelected?: string;
+  relativePath?: string;
+}
+
+type ViewerData = WritingProjectData & {
+  referenceArticles?: ReferenceTemplateArticle[];
+};
+
+type ViewerPanel = 'article' | 'illustrations' | 'chunks' | 'references' | 'task' | 'outline' | 'research' | 'critique' | 'notes';
+
+interface ViewerTab {
+  id: ViewerPanel;
+  label: string;
+}
+
+const downloadTextFile = (filename: string, content: string) => {
+  const blob = new Blob([content], { type: 'text/markdown;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const anchor = document.createElement('a');
+  anchor.href = url;
+  anchor.download = filename;
+  anchor.click();
+  URL.revokeObjectURL(url);
+};
+
+const waitForAnimationFrames = async (count = 2) => {
+  for (let index = 0; index < count; index += 1) {
+    await new Promise<void>((resolve) => window.requestAnimationFrame(() => resolve()));
+  }
+};
+
+const PanelShell: React.FC<{
+  title: string;
+  description?: string;
+  children: React.ReactNode;
+}> = ({ title, description, children }) => (
+  <section className="rounded-[28px] border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+    <div className="mb-6 border-b border-slate-100 pb-5">
+      <h2 className="font-serif text-2xl font-bold text-slate-900">{title}</h2>
+      {description && <p className="mt-2 text-sm leading-relaxed text-slate-500">{description}</p>}
+    </div>
+    {children}
+  </section>
+);
+
+const EXPORT_PAGE_WIDTH_PX = 794;
+const PLAIN_PDF_FONT_URL = '/fonts/yahei.ttf';
+let plainPdfFontBinaryPromise: Promise<string> | null = null;
+
+const stripMarkdownTitleDecorators = (line: string) =>
+  line
+    .trim()
+    .replace(/^#{1,6}\s+/, '')
+    .replace(/^>\s+/, '')
+    .replace(/^[-*+]\s+/, '')
+    .replace(/^\d+\.\s+/, '')
+    .replace(/^\*\*(.+)\*\*$/, '$1')
+    .replace(/^__(.+)__$/, '$1')
+    .trim();
+
+const normalizeTitleText = (value: string) =>
+  stripMarkdownTitleDecorators(value)
+    .replace(/\s+/g, '')
+    .replace(/[“”"'`·•]/g, '')
+    .trim();
+
+const extractArticleTitle = (fallback: string, content?: string) => {
+  const lines = String(content || '')
+    .split('\n')
+    .map((line) => line.trim())
+    .filter(Boolean);
+
+  const markdownHeading = lines.find((line) => /^#\s+/.test(line));
+  if (markdownHeading) {
+    return stripMarkdownTitleDecorators(markdownHeading);
+  }
+
+  const candidate = lines
+    .slice(0, 8)
+    .map(stripMarkdownTitleDecorators)
+    .find(
+      (line) =>
+        line.length >= 6 &&
+        line.length <= 40 &&
+        !/^[0-9０-９一二三四五六七八九十]+[、.]/.test(line) &&
+        !/^\d{4}[-/年]/.test(line) &&
+        !/[。！？；]$/.test(line)
+    );
+
+  return candidate || fallback;
+};
+
+const stripLeadingTitleFromArticle = (content: string, title: string) => {
+  const lines = String(content || '').split('\n');
+  const normalizedTitle = normalizeTitleText(title);
+  if (!normalizedTitle) {
+    return content;
+  }
+
+  const firstContentLineIndex = lines.findIndex((line) => line.trim().length > 0);
+  if (firstContentLineIndex === -1) {
+    return content;
+  }
+
+  if (normalizeTitleText(lines[firstContentLineIndex]) !== normalizedTitle) {
+    return content;
+  }
+
+  const removeCount = firstContentLineIndex + 1 < lines.length && !lines[firstContentLineIndex + 1].trim() ? 2 : 1;
+  lines.splice(firstContentLineIndex, removeCount);
+  return lines.join('\n').trim();
+};
+
+const resolveArticlePreviewContent = (data: ViewerData) => {
+  if (data.articleContent) {
+    return data.articleContent;
+  }
+
+  if (data.workingArticleDraft) {
+    return data.workingArticleDraft;
+  }
+
+  return Array.isArray(data.chunkDrafts) ? data.chunkDrafts.filter(Boolean).join('\n\n') : '';
+};
+
+const resolveIllustrationSlotMap = (bundle?: ArticleIllustrationBundle) =>
+  new Map((bundle?.slots || []).map((slot) => [slot.id, slot]));
+
+const resolveHeroIllustration = (bundle?: ArticleIllustrationBundle) => {
+  if (!bundle) return null;
+  const heroAsset = bundle.assets.find((asset) => asset.role === 'hero') || bundle.assets[0];
+  if (!heroAsset) return null;
+  const slotMap = resolveIllustrationSlotMap(bundle);
+  const slot = slotMap.get(heroAsset.slotId);
+  return { asset: heroAsset, slot };
+};
+
+const resolveIllustrationVersionMap = (bundle?: ArticleIllustrationBundle) =>
+  new Map(Object.entries(bundle?.assetVersions || {}).map(([slotId, versions]) => [slotId, versions || []]));
+
+const resolveActiveIllustrationAssetMap = (bundle?: ArticleIllustrationBundle) =>
+  new Map((bundle?.assets || []).map((asset) => [asset.slotId, asset]));
+
+const resolveIllustrationVersionState = (bundle: ArticleIllustrationBundle | undefined, slotId: string) => {
+  const versions = bundle?.assetVersions?.[slotId] || [];
+  const activeAsset = bundle?.assets?.find((asset) => asset.slotId === slotId);
+  const activeIndex = Math.max(
+    0,
+    versions.findIndex((asset) => asset.id === activeAsset?.id)
+  );
+
+  return {
+    versions,
+    activeAsset,
+    activeIndex,
+    total: versions.length,
+    hasPrevious: activeIndex > 0,
+    hasNext: activeIndex >= 0 && activeIndex < versions.length - 1,
+  };
+};
+
+const bundleNeedsRefresh = (bundle?: ArticleIllustrationBundle) => {
+  if (!bundle) return false;
+  if (bundle.promptVersion !== 'illustration-v3') return true;
+  if (!bundle.sourceHash) return true;
+  if (!bundle.assetVersions || Object.keys(bundle.assetVersions).length === 0) return true;
+
+  const hasSvgAsset = (bundle.assets || []).some(
+    (asset) => asset.renderMode === 'svg_chart' || String(asset.mimeType || '').toLowerCase().includes('svg')
+  );
+  if (hasSvgAsset) return true;
+
+  return (bundle.slots || []).some(
+    (slot) => slot.renderMode === 'svg_chart' || !String(slot.explanation || '').trim()
+  );
+};
+
+const isIllustrationJobActive = (job?: ArticleIllustrationJobStatus | null) =>
+  ['queued', 'planning', 'rendering', 'finalizing'].includes(String(job?.status || ''));
+
+const resolveIllustrationPhaseLabel = (job?: ArticleIllustrationJobStatus | null) => {
+  switch (job?.status) {
+    case 'queued':
+      return '已进入队列';
+    case 'planning':
+      return '正在规划';
+    case 'rendering':
+      return '正在生图';
+    case 'finalizing':
+      return '正在整理';
+    case 'ready':
+      return '全部完成';
+    case 'error':
+      return '生成失败';
+    default:
+      return '待生成';
+  }
+};
+
+const decodeHtmlEntities = (value: string) =>
+  value
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'");
+
+const stripInlineMarkdown = (value: string) =>
+  decodeHtmlEntities(
+    value
+      .replace(/!\[([^\]]*)\]\([^)]+\)/g, '$1')
+      .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+      .replace(/`([^`]+)`/g, '$1')
+      .replace(/\*\*([^*]+)\*\*/g, '$1')
+      .replace(/__([^_]+)__/g, '$1')
+      .replace(/\*([^*]+)\*/g, '$1')
+      .replace(/_([^_]+)_/g, '$1')
+      .replace(/~~([^~]+)~~/g, '$1')
+      .replace(/<\/?[^>]+>/g, '')
+  )
+    .replace(/\s+/g, ' ')
+    .trim();
+
+type PlainTextBlock =
+  | { type: 'heading1' | 'heading2' | 'heading3' | 'paragraph' | 'quote' | 'table'; text: string }
+  | { type: 'list'; text: string; ordered: boolean; order?: number };
+
+const buildPlainTextBlocks = (content: string): PlainTextBlock[] => {
+  const blocks: PlainTextBlock[] = [];
+  const lines = String(content || '').replace(/\r\n/g, '\n').split('\n');
+  let paragraphBuffer: string[] = [];
+
+  const flushParagraph = () => {
+    if (paragraphBuffer.length === 0) return;
+    const text = stripInlineMarkdown(paragraphBuffer.join(' '));
+    if (text) {
+      blocks.push({ type: 'paragraph', text });
+    }
+    paragraphBuffer = [];
+  };
+
+  for (const rawLine of lines) {
+    const line = rawLine.trim();
+
+    if (!line) {
+      flushParagraph();
+      continue;
+    }
+
+    if (/^\|?[\s\-:|]+\|?$/.test(line)) {
+      flushParagraph();
+      continue;
+    }
+
+    if (/^###\s+/.test(line)) {
+      flushParagraph();
+      blocks.push({ type: 'heading3', text: stripInlineMarkdown(line.replace(/^###\s+/, '')) });
+      continue;
+    }
+
+    if (/^##\s+/.test(line)) {
+      flushParagraph();
+      blocks.push({ type: 'heading2', text: stripInlineMarkdown(line.replace(/^##\s+/, '')) });
+      continue;
+    }
+
+    if (/^#\s+/.test(line)) {
+      flushParagraph();
+      blocks.push({ type: 'heading1', text: stripInlineMarkdown(line.replace(/^#\s+/, '')) });
+      continue;
+    }
+
+    if (/^>\s?/.test(line)) {
+      flushParagraph();
+      blocks.push({ type: 'quote', text: stripInlineMarkdown(line.replace(/^>\s?/, '')) });
+      continue;
+    }
+
+    if (/^[-*]\s+/.test(line)) {
+      flushParagraph();
+      blocks.push({ type: 'list', text: stripInlineMarkdown(line.replace(/^[-*]\s+/, '')), ordered: false });
+      continue;
+    }
+
+    const orderedMatch = line.match(/^(\d+)\.\s+(.*)$/);
+    if (orderedMatch) {
+      flushParagraph();
+      blocks.push({
+        type: 'list',
+        text: stripInlineMarkdown(orderedMatch[2]),
+        ordered: true,
+        order: Number(orderedMatch[1]),
+      });
+      continue;
+    }
+
+    if (line.includes('|')) {
+      flushParagraph();
+      const text = stripInlineMarkdown(
+        line
+          .replace(/^\|/, '')
+          .replace(/\|$/, '')
+          .split('|')
+          .map((cell) => cell.trim())
+          .join('    ')
+      );
+      if (text) {
+        blocks.push({ type: 'table', text });
+      }
+      continue;
+    }
+
+    paragraphBuffer.push(line);
+  }
+
+  flushParagraph();
+  return blocks;
+};
+
+const arrayBufferToBinaryString = (buffer: ArrayBuffer) => {
+  const bytes = new Uint8Array(buffer);
+  const chunkSize = 0x8000;
+  let binary = '';
+
+  for (let index = 0; index < bytes.length; index += chunkSize) {
+    const chunk = bytes.subarray(index, index + chunkSize);
+    binary += String.fromCharCode(...chunk);
+  }
+
+  return binary;
+};
+
+const loadPlainPdfFontBinary = async () => {
+  if (!plainPdfFontBinaryPromise) {
+    plainPdfFontBinaryPromise = fetch(PLAIN_PDF_FONT_URL)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`Failed to load plain PDF font: ${response.status}`);
+        }
+        return response.arrayBuffer();
+      })
+      .then(arrayBufferToBinaryString);
+  }
+
+  return plainPdfFontBinaryPromise;
+};
+
+const ArticleDocument: React.FC<{
+  data: ViewerData;
+  exportMode?: boolean;
+  illustrationActions?: IllustrationSlotActions;
+}> = ({ data, exportMode = false, illustrationActions }) => {
+  const previewContent = resolveArticlePreviewContent(data);
+  const articleTitle = extractArticleTitle(data.topic, previewContent);
+  const articleBody = stripLeadingTitleFromArticle(previewContent, articleTitle);
+  const isDraftPreview = !data.articleContent && Boolean(previewContent);
+  const bundle = data.illustrationBundle;
+  const activeAssetMap = resolveActiveIllustrationAssetMap(bundle);
+  const inlineSlots = (bundle?.slots || [])
+    .filter((slot) => slot.role !== 'hero' && activeAssetMap.get(slot.id))
+    .slice()
+    .sort((left, right) => left.anchorParagraphIndex - right.anchorParagraphIndex || left.order - right.order);
+
+  return (
+    <div
+      data-section="article"
+      className={
+        exportMode
+          ? 'mx-auto box-border w-full max-w-none bg-white px-[22mm] py-[22mm]'
+          : 'rounded-[28px] border border-slate-200 bg-white p-6 shadow-xl sm:p-[22mm]'
+      }
+    >
+      <header className="mb-12 border-b-4 border-double border-gray-200 pb-8 text-center">
+        <div className="mb-4 flex items-center justify-center gap-4 opacity-60">
+          <span className="h-px w-12 bg-gray-400" />
+          <span className="text-xs font-bold uppercase tracking-[0.3em] text-gray-500">Business Article</span>
+          <span className="h-px w-12 bg-gray-400" />
+        </div>
+        {isDraftPreview && (
+          <div className="mb-5 inline-flex items-center rounded-full border border-amber-200 bg-amber-50 px-4 py-1.5 text-xs font-semibold text-amber-700">
+            当前显示的是阶段草稿预览，尚未进入最终正文状态。
+          </div>
+        )}
+        <h1 className="mb-6 font-serif text-4xl font-bold leading-tight tracking-tight text-slate-900 md:text-5xl">
+          {articleTitle}
+        </h1>
+        <div className="flex justify-center gap-6 text-xs font-semibold uppercase tracking-widest text-gray-500">
+          <span>{data.options.genre}</span>
+          <span>·</span>
+          <span>{new Date().getFullYear()}</span>
+        </div>
+      </header>
+
+      <ModernIllustrationHero bundle={bundle} actions={!exportMode ? illustrationActions : undefined} />
+
+      <section className="article-copy mb-12">
+        <MarkdownRenderer
+          content={articleBody}
+          renderAfterParagraphRange={(start, end) => {
+            const matchedSlots = inlineSlots.filter(
+              (slot) => slot.anchorParagraphIndex >= start && slot.anchorParagraphIndex <= end
+            );
+            if (matchedSlots.length === 0) {
+              return null;
+            }
+
+            return matchedSlots.map((slot) => {
+              const asset = activeAssetMap.get(slot.id);
+              const versionState = resolveIllustrationVersionState(bundle, slot.id);
+              return (
+                <ModernIllustrationCard
+                  key={slot.id}
+                  slot={slot}
+                  asset={asset}
+                  actions={!exportMode ? illustrationActions : undefined}
+                  versionLabel={versionState.total > 0 ? `${versionState.activeIndex + 1}/${versionState.total}` : undefined}
+                  hasPrevious={versionState.hasPrevious}
+                  hasNext={versionState.hasNext}
+                />
+              );
+            });
+          }}
+        />
+      </section>
+
+      <div className="border-t border-gray-100 pt-8 text-center font-sans text-[10px] uppercase tracking-widest text-gray-400">
+        Generated by Writing Workspace · {articleTitle}
+      </div>
+    </div>
+  );
+};
+
+const PlainTextArticleDocument: React.FC<{ data: ViewerData; exportMode?: boolean }> = ({ data, exportMode = false }) => {
+  const previewContent = resolveArticlePreviewContent(data);
+  const articleTitle = extractArticleTitle(data.topic, previewContent);
+  const articleBody = stripLeadingTitleFromArticle(previewContent, articleTitle);
+  const blocks = buildPlainTextBlocks(articleBody);
+  const isDraftPreview = !data.articleContent && Boolean(previewContent);
+
+  return (
+    <div
+      data-section="article-plain"
+      className={
+        exportMode
+          ? 'mx-auto box-border w-full max-w-none bg-white px-[25mm] py-[24mm]'
+          : 'rounded-[28px] border border-slate-200 bg-white p-6 shadow-sm sm:p-[24mm]'
+      }
+    >
+      <header className="mb-10 pb-5 text-center">
+        {isDraftPreview && (
+          <div className="mb-5 inline-flex items-center rounded-full border border-amber-200 bg-amber-50 px-4 py-1.5 text-xs font-semibold text-amber-700">
+            当前导出的是阶段草稿预览。
+          </div>
+        )}
+        <h1 className="font-serif text-[26px] font-bold leading-tight text-slate-950">{articleTitle}</h1>
+        <div className="mt-3 text-[11px] tracking-[0.18em] text-slate-500">
+          {data.options.genre} · {new Date().getFullYear()}
+        </div>
+      </header>
+
+      <section className="article-copy font-serif text-[15px] leading-[1.95] text-slate-900">
+        {blocks.map((block, index) => {
+          if (block.type === 'heading1') {
+            return (
+              <h2 key={index} className="mb-5 mt-8 break-after-avoid text-center text-[20px] font-bold text-slate-950">
+                {block.text}
+              </h2>
+            );
+          }
+
+          if (block.type === 'heading2') {
+            return (
+              <h2 key={index} className="mb-4 mt-8 break-after-avoid text-[17px] font-bold text-slate-950">
+                {block.text}
+              </h2>
+            );
+          }
+
+          if (block.type === 'heading3') {
+            return (
+              <h3 key={index} className="mb-3 mt-6 break-after-avoid text-[15px] font-bold text-slate-900">
+                {block.text}
+              </h3>
+            );
+          }
+
+          if (block.type === 'quote') {
+            return (
+              <p key={index} className="mb-4 border-l-2 border-slate-300 pl-5 italic text-slate-700">
+                {block.text}
+              </p>
+            );
+          }
+
+          if (block.type === 'table') {
+            return (
+              <p key={index} className="mb-3 whitespace-pre-wrap pl-4 text-[13px] leading-[1.85] text-slate-700">
+                {block.text}
+              </p>
+            );
+          }
+
+          if (block.type === 'list') {
+            return (
+              <p key={index} className="mb-2" style={{ paddingLeft: '2em', textIndent: '-1.25em' }}>
+                <span className="mr-2">{block.ordered ? `${block.order}.` : '•'}</span>
+                <span>{block.text}</span>
+              </p>
+            );
+          }
+
+          return (
+            <p key={index} className="mb-4 text-justify" style={{ textIndent: '2em' }}>
+              {block.text}
+            </p>
+          );
+        })}
+      </section>
+    </div>
+  );
+};
+
+const NotesDocument: React.FC<{ data: ViewerData; exportMode?: boolean }> = ({ data, exportMode = false }) => {
+  if (!data.teachingNotes) return null;
+  const articleTitle = extractArticleTitle(data.topic, data.articleContent);
+
+  return (
+    <div
+      data-section="notes"
+      className={
+        exportMode
+          ? 'mx-auto box-border w-full max-w-none bg-white px-[22mm] py-[22mm]'
+          : 'rounded-[28px] border border-slate-200 bg-white p-6 shadow-sm sm:p-[22mm]'
+      }
+    >
+      <div className="mb-8 border-b border-gray-200 pb-6">
+        <h2 className="font-serif text-2xl font-bold text-slate-800">TN / Discussion Guide</h2>
+        <p className="mt-2 text-sm font-medium text-gray-500">关联正文：{articleTitle}</p>
+      </div>
+      <section className="mb-12 rounded-xl border border-slate-100 bg-slate-50/50 p-6">
+        <MarkdownRenderer content={data.teachingNotes} />
+      </section>
+      <div className="border-t border-gray-100 pt-8 text-center font-sans text-[10px] uppercase tracking-widest text-gray-400">
+        Generated by Writing Workspace · {articleTitle} · TN
+      </div>
+    </div>
+  );
+};
+
+const TaskSummaryPanel: React.FC<{ data: ViewerData; referenceCount: number }> = ({ data, referenceCount }) => (
+  <PanelShell title="任务摘要" description="这里只保留本次正文生成所使用的任务配置和流程摘要。">
+    <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+      <div className="rounded-2xl border border-slate-100 bg-slate-50 p-5">
+        <p className="text-xs font-bold uppercase tracking-wider text-slate-400">文章目标</p>
+        <p className="mt-2 text-sm leading-relaxed text-slate-700">{data.options.articleGoal}</p>
+      </div>
+      <div className="rounded-2xl border border-slate-100 bg-slate-50 p-5">
+        <p className="text-xs font-bold uppercase tracking-wider text-slate-400">讨论方向</p>
+        <p className="mt-2 text-sm leading-relaxed text-slate-700">{data.selectedDirection || '未记录'}</p>
+      </div>
+      <div className="rounded-2xl border border-slate-100 bg-slate-50 p-5">
+        <p className="text-xs font-bold uppercase tracking-wider text-slate-400">文体 / 风格</p>
+        <p className="mt-2 text-sm leading-relaxed text-slate-700">
+          {data.options.genre} / {data.options.style}
+        </p>
+      </div>
+      <div className="rounded-2xl border border-slate-100 bg-slate-50 p-5">
+        <p className="text-xs font-bold uppercase tracking-wider text-slate-400">目标受众</p>
+        <p className="mt-2 text-sm leading-relaxed text-slate-700">{data.options.audience}</p>
+      </div>
+      <div className="rounded-2xl border border-slate-100 bg-slate-50 p-5">
+        <p className="text-xs font-bold uppercase tracking-wider text-slate-400">字数规划</p>
+        <p className="mt-2 text-sm leading-relaxed text-slate-700">
+          总长约 {data.options.desiredLength} 字
+          <br />
+          单轮约 {data.options.chunkLength} 字
+        </p>
+      </div>
+      <div className="rounded-2xl border border-slate-100 bg-slate-50 p-5">
+        <p className="text-xs font-bold uppercase tracking-wider text-slate-400">流程摘要</p>
+        <p className="mt-2 text-sm leading-relaxed text-slate-700">
+          模板参考文章：{referenceCount} 篇
+          <br />
+          研究资料：{data.researchDocuments.length} 份
+          <br />
+          是否生成 TN：{data.options.includeTeachingNotes ? '是' : '否'}
+        </p>
+      </div>
+    </div>
+  </PanelShell>
+);
+
+const IllustrationHero: React.FC<{ bundle?: ArticleIllustrationBundle }> = ({ bundle }) => {
+  const hero = resolveHeroIllustration(bundle);
+  if (!hero) return null;
+
+  return (
+    <figure className="mb-10 overflow-hidden rounded-[28px] border border-slate-200 bg-slate-50 shadow-sm">
+      <img src={hero.asset.url} alt={hero.slot?.title || '文章首图'} className="aspect-[16/9] w-full object-cover" />
+      <figcaption className="grid gap-2 border-t border-slate-200 bg-white px-5 py-4 text-sm text-slate-600 md:grid-cols-[1fr_auto] md:items-center">
+        <div>
+          <div className="font-semibold text-slate-900">{hero.slot?.title || '首图总图'}</div>
+          <div className="mt-1 leading-relaxed text-slate-500">{hero.slot?.purpose || '用于建立整篇文章的视觉气质。'}</div>
+        </div>
+        <div className="text-xs uppercase tracking-[0.18em] text-slate-400">{hero.slot?.sectionTitle || '导语'}</div>
+      </figcaption>
+    </figure>
+  );
+};
+
+const IllustrationGalleryPanel: React.FC<{
+  bundle?: ArticleIllustrationBundle;
+  isGenerating: boolean;
+  errorMessage?: string | null;
+  onRegenerate: () => void;
+}> = ({ bundle, isGenerating, errorMessage, onRegenerate }) => {
+  const slotMap = resolveIllustrationSlotMap(bundle);
+
+  return (
+    <PanelShell title="配图" description="根据最终定稿自动规划并生成的整篇文章配图。">
+      <div className="space-y-6">
+        <div className="grid gap-4 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
+          <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+            <div className="flex items-center justify-between gap-4">
+              <div>
+                <p className="text-xs font-bold uppercase tracking-wider text-slate-400">生成状态</p>
+                <p className="mt-2 text-sm leading-relaxed text-slate-700">
+                  {isGenerating
+                    ? '正在按整篇统一视觉系统生成配图...'
+                    : bundle
+                      ? `已生成 ${bundle.assets.length}/${bundle.targetImageCount} 张图`
+                      : '尚未生成配图'}
+                </p>
+              </div>
+              <button
+                onClick={onRegenerate}
+                disabled={isGenerating}
+                className="rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-50 disabled:opacity-50"
+              >
+                重跑配图
+              </button>
+            </div>
+            {errorMessage && <p className="mt-3 text-sm leading-relaxed text-red-600">{errorMessage}</p>}
+            {bundle && (
+              <div className="mt-4 grid gap-3 text-sm text-slate-600 md:grid-cols-2">
+                <div className="rounded-xl bg-white px-4 py-3">
+                  <div className="text-xs font-bold uppercase tracking-wider text-slate-400">视觉方向</div>
+                  <div className="mt-2 leading-relaxed text-slate-700">{bundle.visualSystem.visualDirection}</div>
+                </div>
+                <div className="rounded-xl bg-white px-4 py-3">
+                  <div className="text-xs font-bold uppercase tracking-wider text-slate-400">色彩与图表</div>
+                  <div className="mt-2 leading-relaxed text-slate-700">
+                    {bundle.visualSystem.palette.join(' / ')}
+                    <br />
+                    {bundle.visualSystem.chartStyle}
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+
+          <div className="rounded-2xl border border-slate-200 bg-white p-5">
+            <p className="text-xs font-bold uppercase tracking-wider text-slate-400">整篇一致性规则</p>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {(bundle?.visualSystem.consistencyRules || []).map((rule) => (
+                <span key={rule} className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600">
+                  {rule}
+                </span>
+              ))}
+            </div>
+            {bundle?.warnings?.length ? (
+              <div className="mt-4 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm leading-relaxed text-amber-800">
+                {bundle.warnings.join(' ')}
+              </div>
+            ) : null}
+          </div>
+        </div>
+
+        {bundle?.assets?.length ? (
+          <div className="grid gap-5 lg:grid-cols-2">
+            {bundle.assets.map((asset) => {
+              const slot = slotMap.get(asset.slotId) as ArticleIllustrationSlot | undefined;
+              return (
+                <article key={asset.slotId} className="overflow-hidden rounded-[24px] border border-slate-200 bg-white shadow-sm">
+                  <img src={asset.url} alt={slot?.title || asset.title} className="aspect-[16/9] w-full object-cover" />
+                  <div className="space-y-3 px-5 py-4">
+                    <div className="flex items-center justify-between gap-4">
+                      <div>
+                        <h3 className="text-lg font-semibold text-slate-900">{slot?.title || asset.title}</h3>
+                        <p className="mt-1 text-sm text-slate-500">{slot?.sectionTitle || '正文'}</p>
+                      </div>
+                      <span className="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-slate-500">
+                        {asset.renderMode === 'svg_chart' ? 'Data' : 'Scene'}
+                      </span>
+                    </div>
+                    <p className="text-sm leading-relaxed text-slate-700">{slot?.purpose}</p>
+                    <p className="rounded-xl bg-slate-50 px-4 py-3 text-sm leading-relaxed text-slate-500">
+                      {slot?.anchorExcerpt}
+                    </p>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+        ) : (
+          <div className="rounded-2xl border border-dashed border-slate-300 bg-slate-50 px-5 py-10 text-center text-sm text-slate-500">
+            {isGenerating ? '正在生成配图，请稍候。' : '当前还没有可展示的配图结果。'}
+          </div>
+        )}
+      </div>
+    </PanelShell>
+  );
+};
+
+interface IllustrationSlotActions {
+  onDelete: (slot: ArticleIllustrationSlot) => void;
+  onRegenerate: (slot: ArticleIllustrationSlot) => void;
+  onSwitchVersion: (slot: ArticleIllustrationSlot, direction: 'previous' | 'next') => void;
+  isAnyBusy: boolean;
+  busySlotId?: string | null;
+  pendingSlotId?: string | null;
+}
+
+const ModernIllustrationCard: React.FC<{
+  slot: ArticleIllustrationSlot;
+  asset?: ArticleIllustrationAsset;
+  versionLabel?: string;
+  hasPrevious?: boolean;
+  hasNext?: boolean;
+  actions?: IllustrationSlotActions;
+  compact?: boolean;
+}> = ({ slot, asset, versionLabel, hasPrevious, hasNext, actions, compact = false }) => {
+  const isSlotBusy = actions?.busySlotId === slot.id;
+  const isSlotPending = actions?.pendingSlotId === slot.id;
+  const shouldAnimateRegenerate = isSlotBusy || isSlotPending;
+  const slotStatusLabel =
+    slot.status === 'ready' ? '已完成' : slot.status === 'rendering' ? '生成中' : slot.status === 'error' ? '失败' : '排队中';
+
+  return (
+  <figure className={`overflow-hidden rounded-[24px] border border-slate-200 bg-white shadow-sm ${compact ? '' : 'mb-8'}`}>
+    {actions ? (
+      <div className="flex flex-wrap items-center justify-between gap-3 border-b border-slate-200 bg-slate-50 px-4 py-3">
+        <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
+          <span>{slot.sectionTitle || '正文'}</span>
+          {versionLabel ? <span className="rounded-full bg-white px-2 py-1 tracking-normal text-slate-600">{versionLabel}</span> : null}
+          <span className="rounded-full bg-white px-2 py-1 tracking-normal text-slate-500">{slotStatusLabel}</span>
+        </div>
+        <div className="flex flex-wrap items-center gap-2">
+          <button
+            onClick={() => actions.onDelete(slot)}
+            disabled={actions.isAnyBusy || !asset}
+            className="inline-flex items-center gap-1 rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-sm text-slate-600 transition-colors hover:bg-slate-100 disabled:opacity-40"
+          >
+            <TrashIcon className="h-4 w-4" />
+            删除
+          </button>
+          <button
+            onClick={() => actions.onRegenerate(slot)}
+            disabled={actions.isAnyBusy}
+            className="inline-flex items-center gap-1 rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-sm text-slate-600 transition-colors hover:bg-slate-100 disabled:opacity-40"
+          >
+            <ArrowPathIcon className={`h-4 w-4 ${shouldAnimateRegenerate ? 'animate-spin' : ''}`} />
+            {isSlotBusy ? '生成中' : '重新生成'}
+          </button>
+          <button
+            onClick={() => actions.onSwitchVersion(slot, 'previous')}
+            disabled={actions.isAnyBusy || !hasPrevious}
+            className="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-sm text-slate-600 transition-colors hover:bg-slate-100 disabled:opacity-40"
+          >
+            上一版
+          </button>
+          <button
+            onClick={() => actions.onSwitchVersion(slot, 'next')}
+            disabled={actions.isAnyBusy || !hasNext}
+            className="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-sm text-slate-600 transition-colors hover:bg-slate-100 disabled:opacity-40"
+          >
+            下一版
+          </button>
+        </div>
+      </div>
+    ) : null}
+
+    {asset ? (
+      <img src={asset.url} alt={slot.title || asset.title} className="aspect-[16/9] w-full object-cover" />
+    ) : (
+      <div className="flex aspect-[16/9] items-center justify-center bg-slate-100 text-sm text-slate-500">当前图位暂无图片</div>
+    )}
+
+    <figcaption className="px-5 py-4">
+      <p className="text-sm leading-relaxed text-slate-700">{slot.explanation || asset?.editorCaption || slot.purpose || slot.anchorExcerpt}</p>
+    </figcaption>
+  </figure>
+  );
+};
+
+const ModernIllustrationHero: React.FC<{
+  bundle?: ArticleIllustrationBundle;
+  actions?: IllustrationSlotActions;
+}> = ({ bundle, actions }) => {
+  const hero = resolveHeroIllustration(bundle);
+  if (!hero?.slot) return null;
+  const versionState = resolveIllustrationVersionState(bundle, hero.slot.id);
+
+  return (
+    <ModernIllustrationCard
+      slot={hero.slot}
+      asset={hero.asset}
+      actions={actions}
+      versionLabel={versionState.total > 0 ? `${versionState.activeIndex + 1}/${versionState.total}` : undefined}
+      hasPrevious={versionState.hasPrevious}
+      hasNext={versionState.hasNext}
+    />
+  );
+};
+
+const ModernIllustrationGalleryPanel: React.FC<{
+  bundle?: ArticleIllustrationBundle;
+  job?: ArticleIllustrationJobStatus | null;
+  isGenerating: boolean;
+  errorMessage?: string | null;
+  onRegenerateAll: () => void;
+  slotActions: IllustrationSlotActions;
+}> = ({ bundle, job, isGenerating, errorMessage, onRegenerateAll, slotActions }) => {
+  const activeAssetMap = resolveActiveIllustrationAssetMap(bundle);
+  const completedCount = job?.completedCount ?? bundle?.assets.length ?? 0;
+  const totalCount = job?.totalCount ?? bundle?.targetImageCount ?? 0;
+  const currentStep = job?.currentStep || bundle?.progress?.currentStep || '';
+  const phaseLabel = resolveIllustrationPhaseLabel(job);
+
+  return (
+    <PanelShell title="配图" description="根据最终定稿自动规划并生成的整篇文章配图。">
+      <div className="space-y-6">
+        <div className="grid gap-4 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
+          <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+            <div className="flex items-center justify-between gap-4">
+              <div>
+                <p className="text-xs font-bold uppercase tracking-wider text-slate-400">生成状态</p>
+                <p className="mt-2 text-sm leading-relaxed text-slate-700">
+                  {isGenerating
+                    ? '正在按整篇统一视觉系统生成配图...'
+                    : bundle
+                      ? `已生成 ${bundle.assets.length}/${bundle.targetImageCount} 张图`
+                      : '尚未生成配图'}
+                </p>
+              </div>
+              <button
+                onClick={onRegenerateAll}
+                disabled={isGenerating}
+                className="rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-50 disabled:opacity-50"
+              >
+                重跑配图
+              </button>
+            </div>
+            {errorMessage ? <p className="mt-3 text-sm leading-relaxed text-red-600">{errorMessage}</p> : null}
+            {bundle ? (
+              <div className="mt-4 grid gap-3 text-sm text-slate-600 md:grid-cols-2">
+                <div className="rounded-xl bg-white px-4 py-3">
+                  <div className="text-xs font-bold uppercase tracking-wider text-slate-400">视觉方向</div>
+                  <div className="mt-2 leading-relaxed text-slate-700">{bundle.visualSystem.visualDirection}</div>
+                </div>
+                <div className="rounded-xl bg-white px-4 py-3">
+                  <div className="text-xs font-bold uppercase tracking-wider text-slate-400">色彩与图表</div>
+                  <div className="mt-2 leading-relaxed text-slate-700">
+                    {bundle.visualSystem.palette.join(' / ')}
+                    <br />
+                    {bundle.visualSystem.chartStyle}
+                  </div>
+                </div>
+              </div>
+            ) : null}
+          </div>
+
+          <div className="rounded-2xl border border-slate-200 bg-white p-5">
+            <p className="text-xs font-bold uppercase tracking-wider text-slate-400">整篇一致性规则</p>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {(bundle?.visualSystem.consistencyRules || []).map((rule) => (
+                <span key={rule} className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600">
+                  {rule}
+                </span>
+              ))}
+            </div>
+            {bundle?.warnings?.length ? (
+              <div className="mt-4 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm leading-relaxed text-amber-800">
+                {bundle.warnings.join(' ')}
+              </div>
+            ) : null}
+          </div>
+        </div>
+
+        {bundle?.slots?.length ? (
+          <div className="grid gap-5 lg:grid-cols-2">
+            {bundle.slots
+              .slice()
+              .sort((left, right) => left.order - right.order)
+              .map((slot) => {
+                const asset = activeAssetMap.get(slot.id);
+                const versionState = resolveIllustrationVersionState(bundle, slot.id);
+                return (
+                  <ModernIllustrationCard
+                    key={slot.id}
+                    slot={slot}
+                    asset={asset}
+                    actions={slotActions}
+                    compact
+                    versionLabel={versionState.total > 0 ? `${versionState.activeIndex + 1}/${versionState.total}` : undefined}
+                    hasPrevious={versionState.hasPrevious}
+                    hasNext={versionState.hasNext}
+                  />
+                );
+              })}
+          </div>
+        ) : (
+          <div className="rounded-2xl border border-dashed border-slate-300 bg-slate-50 px-5 py-10 text-center text-sm text-slate-500">
+            {isGenerating ? '正在生成配图，请稍候。' : '当前还没有可展示的配图结果。'}
+          </div>
+        )}
+      </div>
+    </PanelShell>
+  );
+};
+
+const ProgressiveIllustrationGalleryPanel: React.FC<{
+  bundle?: ArticleIllustrationBundle;
+  job?: ArticleIllustrationJobStatus | null;
+  isGenerating: boolean;
+  errorMessage?: string | null;
+  onRegenerateAll: () => void;
+  slotActions: IllustrationSlotActions;
+}> = ({ bundle, job, isGenerating, errorMessage, onRegenerateAll, slotActions }) => {
+  const activeAssetMap = resolveActiveIllustrationAssetMap(bundle);
+  const completedCount = job?.completedCount ?? bundle?.assets.length ?? 0;
+  const totalCount = job?.totalCount ?? bundle?.targetImageCount ?? 0;
+  const currentStep = job?.currentStep || bundle?.progress?.currentStep || '';
+  const phaseLabel = resolveIllustrationPhaseLabel(job);
+  const progressPercent = totalCount > 0 ? Math.min(100, Math.round((completedCount / totalCount) * 100)) : 0;
+
+  return (
+    <PanelShell title="配图" description="按整篇文章的统一视觉系统逐张生成。生成到哪一张、当前在做什么，都会直接显示在这里。">
+      <div className="space-y-6">
+        <div className="grid gap-4 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
+          <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+            <div className="flex items-center justify-between gap-4">
+              <div>
+                <p className="text-xs font-bold uppercase tracking-wider text-slate-400">生成状态</p>
+                <p className="mt-2 text-sm leading-relaxed text-slate-700">
+                  {isGenerating ? `${phaseLabel} ${completedCount}/${totalCount || '?'} 张` : bundle ? `已生成 ${bundle.assets.length}/${bundle.targetImageCount} 张图` : '尚未生成配图'}
+                </p>
+                {currentStep ? <p className="mt-2 text-sm leading-relaxed text-slate-500">{currentStep}</p> : null}
+              </div>
+              <button
+                onClick={onRegenerateAll}
+                disabled={isGenerating}
+                className="rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-50 disabled:opacity-50"
+              >
+                重跑配图
+              </button>
+            </div>
+            <div className="mt-4">
+              <div className="h-2 overflow-hidden rounded-full bg-white">
+                <div
+                  className="h-full rounded-full bg-report-accent transition-all duration-300"
+                  style={{ width: `${progressPercent}%` }}
+                />
+              </div>
+              <div className="mt-3 grid gap-3 text-sm text-slate-600 md:grid-cols-2">
+                <div className="rounded-xl bg-white px-4 py-3">
+                  <div className="text-xs font-bold uppercase tracking-wider text-slate-400">当前阶段</div>
+                  <div className="mt-2 leading-relaxed text-slate-700">{phaseLabel}</div>
+                </div>
+                <div className="rounded-xl bg-white px-4 py-3">
+                  <div className="text-xs font-bold uppercase tracking-wider text-slate-400">推进进度</div>
+                  <div className="mt-2 leading-relaxed text-slate-700">
+                    {completedCount}/{totalCount || '?'} 张
+                  </div>
+                </div>
+              </div>
+            </div>
+            {errorMessage ? <p className="mt-4 text-sm leading-relaxed text-red-600">{errorMessage}</p> : null}
+          </div>
+
+          <div className="rounded-2xl border border-slate-200 bg-white p-5">
+            <p className="text-xs font-bold uppercase tracking-wider text-slate-400">整篇一致性规则</p>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {(bundle?.visualSystem.consistencyRules || []).map((rule) => (
+                <span key={rule} className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600">
+                  {rule}
+                </span>
+              ))}
+            </div>
+            {bundle?.warnings?.length ? (
+              <div className="mt-4 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm leading-relaxed text-amber-800">
+                {bundle.warnings.join(' ')}
+              </div>
+            ) : null}
+            {bundle?.visualSystem.visualDirection ? (
+              <div className="mt-4 rounded-xl bg-slate-50 px-4 py-3 text-sm leading-relaxed text-slate-600">
+                {bundle.visualSystem.visualDirection}
+              </div>
+            ) : null}
+          </div>
+        </div>
+
+        {bundle?.slots?.length ? (
+          <div className="grid gap-5 lg:grid-cols-2">
+            {bundle.slots
+              .slice()
+              .sort((left, right) => left.order - right.order)
+              .map((slot) => {
+                const asset = activeAssetMap.get(slot.id);
+                const versionState = resolveIllustrationVersionState(bundle, slot.id);
+                return (
+                  <ModernIllustrationCard
+                    key={slot.id}
+                    slot={slot}
+                    asset={asset}
+                    actions={slotActions}
+                    compact
+                    versionLabel={versionState.total > 0 ? `${versionState.activeIndex + 1}/${versionState.total}` : undefined}
+                    hasPrevious={versionState.hasPrevious}
+                    hasNext={versionState.hasNext}
+                  />
+                );
+              })}
+          </div>
+        ) : (
+          <div className="rounded-2xl border border-dashed border-slate-300 bg-slate-50 px-5 py-10 text-center text-sm text-slate-500">
+            {isGenerating ? '正在创建首批图位，请稍候。' : '当前还没有可展示的配图结果。'}
+          </div>
+        )}
+      </div>
+    </PanelShell>
+  );
+};
+
+const ChunkDraftsPanel: React.FC<{ data: ViewerData }> = ({ data }) => {
+  const chunkDrafts = Array.isArray(data.chunkDrafts) ? data.chunkDrafts : [];
+
+  return (
+    <PanelShell title="Chunk 草稿" description="这里保留每一次分段初稿。恢复到任一节点后，可以从对应位置继续往下跑。">
+      <div className="space-y-6">
+        {chunkDrafts.length === 0 && (
+          <div className="rounded-2xl border border-dashed border-slate-200 bg-slate-50 px-5 py-8 text-sm text-slate-500">
+            当前还没有保存的 chunk 草稿。
+          </div>
+        )}
+
+        {chunkDrafts.map((chunkDraft, index) => {
+          const chunkPlan = data.chunkPlan?.[index];
+          const chunkTitle = chunkPlan?.title || `Chunk ${index + 1}`;
+
+          return (
+            <section key={`${chunkTitle}-${index}`} className="rounded-3xl border border-slate-200 bg-slate-50/70 p-6">
+              <div className="mb-4 flex flex-wrap items-center gap-3">
+                <h3 className="font-serif text-xl font-bold text-slate-900">{chunkTitle}</h3>
+                <span className="rounded-full bg-white px-3 py-1 text-xs font-semibold text-slate-500 ring-1 ring-slate-200">
+                  第 {index + 1} 段
+                </span>
+                {typeof chunkPlan?.targetLength === 'number' && (
+                  <span className="rounded-full bg-white px-3 py-1 text-xs font-semibold text-slate-500 ring-1 ring-slate-200">
+                    目标 {chunkPlan.targetLength} 字
+                  </span>
+                )}
+              </div>
+
+              {chunkPlan?.purpose && (
+                <p className="mb-5 text-sm leading-relaxed text-slate-600">{chunkPlan.purpose}</p>
+              )}
+
+              <div className="rounded-2xl border border-white bg-white p-5">
+                <MarkdownRenderer content={chunkDraft} />
+              </div>
+            </section>
+          );
+        })}
+      </div>
+    </PanelShell>
+  );
+};
+
+const ReferenceTemplatesPanel: React.FC<{ articles: ReferenceTemplateArticle[] }> = ({ articles }) => (
+  <PanelShell title="参考模板文章" description="这些文章会整篇提供给模型，用于学习结构、开头、段落推进和语气控制；这里展示的是本次实际采用的模板来源。">
+    <div className="space-y-5">
+      {articles.map((article, index) => (
+        <article key={`${article.id || article.title}-${index}`} className="rounded-2xl border border-slate-200 bg-slate-50/70 p-6">
+          <div className="flex flex-wrap items-start justify-between gap-3">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-wider text-slate-400">模板文章 {index + 1}</p>
+              <h3 className="mt-2 font-serif text-2xl font-bold text-slate-900">{article.title}</h3>
+            </div>
+            <div className="text-right text-sm text-slate-500">
+              {article.date && <p>{article.date}</p>}
+              {article.genre && <p>{article.genre}</p>}
+            </div>
+          </div>
+
+          {(article.style?.length || article.relativePath) && (
+            <div className="mt-4 flex flex-wrap gap-2 text-xs font-semibold">
+              {(article.style || []).map((style) => (
+                <span key={style} className="rounded-full bg-white px-3 py-1 text-slate-600 ring-1 ring-slate-200">
+                  {style}
+                </span>
+              ))}
+              {article.relativePath && (
+                <span className="rounded-full bg-white px-3 py-1 text-slate-500 ring-1 ring-slate-200">
+                  {article.relativePath}
+                </span>
+              )}
+            </div>
+          )}
+
+          <div className="mt-5 grid gap-4 md:grid-cols-2">
+            {article.whySelected && (
+              <div className="rounded-xl border border-slate-200 bg-white p-4">
+                <p className="text-xs font-bold uppercase tracking-wider text-slate-400">借鉴点</p>
+                <p className="mt-2 text-sm leading-relaxed text-slate-700">{article.whySelected}</p>
+              </div>
+            )}
+            {article.structurePattern && (
+              <div className="rounded-xl border border-slate-200 bg-white p-4">
+                <p className="text-xs font-bold uppercase tracking-wider text-slate-400">结构模式</p>
+                <p className="mt-2 text-sm leading-relaxed text-slate-700">{article.structurePattern}</p>
+              </div>
+            )}
+            {article.openingPattern && (
+              <div className="rounded-xl border border-slate-200 bg-white p-4">
+                <p className="text-xs font-bold uppercase tracking-wider text-slate-400">开头方式</p>
+                <p className="mt-2 text-sm leading-relaxed text-slate-700">{article.openingPattern}</p>
+              </div>
+            )}
+            {article.coreArgument && (
+              <div className="rounded-xl border border-slate-200 bg-white p-4">
+                <p className="text-xs font-bold uppercase tracking-wider text-slate-400">核心论点</p>
+                <p className="mt-2 text-sm leading-relaxed text-slate-700">{article.coreArgument}</p>
+              </div>
+            )}
+          </div>
+
+          {article.summary && (
+            <div className="mt-4 rounded-xl border border-slate-200 bg-white p-4">
+              <p className="text-xs font-bold uppercase tracking-wider text-slate-400">文章摘要</p>
+              <p className="mt-2 text-sm leading-relaxed text-slate-700">{article.summary}</p>
+            </div>
+          )}
+        </article>
+      ))}
+    </div>
+  </PanelShell>
+);
+
+export const ArticleViewer: React.FC<ArticleViewerProps> = ({
+  data,
+  onReset,
+  onUpdateArticleContent,
+  onUpdateTeachingNotes,
+  onUpdateIllustrationBundle,
+}) => {
+  const viewerData = data as ViewerData;
+  const referenceArticles = Array.isArray(viewerData.referenceArticles) ? viewerData.referenceArticles : [];
+  const previewArticleContent = useMemo(() => resolveArticlePreviewContent(viewerData), [viewerData]);
+  const hasFinalArticle = Boolean(data.articleContent);
+  const articleTitle = useMemo(
+    () => extractArticleTitle(data.topic, previewArticleContent),
+    [data.topic, previewArticleContent]
+  );
+
+  const [showCopilot, setShowCopilot] = useState(false);
+  const [isDownloading, setIsDownloading] = useState(false);
+  const [refineStatus, setRefineStatus] = useState<string | null>(null);
+  const [illustrationStatus, setIllustrationStatus] = useState<'idle' | 'generating' | 'ready' | 'error'>('idle');
+  const [illustrationError, setIllustrationError] = useState<string | null>(null);
+  const [illustrationJob, setIllustrationJob] = useState<ArticleIllustrationJobStatus | null>(null);
+  const [illustrationMutationSlotId, setIllustrationMutationSlotId] = useState<string | null>(null);
+  const [regeneratePromptDraft, setRegeneratePromptDraft] = useState('');
+  const [regeneratePromptSlotId, setRegeneratePromptSlotId] = useState<string | null>(null);
+  const [selection, setSelection] = useState('');
+  const [selectionPos, setSelectionPos] = useState<{ x: number; y: number } | null>(null);
+  const [selectionSource, setSelectionSource] = useState<'article' | 'notes' | null>(null);
+  const [activePanel, setActivePanel] = useState<ViewerPanel>('article');
+
+  const abortControllerRef = useRef(false);
+  const illustrationRequestAbortRef = useRef<AbortController | null>(null);
+  const illustrationStatusPollRef = useRef<number | null>(null);
+  const articleExportRef = useRef<HTMLDivElement>(null);
+  const plainArticleExportRef = useRef<HTMLDivElement>(null);
+  const notesExportRef = useRef<HTMLDivElement>(null);
+
+  const [history, setHistory] = useState<HistoryItem[]>([]);
+  const [historyIndex, setHistoryIndex] = useState(0);
+  const activeIllustrationBundle = data.illustrationBundle;
+  const activeRegenerateSlot = activeIllustrationBundle?.slots.find((slot) => slot.id === regeneratePromptSlotId);
+  const illustrationBundleNeedsRefresh = bundleNeedsRefresh(activeIllustrationBundle);
+  const autoIllustrationStateRef = useRef('');
+
+  const stopIllustrationPolling = () => {
+    if (illustrationStatusPollRef.current !== null) {
+      window.clearTimeout(illustrationStatusPollRef.current);
+      illustrationStatusPollRef.current = null;
+    }
+  };
+
+  const pollIllustrationStatus = async (sourceHash: string, immediate = false) => {
+    stopIllustrationPolling();
+    const run = async () => {
+      const controller = new AbortController();
+      illustrationRequestAbortRef.current = controller;
+      try {
+        const payload = await getArticleIllustrationStatus({
+          sourceHash,
+          signal: controller.signal,
+        });
+        if (payload.bundle) {
+          onUpdateIllustrationBundle(payload.bundle);
+        }
+        if (payload.job) {
+          setIllustrationJob(payload.job);
+          if (payload.job.status === 'error') {
+            setIllustrationStatus('error');
+            setIllustrationError(payload.job.error || payload.job.currentStep || '配图生成失败，请稍后重试。');
+            stopIllustrationPolling();
+            return;
+          }
+          if (payload.job.status === 'ready') {
+            setIllustrationStatus('ready');
+            setIllustrationError(null);
+            stopIllustrationPolling();
+            return;
+          }
+        }
+        setIllustrationStatus('generating');
+        illustrationStatusPollRef.current = window.setTimeout(() => {
+          void pollIllustrationStatus(sourceHash);
+        }, 1800);
+      } catch (error: any) {
+        if (error?.message !== '已取消本次生图请求。') {
+          console.error('Illustration status polling failed', error);
+          setIllustrationStatus('error');
+          setIllustrationError(error?.message || '配图状态获取失败，请稍后重试。');
+          stopIllustrationPolling();
+        }
+      } finally {
+        if (illustrationRequestAbortRef.current === controller) {
+          illustrationRequestAbortRef.current = null;
+        }
+      }
+    };
+
+    if (immediate) {
+      await run();
+      return;
+    }
+
+    illustrationStatusPollRef.current = window.setTimeout(() => {
+      void run();
+    }, 1800);
+  };
+
+  const requestIllustrations = async (regenerate = false) => {
+    if (!data.articleContent) return;
+    stopIllustrationPolling();
+    illustrationRequestAbortRef.current?.abort();
+    const controller = new AbortController();
+    illustrationRequestAbortRef.current = controller;
+    setIllustrationStatus('generating');
+    setIllustrationError(null);
+
+    try {
+      const result = await startArticleIllustrationGeneration({
+        topic: articleTitle,
+        articleContent: data.articleContent,
+        options: data.options,
+        regenerate,
+        signal: controller.signal,
+      });
+      if (result.bundle) {
+        onUpdateIllustrationBundle(result.bundle);
+      }
+      if (result.job) {
+        setIllustrationJob(result.job);
+      }
+      if (!regenerate) {
+        setActivePanel('illustrations');
+      }
+      await pollIllustrationStatus(result.sourceHash, true);
+    } catch (error: any) {
+      console.error('Illustration generation failed', error);
+      if (error?.message === '已取消本次生图请求。') {
+        setIllustrationStatus('idle');
+      } else {
+        setIllustrationStatus('error');
+        setIllustrationError(error?.message || '配图生成失败，请稍后重试。');
+      }
+    } finally {
+      if (illustrationRequestAbortRef.current === controller) {
+        illustrationRequestAbortRef.current = null;
+      }
+    }
+  };
+
+  const openRegeneratePromptDialog = (slot: ArticleIllustrationSlot) => {
+    setIllustrationError(null);
+    setRegeneratePromptSlotId(slot.id);
+    setRegeneratePromptDraft(slot.lastUserPrompt || '');
+  };
+
+  const closeRegeneratePromptDialog = () => {
+    if (illustrationMutationSlotId && illustrationRequestAbortRef.current) {
+      illustrationRequestAbortRef.current.abort();
+      illustrationRequestAbortRef.current = null;
+      setIllustrationMutationSlotId(null);
+    }
+    setRegeneratePromptSlotId(null);
+    setRegeneratePromptDraft('');
+  };
+
+  const handleRegenerateSlot = async (slot: ArticleIllustrationSlot) => {
+    if (!activeIllustrationBundle?.sourceHash) return;
+    illustrationRequestAbortRef.current?.abort();
+    const controller = new AbortController();
+    illustrationRequestAbortRef.current = controller;
+    setIllustrationMutationSlotId(slot.id);
+    setIllustrationError(null);
+    try {
+      const bundle = await regenerateIllustrationSlot({
+        sourceHash: activeIllustrationBundle.sourceHash,
+        slotId: slot.id,
+        articleContent: data.articleContent || '',
+        options: data.options,
+        userPrompt: regeneratePromptDraft,
+        signal: controller.signal,
+      });
+      onUpdateIllustrationBundle(bundle);
+      closeRegeneratePromptDialog();
+    } catch (error: any) {
+      console.error('Illustration slot regenerate failed', error);
+      if (error?.message !== '已取消本次生图请求。') {
+        setIllustrationError(error?.message || '局部配图重生失败，请稍后重试。');
+      }
+    } finally {
+      if (illustrationRequestAbortRef.current === controller) {
+        illustrationRequestAbortRef.current = null;
+      }
+      setIllustrationMutationSlotId(null);
+    }
+  };
+
+  const handleDeleteSlot = async (slot: ArticleIllustrationSlot) => {
+    if (!activeIllustrationBundle?.sourceHash) return;
+    illustrationRequestAbortRef.current?.abort();
+    const controller = new AbortController();
+    illustrationRequestAbortRef.current = controller;
+    setIllustrationMutationSlotId(slot.id);
+    setIllustrationError(null);
+    try {
+      const bundle = await deleteIllustrationSlotImage({
+        sourceHash: activeIllustrationBundle.sourceHash,
+        slotId: slot.id,
+        signal: controller.signal,
+      });
+      onUpdateIllustrationBundle(bundle);
+    } catch (error: any) {
+      console.error('Illustration slot delete failed', error);
+      if (error?.message !== '已取消本次生图请求。') {
+        setIllustrationError(error?.message || '删除配图失败，请稍后重试。');
+      }
+    } finally {
+      if (illustrationRequestAbortRef.current === controller) {
+        illustrationRequestAbortRef.current = null;
+      }
+      setIllustrationMutationSlotId(null);
+    }
+  };
+
+  const handleSwitchSlotVersion = async (slot: ArticleIllustrationSlot, direction: 'previous' | 'next') => {
+    if (!activeIllustrationBundle?.sourceHash) return;
+    illustrationRequestAbortRef.current?.abort();
+    const controller = new AbortController();
+    illustrationRequestAbortRef.current = controller;
+    setIllustrationMutationSlotId(slot.id);
+    setIllustrationError(null);
+    try {
+      const bundle = await switchIllustrationSlotVersion({
+        sourceHash: activeIllustrationBundle.sourceHash,
+        slotId: slot.id,
+        direction,
+        signal: controller.signal,
+      });
+      onUpdateIllustrationBundle(bundle);
+    } catch (error: any) {
+      console.error('Illustration version switch failed', error);
+      if (error?.message !== '已取消本次生图请求。') {
+        setIllustrationError(error?.message || '切换配图版本失败，请稍后重试。');
+      }
+    } finally {
+      if (illustrationRequestAbortRef.current === controller) {
+        illustrationRequestAbortRef.current = null;
+      }
+      setIllustrationMutationSlotId(null);
+    }
+  };
+
+  const illustrationSlotActions: IllustrationSlotActions = {
+    onDelete: (slot) => void handleDeleteSlot(slot),
+    onRegenerate: (slot) => openRegeneratePromptDialog(slot),
+    onSwitchVersion: (slot, direction) => void handleSwitchSlotVersion(slot, direction),
+    isAnyBusy: illustrationMutationSlotId !== null || illustrationStatus === 'generating',
+    busySlotId: illustrationMutationSlotId,
+    pendingSlotId: regeneratePromptSlotId,
+  };
+
+  useEffect(() => {
+    if (history.length === 0 && data.articleContent) {
+      setHistory([
+        {
+          articleContent: data.articleContent,
+          teachingNotes: data.teachingNotes || '',
+        },
+      ]);
+    }
+  }, [data.articleContent, data.teachingNotes, history.length]);
+
+  useEffect(() => {
+    const current = history[historyIndex];
+    if (
+      current &&
+      (current.articleContent !== (data.articleContent || '') ||
+        current.teachingNotes !== (data.teachingNotes || ''))
+    ) {
+      const nextHistory = history.slice(0, historyIndex + 1);
+      nextHistory.push({
+        articleContent: data.articleContent || '',
+        teachingNotes: data.teachingNotes || '',
+      });
+      setHistory(nextHistory);
+      setHistoryIndex(nextHistory.length - 1);
+    }
+  }, [data.articleContent, data.teachingNotes]);
+
+  useEffect(() => {
+    const autoStateKey = JSON.stringify({
+      hasFinalArticle,
+      articleContent: data.articleContent || '',
+      sourceHash: activeIllustrationBundle?.sourceHash || '',
+      updatedAt: activeIllustrationBundle?.updatedAt || '',
+      assetCount: activeIllustrationBundle?.assets?.length || 0,
+      needsRefresh: illustrationBundleNeedsRefresh,
+      illustrationStatus,
+      illustrationJobStatus: illustrationJob?.status || '',
+    });
+    if (autoIllustrationStateRef.current === autoStateKey) {
+      return;
+    }
+    autoIllustrationStateRef.current = autoStateKey;
+
+    if (!hasFinalArticle || !data.articleContent) {
+      stopIllustrationPolling();
+      setIllustrationStatus('idle');
+      setIllustrationError(null);
+      setIllustrationJob(null);
+      return;
+    }
+
+    if (activeIllustrationBundle?.sourceHash && activeIllustrationBundle.status !== 'ready') {
+      setIllustrationStatus(activeIllustrationBundle.status === 'error' ? 'error' : 'generating');
+      if (illustrationStatusPollRef.current === null) {
+        void pollIllustrationStatus(activeIllustrationBundle.sourceHash, true);
+      }
+      return;
+    }
+
+    if (isIllustrationJobActive(illustrationJob)) {
+      setIllustrationStatus('generating');
+      if (illustrationStatusPollRef.current === null) {
+        void pollIllustrationStatus(illustrationJob!.sourceHash, true);
+      }
+      return;
+    }
+
+    if (activeIllustrationBundle && !illustrationBundleNeedsRefresh) {
+      stopIllustrationPolling();
+      setIllustrationStatus('ready');
+      setIllustrationError(null);
+      return;
+    }
+
+    if (illustrationStatus === 'error') {
+      return;
+    }
+
+    if (illustrationStatus === 'generating') {
+      return;
+    }
+
+    void requestIllustrations(Boolean(activeIllustrationBundle));
+  });
+
+  useEffect(() => () => {
+    stopIllustrationPolling();
+    illustrationRequestAbortRef.current?.abort();
+  }, []);
+
+  const tabs = useMemo<ViewerTab[]>(
+    () =>
+      [
+        { id: 'article', label: '正文' },
+        ...(hasFinalArticle ? [{ id: 'illustrations' as const, label: '配图' }] : []),
+        ...(referenceArticles.length > 0 ? [{ id: 'references' as const, label: '参考模板' }] : []),
+        { id: 'task', label: '任务摘要' },
+        ...(data.outline ? [{ id: 'outline' as const, label: '提纲' }] : []),
+        ...(data.researchDocuments.length > 0 ? [{ id: 'research' as const, label: '研究资料' }] : []),
+        ...(data.critique ? [{ id: 'critique' as const, label: '审查' }] : []),
+        ...(data.teachingNotes ? [{ id: 'notes' as const, label: 'TN' }] : []),
+      ] satisfies ViewerTab[],
+    [data.critique, data.outline, data.researchDocuments.length, data.teachingNotes, hasFinalArticle, referenceArticles.length]
+  );
+
+  const visibleTabs = useMemo<ViewerTab[]>(
+    () =>
+      (data.chunkDrafts || []).length > 0
+        ? [{ id: 'article', label: tabs[0]?.label || 'Article' }, { id: 'chunks', label: 'Chunk' }, ...tabs.slice(1)]
+        : tabs,
+    [data.chunkDrafts, tabs]
+  );
+
+  useEffect(() => {
+    if (!visibleTabs.some((tab) => tab.id === activePanel)) {
+      setActivePanel('article');
+    }
+  }, [activePanel, visibleTabs]);
+
+  const handleMouseUp = (event: React.MouseEvent) => {
+    if (refineStatus) return;
+
+    const currentSelection = window.getSelection();
+    if (!currentSelection || currentSelection.isCollapsed || !currentSelection.toString().trim()) return;
+
+    const target = event.target as HTMLElement;
+    const articleSection = target.closest('[data-section="article"]');
+    const notesSection = target.closest('[data-section="notes"]');
+
+    if (articleSection) {
+      setSelectionSource('article');
+    } else if (notesSection) {
+      setSelectionSource('notes');
+    } else {
+      return;
+    }
+
+    const range = currentSelection.getRangeAt(0);
+    const rect = range.getBoundingClientRect();
+    setSelection(currentSelection.toString().trim());
+    setSelectionPos({
+      x: rect.left + rect.width / 2,
+      y: rect.top,
+    });
+  };
+
+  const closeMenu = () => {
+    setSelection('');
+    setSelectionPos(null);
+    setSelectionSource(null);
+    window.getSelection()?.removeAllRanges();
+  };
+
+  const executeRefine = async (instruction: string, selectedText?: string, target?: 'article' | 'notes') => {
+    const actualTarget = target || 'article';
+    const fullText = actualTarget === 'article' ? data.articleContent : data.teachingNotes;
+    if (!fullText) return;
+
+    abortControllerRef.current = false;
+    setRefineStatus('正在启动深度编辑...');
+
+    try {
+      const nextText = await GeminiService.refineContent(
+        data.ammoLibrary,
+        fullText,
+        instruction,
+        selectedText,
+        (message) => setRefineStatus(message),
+        () => abortControllerRef.current
+      );
+
+      if (actualTarget === 'article') {
+        onUpdateArticleContent(nextText);
+      } else {
+        onUpdateTeachingNotes(nextText);
+      }
+    } catch (error: any) {
+      if (error?.message !== 'STOPPED') {
+        console.error(error);
+        alert(error?.message || '内容改写失败，请稍后再试。');
+      }
+    } finally {
+      setRefineStatus(null);
+    }
+  };
+
+  const handleSelectionRefine = async (instruction: string) => {
+    if (!selection || !selectionSource) return;
+    closeMenu();
+    await executeRefine(instruction, selection, selectionSource);
+  };
+
+  const handleCopilotRefineRequest = async (target: 'article' | 'notes', instruction: string) => {
+    await executeRefine(instruction, undefined, target);
+  };
+
+  const handlePolish = async () => {
+    abortControllerRef.current = false;
+    setRefineStatus('正在执行终稿审查...');
+
+    try {
+      const polishedArticle = await GeminiService.runFinalPolish(
+        data.ammoLibrary,
+        data.articleContent || '',
+        (message) => setRefineStatus(`正文：${message}`),
+        () => abortControllerRef.current,
+        referenceArticles,
+        'article',
+        data.outline || '',
+        data.chunkPlan || []
+      );
+      onUpdateArticleContent(polishedArticle);
+
+      if (data.teachingNotes) {
+        const polishedNotes = await GeminiService.runFinalPolish(
+          data.ammoLibrary,
+          data.teachingNotes,
+          (message) => setRefineStatus(`TN：${message}`),
+          () => abortControllerRef.current,
+          referenceArticles,
+          'notes'
+        );
+        onUpdateTeachingNotes(polishedNotes);
+      }
+    } catch (error: any) {
+      if (error?.message !== 'STOPPED') {
+        console.error(error);
+        alert(error?.message || '终稿审查失败，请稍后再试。');
+      }
+    } finally {
+      setRefineStatus(null);
+    }
+  };
+
+  const handleStop = () => {
+    abortControllerRef.current = true;
+    setRefineStatus('正在停止...');
+  };
+
+  const handleUndo = () => {
+    if (historyIndex <= 0) return;
+    const nextIndex = historyIndex - 1;
+    const snapshot = history[nextIndex];
+    setHistoryIndex(nextIndex);
+    onUpdateArticleContent(snapshot.articleContent);
+    onUpdateTeachingNotes(snapshot.teachingNotes);
+  };
+
+  const handleRedo = () => {
+    if (historyIndex >= history.length - 1) return;
+    const nextIndex = historyIndex + 1;
+    const snapshot = history[nextIndex];
+    setHistoryIndex(nextIndex);
+    onUpdateArticleContent(snapshot.articleContent);
+    onUpdateTeachingNotes(snapshot.teachingNotes);
+  };
+
+  const downloadPDF = async (elementRef: React.RefObject<HTMLDivElement>, filename: string) => {
+    const source = elementRef.current;
+    if (!source) return;
+    const sourceNode = (source.firstElementChild as HTMLDivElement | null) || source;
+    const { default: html2pdf } = await import('html2pdf.js');
+
+    setIsDownloading(true);
+    if ((document as any).fonts?.ready) {
+      await (document as any).fonts.ready;
+    }
+
+    const exportHost = document.createElement('div');
+    exportHost.style.position = 'fixed';
+    exportHost.style.left = '0';
+    exportHost.style.top = '0';
+    exportHost.style.width = `${EXPORT_PAGE_WIDTH_PX}px`;
+    exportHost.style.maxWidth = `${EXPORT_PAGE_WIDTH_PX}px`;
+    exportHost.style.padding = '0';
+    exportHost.style.margin = '0';
+    exportHost.style.background = '#ffffff';
+    exportHost.style.opacity = '1';
+    exportHost.style.visibility = 'visible';
+    exportHost.style.pointerEvents = 'none';
+    exportHost.style.overflow = 'visible';
+    exportHost.style.zIndex = '-1';
+    exportHost.setAttribute('aria-hidden', 'true');
+
+    const clonedRoot = sourceNode.cloneNode(true) as HTMLDivElement;
+    clonedRoot.querySelectorAll('.no-print').forEach((node) => node.remove());
+    clonedRoot.style.width = `${EXPORT_PAGE_WIDTH_PX}px`;
+    clonedRoot.style.maxWidth = `${EXPORT_PAGE_WIDTH_PX}px`;
+    clonedRoot.style.minWidth = `${EXPORT_PAGE_WIDTH_PX}px`;
+    clonedRoot.style.margin = '0';
+    clonedRoot.style.boxSizing = 'border-box';
+    clonedRoot.style.boxShadow = 'none';
+    clonedRoot.style.borderRadius = '0';
+    clonedRoot.style.border = 'none';
+    clonedRoot.style.background = '#ffffff';
+    clonedRoot.style.overflow = 'visible';
+    clonedRoot.style.transform = 'none';
+    clonedRoot.style.position = 'relative';
+    clonedRoot.style.left = '0';
+
+    exportHost.appendChild(clonedRoot);
+    document.body.appendChild(exportHost);
+
+    try {
+      await waitForAnimationFrames(3);
+
+      const captureWidth = EXPORT_PAGE_WIDTH_PX;
+
+      await html2pdf()
+        .set({
+          margin: [10, 10, 10, 10],
+          filename,
+          image: { type: 'jpeg', quality: 0.98 },
+          html2canvas: {
+            scale: 2,
+            useCORS: true,
+            backgroundColor: '#ffffff',
+            width: captureWidth,
+            windowWidth: captureWidth,
+            removeContainer: true,
+            scrollX: 0,
+            scrollY: 0,
+          },
+          jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+          pagebreak: {
+            mode: ['avoid-all', 'css', 'legacy'],
+            avoid: ['.pdf-avoid-break', 'table', 'tr', 'blockquote', 'h1', 'h2', 'h3'],
+          },
+        })
+        .from(clonedRoot)
+        .save();
+    } catch (error) {
+      console.error('PDF export failed', error);
+      alert('PDF 导出失败，请稍后再试。');
+    } finally {
+      exportHost.remove();
+      setIsDownloading(false);
+    }
+  };
+
+  const downloadPlainTextPDF = async (filename: string) => {
+    const previewContent = resolveArticlePreviewContent(viewerData);
+    if (!previewContent) return;
+
+    setIsDownloading(true);
+
+    try {
+      const [{ jsPDF }, fontBinary] = await Promise.all([import('jspdf'), loadPlainPdfFontBinary()]);
+      const doc = new jsPDF({ unit: 'mm', format: 'a4', orientation: 'portrait', compress: true });
+      const articleTitleForPdf = extractArticleTitle(data.topic, previewContent);
+      const articleBodyForPdf = stripLeadingTitleFromArticle(previewContent, articleTitleForPdf);
+      const blocks = buildPlainTextBlocks(articleBodyForPdf);
+      const pageWidth = doc.internal.pageSize.getWidth();
+      const pageHeight = doc.internal.pageSize.getHeight();
+      const marginX = 20;
+      const marginTop = 18;
+      const marginBottom = 18;
+      const contentWidth = pageWidth - marginX * 2;
+      const lineHeightFactor = 1.65;
+      const ptToMm = (pt: number) => pt * 0.352778;
+      let cursorY = marginTop;
+
+      doc.addFileToVFS('YaHei.ttf', fontBinary);
+      doc.addFont('YaHei.ttf', 'YaHei', 'normal');
+      doc.setFont('YaHei', 'normal');
+      doc.setLineHeightFactor(lineHeightFactor);
+
+      const ensurePageSpace = (height: number) => {
+        if (cursorY + height <= pageHeight - marginBottom) return;
+        doc.addPage();
+        doc.setFont('YaHei', 'normal');
+        doc.setLineHeightFactor(lineHeightFactor);
+        cursorY = marginTop;
+      };
+
+      const getTextHeight = (lineCount: number, fontSize: number) => lineCount * ptToMm(fontSize) * lineHeightFactor;
+
+      const drawBlock = (
+        text: string,
+        options: {
+          fontSize: number;
+          before?: number;
+          after?: number;
+          align?: 'left' | 'center';
+          color?: [number, number, number];
+        }
+      ) => {
+        const before = options.before ?? 0;
+        const after = options.after ?? 0;
+        const color = options.color ?? [20, 24, 28];
+        doc.setFontSize(options.fontSize);
+        doc.setTextColor(color[0], color[1], color[2]);
+
+        const lines = doc.splitTextToSize(text, contentWidth) as string[];
+        const blockHeight = before + getTextHeight(lines.length, options.fontSize) + after;
+        ensurePageSpace(blockHeight);
+        cursorY += before;
+
+        if (options.align === 'center') {
+          doc.text(lines, pageWidth / 2, cursorY, { align: 'center' });
+        } else {
+          doc.text(lines, marginX, cursorY);
+        }
+
+        cursorY += getTextHeight(lines.length, options.fontSize) + after;
+      };
+
+      drawBlock(articleTitleForPdf, { fontSize: 18, after: 3, align: 'center', color: [15, 23, 42] });
+      drawBlock(`${data.options.genre}  ${new Date().getFullYear()}`, {
+        fontSize: 9.5,
+        after: 5,
+        align: 'center',
+        color: [100, 116, 139],
+      });
+
+      blocks.forEach((block) => {
+        if (block.type === 'heading1') {
+          drawBlock(block.text, { fontSize: 15, before: 2, after: 2, align: 'center', color: [15, 23, 42] });
+          return;
+        }
+
+        if (block.type === 'heading2') {
+          drawBlock(block.text, { fontSize: 13.5, before: 3, after: 1.5, color: [15, 23, 42] });
+          return;
+        }
+
+        if (block.type === 'heading3') {
+          drawBlock(block.text, { fontSize: 12, before: 2.5, after: 1, color: [30, 41, 59] });
+          return;
+        }
+
+        if (block.type === 'quote') {
+          drawBlock(`    ${block.text}`, { fontSize: 11, before: 1, after: 2, color: [71, 85, 105] });
+          return;
+        }
+
+        if (block.type === 'table') {
+          drawBlock(block.text, { fontSize: 10.5, after: 1.5, color: [71, 85, 105] });
+          return;
+        }
+
+        if (block.type === 'list') {
+          const prefix = block.ordered ? `${block.order}. ` : '- ';
+          drawBlock(`${prefix}${block.text}`, { fontSize: 11.5, after: 1 });
+          return;
+        }
+
+        drawBlock(`　　${block.text}`, { fontSize: 11.5, after: 2 });
+      });
+
+      doc.save(filename);
+    } catch (error) {
+      console.error('Plain text PDF export failed', error);
+      alert('纯文字 PDF 导出失败，请稍后再试。');
+    } finally {
+      setIsDownloading(false);
+    }
+  };
+
+  const articleFilenameBase = articleTitle.replace(/[\\/:*?"<>|]/g, '_').slice(0, 24) || 'article';
+
+  const renderActivePanel = () => {
+    switch (activePanel) {
+      case 'article':
+        return <ArticleDocument data={viewerData} illustrationActions={illustrationSlotActions} />;
+      case 'illustrations':
+        return (
+          <ProgressiveIllustrationGalleryPanel
+            bundle={activeIllustrationBundle}
+            job={illustrationJob}
+            isGenerating={illustrationStatus === 'generating'}
+            errorMessage={illustrationError}
+            onRegenerateAll={() => void requestIllustrations(true)}
+            slotActions={illustrationSlotActions}
+          />
+        );
+      case 'chunks':
+        return <ChunkDraftsPanel data={viewerData} />;
+      case 'references':
+        return <ReferenceTemplatesPanel articles={referenceArticles} />;
+      case 'task':
+        return <TaskSummaryPanel data={viewerData} referenceCount={referenceArticles.length} />;
+      case 'outline':
+        return (
+          <PanelShell title="提纲" description="批准后进入写作的结构底稿。">
+            <MarkdownRenderer content={data.outline || ''} />
+          </PanelShell>
+        );
+      case 'research':
+        return (
+          <PanelShell title="研究资料" description="三路搜索显示为研究笔记，Deep Research 只保留清洗后的 Agent 文本输出。">
+            <div className="space-y-6">
+              {data.researchDocuments.map((doc) => (
+                <section key={doc.id} className="rounded-2xl border border-slate-200 bg-slate-50/70 p-6">
+                  <h3 className="mb-4 font-serif text-xl font-bold text-slate-900">{doc.title}</h3>
+                  <MarkdownRenderer content={doc.content} />
+                </section>
+              ))}
+            </div>
+          </PanelShell>
+        );
+      case 'critique':
+        return (
+          <PanelShell title="审查" description="终稿前的审查意见与本地风格检查。">
+            <MarkdownRenderer content={data.critique || ''} />
+          </PanelShell>
+        );
+      case 'notes':
+        return <NotesDocument data={viewerData} />;
+      default:
+        return <ArticleDocument data={viewerData} />;
+    }
+  };
+
+  return (
+    <div className="relative min-h-screen w-full bg-report-bg pb-24" onMouseUp={handleMouseUp}>
+      {refineStatus && (
+        <div className="fixed inset-0 z-[100] flex animate-fade-in flex-col items-center justify-center bg-white/90 backdrop-blur-md no-print">
+          <div className="relative mb-8 h-24 w-24">
+            <div className="absolute inset-0 rounded-full border-4 border-gray-100" />
+            <div className="absolute inset-0 animate-spin rounded-full border-4 border-report-accent border-t-transparent" />
+          </div>
+          <h3 className="mb-2 font-serif text-3xl font-bold tracking-tight text-slate-900">AI 正在重整成文</h3>
+          <p className="mb-8 font-mono text-sm uppercase tracking-wider text-report-accent animate-pulse">{refineStatus}</p>
+          <button
+            onClick={handleStop}
+            className="flex items-center gap-2 rounded-full border border-red-200 bg-white px-6 py-2 text-sm font-bold text-red-500 shadow-sm transition-colors hover:bg-red-50"
+          >
+            <StopIcon className="h-4 w-4" />
+            停止
+          </button>
+        </div>
+      )}
+
+      {regeneratePromptSlotId && (
+        <div className="fixed inset-0 z-[95] flex items-center justify-center bg-slate-950/40 px-4 backdrop-blur-sm no-print">
+          <div className="w-full max-w-2xl rounded-[28px] border border-slate-200 bg-white p-6 shadow-2xl sm:p-8">
+            <div className="mb-5">
+              <h3 className="font-serif text-2xl font-bold text-slate-900">重新生成这张图</h3>
+              <p className="mt-2 text-sm leading-relaxed text-slate-500">
+                {activeRegenerateSlot?.title || '当前图位'}会在保留整篇视觉系统的前提下，按照你补充的要求重新生成。
+              </p>
+            </div>
+
+            <label className="block text-sm font-medium text-slate-700" htmlFor="illustration-regenerate-prompt">
+              你想要什么样的图
+            </label>
+            <textarea
+              id="illustration-regenerate-prompt"
+              value={regeneratePromptDraft}
+              onChange={(event) => setRegeneratePromptDraft(event.target.value)}
+              rows={6}
+              placeholder="例如：更强调供应链关系，弱化门店招牌；画面更克制，少一点广告感；突出东南亚街头环境和物流细节。"
+              className="mt-3 w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm leading-relaxed text-slate-700 outline-none transition-colors focus:border-report-accent focus:bg-white"
+            />
+
+            {illustrationError ? (
+              <div className="mt-4 rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm leading-relaxed text-red-700">
+                {illustrationError}
+              </div>
+            ) : null}
+
+            <div className="mt-6 flex flex-wrap items-center justify-end gap-3">
+              <button
+                onClick={closeRegeneratePromptDialog}
+                className="rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-600 transition-colors hover:bg-slate-50 disabled:opacity-50"
+              >
+                {illustrationMutationSlotId ? '取消并停止' : '取消'}
+              </button>
+              <button
+                onClick={() => activeRegenerateSlot && void handleRegenerateSlot(activeRegenerateSlot)}
+                disabled={!activeRegenerateSlot || illustrationMutationSlotId !== null}
+                className="inline-flex items-center gap-2 rounded-xl bg-report-accent px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-teal-800 disabled:opacity-50"
+              >
+                {illustrationMutationSlotId ? <ArrowPathIcon className="h-4 w-4 animate-spin" /> : null}
+                {illustrationMutationSlotId ? '生成中' : '开始重生'}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      <div className="sticky top-0 z-40 border-b border-gray-200 bg-white shadow-sm no-print">
+        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
+          <div className="flex items-center gap-3">
+            <span className="font-serif text-xl font-bold text-slate-800">Writing Workspace</span>
+            <span className="rounded-md bg-gray-100 px-2 py-1 font-mono text-xs text-gray-500">v{historyIndex + 1}</span>
+          </div>
+
+          <div className="flex items-center gap-3">
+            <div className="flex items-center gap-1 rounded-lg border border-gray-100 bg-gray-50 p-1">
+              <button
+                onClick={handleUndo}
+                disabled={historyIndex <= 0 || !!refineStatus}
+                className="rounded-md p-1.5 text-gray-500 transition-all hover:bg-white hover:text-slate-800 disabled:opacity-30"
+                title="上一版"
+              >
+                <ChevronLeftIcon className="h-4 w-4" />
+              </button>
+              <button
+                onClick={handleRedo}
+                disabled={historyIndex >= history.length - 1 || !!refineStatus}
+                className="rounded-md p-1.5 text-gray-500 transition-all hover:bg-white hover:text-slate-800 disabled:opacity-30"
+                title="下一版"
+              >
+                <ChevronRightIcon className="h-4 w-4" />
+              </button>
+            </div>
+
+            <button
+              onClick={() => setShowCopilot(true)}
+              disabled={!hasFinalArticle}
+              className={`flex items-center gap-2 rounded-lg border px-4 py-2 text-sm font-medium transition-colors ${
+                showCopilot
+                  ? 'border-report-accent bg-teal-50 text-report-accent'
+                  : 'border-gray-200 bg-white text-gray-600 hover:bg-gray-50'
+              } disabled:cursor-not-allowed disabled:opacity-50`}
+            >
+              <ChatBubbleLeftRightIcon className="h-4 w-4" />
+              Copilot
+            </button>
+
+            <button
+              onClick={handlePolish}
+              disabled={!!refineStatus || !hasFinalArticle}
+              className="flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-600 transition-colors hover:bg-gray-50 disabled:opacity-50"
+            >
+              <ShieldCheckIcon className="h-4 w-4 text-orange-500" />
+              审查
+            </button>
+
+            <button
+              onClick={() => void requestIllustrations(true)}
+              disabled={!hasFinalArticle || illustrationStatus === 'generating'}
+              className="flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-600 transition-colors hover:bg-gray-50 disabled:opacity-50"
+            >
+              <ArrowPathIcon className={`h-4 w-4 ${illustrationStatus === 'generating' ? 'animate-spin text-report-accent' : ''}`} />
+              {illustrationStatus === 'generating' ? '配图中' : '重跑配图'}
+            </button>
+
+            <button
+              onClick={() => downloadTextFile(`${articleFilenameBase}.md`, previewArticleContent)}
+              className="flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm transition-colors hover:bg-gray-50"
+            >
+              <DocumentDuplicateIcon className="h-4 w-4" />
+              正文 MD
+            </button>
+
+            <button
+              onClick={() => downloadPDF(articleExportRef, `${articleFilenameBase}.pdf`)}
+              disabled={isDownloading}
+              className="flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm transition-colors hover:bg-gray-50 disabled:opacity-60"
+            >
+              <ArrowDownTrayIcon className="h-4 w-4" />
+              正文 PDF
+            </button>
+
+            <button
+              onClick={() => downloadPlainTextPDF(`${articleFilenameBase}_plain.pdf`)}
+              disabled={isDownloading}
+              className="hidden"
+            >
+              <ArrowDownTrayIcon className="h-4 w-4" />
+              纯文字 PDF
+            </button>
+
+            <button
+              onClick={() => downloadPlainTextPDF(`${articleFilenameBase}_plain.pdf`)}
+              disabled={isDownloading}
+              className="flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm transition-colors hover:bg-gray-50 disabled:opacity-60"
+            >
+              <ArrowDownTrayIcon className="h-4 w-4" />
+              Plain PDF
+            </button>
+
+            {data.teachingNotes && (
+              <button
+                onClick={() => downloadPDF(notesExportRef, `${articleFilenameBase}_TN.pdf`)}
+                disabled={isDownloading}
+                className="flex items-center gap-2 rounded-lg bg-report-accent px-4 py-2 text-sm font-medium text-white shadow-sm transition-colors hover:bg-teal-800 disabled:opacity-60"
+              >
+                <ArrowDownTrayIcon className="h-4 w-4" />
+                TN PDF
+              </button>
+            )}
+
+            <button onClick={onReset} className="p-2 text-gray-400 transition-colors hover:text-red-500" title="重置">
+              <ArrowPathIcon className="h-5 w-5" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div className="mx-auto max-w-7xl px-4 pb-20 pt-8">
+        <div className="mb-6 flex flex-wrap items-center gap-3 no-print">
+          {visibleTabs.map((tab) => (
+            <button
+              key={tab.id}
+              onClick={() => setActivePanel(tab.id)}
+              className={`rounded-full px-4 py-2 text-sm font-semibold transition-colors ${
+                activePanel === tab.id
+                  ? 'bg-slate-900 text-white shadow-sm'
+                  : 'bg-white text-slate-600 ring-1 ring-slate-200 hover:bg-slate-50'
+              }`}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
+
+        {renderActivePanel()}
+      </div>
+
+      <div
+        className="pointer-events-none absolute z-[-1] overflow-visible"
+        style={{ left: '-100000px', top: 0, width: `${EXPORT_PAGE_WIDTH_PX}px` }}
+        aria-hidden="true"
+      >
+        <div ref={articleExportRef} style={{ width: `${EXPORT_PAGE_WIDTH_PX}px` }}>
+          <ArticleDocument data={viewerData} exportMode />
+        </div>
+        <div ref={plainArticleExportRef} style={{ width: `${EXPORT_PAGE_WIDTH_PX}px` }}>
+          <PlainTextArticleDocument data={viewerData} exportMode />
+        </div>
+        {data.teachingNotes && (
+          <div ref={notesExportRef} style={{ width: `${EXPORT_PAGE_WIDTH_PX}px` }}>
+            <NotesDocument data={viewerData} exportMode />
+          </div>
+        )}
+      </div>
+
+      {showCopilot && (
+        <div className="fixed inset-0 z-50 flex justify-end no-print">
+          <div className="absolute inset-0 bg-slate-900/10 backdrop-blur-sm" onClick={() => setShowCopilot(false)} />
+          <WritingCopilot
+            ammoLibrary={data.ammoLibrary}
+            articleContent={data.articleContent || ''}
+            teachingNotes={data.teachingNotes || ''}
+            onRequestRefine={handleCopilotRefineRequest}
+            onClose={() => setShowCopilot(false)}
+          />
+        </div>
+      )}
+
+      <SelectionMenu
+        position={selectionPos}
+        selectedText={selection}
+        onClose={closeMenu}
+        onSubmit={handleSelectionRefine}
+        isLoading={!!refineStatus}
+      />
+    </div>
+  );
+};

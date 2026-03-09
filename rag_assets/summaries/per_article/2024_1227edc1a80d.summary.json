@@ -1,0 +1,91 @@
+{
+  "id": "1227edc1a80d",
+  "year": "2024",
+  "date": "2024-03-10",
+  "title": "想象丨FBK翻书日签 2024年3月10日",
+  "relative_path": "2024/2024-03-10_想象丨FBK翻书日签 2024年3月10日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2024\\2024-03-10_想象丨FBK翻书日签 2024年3月10日.txt",
+  "char_count": 350,
+  "content_type": "日签",
+  "industry": [
+    "文化",
+    "传媒"
+  ],
+  "topic": [
+    "每日灵感",
+    "品牌运营"
+  ],
+  "genre": "视觉海报",
+  "style": [
+    "极简",
+    "碎片化"
+  ],
+  "audience": [
+    "社群成员",
+    "读书爱好者"
+  ],
+  "intent": [
+    "品牌留存",
+    "习惯培养"
+  ],
+  "tone": [
+    "感性",
+    "留白"
+  ],
+  "primary_question": "2024年3月10日的每日灵感是什么？",
+  "thesis_type": "审美体验型",
+  "thesis_sentence": "通过每日更新的主题日签，建立品牌与读者之间的日常仪式感连接。",
+  "structure_pattern": "视觉驱动型",
+  "section_functions": [
+    "主题界定",
+    "日期锚定",
+    "品牌标识"
+  ],
+  "argument_moves": [
+    "直接呈现主题",
+    "通过日期建立时效性"
+  ],
+  "core_argument": "每日的碎片化感悟（如“想象”）具有通过视觉媒介传递的仪式价值。",
+  "key_points": [
+    "发布日期为2024年3月10日",
+    "当日主题关键词为“想象”",
+    "依托微信公众平台进行视觉呈现"
+  ],
+  "opening_pattern": "固定模板式命名",
+  "ending_pattern": "无文本收尾",
+  "evidence_types": [
+    "视觉图像"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "极近",
+  "stance_strength": "中等",
+  "sentence_rhythm": "极短",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "利用每日主题词构建品牌打卡习惯",
+    "采用标准化的标题命名法以便于检索"
+  ],
+  "anti_patterns": [
+    "内容极度匮乏，缺乏可读文本",
+    "过度依赖外部链接或图片，无成文逻辑"
+  ],
+  "notable_phrases": [
+    "FBK翻书日签"
+  ],
+  "title_score": 40,
+  "opening_score": 20,
+  "argument_score": 10,
+  "evidence_score": 5,
+  "structure_score": 30,
+  "style_score": 40,
+  "publishability_score": 20,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为“FBK翻书”公众号的每日日签，日期为2024年3月10日，主题关键词为“想象”。文章实质为图片载体的元数据记录，缺乏正文论述、论据或逻辑结构。其主要功能是作为社群运营的日常打卡，通过极简的视觉形式维持品牌活跃度，但不具备写作参考价值或深度信息阅读价值。",
+  "summary_500": "该内容是典型的新媒体碎片化运营产物，属于“日签”类内容。其核心特征如下：1. 结构极简：仅由标题、日期和图片组成，不具备传统文章的叙事或议论结构。2. 功能单一：主要用于读者的每日打卡和品牌的日常存在感提醒，通过“想象”这一抽象主题词引发瞬间的感性共鸣。3. 写作价值低：文中无有效文本产出，无逻辑推演，亦无具体证据支撑。从商业内容分析的角度看，这类文章属于低信息密度、高频次的品牌留存动作。对于RAG系统或写作学习者而言，除了其标题命名规范（品牌+产品+日期）具有一定的标准化参考意义外，正文内容无法提供任何可供分析的论证模型、修辞技巧或知识洞察。在评估中，其质量分、论据分和发布价值分均较低，属于典型的信息含量极低的低价值文档。"
+}

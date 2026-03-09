@@ -1,0 +1,92 @@
+{
+  "id": "43a666c56409",
+  "year": "2023",
+  "date": "2023-05-12",
+  "title": "爱因斯坦的世界观丨FBK翻书日签 2023年5月12日",
+  "relative_path": "2023/2023-05-12_爱因斯坦的世界观丨FBK翻书日签 2023年5月12日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-05-12_爱因斯坦的世界观丨FBK翻书日签 2023年5月12日.txt",
+  "char_count": 356,
+  "content_type": "日签",
+  "industry": [
+    "文化传播",
+    "出版"
+  ],
+  "topic": [
+    "爱因斯坦",
+    "世界观",
+    "哲学"
+  ],
+  "genre": "社交媒体简讯",
+  "style": [
+    "极简",
+    "碎片化",
+    "仪式感"
+  ],
+  "audience": [
+    "大众读者",
+    "读书爱好者"
+  ],
+  "intent": [
+    "品牌心智维护",
+    "知识碎片分享"
+  ],
+  "tone": [
+    "庄重",
+    "启发性"
+  ],
+  "primary_question": "爱因斯坦的世界观是什么？",
+  "thesis_type": "观点展示型",
+  "thesis_sentence": "通过每日语录卡片的形式展示爱因斯坦的个人哲学观点。",
+  "structure_pattern": "固定模版式结构",
+  "section_functions": [
+    "品牌与日期标识",
+    "主题宣告"
+  ],
+  "argument_moves": [
+    "借助伟人权威提升品牌调性",
+    "通过极简形式进行心智占领"
+  ],
+  "core_argument": "爱因斯坦的思想具有跨越时代的启发性价值。",
+  "key_points": [
+    "爱因斯坦的世界观"
+  ],
+  "opening_pattern": "标题即主题",
+  "ending_pattern": "品牌标签化结尾",
+  "evidence_types": [
+    "名人语录"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 100,
+  "narrative_distance": "远距离",
+  "stance_strength": "中立赞同",
+  "sentence_rhythm": "极短",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "使用固定日签模板进行品牌每日高频触达",
+    "利用名人IP效应降低用户获取信息的门槛"
+  ],
+  "anti_patterns": [
+    "内容极度匮乏（无正文解析）",
+    "过度依赖图片导致文字检索价值低",
+    "缺乏论证过程"
+  ],
+  "notable_phrases": [
+    "爱因斯坦的世界观",
+    "FBK翻书日签"
+  ],
+  "title_score": 60,
+  "opening_score": 20,
+  "argument_score": 10,
+  "evidence_score": 10,
+  "structure_score": 40,
+  "style_score": 50,
+  "publishability_score": 20,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为FBK翻书机构发布的2023年5月12日日签，主题为“爱因斯坦的世界观”。其表现形式属于极简的社交媒体引子，旨在通过碎片化的名人名言进行品牌每日维护。由于提供的文本仅含标题、日期和链接，缺乏具体的文字论述和内容展开，实质性信息密度极低，不具备深度研究或写作参考价值，属于典型的低价值日常运营记录。",
+  "summary_500": "本篇分析针对“FBK翻书日签”系列中的一则。该内容以爱因斯坦为主题，代表了碎片化阅读时代品牌运营的常规策略。其核心逻辑在于：1. 仪式感构建：通过日期和固定前缀建立稳定的读者心理预期；2. 名人效应利用：借助爱因斯坦的高认知度吸引受众关注宏大哲学命题；3. 极简呈现：摒弃长篇大论，仅保留最核心的观点指向。然而，从写作机制和信息价值的角度评估，该文本在抓取阶段表现出明显的“空洞性”。其结构仅由元数据组成，不包含任何实质性的论据、分析或背景知识。在写作机制上，它展示了“禁学反模式”——即在没有实质性论述的情况下使用宏大命题。对于RAG系统而言，此类数据应被标记为“极低权重”，其价值仅在于体现发布者的品牌偏好（如关注科学哲学），而非提供具体的知识点。其分项评分在标题、风格上尚可，但在论证、证据和整体质量上得分极低。建议在处理此类数据时，仅将其作为品牌人格化特征的参考，而不作为创作逻辑的模仿对象。"
+}

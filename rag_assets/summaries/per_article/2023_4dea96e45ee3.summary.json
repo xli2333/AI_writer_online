@@ -1,0 +1,90 @@
+{
+  "id": "4dea96e45ee3",
+  "year": "2023",
+  "date": "2023-11-28",
+  "title": "从我到我们的商业新逻辑丨FBK翻书日签 2023年11月28日",
+  "relative_path": "2023/2023-11-28_从我到我们的商业新逻辑丨FBK翻书日签 2023年11月28日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-11-28_从我到我们的商业新逻辑丨FBK翻书日签 2023年11月28日.txt",
+  "char_count": 360,
+  "content_type": "每日金句",
+  "industry": [
+    "商业管理"
+  ],
+  "topic": [
+    "商业逻辑",
+    "协同合作"
+  ],
+  "genre": "日签/海报",
+  "style": [
+    "简约",
+    "格言式"
+  ],
+  "audience": [
+    "管理者",
+    "职场人士"
+  ],
+  "intent": [
+    "品牌传播",
+    "心智启发"
+  ],
+  "tone": [
+    "专业",
+    "断言式"
+  ],
+  "primary_question": "当代商业的核心逻辑发生了什么转变？",
+  "thesis_type": "趋势预判",
+  "thesis_sentence": "商业逻辑正经历从关注个体利益（从我）到关注群体协同（到我们）的深刻转变。",
+  "structure_pattern": "单一断言式结构",
+  "section_functions": [
+    "标题揭示核心命题",
+    "日期标注时效",
+    "图片占位提供视觉暗示"
+  ],
+  "argument_moves": [
+    "通过标题直接给出核心观点",
+    "缺乏论证过程直接输出结论"
+  ],
+  "core_argument": "商业逻辑已经演变为一种基于群体协作而非个体竞争的新范式。",
+  "key_points": [
+    "从个人主义转向集体主义逻辑",
+    "强调“我们”作为商业决策的基点"
+  ],
+  "opening_pattern": "直奔主题",
+  "ending_pattern": "固定模板落款",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 5,
+  "data_density_score": 0,
+  "case_density_score": 0,
+  "quote_density_score": 90,
+  "narrative_distance": "远距离",
+  "stance_strength": "极强",
+  "sentence_rhythm": "简促",
+  "abstraction_level": "极高",
+  "transferable_moves": [
+    "利用‘从A到B’的对比结构概括趋势",
+    "结合品牌IP建立每日日签的仪式感"
+  ],
+  "anti_patterns": [
+    "内容严重缺失导致无法构成有效阅读",
+    "过度依赖视觉海报而忽略文本价值"
+  ],
+  "notable_phrases": [
+    "从我到我们",
+    "商业新逻辑"
+  ],
+  "title_score": 60,
+  "opening_score": 10,
+  "argument_score": 20,
+  "evidence_score": 0,
+  "structure_score": 20,
+  "style_score": 30,
+  "publishability_score": 15,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为FBK翻书日签的每日观点分享。主题定位于商业逻辑从个体竞争向群体协作的转变，核心口号为“从我到我们”。由于该推文仅作为视觉海报的入口，文字信息密度极低，缺乏实际的逻辑推导、案例证明或深度阐述，仅具有品牌高频曝光和心智占位的提醒作用。",
+  "summary_500": "本篇内容属于FBK品牌的“翻书日签”栏目，发布于2023年11月28日。其核心命题是“从我到我们的商业新逻辑”，试图传递出在现代商业环境下，协同共赢已取代单打独斗成为主流商业逻辑的信号。然而，从内容结构来看，该文本极为碎片化，除标题和日期外，几乎没有提供任何支撑性的正文内容。推文主要触发了全局图片搜索模式，暗示核心知识点承载于视觉海报之中而非文字。在商业分析维度下，该内容由于缺乏论据支撑、数据引用和逻辑展开，其写作参考价值和信息含金量较低。它更适合作为一种品牌心智的“微提醒”，通过简洁、对仗且具有哲学意味的短句来引发受众共鸣，而非作为深度的知识输出。对于需要构建深度RAG语料库或进行专业写作学习的用户，此条目仅可提取其核心slogan作为行业洞察的极简标签。"
+}

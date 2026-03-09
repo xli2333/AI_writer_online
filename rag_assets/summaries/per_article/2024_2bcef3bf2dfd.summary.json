@@ -1,0 +1,83 @@
+{
+  "id": "2bcef3bf2dfd",
+  "year": "2024",
+  "date": "2024-01-16",
+  "title": "知识大迁移丨FBK翻书日签 2024年1月16日",
+  "relative_path": "2024/2024-01-16_知识大迁移丨FBK翻书日签 2024年1月16日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2024\\2024-01-16_知识大迁移丨FBK翻书日签 2024年1月16日.txt",
+  "char_count": 353,
+  "content_type": "每日资讯",
+  "industry": [
+    "文化传播",
+    "个人成长"
+  ],
+  "topic": [
+    "日签",
+    "知识管理"
+  ],
+  "genre": "日签",
+  "style": [
+    "极简",
+    "固定模板"
+  ],
+  "audience": [
+    "读书爱好者",
+    "知识工作者"
+  ],
+  "intent": [
+    "品牌留存",
+    "习惯培养"
+  ],
+  "tone": [
+    "客观"
+  ],
+  "primary_question": "该日签发布的日期和主题是什么？",
+  "thesis_type": "描述型",
+  "thesis_sentence": "本文仅提供2024年1月16日FBK翻书日签的发布元数据，无具体正文内容。",
+  "structure_pattern": "固定模板结构",
+  "section_functions": [
+    "标题呈现：标识日签主题与系列",
+    "元数据标注：记录日期与链接",
+    "系统反馈：标记图片抓取情况"
+  ],
+  "argument_moves": [
+    "基础信息发布"
+  ],
+  "core_argument": "无（仅为日常签到记录）",
+  "key_points": [
+    "发布时间为2024年1月16日",
+    "属于FBK翻书日签系列",
+    "主题标签为知识大迁移"
+  ],
+  "opening_pattern": "标题直铺",
+  "ending_pattern": "链接跳转",
+  "evidence_types": [],
+  "evidence_specificity_score": 0,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "远",
+  "stance_strength": "中立",
+  "sentence_rhythm": "短促",
+  "abstraction_level": "低",
+  "transferable_moves": [],
+  "anti_patterns": [
+    "内容过度缺失",
+    "无实质性文本产出",
+    "链接依赖性过强"
+  ],
+  "notable_phrases": [],
+  "title_score": 40,
+  "opening_score": 10,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 20,
+  "style_score": 20,
+  "publishability_score": 10,
+  "quality_score": 10,
+  "reference_value_score": 5,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该文本为2024年1月16日的“FBK翻书日签”发布记录。内容仅包含标题、日期、来源链接及图片搜索提示，缺乏实际正文讨论或知识点分析。其主要作用是作为社群或公众号的每日打卡留存，信息密度极低，不具备独立阅读和写作参考价值。",
+  "summary_500": "此文档记录了“FBK翻书日签”在2024年1月16日的发布情况，主题为“知识大迁移”。从内容构成来看，这仅是一个具有高度固定格式的每日更新通知，正文内容完全缺失，仅保留了标题、日期、微信公众号原始链接以及系统抓取图片后的自动反馈提示。此类内容通常在公众号生态中作为图片载体出现（日签图），但由于当前文本未包含图片中的文字转录，导致其作为写作素材或知识RAG语料的价值极低。该文档被标记为低价值信息，仅适用于追踪该系列日签的发布频率或作为历史存档的占位符，不建议作为分析、学习或内容创作的参考。"
+}

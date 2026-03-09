@@ -1,0 +1,87 @@
+{
+  "id": "cc20cb839339",
+  "year": "2023",
+  "date": "2023-07-12",
+  "title": "智慧社会 彭特兰丨FBK翻书日签 2023年7月12日",
+  "relative_path": "2023/2023-07-12_智慧社会 彭特兰丨FBK翻书日签 2023年7月12日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-07-12_智慧社会 彭特兰丨FBK翻书日签 2023年7月12日.txt",
+  "char_count": 356,
+  "content_type": "碎片通知",
+  "industry": [
+    "文化",
+    "出版"
+  ],
+  "topic": [
+    "智慧社会",
+    "彭特兰",
+    "日签"
+  ],
+  "genre": "日签",
+  "style": [
+    "极简",
+    "碎片化"
+  ],
+  "audience": [
+    "读书爱好者",
+    "社群订阅者"
+  ],
+  "intent": [
+    "品牌留痕",
+    "内容引流"
+  ],
+  "tone": [
+    "客观"
+  ],
+  "primary_question": "缺失（仅为书籍名称及日期标注）",
+  "thesis_type": "无",
+  "thesis_sentence": "无（正文内容缺失，仅有元数据）",
+  "structure_pattern": "元数据式结构",
+  "section_functions": [
+    "标题：界定主题与日期",
+    "元数据：提供日期与链接",
+    "系统提示：记录图片抓取状态"
+  ],
+  "argument_moves": [],
+  "core_argument": "无",
+  "key_points": [
+    "提及书籍《智慧社会》",
+    "作者为彭特兰",
+    "发布日期为2023年7月12日"
+  ],
+  "opening_pattern": "直接陈述标题",
+  "ending_pattern": "系统自动生成的抓取提示",
+  "evidence_types": [],
+  "evidence_specificity_score": 0,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "中立客观",
+  "stance_strength": "中立",
+  "sentence_rhythm": "无（均为短语或系统提示词）",
+  "abstraction_level": "中等",
+  "transferable_moves": [
+    "使用日签形式进行每日内容更新占位",
+    "标题包含‘作者+书名’的标准化检索格式"
+  ],
+  "anti_patterns": [
+    "正文缺失：仅有链接和标题，缺乏实际阅读内容",
+    "机器痕迹过重：保留了系统提示语，降低了阅读价值"
+  ],
+  "notable_phrases": [
+    "智慧社会",
+    "翻书日签"
+  ],
+  "title_score": 30,
+  "opening_score": 10,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 10,
+  "style_score": 5,
+  "publishability_score": 10,
+  "quality_score": 5,
+  "reference_value_score": 2,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该内容仅为2023年7月12日的‘FBK翻书日签’记录，提及阿莱克斯·彭特兰的著作《智慧社会》。全文由标题、日期、原始链接及系统抓取提示组成，完全缺失实质性的文本内容、书籍摘录或核心观点。这类内容主要用于社群日常签到或文章索引，对读者而言缺乏直接的知识获取价值，属于低信息密度的系统自动化留痕。",
+  "summary_500": "这是一份极其简略的、由机器或自动化工具生成的‘日签’元数据记录。其核心信息指向了2023年7月12日发布的一篇关于彭特兰（Alex Pentland）著作《智慧社会》的推文。从提供的文本来看，内容并未包含书籍的任何具体论点、精彩摘录或背景分析，而是仅罗列了标题、发布时间、微信公众号原始链接以及一个来源模式的系统提示。文章甚至保留了‘触发全局图片搜索模式’这一系统内部动作说明，显示其并非面向读者的深度创作内容，而是后台数据抓取的结果。在商业内容分析中，此类内容被判定为‘低价值’，因为它不具备传达知识、建立论证或引发思考的功能。其存在的意义仅在于作为日常运营的时间戳，或者作为链接重定向的索引条目。对于希望从中学习写作技巧或提取行业洞察的用户来说，该文本无法提供任何参考价值。标题虽然清晰地标示了主题，但由于正文的彻底缺位，导致其在质量、证据力度和结构设计等所有评分维度上均处于极低水平。"
+}

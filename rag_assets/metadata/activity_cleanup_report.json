@@ -1,0 +1,652 @@
+[
+  {
+    "id": "e3e2330aeb66",
+    "year": "2020",
+    "title": "【直播预告】学管理，战疫情！中小企业的自救对策就在这里",
+    "relative_path": "2020/2020-02-10_【直播预告】学管理，战疫情！中小企业的自救对策就在这里.txt",
+    "delete_as_activity_notice": true,
+    "confidence": 0.9,
+    "category": "活动通知",
+    "reason": "文章主要内容为直播预告，包含直播时间、嘉宾介绍、直播入口等信息，属于低长期参考价值的活动通知。"
+  },
+  {
+    "id": "28e324a0aa46",
+    "year": "2020",
+    "title": "【直播预告】事关生死的创新！从新冠希望星瑞德西韦背后的“药神”讲起",
+    "relative_path": "2020/2020-02-13_【直播预告】事关生死的创新！从新冠希望星瑞德西韦背后的“药神”讲起.txt",
+    "delete_as_activity_notice": true,
+    "confidence": 1,
+    "category": "直播预告",
+    "reason": "文章主要内容是关于一场名为“【直播预告】事关生死的创新！从新冠希望星瑞德西韦背后的“药神”讲起”的线上直播活动，通知了直播时间、内容要点、嘉宾信息和参与方式，属于活动通知类。"
+  },
+  {
+    "id": "baf8a90945b4",
+    "year": "2020",
+    "title": "【直播预告】企业急救指南出炉！李若山教授的现金流管理对策",
+    "relative_path": "2020/2020-02-18_【直播预告】企业急救指南出炉！李若山教授的现金流管理对策.txt",
+    "delete_as_activity_notice": true,
+    "confidence": 1,
+    "category": "直播预告",
+    "reason": "文章主要目的是预告一场关于企业现金流管理的直播课程，包含直播时间、内容要点、嘉宾介绍和参与方式，具有明显的活动通知性质。"
+  },
+  {
+    "id": "99e0dc6f1558",
+    "year": "2020",
+    "title": "【直播预告】复工复产企业如何转危为机？陈祥锋教授教你应对全球供应链重构威胁",
+    "relative_path": "2020/2020-02-23_【直播预告】复工复产企业如何转危为机？陈祥锋教授教你应对全球供应链重构威胁.txt",
+    "delete_as_activity_notice": true,
+    "confidence": 1,
+    "category": "直播预告",
+    "reason": "该文章主要内容为预告一场关于企业如何应对全球供应链重构威胁的线上直播活动，包含直播时间、嘉宾介绍、直播内容要点等信息，符合活动通知和直播预告的定义。"
+  },
+  {
+    "id": "21ca561bf1cb",
+    "year": "2020",
+    "title": "【直播预告】直面新冠风暴下的中国经济，管理者都该掌握“第二层思维”",
+    "relative_path": "2020/2020-02-27_【直播预告】直面新冠风暴下的中国经济，管理者都该掌握“第二层思维”.txt",
+    "delete_as_activity_notice": true,
+    "confidence": 0.9,
+    "category": "直播预告",
+    "reason": "文章主要内容为直播预告，包含直播时间、直播内容、嘉宾介绍以及获取直播链接的方式，具有活动通知的属性。"
+  },
+  {
+    "id": "122527e6c5ef",
+    "year": "2020",
+    "title": "【直播预告】实体店寒冬下，听胥正川教授讲“旧零售”的终结",
+    "relative_path": "2020/2020-03-03_【直播预告】实体店寒冬下，听胥正川教授讲“旧零售”的终结.txt",
+    "delete_as_activity_notice": true,
+    "confidence": 0.95,
+    "category": "直播预告",
+    "reason": "文章标题包含“直播预告”，内容主要预告了胥正川教授的直播讲座，包括讲座主题、时间、嘉宾介绍和直播要点，目的是通知用户并引导其观看直播，属于活动通知性质。"
+  },
+  {
+    "id": "f16a0aab05e1",
+    "year": "2020",
+    "title": "【直播预告】开启企业“财务天眼”，迎接疫情下的数字化转型战",
+    "relative_path": "2020/2020-03-06_【直播预告】开启企业“财务天眼”，迎接疫情下的数字化转型战.txt",
+    "delete_as_activity_notice": true,
+    "confidence": 0.95,
+    "category": "直播预告",
+    "reason": "该文章主要内容为预告一场线上直播活动，包含直播时间、主题、嘉宾介绍、参与方式等信息，符合活动通知的特征。"
+  },
+  {
+    "id": "95036fc68eaa",
+    "year": "2020",
+    "title": "【直播预告】疫情引发全球震荡，如何解读当前中国资本市场？",
+    "relative_path": "2020/2020-03-07_【直播预告】疫情引发全球震荡，如何解读当前中国资本市场？.txt",
+    "delete_as_activity_notice": true,
+    "confidence": 1,
+    "category": "直播预告",
+    "reason": "文章内容是关于一场关于疫情对中国资本市场影响的直播预告，明确了直播时间、嘉宾和议程，主要目的是通知活动信息并吸引观众，属于活动通知类内容。"
+  },
+  {
+    "id": "c21897bb99aa",
+    "year": "2020",
+    "title": "【直播预告】心态决定战“疫”成败，为管理者准备的“正念”练习课",
+    "relative_path": "2020/2020-03-13_【直播预告】心态决定战“疫”成败，为管理者准备的“正念”练习课.txt",
+    "delete_as_activity_notice": true,
+    "confidence": 1,
+    "category": "直播预告",
+    "reason": "文章标题和内容明确指出是直播预告，包含直播时间、主题、嘉宾介绍、报名方式等活动通知要素，主要目的是通知和引流，应作为活动通知删除。"
+  },
+  {
+    "id": "5ec7dac13f33",
+    "year": "2020",
+    "title": "【直播预告】人才加速时代，如何重构职场竞争力？",
+    "relative_path": "2020/2020-03-19_【直播预告】人才加速时代，如何重构职场竞争力？.txt",
+    "delete_as_activity_notice": true,
+    "confidence": 1,
+    "category": "直播预告",
+    "reason": "文章标题和内容明确指出是『直播预告』，主要目的是通知用户关于直播活动的时间、主题和嘉宾，属于活动通知类内容。"
+  },
+  {
+    "id": "ec25261bcc6b",
+    "year": "2020",
+    "title": "【直播预告】危机之下，我们更需要的学术思维和学者修养",
+    "relative_path": "2020/2020-03-28_【直播预告】危机之下，我们更需要的学术思维和学者修养.txt",
+    "delete_as_activity_notice": true,
+    "confidence": 1,
+    "category": "直播预告",
+    "reason": "文章内容主要是关于一次线上直播预告，详细介绍了直播的主题、时间、内容、主讲嘉宾、适合对象以及参与方式，符合活动通知的特征。"
+  },
+  {
+    "id": "b48255d93f92",
+    "year": "2020",
+    "title": "【直播预告】房地产业变革，疫情之下如何化危为机？",
+    "relative_path": "2020/2020-04-04_【直播预告】房地产业变革，疫情之下如何化危为机？.txt",
+    "delete_as_activity_notice": true,
+    "confidence": 1,
+    "category": "直播预告",
+    "reason": "该内容是关于一个即将举行的直播活动的预告，明确了直播的时间、主题、嘉宾和内容，其主要目的是通知和吸引参与者，因此属于活动通知类低参考价值文本。"
+  },
+  {
+    "id": "0781d6262495",
+    "year": "2020",
+    "title": "【直播预告】回望“327事件”！解析证券市场风险处置和市场监管的现实意义",
+    "relative_path": "2020/2020-04-11_【直播预告】回望“327事件”！解析证券市场风险处置和市场监管的现实意义.txt",
+    "delete_as_activity_notice": true,
+    "confidence": 0.9,
+    "category": "直播预告",
+    "reason": "文章标题和内容明确为直播预告，包含直播时间、主题、嘉宾介绍和内容概要，主要目的是通知和吸引用户参与直播活动。"
+  },
+  {
+    "id": "5cc4cad41995",
+    "year": "2020",
+    "title": "【直播预告】危机之下，我们更需要的学术思维和学者修养",
+    "relative_path": "2020/2020-04-21_【直播预告】危机之下，我们更需要的学术思维和学者修养.txt",
+    "delete_as_activity_notice": true,
+    "confidence": 0.95,
+    "category": "直播预告",
+    "reason": "该内容属于直播预告，通知用户直播的时间、嘉宾、内容及参与方式，具有低长期参考价值。"
+  },
+  {
+    "id": "f0f4c76ed152",
+    "year": "2020",
+    "title": "【直播预告】负油价，后疫情！行业投资机会在哪里？",
+    "relative_path": "2020/2020-04-22_【直播预告】负油价，后疫情！行业投资机会在哪里？.txt",
+    "delete_as_activity_notice": true,
+    "confidence": 0.9,
+    "category": "直播预告",
+    "reason": "文章内容为直播预告，包含直播时间、嘉宾介绍、直播议程等信息，主要目的是通知和引流，符合活动通知的定义。"
+  },
+  {
+    "id": "868aaccb5aad",
+    "year": "2020",
+    "title": "【直播预告】数智时代，财务人如何进阶成为复合型人才？",
+    "relative_path": "2020/2020-05-19_【直播预告】数智时代，财务人如何进阶成为复合型人才？.txt",
+    "delete_as_activity_notice": true,
+    "confidence": 1,
+    "category": "直播预告",
+    "reason": "文章主要内容为直播活动的预告，包含直播时间、主题、嘉宾介绍、内容梗概等信息，符合活动通知的定义。"
+  },
+  {
+    "id": "f08b23250ac7",
+    "year": "2020",
+    "title": "【直播预告】疫情加剧供应链风险，数字化是破解之道吗？",
+    "relative_path": "2020/2020-05-21_【直播预告】疫情加剧供应链风险，数字化是破解之道吗？.txt",
+    "delete_as_activity_notice": true,
+    "confidence": 0.9,
+    "category": "直播预告",
+    "reason": "文章标题和内容明确指出是‘直播预告’，旨在通知用户参加一场关于供应链风险与数字化的线上直播活动，属于活动通知类内容。"
+  },
+  {
+    "id": "d33b1ed8c2eb",
+    "year": "2023",
+    "title": "春暖乍寒，科创企业融资之问复旦管理案例工作坊",
+    "relative_path": "2023/2023-03-23_春暖乍寒，科创企业融资之问复旦管理案例工作坊.txt",
+    "delete_as_activity_notice": false,
+    "confidence": 0.98,
+    "category": "activity_review_or_notes",
+    "reason": "标题包含回顾或笔记等关键词，保留为内容文章。"
+  },
+  {
+    "id": "0032b9a9fcf0",
+    "year": "2023",
+    "title": "复旦管理案例工作坊走进“饿了么”，聊聊外卖那点事",
+    "relative_path": "2023/2023-05-04_复旦管理案例工作坊走进“饿了么”，聊聊外卖那点事.txt",
+    "delete_as_activity_notice": false,
+    "confidence": 0.98,
+    "category": "activity_review_or_notes",
+    "reason": "标题包含回顾或笔记等关键词，保留为内容文章。"
+  },
+  {
+    "id": "b052512ab268",
+    "year": "2023",
+    "title": "复旦管理案例工作坊丨微盟集团：去中心化的SaaS服务路径探索",
+    "relative_path": "2023/2023-05-17_复旦管理案例工作坊丨微盟集团：去中心化的SaaS服务路径探索.txt",
+    "delete_as_activity_notice": false,
+    "confidence": 0.98,
+    "category": "activity_review_or_notes",
+    "reason": "标题包含回顾或笔记等关键词，保留为内容文章。"
+  },
+  {
+    "id": "c882d589f950",
+    "year": "2023",
+    "title": "复旦管理案例工作坊丨跃迁引擎：让每个人拥有自己的“数字分身”",
+    "relative_path": "2023/2023-06-01_复旦管理案例工作坊丨跃迁引擎：让每个人拥有自己的“数字分身”.txt",
+    "delete_as_activity_notice": false,
+    "confidence": 0.98,
+    "category": "activity_review_or_notes",
+    "reason": "标题包含回顾或笔记等关键词，保留为内容文章。"
+  },
+  {
+    "id": "5f58767afab1",
+    "year": "2023",
+    "title": "复旦管理案例工作坊｜东威科技：廿年磨一剑，用高端设备引领“制造变革”",
+    "relative_path": "2023/2023-07-08_复旦管理案例工作坊｜东威科技：廿年磨一剑，用高端设备引领“制造变革”.txt",
+    "delete_as_activity_notice": false,
+    "confidence": 0.98,
+    "category": "activity_review_or_notes",
+    "reason": "标题包含回顾或笔记等关键词，保留为内容文章。"
+  },
+  {
+    "id": "8ef9a0e16af5",
+    "year": "2023",
+    "title": "复旦管理案例工作坊｜克明食品：一家传统企业的创新方法论",
+    "relative_path": "2023/2023-08-12_复旦管理案例工作坊｜克明食品：一家传统企业的创新方法论.txt",
+    "delete_as_activity_notice": false,
+    "confidence": 0.98,
+    "category": "activity_review_or_notes",
+    "reason": "标题包含回顾或笔记等关键词，保留为内容文章。"
+  },
+  {
+    "id": "a9e0c0b6ad3c",
+    "year": "2023",
+    "title": "复旦管理案例工作坊第12期 博世中国的碳中和举措",
+    "relative_path": "2023/2023-08-17_复旦管理案例工作坊第12期 博世中国的碳中和举措.txt",
+    "delete_as_activity_notice": false,
+    "confidence": 0.98,
+    "category": "activity_review_or_notes",
+    "reason": "标题包含回顾或笔记等关键词，保留为内容文章。"
+  },
+  {
+    "id": "2a97f20c67e1",
+    "year": "2023",
+    "title": "第13期复旦管理案例工作坊 拆解道客的云原生与开源技术",
+    "relative_path": "2023/2023-09-06_第13期复旦管理案例工作坊 拆解道客的云原生与开源技术.txt",
+    "delete_as_activity_notice": false,
+    "confidence": 0.98,
+    "category": "activity_review_or_notes",
+    "reason": "标题包含回顾或笔记等关键词，保留为内容文章。"
+  },
+  {
+    "id": "1d1329d20fff",
+    "year": "2023",
+    "title": "复旦管理视野·读书沙龙 第1期丨《奥本海默》背后的指导方针",
+    "relative_path": "2023/2023-09-19_复旦管理视野·读书沙龙 第1期丨《奥本海默》背后的指导方针.txt",
+    "delete_as_activity_notice": true,
+    "confidence": 1,
+    "category": "活动通知",
+    "reason": "文章主要内容是通知复旦管理视野读书沙龙的活动时间、地点、参与方式和报名方式，属于典型的活动通知。"
+  },
+  {
+    "id": "8de268dbcbff",
+    "year": "2023",
+    "title": "复旦管理视野·读书沙龙报名丨9月26日，一起读《科学：无尽的前沿》",
+    "relative_path": "2023/2023-09-22_复旦管理视野·读书沙龙报名丨9月26日，一起读《科学：无尽的前沿》.txt",
+    "delete_as_activity_notice": true,
+    "confidence": 1,
+    "category": "活动通知",
+    "reason": "文章标题和内容明确提及“报名”和活动时间，属于典型的活动通知。"
+  },
+  {
+    "id": "c9d08e2a3609",
+    "year": "2023",
+    "title": "9月26日 复旦管理视野·读书沙龙丨报名最后期限，等你一起“开卷”！",
+    "relative_path": "2023/2023-09-25_9月26日 复旦管理视野·读书沙龙丨报名最后期限，等你一起“开卷”！.txt",
+    "delete_as_activity_notice": true,
+    "confidence": 0.95,
+    "category": "活动通知",
+    "reason": "文章主要目的是通知9月26日的读书沙龙活动，包含活动时间、地点、参与方式、报名限制和费用等信息，具有典型的活动通知性质。"
+  },
+  {
+    "id": "16255ad735ad",
+    "year": "2023",
+    "title": "如何动员年轻人从事基础科学研究？丨复旦管理视野·读书沙龙回顾",
+    "relative_path": "2023/2023-09-28_如何动员年轻人从事基础科学研究？丨复旦管理视野·读书沙龙回顾.txt",
+    "delete_as_activity_notice": false,
+    "confidence": 0.98,
+    "category": "activity_review_or_notes",
+    "reason": "标题包含回顾或笔记等关键词，保留为内容文章。"
+  },
+  {
+    "id": "cdf598c32b61",
+    "year": "2023",
+    "title": "2023年度第十四期复旦管理案例工作坊“对话妙盈科技” ESG评级与企业价值和投资收益：待完善的逻辑",
+    "relative_path": "2023/2023-10-19_2023年度第十四期复旦管理案例工作坊“对话妙盈科技” ESG评级与企业价值和投资收益：待完善的逻辑.txt",
+    "delete_as_activity_notice": false,
+    "confidence": 0.98,
+    "category": "activity_review_or_notes",
+    "reason": "标题包含回顾或笔记等关键词，保留为内容文章。"
+  },
+  {
+    "id": "691bb5abaa8d",
+    "year": "2023",
+    "title": "2023年度第十七期复旦管理案例工作坊“走进圆通速递”丨中国快递业的未来：竞争、科技与商业模式",
+    "relative_path": "2023/2023-11-08_2023年度第十七期复旦管理案例工作坊“走进圆通速递”丨中国快递业的未来：竞争、科技与商业模式.txt",
+    "delete_as_activity_notice": false,
+    "confidence": 0.98,
+    "category": "activity_review_or_notes",
+    "reason": "标题包含回顾或笔记等关键词，保留为内容文章。"
+  },
+  {
+    "id": "d35201138b1c",
+    "year": "2023",
+    "title": "《为什么伟大不能被计划》丨复旦管理视野·读书沙龙第2期：探讨全球科技竞争下的创新路径",
+    "relative_path": "2023/2023-11-10_《为什么伟大不能被计划》丨复旦管理视野·读书沙龙第2期：探讨全球科技竞争下的创新路径.txt",
+    "delete_as_activity_notice": false,
+    "confidence": 0.9,
+    "category": "book_club_review",
+    "reason": "这篇文章是关于一个读书沙龙的，但它更多的是在回顾或预告一个活动，而不是一个直接的报名邀请或活动通知。根据要求，活动回顾、论坛笔记、内容纪要、方法总结、案例复盘等应设为 false。虽然标题中有‘沙龙’，但整体内容更偏向于活动内容本身的探讨，而非活动的组织安排。"
+  },
+  {
+    "id": "951175a81b88",
+    "year": "2023",
+    "title": "复旦管理案例工作坊第18期 江南春：分众传媒的方法论、壁垒与增长力",
+    "relative_path": "2023/2023-11-11_复旦管理案例工作坊第18期 江南春：分众传媒的方法论、壁垒与增长力.txt",
+    "delete_as_activity_notice": false,
+    "confidence": 0.98,
+    "category": "activity_review_or_notes",
+    "reason": "标题包含回顾或笔记等关键词，保留为内容文章。"
+  },
+  {
+    "id": "c67e42ebc9c8",
+    "year": "2023",
+    "title": "《为什么伟大不能被计划》丨复旦管理视野·读书沙龙第2期：探讨全球科技竞争下的创新路径",
+    "relative_path": "2023/2023-11-13_《为什么伟大不能被计划》丨复旦管理视野·读书沙龙第2期：探讨全球科技竞争下的创新路径.txt",
+    "delete_as_activity_notice": true,
+    "confidence": 0.9,
+    "category": "活动通知",
+    "reason": "文章主要内容是通知一个读书沙龙活动的时间、地点、报名方式和限制条件，属于典型的活动通知。"
+  },
+  {
+    "id": "6d3e2c7e6921",
+    "year": "2023",
+    "title": "复旦管理视野·读书沙龙第2期：探讨全球科技竞争下的创新路径",
+    "relative_path": "2023/2023-11-15_复旦管理视野·读书沙龙第2期：探讨全球科技竞争下的创新路径.txt",
+    "delete_as_activity_notice": true,
+    "confidence": 1,
+    "category": "活动通知",
+    "reason": "该内容为读书沙龙的活动通知，包含了活动时间、地点、报名方式、限额等信息，符合活动通知的特征。"
+  },
+  {
+    "id": "fb3593df239f",
+    "year": "2023",
+    "title": "最后一天！复旦管理视野·读书沙龙第2期报名丨探讨全球科技竞争下的创新路径",
+    "relative_path": "2023/2023-11-17_最后一天！复旦管理视野·读书沙龙第2期报名丨探讨全球科技竞争下的创新路径.txt",
+    "delete_as_activity_notice": true,
+    "confidence": 0.9,
+    "category": "活动报名",
+    "reason": "文章标题和内容明确为读书沙龙活动的报名通知，具有明确的活动信息和报名截止日期，属于低长期参考价值的活动通知类内容。"
+  },
+  {
+    "id": "3571c9915eeb",
+    "year": "2023",
+    "title": "创新式传承：中国家族企业的积淀与突围丨管理视野·读书沙龙第3期",
+    "relative_path": "2023/2023-11-21_创新式传承：中国家族企业的积淀与突围丨管理视野·读书沙龙第3期.txt",
+    "delete_as_activity_notice": true,
+    "confidence": 1,
+    "category": "读书沙龙",
+    "reason": "该内容是关于一个名为“创新式传承：中国家族企业的积淀与突围丨管理视野·读书沙龙第3期”的读书沙龙活动通知，包含了活动时间、地点、嘉宾介绍、活动议程以及报名方式，属于典型的活动通知类内容。"
+  },
+  {
+    "id": "3a601ec5ff77",
+    "year": "2023",
+    "title": "创新式传承：中国家族企业的积淀与突围丨管理视野·读书沙龙第3期",
+    "relative_path": "2023/2023-11-23_创新式传承：中国家族企业的积淀与突围丨管理视野·读书沙龙第3期.txt",
+    "delete_as_activity_notice": true,
+    "confidence": 1,
+    "category": "读书沙龙",
+    "reason": "文章主要内容为通知一场关于中国家族企业传承的读书沙龙活动，包括活动主题、嘉宾介绍、议程、时间、地点、报名方式以及费用，符合活动通知的特征。"
+  },
+  {
+    "id": "bff05b3a0796",
+    "year": "2023",
+    "title": "创新式传承：中国家族企业的积淀与突围丨管理视野·读书沙龙第3期",
+    "relative_path": "2023/2023-11-24_创新式传承：中国家族企业的积淀与突围丨管理视野·读书沙龙第3期.txt",
+    "delete_as_activity_notice": true,
+    "confidence": 1,
+    "category": "活动通知",
+    "reason": "文章主要内容是关于一个读书沙龙活动的通知，包括活动主题、嘉宾介绍、活动时间、地点、规模以及报名方式，目的是宣传和引流，符合活动通知的特征。"
+  },
+  {
+    "id": "4fb2c0bbf953",
+    "year": "2023",
+    "title": "报名今天截止！来管理视野·读书沙龙，阅读中国家族企业的“创新式传承”",
+    "relative_path": "2023/2023-11-27_报名今天截止！来管理视野·读书沙龙，阅读中国家族企业的“创新式传承”.txt",
+    "delete_as_activity_notice": true,
+    "confidence": 1,
+    "category": "活动通知",
+    "reason": "文章标题和内容明确告知了活动时间、地点、报名截止日期、报名方式以及活动议程，主要目的是通知用户参加活动。"
+  },
+  {
+    "id": "2b64c6ef88bf",
+    "year": "2023",
+    "title": "出海背景下的研发管理与知识产权协同丨2023科创企业案例创新论坛",
+    "relative_path": "2023/2023-12-04_出海背景下的研发管理与知识产权协同丨2023科创企业案例创新论坛.txt",
+    "delete_as_activity_notice": false,
+    "confidence": 0.98,
+    "category": "activity_review_or_notes",
+    "reason": "标题包含回顾或笔记等关键词，保留为内容文章。"
+  },
+  {
+    "id": "26fe601796c1",
+    "year": "2023",
+    "title": "中国家族企业的积淀与突围丨复旦管理视野·读书沙龙第3期回顾",
+    "relative_path": "2023/2023-12-04_中国家族企业的积淀与突围丨复旦管理视野·读书沙龙第3期回顾.txt",
+    "delete_as_activity_notice": false,
+    "confidence": 0.98,
+    "category": "activity_review_or_notes",
+    "reason": "标题包含回顾或笔记等关键词，保留为内容文章。"
+  },
+  {
+    "id": "783a6d1f2911",
+    "year": "2024",
+    "title": "2024年复旦管院新年论坛直播进行中",
+    "relative_path": "2024/2024-01-21_2024年复旦管院新年论坛直播进行中.txt",
+    "delete_as_activity_notice": false,
+    "confidence": 0.9,
+    "category": "直播通知",
+    "reason": "该文章是关于一个正在进行的直播论坛，属于活动通知的范畴，但重点在于直播状态更新而非活动预告或报名邀请，因此标记为false，保留其参考价值。"
+  },
+  {
+    "id": "3a05484b5add",
+    "year": "2024",
+    "title": "长三角商业创新案例论坛暨复旦管理案例课堂丨活动预告",
+    "relative_path": "2024/2024-06-14_长三角商业创新案例论坛暨复旦管理案例课堂丨活动预告.txt",
+    "delete_as_activity_notice": false,
+    "confidence": 0.98,
+    "category": "activity_review_or_notes",
+    "reason": "标题包含回顾或笔记等关键词，保留为内容文章。"
+  },
+  {
+    "id": "3936d5e062cb",
+    "year": "2024",
+    "title": "长三角商业创新案例论坛暨复旦管理案例课堂丨活动预告",
+    "relative_path": "2024/2024-06-16_长三角商业创新案例论坛暨复旦管理案例课堂丨活动预告.txt",
+    "delete_as_activity_notice": false,
+    "confidence": 0.98,
+    "category": "activity_review_or_notes",
+    "reason": "标题包含回顾或笔记等关键词，保留为内容文章。"
+  },
+  {
+    "id": "024c97fb2a08",
+    "year": "2024",
+    "title": "橙子、市民热线与名片的数据资产之路丨长三角商业创新案例论坛笔记",
+    "relative_path": "2024/2024-07-02_橙子、市民热线与名片的数据资产之路丨长三角商业创新案例论坛笔记.txt",
+    "delete_as_activity_notice": false,
+    "confidence": 0.98,
+    "category": "activity_review_or_notes",
+    "reason": "标题包含回顾或笔记等关键词，保留为内容文章。"
+  },
+  {
+    "id": "5dd3ab9402ae",
+    "year": "2024",
+    "title": "无人驾驶：变局与机遇丨复旦管理案例工作坊预告",
+    "relative_path": "2024/2024-10-12_无人驾驶：变局与机遇丨复旦管理案例工作坊预告.txt",
+    "delete_as_activity_notice": false,
+    "confidence": 0.98,
+    "category": "activity_review_or_notes",
+    "reason": "标题包含回顾或笔记等关键词，保留为内容文章。"
+  },
+  {
+    "id": "4112bd5ea304",
+    "year": "2024",
+    "title": "无人驾驶：变局与机遇丨复旦管理案例工作坊预告",
+    "relative_path": "2024/2024-10-16_无人驾驶：变局与机遇丨复旦管理案例工作坊预告.txt",
+    "delete_as_activity_notice": false,
+    "confidence": 0.98,
+    "category": "activity_review_or_notes",
+    "reason": "标题包含回顾或笔记等关键词，保留为内容文章。"
+  },
+  {
+    "id": "54c197aaf6df",
+    "year": "2024",
+    "title": "2024复旦创新案例工作坊报名通道正式开启！",
+    "relative_path": "2024/2024-10-19_2024复旦创新案例工作坊报名通道正式开启！.txt",
+    "delete_as_activity_notice": false,
+    "confidence": 0.98,
+    "category": "activity_review_or_notes",
+    "reason": "标题包含回顾或笔记等关键词，保留为内容文章。"
+  },
+  {
+    "id": "5437baff0d84",
+    "year": "2024",
+    "title": "技术问题，还是人的问题？丨无人驾驶的5道必答题，都在这场案例工作坊里（7000字干货）",
+    "relative_path": "2024/2024-10-23_技术问题，还是人的问题？丨无人驾驶的5道必答题，都在这场案例工作坊里（7000字干货）.txt",
+    "delete_as_activity_notice": false,
+    "confidence": 0.98,
+    "category": "activity_review_or_notes",
+    "reason": "标题包含回顾或笔记等关键词，保留为内容文章。"
+  },
+  {
+    "id": "1487abf6a0a6",
+    "year": "2024",
+    "title": "2024复旦创新案例工作坊火热报名中",
+    "relative_path": "2024/2024-10-30_2024复旦创新案例工作坊火热报名中.txt",
+    "delete_as_activity_notice": false,
+    "confidence": 0.98,
+    "category": "activity_review_or_notes",
+    "reason": "标题包含回顾或笔记等关键词，保留为内容文章。"
+  },
+  {
+    "id": "02193b736c73",
+    "year": "2024",
+    "title": "增长阶梯？求生攻略？一份关于出海的参考答案丨复旦管院论坛开放报名",
+    "relative_path": "2024/2024-11-08_增长阶梯？求生攻略？一份关于出海的参考答案丨复旦管院论坛开放报名.txt",
+    "delete_as_activity_notice": true,
+    "confidence": 0.9,
+    "category": "活动通知",
+    "reason": "文章主要内容为复旦管院论坛的活动预告，包含活动时间、地点、议程、嘉宾以及报名方式，其主要目的是通知和吸引用户参与活动。"
+  },
+  {
+    "id": "97cd93df4ade",
+    "year": "2024",
+    "title": "出海：真问题与解决方案丨论坛报名",
+    "relative_path": "2024/2024-11-11_出海：真问题与解决方案丨论坛报名.txt",
+    "delete_as_activity_notice": true,
+    "confidence": 1,
+    "category": "活动通知",
+    "reason": "文章主要目的是通知和宣传一个关于“出海：真问题与解决方案”的论坛活动，包含活动时间、地点、议程、嘉宾介绍以及报名方式，符合活动通知的特征。"
+  },
+  {
+    "id": "73a5a7a70d94",
+    "year": "2024",
+    "title": "出海：真问题与解决方案丨论坛报名",
+    "relative_path": "2024/2024-11-12_出海：真问题与解决方案丨论坛报名.txt",
+    "delete_as_activity_notice": true,
+    "confidence": 0.95,
+    "category": "活动通知",
+    "reason": "文章内容是关于一个名为“出海：真问题与解决方案”的论坛活动通知，详细列出了活动时间、地点、议程、嘉宾以及报名方式，主要目的是宣传和引导用户参与活动。"
+  },
+  {
+    "id": "00b3e6ad38a3",
+    "year": "2024",
+    "title": "出海难题如何解？热门目的地怎么选？丨复旦管院出海论坛精华回顾",
+    "relative_path": "2024/2024-11-20_出海难题如何解？热门目的地怎么选？丨复旦管院出海论坛精华回顾.txt",
+    "delete_as_activity_notice": false,
+    "confidence": 0.98,
+    "category": "activity_review_or_notes",
+    "reason": "标题包含回顾或笔记等关键词，保留为内容文章。"
+  },
+  {
+    "id": "bb1d91083621",
+    "year": "2024",
+    "title": "狼人杀、区块链和充电桩：解密2024复旦创新案例工作坊",
+    "relative_path": "2024/2024-11-24_狼人杀、区块链和充电桩：解密2024复旦创新案例工作坊.txt",
+    "delete_as_activity_notice": false,
+    "confidence": 0.98,
+    "category": "activity_review_or_notes",
+    "reason": "标题包含回顾或笔记等关键词，保留为内容文章。"
+  },
+  {
+    "id": "12097641dda4",
+    "year": "2024",
+    "title": "来元宇宙上财务课丨12月10日复旦国际案例工作坊教师报名",
+    "relative_path": "2024/2024-11-30_来元宇宙上财务课丨12月10日复旦国际案例工作坊教师报名.txt",
+    "delete_as_activity_notice": false,
+    "confidence": 0.98,
+    "category": "activity_review_or_notes",
+    "reason": "标题包含回顾或笔记等关键词，保留为内容文章。"
+  },
+  {
+    "id": "5e95c6108dd7",
+    "year": "2025",
+    "title": "论坛报名丨关税战下的中国企业出海：东南亚的产业与市场机遇",
+    "relative_path": "2025/2025-04-22_论坛报名丨关税战下的中国企业出海：东南亚的产业与市场机遇.txt",
+    "delete_as_activity_notice": true,
+    "confidence": 1,
+    "category": "activity_notice",
+    "reason": "该内容为活动报名通知，明确了活动时间、地点、报名方式、截止时间以及嘉宾信息，主要目的是宣传和引流。"
+  },
+  {
+    "id": "f7fa7be5ad1d",
+    "year": "2025",
+    "title": "论坛报名丨关税大战下的中国企业出海：东南亚的市场机会与挑战",
+    "relative_path": "2025/2025-04-24_论坛报名丨关税大战下的中国企业出海：东南亚的市场机会与挑战.txt",
+    "delete_as_activity_notice": true,
+    "confidence": 1,
+    "category": "活动通知",
+    "reason": "文章主要内容是关于一个关于中国企业出海东南亚市场机会与挑战的论坛的报名通知，包含了论坛的主题、时间、地点、报名方式、截止时间以及嘉宾介绍，其主要目的是通知和吸引报名参加活动。"
+  },
+  {
+    "id": "6055aad87daf",
+    "year": "2025",
+    "title": "论坛精华丨关税大战下的中国企业出海：东南亚的市场机会与挑战",
+    "relative_path": "2025/2025-05-03_论坛精华丨关税大战下的中国企业出海：东南亚的市场机会与挑战.txt",
+    "delete_as_activity_notice": false,
+    "confidence": 0.9,
+    "category": "forum_summary",
+    "reason": "文章是对一个关于中国企业出海和东南亚市场机会与挑战的论坛内容的精华节选和总结，不是活动通知或预告。"
+  },
+  {
+    "id": "5418c1d21c27",
+    "year": "2025",
+    "title": "2025复旦管理案例工作坊报名开启：AI时代的科技创新与管理变革",
+    "relative_path": "2025/2025-07-25_2025复旦管理案例工作坊报名开启：AI时代的科技创新与管理变革.txt",
+    "delete_as_activity_notice": false,
+    "confidence": 0.98,
+    "category": "activity_review_or_notes",
+    "reason": "标题包含回顾或笔记等关键词，保留为内容文章。"
+  },
+  {
+    "id": "9363f6b2f0d4",
+    "year": "2025",
+    "title": "早鸟价3天倒计时！2025复旦管理案例工作坊火热报名中",
+    "relative_path": "2025/2025-08-05_早鸟价3天倒计时！2025复旦管理案例工作坊火热报名中.txt",
+    "delete_as_activity_notice": false,
+    "confidence": 0.98,
+    "category": "activity_review_or_notes",
+    "reason": "标题包含回顾或笔记等关键词，保留为内容文章。"
+  },
+  {
+    "id": "5ff8204d5134",
+    "year": "2025",
+    "title": "AI时代，管理如何重构丨《管理视野》创刊十周年特别论坛召集",
+    "relative_path": "2025/2025-11-05_AI时代，管理如何重构丨《管理视野》创刊十周年特别论坛召集.txt",
+    "delete_as_activity_notice": true,
+    "confidence": 1,
+    "category": "活动通知",
+    "reason": "该文章是一篇活动通知，主要内容是关于“AI时代，管理如何重构”特别论坛的召集信息，包括时间、地点、报名方式、议程和嘉宾介绍，旨在宣传和吸引参会者。"
+  },
+  {
+    "id": "835882d7a469",
+    "year": "2025",
+    "title": "AI时代，管理如何重构丨《管理视野》创刊十周年特别论坛11月11日与您相见",
+    "relative_path": "2025/2025-11-10_AI时代，管理如何重构丨《管理视野》创刊十周年特别论坛11月11日与您相见.txt",
+    "delete_as_activity_notice": true,
+    "confidence": 0.9,
+    "category": "活动通知",
+    "reason": "该文章主要内容为通知一个关于“AI时代，管理如何重构”的主题论坛的举办时间、地点、报名方式和详细的活动议程，旨在宣传和引流参会人员，属于典型的活动通知类内容。"
+  },
+  {
+    "id": "26db01e4bc38",
+    "year": "2025",
+    "title": "案例研讨会报名开启：AI时代的智慧医院与管理重构",
+    "relative_path": "2025/2025-12-13_案例研讨会报名开启：AI时代的智慧医院与管理重构.txt",
+    "delete_as_activity_notice": false,
+    "confidence": 0.98,
+    "category": "activity_review_or_notes",
+    "reason": "标题包含回顾或笔记等关键词，保留为内容文章。"
+  }
+]

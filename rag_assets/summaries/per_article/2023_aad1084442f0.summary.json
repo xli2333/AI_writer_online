@@ -1,0 +1,84 @@
+{
+  "id": "aad1084442f0",
+  "year": "2023",
+  "date": "2023-04-15",
+  "title": "“他的比特之身”丨FBK翻书日签 2023年4月15日",
+  "relative_path": "2023/2023-04-15_“他的比特之身”丨FBK翻书日签 2023年4月15日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-04-15_“他的比特之身”丨FBK翻书日签 2023年4月15日.txt",
+  "char_count": 356,
+  "content_type": "每日日签",
+  "industry": [
+    "文化传播",
+    "出版"
+  ],
+  "topic": [
+    "阅读",
+    "碎片化学习"
+  ],
+  "genre": "日签",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "阅读爱好者",
+    "社交媒体用户"
+  ],
+  "intent": [
+    "品牌维护",
+    "日常打卡"
+  ],
+  "tone": [
+    "客观"
+  ],
+  "primary_question": "该日签今日推荐的阅读主题是什么？",
+  "thesis_type": "描述性",
+  "thesis_sentence": "本文仅作为FBK品牌2023年4月15日的阅读日签发布记录，不承载具体论证内容。",
+  "structure_pattern": "标题+元数据+外链",
+  "section_functions": [
+    "标题界定内容主题",
+    "提供原始内容访问路径"
+  ],
+  "argument_moves": [
+    "直接呈现"
+  ],
+  "core_argument": "无实质论证过程。",
+  "key_points": [
+    "2023年4月15日FBK日签主题为‘他的比特之身’"
+  ],
+  "opening_pattern": "标题直叙",
+  "ending_pattern": "链接指引",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 5,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "客观记录",
+  "stance_strength": "中立",
+  "sentence_rhythm": "极简平板",
+  "abstraction_level": "低",
+  "transferable_moves": [
+    "日签标题的命名格式"
+  ],
+  "anti_patterns": [
+    "内容缺失",
+    "正文空洞"
+  ],
+  "notable_phrases": [
+    "他的比特之身"
+  ],
+  "title_score": 40,
+  "opening_score": 10,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 20,
+  "style_score": 20,
+  "publishability_score": 5,
+  "quality_score": 10,
+  "reference_value_score": 5,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该文本仅为‘FBK翻书日签’在2023年4月15日的发布记录。内容极其简略，仅包含主题标题‘他的比特之身’及原始微信文章链接，缺乏任何实质性的正文解析、观点阐述或知识传递。",
+  "summary_500": "本文是一则极低信息密度的社交媒体发布记录，属于FBK品牌的日常阅读推荐日签。由于输入的内容仅包含标题、日期和原始链接，并未提供具体的金句内容、书评或背景介绍，因此无法进行深度的结构化写作分析。该内容的主要功能是作为社交媒体运营的占位符或引流入口，不具备可供学习的逻辑架构或论证特征。对于RAG系统或写作模型而言，该样本除标题格式外，没有可提取的知识点或表达范式。"
+}

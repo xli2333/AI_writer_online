@@ -1,0 +1,88 @@
+{
+  "id": "aeebabfd1ed1",
+  "year": "2023",
+  "date": "2023-07-26",
+  "title": "阶层：组织和社会运行的核心逻辑丨FBK翻书日签 2023年7月26日",
+  "relative_path": "2023/2023-07-26_阶层：组织和社会运行的核心逻辑丨FBK翻书日签 2023年7月26日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-07-26_阶层：组织和社会运行的核心逻辑丨FBK翻书日签 2023年7月26日.txt",
+  "char_count": 363,
+  "content_type": "日签",
+  "industry": [
+    "社会科学",
+    "文化与教育"
+  ],
+  "topic": [
+    "社会分层",
+    "组织逻辑",
+    "社会学"
+  ],
+  "genre": "格言/摘录",
+  "style": [
+    "简约",
+    "碎片化"
+  ],
+  "audience": [
+    "职场人士",
+    "终身学习者"
+  ],
+  "intent": [
+    "启发思考"
+  ],
+  "tone": [
+    "凝练",
+    "严肃"
+  ],
+  "primary_question": "组织和社会运行的底层逻辑是什么？",
+  "thesis_type": "陈述句",
+  "thesis_sentence": "阶层是组织和社会运行的核心逻辑。",
+  "structure_pattern": "单句格言式",
+  "section_functions": [
+    "提出核心概念与定性判断"
+  ],
+  "argument_moves": [
+    "直接定义核心要素"
+  ],
+  "core_argument": "阶层不是附带产物，而是驱动组织与社会运作的本质规则。",
+  "key_points": [
+    "阶层在组织中具有核心地位",
+    "阶层在社会运行中起逻辑支撑作用"
+  ],
+  "opening_pattern": "开门见山",
+  "ending_pattern": "戛然而止",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 100,
+  "narrative_distance": "极远",
+  "stance_strength": "极强",
+  "sentence_rhythm": "短促",
+  "abstraction_level": "极高",
+  "transferable_moves": [
+    "使用‘A是B的核心逻辑’这类强定义句式"
+  ],
+  "anti_patterns": [
+    "缺乏论证过程",
+    "只有论点没有论据",
+    "信息密度极低"
+  ],
+  "notable_phrases": [
+    "核心逻辑",
+    "阶层"
+  ],
+  "title_score": 50,
+  "opening_score": 10,
+  "argument_score": 20,
+  "evidence_score": 0,
+  "structure_score": 10,
+  "style_score": 30,
+  "publishability_score": 20,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为‘FBK翻书日签’，仅包含一句话的核心观点：阶层是组织和社会运行的核心逻辑。内容形式为碎片化的名言警句，完全缺失论证、案例或深度分析，主要用于每日打卡或初步认知引导。",
+  "summary_500": "本内容属于极简的碎片化信息，属于公众号‘FBK翻书日签’的日常运营内容。其核心观点将‘阶层’定性为组织和社会运行的‘核心逻辑’。从写作机制上看，它采用了极高抽象维度的强定义方式，不提供任何背景数据、逻辑推导或实证案例。这种文体仅适合作为观点的触发器（Trigger），而不具备商业分析或学术引用的深度。因内容极其短小且缺乏实际正文，其可检索价值主要体现在主题词库的归类上，对于需要深入学习和写作参考的用户来说，信息价值极低。在RAG（检索增强生成）系统中，它只能作为一个孤立的断言存在。"
+}

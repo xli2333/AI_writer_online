@@ -1,0 +1,85 @@
+{
+  "id": "350ec2e27408",
+  "year": "2023",
+  "date": "2023-02-19",
+  "title": "FBK翻书日签丨2023年2月19日",
+  "relative_path": "2023/2023-02-19_FBK翻书日签丨2023年2月19日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-02-19_FBK翻书日签丨2023年2月19日.txt",
+  "char_count": 347,
+  "content_type": "日签",
+  "industry": [
+    "文化",
+    "出版"
+  ],
+  "topic": [
+    "每日金句",
+    "碎片化阅读"
+  ],
+  "genre": "社交媒体动态",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "公众号粉丝",
+    "阅读爱好者"
+  ],
+  "intent": [
+    "品牌维护",
+    "日常触达"
+  ],
+  "tone": [
+    "中立"
+  ],
+  "primary_question": "2023年2月19日的日签内容是什么？",
+  "thesis_type": "无",
+  "thesis_sentence": "无",
+  "structure_pattern": "极简通知结构",
+  "section_functions": [
+    "展示标题日期",
+    "链接跳转引导"
+  ],
+  "argument_moves": [
+    "仅包含元数据展示"
+  ],
+  "core_argument": "无",
+  "key_points": [
+    "2023年2月19日的FBK翻书日签发布"
+  ],
+  "opening_pattern": "标题直入",
+  "ending_pattern": "功能性链接结束",
+  "evidence_types": [
+    "视觉图像"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "旁白",
+  "stance_strength": "中立",
+  "sentence_rhythm": "无节奏",
+  "abstraction_level": "具象",
+  "transferable_moves": [
+    "使用日签形式进行低成本的用户粘性维护"
+  ],
+  "anti_patterns": [
+    "信息密度极低",
+    "缺乏文字交互",
+    "过度依赖视觉图片"
+  ],
+  "notable_phrases": [
+    "FBK翻书日签"
+  ],
+  "title_score": 30,
+  "opening_score": 10,
+  "argument_score": 0,
+  "evidence_score": 5,
+  "structure_score": 20,
+  "style_score": 20,
+  "publishability_score": 20,
+  "quality_score": 10,
+  "reference_value_score": 5,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该内容为2023年2月19日的“FBK翻书日签”发布记录，属于极简的社交媒体打卡内容。正文仅包含标题、日期及原始链接，核心内容（如图片或语录）未以文本形式呈现。该文章信息量极低，不具备阅读深度，主要作为公众号维持日更频率的工具，缺乏实质性的商业分析或写作参考价值。",
+  "summary_500": "本内容是针对“FBK翻书日签”在2023年2月19日发布动态的抓取记录。该日签通常是以图片形式展示书籍金句或文化语录，用于读者的每日阅读仪式感建立和社交分享。从文本分析角度来看，该页面仅提供了基本的元数据，包括标题、日期、来源链接以及关于触发图片搜索模式的系统说明。正文中没有提供具体的文字论述、案例分析或逻辑推演。这种类型的内容在公众号运营中属于“轻量化内容”，旨在通过视觉符号维持品牌存在感，而非传递深度的商业洞察或知识。对于RAG（检索增强生成）或人格提炼而言，该文档的参考价值极低，属于信息极度匮乏的低价值样本。"
+}

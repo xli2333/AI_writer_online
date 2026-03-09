@@ -1,0 +1,76 @@
+{
+  "id": "7c9f596d702b",
+  "year": "2023",
+  "date": "2023-05-03",
+  "title": "后现代主义的幻象丨FBK翻书日签 2023年5月3日",
+  "relative_path": "2023/2023-05-03_后现代主义的幻象丨FBK翻书日签 2023年5月3日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-05-03_后现代主义的幻象丨FBK翻书日签 2023年5月3日.txt",
+  "char_count": 355,
+  "content_type": "日签",
+  "industry": [
+    "文化传播",
+    "人文社科"
+  ],
+  "topic": [
+    "后现代主义"
+  ],
+  "genre": "社交媒体推文",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "大众读者"
+  ],
+  "intent": [
+    "品牌日常曝光",
+    "仪式感维持"
+  ],
+  "tone": [
+    "客观"
+  ],
+  "primary_question": "该日签的主题及发布背景是什么？",
+  "thesis_type": "元数据呈现",
+  "thesis_sentence": "该内容仅作为2023年5月3日的阅读日签标题展示。",
+  "structure_pattern": "孤立标题式",
+  "section_functions": [
+    "标题界定",
+    "日期标注",
+    "索引链接提供"
+  ],
+  "argument_moves": [],
+  "core_argument": "无（仅为日签标题，缺乏论证过程）",
+  "key_points": [
+    "该内容仅为一个日签的标题与日期元数据",
+    "提及了“后现代主义的幻象”这一主题但未展开"
+  ],
+  "opening_pattern": "直接展示日期与品牌系列名",
+  "ending_pattern": "提供原始链接与技术抓取说明",
+  "evidence_types": [],
+  "evidence_specificity_score": 0,
+  "data_density_score": 0,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "第三人称",
+  "stance_strength": "中立",
+  "sentence_rhythm": "短促",
+  "abstraction_level": "高",
+  "transferable_moves": [],
+  "anti_patterns": [
+    "内容缺失",
+    "信息密度极低"
+  ],
+  "notable_phrases": [],
+  "title_score": 30,
+  "opening_score": 10,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 10,
+  "style_score": 10,
+  "publishability_score": 5,
+  "quality_score": 5,
+  "reference_value_score": 2,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该内容为2023年5月3日的“FBK翻书日签”，标题为“后现代主义的幻象”。文中仅包含日期、来源链接及图片抓取信息，没有任何实际的正文阐述、论证或摘录内容。属于极低价值的元数据记录。",
+  "summary_500": "本篇内容是一份名为“FBK翻书日签”的社交媒体日常更新记录。其核心信息高度凝练于标题“后现代主义的幻象”之中。根据所提供的文本，全文除标题、日期（2023-05-03）及微信公众号来源链接外，并未包含任何关于“后现代主义”的具体定义、引用摘录或评论性文字。其作为日签的属性意味着其原本可能包含一张精美配图或一段书籍摘句，但在当前的文本结构中完全缺失。此类内容对于RAG（检索增强生成）写作或知识库构建而言，除作为时间线上的索引标签外，不具备任何实质性的参考价值或思想深度，因此被判定为低价值信息。"
+}

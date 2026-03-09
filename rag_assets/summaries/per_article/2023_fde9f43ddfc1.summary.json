@@ -1,0 +1,93 @@
+{
+  "id": "fde9f43ddfc1",
+  "year": "2023",
+  "date": "2023-05-04",
+  "title": "严飞 异乡人的都市生存丨FBK翻书日签 2023年5月4日",
+  "relative_path": "2023/2023-05-04_严飞 异乡人的都市生存丨FBK翻书日签 2023年5月4日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-05-04_严飞 异乡人的都市生存丨FBK翻书日签 2023年5月4日.txt",
+  "char_count": 358,
+  "content_type": "社交媒体动态",
+  "industry": [
+    "社会学",
+    "出版与文化"
+  ],
+  "topic": [
+    "城市生存",
+    "异乡人",
+    "读书推荐"
+  ],
+  "genre": "日签",
+  "style": [
+    "碎片化",
+    "极简"
+  ],
+  "audience": [
+    "城市中青年",
+    "学术阅读爱好者"
+  ],
+  "intent": [
+    "告知",
+    "内容引流"
+  ],
+  "tone": [
+    "客观"
+  ],
+  "primary_question": "该文本仅作为引流日签，未提出实质性问题。",
+  "thesis_type": "描述性",
+  "thesis_sentence": "该内容为2023年5月4日的翻书日签，关注学者严飞关于异乡人都市生存的论述。",
+  "structure_pattern": "固定模板式",
+  "section_functions": [
+    "标题标明核心人物与主题",
+    "时间戳标记",
+    "原始链接留存",
+    "系统抓取日志"
+  ],
+  "argument_moves": [
+    "无实质性论证"
+  ],
+  "core_argument": "内容为空，仅为链接占位符。",
+  "key_points": [
+    "严飞",
+    "异乡人",
+    "都市生存",
+    "FBK翻书日签"
+  ],
+  "opening_pattern": "标题直入",
+  "ending_pattern": "链接收尾",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 10,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "远观",
+  "stance_strength": "中立",
+  "sentence_rhythm": "零碎",
+  "abstraction_level": "中等",
+  "transferable_moves": [
+    "使用‘姓名+主题’的标题组合方式",
+    "采用固定日期的日签化发布形式"
+  ],
+  "anti_patterns": [
+    "信息密度极低",
+    "缺乏正文内容",
+    "作为分析文本无实际参考意义"
+  ],
+  "notable_phrases": [
+    "异乡人的都市生存"
+  ],
+  "title_score": 40,
+  "opening_score": 10,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 20,
+  "style_score": 30,
+  "publishability_score": 10,
+  "quality_score": 5,
+  "reference_value_score": 5,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该文本是“FBK翻书日签”于2023年5月4日发布的社交媒体动态。内容仅包含标题“严飞 异乡人的都市生存”及相关元数据（日期、原文链接）。它属于极简的导流入口，本身不具备叙事或论证功能，旨在引导读者点击链接阅读关于社会学者严飞探讨城市异乡人话题的完整文章。因正文缺失，其信息价值极低，仅可作为发布模式参考。",
+  "summary_500": "本条内容为典型的社交媒体“日签式”发布，属于极低信息密度的占位文本。其核心元素仅包含：1. 核心主题：聚焦于学者严飞以及“异乡人的都市生存”这一社会学话题；2. 时间戳：2023年5月4日；3. 溯源链接：提供了微信公众号的原始URL；4. 系统备注：记录了全局图片搜索模式及结果。从写作机制分析，该文本不具备完整的起承转合或逻辑推演，其价值在于通过“日签”的形式构建一种每日阅读的仪式感。对于商业内容分析师而言，此类文本属于“低价值/通知类”数据，除了标题提供的关键词（人物、主题标签）具有检索价值外，其文本结构与风格均不具备深度学习和人格提炼的意义。在RAG（检索增强生成）系统中，它仅能作为外部链接的索引存在，无法提供实质性的事实或观点证据。"
+}

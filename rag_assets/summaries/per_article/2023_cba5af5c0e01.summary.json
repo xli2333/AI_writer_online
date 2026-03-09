@@ -1,0 +1,84 @@
+{
+  "id": "cba5af5c0e01",
+  "year": "2023",
+  "date": "2023-07-09",
+  "title": "谁住进了养老院丨FBK翻书日签 2023年7月9日",
+  "relative_path": "2023/2023-07-09_谁住进了养老院丨FBK翻书日签 2023年7月9日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-07-09_谁住进了养老院丨FBK翻书日签 2023年7月9日.txt",
+  "char_count": 354,
+  "content_type": "日签",
+  "industry": [
+    "养老/老龄化",
+    "图书出版"
+  ],
+  "topic": [
+    "养老院",
+    "社会观察"
+  ],
+  "genre": "碎片阅读",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "图书爱好者",
+    "养老问题关注者"
+  ],
+  "intent": [
+    "信息分享"
+  ],
+  "tone": [
+    "冷静"
+  ],
+  "primary_question": "谁是养老院的主要居住群体？",
+  "thesis_type": "现象描述",
+  "thesis_sentence": "该内容为书籍内容摘录性质的日签，探讨了养老院的居住人群构成。",
+  "structure_pattern": "固定模板结构",
+  "section_functions": [
+    "标题引导：提出关于养老院居住者的疑问",
+    "主体内容：书籍摘录（原文缺失，仅存占位符）"
+  ],
+  "argument_moves": [
+    "以问题驱动好奇心"
+  ],
+  "core_argument": "由于正文缺失，仅能通过标题判断其核心关注点为养老院群体的画像。",
+  "key_points": [
+    "养老院居住人群的身份背景",
+    "2023年7月9日的书籍推荐"
+  ],
+  "opening_pattern": "直陈标题式",
+  "ending_pattern": "日期归档式",
+  "evidence_types": [
+    "文学/纪实作品摘录"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 5,
+  "quote_density_score": 0,
+  "narrative_distance": "第三人称旁观",
+  "stance_strength": "中立",
+  "sentence_rhythm": "无",
+  "abstraction_level": "具体描述",
+  "transferable_moves": [
+    "使用日签形式进行每日书籍推广",
+    "以疑问句作为日签标题增强互动感"
+  ],
+  "anti_patterns": [
+    "正文内容缺失",
+    "信息密度过低",
+    "仅有标题无实质论述"
+  ],
+  "notable_phrases": [],
+  "title_score": 60,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 5,
+  "structure_score": 20,
+  "style_score": 20,
+  "publishability_score": 10,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为FBK（可能为翻书吧或相关读书组织）于2023年7月9日发布的翻书日签。标题为《谁住进了养老院》，本应包含关于养老院居住人群的相关书籍摘录或观察，但由于原文抓取不全或为纯图片模式，实际文本内容仅包含标题与日期，缺乏具体的论证和事实支持。属于典型的碎片化信息传播载体，作为研究养老问题的素材价值极低。",
+  "summary_500": "这篇文章是名为‘FBK翻书日签’的系列内容之一，发布日期为2023年7月9日。文章的主题聚焦于‘谁住进了养老院’，试图通过书籍摘录的方式引发读者对老龄化社会和养老院现状的思考。然而，从提供的文本来看，该内容属于‘wechat_fallback_global’模式，即实际的正文内容主要承载在图片中，导致抓取到的文本信息极度匮乏。在写作机制方面，其采用了以疑问句为核心的标题策略，试图在社交媒体环境下快速通过‘痛点’问题吸引用户点击。由于缺乏实质性的正文文字，其论证过程、证据特征和语言风格均无法深度分析。整体而言，该内容在当前状态下属于低价值的结构化数据，仅能作为自媒体日更形式的记录，不具备深度研究或RAG写作的参考价值。建议在后续分析中寻找该日签对应的完整书籍摘录或深度书评文章。"
+}

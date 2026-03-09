@@ -1,0 +1,91 @@
+{
+  "id": "41c2cdd0a108",
+  "year": "2023",
+  "date": "2023-09-27",
+  "title": "小逻辑：让选择变简单的方法丨FBK翻书日签 2023年9月27日",
+  "relative_path": "2023/2023-09-27_小逻辑：让选择变简单的方法丨FBK翻书日签 2023年9月27日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-09-27_小逻辑：让选择变简单的方法丨FBK翻书日签 2023年9月27日.txt",
+  "char_count": 361,
+  "content_type": "每日金句",
+  "industry": [
+    "个人成长",
+    "出版/文化"
+  ],
+  "topic": [
+    "决策逻辑",
+    "思维方式"
+  ],
+  "genre": "简报",
+  "style": [
+    "碎片化",
+    "极简"
+  ],
+  "audience": [
+    "职场人士",
+    "大众读者"
+  ],
+  "intent": [
+    "品牌展示",
+    "心智留存"
+  ],
+  "tone": [
+    "理性",
+    "简约"
+  ],
+  "primary_question": "如何通过逻辑框架简化复杂的选择过程？",
+  "thesis_type": "方法论",
+  "thesis_sentence": "通过应用特定的“小逻辑”，可以有效降低决策难度并简化生活选择。",
+  "structure_pattern": "日签模式",
+  "section_functions": [
+    "核心标题引导 (Title)",
+    "发布日期标记 (Meta-info)",
+    "视觉媒介占位 (Image search pattern)"
+  ],
+  "argument_moves": [
+    "提出痛点：选择的复杂性",
+    "给出方案：小逻辑方法"
+  ],
+  "core_argument": "决策逻辑的简化是提高生活效率的关键手段。",
+  "key_points": [
+    "存在一种名为‘小逻辑’的系统方法",
+    "该方法的目标是让选择变简单"
+  ],
+  "opening_pattern": "直击痛点的功能性标题",
+  "ending_pattern": "版权/来源标识",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "远距离",
+  "stance_strength": "中立",
+  "sentence_rhythm": "短促",
+  "abstraction_level": "极高",
+  "transferable_moves": [
+    "使用‘小逻辑’这一术语作为品牌化钩子",
+    "采用‘日签’形式进行轻量化内容运营"
+  ],
+  "anti_patterns": [
+    "内容极度空洞，缺乏实质性论述",
+    "过度依赖外部链接，正文无有效信息"
+  ],
+  "notable_phrases": [
+    "小逻辑",
+    "让选择变简单"
+  ],
+  "title_score": 75,
+  "opening_score": 30,
+  "argument_score": 10,
+  "evidence_score": 0,
+  "structure_score": 20,
+  "style_score": 40,
+  "publishability_score": 15,
+  "quality_score": 10,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为FBK翻书日签的碎片化记录，主题围绕如何通过“小逻辑”简化选择。由于抓取内容仅包含标题、日期及技术性的图片搜索说明，缺乏具体的内容正文、论证过程或案例支撑。其本质是一个带有导流性质的品牌展示，旨在通过简短的标题触发读者对“决策困难”这一痛点的关注，但对深度学习和知识获取而言，信息价值极低。",
+  "summary_500": "本文是发布于2023年9月27日的“FBK翻书日签”，标题为《小逻辑：让选择变简单的方法》。从结构上看，该文本属于典型的碎片化社交媒介内容，采用了极简的“标题+日期+外部链接”模式。文中通过提出“小逻辑”这一概念，试图为受众提供一种简化决策的认知工具，但实际文本内容并未展开任何具体的方法论介绍。在写作机制方面，该文利用了用户对“简化复杂生活”的心理预期，通过功能导向型标题进行吸引。然而，由于正文缺失了实质性的逻辑推演、数据支持或行动指南，且未提供除原始链接外的任何辅助信息，导致其在内容深度、逻辑严密性和证据充分性上的评分极低。这种日签模式在自媒体运营中常用于保持每日活跃度（DAU）和维护品牌心智，但作为可供检索或RAG写作的知识库素材，该文本属于典型的低价值噪声数据。对于创作者而言，仅能作为日签排版格式或标题切入点的参考，无法提供实质性的内容借鉴。"
+}

@@ -1,0 +1,88 @@
+{
+  "id": "bf6b349fcb0a",
+  "year": "2023",
+  "date": "2023-11-20",
+  "title": "社群的进化丨FBK翻书日签 2023年11月20日",
+  "relative_path": "2023/2023-11-20_社群的进化丨FBK翻书日签 2023年11月20日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-11-20_社群的进化丨FBK翻书日签 2023年11月20日.txt",
+  "char_count": 354,
+  "content_type": "日签动态",
+  "industry": [
+    "文化传播",
+    "知识服务"
+  ],
+  "topic": [
+    "社群运营",
+    "日常分享"
+  ],
+  "genre": "碎片化短文",
+  "style": [
+    "极简",
+    "碎片化"
+  ],
+  "audience": [
+    "社群成员",
+    "品牌粉丝"
+  ],
+  "intent": [
+    "品牌维护",
+    "用户粘性维持"
+  ],
+  "tone": [
+    "中性",
+    "简洁"
+  ],
+  "primary_question": "社群的进化现状或趋势是什么？",
+  "thesis_type": "无论点",
+  "thesis_sentence": "无明确核心论点，仅为日常打卡日签性质内容。",
+  "structure_pattern": "固定模板结构",
+  "section_functions": [
+    "标题标识核心主题",
+    "日期标注时间属性",
+    "视觉媒介引导（图片搜索模式）"
+  ],
+  "argument_moves": [
+    "无论证过程"
+  ],
+  "core_argument": "由于内容仅包含标题与日期，无具体陈述性观点。",
+  "key_points": [
+    "社群的进化（主题提及）"
+  ],
+  "opening_pattern": "标题直入",
+  "ending_pattern": "链接占位",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "非叙事",
+  "stance_strength": "中立",
+  "sentence_rhythm": "停滞",
+  "abstraction_level": "中等",
+  "transferable_moves": [
+    "采用固定标题模板（主题+品牌名+日期）进行日常品牌触达"
+  ],
+  "anti_patterns": [
+    "内容缺失：仅有标题而无实质性正文，不具备信息阅读价值",
+    "过度碎片化：无法形成有效的知识沉淀或观点输出"
+  ],
+  "notable_phrases": [
+    "社群的进化",
+    "翻书日签"
+  ],
+  "title_score": 40,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 0,
+  "structure_score": 10,
+  "style_score": 20,
+  "publishability_score": 10,
+  "quality_score": 15,
+  "reference_value_score": 5,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该内容为2023年11月20日的“FBK翻书日签”，核心主题标注为“社群的进化”。文本信息极度匮乏，仅包含标题、日期及一张图片的搜索提示占位。此类内容通常作为社群或公众号的日常运营组件，用于维持品牌活跃度，但不提供具体的知识论点、逻辑推演或案例支持，在信息传递层面具有极高的冗余度，属于典型的低价值检索对象。",
+  "summary_500": "本次分析的对象是一篇发表于2023年11月20日的微信公众号“翻书日签”动态。该内容的主题为“社群的进化”，但其正文部分缺失了具体的文字描述。从其结构来看，属于典型的社交媒体轻量化运营内容，由品牌标识（FBK）、固定栏目名（翻书日签）、具体日期以及一个抽象主题组成。这种写作模式旨在通过高频、低成本的每日输出在用户面前刷“存在感”，但在结构化分析和RAG（检索增强生成）写作中，该文本几乎没有可提取的知识点或人格化特征。内容中没有提供任何关于“社群进化”的具体观点、事实依据或行动建议。由于其本质上是一个以图片为核心载体的动态，而当前文本仅抓取到了标题，导致其在质量评分、论据密度及参考价值评分上均处于极低水平。此类文章被标记为“低价值”和“活动通知”类，不建议作为写作参考或逻辑建模的样本。"
+}

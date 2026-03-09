@@ -1,0 +1,89 @@
+{
+  "id": "7d28615e3488",
+  "year": "2023",
+  "date": "2023-11-24",
+  "title": "好价值的由来丨FBK翻书日签 2023年11月24日",
+  "relative_path": "2023/2023-11-24_好价值的由来丨FBK翻书日签 2023年11月24日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-11-24_好价值的由来丨FBK翻书日签 2023年11月24日.txt",
+  "char_count": 355,
+  "content_type": "日签",
+  "industry": [
+    "金融",
+    "文化传媒"
+  ],
+  "topic": [
+    "价值投资",
+    "阅读分享"
+  ],
+  "genre": "微型语录",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "投资者",
+    "读书人"
+  ],
+  "intent": [
+    "品牌打卡",
+    "日常触达"
+  ],
+  "tone": [
+    "哲思",
+    "客观"
+  ],
+  "primary_question": "什么是好价值的来源？",
+  "thesis_type": "观点陈述型",
+  "thesis_sentence": "本内容为日签形式，旨在通过简短标题引导对“好价值由来”的思考。",
+  "structure_pattern": "元数据结构",
+  "section_functions": [
+    "标题指引主题",
+    "日期标记时效",
+    "链接提供溯源"
+  ],
+  "argument_moves": [
+    "通过标题提出议题"
+  ],
+  "core_argument": "内容为空白占位，缺乏实质论证，仅提供主题线索。",
+  "key_points": [
+    "好价值的由来",
+    "2023年11月24日",
+    "FBK翻书品牌"
+  ],
+  "opening_pattern": "直陈式标题",
+  "ending_pattern": "链接式结尾",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 0,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "远距离",
+  "stance_strength": "中立",
+  "sentence_rhythm": "碎片化",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "利用日签形式进行每日品牌心智占领",
+    "使用固定标题前缀建立内容系列感"
+  ],
+  "anti_patterns": [
+    "内容极度空泛，缺乏实质文本",
+    "过度依赖图片或外部链接导致正文失去阅读意义"
+  ],
+  "notable_phrases": [
+    "好价值的由来"
+  ],
+  "title_score": 45,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 0,
+  "structure_score": 20,
+  "style_score": 30,
+  "publishability_score": 15,
+  "quality_score": 10,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该文章为2023年11月24日的“FBK翻书日签”，主题为“好价值的由来”。正文内容极简，仅由标题、日期及链接组成，缺乏具体的文字论述、案例或数据支撑。其功能主要是作为品牌每日运营的占位符或社交媒体分享的入口。由于实质性信息严重缺失，作为文本分析对象其价值极低，属于典型的低信息量品牌打卡内容。",
+  "summary_500": "本文是FBK翻书品牌发布的每日日签记录，日期标注为2023年11月24日。文章标题“好价值的由来”暗示了其内容本应涉及关于投资价值或书籍深度阅读的思考，但实际的正文文本仅保留了元数据信息（标题、日期、原始链接及图片搜索触发提示），未包含任何实质性的逻辑展开、观点阐述或证据支持。这种内容形式在自媒体运营中通常以精美海报或语录图片为核心，而文字稿仅作为存档或索引存在。从商业内容分析的角度看，该文本无法提供可供RAG（检索增强生成）使用的知识点，其核心论点和论据完全缺失。该文章的写作机制表现为极简主义的品牌触达，通过固定的日签格式维持与订阅者的日常连接。由于其内容密度极低，不具备独立的文章结构与写作借鉴价值，被标记为低价值信息。建议在构建知识库时忽略此类条目，或仅作为品牌活跃度的频率数据参考。"
+}

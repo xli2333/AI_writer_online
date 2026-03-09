@@ -1,0 +1,91 @@
+{
+  "id": "16040ef7d39d",
+  "year": "2023",
+  "date": "2023-03-23",
+  "title": "个人危机与国家危机丨FBK翻书日签 2023年3月23日",
+  "relative_path": "2023/2023-03-23_个人危机与国家危机丨FBK翻书日签 2023年3月23日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-03-23_个人危机与国家危机丨FBK翻书日签 2023年3月23日.txt",
+  "char_count": 357,
+  "content_type": "读书日签",
+  "industry": [
+    "文化出版",
+    "社会科学"
+  ],
+  "topic": [
+    "个人成长",
+    "社会危机",
+    "哲学思辨"
+  ],
+  "genre": "短评/摘录",
+  "style": [
+    "极简",
+    "格言式"
+  ],
+  "audience": [
+    "阅读爱好者",
+    "知识分子"
+  ],
+  "intent": [
+    "情感共鸣",
+    "知识分享"
+  ],
+  "tone": [
+    "严肃",
+    "哲思"
+  ],
+  "primary_question": "个人遭遇的危机与国家宏观层面的危机之间存在何种内在关联？",
+  "thesis_type": "命题式",
+  "thesis_sentence": "由于正文缺失，仅能根据标题推测其核心命题为探讨个人命运与国家变局的同构性或相关性。",
+  "structure_pattern": "单点式",
+  "section_functions": [
+    "主题界定 (标题)",
+    "元数据说明 (日期/链接)"
+  ],
+  "argument_moves": [
+    "通过对偶式标题建立概念联系",
+    "利用时间节点进行仪式化发布"
+  ],
+  "core_argument": "信息缺失，无法推导完整论证逻辑。",
+  "key_points": [
+    "个人危机",
+    "国家危机",
+    "二者的相互影响"
+  ],
+  "opening_pattern": "标题直给式",
+  "ending_pattern": "元数据标注式",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "中远视角",
+  "stance_strength": "中性",
+  "sentence_rhythm": "无从判断",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "使用并列宏大词汇构建悬念标题",
+    "建立品牌化的每日分享模式"
+  ],
+  "anti_patterns": [
+    "内容极度缺失导致无法形成有效阅读",
+    "依赖图片承载核心信息导致文本检索失败"
+  ],
+  "notable_phrases": [
+    "个人危机与国家危机"
+  ],
+  "title_score": 45,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 5,
+  "structure_score": 20,
+  "style_score": 20,
+  "publishability_score": 10,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为‘FBK翻书日签’系列的每日摘录，标题为《个人危机与国家危机》。原文由于仅保留了标题和链接等元数据，且核心内容可能由图片承载，导致文本信息极度匮乏。其预设主题聚焦于微观个体与宏观国家在危机时刻的关联，属于社交媒体上常见的‘轻量化/仪式感’阅读内容。",
+  "summary_500": "这是一篇发表于2023年3月23日的‘FBK翻书日签’。该文章具有显著的碎片化阅读特征，其写作机制采用典型的‘金句+配图’模式，通过极简的标题《个人危机与国家危机》引发读者对社会变迁与个人命运关系的思考。然而，作为结构化分析的对象，该样本表现出极低的信息密度：正文部分完全缺失文字论述，仅存在元数据（如来源、日期、图片搜索模式提示）。由于缺乏实质性的论据、案例或逻辑推演，该内容在学术参考或写作机制学习方面的价值极低。其存在的意义更多在于品牌维护和读者的每日打卡互动，而非深度的知识传递。对于研究者而言，该样本仅能作为‘自媒体运营仪式感’的案例存在，不具备内容层面的分析深度。建议在检索和RAG写作中将其标记为低价值/信息缺失条目。"
+}

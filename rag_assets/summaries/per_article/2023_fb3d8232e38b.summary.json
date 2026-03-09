@@ -1,0 +1,89 @@
+{
+  "id": "fb3d8232e38b",
+  "year": "2023",
+  "date": "2023-02-08",
+  "title": "FBK翻书日签丨2023年2月8日",
+  "relative_path": "2023/2023-02-08_FBK翻书日签丨2023年2月8日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-02-08_FBK翻书日签丨2023年2月8日.txt",
+  "char_count": 346,
+  "content_type": "每日日签",
+  "industry": [
+    "文化",
+    "出版"
+  ],
+  "topic": [
+    "每日阅读",
+    "品牌传播"
+  ],
+  "genre": "碎片化内容",
+  "style": [
+    "极简",
+    "视觉化"
+  ],
+  "audience": [
+    "阅读爱好者",
+    "长期关注者"
+  ],
+  "intent": [
+    "品牌留存",
+    "习惯培养"
+  ],
+  "tone": [
+    "中性"
+  ],
+  "primary_question": "今日的阅读金句或视觉灵感是什么？",
+  "thesis_type": "启发型",
+  "thesis_sentence": "通过每日一张的视觉日签，为读者提供极简的文化触达点。",
+  "structure_pattern": "固定模板式",
+  "section_functions": [
+    "日期标记",
+    "核心视觉呈现",
+    "品牌标识"
+  ],
+  "argument_moves": [
+    "通过日期建立仪式感",
+    "通过视觉图像传达抽象情感或思考"
+  ],
+  "core_argument": "无（该内容属于非论证类仪式化内容）",
+  "key_points": [
+    "日期标识：2023年2月8日",
+    "内容形式：以单张图片日签为主"
+  ],
+  "opening_pattern": "直陈式标题",
+  "ending_pattern": "静默式收尾",
+  "evidence_types": [
+    "视觉图像"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "远距",
+  "stance_strength": "中性",
+  "sentence_rhythm": "无（主要为短语和标识）",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "利用日签形式建立品牌每日触达机制",
+    "通过固定标题命名规范提升历史检索的整齐度"
+  ],
+  "anti_patterns": [
+    "内容极度单薄，缺乏可检索的文本信息",
+    "仅依靠图片作为载体，导致非视觉渠道的转化率和理解度低"
+  ],
+  "notable_phrases": [
+    "FBK翻书日签"
+  ],
+  "title_score": 40,
+  "opening_score": 20,
+  "argument_score": 5,
+  "evidence_score": 10,
+  "structure_score": 30,
+  "style_score": 50,
+  "publishability_score": 30,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为2023年2月8日的“FBK翻书日签”，属于典型的每日仪式性碎片内容。全文除标题和日期外几乎无文本叙述，核心信息承载于图片（抓取结果显示仅一张图片）。这类文章主要用于社群留存和品牌日常打卡，缺乏独立的商业分析价值或知识传播深度。其文本信息密度极低，对AI写作或RAG系统而言属于典型的低价值检索点。",
+  "summary_500": "该内容为FBK（翻书）品牌于2023年2月8日发布的每日日签。其内容结构极其简单，仅包含统一的标题格式、发布日期以及一张核心图片。从写作机制分析，该文不具备传统意义上的论证结构（thesis-driven），而是采用了一种“仪式化触达”的逻辑，旨在通过每日更新的视觉化金句或图像，在读者心中建立品牌粘性。由于缺乏文字描述、逻辑推演或实质性的案例支撑，其数据密度和证据得分极低。对于内容创作者而言，该案例的参考价值仅在于其品牌运营的持久性和固定模板的规范化。但在知识提取和分析层面，因其文本量过少且内容无法通过文字索引化，属于低价值信息。在自动化系统中，此类文章应被标记为“极简视觉类内容”，不宜作为知识性写作的参考范本。其反模式特征表现为过度依赖图像载体，在失去图片渲染的情况下，文本本身无法提供任何有效信息。"
+}

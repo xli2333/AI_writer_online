@@ -1,0 +1,89 @@
+{
+  "id": "4f7962c4cf24",
+  "year": "2024",
+  "date": "2024-03-01",
+  "title": "科学中华而不实的作风丨FBK翻书日签 2024年3月1日",
+  "relative_path": "2024/2024-03-01_科学中华而不实的作风丨FBK翻书日签 2024年3月1日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2024\\2024-03-01_科学中华而不实的作风丨FBK翻书日签 2024年3月1日.txt",
+  "char_count": 352,
+  "content_type": "日签",
+  "industry": [
+    "学术科研",
+    "文化传播"
+  ],
+  "topic": [
+    "学术风气",
+    "科学反思"
+  ],
+  "genre": "格言评论",
+  "style": [
+    "极简",
+    "批判性"
+  ],
+  "audience": [
+    "科研人员",
+    "知识分子"
+  ],
+  "intent": [
+    "反思现状",
+    "观点分享"
+  ],
+  "tone": [
+    "严肃",
+    "批判"
+  ],
+  "primary_question": "科学界是否存在华而不实的风气以及应如何反思？",
+  "thesis_type": "批判型",
+  "thesis_sentence": "科学研究中存在着华而不实的作风，这种现象值得警惕与反思。",
+  "structure_pattern": "单点输出式",
+  "section_functions": [
+    "标题揭示核心观点",
+    "图片内容占位"
+  ],
+  "argument_moves": [
+    "提出存在的问题现象"
+  ],
+  "core_argument": "科学界存在华而不实的作风（由于正文缺失，仅能根据标题推断）。",
+  "key_points": [
+    "科学作风的评价",
+    "对华而不实倾向的批判"
+  ],
+  "opening_pattern": "直陈式标题",
+  "ending_pattern": "无",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 0,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "中远距离",
+  "stance_strength": "明确",
+  "sentence_rhythm": "无从判断",
+  "abstraction_level": "抽象",
+  "transferable_moves": [
+    "采用“日签”形式进行每日核心观点的碎片化传播",
+    "使用具有冲突感的标题吸引特定受众（如科学vs华而不实）"
+  ],
+  "anti_patterns": [
+    "纯图片化导致的信息不可检索性",
+    "由于文本内容极度缺失导致的论证真空"
+  ],
+  "notable_phrases": [
+    "华而不实",
+    "翻书日签"
+  ],
+  "title_score": 75,
+  "opening_score": 10,
+  "argument_score": 10,
+  "evidence_score": 0,
+  "structure_score": 10,
+  "style_score": 20,
+  "publishability_score": 30,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为FBK出品的每日金句日签，标题聚焦“科学中华而不实的作风”。因原文触发了图片提取机制，文本部分仅包含标题和日期。此类内容通常以一张精美图片配上一句名言或独家评论，旨在引发对科学精神的深度反思。但由于文本内容缺失，其实际的信息密度极低，无法进行具体的论证分析，仅具有线索提示价值。",
+  "summary_500": "本条目是2024年3月1日的“FBK翻书日签”，主题为探讨科学领域中华而不实、形式主义的风气。由于原始网页采用了纯图片或特殊排版结构，导致抓取到的文本仅限于标题、日期及系统提示语。基于标题可以推断，其核心意图在于对当前科研环境中可能存在的浮躁、重形式轻实效的现象提出批判。作为一种轻量级的知识传播形式，日签通过碎片化的方式传递严肃思考，受众通常为对科学、哲学及深度思考感兴趣的人群。然而，从内容分析的角度看，该文本缺乏任何具体的论据、数据支撑或案例描述，其“华而不实”的具体表现形式、产生原因及解决对策均留白。这种形式的内容虽然在社交媒体上易于传播，但在作为RAG语料或学术参考时价值较低，主要起到品牌露出和单一观点导向的作用。建议在后续分析中，若能通过OCR获取图片内的名言或评论文字，将能大幅提升其结构化数据的完整性。"
+}

@@ -1,0 +1,89 @@
+{
+  "id": "5a2100b7a85f",
+  "year": "2023",
+  "date": "2023-11-07",
+  "title": "规则为什么会失败丨FBK翻书日签 2023年11月7日",
+  "relative_path": "2023/2023-11-07_规则为什么会失败丨FBK翻书日签 2023年11月7日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-11-07_规则为什么会失败丨FBK翻书日签 2023年11月7日.txt",
+  "char_count": 356,
+  "content_type": "读书日签",
+  "industry": [
+    "文化与教育",
+    "管理咨询"
+  ],
+  "topic": [
+    "规则设计",
+    "社会科学",
+    "阅读分享"
+  ],
+  "genre": "日签",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "管理人员",
+    "社会学爱好者",
+    "职场人士"
+  ],
+  "intent": [
+    "知识点拨",
+    "品牌互动"
+  ],
+  "tone": [
+    "冷静",
+    "思辨"
+  ],
+  "primary_question": "规则失效的根本原因是什么？",
+  "thesis_type": "因果分析",
+  "thesis_sentence": "探讨规则在实际执行或设计中遭遇失败的深层逻辑。",
+  "structure_pattern": "极简日签结构",
+  "section_functions": [
+    "标题确立议题",
+    "日期与来源记录"
+  ],
+  "argument_moves": [
+    "提出问题"
+  ],
+  "core_argument": "由于正文实质内容缺失，核心论点仅限于对规则失败这一现象的质疑与提示。",
+  "key_points": [
+    "规则可能失效",
+    "FBK翻书系列每日分享"
+  ],
+  "opening_pattern": "直述主题式",
+  "ending_pattern": "信息留存式",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 5,
+  "data_density_score": 2,
+  "case_density_score": 0,
+  "quote_density_score": 10,
+  "narrative_distance": "中立",
+  "stance_strength": "中性",
+  "sentence_rhythm": "短促",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "使用疑问句作为日签标题以吸引好奇心",
+    "建立品牌化的日期索引系统"
+  ],
+  "anti_patterns": [
+    "正文缺失（内容完全依赖图片或外部链接）",
+    "信息量极低（仅有标题和元数据）"
+  ],
+  "notable_phrases": [
+    "规则为什么会失败"
+  ],
+  "title_score": 60,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 0,
+  "structure_score": 20,
+  "style_score": 30,
+  "publishability_score": 10,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该文本为FBK出品的2023年11月7日读书日签，主题为“规则为什么会失败”。由于正文实质内容缺失，仅显示为图片搜索模式及元数据链接，该内容在文本层面未能提供具体的分析或论证。其功能主要在于通过标题引发用户思考，属于低信息密度的日常维护性内容。",
+  "summary_500": "本内容属于“FBK翻书日签”系列，发布于2023年11月7日。文章以“规则为什么会失败”为题，旨在探讨管理或社会规则失效的逻辑。然而，从提供的文本数据来看，该篇内容极度精简，缺乏任何形式的论证过程、案例支持或数据佐证。文本实质上仅作为日签图片的元数据记录，具有极高的对外链接依赖性。在写作机制上，它采用了最简单的“提出问题”式策略，但没有给出解答。此类内容的主要价值在于品牌每日触达，对于RAG写作或深度人格提炼而言，其文本信息密度严重不足，属于典型的低价值分析对象。"
+}

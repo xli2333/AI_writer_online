@@ -1,0 +1,90 @@
+{
+  "id": "cee8e7dffc98",
+  "year": "2023",
+  "date": "2023-09-12",
+  "title": "先进制造：美国的新创新政策丨FBK翻书日签 2023年9月12日",
+  "relative_path": "2023/2023-09-12_先进制造：美国的新创新政策丨FBK翻书日签 2023年9月12日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-09-12_先进制造：美国的新创新政策丨FBK翻书日签 2023年9月12日.txt",
+  "char_count": 361,
+  "content_type": "日签",
+  "industry": [
+    "先进制造",
+    "政府事务"
+  ],
+  "topic": [
+    "创新政策",
+    "美国政策"
+  ],
+  "genre": "书评摘录",
+  "style": [
+    "极简",
+    "告知"
+  ],
+  "audience": [
+    "智库研究员",
+    "制造业从业者"
+  ],
+  "intent": [
+    "内容引流",
+    "知识传播"
+  ],
+  "tone": [
+    "客观"
+  ],
+  "primary_question": "美国在先进制造领域采取了哪些新的创新政策？",
+  "thesis_type": "描述性",
+  "thesis_sentence": "本文作为书评日签，旨在引导读者关注美国关于先进制造的新创新政策研究。",
+  "structure_pattern": "元数据引导式",
+  "section_functions": [
+    "标题提示",
+    "日期标注",
+    "原文链接指向"
+  ],
+  "argument_moves": [
+    "通过标题界定讨论领域",
+    "利用日期和来源确立时效性"
+  ],
+  "core_argument": "缺乏正文内容，仅作为阅读引导标签存在。",
+  "key_points": [
+    "涉及先进制造领域",
+    "关注美国创新政策",
+    "FBK翻书日签系列"
+  ],
+  "opening_pattern": "标题式引导",
+  "ending_pattern": "来源模式说明",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 0,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "第三人称",
+  "stance_strength": "中立",
+  "sentence_rhythm": "破碎",
+  "abstraction_level": "高概念",
+  "transferable_moves": [
+    "日签标题命名法：主题+子标题+品牌标签"
+  ],
+  "anti_patterns": [
+    "内容缺失（正文未入库或仅有外链）",
+    "过度依赖标题吸引力"
+  ],
+  "notable_phrases": [
+    "先进制造",
+    "翻书日签"
+  ],
+  "title_score": 45,
+  "opening_score": 10,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 15,
+  "style_score": 20,
+  "publishability_score": 5,
+  "quality_score": 10,
+  "reference_value_score": 15,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该内容为2023年9月12日的FBK翻书日签，标题聚焦于美国先进制造的新创新政策。由于输入文本仅包含标题、日期及链接信息，缺乏具体的正文论述、证据支持或深入分析。此类内容主要起到信息索引或社交媒体分享的作用，不具备独立的学术或商业深度阅读价值。",
+  "summary_500": "本篇文档属于'FBK翻书日签'系列，发布于2023年9月12日，主题定位于'先进制造：美国的新创新政策'。从结构上看，该文本仅提供了基本的元数据信息，包括标题、发布日期、微信公众号原始链接以及来源模式说明，并记录了触发全局图片搜索的行为。由于缺乏实质性的正文内容、逻辑推导、案例支撑或政策解析，其核心功能仅在于向读者提示该主题的存在，并提供通往详细文章的入口链接。在商业内容分析中，此类数据被定义为'低信息密度'或'通知类'内容。它没有展开具体论据，也未展示写作机制中的逻辑移动，仅能作为追踪特定机构（FBK）研究动态的时间戳。对于需要进行RAG写作或人格提炼的任务，该样本能提供的有效特征仅限于其标题命名规范和发布频率。"
+}

@@ -1,0 +1,90 @@
+{
+  "id": "2ca9b53b7e95",
+  "year": "2023",
+  "date": "2023-03-30",
+  "title": "“危险地生活吧！”丨FBK翻书日签 2023年3月30日",
+  "relative_path": "2023/2023-03-30_“危险地生活吧！”丨FBK翻书日签 2023年3月30日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-03-30_“危险地生活吧！”丨FBK翻书日签 2023年3月30日.txt",
+  "char_count": 357,
+  "content_type": "每日金句",
+  "industry": [
+    "文化教育",
+    "自媒体"
+  ],
+  "topic": [
+    "人生哲学",
+    "生活态度"
+  ],
+  "genre": "碎片化图文",
+  "style": [
+    "极简",
+    "励志"
+  ],
+  "audience": [
+    "阅读爱好者",
+    "寻求精神共鸣的职场人"
+  ],
+  "intent": [
+    "品牌留存",
+    "情感共鸣"
+  ],
+  "tone": [
+    "激励",
+    "富有哲理"
+  ],
+  "primary_question": "在平庸的生活中应当保持怎样的姿态？",
+  "thesis_type": "呼吁型",
+  "thesis_sentence": "危险地生活吧！",
+  "structure_pattern": "固定栏目式",
+  "section_functions": [
+    "展示核心理念",
+    "品牌打卡标识"
+  ],
+  "argument_moves": [
+    "引用具有冲击力的名言",
+    "通过视觉留白营造氛围"
+  ],
+  "core_argument": "鼓励人们打破舒适区，拥抱充满挑战与不确定的生活。",
+  "key_points": [
+    "危险地生活（Live dangerously）",
+    "挑战常规"
+  ],
+  "opening_pattern": "直陈标题",
+  "ending_pattern": "日期标注",
+  "evidence_types": [
+    "名人名言"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 80,
+  "narrative_distance": "远距",
+  "stance_strength": "强硬",
+  "sentence_rhythm": "短促有力",
+  "abstraction_level": "极高",
+  "transferable_moves": [
+    "使用带有IP属性的固定栏目名称",
+    "以具有争议性或张力的金句作为视觉核心"
+  ],
+  "anti_patterns": [
+    "信息含量极度匮乏",
+    "缺乏对名言背景的深度解读",
+    "纯视觉导向导致文本挖掘价值缺失"
+  ],
+  "notable_phrases": [
+    "危险地生活吧！"
+  ],
+  "title_score": 40,
+  "opening_score": 20,
+  "argument_score": 10,
+  "evidence_score": 15,
+  "structure_score": 20,
+  "style_score": 45,
+  "publishability_score": 30,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为“FBK翻书”栏目的每日日签，发布于2023年3月30日。正文仅包含核心口号“危险地生活吧！”，属于典型的社交媒体轻量化运营内容。这种形式旨在通过视觉海报和简洁有力的名言唤起读者的瞬间情感共鸣，强化品牌存在感。但由于缺乏任何实质性的背景介绍、深度论证或实践建议，其作为文章的知识含量极低，不具备逻辑分析和结构化写作的深度研究价值。",
+  "summary_500": "该文本是名为“FBK翻书”的自媒体账号发布的每日日签内容，是典型的碎片化传播案例。其结构高度精简，由一个充满张力的标题和一句源自哲学思考的短句构成。在写作机制上，它完全依赖于名言本身的号召力——“危险地生活吧！”，试图在读者的日常平庸中撕开一个哲思的缺口，鼓励受众拥抱不确定性和风险。从品牌运营角度看，这种每日更新的固定栏目有助于建立用户的行为依赖和品牌IP化识别；但从内容质量和写作参考价值来看，该篇目表现极低。它没有提供任何支撑观点的论据，没有展开具体的论证过程，甚至没有对引言的出处（如尼采等哲学语境）进行标注或解读。对于需要获取高密度信息或学习写作技巧的用户而言，此类内容几乎没有参考意义。其高分项仅体现在风格的统一性和视觉冲击力的预留上，而在证据密度、数据密度和论证逻辑等核心写作指标上几乎为零。这是一种典型的以“低成本、高频次”为策略的品牌维护手段，而非以传递系统性知识为目的的创作。在进行RAG写作或知识提取时，此类文本属于应被过滤或标记为“低信息密度”的范畴。"
+}

@@ -1,0 +1,89 @@
+{
+  "id": "8a2e8a2e428b",
+  "year": "2023",
+  "date": "2023-12-28",
+  "title": "打造第二大脑丨FBK翻书日签 2023年12月28日",
+  "relative_path": "2023/2023-12-28_打造第二大脑丨FBK翻书日签 2023年12月28日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-12-28_打造第二大脑丨FBK翻书日签 2023年12月28日.txt",
+  "char_count": 355,
+  "content_type": "日签",
+  "industry": [
+    "知识管理",
+    "个人成长"
+  ],
+  "topic": [
+    "第二大脑",
+    "学习方法"
+  ],
+  "genre": "碎片化语录",
+  "style": [
+    "极简",
+    "形式化"
+  ],
+  "audience": [
+    "知识工作者",
+    "终身学习者"
+  ],
+  "intent": [
+    "品牌维护",
+    "用户留存"
+  ],
+  "tone": [
+    "克制",
+    "专业"
+  ],
+  "primary_question": "如何通过每日积累来构建个人知识体系？",
+  "thesis_type": "概念驱动型",
+  "thesis_sentence": "通过每日的‘翻书日签’形式，引导用户关注‘打造第二大脑’这一核心知识管理理念。",
+  "structure_pattern": "日历式结构",
+  "section_functions": [
+    "标题界定主题",
+    "日期标注意识形态时间点",
+    "链接导流"
+  ],
+  "argument_moves": [
+    "借用成熟概念（第二大脑）进行心智占位"
+  ],
+  "core_argument": "由于正文主要由图片承载且此处缺失，其逻辑主要依赖于‘打造第二大脑’这一预设的行业共识。",
+  "key_points": [
+    "打造第二大脑"
+  ],
+  "opening_pattern": "固定模板化开头",
+  "ending_pattern": "元数据标注",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "中立",
+  "stance_strength": "中等",
+  "sentence_rhythm": "极短",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "使用系列化标题增加品牌辨识度",
+    "结合日期建立仪式感"
+  ],
+  "anti_patterns": [
+    "纯图片导向导致搜索文本缺失",
+    "内容过度稀疏导致信息增量为零"
+  ],
+  "notable_phrases": [
+    "打造第二大脑",
+    "翻书日签"
+  ],
+  "title_score": 40,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 0,
+  "structure_score": 20,
+  "style_score": 30,
+  "publishability_score": 10,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为FBK出品的每日知识分享卡片，主题聚焦于‘打造第二大脑’。由于原文以图片为主，文本仅保留了标题和基本元数据。此类文章在商业传播中属于‘日签’性质，主要用于品牌在社交环境下的日常露脸，缺乏实质性的文字论证或操作建议。",
+  "summary_500": "这是一篇典型的微信公众号碎片化内容，属于‘FBK翻书日签’系列。其核心意图是通过每日发布一张包含金句或知识点的图片，来强化其在知识管理领域的专业人格。本次主题‘打造第二大脑’是一个广为人知的个人知识管理（PKM）概念，源自Tiago Forte。然而，由于该采集样本仅包含文本框架而缺失核心图片内容，其作为文章的质量极低，信息密度接近于零。在写作机制上，它采用了高度模板化的‘标题+日期+链接’结构。对于RAG系统或写作参考而言，该文本的价值仅在于其‘系列化命名’和‘仪式感建立’的品牌运营套路，而非实际的知识输出。对于追求深度内容的用户，此类信息属于典型的‘低价值噪声’，不建议作为写作素材或逻辑参考。"
+}

@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "project": "Writing Workspace",
+    "version": "2.0",
+    "updated_at": "2026-03-06",
+    "encoding": "UTF-8",
+    "total_steps": 9
+  },
+  "steps": [
+    {
+      "id": "W01",
+      "phase": "输入",
+      "title": "主题与任务配置",
+      "image": "",
+      "see": "主题输入、任务配置、资料上传入口",
+      "do": "输入主题并配置文体、风格、受众、字数与 TN 开关",
+      "value": "定义本次写作任务"
+    },
+    {
+      "id": "W02",
+      "phase": "研究",
+      "title": "搜索研究",
+      "image": "",
+      "see": "研究进度与底稿生成状态",
+      "do": "等待系统整理网页信息与上传资料",
+      "value": "形成研究底稿"
+    },
+    {
+      "id": "W03",
+      "phase": "方向",
+      "title": "讨论方向选择",
+      "image": "",
+      "see": "5 个候选讨论方向",
+      "do": "选择最适合本次文章的切口",
+      "value": "锁定写作方向"
+    },
+    {
+      "id": "W04",
+      "phase": "提纲",
+      "title": "大纲审阅",
+      "image": "",
+      "see": "大纲全文、局部改写入口、全局反馈输入框",
+      "do": "校准结构并批准进入写作",
+      "value": "降低后续返工"
+    },
+    {
+      "id": "W05",
+      "phase": "写作",
+      "title": "分段写作",
+      "image": "",
+      "see": "chunk 写作与进度状态",
+      "do": "等待系统按计划分段成文",
+      "value": "提升长文稳定性"
+    },
+    {
+      "id": "W06",
+      "phase": "审查",
+      "title": "终稿审查",
+      "image": "",
+      "see": "审稿意见与风格检查结果",
+      "do": "查看结构、证据和语言层面的修改建议",
+      "value": "提升终稿质量"
+    },
+    {
+      "id": "W07",
+      "phase": "结果",
+      "title": "结果页",
+      "image": "",
+      "see": "正文、writing_insights、evidence_cards、outline、critique",
+      "do": "检查成文与附加产物",
+      "value": "形成完整写作包"
+    },
+    {
+      "id": "W08",
+      "phase": "精修",
+      "title": "Copilot 与选区改写",
+      "image": "",
+      "see": "局部微调与全局改写入口",
+      "do": "继续收紧语言、补强证据或调整 TN",
+      "value": "完成人工校准"
+    },
+    {
+      "id": "W09",
+      "phase": "导出",
+      "title": "Markdown 与 PDF 导出",
+      "image": "",
+      "see": "正文导出与可选 TN 导出",
+      "do": "输出最终交付文件",
+      "value": "形成可交付成果"
+    }
+  ]
+}

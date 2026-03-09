@@ -1,0 +1,77 @@
+{
+  "id": "fa267e61f399",
+  "year": "2023",
+  "date": "2023-12-26",
+  "title": "时间的悖论丨FBK翻书日签 2023年12月26日",
+  "relative_path": "2023/2023-12-26_时间的悖论丨FBK翻书日签 2023年12月26日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-12-26_时间的悖论丨FBK翻书日签 2023年12月26日.txt",
+  "char_count": 354,
+  "content_type": "日签",
+  "industry": [
+    "文化",
+    "出版"
+  ],
+  "topic": [
+    "时间",
+    "哲学"
+  ],
+  "genre": "碎片信息",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "大众读者"
+  ],
+  "intent": [
+    "品牌曝光",
+    "日常打卡"
+  ],
+  "tone": [
+    "中立"
+  ],
+  "primary_question": "无",
+  "thesis_type": "无",
+  "thesis_sentence": "无",
+  "structure_pattern": "标题占位式",
+  "section_functions": [
+    "日期标记",
+    "主题提示"
+  ],
+  "argument_moves": [],
+  "core_argument": "无",
+  "key_points": [
+    "时间的悖论"
+  ],
+  "opening_pattern": "无",
+  "ending_pattern": "无",
+  "evidence_types": [],
+  "evidence_specificity_score": 0,
+  "data_density_score": 0,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "中立",
+  "stance_strength": "中等",
+  "sentence_rhythm": "无",
+  "abstraction_level": "高",
+  "transferable_moves": [],
+  "anti_patterns": [
+    "内容缺失",
+    "信息密度极低"
+  ],
+  "notable_phrases": [
+    "时间的悖论"
+  ],
+  "title_score": 30,
+  "opening_score": 0,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 10,
+  "style_score": 10,
+  "publishability_score": 5,
+  "quality_score": 5,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为2023年12月26日的“FBK翻书日签”，主题为“时间的悖论”。内容仅包含标题、日期及占位符，无任何实质性正文、论点或逻辑推演。属于极低信息密度的碎片化内容，不具备分析与参考价值。",
+  "summary_500": "本篇内容源自“FBK翻书日签”系列，发布日期为2023年12月26日。全文仅提供了一个主题标题“时间的悖论”，并伴随有链接和图片搜索模式的系统提示。由于文中完全缺失正文论述、名言引用、背景介绍或逻辑分析，该文章无法在写作机制、证据特征或迁移动作上提供任何参考依据。此类内容在商业分析中属于典型的“无效样本”或“极低价值样本”，主要作用仅为品牌在社交媒体上的日常打卡或留存，缺乏作为结构化知识进行检索、推荐或RAG写作的实质性贡献。"
+}

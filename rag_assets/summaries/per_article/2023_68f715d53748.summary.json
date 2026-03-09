@@ -1,0 +1,88 @@
+{
+  "id": "68f715d53748",
+  "year": "2023",
+  "date": "2023-06-21",
+  "title": "蓝领、白领、无领丨FBK翻书日签 2023年6月22日",
+  "relative_path": "2023/2023-06-21_蓝领、白领、无领丨FBK翻书日签 2023年6月22日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-06-21_蓝领、白领、无领丨FBK翻书日签 2023年6月22日.txt",
+  "char_count": 356,
+  "content_type": "日签",
+  "industry": [
+    "文化传播",
+    "职业发展"
+  ],
+  "topic": [
+    "职场阶层",
+    "社会身份"
+  ],
+  "genre": "金句海报",
+  "style": [
+    "极简",
+    "碎片化"
+  ],
+  "audience": [
+    "职场人士",
+    "泛阅读群体"
+  ],
+  "intent": [
+    "品牌维护",
+    "用户粘性维持"
+  ],
+  "tone": [
+    "客观"
+  ],
+  "primary_question": "蓝领、白领、无领的定义及职场身份演变是什么？",
+  "thesis_type": "描述型",
+  "thesis_sentence": "由于原文为日签形式，仅提供概念分类，未形成完整的论点陈述。",
+  "structure_pattern": "标题+日期+图像占位",
+  "section_functions": [
+    "概念引出",
+    "时间标记"
+  ],
+  "argument_moves": [
+    "提出核心词汇组合"
+  ],
+  "core_argument": "无实质性论证内容，仅为碎片化概念展示。",
+  "key_points": [
+    "蓝领",
+    "白领",
+    "无领"
+  ],
+  "opening_pattern": "直述主题",
+  "ending_pattern": "无",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 0,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "中立",
+  "stance_strength": "中立",
+  "sentence_rhythm": "短促",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "采用日签形式进行每日品牌触达",
+    "利用关键词组合引发读者对身份标签的思考"
+  ],
+  "anti_patterns": [
+    "信息承载量过低",
+    "缺乏文字正文导致的阅读价值缺失"
+  ],
+  "notable_phrases": [
+    "蓝领、白领、无领"
+  ],
+  "title_score": 30,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 0,
+  "structure_score": 10,
+  "style_score": 20,
+  "publishability_score": 15,
+  "quality_score": 10,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为FBK发布的‘翻书日签’，主题围绕职业身份标签（蓝领、白领、无领）。正文内容极简，主要以标题、日期及占位符形式存在，缺乏具体的文本展开。这种形式主要用于社交媒体的品牌曝光，信息密度极低，无法提供深度的知识获取或论证逻辑。",
+  "summary_500": "该文档记录了2023年6月22日的‘FBK翻书日签’。其标题包含了‘蓝领、白领、无领’三个核心概念，暗示了对职场身份划分的关注。然而，作为一篇结构化分析对象，其正文缺乏实质性的文字叙述、逻辑推演或背景支撑。在商业内容价值链中，此类内容属于低信息密度的‘品牌接触点’，旨在通过碎片化的金句或视觉符号引起受众瞬间共鸣。由于缺乏具体论点和证据支撑，其在知识检索和RAG写作中的参考价值较低，仅能作为自媒体每日运营策略的参考样本。"
+}

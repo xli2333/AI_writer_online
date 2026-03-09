@@ -1,0 +1,78 @@
+{
+  "id": "a32ec1051297",
+  "year": "2020",
+  "date": "2020-09-11",
+  "title": "分享图片",
+  "relative_path": "2020/2020-09-11_分享图片.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2020\\2020-09-11_分享图片.txt",
+  "char_count": 333,
+  "content_type": "系统通知",
+  "industry": [
+    "互联网"
+  ],
+  "topic": [
+    "系统日志"
+  ],
+  "genre": "自动生成的占位符",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "系统管理员"
+  ],
+  "intent": [
+    "记录"
+  ],
+  "tone": [
+    "中立"
+  ],
+  "primary_question": "系统在特定时刻的操作状态是什么？",
+  "thesis_type": "描述性",
+  "thesis_sentence": "该页面记录了系统触发全局图片搜索模式并找到一张图片的操作结果。",
+  "structure_pattern": "固定模板",
+  "section_functions": [
+    "元数据展示",
+    "系统状态陈述"
+  ],
+  "argument_moves": [
+    "陈述客观事实"
+  ],
+  "core_argument": "这是一条自动生成的系统操作记录，无实际文字论述内容。",
+  "key_points": [
+    "触发全局图片搜索模式",
+    "共找到1张图片"
+  ],
+  "opening_pattern": "直接标题",
+  "ending_pattern": "数据总结",
+  "evidence_types": [
+    "系统日志"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "远程",
+  "stance_strength": "极弱",
+  "sentence_rhythm": "平板",
+  "abstraction_level": "低",
+  "transferable_moves": [],
+  "anti_patterns": [
+    "内容缺失",
+    "无意义标题",
+    "非人工创作"
+  ],
+  "notable_phrases": [],
+  "title_score": 5,
+  "opening_score": 5,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 5,
+  "style_score": 5,
+  "publishability_score": 0,
+  "quality_score": 5,
+  "reference_value_score": 0,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "本文仅为一条微信公众号后台自动生成的系统记录，显示在2020年9月11日触发了全局图片搜索模式并找到1张图片。不具备商业分析或阅读价值。",
+  "summary_500": "此内容并非正式文章，而是微信平台在特定条件下生成的系统日志或占位符。页面标题为“分享图片”，正文仅包含一条关于“全局图片搜索模式”被触发并找到一张图片的机器生成信息。由于缺乏正文、观点、论据及任何人工创作的痕迹，该内容属于极低价值的自动生成数据，不具备可读性、可检索性、分析价值或任何可供学习的写作机制。"
+}

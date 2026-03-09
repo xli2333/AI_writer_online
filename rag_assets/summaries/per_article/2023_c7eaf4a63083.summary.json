@@ -1,0 +1,79 @@
+{
+  "id": "c7eaf4a63083",
+  "year": "2023",
+  "date": "2023-10-26",
+  "title": "拐点丨FBK翻书日签 2023年10月26日",
+  "relative_path": "2023/2023-10-26_拐点丨FBK翻书日签 2023年10月26日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-10-26_拐点丨FBK翻书日签 2023年10月26日.txt",
+  "char_count": 351,
+  "content_type": "日签",
+  "industry": [
+    "文化",
+    "传媒"
+  ],
+  "topic": [
+    "每日金句",
+    "品牌日常"
+  ],
+  "genre": "视觉笔记",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "一般读者"
+  ],
+  "intent": [
+    "品牌心智建设"
+  ],
+  "tone": [
+    "客观"
+  ],
+  "primary_question": "暂无（仅为日期与图片载体）",
+  "thesis_type": "无观点",
+  "thesis_sentence": "该内容为FBK品牌每日发布的日签卡片，缺乏具体的文字论证。",
+  "structure_pattern": "固定模板结构",
+  "section_functions": [
+    "提供日期信息",
+    "展示品牌标识",
+    "引导点击图片"
+  ],
+  "argument_moves": [],
+  "core_argument": "该内容无核心论点，仅作为品牌日常更新的占位。",
+  "key_points": [
+    "2023年10月26日发布",
+    "品牌名为FBK翻书"
+  ],
+  "opening_pattern": "标准化标题开场",
+  "ending_pattern": "链接占位",
+  "evidence_types": [],
+  "evidence_specificity_score": 0,
+  "data_density_score": 0,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "零距离",
+  "stance_strength": "中性",
+  "sentence_rhythm": "无",
+  "abstraction_level": "低",
+  "transferable_moves": [
+    "日签类内容的标准化命名方式"
+  ],
+  "anti_patterns": [
+    "内容缺失",
+    "信息密度极低",
+    "过度依赖外部链接"
+  ],
+  "notable_phrases": [],
+  "title_score": 20,
+  "opening_score": 10,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 10,
+  "style_score": 10,
+  "publishability_score": 10,
+  "quality_score": 5,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为FBK（翻书）品牌于2023年10月26日发布的每日日签。由于正文仅包含图片索引信息，缺乏具体的文字论述或商业深度。此类内容主要用于社群日常活跃和品牌心智占位，不具备深度阅读或写作参考价值。",
+  "summary_500": "本篇内容标题为《拐点丨FBK翻书日签 2023年10月26日》，属于典型的品牌每日打卡式内容。文章主体仅包含一张图片（未显示具体文字内容），无具体的行业分析、商业逻辑或叙事结构。其核心功能在于通过规律性的发布，维持品牌在订阅用户面前的出现频率。从写作机制分析，该篇章缺乏核心议题、论证逻辑及证据支持，属于信息密度极低的内容，不建议作为写作素材或RAG语料库的优质来源。在结构上呈现为极简的单图模式，无法提炼出有效的可迁移动作或论证路径。"
+}

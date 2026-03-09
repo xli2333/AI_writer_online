@@ -1,0 +1,92 @@
+{
+  "id": "a497d1936eb6",
+  "year": "2023",
+  "date": "2023-04-24",
+  "title": "蜂巢思维 群体情绪如何影响我们丨FBK翻书日签 2023年4月24日",
+  "relative_path": "2023/2023-04-24_蜂巢思维 群体情绪如何影响我们丨FBK翻书日签 2023年4月24日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-04-24_蜂巢思维 群体情绪如何影响我们丨FBK翻书日签 2023年4月24日.txt",
+  "char_count": 363,
+  "content_type": "社交媒体日签",
+  "industry": [
+    "心理学",
+    "图书出版"
+  ],
+  "topic": [
+    "群体心理",
+    "社会情绪",
+    "行为科学"
+  ],
+  "genre": "日签",
+  "style": [
+    "极简",
+    "碎片化"
+  ],
+  "audience": [
+    "书籍爱好者",
+    "泛知识受众"
+  ],
+  "intent": [
+    "品牌触达",
+    "外部引流"
+  ],
+  "tone": [
+    "中性"
+  ],
+  "primary_question": "群体情绪如何通过蜂巢思维影响个体？",
+  "thesis_type": "概念展示型",
+  "thesis_sentence": "蜂巢思维探讨了群体情绪对个人行为和心理的塑造作用。",
+  "structure_pattern": "标题+元数据+外链",
+  "section_functions": [
+    "主题呈现：提出‘蜂巢思维’核心概念",
+    "来源标注：记录发布日期与品牌出处",
+    "动作导流：提供跳转链接供深度阅读"
+  ],
+  "argument_moves": [
+    "提出关键词吸引注意力",
+    "关联日期建立仪式感"
+  ],
+  "core_argument": "由于正文内容缺失，仅能推测其核心论点在于探讨群体行为与情绪的同步性。",
+  "key_points": [
+    "蜂巢思维定义",
+    "群体情绪的传播机制"
+  ],
+  "opening_pattern": "标题直叙式",
+  "ending_pattern": "外部链接式",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "远观",
+  "stance_strength": "中立",
+  "sentence_rhythm": "无明显节奏",
+  "abstraction_level": "中等",
+  "transferable_moves": [
+    "利用‘日签’形式进行每日用户触达",
+    "使用‘概念+疑问’的结构化标题吸引点击"
+  ],
+  "anti_patterns": [
+    "信息密度极低",
+    "内容过度依赖外部链接",
+    "缺乏实质性论证过程"
+  ],
+  "notable_phrases": [
+    "蜂巢思维",
+    "群体情绪"
+  ],
+  "title_score": 45,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 0,
+  "structure_score": 20,
+  "style_score": 20,
+  "publishability_score": 10,
+  "quality_score": 15,
+  "reference_value_score": 5,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该内容为2023年4月24日的FBK翻书日签，主题聚焦‘蜂巢思维’与群体情绪。文章除标题、日期及一个无法直接读取的微信公众号链接外，无任何正文论述、案例或数据支撑。这种形式属于极简的社交媒体引流工具，旨在通过每日关键词触达用户，促使其点击链接查看完整书籍推荐，其本身的文本价值和信息密度极低。",
+  "summary_500": "本篇名为《蜂巢思维 群体情绪如何影响我们》的文章实为一份极简的社交媒体‘日签’记录。在给定的文本范围内，除了提供核心主题词‘蜂巢思维’和‘群体情绪’，以及品牌出处（FBK翻书日签）和发布日期（2023-04-24）之外，不包含任何实质性的逻辑推导、案例分析或结论。其写作机制表现为典型的品牌日常触达策略：通过一个具有吸引力的心理学概念作为诱饵，辅以时间戳建立连续性，核心内容被封装在外部链接中。从内容质量评估来看，该文本缺乏独立的阅读价值，无法提供结构化的知识输出。在RAG（检索增强生成）场景中，此类内容仅能作为‘某品牌在某日推荐过相关主题’的元数据记录，不具备作为知识源的论证强度。其显著特征是高抽象层次的主题词与零信息的正文构成极端反差，属于典型的信息密度过低的活动通知类文本。"
+}

@@ -1,0 +1,85 @@
+{
+  "id": "24956e608496",
+  "year": "2023",
+  "date": "2023-12-13",
+  "title": "FBK翻书日签 2023年12月13日",
+  "relative_path": "2023/2023-12-13_FBK翻书日签 2023年12月13日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-12-13_FBK翻书日签 2023年12月13日.txt",
+  "char_count": 348,
+  "content_type": "日签/海报",
+  "industry": [
+    "通用"
+  ],
+  "topic": [
+    "每日阅读",
+    "日签"
+  ],
+  "genre": "通知公告",
+  "style": [
+    "碎片化"
+  ],
+  "audience": [
+    "公众号关注者"
+  ],
+  "intent": [
+    "品牌留存",
+    "习惯养成"
+  ],
+  "tone": [
+    "中性"
+  ],
+  "primary_question": "2023年12月13日的日签内容是什么？",
+  "thesis_type": "信息展示",
+  "thesis_sentence": "本页面为2023年12月13日的FBK翻书日签记录。",
+  "structure_pattern": "元数据罗列",
+  "section_functions": [
+    "基本信息标注",
+    "链接索引",
+    "系统状态提示"
+  ],
+  "argument_moves": [
+    "直接展示日期",
+    "提供原始来源链接"
+  ],
+  "core_argument": "无实质性论证，仅为每日更新的系统记录。",
+  "key_points": [
+    "日期为2023年12月13日",
+    "包含一个外部跳转链接",
+    "内容以图片为核心，文本仅为占位或提示"
+  ],
+  "opening_pattern": "标准化标题起手",
+  "ending_pattern": "系统技术提示",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "非叙事",
+  "stance_strength": "中立",
+  "sentence_rhythm": "极短促",
+  "abstraction_level": "具体",
+  "transferable_moves": [],
+  "anti_patterns": [
+    "缺乏文字实质内容",
+    "信息密度极低",
+    "过度依赖外部链接/图片"
+  ],
+  "notable_phrases": [
+    "FBK翻书日签"
+  ],
+  "title_score": 40,
+  "opening_score": 10,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 20,
+  "style_score": 10,
+  "publishability_score": 5,
+  "quality_score": 5,
+  "reference_value_score": 2,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该内容为2023年12月13日的‘FBK翻书日签’。文本仅包含标题、日期、公众号文章链接以及一条关于‘触发全局图片搜索模式’的系统提示，未包含任何实质性的文字讨论、知识点或商业洞察。属于低信息价值的日常自动化更新记录。",
+  "summary_500": "本篇内容是‘FBK翻书’公众号发布的每日日签元数据记录。其核心组成部分仅为标题（FBK翻书日签 2023年12月13日）、日期（2023-12-13）以及一个指向微信公众平台的原始链接。正文部分完全缺失文字内容，仅有一行关于触发全局图片搜索模式的技术性提示，显示找到了1张图片。从商业内容分析的角度看，该文本缺乏论点、论据及论证逻辑，不具备可参考的写作机制，属于典型的信息密度极低的自动化或半自动化社交媒体占位符内容。对于AI训练或知识提取而言，该样本仅能用于分析发布频率或品牌日常运营痕迹，无其他可供检索或写作参考的深度价值。"
+}

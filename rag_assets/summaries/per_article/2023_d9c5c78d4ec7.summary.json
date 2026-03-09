@@ -1,0 +1,81 @@
+{
+  "id": "d9c5c78d4ec7",
+  "year": "2023",
+  "date": "2023-12-21",
+  "title": "知识机器丨FBK翻书日签 2023年12月21日",
+  "relative_path": "2023/2023-12-21_知识机器丨FBK翻书日签 2023年12月21日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-12-21_知识机器丨FBK翻书日签 2023年12月21日.txt",
+  "char_count": 353,
+  "content_type": "日签",
+  "industry": [
+    "媒体",
+    "知识服务"
+  ],
+  "topic": [
+    "每日灵感"
+  ],
+  "genre": "微内容",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "知识服务订阅者"
+  ],
+  "intent": [
+    "品牌心智",
+    "日常留存"
+  ],
+  "tone": [
+    "中性"
+  ],
+  "primary_question": "2023年12月21日的日签内容是什么？",
+  "thesis_type": "信息告知",
+  "thesis_sentence": "这是2023年12月21日的FBK翻书日签。",
+  "structure_pattern": "单点式",
+  "section_functions": [
+    "标识来源及日期"
+  ],
+  "argument_moves": [
+    "直接展示"
+  ],
+  "core_argument": "无",
+  "key_points": [
+    "发布日期为2023年12月21日",
+    "内容来源为知识机器FBK翻书日签"
+  ],
+  "opening_pattern": "标题直入",
+  "ending_pattern": "无",
+  "evidence_types": [
+    "图像"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 0,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "中远距离",
+  "stance_strength": "中立",
+  "sentence_rhythm": "无",
+  "abstraction_level": "极低",
+  "transferable_moves": [],
+  "anti_patterns": [
+    "内容极度空洞",
+    "仅有标题无实质正文"
+  ],
+  "notable_phrases": [
+    "知识机器",
+    "FBK翻书日签"
+  ],
+  "title_score": 40,
+  "opening_score": 5,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 10,
+  "style_score": 10,
+  "publishability_score": 10,
+  "quality_score": 5,
+  "reference_value_score": 2,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该内容为“知识机器”公众号于2023年12月21日发布的“FBK翻书日签”。正文部分缺乏有效的文字叙述，仅显示触发了图片搜索模式，实际上并无实质性的商业分析、观点陈述或深度信息。此类内容多用于公众号日常运营中的用户留存，但在文本分析和知识检索方面属于极低价值的占位符。",
+  "summary_500": "本条目记录了2023年12月21日由“知识机器”发布的“FBK翻书日签”。全文除标题外，未包含任何实质性的正文内容、逻辑推导、案例支撑或数据分析。通过对文本的扫描，仅能识别出其作为日常品牌互动的一种形式存在。由于正文缺失，该文档无法提供任何可供分析的写作机制、证据特征或行业洞察。在内容质量评估中，该文章因信息密度极低且仅具通知/打卡性质，被标记为低价值内容，不建议作为写作参考或逻辑建模的样本。"
+}

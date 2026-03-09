@@ -1,0 +1,89 @@
+{
+  "id": "057d1a6c8127",
+  "year": "2024",
+  "date": "2024-02-22",
+  "title": "发现社会丨FBK翻书日签 2024年2月22日",
+  "relative_path": "2024/2024-02-22_发现社会丨FBK翻书日签 2024年2月22日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2024\\2024-02-22_发现社会丨FBK翻书日签 2024年2月22日.txt",
+  "char_count": 352,
+  "content_type": "每日金句",
+  "industry": [
+    "文化",
+    "传媒"
+  ],
+  "topic": [
+    "每日日签",
+    "社会观察"
+  ],
+  "genre": "碎片化内容",
+  "style": [
+    "极简主义"
+  ],
+  "audience": [
+    "一般大众",
+    "社会学爱好者"
+  ],
+  "intent": [
+    "品牌活跃",
+    "日常分享"
+  ],
+  "tone": [
+    "庄重"
+  ],
+  "primary_question": "今日份的社会观察日签是什么内容？",
+  "thesis_type": "事实呈现型",
+  "thesis_sentence": "该文章作为每日更新的品牌日签，旨在通过图片和简短信息进行社交媒体占位。",
+  "structure_pattern": "极简模块化",
+  "section_functions": [
+    "标题与品牌识别",
+    "日期标注",
+    "视觉信息载体（图片）"
+  ],
+  "argument_moves": [
+    "直接展示",
+    "日期锚定"
+  ],
+  "core_argument": "无实质文本论点，仅作为品牌日常更新的视觉占位。",
+  "key_points": [
+    "FBK翻书日签系列",
+    "2024年2月22日更新"
+  ],
+  "opening_pattern": "直陈式标题",
+  "ending_pattern": "无特定结尾",
+  "evidence_types": [
+    "视觉影像"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "中性观察者",
+  "stance_strength": "中立",
+  "sentence_rhythm": "无连贯文本段落",
+  "abstraction_level": "具象现状",
+  "transferable_moves": [
+    "采用固定频率的日签形式增强品牌记忆",
+    "标准化的标题命名规范便于存档"
+  ],
+  "anti_patterns": [
+    "内容过度稀疏，缺乏可检索的文本价值",
+    "过度依赖外部图片，导致文字版面信息量极低"
+  ],
+  "notable_phrases": [
+    "发现社会",
+    "翻书日签"
+  ],
+  "title_score": 40,
+  "opening_score": 20,
+  "argument_score": 5,
+  "evidence_score": 10,
+  "structure_score": 30,
+  "style_score": 40,
+  "publishability_score": 30,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为‘发现社会’公众号的每日日签，日期为2024年2月22日。文章除标题、日期及一张搜索到的图片外，无实质性文字内容。这种形式通常用于维持社交媒体的日更频率和品牌曝光，对RAG（检索增强生成）系统或深度写作分析而言，其文本信息价值极低，仅能作为‘每日日签’类栏目的排版样式参考。",
+  "summary_500": "本篇内容属于‘发现社会’账号旗下的固定栏目‘FBK翻书日签’。发布于2024年2月22日。从文本结构分析，该文章属于典型的碎片化视觉内容，不具备传统意义上的引言、论证或结论。其核心功能是作为一种仪式感的内容占位。文章仅包含基本元数据：栏目名称、日期以及一张待加载的图片。这种内容机制的优势在于降低了生产成本和读者的阅读门槛，能够通过稳定的频率出现在订阅列表中。然而，从商业分析和写作学习的角度来看，该内容属于‘低信息密度’范畴，缺乏可供提取的知识点、逻辑框架或修辞技巧。由于缺乏正文，其论证强度和证据链条均为缺失状态。此类内容主要用于品牌维系而非知识传递。在RAG系统中，此类数据通常应被过滤或标记为低优先级。唯一可借鉴的‘动作’是其标准化的标题管理方式，这有利于在大规模内容库中进行基于日期的快速索引和归档。"
+}

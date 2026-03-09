@@ -1,0 +1,90 @@
+{
+  "id": "0f2d90e6c41b",
+  "year": "2025",
+  "date": "2025-03-06",
+  "title": "共智：人机协同的新边界丨第39期《管理视野》封面专题",
+  "relative_path": "2025/2025-03-06_共智：人机协同的新边界丨第39期《管理视野》封面专题.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2025\\2025-03-06_共智：人机协同的新边界丨第39期《管理视野》封面专题.txt",
+  "char_count": 355,
+  "content_type": "刊物导读",
+  "industry": [
+    "管理咨询",
+    "人工智能"
+  ],
+  "topic": [
+    "人机协同",
+    "组织管理",
+    "数字化转型"
+  ],
+  "genre": "新书/期刊导读",
+  "style": [
+    "商业",
+    "摘要"
+  ],
+  "audience": [
+    "企业管理者",
+    "商业研究者"
+  ],
+  "intent": [
+    "品牌宣传",
+    "订阅引导"
+  ],
+  "tone": [
+    "专业",
+    "前瞻"
+  ],
+  "primary_question": "第39期《管理视野》杂志封面专题聚焦于人机协同的哪些核心议题？",
+  "thesis_type": "陈述式",
+  "thesis_sentence": "本期杂志以“共智”为主题，探讨人机协同背景下管理的新边界与组织变革。",
+  "structure_pattern": "通知型结构",
+  "section_functions": [
+    "标题展示：明确本期封面专题核心概念",
+    "来源标注：标明期刊期数及来源机构"
+  ],
+  "argument_moves": [
+    "由于文本仅包含标题及元数据，暂无具体论证动作"
+  ],
+  "core_argument": "通过“共智”这一概念，重新定义人工智能与人类在组织管理中的协作边界。",
+  "key_points": [
+    "提出“共智”作为人机协同的新范式",
+    "《管理视野》第39期正式发布"
+  ],
+  "opening_pattern": "直接宣称式",
+  "ending_pattern": "缺失",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "中立观察",
+  "stance_strength": "稳健",
+  "sentence_rhythm": "简洁对仗",
+  "abstraction_level": "高概括",
+  "transferable_moves": [
+    "利用“新边界”等词汇构建封面专题的仪式感",
+    "使用“丨”符号进行多级标题排版"
+  ],
+  "anti_patterns": [
+    "信息缺失：仅有标题而无正文，无法形成有效深度阅读",
+    "过度包装：仅通过标题无法获取实质性的“共智”定义"
+  ],
+  "notable_phrases": [
+    "共智",
+    "人机协同的新边界"
+  ],
+  "title_score": 85,
+  "opening_score": 20,
+  "argument_score": 10,
+  "evidence_score": 0,
+  "structure_score": 15,
+  "style_score": 40,
+  "publishability_score": 20,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "本文为《管理视野》第39期封面专题的发布预告，核心主题定名为“共智：人机协同的新边界”。由于原文仅包含标题与元数据，缺乏具体论述、案例或理论框架。该内容主要起到目录索引和品牌曝光作用，对于寻求深度商业逻辑或可落地行动建议的读者参考价值有限。",
+  "summary_500": "该文本是针对商业期刊《管理视野》第39期封面文章的极简引流信息。其标题“共智：人机协同的新边界”预示了本期杂志将重点讨论AI在组织管理中的角色演变及人机互动的新模式。然而，由于所提供的正文内容严重缺失（仅显示标题与技术来源信息），无法提炼出核心观点支撑。在商业写作层面，该内容呈现典型的“导读缺失”状态。评价为低价值信息，主要原因在于信息密度极低，缺乏实质性的论据、案例和管理洞察。仅可作为期刊出版的时间线记录或检索关键词使用，无法用于深度分析、RAG写作增强或人格特炼。"
+}

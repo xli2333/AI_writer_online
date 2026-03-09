@@ -1,0 +1,93 @@
+{
+  "id": "321d02a98327",
+  "year": "2023",
+  "date": "2023-10-18",
+  "title": "新刊速递丨ESG在中国 虚与实",
+  "relative_path": "2023/2023-10-18_新刊速递丨ESG在中国 虚与实.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-10-18_新刊速递丨ESG在中国 虚与实.txt",
+  "char_count": 344,
+  "content_type": "出版通知",
+  "industry": [
+    "传媒",
+    "金融",
+    "商业"
+  ],
+  "topic": [
+    "ESG",
+    "可持续发展",
+    "中国经济"
+  ],
+  "genre": "宣传文案",
+  "style": [
+    "简洁",
+    "导向性"
+  ],
+  "audience": [
+    "商业分析师",
+    "投资者",
+    "企业管理者"
+  ],
+  "intent": [
+    "告知",
+    "品牌推广"
+  ],
+  "tone": [
+    "正式",
+    "专业"
+  ],
+  "primary_question": "新一期杂志的主题是什么？",
+  "thesis_type": "陈述型",
+  "thesis_sentence": "本期新刊聚焦于中国ESG（环境、社会和治理）发展的现状，探讨其“虚”与“实”的博弈。",
+  "structure_pattern": "标题+元数据型",
+  "section_functions": [
+    "标题导向",
+    "发布日期说明",
+    "溯源链接提供"
+  ],
+  "argument_moves": [
+    "宣告新内容发布",
+    "界定核心议题（虚与实）"
+  ],
+  "core_argument": "新刊已推出，其核心关注点在于客观评估中国ESG的发展成效与潜在水分。",
+  "key_points": [
+    "发布日期：2023-10-18",
+    "核心主题：ESG在中国 虚与实"
+  ],
+  "opening_pattern": "直接陈述式",
+  "ending_pattern": "自然结束式",
+  "evidence_types": [
+    "出版物标题"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "中立观察",
+  "stance_strength": "中立",
+  "sentence_rhythm": "极短促",
+  "abstraction_level": "中等",
+  "transferable_moves": [
+    "使用“虚与实”这类辩证对仗的副标题来增加议题的深度感",
+    "利用“新刊速递”标签建立品牌更新频率预期"
+  ],
+  "anti_patterns": [
+    "内容严重缺失（仅包含标题和链接，不构成完整文章）",
+    "缺乏引言或内容摘要（无法让读者在点击前了解核心观点）"
+  ],
+  "notable_phrases": [
+    "虚与实"
+  ],
+  "title_score": 60,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 5,
+  "structure_score": 20,
+  "style_score": 30,
+  "publishability_score": 15,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "本文是一则典型的出版物发布通知，预告了2023年10月18日推出的新刊主题为“ESG在中国 虚与实”。该文本仅包含基本元数据（标题、日期、来源链接），没有任何实质性的正文论述、数据支持或深度观点提取。其功能仅限于告知订阅者新刊动态，在内容写作和深度分析方面不具备参考价值。",
+  "summary_500": "这是一篇信息密度极低的新刊预告，属于功能性的出版通知。文章标题为《新刊速递丨ESG在中国 虚与实》，旨在通过简洁的修辞（虚与实）吸引关注ESG领域的专业读者。全文除标题、发布日期及原始链接外，无任何具体的文章摘要、核心观点拆解或案例分析。由于正文内容的缺失，该文本无法支撑起一个完整的论证结构。在写作机制上，它仅展示了如何利用固定的栏目名（新刊速递）和辩证式的议题命名法来发布动态。从商业分析和RAG写作的角度看，该条目仅能作为特定时间节点中国ESG舆论动态的索引，而不具备内容生产或人格提炼的实质性价值。评价为低价值内容，主要原因在于其仅具通知属性，缺乏成文的文章结构和信息载荷。"
+}

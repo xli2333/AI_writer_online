@@ -1,0 +1,90 @@
+{
+  "id": "5ea38a3ca36b",
+  "year": "2023",
+  "date": "2023-03-24",
+  "title": "数字时代经济学的新议程丨FBK翻书日签 2023年3月24日",
+  "relative_path": "2023/2023-03-24_数字时代经济学的新议程丨FBK翻书日签 2023年3月24日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-03-24_数字时代经济学的新议程丨FBK翻书日签 2023年3月24日.txt",
+  "char_count": 359,
+  "content_type": "日签摘要",
+  "industry": [
+    "数字经济",
+    "经济研究"
+  ],
+  "topic": [
+    "数字时代经济学",
+    "学术动态"
+  ],
+  "genre": "碎片化快讯",
+  "style": [
+    "极简",
+    "导向型"
+  ],
+  "audience": [
+    "经济学研究者",
+    "商业决策者"
+  ],
+  "intent": [
+    "内容引流",
+    "每日更新"
+  ],
+  "tone": [
+    "专业",
+    "客观"
+  ],
+  "primary_question": "数字时代的经济学研究应该关注哪些新方向？",
+  "thesis_type": "议题陈述",
+  "thesis_sentence": "本文系对‘数字时代经济学新议程’的导向性记录，旨在通过日签形式引导读者关注相关领域的学术变化。",
+  "structure_pattern": "固定模板式",
+  "section_functions": [
+    "标题界定议题",
+    "时间标注定位",
+    "来源及链接提供阅读入口"
+  ],
+  "argument_moves": [
+    "通过标题先行界定讨论边界",
+    "利用品牌日签建立持续关注价值"
+  ],
+  "core_argument": "数字时代的到来使得经济学需要建立新的研究议程，但具体议程内容在本文片段中缺失。",
+  "key_points": [
+    "数字时代背景",
+    "经济学新议程"
+  ],
+  "opening_pattern": "直陈标题",
+  "ending_pattern": "外部链接导流",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 10,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "极远",
+  "stance_strength": "中立",
+  "sentence_rhythm": "碎片化",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "使用‘日签’形式作为长文的日常宣发窗口",
+    "通过统一的格式化前缀建立内容品牌识别"
+  ],
+  "anti_patterns": [
+    "正文内容严重缺失",
+    "信息量不足以支撑独立阅读"
+  ],
+  "notable_phrases": [
+    "数字时代经济学的新议程"
+  ],
+  "title_score": 65,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 0,
+  "structure_score": 20,
+  "style_score": 30,
+  "publishability_score": 10,
+  "quality_score": 10,
+  "reference_value_score": 5,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该内容为‘FBK翻书日签’的标准化模板输出。除标题明确了‘数字时代经济学的新议程’这一议题外，正文部分仅包含了日期、原始链接及系统抓取说明。作为独立文章，其信息量极低，仅能作为阅读指引或历史发布记录。对于寻找实质性观点、论据或深度分析的读者及RAG系统而言，该片段不具备核心参考价值。",
+  "summary_500": "本篇文本属于典型的碎片化社交媒体引流内容，属于‘FBK翻书日签’系列。其结构高度固定，由标题、发布日期、跳转链接以及来源标识构成。标题‘数字时代经济学的新议程’揭示了其潜在讨论的主题，指向了在数字化转型大背景下，传统经济学理论框架可能面临的重构与调整。然而，由于提供的内容仅为日签的前台展示部分，缺乏实际的正文论述、专家观点或案例支撑，因此其在知识传播链条中仅处于‘目录索引’层面。从写作角度看，这种形式利用了‘日签’这一轻量化媒介，试图通过高频次的更新来维持品牌存在感，但作为文本分析的对象，由于其论证、证据及风格维度的全面缺失，属于信息密度极低的低价值片段。在RAG（检索增强生成）场景中，该条目仅能作为‘主题存在’的证明，而无法提供任何实质性的知识补给。"
+}

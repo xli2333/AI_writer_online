@@ -1,0 +1,88 @@
+{
+  "id": "2f552d6b40ff",
+  "year": "2023",
+  "date": "2023-10-11",
+  "title": "换轨策略丨FBK翻书日签 2023年10月11日",
+  "relative_path": "2023/2023-10-11_换轨策略丨FBK翻书日签 2023年10月11日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-10-11_换轨策略丨FBK翻书日签 2023年10月11日.txt",
+  "char_count": 353,
+  "content_type": "日签",
+  "industry": [
+    "通用商业",
+    "个人成长"
+  ],
+  "topic": [
+    "职业转型",
+    "战略思维"
+  ],
+  "genre": "碎片文案",
+  "style": [
+    "极简",
+    "断片"
+  ],
+  "audience": [
+    "职场人士",
+    "战略思考者"
+  ],
+  "intent": [
+    "品牌维护",
+    "概念提示"
+  ],
+  "tone": [
+    "简约",
+    "中立"
+  ],
+  "primary_question": "什么是换轨策略？",
+  "thesis_type": "概念抛出型",
+  "thesis_sentence": "本文仅作为‘换轨策略’这一概念的每日提醒占位，未展开具体论述。",
+  "structure_pattern": "固定模板式",
+  "section_functions": [
+    "提供日期与主题标签",
+    "记录外部来源索引"
+  ],
+  "argument_moves": [
+    "通过标题限定讨论范畴"
+  ],
+  "core_argument": "信息缺失，无法推导核心观点。",
+  "key_points": [
+    "换轨策略",
+    "2023年10月11日"
+  ],
+  "opening_pattern": "直奔主题",
+  "ending_pattern": "缺失",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 0,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "旁观",
+  "stance_strength": "中立",
+  "sentence_rhythm": "停顿",
+  "abstraction_level": "极高",
+  "transferable_moves": [
+    "采用日签形式进行高频次、低门槛的品牌心智触达"
+  ],
+  "anti_patterns": [
+    "内容极度空洞",
+    "缺乏正文支撑",
+    "仅有标题而无实质知识传递"
+  ],
+  "notable_phrases": [
+    "换轨策略"
+  ],
+  "title_score": 40,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 0,
+  "structure_score": 10,
+  "style_score": 20,
+  "publishability_score": 10,
+  "quality_score": 8,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为2023年10月11日的FBK翻书日签，主题为“换轨策略”。文本本身并无正文内容，仅保留了标题、日期及一个微信公众号的来源链接。由于信息密度极低且缺乏具体的论点和论据，该文本不具备实质性的知识阅读价值，属于典型的碎片化品牌占位信息。",
+  "summary_500": "该文本被标记为“换轨策略丨FBK翻书日签 2023年10月11日”，是针对特定订阅群体的每日仪式化推送。从结构化分析角度看，该内容仅提供了主题关键词“换轨策略”和时间戳，正文部分因抓取限制或原文属性而缺失，仅存留一张图片的系统搜索说明。由于其信息量近乎为零，无法分析其论证逻辑、证据类型或写作风格。此类内容在商业分析中通常被定义为低价值占位符，其主要功能是维持品牌在受众面前的每日出现频率，而非传递深度的商业见解。对于RAG系统或写作模型而言，该文本仅能提供“日签”这一体裁的格式参考，无法提供实质性的语料支持。"
+}

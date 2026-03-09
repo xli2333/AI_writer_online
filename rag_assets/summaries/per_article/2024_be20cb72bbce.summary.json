@@ -1,0 +1,89 @@
+{
+  "id": "be20cb72bbce",
+  "year": "2024",
+  "date": "2024-01-19",
+  "title": "狩猎式创新丨FBK翻书日签 2024年1月19日",
+  "relative_path": "2024/2024-01-19_狩猎式创新丨FBK翻书日签 2024年1月19日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2024\\2024-01-19_狩猎式创新丨FBK翻书日签 2024年1月19日.txt",
+  "char_count": 353,
+  "content_type": "日签",
+  "industry": [
+    "通用商务",
+    "创新管理"
+  ],
+  "topic": [
+    "狩猎式创新",
+    "知识碎片"
+  ],
+  "genre": "微型格言",
+  "style": [
+    "极简主义",
+    "碎片化"
+  ],
+  "audience": [
+    "职场人士",
+    "终身学习者"
+  ],
+  "intent": [
+    "品牌维护",
+    "知识分享"
+  ],
+  "tone": [
+    "客观",
+    "中性"
+  ],
+  "primary_question": "什么是狩猎式创新？",
+  "thesis_type": "概念定义型",
+  "thesis_sentence": "狩猎式创新（核心内容缺失，仅有标题）。",
+  "structure_pattern": "单点式结构",
+  "section_functions": [
+    "标题提示",
+    "日期记录",
+    "系统元数据"
+  ],
+  "argument_moves": [
+    "提出主题词"
+  ],
+  "core_argument": "本文仅提供了一个名为“狩猎式创新”的主题词，缺乏具体的论证内容。",
+  "key_points": [
+    "狩猎式创新"
+  ],
+  "opening_pattern": "直陈式标题",
+  "ending_pattern": "元数据信息",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "中远视角",
+  "stance_strength": "中性",
+  "sentence_rhythm": "无节奏感",
+  "abstraction_level": "高抽象",
+  "transferable_moves": [
+    "使用“日签”形式进行每日品牌触达",
+    "结合主题词与日期的命名方式"
+  ],
+  "anti_patterns": [
+    "纯图片内容导致文本信息缺失",
+    "缺乏对核心概念的文字解释",
+    "元数据混入正文影响阅读"
+  ],
+  "notable_phrases": [
+    "狩猎式创新"
+  ],
+  "title_score": 40,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 0,
+  "structure_score": 20,
+  "style_score": 20,
+  "publishability_score": 10,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为2024年1月19日FBK翻书日签的元数据记录。文章标题提及“狩猎式创新”，但正文部分缺乏具体论述，仅包含日期、链接及系统触发图片搜索的提示。由于实际文本内容极度匮乏，该条目仅能作为存档记录，不具备深度阅读或写作参考价值。",
+  "summary_500": "本条目是对“FBK翻书日签 2024年1月19日”的内容抓取记录。文章的核心标题为“狩猎式创新”，反映了其尝试传递某种创新方法论的意图。然而，由于该推文本质上是一个以图片为主的日签（Poster），抓取到的正文内容仅包含标题、日期、原始链接以及一条关于触发全局图片搜索模式的系统提示。文中没有关于“狩猎式创新”的定义、案例或逻辑推演。从写作分析角度看，此类内容属于典型的碎片化品牌物料，其价值主要在于每日的视觉触达而非文字深度。对于RAG系统或知识库而言，由于其信息密度极低，缺乏可迁移的论证结构或证据链，被标记为低价值信息。"
+}

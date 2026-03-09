@@ -1,0 +1,84 @@
+{
+  "id": "8f516e225002",
+  "year": "2023",
+  "date": "2023-08-08",
+  "title": "无尽的谈话丨FBK翻书日签 2023年8月8日",
+  "relative_path": "2023/2023-08-08_无尽的谈话丨FBK翻书日签 2023年8月8日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-08-08_无尽的谈话丨FBK翻书日签 2023年8月8日.txt",
+  "char_count": 352,
+  "content_type": "日签",
+  "industry": [
+    "文化出版"
+  ],
+  "topic": [
+    "读书",
+    "每日摘录"
+  ],
+  "genre": "碎片化语录",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "读书爱好者"
+  ],
+  "intent": [
+    "品牌维护",
+    "日常留存"
+  ],
+  "tone": [
+    "平和"
+  ],
+  "primary_question": "2023年8月8日的FBK翻书日签内容是什么？",
+  "thesis_type": "无论点",
+  "thesis_sentence": "本文仅为FBK翻书日的日期签到记录，不包含具体实质性正文论点。",
+  "structure_pattern": "固定模板式",
+  "section_functions": [
+    "标题提示",
+    "日期记录",
+    "链接指引"
+  ],
+  "argument_moves": [
+    "通过日期建立品牌节奏感"
+  ],
+  "core_argument": "无实质性论证内容",
+  "key_points": [
+    "2023年8月8日日签标题为“无尽的谈话”"
+  ],
+  "opening_pattern": "标题直入",
+  "ending_pattern": "无结尾",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 0,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "中性",
+  "stance_strength": "中立",
+  "sentence_rhythm": "极简",
+  "abstraction_level": "中等",
+  "transferable_moves": [
+    "使用“日签”形式进行每日品牌触达"
+  ],
+  "anti_patterns": [
+    "内容极度缺失",
+    "仅提供元数据",
+    "缺乏正文引导"
+  ],
+  "notable_phrases": [
+    "无尽的谈话"
+  ],
+  "title_score": 30,
+  "opening_score": 10,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 20,
+  "style_score": 20,
+  "publishability_score": 10,
+  "quality_score": 15,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为“FBK翻书”公众号于2023年8月8日发布的日签记录，标题为“无尽的谈话”。文中除基础元数据、日期和链接信息外，无任何实质性正文、观点或详细描述。此类内容属于品牌日常维护的极简视觉产物，由于正文缺失，其文本分析价值极低。",
+  "summary_500": "该内容是针对2023年8月8日“FBK翻书日签”的一个简易元数据记录。其核心信息仅包含标题“无尽的谈话”以及发布日期。由于原文仅触发了全局图片搜索模式且未提供图片后的具体配文或解读，导致其作为商业分析素材的价值极低。它反映了品牌通过每日固定栏目（如日签）与用户保持接触的一种惯性运营策略，但在当前的文本形式下，无法提供任何深度的行业见解、写作技巧或知识输出。对于RAG系统或写作模型而言，该条目仅能作为特定日期品牌活动的存证，不可作为内容参考。建议在信息检索中将其标记为低价值碎片信息。"
+}

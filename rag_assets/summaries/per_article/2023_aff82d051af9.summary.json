@@ -1,0 +1,88 @@
+{
+  "id": "aff82d051af9",
+  "year": "2023",
+  "date": "2023-04-27",
+  "title": "技术的报复丨FBK翻书日签 2023年4月27日",
+  "relative_path": "2023/2023-04-27_技术的报复丨FBK翻书日签 2023年4月27日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-04-27_技术的报复丨FBK翻书日签 2023年4月27日.txt",
+  "char_count": 353,
+  "content_type": "日签",
+  "industry": [
+    "文化",
+    "科技"
+  ],
+  "topic": [
+    "技术反思",
+    "阅读习惯"
+  ],
+  "genre": "短语摘录",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "泛知识读者"
+  ],
+  "intent": [
+    "品牌推广",
+    "金句分享"
+  ],
+  "tone": [
+    "冷峻",
+    "思辨"
+  ],
+  "primary_question": "技术进步是否会带来意想不到的负面后果？",
+  "thesis_type": "警示型",
+  "thesis_sentence": "技术在解决问题的同时，往往伴随着某种‘报复效应’。",
+  "structure_pattern": "碎片式",
+  "section_functions": [
+    "提供标题作为核心观点",
+    "标记发布日期",
+    "提供原始链接"
+  ],
+  "argument_moves": [
+    "以宏大叙事标题定调"
+  ],
+  "core_argument": "技术的报复效应是技术演进中不可忽视的哲学问题。",
+  "key_points": [
+    "技术报复",
+    "FBK翻书日签"
+  ],
+  "opening_pattern": "标题直接揭示主题",
+  "ending_pattern": "元数据结尾",
+  "evidence_types": [
+    "无（仅有标题）"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 30,
+  "narrative_distance": "远景",
+  "stance_strength": "中立",
+  "sentence_rhythm": "短促",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "使用‘日签’模式进行碎片化品牌触达",
+    "利用争议性或深刻的主题标题吸引用户点击"
+  ],
+  "anti_patterns": [
+    "内容缺失导致有效信息密度极低",
+    "过度依赖视觉图片而缺乏文本深度",
+    "无法支撑RAG写作的空洞内容"
+  ],
+  "notable_phrases": [
+    "技术的报复"
+  ],
+  "title_score": 45,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 0,
+  "structure_score": 20,
+  "style_score": 30,
+  "publishability_score": 15,
+  "quality_score": 10,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容是FBK于2023年4月27日发布的日签，题为‘技术的报复’。全文仅包含标题、日期及链接，无实质性正文阐述。这是一种典型的碎片化内容产品，旨在通过极简的视觉或文字刺激引发用户对特定议题（如技术副作用）的瞬时思考。因缺乏文本论证和具体数据，作为写作参考或知识提取的价值极低。",
+  "summary_500": "本文属于FBK机构推出的‘翻书日签’系列，发布日期为2023年4月27日。其内容结构极其单一，核心价值仅体现在标题‘技术的报复’所点出的思辨性议题上。这一主题可能指向技术史家爱德华·泰纳所论述的‘技术报复效应’，即技术在解决旧问题的同时往往创造出更难对付的新问题。然而，由于该推文在抓取中仅体现为标题和元数据，缺乏具体的论据、案例或深度分析，其在知识传递和内容创作层面的参考价值微乎其微。此类内容的主要功能是作为品牌在社交媒体上的日常触达工具，维持用户粘性，而非提供深度的阅读体验。对于内容分析师而言，该文章是低密度、高频率更新推文的典型案例，不具备作为结构化学习素材的潜力。在评估其质量时，由于内容极度残缺（仅有标题），各项分值均被如实调低。其核心可学习之处仅在于其‘产品化内容’的运营策略，即如何通过一个强有力的关键词或标题在读者的碎片化时间内留下印象。"
+}

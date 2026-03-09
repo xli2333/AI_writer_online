@@ -1,0 +1,89 @@
+{
+  "id": "6abce2af4c4c",
+  "year": "2023",
+  "date": "2023-03-07",
+  "title": "审美资本主义丨FBK翻书日签 2023年3月7日",
+  "relative_path": "2023/2023-03-07_审美资本主义丨FBK翻书日签 2023年3月7日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-03-07_审美资本主义丨FBK翻书日签 2023年3月7日.txt",
+  "char_count": 353,
+  "content_type": "日签",
+  "industry": [
+    "文化传媒",
+    "出版服务"
+  ],
+  "topic": [
+    "审美资本主义",
+    "每日读书"
+  ],
+  "genre": "信息卡片",
+  "style": [
+    "极简",
+    "摘要式"
+  ],
+  "audience": [
+    "知识付费受众",
+    "文化研究者"
+  ],
+  "intent": [
+    "品牌留存",
+    "内容引流"
+  ],
+  "tone": [
+    "理性",
+    "庄重"
+  ],
+  "primary_question": "2023年3月7日的推荐主题是什么？",
+  "thesis_type": "概念罗列",
+  "thesis_sentence": "该文章仅为日签形式，核心在于引出“审美资本主义”这一概念，未提供完整论点。",
+  "structure_pattern": "固定模板",
+  "section_functions": [
+    "标题引导：展示核心术语",
+    "元数据：标注日期与来源"
+  ],
+  "argument_moves": [
+    "概念预告"
+  ],
+  "core_argument": "由于内容仅包含标题和日期，无实际核心论点展开。",
+  "key_points": [
+    "审美资本主义",
+    "2023年3月7日日签"
+  ],
+  "opening_pattern": "直陈标题",
+  "ending_pattern": "无结尾",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 0,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "中立观察",
+  "stance_strength": "中性",
+  "sentence_rhythm": "无句群节奏",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "使用‘日签’形式建立品牌每日触达机制",
+    "通过学术性术语（审美资本主义）提升内容调性"
+  ],
+  "anti_patterns": [
+    "信息量极低（仅有标题和日期）",
+    "缺乏正文内容导致的阅读价值归零",
+    "无法通过单一标题建立逻辑闭环"
+  ],
+  "notable_phrases": [
+    "审美资本主义"
+  ],
+  "title_score": 40,
+  "opening_score": 10,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 20,
+  "style_score": 30,
+  "publishability_score": 5,
+  "quality_score": 10,
+  "reference_value_score": 5,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "该内容为FBK翻书公众号于2023年3月7日发布的日签，仅包含“审美资本主义”这一核心词汇和日期信息。由于缺乏正文、背景论述及数据支撑，该内容信息密度极低，不具备文章层面的阅读价值。其主要作用在于品牌日常打卡和特定学术词汇的标签化展示，无法提供深度写作参考或知识点吸收。",
+  "summary_500": "该文本属于典型的内容日签类记录，实质为公众号的每日推送标题摘要。其主要内容仅由标题“审美资本主义丨FBK翻书日签 2023年3月7日”及相关日期组成。在写作机制上，它属于极简化的信息告知模式。标题虽然使用了具有深度的学术概念“审美资本主义”，容易引起目标读者的兴趣，但由于正文部分完全缺失或未被采集，导致无法形成有效的论证过程。从商业分析角度看，此类内容属于低价值信息块，仅具有时间标记意义，缺乏任何逻辑、证据或可迁移的分析模型。对于RAG系统或写作库而言，此条目的唯一价值在于标记了特定机构对某一概念的关注时间点，不具备结构化写作的借鉴意义。在评分方面，其各项指标均处于极低水平，被判定为低价值且仅具有通知作用的非成文内容。"
+}

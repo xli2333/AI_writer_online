@@ -1,0 +1,93 @@
+{
+  "id": "91eb4c0803d4",
+  "year": "2023",
+  "date": "2023-06-07",
+  "title": "管理的众神 查尔斯·汉迪丨FBK翻书日签 2023年6月7日",
+  "relative_path": "2023/2023-06-07_管理的众神 查尔斯·汉迪丨FBK翻书日签 2023年6月7日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-06-07_管理的众神 查尔斯·汉迪丨FBK翻书日签 2023年6月7日.txt",
+  "char_count": 359,
+  "content_type": "读书日签",
+  "industry": [
+    "管理学",
+    "内容创业"
+  ],
+  "topic": [
+    "查尔斯·汉迪",
+    "管理的众神",
+    "书籍推荐"
+  ],
+  "genre": "读书日签",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "职场人士",
+    "管理者",
+    "读书爱好者"
+  ],
+  "intent": [
+    "品牌宣传",
+    "知识点触达"
+  ],
+  "tone": [
+    "平实"
+  ],
+  "primary_question": "今天推荐哪一本管理学经典书籍？",
+  "thesis_type": "提示性推荐",
+  "thesis_sentence": "通过每日日签的形式向读者推荐查尔斯·汉迪的经典著作《管理的众神》。",
+  "structure_pattern": "极简标题式",
+  "section_functions": [
+    "展示书名与作者",
+    "标注内容来源",
+    "记录发布日期"
+  ],
+  "argument_moves": [
+    "直接展示核心推荐对象",
+    "通过日期建立仪式感"
+  ],
+  "core_argument": "查尔斯·汉迪的《管理的众神》是值得今日关注的管理学读物。",
+  "key_points": [
+    "推荐书籍：管理的众神",
+    "作者：查尔斯·汉迪",
+    "来源：FBK翻书日签"
+  ],
+  "opening_pattern": "开门见山点名主题",
+  "ending_pattern": "日期落款",
+  "evidence_types": [
+    "书名引用"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "旁观者",
+  "stance_strength": "中立",
+  "sentence_rhythm": "停顿简促",
+  "abstraction_level": "极高",
+  "transferable_moves": [
+    "使用日签形式进行碎片化内容的分发",
+    "在标题中通过‘作者名+书名’的组合快速建立专业调性"
+  ],
+  "anti_patterns": [
+    "信息密度极低，缺乏实质性论述",
+    "过度依赖外部链接或图像，文字可检索性差",
+    "缺乏对书籍核心观点的提取"
+  ],
+  "notable_phrases": [
+    "管理的众神",
+    "FBK翻书日签"
+  ],
+  "title_score": 40,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 5,
+  "structure_score": 10,
+  "style_score": 20,
+  "publishability_score": 20,
+  "quality_score": 10,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为2023年6月7日的‘FBK翻书日签’，旨在向读者推介查尔斯·汉迪的经典著作《管理的众神》。由于正文内容极度匮乏，仅包含标题、日期和来源信息，未提供书籍简介、核心观点或深度拆解。这类内容属于典型的碎片化社交媒体占位符，其核心价值在于品牌曝光而非知识传递，对研究写作机制或获取深度洞见无参考意义。",
+  "summary_500": "此文档仅为一份名为‘FBK翻书日签’的极简分发记录。其核心信息指向了查尔斯·汉迪（Charles Handy）的管理学经典著作《管理的众神》。在结构上，它采用了标题式的直接呈现法，标明了日期、来源以及被推荐的书籍。然而，由于该样本中缺失具体的正文论述、书评或金句摘录，其本质上是一次品牌触达的痕迹而非完整的成文作品。对于商业分析而言，该内容的写作机制乏善可陈，信息密度极低，无法体现作者的论证逻辑或语言风格。这种‘低价值、通知性’的内容通常见于以视觉海报为核心的微信公众号推送，旨在保持账号更新频率和品牌仪式感。从RAG（检索增强生成）或人格提炼的角度看，该文章由于缺乏文本支撑，其参考价值极低，难以提炼出有效的行动指南或思维模型。"
+}

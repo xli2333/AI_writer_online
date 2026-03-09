@@ -1,0 +1,87 @@
+{
+  "id": "ce57e8aff633",
+  "year": "2024",
+  "date": "2024-01-01",
+  "title": "多谈谈问题丨FBK翻书日签 2024年1月1日",
+  "relative_path": "2024/2024-01-01_多谈谈问题丨FBK翻书日签 2024年1月1日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2024\\2024-01-01_多谈谈问题丨FBK翻书日签 2024年1月1日.txt",
+  "char_count": 352,
+  "content_type": "日签",
+  "industry": [
+    "传媒",
+    "文化传播"
+  ],
+  "topic": [
+    "个人成长",
+    "人生感悟"
+  ],
+  "genre": "短文案",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "读书爱好者",
+    "职场人士"
+  ],
+  "intent": [
+    "品牌留存",
+    "用户互动"
+  ],
+  "tone": [
+    "严肃",
+    "启发性"
+  ],
+  "primary_question": "面对新的一年应当持有什么样的态度？",
+  "thesis_type": "劝诫型",
+  "thesis_sentence": "多谈谈问题。",
+  "structure_pattern": "单点式结构",
+  "section_functions": [
+    "标题传递核心意向",
+    "日期标记仪式感"
+  ],
+  "argument_moves": [
+    "提出核心主张"
+  ],
+  "core_argument": "在新的一年应摒弃空谈，转向对实际问题的关注与探讨。",
+  "key_points": [
+    "多谈谈问题"
+  ],
+  "opening_pattern": "标题即主旨",
+  "ending_pattern": "日期结尾",
+  "evidence_types": [
+    "格言"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 90,
+  "narrative_distance": "近距离",
+  "stance_strength": "强",
+  "sentence_rhythm": "短促有力",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "使用“动词+主题”的日签标题公式",
+    "利用特定日期节点进行极简主义的品牌触达"
+  ],
+  "anti_patterns": [
+    "信息密度极低",
+    "缺乏论证逻辑",
+    "过度依赖视觉图片而导致文本价值缺失"
+  ],
+  "notable_phrases": [
+    "多谈谈问题"
+  ],
+  "title_score": 40,
+  "opening_score": 20,
+  "argument_score": 10,
+  "evidence_score": 5,
+  "structure_score": 20,
+  "style_score": 30,
+  "publishability_score": 10,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "summary_200": "本文为FBK发布的2024年元旦日签。其核心内容仅为“多谈谈问题”这一祈使句。文章属于典型的每日品牌打卡性质，文本信息极少，主要依靠标题与日期营造仪式感。在内容分析上，其主要价值在于提供了一个极简的品牌触达样本，但在文本创作、论证深度及信息含量方面几乎没有参考价值，属于低信息密度内容。",
+  "summary_500": "该内容是名为‘FBK翻书日签’的系列动态之一，发布于2024年1月1日。其文本结构极其简单，仅由标题‘多谈谈问题’、品牌标识‘FBK翻书日签’以及日期组成。作为新年第一天的内容，它并未采用常规的祝福语，而是采用了一种带有警示和务实色彩的表达——‘多谈谈问题’，试图引导读者进入一种反思和解决问题的思维模式。从写作机制来看，它采用了‘直奔主题’的极简主义策略，将核心主张直接作为标题。然而，由于正文缺失，没有任何论证、证据或案例支撑，其文本价值极低。对于分析师而言，此类内容仅可作为‘品牌每日互动策略’或‘日签设计模式’的参考。其证据特征得分为极低，数据密度和案例密度基本为零。此类文章在RAG（检索增强生成）系统中应被标记为低权重的元数据节点，而非核心知识节点。它反映了社交媒体时代品牌通过高频、低信息的视觉符号维持用户心智占领的一种策略，而非为了传递深度知识。"
+}

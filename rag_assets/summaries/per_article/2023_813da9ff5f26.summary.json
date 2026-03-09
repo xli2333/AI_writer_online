@@ -1,0 +1,89 @@
+{
+  "id": "813da9ff5f26",
+  "year": "2023",
+  "date": "2023-02-10",
+  "title": "FBK翻书日签丨2023年2月10日",
+  "relative_path": "2023/2023-02-10_FBK翻书日签丨2023年2月10日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-02-10_FBK翻书日签丨2023年2月10日.txt",
+  "char_count": 347,
+  "content_type": "日签",
+  "industry": [
+    "文化",
+    "传媒"
+  ],
+  "topic": [
+    "每日金句",
+    "阅读分享"
+  ],
+  "genre": "视觉图文",
+  "style": [
+    "极简",
+    "碎片化"
+  ],
+  "audience": [
+    "大众读者",
+    "书籍爱好者"
+  ],
+  "intent": [
+    "品牌留存",
+    "习惯培养"
+  ],
+  "tone": [
+    "平和"
+  ],
+  "primary_question": "今日的激励或思考语录是什么？",
+  "thesis_type": "感悟型",
+  "thesis_sentence": "通过一张带有语录的图片为读者提供每日的思考片段。",
+  "structure_pattern": "固定模板式",
+  "section_functions": [
+    "日期标注",
+    "视觉引导",
+    "内容承载"
+  ],
+  "argument_moves": [
+    "通过固定栏目形成用户心理预期",
+    "利用视觉元素传递品牌调性"
+  ],
+  "core_argument": "通过每日分享碎片化的书籍语录，维持品牌与读者的连接。",
+  "key_points": [
+    "2023年2月10日日期记录",
+    "翻书日签品牌标识"
+  ],
+  "opening_pattern": "日期标题直接切入",
+  "ending_pattern": "无特定结尾",
+  "evidence_types": [
+    "金句/名言"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 80,
+  "narrative_distance": "中立",
+  "stance_strength": "中立",
+  "sentence_rhythm": "无显著文本节奏",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "利用固定模板降低内容产出成本",
+    "通过高频日更建立用户签到式粘性"
+  ],
+  "anti_patterns": [
+    "内容过于单薄，无法提供有效信息增量",
+    "过度依赖图片导致文本可搜索性差"
+  ],
+  "notable_phrases": [
+    "翻书日签"
+  ],
+  "title_score": 40,
+  "opening_score": 30,
+  "argument_score": 10,
+  "evidence_score": 20,
+  "structure_score": 40,
+  "style_score": 30,
+  "publishability_score": 50,
+  "quality_score": 20,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为FBK于2023年2月10日发布的翻书日签。文章内容极度简略，仅包含日期标题及一张（推测为语录性质的）图片。属于典型的轻量化社交媒体日更内容，主要功能是品牌露脸和提供每日感悟，对于深度分析和RAG检索缺乏文本支撑。",
+  "summary_500": "本文档记录的是2023年2月10日的‘FBK翻书日签’。从文本分析角度看，该内容信息密度极低，主要结构仅由日期和标题组成。正文部分未能提取出具体的文字论述，其核心载体为一张图片，推测内容为摘抄的书籍金句或感悟。此类内容在写作机制上属于‘极简模板式’，通过高频、标准化的形式在社交媒体中维持用户活跃度。其优势在于低生产成本和强烈的仪式感，但在知识传播和逻辑构建方面基本没有参考价值。对于研究者而言，此类数据仅可作为观察该机构运营频率的样本，不具备写作或深度学习的素材价值。由于缺乏文本内容，其证据力、论证分、和质量分均处于极低水平，被标记为低价值内容。"
+}

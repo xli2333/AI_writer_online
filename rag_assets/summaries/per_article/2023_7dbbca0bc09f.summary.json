@@ -1,0 +1,84 @@
+{
+  "id": "7dbbca0bc09f",
+  "year": "2023",
+  "date": "2023-11-02",
+  "title": "营销短视症丨FBK翻书日签 2023年11月2日",
+  "relative_path": "2023/2023-11-02_营销短视症丨FBK翻书日签 2023年11月2日.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\raw_materials\\2023\\2023-11-02_营销短视症丨FBK翻书日签 2023年11月2日.txt",
+  "char_count": 353,
+  "content_type": "日签",
+  "industry": [
+    "市场营销"
+  ],
+  "topic": [
+    "营销短视症",
+    "商业经典"
+  ],
+  "genre": "微文",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "营销从业者",
+    "商业爱好者"
+  ],
+  "intent": [
+    "知识分享"
+  ],
+  "tone": [
+    "客观"
+  ],
+  "primary_question": "什么是营销短视症？",
+  "thesis_type": "定义型",
+  "thesis_sentence": "营销短视症通常指企业过分关注产品本身，而忽视了客户真正需求的变化。",
+  "structure_pattern": "固定模板式",
+  "section_functions": [
+    "标题提示",
+    "日期标注",
+    "来源说明"
+  ],
+  "argument_moves": [
+    "概念引入"
+  ],
+  "core_argument": "营销短视症是企业管理的常见陷阱。",
+  "key_points": [
+    "营销短视症概念"
+  ],
+  "opening_pattern": "标题直接入题",
+  "ending_pattern": "来源信息标注",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 5,
+  "quote_density_score": 0,
+  "narrative_distance": "客观描述",
+  "stance_strength": "中立",
+  "sentence_rhythm": "破碎",
+  "abstraction_level": "高概念",
+  "transferable_moves": [
+    "采用经典商业术语作为日签主题以增加专业度"
+  ],
+  "anti_patterns": [
+    "内容缺失",
+    "有效信息密度过低",
+    "仅有标题无实质正文"
+  ],
+  "notable_phrases": [
+    "营销短视症"
+  ],
+  "title_score": 60,
+  "opening_score": 10,
+  "argument_score": 10,
+  "evidence_score": 5,
+  "structure_score": 20,
+  "style_score": 30,
+  "publishability_score": 15,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "summary_200": "该内容为FBK翻书日签的存档记录，主题为‘营销短视症’。由于正文内容缺失或仅为图片展示，实际可读文字极少，仅保留了日期、标题及来源模式。其核心价值在于提供了一个营销学的经典术语关键词，缺乏深度的分析或论证。",
+  "summary_500": "这是一篇发布于2023年11月2日的‘FBK翻书日签’。文章标题明确指向经典商业概念‘营销短视症’（Marketing Myopia），但从抓取到的正文来看，该内容属于典型的极简日签形式，甚至在当前文本中主要体现为元数据和系统回退提示，缺乏实质性的论述、案例或引用。作为分析样本，其信息密度极低，不具备完整的写作结构或论证逻辑，仅能作为品牌每日更新或知识点打卡的记录。对于RAG系统或写作学习而言，其参考价值极低，属于应当标记为低价值的碎片化信息。"
+}
