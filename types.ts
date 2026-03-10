@@ -229,6 +229,112 @@ export interface ArticleIllustrationJobStatus {
   error?: string;
 }
 
+export type WechatTemplateId = 'latepost_report' | 'insight_brief' | 'warm_column';
+
+export type WechatDraftStatus = 'idle' | 'preview_ready' | 'draft_ready' | 'publishing' | 'published' | 'error';
+
+export type WechatCreditsVariant = 'stacked_labels' | 'minimal_labels';
+
+export type WechatHeadingVariant = 'chapter_marker' | 'red_bar' | 'underline' | 'plain';
+
+export type WechatParagraphVariant = 'body' | 'lead' | 'callout' | 'closing';
+
+export type WechatQuoteVariant = 'editorial_quote' | 'plain_quote';
+
+export type WechatListVariant = 'bullet_brief' | 'numbered_steps' | 'plain_list';
+
+export type WechatTableVariant = 'data_grid' | 'compact_grid';
+
+export type WechatImageVariant = 'full_bleed' | 'editorial_card' | 'caption_focus';
+
+export type WechatHighlightVariant = 'marker' | 'underline' | 'ink';
+
+export interface WechatBlockVariantSelection<TVariant extends string> {
+  blockIndex: number;
+  variant: TVariant;
+}
+
+export interface WechatHighlightSelection {
+  blockIndex: number;
+  text: string;
+  variant: WechatHighlightVariant;
+}
+
+export interface WechatBeautyAgentInfo {
+  used: boolean;
+  model?: string;
+  fallbackReason?: string;
+  planHash?: string;
+}
+
+export interface WechatRenderPlan {
+  creditsVariant: WechatCreditsVariant;
+  headingStyles: Array<WechatBlockVariantSelection<WechatHeadingVariant>>;
+  paragraphStyles: Array<WechatBlockVariantSelection<WechatParagraphVariant>>;
+  quoteStyles: Array<WechatBlockVariantSelection<WechatQuoteVariant>>;
+  listStyles: Array<WechatBlockVariantSelection<WechatListVariant>>;
+  tableStyles: Array<WechatBlockVariantSelection<WechatTableVariant>>;
+  imageStyles: Array<WechatBlockVariantSelection<WechatImageVariant>>;
+  highlightSentences: WechatHighlightSelection[];
+  dividerAfterBlocks: number[];
+  beautyAgent: WechatBeautyAgentInfo;
+}
+
+export interface WechatLayoutSettings {
+  templateId: WechatTemplateId;
+  author: string;
+  editor?: string;
+  creditLines?: string[];
+  digest: string;
+  contentSourceUrl: string;
+  coverStrategy: 'hero' | 'first_ready' | 'manual';
+  preferredCoverAssetId?: string;
+  needOpenComment: boolean;
+  onlyFansCanComment: boolean;
+  artDirectionPrompt?: string;
+}
+
+export interface WechatDraftRecord {
+  status: WechatDraftStatus;
+  mediaId?: string;
+  publishId?: string;
+  articleUrl?: string;
+  templateId?: WechatTemplateId;
+  draftTitle?: string;
+  coverAssetId?: string;
+  draftUpdatedAt?: string;
+  publishedAt?: string;
+  warnings?: string[];
+  error?: string;
+}
+
+export interface WechatPublisherConfigStatus {
+  configured: boolean;
+  appIdPresent: boolean;
+  appSecretPresent: boolean;
+  defaultAuthor: string;
+  defaultTemplateId: WechatTemplateId;
+  publishEnabled: boolean;
+  missingKeys?: string[];
+}
+
+export interface WechatPreviewMetadata {
+  templateId: WechatTemplateId;
+  rendererVersion?: string;
+  title: string;
+  author: string;
+  editor?: string;
+  digest: string;
+  contentSourceUrl?: string;
+  coverAssetId?: string;
+  coverImageUrl?: string;
+  imageCount: number;
+  blockCount: number;
+  warnings?: string[];
+  renderPlan?: WechatRenderPlan;
+  beautyAgent?: WechatBeautyAgentInfo;
+}
+
 export interface WritingChunkPlanItem {
   index: number;
   title: string;
@@ -275,6 +381,8 @@ export interface WritingProjectData {
   articleContent?: string;
   teachingNotes?: string;
   illustrationBundle?: ArticleIllustrationBundle;
+  wechatLayout?: WechatLayoutSettings;
+  wechatDraft?: WechatDraftRecord;
   workflowSnapshots?: WorkflowSnapshot[];
   activeSnapshotId?: string;
   options: WritingTaskOptions;

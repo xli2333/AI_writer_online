@@ -15,6 +15,8 @@ import {
   ArticleIllustrationBundle,
   ArticleIllustrationJobStatus,
   ArticleIllustrationSlot,
+  WechatDraftRecord,
+  WechatLayoutSettings,
   WritingProjectData,
 } from '../types';
 import * as GeminiService from '../services/geminiService';
@@ -28,6 +30,7 @@ import {
 import { ArchiveEntry, buildZipArchive, downloadBlob, encodeTextArchiveEntry } from '../services/archiveService';
 import { MarkdownRenderer } from './MarkdownRenderer';
 import { SelectionMenu } from './SelectionMenu';
+import { WechatPublisherPanel } from './WechatPublisherPanel';
 import { WritingCopilot } from './WritingCopilot';
 
 interface ArticleViewerProps {
@@ -36,6 +39,8 @@ interface ArticleViewerProps {
   onUpdateArticleContent: (content: string) => void;
   onUpdateTeachingNotes: (notes: string) => void;
   onUpdateIllustrationBundle: (bundle?: ArticleIllustrationBundle) => void;
+  onUpdateWechatLayout: (layout?: WechatLayoutSettings) => void;
+  onUpdateWechatDraft: (draft?: WechatDraftRecord) => void;
 }
 
 interface HistoryItem {
@@ -61,7 +66,17 @@ type ViewerData = WritingProjectData & {
   referenceArticles?: ReferenceTemplateArticle[];
 };
 
-type ViewerPanel = 'article' | 'illustrations' | 'chunks' | 'references' | 'task' | 'outline' | 'research' | 'critique' | 'notes';
+type ViewerPanel =
+  | 'article'
+  | 'illustrations'
+  | 'wechat'
+  | 'chunks'
+  | 'references'
+  | 'task'
+  | 'outline'
+  | 'research'
+  | 'critique'
+  | 'notes';
 
 interface ViewerTab {
   id: ViewerPanel;
@@ -1269,6 +1284,8 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
   onUpdateArticleContent,
   onUpdateTeachingNotes,
   onUpdateIllustrationBundle,
+  onUpdateWechatLayout,
+  onUpdateWechatDraft,
 }) => {
   const viewerData = data as ViewerData;
   const referenceArticles = Array.isArray(viewerData.referenceArticles) ? viewerData.referenceArticles : [];
@@ -1656,6 +1673,7 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
       [
         { id: 'article', label: '正文' },
         ...(hasFinalArticle ? [{ id: 'illustrations' as const, label: '配图' }] : []),
+        ...(hasFinalArticle ? [{ id: 'wechat' as const, label: '公众号' }] : []),
         ...(referenceArticles.length > 0 ? [{ id: 'references' as const, label: '参考模板' }] : []),
         { id: 'task', label: '任务摘要' },
         ...(data.outline ? [{ id: 'outline' as const, label: '提纲' }] : []),
@@ -2191,6 +2209,18 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
             errorMessage={illustrationError}
             onRegenerateAll={() => openIllustrationPromptDialog(activeIllustrationBundle ? 'regenerate' : 'initial')}
             slotActions={illustrationSlotActions}
+          />
+        );
+      case 'wechat':
+        return (
+          <WechatPublisherPanel
+            topic={articleTitle}
+            articleContent={data.articleContent || ''}
+            illustrationBundle={activeIllustrationBundle}
+            layout={data.wechatLayout}
+            draft={data.wechatDraft}
+            onUpdateLayout={onUpdateWechatLayout}
+            onUpdateDraft={onUpdateWechatDraft}
           />
         );
       case 'chunks':

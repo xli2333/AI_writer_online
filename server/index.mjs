@@ -11,6 +11,14 @@ import {
   resolveIllustrationRequestIdentity,
   switchIllustrationSlotVersion,
 } from './articleIllustrationService.mjs';
+import {
+  generateWechatDraftPreview,
+  getWechatOfficialDraft,
+  getWechatOfficialPublishStatus,
+  getWechatPublisherConfig,
+  submitWechatOfficialPublish,
+  upsertWechatOfficialDraft,
+} from './wechatOfficialPublisherService.mjs';
 
 const ROOT_DIR = process.cwd();
 const COMMON_PROMPT_ROOT = path.join(ROOT_DIR, 'rag_assets', 'global');
@@ -596,7 +604,7 @@ const server = http.createServer(async (request, response) => {
       const sourceHash = identity.sourceHash;
       const existingManifest = await getIllustrationManifestBySourceHash(sourceHash);
       const existingJob = illustrationJobs.get(sourceHash);
-      const targetImageCount = Math.max(1, Math.min(10, Math.ceil(String(articleContent).replace(/\s+/g, '').length / 800)));
+      const targetImageCount = Math.max(1, Math.min(10, Math.ceil(String(articleContent).replace(/\s+/g, '').length / 1000)));
 
       if (!regenerate && existingJob && isIllustrationJobRunning(existingJob)) {
         sendJson(response, 202, {
@@ -759,6 +767,76 @@ const server = http.createServer(async (request, response) => {
       return;
     }
 
+    if (request.method === 'GET' && route === '/api/wechat-official/config') {
+      sendJson(response, 200, getWechatPublisherConfig());
+      return;
+    }
+
+    if (request.method === 'POST' && route === '/api/wechat-official/preview') {
+      const body = await parseJsonBody(request);
+      const preview = await generateWechatDraftPreview({
+        topic: String(body.topic || '').trim(),
+        articleContent: String(body.articleContent || '').trim(),
+        illustrationBundle: body.illustrationBundle && typeof body.illustrationBundle === 'object' ? body.illustrationBundle : undefined,
+        layout: body.layout && typeof body.layout === 'object' ? body.layout : {},
+        apiKey: String(body.apiKey || '').trim() || undefined,
+        renderPlan: body.renderPlan && typeof body.renderPlan === 'object' ? body.renderPlan : undefined,
+      });
+      sendJson(response, 200, preview);
+      return;
+    }
+
+    if (request.method === 'POST' && route === '/api/wechat-official/draft/upsert') {
+      const body = await parseJsonBody(request);
+      const payload = await upsertWechatOfficialDraft({
+        topic: String(body.topic || '').trim(),
+        articleContent: String(body.articleContent || '').trim(),
+        illustrationBundle: body.illustrationBundle && typeof body.illustrationBundle === 'object' ? body.illustrationBundle : undefined,
+        layout: body.layout && typeof body.layout === 'object' ? body.layout : {},
+        mediaId: String(body.mediaId || '').trim() || undefined,
+        apiKey: String(body.apiKey || '').trim() || undefined,
+        renderPlan: body.renderPlan && typeof body.renderPlan === 'object' ? body.renderPlan : undefined,
+      });
+      sendJson(response, 200, payload);
+      return;
+    }
+
+    if (request.method === 'POST' && route === '/api/wechat-official/draft/get') {
+      const body = await parseJsonBody(request);
+      const mediaId = String(body.mediaId || '').trim();
+      if (!mediaId) {
+        sendJson(response, 400, { error: 'Missing mediaId.' });
+        return;
+      }
+      const payload = await getWechatOfficialDraft({ mediaId });
+      sendJson(response, 200, payload);
+      return;
+    }
+
+    if (request.method === 'POST' && route === '/api/wechat-official/publish/submit') {
+      const body = await parseJsonBody(request);
+      const mediaId = String(body.mediaId || '').trim();
+      if (!mediaId) {
+        sendJson(response, 400, { error: 'Missing mediaId.' });
+        return;
+      }
+      const payload = await submitWechatOfficialPublish({ mediaId });
+      sendJson(response, 200, payload);
+      return;
+    }
+
+    if (request.method === 'POST' && route === '/api/wechat-official/publish/get') {
+      const body = await parseJsonBody(request);
+      const publishId = String(body.publishId || '').trim();
+      if (!publishId) {
+        sendJson(response, 400, { error: 'Missing publishId.' });
+        return;
+      }
+      const payload = await getWechatOfficialPublishStatus({ publishId });
+      sendJson(response, 200, payload);
+      return;
+    }
+
     if (request.method === 'GET') {
       if (await tryServeGeneratedAsset(route, response)) {
         return;
@@ -776,6 +854,8 @@ const server = http.createServer(async (request, response) => {
     );
     sendJson(response, 500, {
       error: error instanceof Error ? error.message : String(error),
+      code: error && typeof error === 'object' && 'code' in error ? error.code : undefined,
+      details: Array.isArray(error?.details) ? error.details : undefined,
     });
   }
 });

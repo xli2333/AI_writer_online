@@ -14,6 +14,8 @@ import {
   PersonaStatusDescriptor,
   StyleProfileDescriptor,
   UploadedFile,
+  WechatDraftRecord,
+  WechatLayoutSettings,
   WorkflowResumeAction,
   WorkflowSnapshot,
   WorkflowSnapshotProjectData,
@@ -548,6 +550,7 @@ const App: React.FC = () => {
           articleContent: result.articleContent,
           teachingNotes: result.teachingNotes,
           illustrationBundle: undefined,
+          wechatDraft: undefined,
           workflowSnapshots: prev.workflowSnapshots,
           activeSnapshotId: prev.activeSnapshotId,
         },
@@ -567,7 +570,7 @@ const App: React.FC = () => {
     setGenState({
       step: GenerationStep.RESEARCHING,
       progress: 42,
-      message: '正在基于信息弹药库生成讨论方向...',
+      message: '正在基于信息库生成文章主题...',
     });
 
     try {
@@ -1107,7 +1110,7 @@ const App: React.FC = () => {
     setGenState({
       step: GenerationStep.RESEARCHING,
       progress: 42,
-      message: '正在基于信息弹药库生成讨论方向...',
+      message: '正在基于信息库生成文章主题...',
     });
 
     try {
@@ -1243,6 +1246,7 @@ const App: React.FC = () => {
         articleContent: result.articleContent,
         teachingNotes: result.teachingNotes,
         illustrationBundle: undefined,
+        wechatDraft: undefined,
       }));
 
       setGenState({
@@ -1269,7 +1273,15 @@ const App: React.FC = () => {
   };
 
   const handleUpdateIllustrationBundle = (illustrationBundle?: ArticleIllustrationBundle) => {
-    setProjectData((prev) => ({ ...prev, illustrationBundle }));
+    setProjectData((prev) => ({ ...prev, illustrationBundle, wechatDraft: undefined }));
+  };
+
+  const handleUpdateWechatLayout = (wechatLayout?: WechatLayoutSettings) => {
+    setProjectData((prev) => ({ ...prev, wechatLayout }));
+  };
+
+  const handleUpdateWechatDraft = (wechatDraft?: WechatDraftRecord) => {
+    setProjectData((prev) => ({ ...prev, wechatDraft }));
   };
 
   if (!hasApiKey) {
@@ -1715,10 +1727,17 @@ const App: React.FC = () => {
             data={projectData}
             onReset={handleReset}
             onUpdateArticleContent={(articleContent) =>
-              setProjectData((prev) => ({ ...prev, articleContent, illustrationBundle: undefined }))
+              setProjectData((prev) => ({
+                ...prev,
+                articleContent,
+                illustrationBundle: undefined,
+                wechatDraft: undefined,
+              }))
             }
             onUpdateTeachingNotes={(teachingNotes) => setProjectData((prev) => ({ ...prev, teachingNotes }))}
             onUpdateIllustrationBundle={handleUpdateIllustrationBundle}
+            onUpdateWechatLayout={handleUpdateWechatLayout}
+            onUpdateWechatDraft={handleUpdateWechatDraft}
           />
         )}
       </main>

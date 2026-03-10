@@ -8,8 +8,8 @@
   },
   "scripts": {
     "dev": "vite",
-    "dev:server": "node server/index.mjs",
-    "server:dev": "node server/index.mjs",
+    "dev:server": "set \"WECHAT_OFFICIAL_ENABLE_PUBLISH=1\" && node --watch server/index.mjs",
+    "server:dev": "set \"WECHAT_OFFICIAL_ENABLE_PUBLISH=1\" && node --watch server/index.mjs",
     "build": "vite build",
     "preview": "vite preview",
     "rag:import-latepost": "node scripts/rag/import-latepost-corpus.mjs --profile latepost",
@@ -23,7 +23,8 @@
     "rag:apply-patch": "node scripts/rag/apply-persona-patch.mjs",
     "rag:evolve": "node scripts/rag/run-evolution-cycle.mjs",
     "rag:task": "node scripts/rag/run-writing-task.mjs",
-    "test:illustrations": "node scripts/test-article-illustrations.mjs"
+    "test:illustrations": "node scripts/test-article-illustrations.mjs",
+    "test:wechat-publisher": "node scripts/test-wechat-publisher.mjs"
   },
   "dependencies": {
     "@google/genai": "^1.44.0",

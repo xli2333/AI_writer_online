@@ -1811,10 +1811,34 @@ const normalizeHeadingCandidate = (value: string) =>
     value
       .replace(/^#+\s*/, '')
       .replace(/^[一二三四五六七八九十0-9]+[、.．]\s*/, '')
+      .replace(/^第\s*[一二三四五六七八九十0-9]+\s*(?:部分|章|节|篇)\s*/, '')
+      .replace(/^(?:导语|引言|前言|开头|中场|尾声|结语|结尾|总结|写在最后)\s*[：:]\s*/, '')
+      .replace(/^(?:导语|引言|前言|开头|中场|尾声|结语|结尾|总结|写在最后)\s*$/, '')
       .replace(/[：:]\s*$/, '')
   );
 
 const isGenericChunkTitle = (value: string) => /^第\s*\d+\s*(?:段|部分|轮写作)?$/.test(value);
+
+const extractSecondaryHeadingTexts = (content: string) =>
+  cleanText(content)
+    .split('\n')
+    .map((line) => line.trim())
+    .filter((line) => /^##\s+/.test(line))
+    .map((line) => line.replace(/^##\s+/, '').trim())
+    .filter(Boolean);
+
+const isNonPlainArticleSubheading = (value: string) => {
+  const normalized = cleanText(value);
+  if (!normalized) return false;
+  return (
+    /^[一二三四五六七八九十0-9]+[、.．]\s*/.test(normalized) ||
+    /^第\s*[一二三四五六七八九十0-9]+\s*(?:部分|章|节|篇)/.test(normalized) ||
+    /[：:]/.test(normalized) ||
+    /^(?:导语|引言|前言|开头|中场|尾声|结语|结尾|总结|写在最后)(?:\s|$)/.test(normalized)
+  );
+};
+
+const findNonPlainSecondaryHeadings = (content: string) => extractSecondaryHeadingTexts(content).filter(isNonPlainArticleSubheading);
 
 const uniqueStrings = (values: string[], limit = TARGET_ARTICLE_H2_MAX) => {
   const seen = new Set<string>();
@@ -1904,14 +1928,20 @@ const formatChunkDraftsForPrompt = (chunks: string[], chunkPlan: WritingChunkPla
 
 const buildArticleStructureChecklist = (content: string, outline: string, chunkPlan: WritingChunkPlanItem[]) => {
   const headingPlan = deriveSectionHeadingPlan(outline, chunkPlan);
+  const nonPlainHeadings = findNonPlainSecondaryHeadings(content);
   const lines = [
     '## 结构检查',
     `- 当前是否已有主标题：${hasMarkdownTitle(content) ? '是' : '否'}`,
     `- 当前二级标题数量：${countSecondaryHeadings(content)} 个`,
+    '- 子标题风格要求：用自然短句，不要写“第一部分”“一、”“1.”“尾声”“总结：”这类编号、结构标签或冒号前缀。',
   ];
 
   if (chunkPlan.length > 1 && countSecondaryHeadings(content) === 0) {
     lines.push('- 当前是分段拼接稿，但正文还没有落出二级标题。');
+  }
+
+  if (nonPlainHeadings.length > 0) {
+    lines.push(`- 当前不自然的小标题：${nonPlainHeadings.slice(0, 5).join('｜')}`);
   }
 
   if (headingPlan.length > 0) {
@@ -2697,10 +2727,11 @@ const assembleArticleDraft = async ({
     '1. 保留当前标题、核心判断、论证顺序和大部分原句。',
     `2. 输出必须是一篇完整的 Markdown 文章，包含 1 个 # 标题和 ${TARGET_ARTICLE_H2_MIN}-${TARGET_ARTICLE_H2_MAX} 个 ## 子标题。`,
     '3. 子标题优先使用下方“小标题计划”和当前大纲，不另起一套新结构。',
-    '4. 重点处理 chunk 接缝：重复开头、重复收束、转场突兀、段落断裂、信息堆叠。',
-    '5. 除非为了衔接绝对必要，不要整段重写；能删一句、并一句、补一句过渡，就不要大改。',
-    '6. 不要引入当前稿件之外的新事实、新论点、新例子。',
-    '7. 正文保持自然段推进，不要改写成条目列表。',
+    '4. 子标题必须是自然短句，不要写“第一部分”“一、”“1.”“尾声”“总结：”这类编号、阶段标签或冒号前缀。',
+    '5. 重点处理 chunk 接缝：重复开头、重复收束、转场突兀、段落断裂、信息堆叠。',
+    '6. 除非为了衔接绝对必要，不要整段重写；能删一句、并一句、补一句过渡，就不要大改。',
+    '7. 不要引入当前稿件之外的新事实、新论点、新例子。',
+    '8. 正文保持自然段推进，不要改写成条目列表。',
     '结构检查：',
     buildArticleStructureChecklist(draft, outline, chunkPlan),
     headingPlan.length > 0 ? `小标题计划：\n${headingPlan.map((item, index) => `${index + 1}. ${item}`).join('\n')}` : '',
@@ -2928,7 +2959,8 @@ const reviewArticleEditorialPass = async ({
     `你现在是顶级商业杂志的终稿诊断编辑。这是第 ${passIndex} / ${MAGAZINE_EDITORIAL_MAX_PASSES} 轮终审。`,
     '你的职责是诊断剩余问题，不是要求另写一篇。',
     '终审目标：在原文基础上做最小必要修改，让分段写出的内容成为一篇完整、自然、可发布的文章。',
-    '你必须把当前稿件与参考模板文直接对比，重点检查：是否已经是一篇完整文章、是否有明确的 ## 子标题、chunk 接缝、重复开头/收束、段落推进、语气统一、遣词克制、是否自然。',
+    '你必须把当前稿件与参考模板文直接对比，重点检查：是否已经是一篇完整文章、是否有明确且自然的 ## 子标题、chunk 接缝、重复开头/收束、段落推进、语气统一、遣词克制、是否自然。',
+    '如果子标题出现“第一部分”“一、”“1.”“尾声”“总结：”这类编号、阶段标签或冒号前缀，要明确判为问题。',
     '这是渐进式审稿。如果前一轮已经解决的问题，本轮不要重复提出。',
     `最多返回 ${MAGAZINE_MAX_ISSUES_PER_PASS} 个当前真正阻塞发布的问题。`,
     '返回 JSON 对象，字段为：summary, ready, strategy, templateAlignment, unresolvedRisk, issues。',
@@ -3041,6 +3073,7 @@ const reviseArticleEditorialPass = async ({
     revisionMode === 'structure_tune'
       ? `7. 如果需要补子标题，只能在以下计划和大纲范围内落出 ${TARGET_ARTICLE_H2_MIN}-${TARGET_ARTICLE_H2_MAX} 个 ## 子标题。`
       : '7. 除非问题明确要求，否则不要改动既有子标题和段落顺序。',
+    '8. 子标题必须写成自然短句，不要带“第一部分”“一、”“1.”“尾声”“总结：”这类编号、阶段标签或冒号前缀。',
     '终审意见：',
     formatEditorialReviewMarkdown(review, passIndex),
     '结构检查：',

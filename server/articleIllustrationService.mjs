@@ -16,6 +16,7 @@ const IMAGE_HEIGHT = 2160;
 const CHART_VIEWBOX = `0 0 ${IMAGE_WIDTH} ${IMAGE_HEIGHT}`;
 const MAX_IMAGE_RETRIES = 2;
 const ILLUSTRATION_PROMPT_VERSION = 'illustration-v3';
+const TARGET_CHARS_PER_ILLUSTRATION = 1000;
 const PLANNER_TIMEOUT_MS = 10 * 60 * 1000;
 const IMAGE_TIMEOUT_MS = 12 * 60 * 1000;
 const QC_TIMEOUT_MS = 3 * 60 * 1000;
@@ -1136,7 +1137,7 @@ const generateArticleIllustrationsLegacy = async ({
 
   const paragraphs = buildArticleStructure(articleContent);
   const totalCharacterCount = Math.max(1, countArticleCharacters(articleContent));
-  const targetImageCount = clampSlotCount(Math.ceil(totalCharacterCount / 800));
+  const targetImageCount = clampSlotCount(Math.ceil(totalCharacterCount / TARGET_CHARS_PER_ILLUSTRATION));
   const dataHints = extractDataHints(paragraphs);
   const promptAssets = await readIllustrationPrompts(normalizedProfileId);
   const { system, guardrails, dataRules, profileStyle, qualityChecks, negativePrompt } = promptAssets;
@@ -2032,7 +2033,7 @@ export const generateArticleIllustrations = async ({
 
   const paragraphs = buildArticleStructure(articleContent);
   const totalCharacterCount = Math.max(1, countArticleCharacters(articleContent));
-  const targetImageCount = clampSlotCount(Math.ceil(totalCharacterCount / 800));
+  const targetImageCount = clampSlotCount(Math.ceil(totalCharacterCount / TARGET_CHARS_PER_ILLUSTRATION));
   const dataHints = extractDataHints(paragraphs);
   const normalizedUserPrompt = cleanText(userPrompt);
   const promptAssets = await readIllustrationPrompts(normalizedProfileId);
@@ -2233,7 +2234,7 @@ export const generateArticleIllustrationsProgressive = async ({
 
   const paragraphs = buildArticleStructure(articleContent);
   const totalCharacterCount = Math.max(1, countArticleCharacters(articleContent));
-  const targetImageCount = clampSlotCount(Math.ceil(totalCharacterCount / 800));
+  const targetImageCount = clampSlotCount(Math.ceil(totalCharacterCount / TARGET_CHARS_PER_ILLUSTRATION));
   const dataHints = extractDataHints(paragraphs);
   const normalizedUserPrompt = cleanText(userPrompt);
   const promptAssets = await readIllustrationPrompts(normalizedProfileId);
