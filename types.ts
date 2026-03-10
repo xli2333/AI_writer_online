@@ -202,6 +202,7 @@ export interface ArticleIllustrationBundle {
   model: string;
   wordCount: number;
   targetImageCount: number;
+  globalUserPrompt?: string;
   status: 'idle' | 'planning' | 'rendering' | 'ready' | 'partial' | 'error';
   generatedAt?: string;
   updatedAt?: string;

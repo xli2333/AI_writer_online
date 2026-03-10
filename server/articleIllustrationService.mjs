@@ -1395,6 +1395,32 @@ const summarizeDataSpec = (dataSpec) =>
         .join('；')
     : '';
 
+const buildDataChartPrompt = ({ articleTitle, slot, visualSystem }) =>
+  [
+    '为一篇中文商业文章生成单张 16:9 数据图配图。',
+    `文章标题：${articleTitle}`,
+    `图位标题：${slot.title || slot.role}`,
+    `图位要承接的核心意思：${slot.purpose}`,
+    `对应正文片段：${slot.anchorExcerpt}`,
+    slot.dataSpec ? `必须表达的数据关系：${summarizeDataSpec(slot.dataSpec)}` : '',
+    `推荐图表类型：${slot.dataSpec?.chartType || 'comparison_bar'}`,
+    `图表标题：${slot.dataSpec?.title || slot.title || slot.role}`,
+    `图表结论：${slot.dataSpec?.insight || slot.purpose}`,
+    `统一色彩：${Array.isArray(visualSystem.palette) ? visualSystem.palette.join(', ') : ''}`,
+    `统一图表语言：${
+      Array.isArray(visualSystem.chart_language)
+        ? visualSystem.chart_language.join('；')
+        : cleanText(visualSystem.chartStyle || '')
+    }`,
+    '只生成标准商业数据图，不要人物、办公室、门店、会议室、屏幕、投影墙、电脑界面、UI 面板、信息大屏、海报或任何实景空间。',
+    '不要把图表画进电视、显示器、会议大屏、墙面看板或产品界面里。',
+    '不要生成 dashboard screenshot，不要生成信息墙，不要生成带实景透视的图表场景。',
+    '画面主体必须就是图表本身，层级清晰，标签精简，重点数字突出，适合公众号文章配图。',
+    '输出要求：单张横版 16:9 图片，3840x2160，高清，成熟商业媒体风格。',
+  ]
+    .filter(Boolean)
+    .join('\n\n');
+
 const buildSlotRasterPrompt = ({ articleTitle, articleContent, slot, visualSystem }) =>
   [
     '为一篇中文商业文章生成单张 editorial 配图。',
@@ -1626,6 +1652,7 @@ const normalizeIllustrationManifest = (manifest, defaults = {}) => {
     model: cleanText(manifest?.model || defaults.model) || DEFAULT_IMAGE_MODEL,
     wordCount: Number(manifest?.wordCount || defaults.wordCount || 0),
     targetImageCount: Number(manifest?.targetImageCount || defaults.targetImageCount || normalizedSlots.length || 1),
+    globalUserPrompt: cleanText(manifest?.globalUserPrompt || defaults.globalUserPrompt) || undefined,
     status: cleanText(manifest?.status || defaults.status) || 'ready',
     generatedAt: cleanText(manifest?.generatedAt || defaults.generatedAt) || undefined,
     updatedAt: cleanText(manifest?.updatedAt || defaults.updatedAt) || undefined,
@@ -1722,6 +1749,29 @@ const createChartSlotSeed = ({ slot, negativePrompt, normalizedPlan }) => ({
   status: 'planned',
 });
 
+const createNanobananaChartSlotSeed = ({ slot, negativePrompt, normalizedPlan, resolvedTitle }) => {
+  const baseSeed = createChartSlotSeed({ slot, negativePrompt, normalizedPlan });
+  const nextSeed = {
+    ...baseSeed,
+    renderMode: 'nanobanana_pro',
+    qualityChecks: ['必须是纯数据图，不是实景场景', '数字关系必须与正文一致', '图表层级清晰，重点数字突出', '禁止办公室大屏、看板、屏幕截图和人物环境'],
+  };
+
+  return {
+    ...nextSeed,
+    prompt: buildDataChartPrompt({
+      articleTitle: resolvedTitle,
+      slot: nextSeed,
+      visualSystem: normalizedPlan.visualSystem,
+    }),
+  };
+};
+
+const createIllustrationSlotSeed = (params) =>
+  params.slot.shouldUseDataGraphic && Array.isArray(params.slot.dataPoints) && params.slot.dataPoints.length >= 2
+    ? createNanobananaChartSlotSeed(params)
+    : createSceneSlotSeed(params);
+
 const renderSlotVersion = async ({
   apiKey,
   plannerModel,
@@ -1750,12 +1800,18 @@ const renderSlotVersion = async ({
           renderMode: 'nanobanana_pro',
           prompt:
             cleanText(slot.prompt) ||
-            buildSlotRasterPrompt({
-              articleTitle,
-              articleContent,
-              slot,
-              visualSystem,
-            }),
+            (slot.dataSpec
+              ? buildDataChartPrompt({
+                  articleTitle,
+                  slot,
+                  visualSystem,
+                })
+              : buildSlotRasterPrompt({
+                  articleTitle,
+                  articleContent,
+                  slot,
+                  visualSystem,
+                })),
         }
       : {
           ...slot,
@@ -1764,15 +1820,23 @@ const renderSlotVersion = async ({
 
   let prompt = cleanText(rasterSlot.prompt);
   if (!prompt) {
-    prompt = buildSlotRasterPrompt({
-      articleTitle,
-      articleContent,
-      slot: rasterSlot,
-      visualSystem,
-    });
+    prompt = rasterSlot.dataSpec
+      ? buildDataChartPrompt({
+          articleTitle,
+          slot: rasterSlot,
+          visualSystem,
+        })
+      : buildSlotRasterPrompt({
+          articleTitle,
+          articleContent,
+          slot: rasterSlot,
+          visualSystem,
+        });
   }
-  prompt = appendArticleContextToPrompt(prompt, articleContent);
+  if (!rasterSlot.dataSpec) {
+    prompt = appendArticleContextToPrompt(prompt, articleContent);
   prompt = `${prompt}\n\n对象一致性要求：必须围绕文章讨论的核心公司、品牌、人物和业务场景出图，不能换成不相关的门店、品牌或城市地标。`;
+  }
   if (cleanText(userPrompt)) {
     prompt = `${prompt}\n\n用户追加要求：${cleanText(userPrompt)}`;
   }
@@ -1927,6 +1991,7 @@ export const generateArticleIllustrations = async ({
   articleTitle,
   articleContent,
   options = {},
+  userPrompt = '',
   force = false,
 }) => {
   const normalizedProfileId = resolveStyleProfileId(profileId);
@@ -1969,10 +2034,11 @@ export const generateArticleIllustrations = async ({
   const totalCharacterCount = Math.max(1, countArticleCharacters(articleContent));
   const targetImageCount = clampSlotCount(Math.ceil(totalCharacterCount / 800));
   const dataHints = extractDataHints(paragraphs);
+  const normalizedUserPrompt = cleanText(userPrompt);
   const promptAssets = await readIllustrationPrompts(normalizedProfileId);
   const { system, guardrails, dataRules, profileStyle, qualityChecks, negativePrompt } = promptAssets;
 
-  const planPrompt = [
+  let planPrompt = [
     `目标图数：${targetImageCount}`,
     `风格库：${normalizedProfileId}`,
     `文章标题：${resolvedTitle}`,
@@ -1992,6 +2058,10 @@ export const generateArticleIllustrations = async ({
     JSON.stringify(dataHints, null, 2),
     '请严格按目标图数规划整篇配图，不要少图或多图。',
   ].join('\n\n');
+
+  if (normalizedUserPrompt) {
+    planPrompt = `${planPrompt}\n\n用户补充的整组配图要求：\n${normalizedUserPrompt}\n\n请把这些要求落实到整组视觉系统、图位规划和每张图的画面重点里。`;
+  }
 
   const rawPlan =
     shouldUseMockProvider() || !apiKey
@@ -2026,6 +2096,7 @@ export const generateArticleIllustrations = async ({
     model: imageModel || DEFAULT_IMAGE_MODEL,
     wordCount: totalCharacterCount,
     targetImageCount,
+    globalUserPrompt: normalizedUserPrompt || undefined,
     status: 'rendering',
     generatedAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),
@@ -2054,7 +2125,7 @@ export const generateArticleIllustrations = async ({
   const warnings = [];
 
   for (const slot of normalizedPlan.slots) {
-    const slotSeed = createSceneSlotSeed({
+    const slotSeed = createIllustrationSlotSeed({
       slot,
       negativePrompt,
       resolvedTitle,
@@ -2078,7 +2149,7 @@ export const generateArticleIllustrations = async ({
         assetVersions: [],
       },
       visualSystem: normalizedPlan.visualSystem,
-      userPrompt: '',
+      userPrompt: normalizedUserPrompt,
       qualityChecks,
     });
 
@@ -2113,6 +2184,7 @@ export const generateArticleIllustrationsProgressive = async ({
   articleTitle,
   articleContent,
   options = {},
+  userPrompt = '',
   force = false,
   onProgress,
 }) => {
@@ -2163,6 +2235,7 @@ export const generateArticleIllustrationsProgressive = async ({
   const totalCharacterCount = Math.max(1, countArticleCharacters(articleContent));
   const targetImageCount = clampSlotCount(Math.ceil(totalCharacterCount / 800));
   const dataHints = extractDataHints(paragraphs);
+  const normalizedUserPrompt = cleanText(userPrompt);
   const promptAssets = await readIllustrationPrompts(normalizedProfileId);
   const { system, guardrails, dataRules, profileStyle, qualityChecks, negativePrompt } = promptAssets;
 
@@ -2176,6 +2249,7 @@ export const generateArticleIllustrationsProgressive = async ({
     model: imageModel || DEFAULT_IMAGE_MODEL,
     wordCount: totalCharacterCount,
     targetImageCount,
+    globalUserPrompt: normalizedUserPrompt || undefined,
     status: 'planning',
     generatedAt: startedAt,
     updatedAt: startedAt,
@@ -2207,7 +2281,7 @@ export const generateArticleIllustrationsProgressive = async ({
   });
 
   try {
-    const planPrompt = [
+    let planPrompt = [
       `目标图数：${targetImageCount}`,
       `风格库：${normalizedProfileId}`,
       `文章标题：${resolvedTitle}`,
@@ -2227,6 +2301,10 @@ export const generateArticleIllustrationsProgressive = async ({
       JSON.stringify(dataHints, null, 2),
       '请严格按目标图数规划整篇配图，不要少图或多图。',
     ].join('\n\n');
+
+    if (normalizedUserPrompt) {
+      planPrompt = `${planPrompt}\n\n用户补充的整组配图要求：\n${normalizedUserPrompt}\n\n请把这些要求落实到整组视觉系统、图位规划和每张图的画面重点里。`;
+    }
 
     const rawPlan =
       shouldUseMockProvider() || !apiKey
@@ -2252,7 +2330,7 @@ export const generateArticleIllustrationsProgressive = async ({
     });
 
     const seededSlots = normalizedPlan.slots.map((slot) =>
-      createSceneSlotSeed({
+      createIllustrationSlotSeed({
         slot,
         negativePrompt,
         resolvedTitle,
@@ -2340,7 +2418,7 @@ export const generateArticleIllustrationsProgressive = async ({
           assetVersions: toAssetArray(manifest.assetVersions?.[slotSeed.id]),
         },
         visualSystem: normalizedPlan.visualSystem,
-        userPrompt: '',
+        userPrompt: normalizedUserPrompt,
         qualityChecks,
         onImageSaved: async ({ slot: interimSlot, asset: interimAsset }) => {
           const interimVersions = {

@@ -93,12 +93,14 @@ export const startArticleIllustrationGeneration = async ({
   topic,
   articleContent,
   options,
+  userPrompt,
   regenerate = false,
   signal,
 }: {
   topic: string;
   articleContent: string;
   options: WritingTaskOptions;
+  userPrompt?: string;
   regenerate?: boolean;
   signal?: AbortSignal;
 }) => {
@@ -116,6 +118,7 @@ export const startArticleIllustrationGeneration = async ({
         plannerModel: getPlannerModel(),
         imageModel: 'gemini-3-pro-image-preview',
         options,
+        userPrompt: String(userPrompt || '').trim(),
         regenerate,
       }),
     },

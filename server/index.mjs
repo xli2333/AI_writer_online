@@ -575,6 +575,7 @@ const server = http.createServer(async (request, response) => {
       const articleContent = String(body.articleContent || '').trim();
       const topic = String(body.topic || body.articleTitle || '').trim();
       const apiKey = String(body.apiKey || '').trim();
+      const userPrompt = String(body.userPrompt || '').trim();
       const regenerate = Boolean(body.regenerate);
 
       if (!apiKey) {
@@ -631,6 +632,7 @@ const server = http.createServer(async (request, response) => {
         plannerModel: String(body.plannerModel || '').trim() || undefined,
         imageModel: String(body.imageModel || '').trim() || undefined,
         options: body.options && typeof body.options === 'object' ? body.options : {},
+        userPrompt,
         force: regenerate,
         onProgress: (manifest) => {
           illustrationJobs.set(sourceHash, deriveIllustrationJobFromBundle(sourceHash, manifest));

@@ -25,6 +25,7 @@ import {
   startArticleIllustrationGeneration,
   switchIllustrationSlotVersion,
 } from '../services/articleIllustrationService';
+import { ArchiveEntry, buildZipArchive, downloadBlob, encodeTextArchiveEntry } from '../services/archiveService';
 import { MarkdownRenderer } from './MarkdownRenderer';
 import { SelectionMenu } from './SelectionMenu';
 import { WritingCopilot } from './WritingCopilot';
@@ -67,8 +68,8 @@ interface ViewerTab {
   label: string;
 }
 
-const downloadTextFile = (filename: string, content: string) => {
-  const blob = new Blob([content], { type: 'text/markdown;charset=utf-8' });
+const downloadTextFile = (filename: string, content: string, mimeType = 'text/plain;charset=utf-8') => {
+  const blob = new Blob([content], { type: mimeType });
   const url = URL.createObjectURL(blob);
   const anchor = document.createElement('a');
   anchor.href = url;
@@ -99,7 +100,67 @@ const PanelShell: React.FC<{
 
 const EXPORT_PAGE_WIDTH_PX = 794;
 const PLAIN_PDF_FONT_URL = '/fonts/yahei.ttf';
+const ARCHIVE_IMAGE_EXTENSION_MAP: Record<string, string> = {
+  'image/png': 'png',
+  'image/jpeg': 'jpg',
+  'image/jpg': 'jpg',
+  'image/webp': 'webp',
+  'image/gif': 'gif',
+  'image/svg+xml': 'svg',
+};
 let plainPdfFontBinaryPromise: Promise<string> | null = null;
+
+const sanitizeArchiveSegment = (value: string, fallback = 'file') => {
+  const normalized = String(value || '')
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-zA-Z0-9]+/g, '_')
+    .replace(/^_+|_+$/g, '')
+    .toLowerCase();
+  return (normalized || fallback).slice(0, 48);
+};
+
+const padArchiveIndex = (value: number) => String(Math.max(1, value)).padStart(2, '0');
+
+const normalizeTextAssetContent = (value: string) => {
+  const normalized = String(value || '').replace(/\r\n/g, '\n').trimEnd();
+  return normalized ? `${normalized}\n` : '';
+};
+
+const pushTextArchiveEntry = (entries: ArchiveEntry[], path: string, content: string | undefined, lastModified: Date) => {
+  if (!String(content || '').trim()) return;
+  entries.push(encodeTextArchiveEntry(path, normalizeTextAssetContent(content || ''), lastModified));
+};
+
+const resolveArchiveAssetUrl = (value: string) => {
+  const raw = String(value || '').trim();
+  if (!raw) return '';
+  if (/^(data:|blob:|https?:)/i.test(raw)) return raw;
+  if (raw.startsWith('//')) return `${window.location.protocol}${raw}`;
+  return new URL(raw, window.location.origin).toString();
+};
+
+const inferArchiveAssetExtension = (mimeType?: string, sourceUrl?: string) => {
+  const normalizedMimeType = String(mimeType || '')
+    .split(';')[0]
+    .trim()
+    .toLowerCase();
+  if (ARCHIVE_IMAGE_EXTENSION_MAP[normalizedMimeType]) {
+    return ARCHIVE_IMAGE_EXTENSION_MAP[normalizedMimeType];
+  }
+
+  try {
+    const pathname = new URL(resolveArchiveAssetUrl(sourceUrl || ''), window.location.origin).pathname;
+    const extension = pathname.split('.').pop()?.trim().toLowerCase();
+    if (extension && extension.length <= 5) {
+      return extension;
+    }
+  } catch {
+    return 'bin';
+  }
+
+  return 'bin';
+};
 
 const stripMarkdownTitleDecorators = (line: string) =>
   line
@@ -745,7 +806,7 @@ const IllustrationGalleryPanel: React.FC<{
                         <p className="mt-1 text-sm text-slate-500">{slot?.sectionTitle || '正文'}</p>
                       </div>
                       <span className="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-slate-500">
-                        {asset.renderMode === 'svg_chart' ? 'Data' : 'Scene'}
+                        {slot?.dataSpec || asset.role === 'data_chart' ? 'Data' : 'Scene'}
                       </span>
                     </div>
                     <p className="text-sm leading-relaxed text-slate-700">{slot?.purpose}</p>
@@ -1225,6 +1286,8 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
   const [illustrationError, setIllustrationError] = useState<string | null>(null);
   const [illustrationJob, setIllustrationJob] = useState<ArticleIllustrationJobStatus | null>(null);
   const [illustrationMutationSlotId, setIllustrationMutationSlotId] = useState<string | null>(null);
+  const [illustrationPromptDraft, setIllustrationPromptDraft] = useState('');
+  const [illustrationPromptMode, setIllustrationPromptMode] = useState<'initial' | 'regenerate' | null>(null);
   const [regeneratePromptDraft, setRegeneratePromptDraft] = useState('');
   const [regeneratePromptSlotId, setRegeneratePromptSlotId] = useState<string | null>(null);
   const [selection, setSelection] = useState('');
@@ -1245,6 +1308,11 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
   const activeRegenerateSlot = activeIllustrationBundle?.slots.find((slot) => slot.id === regeneratePromptSlotId);
   const illustrationBundleNeedsRefresh = bundleNeedsRefresh(activeIllustrationBundle);
   const autoIllustrationStateRef = useRef('');
+  const autoIllustrationPromptSeenRef = useRef('');
+  const illustrationPromptContextKey = useMemo(
+    () => `${data.options.styleProfile}\n${articleTitle}\n${data.articleContent || ''}`,
+    [articleTitle, data.articleContent, data.options.styleProfile]
+  );
 
   const stopIllustrationPolling = () => {
     if (illustrationStatusPollRef.current !== null) {
@@ -1309,8 +1377,8 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
     }, 1800);
   };
 
-  const requestIllustrations = async (regenerate = false) => {
-    if (!data.articleContent) return;
+  const requestIllustrations = async (regenerate = false, userPrompt = '') => {
+    if (!data.articleContent) return false;
     stopIllustrationPolling();
     illustrationRequestAbortRef.current?.abort();
     const controller = new AbortController();
@@ -1323,6 +1391,7 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
         topic: articleTitle,
         articleContent: data.articleContent,
         options: data.options,
+        userPrompt,
         regenerate,
         signal: controller.signal,
       });
@@ -1332,10 +1401,8 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
       if (result.job) {
         setIllustrationJob(result.job);
       }
-      if (!regenerate) {
-        setActivePanel('illustrations');
-      }
       await pollIllustrationStatus(result.sourceHash, true);
+      return true;
     } catch (error: any) {
       console.error('Illustration generation failed', error);
       if (error?.message === '已取消本次生图请求。') {
@@ -1344,6 +1411,7 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
         setIllustrationStatus('error');
         setIllustrationError(error?.message || '配图生成失败，请稍后重试。');
       }
+      return false;
     } finally {
       if (illustrationRequestAbortRef.current === controller) {
         illustrationRequestAbortRef.current = null;
@@ -1351,14 +1419,39 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
     }
   };
 
+  const openIllustrationPromptDialog = (mode: 'initial' | 'regenerate' = activeIllustrationBundle ? 'regenerate' : 'initial') => {
+    setIllustrationError(null);
+    setRegeneratePromptSlotId(null);
+    setRegeneratePromptDraft('');
+    setIllustrationPromptMode(mode);
+    setIllustrationPromptDraft(activeIllustrationBundle?.globalUserPrompt || '');
+  };
+
+  const closeIllustrationPromptDialog = () => {
+    setIllustrationPromptMode(null);
+    setIllustrationPromptDraft(activeIllustrationBundle?.globalUserPrompt || '');
+  };
+
+  const handleIllustrationPromptSubmit = () => {
+    if (!illustrationPromptMode) return;
+    const shouldRegenerate =
+      illustrationPromptMode === 'regenerate' || Boolean(String(illustrationPromptDraft || '').trim());
+    const nextPrompt = illustrationPromptDraft;
+    setIllustrationPromptMode(null);
+    setActivePanel('article');
+    void requestIllustrations(shouldRegenerate, nextPrompt);
+  };
+
   const openRegeneratePromptDialog = (slot: ArticleIllustrationSlot) => {
     setIllustrationError(null);
+    setIllustrationPromptMode(null);
+    setIllustrationPromptDraft('');
     setRegeneratePromptSlotId(slot.id);
     setRegeneratePromptDraft(slot.lastUserPrompt || '');
   };
 
-  const closeRegeneratePromptDialog = () => {
-    if (illustrationMutationSlotId && illustrationRequestAbortRef.current) {
+  const closeRegeneratePromptDialog = (abortRequest = false) => {
+    if (abortRequest && illustrationMutationSlotId && illustrationRequestAbortRef.current) {
       illustrationRequestAbortRef.current.abort();
       illustrationRequestAbortRef.current = null;
       setIllustrationMutationSlotId(null);
@@ -1384,7 +1477,7 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
         signal: controller.signal,
       });
       onUpdateIllustrationBundle(bundle);
-      closeRegeneratePromptDialog();
+      closeRegeneratePromptDialog(false);
     } catch (error: any) {
       console.error('Illustration slot regenerate failed', error);
       if (error?.message !== '已取消本次生图请求。') {
@@ -1545,7 +1638,12 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
       return;
     }
 
-    void requestIllustrations(Boolean(activeIllustrationBundle));
+    if (autoIllustrationPromptSeenRef.current === illustrationPromptContextKey) {
+      return;
+    }
+
+    autoIllustrationPromptSeenRef.current = illustrationPromptContextKey;
+    openIllustrationPromptDialog(activeIllustrationBundle ? 'regenerate' : 'initial');
   });
 
   useEffect(() => () => {
@@ -1923,6 +2021,162 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
   };
 
   const articleFilenameBase = articleTitle.replace(/[\\/:*?"<>|]/g, '_').slice(0, 24) || 'article';
+  const articleArchiveRoot = `${sanitizeArchiveSegment(articleTitle, 'article')}_assets`;
+
+  const downloadAssetArchive = async () => {
+    const previewContent = resolveArticlePreviewContent(viewerData);
+    if (!previewContent) return;
+
+    const exportedAt = new Date();
+    const archiveEntries: ArchiveEntry[] = [];
+    const orderedAssets = [...(activeIllustrationBundle?.assets || [])].sort((left, right) => {
+      const leftSlot =
+        activeIllustrationBundle?.slots.find((slot) => slot.id === left.slotId)?.order ?? Number.MAX_SAFE_INTEGER;
+      const rightSlot =
+        activeIllustrationBundle?.slots.find((slot) => slot.id === right.slotId)?.order ?? Number.MAX_SAFE_INTEGER;
+      if (leftSlot !== rightSlot) return leftSlot - rightSlot;
+      return left.title.localeCompare(right.title);
+    });
+    const slotMap = resolveIllustrationSlotMap(activeIllustrationBundle);
+    const imageManifestSections: string[] = [];
+    const imageWarnings: string[] = [];
+    const packagedImagePaths: string[] = [];
+
+    setIsDownloading(true);
+
+    try {
+      pushTextArchiveEntry(archiveEntries, `${articleArchiveRoot}/text/article.txt`, previewContent, exportedAt);
+      pushTextArchiveEntry(archiveEntries, `${articleArchiveRoot}/text/teaching_notes.txt`, data.teachingNotes, exportedAt);
+      pushTextArchiveEntry(archiveEntries, `${articleArchiveRoot}/text/outline.txt`, data.outline, exportedAt);
+      pushTextArchiveEntry(archiveEntries, `${articleArchiveRoot}/text/critique.txt`, data.critique, exportedAt);
+
+      data.researchDocuments.forEach((doc, index) => {
+        const researchTitle = String(doc.title || `research_${index + 1}`).trim();
+        const researchContent = [researchTitle, '', doc.content].filter(Boolean).join('\n');
+        pushTextArchiveEntry(
+          archiveEntries,
+          `${articleArchiveRoot}/text/research/${padArchiveIndex(index + 1)}_${sanitizeArchiveSegment(researchTitle, 'research')}.txt`,
+          researchContent,
+          exportedAt
+        );
+      });
+
+      for (let index = 0; index < orderedAssets.length; index += 1) {
+        const asset = orderedAssets[index];
+        const slot = slotMap.get(asset.slotId);
+        const order = slot?.order || index + 1;
+        const roleSegment = sanitizeArchiveSegment(slot?.role || asset.role || 'image', 'image');
+        const titleSegment = sanitizeArchiveSegment(slot?.title || asset.title || 'asset', 'asset');
+        const extension = inferArchiveAssetExtension(asset.mimeType, asset.url);
+        const imageRelativePath = `images/${padArchiveIndex(order)}_${roleSegment}_${titleSegment}.${extension}`;
+        const imageArchivePath = `${articleArchiveRoot}/${imageRelativePath}`;
+        const assetUrl = resolveArchiveAssetUrl(asset.url);
+
+        try {
+          if (!assetUrl) {
+            throw new Error('缺少图片地址');
+          }
+
+          const response = await fetch(assetUrl);
+          if (!response.ok) {
+            throw new Error(`下载失败：${response.status} ${response.statusText}`);
+          }
+
+          archiveEntries.push({
+            path: imageArchivePath,
+            data: new Uint8Array(await response.arrayBuffer()),
+            lastModified: exportedAt,
+          });
+          packagedImagePaths.push(imageRelativePath);
+          imageManifestSections.push(
+            [
+              `[${padArchiveIndex(order)}]`,
+              `文件: ${imageRelativePath}`,
+              `标题: ${slot?.title || asset.title || '未命名图片'}`,
+              `角色: ${slot?.role || asset.role || 'image'}`,
+              `章节: ${slot?.sectionTitle || '正文'}`,
+              `说明: ${asset.editorCaption || slot?.explanation || slot?.purpose || ''}`,
+              `锚点摘录: ${slot?.anchorExcerpt || ''}`,
+              `状态: 已打包`,
+              `源地址: ${assetUrl}`,
+            ].join('\n')
+          );
+        } catch (error: any) {
+          const message = error?.message || '图片下载失败';
+          imageWarnings.push(`${padArchiveIndex(order)} ${slot?.title || asset.title || asset.slotId}: ${message}`);
+          imageManifestSections.push(
+            [
+              `[${padArchiveIndex(order)}]`,
+              `文件: ${imageRelativePath}`,
+              `标题: ${slot?.title || asset.title || '未命名图片'}`,
+              `角色: ${slot?.role || asset.role || 'image'}`,
+              `章节: ${slot?.sectionTitle || '正文'}`,
+              `说明: ${asset.editorCaption || slot?.explanation || slot?.purpose || ''}`,
+              `锚点摘录: ${slot?.anchorExcerpt || ''}`,
+              `状态: 下载失败`,
+              `失败原因: ${message}`,
+              `源地址: ${assetUrl || '无'}`,
+            ].join('\n')
+          );
+        }
+      }
+
+      const readmeLines = [
+        '素材包导出说明',
+        `标题: ${articleTitle}`,
+        `导出时间: ${exportedAt.toISOString()}`,
+        '文本格式: UTF-8 TXT',
+        '图片格式: 保留当前已选中的原始输出文件',
+        `正文文件: text/article.txt`,
+        data.teachingNotes ? '附加文本: text/teaching_notes.txt' : '',
+        data.outline ? '附加文本: text/outline.txt' : '',
+        data.critique ? '附加文本: text/critique.txt' : '',
+        data.researchDocuments.length ? `研究资料: ${data.researchDocuments.length} 份` : '',
+        `已打包图片: ${packagedImagePaths.length} 张`,
+        imageWarnings.length ? `图片下载失败: ${imageWarnings.length} 张` : '',
+        '',
+        '说明:',
+        '- 所有文字资产均使用 TXT，便于后续排版软件稳定导入。',
+        '- images/ 目录只包含当前界面选中的配图版本。',
+        '- text/image_manifest.txt 记录图片位次、章节和说明。',
+      ].filter(Boolean);
+
+      const imageManifestLines = [
+        '图片素材清单',
+        `标题: ${articleTitle}`,
+        `导出时间: ${exportedAt.toISOString()}`,
+        `当前配图状态: ${activeIllustrationBundle?.status || 'none'}`,
+        `已打包图片: ${packagedImagePaths.length}`,
+        imageWarnings.length ? `下载失败: ${imageWarnings.length}` : '',
+        '',
+        ...(imageManifestSections.length > 0 ? imageManifestSections.join('\n\n').split('\n') : ['当前没有可打包的图片。']),
+      ].filter(Boolean);
+
+      pushTextArchiveEntry(archiveEntries, `${articleArchiveRoot}/README.txt`, readmeLines.join('\n'), exportedAt);
+      pushTextArchiveEntry(
+        archiveEntries,
+        `${articleArchiveRoot}/text/image_manifest.txt`,
+        imageManifestLines.join('\n'),
+        exportedAt
+      );
+      if (imageWarnings.length > 0) {
+        pushTextArchiveEntry(
+          archiveEntries,
+          `${articleArchiveRoot}/text/export_warnings.txt`,
+          imageWarnings.join('\n'),
+          exportedAt
+        );
+      }
+
+      const zipBlob = buildZipArchive(archiveEntries);
+      downloadBlob(`${articleFilenameBase}_assets.zip`, zipBlob);
+    } catch (error: any) {
+      console.error('Asset archive export failed', error);
+      alert(error?.message || '素材包下载失败，请稍后再试。');
+    } finally {
+      setIsDownloading(false);
+    }
+  };
 
   const renderActivePanel = () => {
     switch (activePanel) {
@@ -1935,7 +2189,7 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
             job={illustrationJob}
             isGenerating={illustrationStatus === 'generating'}
             errorMessage={illustrationError}
-            onRegenerateAll={() => void requestIllustrations(true)}
+            onRegenerateAll={() => openIllustrationPromptDialog(activeIllustrationBundle ? 'regenerate' : 'initial')}
             slotActions={illustrationSlotActions}
           />
         );
@@ -1997,6 +2251,60 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
         </div>
       )}
 
+      {illustrationPromptMode && (
+        <div className="fixed inset-0 z-[96] flex items-center justify-center bg-slate-950/40 px-4 backdrop-blur-sm no-print">
+          <div className="w-full max-w-2xl rounded-[28px] border border-slate-200 bg-white p-6 shadow-2xl sm:p-8">
+            <div className="mb-5">
+              <h3 className="font-serif text-2xl font-bold text-slate-900">
+                {illustrationPromptMode === 'regenerate' ? '重跑整组配图' : '先补充整组配图要求'}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-slate-500">
+                在出图前先写下你希望的整体风格、特殊限制、重点元素或禁用元素。留空也可以，系统会按默认视觉系统生成。
+              </p>
+            </div>
+
+            <label className="block text-sm font-medium text-slate-700" htmlFor="illustration-batch-prompt">
+              整组配图要求
+            </label>
+            <textarea
+              id="illustration-batch-prompt"
+              value={illustrationPromptDraft}
+              onChange={(event) => setIllustrationPromptDraft(event.target.value)}
+              rows={7}
+              placeholder="例如：整体更克制一些，偏纪实商业杂志风；重点突出门店经营压力和供应链关系；避免夸张灯牌、广告海报感和无关城市地标。"
+              className="mt-3 w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm leading-relaxed text-slate-700 outline-none transition-colors focus:border-report-accent focus:bg-white"
+            />
+
+            {illustrationError ? (
+              <div className="mt-4 rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm leading-relaxed text-red-700">
+                {illustrationError}
+              </div>
+            ) : null}
+
+            <div className="mt-6 flex flex-wrap items-center justify-end gap-3">
+              <button
+                onClick={closeIllustrationPromptDialog}
+                className="rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-600 transition-colors hover:bg-slate-50 disabled:opacity-50"
+              >
+                取消
+              </button>
+              <button
+                onClick={() => void handleIllustrationPromptSubmit()}
+                disabled={illustrationStatus === 'generating'}
+                className="inline-flex items-center gap-2 rounded-xl bg-report-accent px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-teal-800 disabled:opacity-50"
+              >
+                {illustrationStatus === 'generating' ? <ArrowPathIcon className="h-4 w-4 animate-spin" /> : null}
+                {illustrationStatus === 'generating'
+                  ? '配图启动中'
+                  : illustrationPromptMode === 'regenerate'
+                    ? '按这个要求重跑'
+                    : '开始生成配图'}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       {regeneratePromptSlotId && (
         <div className="fixed inset-0 z-[95] flex items-center justify-center bg-slate-950/40 px-4 backdrop-blur-sm no-print">
           <div className="w-full max-w-2xl rounded-[28px] border border-slate-200 bg-white p-6 shadow-2xl sm:p-8">
@@ -2027,7 +2335,7 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
 
             <div className="mt-6 flex flex-wrap items-center justify-end gap-3">
               <button
-                onClick={closeRegeneratePromptDialog}
+                onClick={() => closeRegeneratePromptDialog(true)}
                 className="rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-600 transition-colors hover:bg-slate-50 disabled:opacity-50"
               >
                 {illustrationMutationSlotId ? '取消并停止' : '取消'}
@@ -2095,20 +2403,30 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
             </button>
 
             <button
-              onClick={() => void requestIllustrations(true)}
+              onClick={() => openIllustrationPromptDialog(activeIllustrationBundle ? 'regenerate' : 'initial')}
               disabled={!hasFinalArticle || illustrationStatus === 'generating'}
               className="flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-600 transition-colors hover:bg-gray-50 disabled:opacity-50"
             >
               <ArrowPathIcon className={`h-4 w-4 ${illustrationStatus === 'generating' ? 'animate-spin text-report-accent' : ''}`} />
-              {illustrationStatus === 'generating' ? '配图中' : '重跑配图'}
+              {illustrationStatus === 'generating' ? '配图中' : activeIllustrationBundle ? '重跑配图' : '生成配图'}
             </button>
 
             <button
-              onClick={() => downloadTextFile(`${articleFilenameBase}.md`, previewArticleContent)}
-              className="flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm transition-colors hover:bg-gray-50"
+              onClick={() => downloadTextFile(`${articleFilenameBase}.md`, previewArticleContent, 'text/markdown;charset=utf-8')}
+              disabled={!previewArticleContent || isDownloading}
+              className="flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm transition-colors hover:bg-gray-50 disabled:opacity-60"
             >
               <DocumentDuplicateIcon className="h-4 w-4" />
               正文 MD
+            </button>
+
+            <button
+              onClick={() => void downloadAssetArchive()}
+              disabled={!previewArticleContent || isDownloading}
+              className="flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm transition-colors hover:bg-gray-50 disabled:opacity-60"
+            >
+              {isDownloading ? <ArrowPathIcon className="h-4 w-4 animate-spin" /> : <ArrowDownTrayIcon className="h-4 w-4" />}
+              素材包 ZIP
             </button>
 
             <button
