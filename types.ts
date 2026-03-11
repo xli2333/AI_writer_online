@@ -203,6 +203,7 @@ export interface ArticleIllustrationBundle {
   wordCount: number;
   targetImageCount: number;
   globalUserPrompt?: string;
+  imageCountPrompt?: string;
   status: 'idle' | 'planning' | 'rendering' | 'ready' | 'partial' | 'error' | 'canceled';
   generatedAt?: string;
   updatedAt?: string;

@@ -46,6 +46,8 @@ const createGenAiClient = (apiKey, timeoutMs) =>
 const PLAN_SCHEMA = {
   type: Type.OBJECT,
   properties: {
+    planned_image_count: { type: Type.NUMBER },
+    count_rationale: { type: Type.STRING },
     visual_system: {
       type: Type.OBJECT,
       properties: {
@@ -444,6 +446,153 @@ const buildFallbackDataPoints = (text) => {
 
 const clampSlotCount = (count) => Math.max(1, Math.min(10, Number(count) || 1));
 
+const CHINESE_COUNT_TOKENS = {
+  零: 0,
+  一: 1,
+  二: 2,
+  两: 2,
+  三: 3,
+  四: 4,
+  五: 5,
+  六: 6,
+  七: 7,
+  八: 8,
+  九: 9,
+  十: 10,
+};
+
+const parseChineseCountToken = (token) => {
+  const source = cleanText(token);
+  if (!source) return null;
+  if (source === '十') return 10;
+  if (source.length === 2 && source.startsWith('十')) {
+    return 10 + (CHINESE_COUNT_TOKENS[source[1]] || 0);
+  }
+  if (source.length === 2 && source.endsWith('十')) {
+    return (CHINESE_COUNT_TOKENS[source[0]] || 0) * 10;
+  }
+  if (source.length === 3 && source[1] === '十') {
+    return (CHINESE_COUNT_TOKENS[source[0]] || 0) * 10 + (CHINESE_COUNT_TOKENS[source[2]] || 0);
+  }
+  if (source.length === 1 && Object.prototype.hasOwnProperty.call(CHINESE_COUNT_TOKENS, source)) {
+    return CHINESE_COUNT_TOKENS[source];
+  }
+  return null;
+};
+
+const countMarkdownHeadings = (articleContent, pattern) => (String(articleContent || '').match(pattern) || []).length;
+
+const resolveStructuredImageRuleCount = ({ instruction, articleContent, paragraphs }) => {
+  const normalized = cleanText(instruction);
+  if (!normalized) {
+    return null;
+  }
+
+  const explicitArabic = normalized.match(/(\d{1,2})\s*(?:张|幅|个|组)?(?:图|配图)?/);
+  if (explicitArabic) {
+    return clampSlotCount(Number(explicitArabic[1]));
+  }
+
+  const explicitChinese = normalized.match(/([零一二两三四五六七八九十]{1,3})\s*(?:张|幅|个|组)?(?:图|配图)?/);
+  if (explicitChinese) {
+    const parsed = parseChineseCountToken(explicitChinese[1]);
+    if (Number.isFinite(parsed)) {
+      return clampSlotCount(parsed);
+    }
+  }
+
+  const sectionCount = new Set((Array.isArray(paragraphs) ? paragraphs : []).map((item) => cleanText(item?.heading)).filter(Boolean)).size;
+  const h2Count = countMarkdownHeadings(articleContent, /^##(?!#)\s+/gm);
+  const h3Count = countMarkdownHeadings(articleContent, /^###\s+/gm);
+  const paragraphCount = Array.isArray(paragraphs) ? paragraphs.length : 0;
+
+  if (/(?:每个?二级标题|每个?h2|每个H2)/.test(normalized)) {
+    return clampSlotCount(h2Count || sectionCount || 1);
+  }
+  if (/(?:每个?三级标题|每个?h3|每个H3)/.test(normalized)) {
+    return clampSlotCount(h3Count || sectionCount || 1);
+  }
+  if (/(?:每个?子模块|每个?模块|每个?部分|每个?章节|每个?小节|每节|每个?单元)/.test(normalized)) {
+    return clampSlotCount(sectionCount || h2Count || h3Count || 1);
+  }
+  if (/(?:每个?子段落|每段|逐段|一段一张)/.test(normalized)) {
+    return clampSlotCount(paragraphCount || 1);
+  }
+  if (/(?:少一点|少些|精简一点)/.test(normalized)) {
+    return clampSlotCount(Math.max(1, Math.ceil(paragraphCount / 3)));
+  }
+  if (/(?:多一点|丰富一点|密一点)/.test(normalized)) {
+    return clampSlotCount(Math.max(1, Math.ceil(paragraphCount / 2)));
+  }
+
+  return null;
+};
+
+export const resolveIllustrationCountPreference = ({
+  articleContent,
+  imageCountPrompt = '',
+  paragraphs = buildArticleStructure(articleContent),
+  totalCharacterCount = Math.max(1, countArticleCharacters(articleContent)),
+}) => {
+  const normalizedImageCountPrompt = cleanText(imageCountPrompt);
+  const defaultTargetImageCount = clampSlotCount(Math.ceil(totalCharacterCount / TARGET_CHARS_PER_ILLUSTRATION));
+  const preferredCount = resolveStructuredImageRuleCount({
+    instruction: normalizedImageCountPrompt,
+    articleContent,
+    paragraphs,
+  });
+
+  return {
+    normalizedImageCountPrompt,
+    targetImageCount: preferredCount || defaultTargetImageCount,
+    usedStructuredRule: Boolean(normalizedImageCountPrompt && preferredCount),
+  };
+};
+
+const buildIllustrationPlanPrompt = ({
+  targetImageCount,
+  normalizedProfileId,
+  resolvedTitle,
+  options,
+  paragraphs,
+  dataHints,
+  normalizedUserPrompt,
+  normalizedImageCountPrompt,
+}) => {
+  let planPrompt = [
+    `目标图数：${targetImageCount}`,
+    `风格档：${normalizedProfileId}`,
+    `文章标题：${resolvedTitle}`,
+    `文章任务信息：${JSON.stringify(
+      {
+        audience: options.audience || '',
+        genre: options.genre || '',
+        style: options.style || '',
+        articleGoal: options.articleGoal || '',
+      },
+      null,
+      2
+    )}`,
+    '文章结构地图：',
+    summarizeStructureForPrompt(paragraphs),
+    '可视化候选数据段：',
+    JSON.stringify(dataHints, null, 2),
+    normalizedImageCountPrompt
+      ? `配图数量 / 规则：${normalizedImageCountPrompt}`
+      : 'No extra image-count rule was provided.',
+    'Return planned_image_count as an integer from 1 to 10.',
+    normalizedImageCountPrompt
+      ? 'If the user gave an explicit number, obey it exactly. If the user gave a rule, infer the final count from article structure and make slots.length exactly match planned_image_count.'
+      : 'If no extra image-count rule is given, use the target count above and make slots.length exactly match planned_image_count.',
+  ].join('\n\n');
+
+  if (normalizedUserPrompt) {
+    planPrompt = `${planPrompt}\n\n用户补充的整组配图要求：\n${normalizedUserPrompt}\n\n请把这些要求落实到整组视觉系统、图位规划和每张图的画面重点里。`;
+  }
+
+  return planPrompt;
+};
+
 const pickFallbackParagraphIndices = (paragraphs, targetCount) => {
   if (!paragraphs.length) {
     return Array.from({ length: targetCount }, (_, index) => index);
@@ -467,6 +616,8 @@ const buildFallbackPlan = ({ paragraphs, targetImageCount, profileId, dataHints 
   const dataIndexSet = new Set((Array.isArray(dataHints) ? dataHints : []).map((item) => item.index));
 
   return {
+    planned_image_count: targetImageCount,
+    count_rationale: 'Derived from local image-count preference parsing.',
     visual_system: buildVisualSystemFallback(profileId),
     slots: indices.map((paragraphIndex, index) => {
       const anchor = paragraphs[paragraphIndex] || paragraphs[0] || { index: paragraphIndex, heading: '', text: '' };
@@ -1377,6 +1528,7 @@ const normalizeIllustrationManifest = (manifest, defaults = {}) => {
     wordCount: Number(manifest?.wordCount || defaults.wordCount || 0),
     targetImageCount: Number(manifest?.targetImageCount || defaults.targetImageCount || normalizedSlots.length || 1),
     globalUserPrompt: cleanText(manifest?.globalUserPrompt || defaults.globalUserPrompt) || undefined,
+    imageCountPrompt: cleanText(manifest?.imageCountPrompt || defaults.imageCountPrompt) || undefined,
     status: cleanText(manifest?.status || defaults.status) || 'ready',
     generatedAt: cleanText(manifest?.generatedAt || defaults.generatedAt) || undefined,
     updatedAt: cleanText(manifest?.updatedAt || defaults.updatedAt) || undefined,
@@ -1695,6 +1847,7 @@ export const generateArticleIllustrations = async ({
   articleContent,
   options = {},
   userPrompt = '',
+  imageCountPrompt = '',
   force = false,
 }) => {
   const normalizedProfileId = resolveStyleProfileId(profileId);
@@ -1735,7 +1888,12 @@ export const generateArticleIllustrations = async ({
 
   const paragraphs = buildArticleStructure(articleContent);
   const totalCharacterCount = Math.max(1, countArticleCharacters(articleContent));
-  const targetImageCount = clampSlotCount(Math.ceil(totalCharacterCount / TARGET_CHARS_PER_ILLUSTRATION));
+  const { normalizedImageCountPrompt, targetImageCount } = resolveIllustrationCountPreference({
+    articleContent,
+    imageCountPrompt,
+    paragraphs,
+    totalCharacterCount,
+  });
   const dataHints = extractDataHints(paragraphs);
   const normalizedUserPrompt = cleanText(userPrompt);
   const promptAssets = await readIllustrationPrompts(normalizedProfileId);
@@ -1766,6 +1924,17 @@ export const generateArticleIllustrations = async ({
     planPrompt = `${planPrompt}\n\n用户补充的整组配图要求：\n${normalizedUserPrompt}\n\n请把这些要求落实到整组视觉系统、图位规划和每张图的画面重点里。`;
   }
 
+  planPrompt = buildIllustrationPlanPrompt({
+    targetImageCount,
+    normalizedProfileId,
+    resolvedTitle,
+    options,
+    paragraphs,
+    dataHints,
+    normalizedUserPrompt,
+    normalizedImageCountPrompt,
+  });
+
   const rawPlan =
     shouldUseMockProvider() || !apiKey
       ? buildFallbackPlan({
@@ -1782,10 +1951,12 @@ export const generateArticleIllustrations = async ({
           schema: PLAN_SCHEMA,
         });
 
+  const finalizedTargetImageCount = clampSlotCount(Number(rawPlan?.planned_image_count) || targetImageCount);
+
   const normalizedPlan = normalizePlan({
     plan: rawPlan,
     paragraphs,
-    targetImageCount,
+    targetImageCount: finalizedTargetImageCount,
     profileId: normalizedProfileId,
   });
 
@@ -1798,8 +1969,9 @@ export const generateArticleIllustrations = async ({
     styleProfile: normalizedProfileId,
     model: imageModel || DEFAULT_IMAGE_MODEL,
     wordCount: totalCharacterCount,
-    targetImageCount,
+    targetImageCount: finalizedTargetImageCount,
     globalUserPrompt: normalizedUserPrompt || undefined,
+    imageCountPrompt: normalizedImageCountPrompt || undefined,
     status: 'rendering',
     generatedAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),
@@ -1834,7 +2006,7 @@ export const generateArticleIllustrations = async ({
       resolvedTitle,
       normalizedPlan,
       normalizedProfileId,
-      targetImageCount,
+      targetImageCount: finalizedTargetImageCount,
       promptAssets,
       articleContent,
     });
@@ -1887,6 +2059,7 @@ export const generateArticleIllustrationsProgressive = async ({
   articleContent,
   options = {},
   userPrompt = '',
+  imageCountPrompt = '',
   force = false,
   onProgress,
   isCanceled,
@@ -1903,7 +2076,12 @@ export const generateArticleIllustrationsProgressive = async ({
   const startedAt = new Date().toISOString();
   const paragraphs = buildArticleStructure(articleContent);
   const totalCharacterCount = Math.max(1, countArticleCharacters(articleContent));
-  const targetImageCount = clampSlotCount(Math.ceil(totalCharacterCount / TARGET_CHARS_PER_ILLUSTRATION));
+  const { normalizedImageCountPrompt, targetImageCount } = resolveIllustrationCountPreference({
+    articleContent,
+    imageCountPrompt,
+    paragraphs,
+    totalCharacterCount,
+  });
   const dataHints = extractDataHints(paragraphs);
   const normalizedUserPrompt = cleanText(userPrompt);
   const promptAssets = await readIllustrationPrompts(normalizedProfileId);
@@ -1928,6 +2106,7 @@ export const generateArticleIllustrationsProgressive = async ({
         wordCount: totalCharacterCount,
         targetImageCount,
         globalUserPrompt: normalizedUserPrompt || undefined,
+        imageCountPrompt: normalizedImageCountPrompt || undefined,
         status: 'canceled',
         generatedAt: startedAt,
         updatedAt: startedAt,
@@ -1996,6 +2175,7 @@ export const generateArticleIllustrationsProgressive = async ({
     wordCount: totalCharacterCount,
     targetImageCount,
     globalUserPrompt: normalizedUserPrompt || undefined,
+    imageCountPrompt: normalizedImageCountPrompt || undefined,
     status: 'planning',
     generatedAt: startedAt,
     updatedAt: startedAt,
@@ -2053,6 +2233,17 @@ export const generateArticleIllustrationsProgressive = async ({
       planPrompt = `${planPrompt}\n\n用户补充的整组配图要求：\n${normalizedUserPrompt}\n\n请把这些要求落实到整组视觉系统、图位规划和每张图的画面重点里。`;
     }
 
+    planPrompt = buildIllustrationPlanPrompt({
+      targetImageCount,
+      normalizedProfileId,
+      resolvedTitle,
+      options,
+      paragraphs,
+      dataHints,
+      normalizedUserPrompt,
+      normalizedImageCountPrompt,
+    });
+
     const rawPlan =
       shouldUseMockProvider() || !apiKey
         ? buildFallbackPlan({
@@ -2070,10 +2261,11 @@ export const generateArticleIllustrationsProgressive = async ({
           });
 
     await abortIfCanceled('图位规划完成，正在整理生成队列');
+    const finalizedTargetImageCount = clampSlotCount(Number(rawPlan?.planned_image_count) || targetImageCount);
     const normalizedPlan = normalizePlan({
       plan: rawPlan,
       paragraphs,
-      targetImageCount,
+      targetImageCount: finalizedTargetImageCount,
       profileId: normalizedProfileId,
     });
 
@@ -2084,7 +2276,7 @@ export const generateArticleIllustrationsProgressive = async ({
         resolvedTitle,
         normalizedPlan,
         normalizedProfileId,
-        targetImageCount,
+        targetImageCount: finalizedTargetImageCount,
         promptAssets,
         articleContent,
       })
@@ -2092,6 +2284,7 @@ export const generateArticleIllustrationsProgressive = async ({
 
     manifest = await publish({
       ...manifest,
+      targetImageCount: seededSlots.length,
       status: 'rendering',
       visualSystem: {
         collectionTitle: `${resolvedTitle} 配图`,

@@ -1351,6 +1351,7 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
   const [illustrationMutationSlotId, setIllustrationMutationSlotId] = useState<string | null>(null);
   const [illustrationMutationKind, setIllustrationMutationKind] = useState<'regenerate' | 'caption' | 'delete' | 'switch' | null>(null);
   const [illustrationPromptDraft, setIllustrationPromptDraft] = useState('');
+  const [illustrationCountPromptDraft, setIllustrationCountPromptDraft] = useState('');
   const [illustrationPromptMode, setIllustrationPromptMode] = useState<'initial' | 'regenerate' | null>(null);
   const [regeneratePromptDraft, setRegeneratePromptDraft] = useState('');
   const [regeneratePromptSlotId, setRegeneratePromptSlotId] = useState<string | null>(null);
@@ -1460,7 +1461,7 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
     }, 1800);
   };
 
-  const requestIllustrations = async (regenerate = false, userPrompt = '') => {
+  const requestIllustrations = async (regenerate = false, userPrompt = '', imageCountPrompt = '') => {
     if (!data.articleContent) return false;
     const flowToken = beginIllustrationFlow();
     stopIllustrationPolling();
@@ -1476,6 +1477,7 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
         articleContent: data.articleContent,
         options: data.options,
         userPrompt,
+        imageCountPrompt,
         regenerate,
         signal: controller.signal,
       });
@@ -1552,11 +1554,13 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
     setRegeneratePromptDraft('');
     setIllustrationPromptMode(mode);
     setIllustrationPromptDraft(activeIllustrationBundle?.globalUserPrompt || '');
+    setIllustrationCountPromptDraft(activeIllustrationBundle?.imageCountPrompt || '');
   };
 
   const closeIllustrationPromptDialog = () => {
     setIllustrationPromptMode(null);
     setIllustrationPromptDraft(activeIllustrationBundle?.globalUserPrompt || '');
+    setIllustrationCountPromptDraft(activeIllustrationBundle?.imageCountPrompt || '');
   };
 
   const handleIllustrationPromptSubmit = () => {
@@ -1564,15 +1568,17 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
     const shouldRegenerate =
       illustrationPromptMode === 'regenerate' || Boolean(String(illustrationPromptDraft || '').trim());
     const nextPrompt = illustrationPromptDraft;
+    const nextImageCountPrompt = illustrationCountPromptDraft;
     setIllustrationPromptMode(null);
     setActivePanel('illustrations');
-    void requestIllustrations(shouldRegenerate, nextPrompt);
+    void requestIllustrations(shouldRegenerate, nextPrompt, nextImageCountPrompt);
   };
 
   const openRegeneratePromptDialog = (slot: ArticleIllustrationSlot) => {
     setIllustrationError(null);
     setIllustrationPromptMode(null);
     setIllustrationPromptDraft('');
+    setIllustrationCountPromptDraft('');
     setCaptionPromptSlotId(null);
     setCaptionPromptDraft('');
     setRegeneratePromptSlotId(slot.id);
@@ -1594,6 +1600,7 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
     setIllustrationError(null);
     setIllustrationPromptMode(null);
     setIllustrationPromptDraft('');
+    setIllustrationCountPromptDraft('');
     setRegeneratePromptSlotId(null);
     setRegeneratePromptDraft('');
     setCaptionPromptSlotId(slot.id);
@@ -2501,7 +2508,25 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
               </p>
             </div>
 
-            <label className="block text-sm font-medium text-slate-700" htmlFor="illustration-batch-prompt">
+            <label className="block text-sm font-medium text-slate-700" htmlFor="illustration-batch-count-prompt">
+              {'\u914d\u56fe\u6570\u91cf / \u89c4\u5219'}
+            </label>
+            <input
+              id="illustration-batch-count-prompt"
+              value={illustrationCountPromptDraft}
+              onChange={(event) => setIllustrationCountPromptDraft(event.target.value)}
+              placeholder={
+                '\u4f8b\u5982\uff1a3 \u5f20 / 5 \u5f20 / \u6bcf\u4e2a\u5b50\u6a21\u5757\u4e00\u5f20 / \u6bcf\u4e2a\u4e8c\u7ea7\u6807\u9898\u4e00\u5f20'
+              }
+              className="mt-3 w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm leading-relaxed text-slate-700 outline-none transition-colors focus:border-report-accent focus:bg-white"
+            />
+            <p className="mt-2 text-xs leading-relaxed text-slate-500">
+              {
+                '\u53ef\u4ee5\u76f4\u63a5\u8bf4\u6570\u5b57\uff0c\u4e5f\u53ef\u4ee5\u5199\u89c4\u5219\uff0c\u4f8b\u5982\u201c\u6bcf\u4e2a\u5b50\u6a21\u5757\u4e00\u5f20\u201d\u3002\u7cfb\u7edf\u4f1a\u7ed3\u5408\u6587\u7ae0\u7ed3\u6784\u7406\u89e3\u6210\u6700\u7ec8\u5f20\u6570\u3002'
+              }
+            </p>
+
+            <label className="mt-5 block text-sm font-medium text-slate-700" htmlFor="illustration-batch-prompt">
               整组配图要求
             </label>
             <textarea

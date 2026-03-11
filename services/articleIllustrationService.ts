@@ -101,6 +101,7 @@ export const startArticleIllustrationGeneration = async ({
   articleContent,
   options,
   userPrompt,
+  imageCountPrompt,
   regenerate = false,
   signal,
 }: {
@@ -108,6 +109,7 @@ export const startArticleIllustrationGeneration = async ({
   articleContent: string;
   options: WritingTaskOptions;
   userPrompt?: string;
+  imageCountPrompt?: string;
   regenerate?: boolean;
   signal?: AbortSignal;
 }) => {
@@ -126,6 +128,7 @@ export const startArticleIllustrationGeneration = async ({
         imageModel: 'gemini-3-pro-image-preview',
         options,
         userPrompt: String(userPrompt || '').trim(),
+        imageCountPrompt: String(imageCountPrompt || '').trim(),
         regenerate,
       }),
     },

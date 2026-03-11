@@ -13,6 +13,7 @@ import {
   markIllustrationManifestCanceled,
   regenerateIllustrationCaption,
   regenerateIllustrationSlot,
+  resolveIllustrationCountPreference,
   resolveIllustrationRequestIdentity,
   switchIllustrationSlotVersion,
 } from './articleIllustrationService.mjs';
@@ -447,6 +448,7 @@ const toIllustrationBundle = (manifest) => {
     model: String(manifest?.imageModel || ''),
     wordCount: Number(manifest?.totalCharacterCount || 0),
     targetImageCount: Number(manifest?.targetImageCount || slots.length || 0),
+    imageCountPrompt: String(manifest?.imageCountPrompt || '') || undefined,
     generatedAt: String(manifest?.createdAt || '') || undefined,
     visualSystem: {
       profileLabel: String(manifest?.profileId || ''),
@@ -664,6 +666,7 @@ const server = http.createServer(async (request, response) => {
       const topic = String(body.topic || body.articleTitle || '').trim();
       const apiKey = String(body.apiKey || '').trim();
       const userPrompt = String(body.userPrompt || '').trim();
+      const imageCountPrompt = String(body.imageCountPrompt || '').trim();
       const regenerate = Boolean(body.regenerate);
 
       if (!apiKey) {
@@ -684,7 +687,10 @@ const server = http.createServer(async (request, response) => {
       const sourceHash = identity.sourceHash;
       const existingManifest = await getIllustrationManifestBySourceHash(sourceHash);
       const existingJob = illustrationJobs.get(sourceHash);
-      const targetImageCount = Math.max(1, Math.min(10, Math.ceil(String(articleContent).replace(/\s+/g, '').length / 1000)));
+      const { targetImageCount } = resolveIllustrationCountPreference({
+        articleContent,
+        imageCountPrompt,
+      });
 
       if (
         !regenerate &&
@@ -724,6 +730,7 @@ const server = http.createServer(async (request, response) => {
         imageModel: String(body.imageModel || '').trim() || undefined,
         options: body.options && typeof body.options === 'object' ? body.options : {},
         userPrompt,
+        imageCountPrompt,
         force: regenerate,
         isCanceled: () => !isIllustrationRunCurrent(sourceHash, runId),
         shouldPersistCancellation: () => getIllustrationRunState(sourceHash).activeRunId === null,
