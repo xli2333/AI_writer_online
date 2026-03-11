@@ -14,13 +14,21 @@ const DEFAULT_PLANNER_MODEL = 'gemini-3.1-pro-preview';
 const IMAGE_WIDTH = 3840;
 const IMAGE_HEIGHT = 2160;
 const CHART_VIEWBOX = `0 0 ${IMAGE_WIDTH} ${IMAGE_HEIGHT}`;
-const MAX_IMAGE_RETRIES = 2;
 const ILLUSTRATION_PROMPT_VERSION = 'illustration-v3';
 const TARGET_CHARS_PER_ILLUSTRATION = 1000;
 const PLANNER_TIMEOUT_MS = 10 * 60 * 1000;
 const IMAGE_TIMEOUT_MS = 12 * 60 * 1000;
-const QC_TIMEOUT_MS = 3 * 60 * 1000;
 const CAPTION_TIMEOUT_MS = 3 * 60 * 1000;
+
+export const ILLUSTRATION_CANCELED_MESSAGE = '本轮配图已停止，可调整 Prompt 后重新开始。';
+
+const createIllustrationTaskCanceledError = (message = ILLUSTRATION_CANCELED_MESSAGE) => {
+  const error = new Error(message);
+  error.name = 'IllustrationTaskCanceledError';
+  return error;
+};
+
+export const isIllustrationTaskCanceledError = (error) => error?.name === 'IllustrationTaskCanceledError';
 
 const proxyUrl = process.env.HTTPS_PROXY || process.env.HTTP_PROXY || '';
 if (proxyUrl) {
@@ -119,16 +127,6 @@ const PLAN_SCHEMA = {
     },
   },
   required: ['visual_system', 'slots'],
-};
-
-const IMAGE_QC_SCHEMA = {
-  type: Type.OBJECT,
-  properties: {
-    pass: { type: Type.BOOLEAN },
-    issues: { type: Type.ARRAY, items: { type: Type.STRING } },
-    retry_advice: { type: Type.STRING },
-  },
-  required: ['pass', 'issues', 'retry_advice'],
 };
 
 const IMAGE_EXPLANATION_SCHEMA = {
@@ -234,6 +232,41 @@ const buildIllustrationProgress = ({
   startedAt: cleanText(startedAt) || undefined,
   updatedAt: new Date().toISOString(),
 });
+const resetCanceledIllustrationSlots = (slots = [], assetVersions = {}) =>
+  (Array.isArray(slots) ? slots : []).map((slot) => {
+    if (String(slot?.status || '') !== 'rendering') {
+      return slot;
+    }
+    const versions = toAssetArray(assetVersions?.[slot.id]);
+    return {
+      ...slot,
+      status: versions.length > 0 ? 'ready' : 'planned',
+      error: undefined,
+    };
+  });
+
+const buildCanceledIllustrationManifest = (manifest, currentStep = ILLUSTRATION_CANCELED_MESSAGE) => {
+  const normalizedCurrentStep = cleanText(currentStep) || ILLUSTRATION_CANCELED_MESSAGE;
+  const startedAt = cleanText(manifest?.progress?.startedAt || manifest?.generatedAt) || undefined;
+  const completedCount = Array.isArray(manifest?.assets) ? manifest.assets.length : 0;
+  const totalCount = Number(manifest?.targetImageCount || manifest?.progress?.totalCount || 0);
+  const nextSlots = resetCanceledIllustrationSlots(manifest?.slots, manifest?.assetVersions);
+
+  return normalizeIllustrationManifest({
+    ...manifest,
+    status: 'canceled',
+    updatedAt: new Date().toISOString(),
+    error: undefined,
+    slots: nextSlots,
+    progress: buildIllustrationProgress({
+      phase: 'canceled',
+      currentStep: normalizedCurrentStep,
+      completedCount,
+      totalCount,
+      startedAt,
+    }),
+  });
+};
 
 const computeArticleHash = (styleProfile, articleContent) => {
   const normalized = `${String(styleProfile || 'fdsm').trim().toLowerCase()}\n${String(articleContent || '').trim()}`;
@@ -974,69 +1007,6 @@ const generateImageBuffer = async ({ apiKey, prompt, model = DEFAULT_IMAGE_MODEL
   return image;
 };
 
-const runImageQualityCheck = async ({
-  apiKey,
-  plannerModel,
-  slot,
-  imageBuffer,
-  imageMimeType = 'image/png',
-  articleTitle,
-  qualityChecks,
-}) => {
-  if (shouldUseMockProvider() || !apiKey) {
-    return {
-      pass: true,
-      issues: [],
-      retry_advice: '',
-    };
-  }
-  try {
-    const client = createGenAiClient(apiKey, QC_TIMEOUT_MS + 30_000);
-    const response = await withTimeout(
-      callWithRetry(() =>
-        client.models.generateContent({
-          model: plannerModel || DEFAULT_PLANNER_MODEL,
-          contents: [
-            {
-              role: 'user',
-              parts: [
-                {
-                  text: [
-                    '请检查这张商业文章配图是否合格。',
-                    `文章标题：${articleTitle}`,
-                    `图位职责：${slot.role}`,
-                    `图位原因：${slot.rationale}`,
-                    `画面重点：${slot.visualFocus}`,
-                    '判定标准：',
-                    qualityChecks,
-                    '补充硬标准：',
-                    '1. 是否符合该图位职责',
-                    '2. 是否像成熟商业媒体配图而不是广告图',
-                    '3. 是否存在大段文字、水印、logo 墙、界面截图感',
-                    '4. 是否画面失真严重或主体不清',
-                    '5. 是否明显违背克制、统一的整体风格',
-                    '输出 JSON。',
-                  ].join('\n'),
-                },
-                createPartFromBase64(imageBuffer.toString('base64'), imageMimeType),
-              ],
-            },
-          ],
-          config: {
-            responseMimeType: 'application/json',
-            responseSchema: IMAGE_QC_SCHEMA,
-          },
-        })
-      ),
-      QC_TIMEOUT_MS,
-      '配图质检请求'
-    );
-    return JSON.parse(response.text || '{"pass":true,"issues":[],"retry_advice":""}');
-  } catch {
-    return { pass: true, issues: [], retry_advice: '' };
-  }
-};
-
 const readIllustrationPrompts = async (profileId) => {
   const profile = getStyleProfile(profileId);
   const commonSystem = await readUtf8(path.join(ROOT_DIR, 'rag_assets', 'global', 'runtime', 'illustration_system.md'));
@@ -1048,9 +1018,6 @@ const readIllustrationPrompts = async (profileId) => {
   const negativePrompt = await readUtf8(
     path.join(ROOT_DIR, 'rag_assets', 'global', 'runtime', 'illustration_negative_prompt.md')
   );
-  const qualityChecks = await readUtf8(
-    path.join(ROOT_DIR, 'rag_assets', 'global', 'runtime', 'illustration_quality_checks.md')
-  );
   const profileStylePath = path.join(ROOT_DIR, profile.runtimeDir, 'illustration_style.md');
   const profileStyle = (await fileExists(profileStylePath)) ? await readUtf8(profileStylePath) : commonStyle;
 
@@ -1059,11 +1026,9 @@ const readIllustrationPrompts = async (profileId) => {
     guardrails: commonGuardrails,
     dataRules,
     negativePrompt,
-    qualityChecks,
     profileStyle,
   };
 };
-
 const writeManifest = async (manifestPath, manifest) => {
   await ensureDir(path.dirname(manifestPath));
   await fs.writeFile(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`, 'utf8');
@@ -1106,277 +1071,7 @@ const saveDataGraphic = async ({ svg, outputPath }) => {
 
 const relativeGeneratedUrl = ({ sourceHash, fileName }) => `/generated-assets/illustrations/${sourceHash}/${fileName}`;
 
-const generateArticleIllustrationsLegacy = async ({
-  apiKey,
-  plannerModel = DEFAULT_PLANNER_MODEL,
-  imageModel = DEFAULT_IMAGE_MODEL,
-  profileId,
-  articleTitle,
-  articleContent,
-  options = {},
-  force = false,
-}) => {
-  const normalizedProfileId = resolveStyleProfileId(profileId);
-  const profile = getStyleProfile(normalizedProfileId);
-  const resolvedTitle = extractArticleTitle(articleTitle, articleContent);
-  const sourceHash = buildSourceHash({
-    profileId: normalizedProfileId,
-    title: resolvedTitle,
-    articleContent,
-  });
-  const articleHash = computeArticleHash(normalizedProfileId, articleContent);
-
-  const targetDir = path.join(GENERATED_ROOT, sourceHash);
-  const manifestPath = path.join(targetDir, 'manifest.json');
-  if (!force) {
-    const existing = await loadExistingManifest(manifestPath);
-    if (existing?.sourceHash === sourceHash) {
-      return existing;
-    }
-  }
-
-  const paragraphs = buildArticleStructure(articleContent);
-  const totalCharacterCount = Math.max(1, countArticleCharacters(articleContent));
-  const targetImageCount = clampSlotCount(Math.ceil(totalCharacterCount / TARGET_CHARS_PER_ILLUSTRATION));
-  const dataHints = extractDataHints(paragraphs);
-  const promptAssets = await readIllustrationPrompts(normalizedProfileId);
-  const { system, guardrails, dataRules, profileStyle, qualityChecks, negativePrompt } = promptAssets;
-
-  const planPrompt = [
-    `目标图数：${targetImageCount}`,
-    `风格库：${normalizedProfileId}`,
-    `文章标题：${resolvedTitle}`,
-    `文章任务信息：${JSON.stringify(
-      {
-        audience: options.audience || '',
-        genre: options.genre || '',
-        style: options.style || '',
-        articleGoal: options.articleGoal || '',
-      },
-      null,
-      2
-    )}`,
-    '文章结构地图：',
-    summarizeStructureForPrompt(paragraphs),
-    '可视化候选数据段：',
-    JSON.stringify(dataHints, null, 2),
-    '请严格按目标图数规划整篇配图，不要少图或多图。',
-  ].join('\n\n');
-
-  const rawPlan =
-    shouldUseMockProvider() || !apiKey
-      ? buildFallbackPlan({
-          paragraphs,
-          targetImageCount,
-          profileId: normalizedProfileId,
-          dataHints,
-        })
-      : await generateJson({
-          apiKey,
-          model: plannerModel || DEFAULT_PLANNER_MODEL,
-          systemInstruction: `${system}\n\n${guardrails}\n\n${dataRules}\n\n风格补充：\n${profileStyle}`,
-          prompt: planPrompt,
-          schema: PLAN_SCHEMA,
-        });
-
-  const normalizedPlan = normalizePlan({
-    plan: rawPlan,
-    paragraphs,
-    targetImageCount,
-    profileId: normalizedProfileId,
-  });
-
-  await ensureDir(targetDir);
-  const slots = [];
-  const assets = [];
-  const warnings = [];
-
-  for (const slot of normalizedPlan.slots) {
-    const fileStem = `${String(slot.order).padStart(2, '0')}-${stableSlug(slot.role)}`;
-    if (slot.shouldUseDataGraphic && slot.dataPoints.length >= 2) {
-      const svg = renderDataGraphicSvg({
-        slot,
-        visualSystem: normalizedPlan.visualSystem,
-        articleTitle: resolvedTitle,
-      });
-      const fileName = `${fileStem}.svg`;
-      const outputPath = path.join(targetDir, fileName);
-      const saved = await saveDataGraphic({ svg, outputPath });
-
-      const frontendRole = mapRoleToFrontendRole(slot.role, true);
-      const outputUrl = relativeGeneratedUrl({ sourceHash, fileName });
-
-      slots.push({
-        id: fileStem,
-        order: slot.order,
-        role: frontendRole,
-        renderMode: 'svg_chart',
-        title: slot.chartTitle || slot.role,
-        sectionTitle: slot.anchorHeading || `段落 ${slot.anchorParagraphIndex + 1}`,
-        purpose: slot.rationale,
-        anchorParagraphIndex: slot.anchorParagraphIndex,
-        anchorExcerpt: slot.anchorExcerpt,
-        focusTerms: buildFocusTerms(slot.visualFocus),
-        qualityChecks: ['保持整篇统一视觉系统', '数据关系必须与正文一致'],
-        prompt: '',
-        negativePrompt: `${negativePrompt} ${(normalizedPlan.visualSystem.forbidden_elements || []).join('；')}`.trim(),
-        dataSpec: {
-          chartType:
-            resolveChartRenderer(slot.dataGraphicType) === 'line'
-              ? 'metric_grid'
-              : resolveChartRenderer(slot.dataGraphicType) === 'timeline'
-                ? 'timeline'
-                : 'comparison_bar',
-          title: slot.chartTitle || slot.role,
-          insight: slot.dataGraphicRationale || slot.rationale,
-          points: slot.dataPoints.map((point) => ({
-            label: point.label,
-            value: point.value,
-            displayValue: `${point.value}${point.unit || ''}`,
-            unit: point.unit || undefined,
-            note: point.note || undefined,
-          })),
-        },
-        status: 'ready',
-        assetUrl: outputUrl,
-        mimeType: saved.mimeType,
-        width: saved.width,
-        height: saved.height,
-      });
-      assets.push({
-        slotId: fileStem,
-        role: frontendRole,
-        renderMode: 'svg_chart',
-        title: slot.chartTitle || slot.role,
-        url: outputUrl,
-        mimeType: saved.mimeType,
-        width: saved.width,
-        height: saved.height,
-      });
-      continue;
-    }
-
-    let prompt = buildImagePrompt({
-      articleTitle: resolvedTitle,
-      slot,
-      visualSystem: normalizedPlan.visualSystem,
-      profileId: normalizedProfileId,
-      targetImageCount,
-      promptAssets,
-    });
-    let imageMeta;
-    let qualityIssues = [];
-
-    for (let attempt = 0; attempt < MAX_IMAGE_RETRIES; attempt += 1) {
-      const generated = await generateImageBuffer({
-        apiKey,
-        prompt,
-        model: imageModel || DEFAULT_IMAGE_MODEL,
-        fallbackSvg: renderMockSceneSvg({
-          articleTitle: resolvedTitle,
-          slot,
-          visualSystem: normalizedPlan.visualSystem,
-        }),
-      });
-      const savedFileName = `${fileStem}.jpg`;
-      const outputPath = path.join(targetDir, savedFileName);
-      const saved = await saveGeneratedImage({
-        buffer: generated.buffer,
-        outputPath,
-      });
-      const savedBuffer = await fs.readFile(outputPath);
-      const qc = await runImageQualityCheck({
-        apiKey,
-        plannerModel: plannerModel || DEFAULT_PLANNER_MODEL,
-        slot,
-        imageBuffer: savedBuffer,
-        articleTitle: resolvedTitle,
-        qualityChecks,
-      });
-      qualityIssues = Array.isArray(qc?.issues) ? qc.issues.map((item) => cleanText(item)).filter(Boolean) : [];
-      imageMeta = {
-        saved,
-        fileName: savedFileName,
-      };
-      if (qc?.pass || attempt === MAX_IMAGE_RETRIES - 1) {
-        break;
-      }
-      prompt = `${prompt}\n\n修正要求：${cleanText(qc.retry_advice) || qualityIssues.join('；') || '让画面更克制、更像商业媒体配图，去掉文字与广告感。'}`;
-    }
-
-    const frontendRole = mapRoleToFrontendRole(slot.role, false);
-    const outputUrl = relativeGeneratedUrl({ sourceHash, fileName: imageMeta.fileName });
-    if (qualityIssues.length > 0) {
-      warnings.push(`图位 ${slot.order} 存在自动质检提醒：${qualityIssues.join('；')}`);
-    }
-
-    slots.push({
-      id: fileStem,
-      order: slot.order,
-      role: frontendRole,
-      renderMode: 'nanobanana_pro',
-      title: slot.role,
-      sectionTitle: slot.anchorHeading || `段落 ${slot.anchorParagraphIndex + 1}`,
-      purpose: slot.rationale,
-      anchorParagraphIndex: slot.anchorParagraphIndex,
-      anchorExcerpt: slot.anchorExcerpt,
-      focusTerms: buildFocusTerms(slot.visualFocus),
-      qualityChecks: qualityIssues.length > 0 ? qualityIssues : ['主体清晰', '无文字水印', '符合整篇视觉系统'],
-      prompt,
-      negativePrompt: `${negativePrompt} ${(normalizedPlan.visualSystem.forbidden_elements || []).join('；')}`.trim(),
-      status: 'ready',
-      assetUrl: outputUrl,
-      mimeType: imageMeta.saved.mimeType,
-      width: imageMeta.saved.width,
-      height: imageMeta.saved.height,
-    });
-    assets.push({
-      slotId: fileStem,
-      role: frontendRole,
-      renderMode: 'nanobanana_pro',
-      title: slot.role,
-      url: outputUrl,
-      mimeType: imageMeta.saved.mimeType,
-      width: imageMeta.saved.width,
-      height: imageMeta.saved.height,
-    });
-  }
-
-  const manifest = {
-    promptVersion: 'illustration-v1',
-    articleHash,
-    styleProfile: normalizedProfileId,
-    model: imageModel || DEFAULT_IMAGE_MODEL,
-    wordCount: totalCharacterCount,
-    targetImageCount,
-    status: 'ready',
-    generatedAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString(),
-    visualSystem: {
-      collectionTitle: `${resolvedTitle} 配图组`,
-      profileLabel: profile.label,
-      visualDirection: normalizedPlan.visualSystem.visual_direction,
-      palette: normalizedPlan.visualSystem.palette,
-      realismLevel: normalizedPlan.visualSystem.realism_level,
-      compositionRules: normalizedPlan.visualSystem.composition_rules,
-      moodKeywords: buildFocusTerms(
-        `${normalizedPlan.visualSystem.visual_direction} ${normalizedPlan.visualSystem.lighting} ${normalizedPlan.visualSystem.realism_level}`
-      ),
-      chartStyle: (normalizedPlan.visualSystem.chart_language || []).join('；'),
-      consistencyRules: normalizedPlan.visualSystem.composition_rules.slice(0, 4),
-      lighting: normalizedPlan.visualSystem.lighting,
-      texture: (normalizedPlan.visualSystem.texture_rules || []).join('；'),
-      negativeRules: normalizedPlan.visualSystem.forbidden_elements,
-    },
-    slots,
-    assets,
-    warnings: warnings.length > 0 ? warnings : undefined,
-  };
-
-  await writeManifest(manifestPath, manifest);
-  return manifest;
-};
-
+const generateArticleIllustrationsLegacy = async (params = {}) => generateArticleIllustrations(params);
 const buildVersionedAssetId = (slotId, versionIndex) => `${slotId}@v${versionIndex}`;
 
 const buildVersionedFileName = ({ slotId, versionIndex, extension }) => `${slotId}.v${versionIndex}.${extension}`;
@@ -1481,6 +1176,7 @@ const generateIllustrationExplanation = async ({
   articleContent,
   slot,
   userPrompt,
+  existingExplanation = '',
   imageBuffer,
   imageMimeType = 'image/png',
 }) => {
@@ -1515,7 +1211,11 @@ const generateIllustrationExplanation = async ({
                     `图位要承接的核心判断：${slot.purpose}`,
                     `正文锚点：${slot.anchorExcerpt}`,
                     slot.dataSpec ? `需要吸收的数据关系：${summarizeDataSpec(slot.dataSpec)}` : '',
+                    cleanText(existingExplanation) ? `当前已有图释：${cleanText(existingExplanation)}` : '',
                     cleanText(userPrompt) ? `本轮用户补充要求：${cleanText(userPrompt)}` : '',
+                    cleanText(existingExplanation) && cleanText(userPrompt)
+                      ? '请在不改图片内容的前提下，根据用户要求重写图释，保留文章语气和事实方向。'
+                      : '',
                     '整篇文章全文：',
                     cleanText(articleContent),
                   ]
@@ -1542,6 +1242,29 @@ const generateIllustrationExplanation = async ({
   } catch {
     return buildIllustrationExplanationFallback({ slot, userPrompt });
   }
+};
+
+const resolveIllustrationAssetPath = ({ sourceHash, assetUrl }) => {
+  const fileName = cleanText(decodeURIComponent(String(assetUrl || '').split('?')[0])).split('/').pop();
+  if (!fileName) {
+    throw new Error('未找到当前图位对应的图片文件。');
+  }
+  return path.join(GENERATED_ROOT, sourceHash, fileName);
+};
+
+const loadIllustrationCaptionImageInput = async ({ assetPath, mimeType }) => {
+  const rawBuffer = await fs.readFile(assetPath);
+  if (String(mimeType || '').toLowerCase().includes('svg') || assetPath.toLowerCase().endsWith('.svg')) {
+    return {
+      imageBuffer: await sharp(rawBuffer).png({ compressionLevel: 0, palette: false }).toBuffer(),
+      imageMimeType: 'image/png',
+    };
+  }
+
+  return {
+    imageBuffer: rawBuffer,
+    imageMimeType: cleanText(mimeType) || 'image/png',
+  };
 };
 
 const normalizeAssetRecord = (asset, slotId, slotDefaults = {}) => {
@@ -1784,8 +1507,8 @@ const renderSlotVersion = async ({
   slot,
   visualSystem,
   userPrompt,
-  qualityChecks,
   onImageSaved,
+  abortIfCanceled,
 }) => {
   const versionHistory = toAssetArray(slot.assetVersions);
   const versionIndex =
@@ -1834,42 +1557,93 @@ const renderSlotVersion = async ({
           visualSystem,
         });
   }
+
   if (!rasterSlot.dataSpec) {
     prompt = appendArticleContextToPrompt(prompt, articleContent);
-  prompt = `${prompt}\n\n对象一致性要求：必须围绕文章讨论的核心公司、品牌、人物和业务场景出图，不能换成不相关的门店、品牌或城市地标。`;
+    prompt = `${prompt}\n\n对象一致性要求：必须围绕文章讨论的核心公司、品牌、人物和业务场景出图，不能换成不相关的门店、品牌或城市地标。`;
   }
+
   if (cleanText(userPrompt)) {
     prompt = `${prompt}\n\n用户追加要求：${cleanText(userPrompt)}`;
   }
 
-  let imageMeta = null;
-  let imageBuffer = null;
-  let qualityIssues = [];
+  await abortIfCanceled?.();
+  const generated = await generateImageBuffer({
+    apiKey,
+    prompt,
+    model: imageModel || DEFAULT_IMAGE_MODEL,
+    fallbackSvg: renderMockSceneSvg({
+      articleTitle,
+      slot: {
+        role: rasterSlot.title,
+        anchorHeading: rasterSlot.sectionTitle,
+        anchorExcerpt: rasterSlot.anchorExcerpt,
+        visualFocus: rasterSlot.focusTerms.join('，') || rasterSlot.anchorExcerpt,
+      },
+      visualSystem,
+    }),
+  });
+  await abortIfCanceled?.();
 
-  for (let attempt = 0; attempt < MAX_IMAGE_RETRIES; attempt += 1) {
-    const generated = await generateImageBuffer({
-      apiKey,
-      prompt,
-      model: imageModel || DEFAULT_IMAGE_MODEL,
-      fallbackSvg: renderMockSceneSvg({
-        articleTitle,
-        slot: {
-          role: rasterSlot.title,
-          anchorHeading: rasterSlot.sectionTitle,
-          anchorExcerpt: rasterSlot.anchorExcerpt,
-          visualFocus: rasterSlot.focusTerms.join('，') || rasterSlot.anchorExcerpt,
-        },
-        visualSystem,
-      }),
+  const fileName = buildVersionedFileName({ slotId: slot.id, versionIndex, extension: 'png' });
+  const outputPath = path.join(targetDir, fileName);
+  const saved = await saveGeneratedImage({
+    buffer: generated.buffer,
+    outputPath,
+  });
+  const savedBuffer = await fs.readFile(outputPath);
+  await abortIfCanceled?.();
+
+  const intermediateAsset = {
+    id: assetId,
+    slotId: rasterSlot.id,
+    role: rasterSlot.role,
+    renderMode: 'nanobanana_pro',
+    title: rasterSlot.title,
+    url: relativeGeneratedUrl({ sourceHash, fileName }),
+    mimeType: saved.mimeType,
+    width: saved.width,
+    height: saved.height,
+    versionIndex,
+    createdAt,
+    userPrompt: cleanText(userPrompt) || undefined,
+    editorCaption: cleanText(rasterSlot.explanation || rasterSlot.purpose || rasterSlot.anchorExcerpt),
+  };
+
+  if (typeof onImageSaved === 'function') {
+    await abortIfCanceled?.();
+    await onImageSaved({
+      slot: {
+        ...rasterSlot,
+        status: 'ready',
+        explanation: cleanText(rasterSlot.explanation || rasterSlot.purpose || rasterSlot.anchorExcerpt),
+        lastUserPrompt: cleanText(userPrompt) || undefined,
+      },
+      asset: intermediateAsset,
     });
-    const fileName = buildVersionedFileName({ slotId: slot.id, versionIndex, extension: 'png' });
-    const outputPath = path.join(targetDir, fileName);
-    const saved = await saveGeneratedImage({
-      buffer: generated.buffer,
-      outputPath,
-    });
-    const savedBuffer = await fs.readFile(outputPath);
-    const intermediateAsset = {
+    await abortIfCanceled?.();
+  }
+
+  const explanation = await generateIllustrationExplanation({
+    apiKey,
+    plannerModel,
+    articleTitle,
+    articleContent,
+    slot: rasterSlot,
+    userPrompt,
+    imageBuffer: savedBuffer,
+  });
+  await abortIfCanceled?.();
+
+  return {
+    slot: {
+      ...rasterSlot,
+      status: 'ready',
+      explanation,
+      lastUserPrompt: cleanText(userPrompt) || undefined,
+      qualityChecks: rasterSlot.qualityChecks,
+    },
+    asset: {
       id: assetId,
       slotId: rasterSlot.id,
       role: rasterSlot.role,
@@ -1882,83 +1656,11 @@ const renderSlotVersion = async ({
       versionIndex,
       createdAt,
       userPrompt: cleanText(userPrompt) || undefined,
-      editorCaption: cleanText(rasterSlot.explanation || rasterSlot.purpose || rasterSlot.anchorExcerpt),
-    };
-    if (typeof onImageSaved === 'function') {
-      await onImageSaved({
-        slot: {
-          ...rasterSlot,
-          status: 'ready',
-          explanation: cleanText(rasterSlot.explanation || rasterSlot.purpose || rasterSlot.anchorExcerpt),
-          lastUserPrompt: cleanText(userPrompt) || undefined,
-        },
-        asset: intermediateAsset,
-      });
-    }
-    const qc = await runImageQualityCheck({
-      apiKey,
-      plannerModel: plannerModel || DEFAULT_PLANNER_MODEL,
-      slot: {
-        role: rasterSlot.title,
-        rationale: rasterSlot.purpose,
-        visualFocus: rasterSlot.focusTerms.join('，') || rasterSlot.anchorExcerpt,
-      },
-      imageBuffer: savedBuffer,
-      articleTitle,
-      qualityChecks,
-    });
-    qualityIssues = Array.isArray(qc?.issues) ? qc.issues.map((item) => cleanText(item)).filter(Boolean) : [];
-    imageBuffer = savedBuffer;
-    imageMeta = {
-      saved,
-      fileName,
-    };
-    if (qc?.pass || attempt === MAX_IMAGE_RETRIES - 1) {
-      break;
-    }
-    prompt = `${prompt}\n\n修正要求：${cleanText(qc.retry_advice) || qualityIssues.join('；') || '让画面更克制、更像成熟商业媒体配图，去掉文字、广告感和宣传海报感。'}`;
-  }
-
-  const explanation = await generateIllustrationExplanation({
-    apiKey,
-    plannerModel,
-    articleTitle,
-    articleContent,
-    slot: rasterSlot,
-    userPrompt,
-    imageBuffer,
-  });
-
-  return {
-    slot: {
-      ...rasterSlot,
-      status: 'ready',
-      explanation,
-      lastUserPrompt: cleanText(userPrompt) || undefined,
-      qualityChecks: qualityIssues.length > 0 ? qualityIssues : rasterSlot.qualityChecks,
-    },
-    asset: {
-      id: assetId,
-      slotId: rasterSlot.id,
-      role: rasterSlot.role,
-      renderMode: 'nanobanana_pro',
-      title: rasterSlot.title,
-      url: relativeGeneratedUrl({ sourceHash, fileName: imageMeta.fileName }),
-      mimeType: imageMeta.saved.mimeType,
-      width: imageMeta.saved.width,
-      height: imageMeta.saved.height,
-      versionIndex,
-      createdAt,
-      userPrompt: cleanText(userPrompt) || undefined,
       editorCaption: explanation,
     },
-    warnings:
-      qualityIssues.length > 0
-        ? [`图位 ${slot.order} 存在自动质检提醒：${qualityIssues.join('；')}`]
-        : [],
+    warnings: [],
   };
 };
-
 const updateManifestSlotVersion = (manifest, nextSlot, nextAsset) => {
   const existingVersions = toAssetArray(manifest.assetVersions?.[nextSlot.id]);
   const mergedVersions = existingVersions.some((asset) => asset.id === nextAsset.id)
@@ -2037,7 +1739,7 @@ export const generateArticleIllustrations = async ({
   const dataHints = extractDataHints(paragraphs);
   const normalizedUserPrompt = cleanText(userPrompt);
   const promptAssets = await readIllustrationPrompts(normalizedProfileId);
-  const { system, guardrails, dataRules, profileStyle, qualityChecks, negativePrompt } = promptAssets;
+  const { system, guardrails, dataRules, profileStyle, negativePrompt } = promptAssets;
 
   let planPrompt = [
     `目标图数：${targetImageCount}`,
@@ -2151,7 +1853,6 @@ export const generateArticleIllustrations = async ({
       },
       visualSystem: normalizedPlan.visualSystem,
       userPrompt: normalizedUserPrompt,
-      qualityChecks,
     });
 
     warnings.push(...rendered.warnings);
@@ -2188,6 +1889,8 @@ export const generateArticleIllustrationsProgressive = async ({
   userPrompt = '',
   force = false,
   onProgress,
+  isCanceled,
+  shouldPersistCancellation,
 }) => {
   const { normalizedProfileId, resolvedTitle, sourceHash, articleHash } = resolveIllustrationRequestIdentity({
     profileId,
@@ -2198,50 +1901,92 @@ export const generateArticleIllustrationsProgressive = async ({
   const targetDir = path.join(GENERATED_ROOT, sourceHash);
   const manifestPath = path.join(targetDir, 'manifest.json');
   const startedAt = new Date().toISOString();
-
-  const publish = async (nextManifest) => {
-    const normalized = normalizeIllustrationManifest(nextManifest);
-    await writeManifest(manifestPath, normalized);
-    onProgress?.(normalized);
-    return normalized;
-  };
-
-  if (!force) {
-    const existing = await loadNormalizedManifest(manifestPath, {
-      sourceHash,
-      articleHash,
-      articleTitle: resolvedTitle,
-      styleProfile: normalizedProfileId,
-      model: imageModel || DEFAULT_IMAGE_MODEL,
-    });
-    const hasSvgAsset = Boolean(
-      existing?.assets?.some((asset) => asset.renderMode === 'svg_chart' || String(asset.mimeType || '').includes('svg'))
-    );
-    const hasMissingExplanation = Boolean(existing?.slots?.some((slot) => !cleanText(slot.explanation)));
-    const isLegacyManifest = existing?.promptVersion !== ILLUSTRATION_PROMPT_VERSION || !existing?.assetVersions;
-    if (
-      existing &&
-      (!existing.sourceHash || existing.sourceHash === sourceHash) &&
-      !hasSvgAsset &&
-      !hasMissingExplanation &&
-      !isLegacyManifest &&
-      existing.status === 'ready'
-    ) {
-      onProgress?.(existing);
-      return existing;
-    }
-  }
-
   const paragraphs = buildArticleStructure(articleContent);
   const totalCharacterCount = Math.max(1, countArticleCharacters(articleContent));
   const targetImageCount = clampSlotCount(Math.ceil(totalCharacterCount / TARGET_CHARS_PER_ILLUSTRATION));
   const dataHints = extractDataHints(paragraphs);
   const normalizedUserPrompt = cleanText(userPrompt);
   const promptAssets = await readIllustrationPrompts(normalizedProfileId);
-  const { system, guardrails, dataRules, profileStyle, qualityChecks, negativePrompt } = promptAssets;
+  const { system, guardrails, dataRules, profileStyle, negativePrompt } = promptAssets;
+  let manifest = null;
+  let cancellationPersisted = false;
 
+  const persistCanceledManifest = async (currentStep = ILLUSTRATION_CANCELED_MESSAGE) => {
+    if (cancellationPersisted && manifest) {
+      return manifest;
+    }
+
+    const fallbackManifest =
+      manifest ||
+      normalizeIllustrationManifest({
+        promptVersion: ILLUSTRATION_PROMPT_VERSION,
+        sourceHash,
+        articleHash,
+        articleTitle: resolvedTitle,
+        styleProfile: normalizedProfileId,
+        model: imageModel || DEFAULT_IMAGE_MODEL,
+        wordCount: totalCharacterCount,
+        targetImageCount,
+        globalUserPrompt: normalizedUserPrompt || undefined,
+        status: 'canceled',
+        generatedAt: startedAt,
+        updatedAt: startedAt,
+        visualSystem: {
+          collectionTitle: `${resolvedTitle} 配图`,
+          profileLabel: profile.label,
+          visualDirection: '',
+          palette: [],
+          realismLevel: '',
+          compositionRules: [],
+          moodKeywords: [],
+          chartStyle: '',
+          consistencyRules: [],
+          lighting: '',
+          texture: '',
+          negativeRules: [],
+        },
+        slots: [],
+        assets: [],
+        assetVersions: {},
+        warnings: [],
+      });
+
+    const nextManifest = buildCanceledIllustrationManifest(fallbackManifest, currentStep);
+    await writeManifest(manifestPath, nextManifest);
+    onProgress?.(nextManifest);
+    manifest = nextManifest;
+    cancellationPersisted = true;
+    return nextManifest;
+  };
+
+  const abortIfCanceled = async (currentStep = ILLUSTRATION_CANCELED_MESSAGE) => {
+    if (!isCanceled?.()) {
+      return;
+    }
+    if (shouldPersistCancellation?.() !== false) {
+      await persistCanceledManifest(currentStep);
+    }
+    throw createIllustrationTaskCanceledError(currentStep);
+  };
+
+  const publish = async (nextManifest) => {
+    if (isCanceled?.()) {
+      const currentStep = cleanText(nextManifest?.progress?.currentStep) || ILLUSTRATION_CANCELED_MESSAGE;
+      if (shouldPersistCancellation?.() !== false) {
+        await persistCanceledManifest(currentStep);
+      }
+      throw createIllustrationTaskCanceledError(currentStep);
+    }
+    const normalized = normalizeIllustrationManifest(nextManifest);
+    await writeManifest(manifestPath, normalized);
+    onProgress?.(normalized);
+    manifest = normalized;
+    return normalized;
+  };
+
+  await abortIfCanceled();
   await ensureDir(targetDir);
-  let manifest = await publish({
+  manifest = await publish({
     promptVersion: ILLUSTRATION_PROMPT_VERSION,
     sourceHash,
     articleHash,
@@ -2282,6 +2027,7 @@ export const generateArticleIllustrationsProgressive = async ({
   });
 
   try {
+    await abortIfCanceled('正在分析全文并规划图位');
     let planPrompt = [
       `目标图数：${targetImageCount}`,
       `风格库：${normalizedProfileId}`,
@@ -2323,6 +2069,7 @@ export const generateArticleIllustrationsProgressive = async ({
             schema: PLAN_SCHEMA,
           });
 
+    await abortIfCanceled('图位规划完成，正在整理生成队列');
     const normalizedPlan = normalizePlan({
       plan: rawPlan,
       paragraphs,
@@ -2383,6 +2130,8 @@ export const generateArticleIllustrationsProgressive = async ({
 
     for (let index = 0; index < seededSlots.length; index += 1) {
       const slotSeed = seededSlots[index];
+      const renderingStep = `正在生成第 ${index + 1}/${seededSlots.length} 张图：${slotSeed.sectionTitle || slotSeed.title}`;
+      await abortIfCanceled(renderingStep);
       manifest = await publish({
         ...manifest,
         slots: manifest.slots.map((slot) =>
@@ -2396,7 +2145,7 @@ export const generateArticleIllustrationsProgressive = async ({
         ),
         progress: buildIllustrationProgress({
           phase: 'rendering',
-          currentStep: `正在生成第 ${index + 1}/${seededSlots.length} 张图：${slotSeed.sectionTitle || slotSeed.title}`,
+          currentStep: renderingStep,
           completedCount: index,
           totalCount: seededSlots.length,
           currentSlotId: slotSeed.id,
@@ -2420,12 +2169,14 @@ export const generateArticleIllustrationsProgressive = async ({
         },
         visualSystem: normalizedPlan.visualSystem,
         userPrompt: normalizedUserPrompt,
-        qualityChecks,
+        abortIfCanceled,
         onImageSaved: async ({ slot: interimSlot, asset: interimAsset }) => {
           const interimVersions = {
             ...manifest.assetVersions,
             [interimSlot.id]: [interimAsset],
           };
+          const captionStep = `第 ${index + 1}/${seededSlots.length} 张图已出，正在补图释`;
+          await abortIfCanceled(captionStep);
           manifest = await publish({
             ...manifest,
             slots: manifest.slots.map((slot) =>
@@ -2443,7 +2194,7 @@ export const generateArticleIllustrationsProgressive = async ({
             assetVersions: interimVersions,
             progress: buildIllustrationProgress({
               phase: 'rendering',
-              currentStep: `第 ${index + 1}/${seededSlots.length} 张图已出，正在质检和补图释`,
+              currentStep: captionStep,
               completedCount: index,
               totalCount: seededSlots.length,
               currentSlotId: interimSlot.id,
@@ -2457,16 +2208,18 @@ export const generateArticleIllustrationsProgressive = async ({
 
       warnings.push(...rendered.warnings);
       manifest = updateManifestSlotVersion(manifest, rendered.slot, rendered.asset);
+      const nextStep =
+        index === seededSlots.length - 1
+          ? '正在整理最后的图释和版本信息'
+          : `已完成 ${index + 1}/${seededSlots.length} 张，继续下一张`;
+      await abortIfCanceled(nextStep);
       manifest = await publish({
         ...manifest,
         status: index === seededSlots.length - 1 ? 'partial' : 'rendering',
         warnings: warnings.length > 0 ? warnings : undefined,
         progress: buildIllustrationProgress({
           phase: index === seededSlots.length - 1 ? 'finalizing' : 'rendering',
-          currentStep:
-            index === seededSlots.length - 1
-              ? '正在整理最后的图释和版本信息'
-              : `已完成 ${index + 1}/${seededSlots.length} 张，继续下一张`,
+          currentStep: nextStep,
           completedCount: index + 1,
           totalCount: seededSlots.length,
           currentSlotId: seededSlots[index + 1]?.id,
@@ -2477,6 +2230,7 @@ export const generateArticleIllustrationsProgressive = async ({
       });
     }
 
+    await abortIfCanceled('正在整理最后的图释和版本信息');
     manifest = await publish({
       ...manifest,
       status: 'ready',
@@ -2492,6 +2246,13 @@ export const generateArticleIllustrationsProgressive = async ({
 
     return manifest;
   } catch (error) {
+    if (isIllustrationTaskCanceledError(error)) {
+      if (!cancellationPersisted && shouldPersistCancellation?.() !== false) {
+        manifest = await persistCanceledManifest(error.message);
+      }
+      throw error;
+    }
+
     manifest = await publish({
       ...manifest,
       status: 'error',
@@ -2507,7 +2268,6 @@ export const generateArticleIllustrationsProgressive = async ({
     throw new Error(manifest.error || '配图生成失败。');
   }
 };
-
 const loadManifestBySourceHash = async (sourceHash) => {
   const manifestPath = path.join(GENERATED_ROOT, sourceHash, 'manifest.json');
   const manifest = await loadNormalizedManifest(manifestPath, { sourceHash });
@@ -2521,6 +2281,20 @@ export const getIllustrationManifestBySourceHash = async (sourceHash) => {
   const manifestPath = path.join(GENERATED_ROOT, sourceHash, 'manifest.json');
   return loadNormalizedManifest(manifestPath, { sourceHash });
 };
+export const markIllustrationManifestCanceled = async ({
+  sourceHash,
+  currentStep = ILLUSTRATION_CANCELED_MESSAGE,
+}) => {
+  const manifestPath = path.join(GENERATED_ROOT, sourceHash, 'manifest.json');
+  const existing = await loadNormalizedManifest(manifestPath, { sourceHash });
+  if (!existing) {
+    return null;
+  }
+  const nextManifest = buildCanceledIllustrationManifest(existing, currentStep);
+  await writeManifest(manifestPath, nextManifest);
+  return nextManifest;
+};
+
 
 export const regenerateIllustrationSlot = async ({
   apiKey,
@@ -2537,7 +2311,6 @@ export const regenerateIllustrationSlot = async ({
     throw new Error('未找到对应的图位。');
   }
 
-  const promptAssets = await readIllustrationPrompts(manifest.styleProfile);
   const rendered = await renderSlotVersion({
     apiKey,
     plannerModel,
@@ -2557,17 +2330,16 @@ export const regenerateIllustrationSlot = async ({
       lighting: manifest.visualSystem.lighting,
       composition_rules: manifest.visualSystem.compositionRules,
       texture_rules: String(manifest.visualSystem.texture || '')
-        .split(/[；;]+/)
+        .split(/[；;/]+/)
         .map((item) => cleanText(item))
         .filter(Boolean),
       chart_language: String(manifest.visualSystem.chartStyle || '')
-        .split(/[；;]+/)
+        .split(/[；;/]+/)
         .map((item) => cleanText(item))
         .filter(Boolean),
       forbidden_elements: Array.isArray(manifest.visualSystem.negativeRules) ? manifest.visualSystem.negativeRules : [],
     },
     userPrompt,
-    qualityChecks: promptAssets.qualityChecks,
   });
 
   const nextManifest = normalizeIllustrationManifest({
@@ -2579,6 +2351,73 @@ export const regenerateIllustrationSlot = async ({
   return nextManifest;
 };
 
+export const regenerateIllustrationCaption = async ({
+  apiKey,
+  sourceHash,
+  slotId,
+  plannerModel = DEFAULT_PLANNER_MODEL,
+  articleContent = '',
+  userPrompt = '',
+}) => {
+  const { manifestPath, manifest } = await loadManifestBySourceHash(sourceHash);
+  const slot = manifest.slots.find((item) => item.id === slotId);
+  if (!slot) {
+    throw new Error('未找到对应的图位。');
+  }
+
+  const versions = toAssetArray(manifest.assetVersions?.[slot.id]);
+  if (versions.length === 0) {
+    throw new Error('当前图位还没有可修改图释的图片。');
+  }
+
+  const activeAsset = versions.find((asset) => asset.id === slot.activeAssetId) || versions[versions.length - 1];
+  const assetPath = resolveIllustrationAssetPath({
+    sourceHash,
+    assetUrl: activeAsset.url,
+  });
+  const { imageBuffer, imageMimeType } = await loadIllustrationCaptionImageInput({
+    assetPath,
+    mimeType: activeAsset.mimeType,
+  });
+  const explanation = await generateIllustrationExplanation({
+    apiKey,
+    plannerModel,
+    articleTitle: manifest.articleTitle,
+    articleContent,
+    slot,
+    userPrompt,
+    existingExplanation: cleanText(activeAsset.editorCaption || slot.explanation || slot.purpose),
+    imageBuffer,
+    imageMimeType,
+  });
+
+  const nextManifest = normalizeIllustrationManifest({
+    ...manifest,
+    assetVersions: {
+      ...manifest.assetVersions,
+      [slot.id]: versions.map((asset) =>
+        asset.id === activeAsset.id
+          ? {
+              ...asset,
+              editorCaption: explanation,
+            }
+          : asset
+      ),
+    },
+    slots: manifest.slots.map((item) =>
+      item.id === slot.id
+        ? {
+            ...item,
+            explanation,
+          }
+        : item
+    ),
+    updatedAt: new Date().toISOString(),
+  });
+
+  await writeManifest(manifestPath, nextManifest);
+  return nextManifest;
+};
 export const deleteIllustrationSlotImage = async ({ sourceHash, slotId }) => {
   const { manifestPath, manifest } = await loadManifestBySourceHash(sourceHash);
   const slot = manifest.slots.find((item) => item.id === slotId);

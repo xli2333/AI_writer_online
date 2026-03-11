@@ -179,7 +179,7 @@ export interface ArticleIllustrationAsset {
   editorCaption?: string;
 }
 
-export type ArticleIllustrationProgressPhase = 'queued' | 'planning' | 'rendering' | 'finalizing' | 'ready' | 'error';
+export type ArticleIllustrationProgressPhase = 'queued' | 'planning' | 'rendering' | 'finalizing' | 'ready' | 'error' | 'canceled';
 
 export interface ArticleIllustrationProgress {
   phase: ArticleIllustrationProgressPhase;
@@ -203,7 +203,7 @@ export interface ArticleIllustrationBundle {
   wordCount: number;
   targetImageCount: number;
   globalUserPrompt?: string;
-  status: 'idle' | 'planning' | 'rendering' | 'ready' | 'partial' | 'error';
+  status: 'idle' | 'planning' | 'rendering' | 'ready' | 'partial' | 'error' | 'canceled';
   generatedAt?: string;
   updatedAt?: string;
   visualSystem: ArticleIllustrationVisualSystem;
@@ -217,6 +217,7 @@ export interface ArticleIllustrationBundle {
 
 export interface ArticleIllustrationJobStatus {
   sourceHash: string;
+  runId?: string;
   status: ArticleIllustrationProgressPhase;
   currentStep: string;
   completedCount: number;
@@ -289,6 +290,7 @@ export interface WechatLayoutSettings {
   contentSourceUrl: string;
   coverStrategy: 'hero' | 'first_ready' | 'manual';
   preferredCoverAssetId?: string;
+  openingHighlightMode: 'off' | 'first_sentence' | 'smart_lead';
   needOpenComment: boolean;
   onlyFansCanComment: boolean;
   artDirectionPrompt?: string;

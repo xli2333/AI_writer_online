@@ -31,6 +31,21 @@ export const STYLE_PROFILES = [
     evalDir: 'rag_assets/profiles/latepost/evals',
     benchmarkDir: 'rag_assets/profiles/latepost/evals/benchmark_tasks',
   },
+  {
+    id: 'xinzhiyuan',
+    label: '新智元',
+    shortLabel: 'XinZhiYuan',
+    description: '偏 AI 前沿快讯、论文拆解、模型产品观察与产业人物叙事的中文科技媒体写作风格。',
+    rawDir: 'style_corpora/xinzhiyuan/raw_materials',
+    ragDir: 'rag_assets/profiles/xinzhiyuan',
+    globalDir: 'rag_assets/profiles/xinzhiyuan/global',
+    runtimeDir: 'rag_assets/profiles/xinzhiyuan/global/runtime',
+    metadataDir: 'rag_assets/profiles/xinzhiyuan/metadata',
+    summariesDir: 'rag_assets/profiles/xinzhiyuan/summaries/per_article',
+    personaDir: 'rag_assets/profiles/xinzhiyuan/persona',
+    evalDir: 'rag_assets/profiles/xinzhiyuan/evals',
+    benchmarkDir: 'rag_assets/profiles/xinzhiyuan/evals/benchmark_tasks',
+  },
 ];
 
 export const STYLE_PROFILE_MAP = Object.fromEntries(STYLE_PROFILES.map((profile) => [profile.id, profile]));

@@ -1,0 +1,116 @@
+{
+  "analysis_schema_version": 3,
+  "id": "c84612db6767",
+  "year": "2025",
+  "date": "2025-09-07",
+  "title": "《2025新智元ASI前沿趋势报告》全文",
+  "relative_path": "2025/2025-09-07_《2025新智元ASI前沿趋势报告》全文.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\xinzhiyuan\\raw_materials\\2025\\2025-09-07_《2025新智元ASI前沿趋势报告》全文.txt",
+  "char_count": 389,
+  "content_type": "行业简讯",
+  "entities": [
+    "新智元",
+    "ASI",
+    "人工智能"
+  ],
+  "industry": [
+    "人工智能",
+    "科技"
+  ],
+  "topic": [
+    "ASI",
+    "行业报告",
+    "智能体",
+    "行业趋势"
+  ],
+  "genre": "活动通知",
+  "style": [
+    "简练",
+    "官方式"
+  ],
+  "audience": [
+    "AI行业从业者",
+    "科技投资者",
+    "媒体人"
+  ],
+  "intent": [
+    "活动宣传",
+    "品牌背书",
+    "信息披露"
+  ],
+  "tone": [
+    "专业",
+    "前瞻"
+  ],
+  "primary_question": "2025年及以后ASI与智能体的发展趋势如何？",
+  "thesis_type": "预测型",
+  "thesis_sentence": "2027年将抵达ASI临界点，智能体将全面爆发，全球竞争格局将由数据图谱重刻。",
+  "structure_pattern": "活动背景-核心结论-报告价值",
+  "section_functions": [
+    "场景交代：提及十周年峰会现场",
+    "核心预测：给出2027年ASI时间点",
+    "方法论说明：提及全球数据融合与图谱刻画"
+  ],
+  "argument_moves": [
+    "利用特定时间节点（十周年）建立权威感",
+    "抛出激进的预测性结论（2027年ASI）吸引注意力",
+    "展示研究深度（全球数据融合）"
+  ],
+  "core_argument": "人工智能将在2027年迎来超级智能（ASI）的转折点，届时行业将进入智能体主导的爆发期。",
+  "key_points": [
+    "2027年是ASI临界时间点",
+    "智能体将迎来全面爆发",
+    "通过全球数据图谱分析全球竞争格局"
+  ],
+  "opening_pattern": "直接陈述活动背景",
+  "ending_pattern": "结论式概括",
+  "evidence_types": [
+    "专家预测",
+    "数据图谱"
+  ],
+  "evidence_specificity_score": 20,
+  "data_density_score": 10,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "第三方报道",
+  "stance_strength": "坚定",
+  "sentence_rhythm": "短句为主，节奏极快",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "在重大活动节点发布重磅预测报告",
+    "使用‘临界’、‘爆发’等带有紧迫感的词汇"
+  ],
+  "anti_patterns": [
+    "信息密度严重不足（仅有导语，无实质内容）",
+    "过度标题党（标题标明‘全文’但正文仅为导读）"
+  ],
+  "notable_phrases": [
+    "ASI临界",
+    "智能体全面爆发"
+  ],
+  "title_score": 85,
+  "opening_score": 60,
+  "argument_score": 30,
+  "evidence_score": 20,
+  "structure_score": 40,
+  "style_score": 50,
+  "publishability_score": 30,
+  "quality_score": 25,
+  "reference_value_score": 20,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "is_advertorial": true,
+  "advertorial_type": "event_promotion",
+  "advertorial_confidence": 100,
+  "promotional_intensity_score": 95,
+  "editorial_independence_score": 10,
+  "brand_exposure_level": "高",
+  "source_transparency": "清晰",
+  "advertorial_signals": [
+    "提及机构十周年峰会",
+    "宣传自家发布的趋势报告",
+    "文末缺乏深度论述，仅为引流或告知"
+  ],
+  "summary_200": "本文为新智元十周年峰会的简报，宣布发布《2025新智元ASI前沿趋势报告》。核心观点预测ASI（人工超智能）的临界点将在2027年到来，并伴随着智能体的全面爆发。文章声称报告通过融合全球数据，刻画了最新的全球竞争格局。由于该文本实际上仅为报告的发布导语，缺乏具体论证与数据细节，主要功能为活动宣传与品牌公关。",
+  "summary_500": "该文本是新智元在其举办的十周年峰会现场发布的一则简短行业报告预告。其核心目的是推广《2025新智元ASI前沿趋势报告》。文章提出了一个极具冲击力的时间表：预测在2027年，人工智能将抵达超级智能（ASI）的临界点。与此同时，文章指出智能体（AI Agents）将在该阶段迎来爆发式增长。在研究方法上，该报告强调其融合了全球范围内的海量数据，用以构建和描绘当前人工智能领域的全球竞争图谱。从内容深度来看，该文本属于典型的高抽象、低信息密度的活动宣传稿。虽然标题使用了‘全文’字样，但提供的正文仅为数十字的‘新智元导读’，缺乏支撑论点的实证、逻辑推导或具体案例，具有极强的广告与品牌宣传性质。此类内容对于RAG系统而言，除了作为行业事件的时间节点记录外，学术或深度分析价值较低。建议读者关注其引用的原报告以获得实质性行业洞察。"
+}

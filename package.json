@@ -13,6 +13,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "rag:import-latepost": "node scripts/rag/import-latepost-corpus.mjs --profile latepost",
+    "rag:import-xinzhiyuan": "node scripts/rag/import-xinzhiyuan-corpus.mjs --profile xinzhiyuan",
     "rag:prepare": "node scripts/rag/prepare-corpus.mjs",
     "rag:analyze": "node scripts/rag/analyze-articles.mjs",
     "rag:skills": "node scripts/rag/build-core-skills.mjs",

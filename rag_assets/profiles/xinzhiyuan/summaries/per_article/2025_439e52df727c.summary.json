@@ -1,0 +1,134 @@
+{
+  "analysis_schema_version": 3,
+  "id": "439e52df727c",
+  "year": "2025",
+  "date": "2025-10-25",
+  "title": "全球首个「百万引用」学者诞生！Bengio封神，辛顿、何恺明紧跟",
+  "relative_path": "2025/2025-10-25_全球首个「百万引用」学者诞生！Bengio封神，辛顿、何恺明紧跟.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\xinzhiyuan\\raw_materials\\2025\\2025-10-25_全球首个「百万引用」学者诞生！Bengio封神，辛顿、何恺明紧跟.txt",
+  "char_count": 3921,
+  "content_type": "资讯分析",
+  "entities": [
+    "Yoshua Bengio",
+    "Geoffrey Hinton",
+    "何恺明",
+    "Ilya Sutskever",
+    "Yann LeCun",
+    "Google Scholar",
+    "Mila",
+    "OpenAI",
+    "Safe Superintelligence Inc.",
+    "Meta (FAIR)",
+    "DeepMind",
+    "Microsoft Research Asia"
+  ],
+  "industry": [
+    "人工智能",
+    "高等教育",
+    "科技传媒"
+  ],
+  "topic": [
+    "学术影响力",
+    "深度学习",
+    "论文引用量",
+    "AI科研趋势"
+  ],
+  "genre": "科普报道",
+  "style": [
+    "数据驱动",
+    "人物志",
+    "纪实"
+  ],
+  "audience": [
+    "科研人员",
+    "AI从业者",
+    "科技投资者",
+    "高校师生"
+  ],
+  "intent": [
+    "信息传递",
+    "行业趋势解读",
+    "人物科普"
+  ],
+  "tone": [
+    "赞赏",
+    "客观",
+    "振奋"
+  ],
+  "primary_question": "为什么AI领域会出现全球首位百万引用学者，其背后的学术与时代动力是什么？",
+  "thesis_type": "现象解释型",
+  "thesis_sentence": "Yoshua Bengio成为首位百万引用学者象征着AI学术影响力的巅峰，这源于深度学习范式的确立、大模型引发的二次爆发以及全球AI研究人员基数的指数级增长。",
+  "structure_pattern": "总分总",
+  "section_functions": [
+    "核心新闻宣告：Bengio引用破百万及排名现状",
+    "归因分析：多维度解释AI论文引用量爆发的宏观原因",
+    "人物专题：重点介绍核心高被引学者的学术贡献与履历",
+    "长尾汇总：罗列其他AI领域顶尖学者的被引情况"
+  ],
+  "argument_moves": [
+    "引用实时学术数据库（Google Scholar）进行事实确认",
+    "通过历史时间轴（2012、2015、2017）梳理技术爆发节点",
+    "对比计算机科学整体与AI子领域的增长比例数据",
+    "通过顶会（ICLR, NeurIPS）投稿数据佐证行业热度"
+  ],
+  "core_argument": "AI论文引用的爆发是底层算法革命、学术写作范式（回溯奠基性论文）与全球研究人员规模激增共同促成的结果。",
+  "key_points": [
+    "Bengio以百万引用领跑全球，Hinton紧随其后",
+    "2012年AlexNet是深度学习引爆点，奠定了引用爆发基础",
+    "Transformer与大模型带来了引用的二次爆发",
+    "AI论文在计算机科学中的占比已接近50%",
+    "何恺明、Ilya Sutskever等中生代学者的学术影响力已比肩甚至超越老一代图灵奖得主"
+  ],
+  "opening_pattern": "直叙式开门见山",
+  "ending_pattern": "列表式资料汇总",
+  "evidence_types": [
+    "实时学术统计数据",
+    "学术会议官方统计",
+    "学者简历信息",
+    "第三方排名指数"
+  ],
+  "evidence_specificity_score": 95,
+  "data_density_score": 90,
+  "case_density_score": 75,
+  "quote_density_score": 10,
+  "narrative_distance": "第三人称",
+  "stance_strength": "中立",
+  "sentence_rhythm": "节奏明快，多用短句交代数据，长句阐述背景",
+  "abstraction_level": "中等",
+  "transferable_moves": [
+    "使用里程碑式的极端数据（百万引用）作为文章切入点",
+    "将个体成就与宏观行业统计数据（如投稿量、论文占比）锚定，提升论证深度",
+    "按奠基人-中生代-新兴力量的层次化结构整理人物信息库"
+  ],
+  "anti_patterns": [
+    "避免过度神化个人，应同步分析行业大环境的红利",
+    "避免仅列出姓名而缺乏对具体核心工作（如ResNets, AlexNet）的关联"
+  ],
+  "notable_phrases": [
+    "AI学术影响力进入新高峰",
+    "深度学习的引爆点",
+    "放大了被引母集",
+    "度过冰冷的人工智能寒冬"
+  ],
+  "title_score": 92,
+  "opening_score": 90,
+  "argument_score": 88,
+  "evidence_score": 95,
+  "structure_score": 85,
+  "style_score": 85,
+  "publishability_score": 95,
+  "quality_score": 90,
+  "reference_value_score": 92,
+  "is_activity_notice": false,
+  "is_low_value": false,
+  "is_advertorial": false,
+  "advertorial_type": "editorial",
+  "advertorial_confidence": 0,
+  "promotional_intensity_score": 5,
+  "editorial_independence_score": 95,
+  "brand_exposure_level": "低",
+  "source_transparency": "清晰",
+  "advertorial_signals": [],
+  "summary_200": "本文报道了Yoshua Bengio成为全球首位谷歌学术引用量破百万的学者，Hinton紧随其后。文章分析了AI论文引用爆发的原因，包括2012年AlexNet开启深度学习时代、2017年Transformer带来二次爆发，以及全球AI论文基数的倍增。此外，详细介绍了Bengio、何恺明、Ilya Sutskever等高被引学者的学术贡献与职业生涯，展现了AI作为当前科技主旋律的学术影响力现状。",
+  "summary_500": "2025年10月，Yoshua Bengio论文引用量突破100万，标志着AI学术影响力进入新高度。文章以此为切入点，深度分析了AI领域引用爆发的宏观背景。首先，数据层面显示，除了Bengio，Hinton也即将破百万，而何恺明、Ilya Sutskever等中生代学者引用量亦极其惊人。其次，文章指出引用爆发源于三个阶段：一是2012年AlexNet引发的深度学习热潮；二是2015年后深度学习综述论文成为学术标准引用；三是2017年Transformer与生成式AI带来的二次爆发。宏观统计显示，AI论文占计算机科学论文比例已从十年前的21.6%升至41.8%，学术会议如ICLR、NeurIPS的投稿量呈指数级增长，极大扩充了引用的“母集”。最后，文章为Bengio、何恺明及Ilya Sutskever撰写了人物志。Bengio作为三巨头之一，深耕蒙特利尔并关注AI安全；何恺明以ResNets成为21世纪被引最高的论文作者，目前任职MIT；Ilya则是AlexNet核心成员及SSI创始人。整体而言，文章通过硬核数据证明了AI已成为当代学术研究的主旋律，通过对核心学者的梳理，为读者提供了AI发展史的缩影。"
+}

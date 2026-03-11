@@ -39,6 +39,7 @@ const createDefaultLayout = (
     previous?.preferredCoverAssetId ||
     illustrationBundle?.assets?.[0]?.id ||
     undefined,
+  openingHighlightMode: previous?.openingHighlightMode || 'smart_lead',
   needOpenComment: previous?.needOpenComment ?? false,
   onlyFansCanComment: previous?.onlyFansCanComment ?? false,
   artDirectionPrompt: previous?.artDirectionPrompt || '',
@@ -526,6 +527,26 @@ export const WechatPublisherPanel: React.FC<{
               className="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-3 py-3 text-sm leading-relaxed text-slate-700 outline-none focus:border-report-accent"
               placeholder={'\u6bcf\u884c\u4e00\u6761\u8865\u5145\u4fe1\u606f\uff0c\u4f8b\u5982\u4f5c\u8005\u5355\u4f4d\u3001\u91c7\u8bbf\u8bf4\u660e\u3001\u9879\u76ee\u5757\u7b49\u3002'}
             />
+          </label>
+
+          <label className="block text-sm font-medium text-slate-700">
+            {'\u5f00\u5934\u5f15\u8a00\u5f3a\u8c03'}
+            <select
+              value={currentLayout.openingHighlightMode}
+              onChange={(event) =>
+                updateLayout({
+                  openingHighlightMode: event.target.value as WechatLayoutSettings['openingHighlightMode'],
+                })
+              }
+              className="mt-2 w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-700 outline-none focus:border-report-accent"
+            >
+              <option value="smart_lead">{'\u667a\u80fd\u524d\u4e24\u53e5'}</option>
+              <option value="first_sentence">{'\u53ea\u5f3a\u8c03\u9996\u53e5'}</option>
+              <option value="off">{'\u5173\u95ed'}</option>
+            </select>
+            <div className="mt-2 text-xs leading-relaxed text-slate-500">
+              {'\u5728\u6b63\u6587\u6700\u524d\u9762\u989d\u5916\u63d2\u5165\u4e00\u4e2a\u5f15\u8a00\u5361\u7247\uff0c\u4e0d\u6539\u5199\u539f\u6587\uff0c\u53ea\u505a\u5f00\u573a\u5f3a\u8c03\u3002'}
+            </div>
           </label>
 
           <label className="block text-sm font-medium text-slate-700">

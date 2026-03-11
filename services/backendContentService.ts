@@ -11,6 +11,10 @@ export interface RuntimePromptAssets {
   latepostFeaturePersona?: string;
   latepostProfilePersona?: string;
   latepostIndustryReviewPersona?: string;
+  xinzhiyuanBreakingPersona?: string;
+  xinzhiyuanPaperPersona?: string;
+  xinzhiyuanProductPersona?: string;
+  xinzhiyuanPeoplePersona?: string;
 }
 
 interface PromptAssetPayload {
@@ -52,6 +56,12 @@ const PROFILE_PROMPT_ASSET_NAMES: Record<string, string[]> = {
     'latepostProfilePersona',
     'latepostIndustryReviewPersona',
   ],
+  xinzhiyuan: [
+    'xinzhiyuanBreakingPersona',
+    'xinzhiyuanPaperPersona',
+    'xinzhiyuanProductPersona',
+    'xinzhiyuanPeoplePersona',
+  ],
 };
 
 const fetchJson = async <T>(input: string, init?: RequestInit): Promise<T> => {
@@ -88,6 +98,10 @@ export const loadRuntimePromptAssets = async (profile = 'fdsm'): Promise<Runtime
           latepostFeaturePersona: String(assets.latepostFeaturePersona || '').trim(),
           latepostProfilePersona: String(assets.latepostProfilePersona || '').trim(),
           latepostIndustryReviewPersona: String(assets.latepostIndustryReviewPersona || '').trim(),
+          xinzhiyuanBreakingPersona: String(assets.xinzhiyuanBreakingPersona || '').trim(),
+          xinzhiyuanPaperPersona: String(assets.xinzhiyuanPaperPersona || '').trim(),
+          xinzhiyuanProductPersona: String(assets.xinzhiyuanProductPersona || '').trim(),
+          xinzhiyuanPeoplePersona: String(assets.xinzhiyuanPeoplePersona || '').trim(),
         };
       })
     );

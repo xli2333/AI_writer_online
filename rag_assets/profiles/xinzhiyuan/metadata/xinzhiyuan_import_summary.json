@@ -1,0 +1,18 @@
+{
+  "profile": "xinzhiyuan",
+  "source_dir": "C:\\Users\\LXG\\AI_writer\\新智元",
+  "target_raw_dir": "C:\\Users\\LXG\\AI_writer\\style_corpora\\xinzhiyuan\\raw_materials",
+  "scanned_article_dirs": 884,
+  "imported_articles": 884,
+  "missing_content_count": 0,
+  "empty_content_count": 0,
+  "ignored_image_files": 18702,
+  "ignored_image_extensions": {
+    ".jpg": 4465,
+    ".png": 13349,
+    ".gif": 888
+  },
+  "workflow_assets_dir": "C:\\Users\\LXG\\AI_writer\\rag_assets\\profiles\\xinzhiyuan\\workflows",
+  "benchmark_dir": "C:\\Users\\LXG\\AI_writer\\rag_assets\\profiles\\xinzhiyuan\\evals\\benchmark_tasks",
+  "generated_at": "2026-03-10T08:41:28.965Z"
+}

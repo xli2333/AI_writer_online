@@ -1,0 +1,259 @@
+{
+  "model": "gemini-3-flash-preview",
+  "source_count": 36,
+  "updated_at": "2026-03-10T10:45:19.444Z",
+  "selected_articles": [
+    {
+      "id": "43a8fb49781b",
+      "title": "比GPT-5还准？AIME25飙到99.9%刷屏，开源模型首次！",
+      "quality_score": 93,
+      "reference_value_score": 98,
+      "publishability_score": 95
+    },
+    {
+      "id": "1039a63d99a7",
+      "title": "硬核拆解！从GPT-2到gpt-oss，揭秘大模型进化关键密码",
+      "quality_score": 93,
+      "reference_value_score": 98,
+      "publishability_score": 95
+    },
+    {
+      "id": "55dffa6a6d6b",
+      "title": "田渊栋：2025年年终总结（一）",
+      "quality_score": 94,
+      "reference_value_score": 98,
+      "publishability_score": 95
+    },
+    {
+      "id": "4ac68adfb583",
+      "title": "Karpathy力荐必读博客：代码功底，决定AI「开挂」倍数！",
+      "quality_score": 93,
+      "reference_value_score": 96,
+      "publishability_score": 95
+    },
+    {
+      "id": "9ea6f2d484a2",
+      "title": "体系结构顶会ISCA'25放榜：中国作者斩获最佳论文，拿下25%录用！附超全总结",
+      "quality_score": 92,
+      "reference_value_score": 98,
+      "publishability_score": 95
+    },
+    {
+      "id": "816c102e754a",
+      "title": "Gemini准确率从21%飙到97%！谷歌只用了这一招：复制粘贴",
+      "quality_score": 92,
+      "reference_value_score": 98,
+      "publishability_score": 95
+    },
+    {
+      "id": "7bea682e1906",
+      "title": "苹果破防！App Store暴涨60%，全是「俺寻思」写出来的？",
+      "quality_score": 92,
+      "reference_value_score": 95,
+      "publishability_score": 98
+    },
+    {
+      "id": "4ca61437e44a",
+      "title": "花9万刀雇应届生，不如用AI！软件工程未来2年，太残酷",
+      "quality_score": 90,
+      "reference_value_score": 96,
+      "publishability_score": 98
+    },
+    {
+      "id": "d061973a0f67",
+      "title": "100万亿Token看懵硅谷！全球一半算力写代码，另一半在「搞颜色」 ？",
+      "quality_score": 92,
+      "reference_value_score": 96,
+      "publishability_score": 95
+    },
+    {
+      "id": "6343c84f895c",
+      "title": "我拥有了超能力！Meta最牛文科生让3个AI互掐，竟造出1人技术部",
+      "quality_score": 92,
+      "reference_value_score": 96,
+      "publishability_score": 95
+    },
+    {
+      "id": "06c48119a258",
+      "title": "AI科学家组团搞科研，爆肝万字报告震惊医学家！Nature独刊揭秘细节",
+      "quality_score": 92,
+      "reference_value_score": 95,
+      "publishability_score": 95
+    },
+    {
+      "id": "b67635da2357",
+      "title": "剑桥揭开大模型翻车黑箱！别再怪它不懂推理，是行动出错了",
+      "quality_score": 92,
+      "reference_value_score": 95,
+      "publishability_score": 95
+    },
+    {
+      "id": "aa5a278e39ab",
+      "title": "ImageNet分数越高，生成反而越糊？iREPA给出解释",
+      "quality_score": 92,
+      "reference_value_score": 94,
+      "publishability_score": 95
+    },
+    {
+      "id": "57128a0e8f24",
+      "title": "Agent全链路成功率0%？首个真实DevOps基准曝致命短板｜ICLR'26",
+      "quality_score": 92,
+      "reference_value_score": 96,
+      "publishability_score": 95
+    },
+    {
+      "id": "6b8e1464c140",
+      "title": "Depth Anything再出新作！浙大&港大出品：零样本，优化任意深度图",
+      "quality_score": 92,
+      "reference_value_score": 96,
+      "publishability_score": 95
+    },
+    {
+      "id": "0341172a21af",
+      "title": "李曼玲、李飞飞、吴佳俊等联手：评估具身大模型的新范式！",
+      "quality_score": 92,
+      "reference_value_score": 95,
+      "publishability_score": 95
+    },
+    {
+      "id": "240634ce1bc7",
+      "title": "Bug变奖励：AI的小失误，揭开创造力真相！",
+      "quality_score": 92,
+      "reference_value_score": 94,
+      "publishability_score": 95
+    },
+    {
+      "id": "7f17ef866655",
+      "title": "全网疯转，AI大神公开「去AI味」秘籍！写出人话洗掉塑料味",
+      "quality_score": 90,
+      "reference_value_score": 98,
+      "publishability_score": 95
+    },
+    {
+      "id": "4e69a248588f",
+      "title": "图灵奖得主LeCun最后警告Meta！我搞了40年AI，大模型是死路",
+      "quality_score": 91,
+      "reference_value_score": 95,
+      "publishability_score": 94
+    },
+    {
+      "id": "13d5aaf30260",
+      "title": "奖励模型变天！0.005%参数量推理速度翻倍，性能还更强",
+      "quality_score": 92,
+      "reference_value_score": 95,
+      "publishability_score": 95
+    },
+    {
+      "id": "08e0b0c0fa3d",
+      "title": "OpenAI与爱泼斯坦的联系断了",
+      "quality_score": 92,
+      "reference_value_score": 90,
+      "publishability_score": 98
+    },
+    {
+      "id": "2132e569b9c6",
+      "title": "AI越繁荣，经济越萧条！一夜爆火2028推演长文，引发华尔街巨头恐慌",
+      "quality_score": 92,
+      "reference_value_score": 94,
+      "publishability_score": 95
+    },
+    {
+      "id": "ad941900a7e0",
+      "title": "万亿参数狂欢！一文刷爆2025年七大顶流大模型架构",
+      "quality_score": 93,
+      "reference_value_score": 96,
+      "publishability_score": 90
+    },
+    {
+      "id": "f1fcbcd7e568",
+      "title": "长视频生成可以回头看了！牛津提出「记忆增稳」，速度提升12倍",
+      "quality_score": 92,
+      "reference_value_score": 95,
+      "publishability_score": 90
+    },
+    {
+      "id": "a56113d11974",
+      "title": "AI失忆术！只需3个注意力头，就能让大模型忘记「狗会叫」",
+      "quality_score": 91,
+      "reference_value_score": 94,
+      "publishability_score": 95
+    },
+    {
+      "id": "b670558224fe",
+      "title": "波士顿动力新作！首创「坐标系转移接口」，提升机器人泛化分层智能",
+      "quality_score": 92,
+      "reference_value_score": 94,
+      "publishability_score": 95
+    },
+    {
+      "id": "c4a44d029d5c",
+      "title": "微软GigaTIME登上《Cell》：5美元切片变成免疫图谱",
+      "quality_score": 91,
+      "reference_value_score": 94,
+      "publishability_score": 95
+    },
+    {
+      "id": "6477551248db",
+      "title": "VLM剪枝新SOTA：无需重训练，注意力去偏置超越6大主流方案",
+      "quality_score": 90,
+      "reference_value_score": 94,
+      "publishability_score": 95
+    },
+    {
+      "id": "33e69290ce80",
+      "title": "别再一键贴代码！Anthropic点名3种「用AI不退化」真方法",
+      "quality_score": 90,
+      "reference_value_score": 95,
+      "publishability_score": 95
+    },
+    {
+      "id": "74de883c65d1",
+      "title": "思维链之父跳槽Meta，不只因为1亿美元！离开OpenAI前泄天机",
+      "quality_score": 91,
+      "reference_value_score": 93,
+      "publishability_score": 95
+    },
+    {
+      "id": "ba90e3bc34a1",
+      "title": "一夜颠覆Sora神话，H200单卡5秒出片！全华人团队开源AI引爆视频圈",
+      "quality_score": 90,
+      "reference_value_score": 94,
+      "publishability_score": 95
+    },
+    {
+      "id": "0366c2552514",
+      "title": "一句话，性能暴涨49%！马里兰MIT等力作：Prompt才是大模型终极武器",
+      "quality_score": 90,
+      "reference_value_score": 95,
+      "publishability_score": 95
+    },
+    {
+      "id": "998339207461",
+      "title": "面向6G环境感知通信！西电开源3Dx3D无线电地图数据集与生成式基准框架",
+      "quality_score": 92,
+      "reference_value_score": 95,
+      "publishability_score": 90
+    },
+    {
+      "id": "62b25a34b64f",
+      "title": "顿悟不是玄学！港科大清华等联手：撕开推理黑箱，RL让AI像人思考",
+      "quality_score": 90,
+      "reference_value_score": 94,
+      "publishability_score": 95
+    },
+    {
+      "id": "8b711775ef34",
+      "title": "登顶多模态推理榜MMMU！UCSD新方法超越GPT-5、Gemini",
+      "quality_score": 92,
+      "reference_value_score": 95,
+      "publishability_score": 90
+    },
+    {
+      "id": "6d90bbea3b97",
+      "title": "Gemini 3仅得33.6分！清华发布首个「约束流形」空间智能基准",
+      "quality_score": 89,
+      "reference_value_score": 94,
+      "publishability_score": 95
+    }
+  ]
+}

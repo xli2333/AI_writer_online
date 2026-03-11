@@ -209,6 +209,10 @@ const applyRuntimePromptAssets = (assets: Awaited<ReturnType<typeof loadRuntimeP
     latepostFeaturePersona: String(assets.latepostFeaturePersona || '').trim(),
     latepostProfilePersona: String(assets.latepostProfilePersona || '').trim(),
     latepostIndustryReviewPersona: String(assets.latepostIndustryReviewPersona || '').trim(),
+    xinzhiyuanBreakingPersona: String(assets.xinzhiyuanBreakingPersona || '').trim(),
+    xinzhiyuanPaperPersona: String(assets.xinzhiyuanPaperPersona || '').trim(),
+    xinzhiyuanProductPersona: String(assets.xinzhiyuanProductPersona || '').trim(),
+    xinzhiyuanPeoplePersona: String(assets.xinzhiyuanPeoplePersona || '').trim(),
   };
 
   if (runtimeAntiAiStyleRules.length === 0) {

@@ -1,0 +1,133 @@
+{
+  "analysis_schema_version": 3,
+  "id": "767a0111f1fc",
+  "year": "2025",
+  "date": "2025-09-03",
+  "title": "谷歌nano banana官方最强Prompt模板来了！先收藏再说",
+  "relative_path": "2025/2025-09-03_谷歌nano banana官方最强Prompt模板来了！先收藏再说.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\xinzhiyuan\\raw_materials\\2025\\2025-09-03_谷歌nano banana官方最强Prompt模板来了！先收藏再说.txt",
+  "char_count": 11990,
+  "content_type": "提示词教程",
+  "entities": [
+    "谷歌",
+    "Google",
+    "nano banana",
+    "Gemini 2.5 Flash Image",
+    "新智元"
+  ],
+  "industry": [
+    "人工智能",
+    "生成式AI",
+    "软件开发"
+  ],
+  "topic": [
+    "Prompt Engineering",
+    "图像生成",
+    "API调用",
+    "提示词模板"
+  ],
+  "genre": "工具指南",
+  "style": [
+    "实用导向",
+    "模块化",
+    "技术性"
+  ],
+  "audience": [
+    "AI绘画爱好者",
+    "开发者",
+    "提示词工程师",
+    "内容创作者"
+  ],
+  "intent": [
+    "工具推广",
+    "技能普及",
+    "资源收藏"
+  ],
+  "tone": [
+    "热情的",
+    "指导性的",
+    "干货性质"
+  ],
+  "primary_question": "如何通过结构化模板发挥谷歌nano banana模型的最强生图能力？",
+  "thesis_type": "解法驱动型",
+  "thesis_sentence": "通过采用谷歌官方提供的覆盖写实、贴纸、文本、产品、留白与分镜六大场景的结构化Prompt模板，用户可以像讲故事一样精确引导Gemini 2.5 Flash Image生成高质量图像。",
+  "structure_pattern": "模块化分类结构",
+  "section_functions": [
+    "背景铺垫：引入nano banana爆火现状及生图痛点",
+    "核心教学：分六个类别详细解读Prompt模板、逻辑及示例",
+    "代码示范：提供Python API调用代码段",
+    "总结呼吁：引导读者收藏并动手尝试"
+  ],
+  "argument_moves": [
+    "建立对比：对比简单提示词与结构化提示词的效果差异",
+    "专家背书：引用谷歌官方发布的模板增加权威性",
+    "逻辑拆解：将提示词要素拆分为主体、环境、光影、镜头等维度",
+    "实证展示：通过Prompt、大意、生成图、代码四位一体展示可行性"
+  ],
+  "core_argument": "高质量的AI生图不仅取决于模型能力，更取决于用户是否能以摄影师或艺术家的思维进行结构化描述。",
+  "key_points": [
+    "写实类Prompt需包含镜头、光线、材质细节",
+    "贴纸类需明确风格化特征及白底要求",
+    "文本渲染需详细说明字体、排版与图标融合度",
+    "商业摄影强调三点布光与机位设置",
+    "极简主义需利用负空间设计",
+    "漫画分镜需要强烈的场景叙事和情绪光影"
+  ],
+  "opening_pattern": "热点引入+利益承诺",
+  "ending_pattern": "收藏呼吁+行动导向",
+  "evidence_types": [
+    "官方模版",
+    "案例Prompt",
+    "生成的图像示例",
+    "Python示例代码"
+  ],
+  "evidence_specificity_score": 95,
+  "data_density_score": 70,
+  "case_density_score": 85,
+  "quote_density_score": 60,
+  "narrative_distance": "中等",
+  "stance_strength": "中立且推荐",
+  "sentence_rhythm": "长短交错，代码块与文本结合",
+  "abstraction_level": "低（极具实操性）",
+  "transferable_moves": [
+    "结构化Prompt编写框架（[主体]+[环境]+[灯光]+[镜头]）",
+    "场景分类教学法",
+    "配套API代码提供一站式解决方案"
+  ],
+  "anti_patterns": [
+    "避免单一的短词提示",
+    "避免缺乏光影和构图说明的泛泛描述",
+    "避免不说明背景要求的素材生成"
+  ],
+  "notable_phrases": [
+    "像讲故事一样写场景",
+    "像摄影师一样思考",
+    "先收藏再说"
+  ],
+  "title_score": 88,
+  "opening_score": 82,
+  "argument_score": 75,
+  "evidence_score": 92,
+  "structure_score": 90,
+  "style_score": 80,
+  "publishability_score": 85,
+  "quality_score": 84,
+  "reference_value_score": 95,
+  "is_activity_notice": false,
+  "is_low_value": false,
+  "is_advertorial": true,
+  "advertorial_type": "product_seeding",
+  "advertorial_confidence": 90,
+  "promotional_intensity_score": 75,
+  "editorial_independence_score": 30,
+  "brand_exposure_level": "高",
+  "source_transparency": "清晰",
+  "advertorial_signals": [
+    "标题带有'官方'、'最强'等典型推介词汇",
+    "全文聚焦单一品牌（谷歌）的产品介绍",
+    "提供详尽的API调用代码，具有明显的产品布道特征",
+    "内容源自官方社交媒体推文的整合分发"
+  ],
+  "summary_200": "该文是针对谷歌最新图像生成模型nano banana（Gemini 2.5 Flash Image）的提示词（Prompt）深度教程。文章核心提供了六套官方认证的结构化模板，涵盖写实摄影、插图贴纸、文本渲染、商业摄影、极简留白及漫画分镜。每类均配有中文大意、英文示例Prompt、生成效果图及Python API调用代码。文章强调生图关键在于如讲故事般描述场景，是高价值的AI实操干货。",
+  "summary_500": "本文详细介绍了谷歌nano banana（Gemini 2.5 Flash Image）官方发布的提示词模板，旨在帮助用户提升AI生图质量。文章将生图场景细化为六大模块：1. 写实摄影，强调模拟摄影师思维，控制镜头、光线与材质；2. 插图贴纸，明确风格、配色与白底要求；3. 文本渲染，专注于字体风格与图标融合，解决AI生图文字模糊痛点；4. 商业摄影，通过三点布光与特定机位提升专业感；5. 极简主义，利用负空间为后期设计留白；6. 漫画分镜，通过环境细节与旁白框构建叙事。每个模块不仅给出了可直接套用的[填空式]模板，还附带了完整的英文示例及对应的Python API代码，极大降低了开发者的使用门槛。文章认为，告别低质量生图的关键在于告别碎片化词汇，转向包含环境、情绪、器材参数在内的结构化叙事。虽然文章带有明显的产品推广色彩，但其提供的Prompt工程方法论具有极高的参考价值和可移植性，适合作为AI绘画与Prompt工程的案头参考资料。最后，文章以'先收藏再说'的呼吁收尾，体现了强烈的服务性与工具属性。"
+}

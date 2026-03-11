@@ -393,6 +393,31 @@ export function computeStylePurityScore(article, profileId = ACTIVE_PROFILE_ID) 
     if (String(article.brand_exposure_level || "").includes("高")) {
       score -= 0.08;
     }
+  } else if (profileId === "xinzhiyuan") {
+    score =
+      editorialIndependence * 0.22 +
+      evidence * 0.18 +
+      style * 0.15 +
+      quality * 0.13 +
+      reference * 0.11 +
+      publishability * 0.09 +
+      structure * 0.08 +
+      argument * 0.08 -
+      promotional * 0.18 -
+      advertorialRisk * 0.12;
+
+    if (typeof article.content_type === "string" && /论文|研究|评测|快讯|报道|专访/.test(article.content_type)) {
+      score += 0.03;
+    }
+    if (typeof article.genre === "string" && /技术解读|论文|产品评测|人物|趋势/.test(article.genre)) {
+      score += 0.02;
+    }
+    if (String(article.source_transparency || "").includes("清晰")) {
+      score += 0.02;
+    }
+    if (String(article.brand_exposure_level || "").includes("高")) {
+      score -= 0.06;
+    }
   } else {
     score =
       argument * 0.22 +
@@ -429,6 +454,10 @@ export function isStylePureEnough(article, profileId = ACTIVE_PROFILE_ID) {
 
   if (profileId === "latepost") {
     return purity >= 0.48 && promotional <= 0.72 && editorialIndependence >= 0.35;
+  }
+
+  if (profileId === "xinzhiyuan") {
+    return purity >= 0.46 && promotional <= 0.74 && editorialIndependence >= 0.3;
   }
 
   return purity >= 0.42 && promotional <= 0.78 && editorialIndependence >= 0.28;

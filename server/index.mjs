@@ -1,3 +1,4 @@
+import crypto from 'node:crypto';
 import fs from 'node:fs/promises';
 import http from 'node:http';
 import path from 'node:path';
@@ -7,6 +8,10 @@ import {
   deleteIllustrationSlotImage,
   generateArticleIllustrationsProgressive,
   getIllustrationManifestBySourceHash,
+  ILLUSTRATION_CANCELED_MESSAGE,
+  isIllustrationTaskCanceledError,
+  markIllustrationManifestCanceled,
+  regenerateIllustrationCaption,
   regenerateIllustrationSlot,
   resolveIllustrationRequestIdentity,
   switchIllustrationSlotVersion,
@@ -59,6 +64,29 @@ const LATEPOST_SUB_PERSONAS = [
   },
 ];
 
+const XINZHIYUAN_SUB_PERSONAS = [
+  {
+    id: 'xinzhiyuanBreakingPersona',
+    label: '快讯与前沿动态',
+    description: '适合模型发布、行业热点、组织动作与高时效 AI 快讯。',
+  },
+  {
+    id: 'xinzhiyuanPaperPersona',
+    label: '论文与基准拆解',
+    description: '适合论文解读、实验结果、技术路线与 benchmark 对比稿。',
+  },
+  {
+    id: 'xinzhiyuanProductPersona',
+    label: '产品与工具实测',
+    description: '适合模型体验、Agent 工具、产品发布与上手评测稿。',
+  },
+  {
+    id: 'xinzhiyuanPeoplePersona',
+    label: '人物与团队观察',
+    description: '适合研究者、创业团队、实验室与关键人物稿。',
+  },
+];
+
 const resolveProfilePaths = (profileId) => {
   const profile = getStyleProfile(profileId);
   const ragDir = path.resolve(ROOT_DIR, profile.ragDir);
@@ -87,6 +115,11 @@ const buildPromptAssetMap = (profileId) => {
     assetMap.latepostFeaturePersona = path.join(paths.runtimeDir, 'subpersonas', 'feature.md');
     assetMap.latepostProfilePersona = path.join(paths.runtimeDir, 'subpersonas', 'profile.md');
     assetMap.latepostIndustryReviewPersona = path.join(paths.runtimeDir, 'subpersonas', 'industry_review.md');
+  } else if (profileId === 'xinzhiyuan') {
+    assetMap.xinzhiyuanBreakingPersona = path.join(paths.runtimeDir, 'subpersonas', 'breaking.md');
+    assetMap.xinzhiyuanPaperPersona = path.join(paths.runtimeDir, 'subpersonas', 'paper.md');
+    assetMap.xinzhiyuanProductPersona = path.join(paths.runtimeDir, 'subpersonas', 'product.md');
+    assetMap.xinzhiyuanPeoplePersona = path.join(paths.runtimeDir, 'subpersonas', 'people.md');
   }
 
   return assetMap;
@@ -233,7 +266,12 @@ const loadPersonaStatus = async (profileId) => {
   const lastPatch = patchLines.length ? JSON.parse(patchLines[patchLines.length - 1]) : {};
   const benchmarkFiles = await listMarkdownFiles(path.join(evalDir, 'benchmark_tasks'));
   const antiPatternsText = await readUtf8(path.join(runtimeDir, 'anti_patterns.md')).catch(() => '');
-  const subPersonas = profile.id === 'latepost' ? LATEPOST_SUB_PERSONAS : [];
+  const subPersonas =
+    profile.id === 'latepost'
+      ? LATEPOST_SUB_PERSONAS
+      : profile.id === 'xinzhiyuan'
+        ? XINZHIYUAN_SUB_PERSONAS
+        : [];
   const personaFileStat = await fs.stat(path.join(runtimeDir, 'master_persona.md')).catch(() => null);
   const personaFileUpdatedAt = personaFileStat?.mtime ? new Date(personaFileStat.mtime).toISOString() : '';
   const personaUpdatedAt = pickLatestIso(
@@ -472,11 +510,13 @@ const toIllustrationBundle = (manifest) => {
 };
 
 const illustrationJobs = new Map();
+const illustrationRunStates = new Map();
 
 const normalizeIllustrationJob = (jobLike, defaults = {}) => {
   const sourceHash = String(jobLike?.sourceHash || defaults.sourceHash || '').trim();
   return {
     sourceHash,
+    runId: String(jobLike?.runId || defaults.runId || '').trim() || undefined,
     status: String(jobLike?.status || defaults.status || 'queued').trim(),
     currentStep: String(jobLike?.currentStep || defaults.currentStep || '').trim(),
     completedCount: Number(jobLike?.completedCount || defaults.completedCount || 0),
@@ -495,7 +535,7 @@ const normalizeIllustrationJob = (jobLike, defaults = {}) => {
   };
 };
 
-const deriveIllustrationJobFromBundle = (sourceHash, bundle) => {
+const deriveIllustrationJobFromBundle = (sourceHash, bundle, defaults = {}) => {
   const progress = bundle?.progress || {};
   return normalizeIllustrationJob(
     {
@@ -511,11 +551,51 @@ const deriveIllustrationJobFromBundle = (sourceHash, bundle) => {
       updatedAt: progress.updatedAt || bundle?.updatedAt,
       error: bundle?.error,
     },
-    { sourceHash }
+    { sourceHash, ...defaults }
   );
 };
 
 const isIllustrationJobRunning = (job) => ['queued', 'planning', 'rendering', 'finalizing'].includes(String(job?.status || ''));
+const isIllustrationBundleRunning = (bundle) => ['planning', 'rendering', 'partial'].includes(String(bundle?.status || ''));
+const createIllustrationRunId = () => crypto.randomUUID();
+
+const getIllustrationRunState = (sourceHash) => illustrationRunStates.get(sourceHash) || { activeRunId: null };
+
+const setIllustrationRunState = (sourceHash, activeRunId) => {
+  illustrationRunStates.set(sourceHash, {
+    activeRunId: activeRunId || null,
+    updatedAt: new Date().toISOString(),
+  });
+};
+
+const isIllustrationRunCurrent = (sourceHash, runId) =>
+  Boolean(runId) && String(getIllustrationRunState(sourceHash).activeRunId || '') === String(runId);
+
+const clearIllustrationRunIfCurrent = (sourceHash, runId) => {
+  if (isIllustrationRunCurrent(sourceHash, runId)) {
+    setIllustrationRunState(sourceHash, null);
+  }
+};
+
+const updateIllustrationJobForRun = (sourceHash, runId, jobLike, defaults = {}, options = {}) => {
+  if (!options.allowInactive && runId && !isIllustrationRunCurrent(sourceHash, runId)) {
+    return null;
+  }
+  const nextJob = normalizeIllustrationJob(
+    {
+      ...jobLike,
+      sourceHash,
+      runId,
+    },
+    {
+      sourceHash,
+      runId,
+      ...defaults,
+    }
+  );
+  illustrationJobs.set(sourceHash, nextJob);
+  return nextJob;
+};
 
 const server = http.createServer(async (request, response) => {
   const startedAt = Date.now();
@@ -606,7 +686,12 @@ const server = http.createServer(async (request, response) => {
       const existingJob = illustrationJobs.get(sourceHash);
       const targetImageCount = Math.max(1, Math.min(10, Math.ceil(String(articleContent).replace(/\s+/g, '').length / 1000)));
 
-      if (!regenerate && existingJob && isIllustrationJobRunning(existingJob)) {
+      if (
+        !regenerate &&
+        existingJob &&
+        isIllustrationJobRunning(existingJob) &&
+        (!existingJob.runId || isIllustrationRunCurrent(sourceHash, existingJob.runId))
+      ) {
         sendJson(response, 202, {
           sourceHash,
           job: normalizeIllustrationJob(existingJob, {
@@ -618,19 +703,17 @@ const server = http.createServer(async (request, response) => {
         return;
       }
 
+      const runId = createIllustrationRunId();
       const startedAt = new Date().toISOString();
-      illustrationJobs.set(
-        sourceHash,
-        normalizeIllustrationJob({
-          sourceHash,
-          status: 'queued',
-          currentStep: '任务已创建，准备分析全文',
-          completedCount: existingManifest?.assets?.length || 0,
-          totalCount: existingManifest?.targetImageCount || targetImageCount,
-          startedAt,
-          updatedAt: startedAt,
-        })
-      );
+      setIllustrationRunState(sourceHash, runId);
+      updateIllustrationJobForRun(sourceHash, runId, {
+        status: 'queued',
+        currentStep: '任务已创建，准备分析全文',
+        completedCount: existingManifest?.assets?.length || 0,
+        totalCount: existingManifest?.targetImageCount || targetImageCount,
+        startedAt,
+        updatedAt: startedAt,
+      });
 
       void generateArticleIllustrationsProgressive({
         apiKey,
@@ -642,37 +725,119 @@ const server = http.createServer(async (request, response) => {
         options: body.options && typeof body.options === 'object' ? body.options : {},
         userPrompt,
         force: regenerate,
+        isCanceled: () => !isIllustrationRunCurrent(sourceHash, runId),
+        shouldPersistCancellation: () => getIllustrationRunState(sourceHash).activeRunId === null,
         onProgress: (manifest) => {
-          illustrationJobs.set(sourceHash, deriveIllustrationJobFromBundle(sourceHash, manifest));
+          updateIllustrationJobForRun(sourceHash, runId, deriveIllustrationJobFromBundle(sourceHash, manifest, { runId }));
         },
       })
         .then((manifest) => {
-          illustrationJobs.set(sourceHash, deriveIllustrationJobFromBundle(sourceHash, manifest));
+          updateIllustrationJobForRun(sourceHash, runId, deriveIllustrationJobFromBundle(sourceHash, manifest, { runId }));
+          clearIllustrationRunIfCurrent(sourceHash, runId);
         })
         .catch(async (error) => {
           const latestManifest = await getIllustrationManifestBySourceHash(sourceHash);
-          illustrationJobs.set(
-            sourceHash,
-            normalizeIllustrationJob(
-              latestManifest ? deriveIllustrationJobFromBundle(sourceHash, latestManifest) : {},
-              {
+          if (isIllustrationTaskCanceledError(error) || latestManifest?.status === 'canceled') {
+            if (getIllustrationRunState(sourceHash).activeRunId === null) {
+              updateIllustrationJobForRun(
                 sourceHash,
-                status: 'error',
-                currentStep: error instanceof Error ? error.message : String(error),
-                completedCount: latestManifest?.assets?.length || 0,
-                totalCount: latestManifest?.targetImageCount || targetImageCount,
-                startedAt,
-                updatedAt: new Date().toISOString(),
-                error: error instanceof Error ? error.message : String(error),
-              }
-            )
+                runId,
+                latestManifest
+                  ? deriveIllustrationJobFromBundle(sourceHash, latestManifest, { runId })
+                  : {
+                      status: 'canceled',
+                      currentStep: error instanceof Error ? error.message : ILLUSTRATION_CANCELED_MESSAGE,
+                      completedCount: 0,
+                      totalCount: targetImageCount,
+                      startedAt,
+                      updatedAt: new Date().toISOString(),
+                    },
+                {
+                  status: 'canceled',
+                  currentStep: error instanceof Error ? error.message : ILLUSTRATION_CANCELED_MESSAGE,
+                  completedCount: latestManifest?.assets?.length || 0,
+                  totalCount: latestManifest?.targetImageCount || targetImageCount,
+                  startedAt,
+                  updatedAt: new Date().toISOString(),
+                },
+                { allowInactive: true }
+              );
+            }
+            clearIllustrationRunIfCurrent(sourceHash, runId);
+            return;
+          }
+
+          if (!isIllustrationRunCurrent(sourceHash, runId)) {
+            return;
+          }
+
+          updateIllustrationJobForRun(
+            sourceHash,
+            runId,
+            latestManifest ? deriveIllustrationJobFromBundle(sourceHash, latestManifest, { runId }) : {},
+            {
+              status: 'error',
+              currentStep: error instanceof Error ? error.message : String(error),
+              completedCount: latestManifest?.assets?.length || 0,
+              totalCount: latestManifest?.targetImageCount || targetImageCount,
+              startedAt,
+              updatedAt: new Date().toISOString(),
+              error: error instanceof Error ? error.message : String(error),
+            }
           );
+          clearIllustrationRunIfCurrent(sourceHash, runId);
         });
 
       sendJson(response, 202, {
         sourceHash,
         job: illustrationJobs.get(sourceHash),
         bundle: existingManifest ? toIllustrationBundle(existingManifest) : undefined,
+      });
+      return;
+    }
+
+    if (request.method === 'POST' && route === '/api/article-illustrations/cancel') {
+      const body = await parseJsonBody(request);
+      const sourceHash = String(body.sourceHash || '').trim();
+      if (!sourceHash) {
+        sendJson(response, 400, { error: 'Missing sourceHash.' });
+        return;
+      }
+
+      const activeRunId = getIllustrationRunState(sourceHash).activeRunId;
+      const manifest = await getIllustrationManifestBySourceHash(sourceHash);
+      const memoryJob = illustrationJobs.get(sourceHash);
+      const runningMemoryJob =
+        memoryJob && isIllustrationJobRunning(memoryJob) && (!memoryJob.runId || isIllustrationRunCurrent(sourceHash, memoryJob.runId));
+      const shouldCancel = Boolean(activeRunId) || Boolean(runningMemoryJob) || isIllustrationBundleRunning(manifest);
+
+      if (activeRunId) {
+        setIllustrationRunState(sourceHash, null);
+      }
+
+      const bundle = shouldCancel ? await markIllustrationManifestCanceled({ sourceHash }) : manifest;
+      const nextJob = normalizeIllustrationJob(
+        bundle ? deriveIllustrationJobFromBundle(sourceHash, bundle, { runId: activeRunId || undefined }) : memoryJob,
+        {
+          sourceHash,
+          runId: activeRunId || memoryJob?.runId,
+          status: shouldCancel ? 'canceled' : memoryJob?.status || bundle?.status || 'queued',
+          currentStep:
+            shouldCancel
+              ? ILLUSTRATION_CANCELED_MESSAGE
+              : memoryJob?.currentStep || bundle?.progress?.currentStep || '',
+          completedCount: bundle?.assets?.length || memoryJob?.completedCount || 0,
+          totalCount: bundle?.targetImageCount || memoryJob?.totalCount || 0,
+          startedAt: memoryJob?.startedAt || bundle?.generatedAt,
+          updatedAt: new Date().toISOString(),
+        }
+      );
+
+      illustrationJobs.set(sourceHash, nextJob);
+      sendJson(response, 200, {
+        sourceHash,
+        job: nextJob,
+        bundle: bundle ? toIllustrationBundle(bundle) : undefined,
       });
       return;
     }
@@ -684,7 +849,11 @@ const server = http.createServer(async (request, response) => {
         return;
       }
       const manifest = await getIllustrationManifestBySourceHash(sourceHash);
-      const job = normalizeIllustrationJob(illustrationJobs.get(sourceHash) || deriveIllustrationJobFromBundle(sourceHash, manifest), {
+      const memoryJob = illustrationJobs.get(sourceHash);
+      const shouldUseMemoryJob =
+        memoryJob &&
+        (!isIllustrationJobRunning(memoryJob) || !memoryJob.runId || isIllustrationRunCurrent(sourceHash, memoryJob.runId));
+      const job = normalizeIllustrationJob((shouldUseMemoryJob ? memoryJob : null) || deriveIllustrationJobFromBundle(sourceHash, manifest), {
         sourceHash,
         status: manifest?.status || 'queued',
         currentStep: manifest?.progress?.currentStep || '',
@@ -726,6 +895,35 @@ const server = http.createServer(async (request, response) => {
         articleContent,
         plannerModel: String(body.plannerModel || '').trim() || undefined,
         imageModel: String(body.imageModel || '').trim() || undefined,
+        userPrompt: String(body.userPrompt || '').trim(),
+      });
+      sendJson(response, 200, { bundle: toIllustrationBundle(manifest) });
+      return;
+    }
+
+    if (request.method === 'POST' && route === '/api/article-illustrations/regenerate-caption') {
+      const body = await parseJsonBody(request);
+      const apiKey = String(body.apiKey || '').trim();
+      const sourceHash = String(body.sourceHash || '').trim();
+      const slotId = String(body.slotId || '').trim();
+      const articleContent = String(body.articleContent || '').trim();
+
+      if (!apiKey) {
+        sendJson(response, 400, { error: 'Missing apiKey.' });
+        return;
+      }
+
+      if (!sourceHash || !slotId) {
+        sendJson(response, 400, { error: 'Missing sourceHash or slotId.' });
+        return;
+      }
+
+      const manifest = await regenerateIllustrationCaption({
+        apiKey,
+        sourceHash,
+        slotId,
+        articleContent,
+        plannerModel: String(body.plannerModel || '').trim() || undefined,
         userPrompt: String(body.userPrompt || '').trim(),
       });
       sendJson(response, 200, { bundle: toIllustrationBundle(manifest) });

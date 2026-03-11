@@ -1,0 +1,142 @@
+{
+  "analysis_schema_version": 3,
+  "id": "fdcbb01e1f0a",
+  "year": "2026",
+  "date": "2026-01-19",
+  "title": "字节全球首发AI技能商店：一句话生成Coze Skills，你的经验直接卖钱",
+  "relative_path": "2026/2026-01-19_字节全球首发AI技能商店：一句话生成Coze Skills，你的经验直接卖钱.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\xinzhiyuan\\raw_materials\\2026\\2026-01-19_字节全球首发AI技能商店：一句话生成Coze Skills，你的经验直接卖钱.txt",
+  "char_count": 4332,
+  "content_type": "产品发布报道",
+  "entities": [
+    "字节跳动",
+    "扣子",
+    "Coze",
+    "新智元",
+    "Anthropic",
+    "OpenAI",
+    "Geoffrey Huntley",
+    "Claude Code",
+    "Cursor"
+  ],
+  "industry": [
+    "人工智能",
+    "互联网",
+    "软件开发",
+    "创意产业"
+  ],
+  "topic": [
+    "AI Agent",
+    "智能体生态",
+    "低代码开发",
+    "知识变现",
+    "自动化办公"
+  ],
+  "genre": "科技软文",
+  "style": [
+    "极客感",
+    "公关话术",
+    "案例驱动"
+  ],
+  "audience": [
+    "AI开发者",
+    "职场专业人士",
+    "个人创作者",
+    "科技行业观察者"
+  ],
+  "intent": [
+    "产品推广",
+    "生态招募",
+    "品牌背书"
+  ],
+  "tone": [
+    "激进",
+    "振奋",
+    "专业"
+  ],
+  "primary_question": "扣子2.0如何通过技能商店和长期任务功能将个人经验转化为商业资产并重塑职场效率？",
+  "thesis_type": "解释型",
+  "thesis_sentence": "扣子通过首发技能商店和长期计划，将人类经验封装为数字化技能包，实现了AI从简单工具向可变现、可闭环协作的职场伙伴的跨越。",
+  "structure_pattern": "模块化功能递进",
+  "section_functions": [
+    "背景引入：通过硅谷趋势引出AI Skill新战场",
+    "核心亮点：推出Coze Skill及一句话生成机制",
+    "协作升级：介绍长期任务及目标导向协作模式",
+    "商业愿景：发布技能商店，构建AI变现生态",
+    "技术底层：阐述Vibe Infra及全链路基础设施服务",
+    "附加亮点：展示视频Agent Skill及成本优势"
+  ],
+  "argument_moves": [
+    "通过国外竞品动向建立行业紧迫感",
+    "定义新概念Coze Skill并对比传统Prompt工程的优越性",
+    "使用具体应用场景（写作、投资分析）证明功能落地性",
+    "描绘‘经验变现’的商业前景以吸引开发者",
+    "引用计算机发展史强调技术普惠的必然趋势"
+  ],
+  "core_argument": "AI智能体竞争已进入技能复用与工程化落地阶段，扣子通过降低技能封装门槛和建立交易市场，试图抢占智能体时代的生态话语权。",
+  "key_points": [
+    "Coze Skill实现一句话封装行业经验，支持数字化资产复用",
+    "长期计划支持目标拆解、执行及Human Check，完成任务闭环",
+    "技能商店作为AI时代的App Store，支持经验交易与变现",
+    "Vibe Infra提供从开发到部署的全链路云端服务，降低运维成本",
+    "视频技能大幅降低AI视频创作成本至海外产品的1/50"
+  ],
+  "opening_pattern": "热点事件引入",
+  "ending_pattern": "彩蛋福利展示",
+  "evidence_types": [
+    "行业对比数据",
+    "具体案例演示",
+    "功能链接引用",
+    "历史对比"
+  ],
+  "evidence_specificity_score": 75,
+  "data_density_score": 60,
+  "case_density_score": 80,
+  "quote_density_score": 40,
+  "narrative_distance": "第三人称报道",
+  "stance_strength": "强烈支持",
+  "sentence_rhythm": "短促有力，多用强调句",
+  "abstraction_level": "中等（兼顾技术名词与应用场景）",
+  "transferable_moves": [
+    "将复杂技术概念包装为直观的商业利益（卖经验赚钱）",
+    "使用‘One More Thing’结构增强内容价值感",
+    "通过历史对比赋予产品升级以时代必然性"
+  ],
+  "anti_patterns": [
+    "过度公关词汇（‘捅破天花板’、‘掀翻’）",
+    "功能堆砌缺乏客观局限性分析",
+    "过高的预期承诺（‘一句话变现’）"
+  ],
+  "notable_phrases": [
+    "人类经验注入AI智能体",
+    "你的经验直接卖钱",
+    "AI时代的App Store",
+    "Vibe Coding"
+  ],
+  "title_score": 88,
+  "opening_score": 82,
+  "argument_score": 75,
+  "evidence_score": 70,
+  "structure_score": 85,
+  "style_score": 80,
+  "publishability_score": 95,
+  "quality_score": 72,
+  "reference_value_score": 80,
+  "is_activity_notice": false,
+  "is_low_value": false,
+  "is_advertorial": true,
+  "advertorial_type": "product_seeding",
+  "advertorial_confidence": 98,
+  "promotional_intensity_score": 90,
+  "editorial_independence_score": 20,
+  "brand_exposure_level": "高",
+  "source_transparency": "清晰",
+  "advertorial_signals": [
+    "带有明显的品牌功能推广链接",
+    "标题极具诱导性（变现、卖钱）",
+    "文中大量使用品牌官方术语及赞美性修辞",
+    "内容完全围绕单一品牌的功能更新展开"
+  ],
+  "summary_200": "字节跳动旗下AI平台“扣子”发布2.0重大升级。核心亮点包括：全球首发AI技能商店，支持用户将行业经验一句话封装为Coze Skill并挂牌交易；推出“长期计划”功能，实现AI自主拆解目标与人类反馈的闭环协作；以及提供Vibe Infra全链路基础设施。文章旨在宣传扣子作为“职场伙伴”的全新定位，强调其在降低AI开发门槛和构建经验交易生态方面的领先地位。",
+  "summary_500": "本文详细介绍了字节跳动AI智能体平台“扣子”（Coze）的2.0版本升级内容。文章首先通过全球AI Agent技能化的趋势，引出扣子的三大核心更新。第一是Coze Skill（技能包），它能够将个人的特定方法论、写作风格或行业经验通过极简交互封装为可复用的数字化资产。第二是“长期计划”，这是业内首次推出的目标导向协作功能，AI可以自主将模糊目标拆解为步骤，并结合人类确认（Human Check）持续执行，使AI从单纯的工具进化为能深度参与任务的同事。第三是“技能商店”，扣子试图打造AI时代的App Store，让用户不仅能复用他人的专业技能，还能通过出售自己的技能包实现商业变现。此外，文章还提到了扣子在底层架构上的升级——Vibe Infra，该服务涵盖了从云端资源分配到域名备案、App发布的软件全生命周期，极大地解放了开发者的运维压力。最后，文章展示了低成本、高效率的视频Agent Skill，展示了扣子在多模态创作领域的竞争力。整篇文章充斥着对扣子生态建设的乐观预期，是典型的针对开发者和职场用户的产品种草稿，旨在通过展示极低的使用门槛和明确的获利路径来吸引用户入驻其生态系统。"
+}

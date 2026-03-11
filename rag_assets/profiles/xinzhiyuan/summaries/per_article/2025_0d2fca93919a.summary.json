@@ -1,0 +1,136 @@
+{
+  "analysis_schema_version": 3,
+  "id": "0d2fca93919a",
+  "year": "2025",
+  "date": "2025-09-05",
+  "title": "力压哈佛MIT！北交大、清华勇夺2025国际大学生程序设计竞赛金牌",
+  "relative_path": "2025/2025-09-05_力压哈佛MIT！北交大、清华勇夺2025国际大学生程序设计竞赛金牌.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\xinzhiyuan\\raw_materials\\2025\\2025-09-05_力压哈佛MIT！北交大、清华勇夺2025国际大学生程序设计竞赛金牌.txt",
+  "char_count": 3491,
+  "content_type": "行业新闻报道",
+  "entities": [
+    "北京交通大学",
+    "清华大学",
+    "北京大学",
+    "中国科学技术大学",
+    "ICPC",
+    "哈佛大学",
+    "MIT",
+    "圣彼得堡国立大学",
+    "东京大学",
+    "夏鹤鸣",
+    "郭昱哲",
+    "斯修远",
+    "万成章",
+    "张景行",
+    "刘一平"
+  ],
+  "industry": [
+    "高等教育",
+    "计算机科学",
+    "人工智能",
+    "科技媒体"
+  ],
+  "topic": [
+    "学科竞赛",
+    "算法编程",
+    "人才培养",
+    "高校排名"
+  ],
+  "genre": "赛事新闻",
+  "style": [
+    "热点导向",
+    "数据支撑",
+    "激励人心"
+  ],
+  "audience": [
+    "在校大学生",
+    "科技从业者",
+    "算法爱好者",
+    "教育政策关注者"
+  ],
+  "intent": [
+    "信息传播",
+    "成就展示",
+    "榜样塑造"
+  ],
+  "tone": [
+    "振奋",
+    "客观",
+    "赞赏"
+  ],
+  "primary_question": "中国高校在2025年ICPC全球总决赛中的表现如何，其核心选手的背景特征是什么？",
+  "thesis_type": "事实汇报型",
+  "thesis_sentence": "北京交通大学与清华大学在2025年ICPC全球总决赛中力压哈佛、MIT等名校勇夺金牌，展现了中国顶尖高校在算法编程领域的全球领先地位。",
+  "structure_pattern": "倒金字塔结构",
+  "section_functions": [
+    "核心战报发布",
+    "获奖队伍及选手背景详细介绍",
+    "比赛题目与实时进展回顾",
+    "ICPC竞赛机制与历史科普"
+  ],
+  "argument_moves": [
+    "对比论证（力压哈佛MIT强调含金量）",
+    "数据佐证（通过Codeforces Rating量化选手水平）",
+    "历史对比（北交大刷新校史纪录）"
+  ],
+  "core_argument": "中国顶尖高校的计算机算法教育已经达到世界顶尖水平，其优秀的梯队建设和选手的勤奋积累是超越国际传统强校的关键。",
+  "key_points": [
+    "北交大获世界第三刷新校史纪录",
+    "清华大学再夺金牌",
+    "中国四校进入全球前十",
+    "详细披露选手如夏鹤鸣、张景行等人的技术等级和成长路径"
+  ],
+  "opening_pattern": "成就前置式引子",
+  "ending_pattern": "总结祝贺式结尾",
+  "evidence_types": [
+    "官方排名数据",
+    "选手技术平台评分（Codeforces）",
+    "选手教育背景履历",
+    "赛事规则文档"
+  ],
+  "evidence_specificity_score": 90,
+  "data_density_score": 85,
+  "case_density_score": 75,
+  "quote_density_score": 10,
+  "narrative_distance": "第三人称观察",
+  "stance_strength": "坚定",
+  "sentence_rhythm": "短句为主，节奏明快，多用动词和程度词。",
+  "abstraction_level": "低",
+  "transferable_moves": [
+    "利用第三方权威评价指标（如Rating）来背书人物实力的专业写法",
+    "通过‘名校PK’的视角增强新闻的传播张力",
+    "在硬核新闻后附加详细背景科普，满足不同深度的读者需求"
+  ],
+  "anti_patterns": [
+    "标题党式过度煽情",
+    "部分段落数据堆砌感较强"
+  ],
+  "notable_phrases": [
+    "力压哈佛MIT",
+    "计算机软件领域的奥林匹克",
+    "拒绝遗憾",
+    "刷了超过4000道烧脑的高难度算法题"
+  ],
+  "title_score": 92,
+  "opening_score": 88,
+  "argument_score": 82,
+  "evidence_score": 90,
+  "structure_score": 85,
+  "style_score": 80,
+  "publishability_score": 95,
+  "quality_score": 86,
+  "reference_value_score": 80,
+  "is_activity_notice": false,
+  "is_low_value": false,
+  "is_advertorial": false,
+  "advertorial_type": "editorial",
+  "advertorial_confidence": 10,
+  "promotional_intensity_score": 35,
+  "editorial_independence_score": 90,
+  "brand_exposure_level": "中",
+  "source_transparency": "清晰",
+  "advertorial_signals": [],
+  "summary_200": "2025年ICPC全球总决赛在巴库落幕。北京交通大学表现惊艳，解出10题刷新校史，位列世界第三、中国第一；清华大学同样斩获金牌。北京大学与中科大分别因罚时遗憾获得银牌与铜牌。中国高校在前十名中占据四席，整体实力力压哈佛、MIT。文章详细介绍了北交大与清华获奖选手的学术背景及Codeforces评分，并对ICPC这一“编程奥林匹克”的竞赛规则与历史进行了深度科普。",
+  "summary_500": "在阿塞拜疆巴库举行的第49届ICPC全球总决赛中，中国高校代表队取得历史性突破。北京交通大学“羊羊羊”队凭借解出12题中的10题，力压哈佛、MIT等名校，夺得全球第三及金牌，创下该校参加此项赛事的最佳战绩。清华大学队同样解出9题荣获金牌。北京大学与中国科学技术大学则因罚时因素分获银牌与铜牌。前十名中，中国战队包揽四席，显现出极高的整体竞技水平。报道深入挖掘了明星选手的个人背景：如北交大的夏鹤鸣在大二起步，凭勤奋刷题4000道，将Codeforces Rating提升至3220分的国际顶尖水平；郭昱哲与斯修远则拥有深厚的OI竞赛基础。清华队成员刘一平、张景行等人均为高分Rating持有者。文末还对ICPC竞赛的“气球机制”、罚时规则以及作为“计算机软件领域奥林匹克”的历史地位进行了科普。整体而言，本文是一篇兼具时效性、专业数据支撑和高度荣誉感的科技竞赛深度战报。"
+}

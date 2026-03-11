@@ -14,6 +14,7 @@ interface IllustrationPayload {
 
 const GENERATE_TIMEOUT_MS = 35 * 60 * 1000;
 const REGENERATE_TIMEOUT_MS = 20 * 60 * 1000;
+const CAPTION_TIMEOUT_MS = 5 * 60 * 1000;
 const MUTATION_TIMEOUT_MS = 60 * 1000;
 
 const mergeAbortSignals = (signals: Array<AbortSignal | null | undefined>) => {
@@ -74,6 +75,12 @@ export interface IllustrationGenerationStartResult {
 }
 
 export interface IllustrationGenerationStatusResult {
+  sourceHash: string;
+  bundle?: ArticleIllustrationBundle;
+  job?: ArticleIllustrationJobStatus;
+}
+
+export interface IllustrationGenerationCancelResult {
   sourceHash: string;
   bundle?: ArticleIllustrationBundle;
   job?: ArticleIllustrationJobStatus;
@@ -163,6 +170,37 @@ export const getArticleIllustrationStatus = async ({
   } satisfies IllustrationGenerationStatusResult;
 };
 
+export const cancelArticleIllustrationGeneration = async ({
+  sourceHash,
+  signal,
+}: {
+  sourceHash: string;
+  signal?: AbortSignal;
+}) => {
+  const payload = await fetchJson<IllustrationPayload>(
+    '/api/article-illustrations/cancel',
+    {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      signal,
+      body: JSON.stringify({
+        sourceHash,
+      }),
+    },
+    MUTATION_TIMEOUT_MS
+  );
+
+  if (!payload.sourceHash) {
+    throw new Error('后端没有返回被取消的配图任务标识。');
+  }
+
+  return {
+    sourceHash: payload.sourceHash,
+    bundle: payload.bundle,
+    job: payload.job,
+  } satisfies IllustrationGenerationCancelResult;
+};
+
 export const regenerateIllustrationSlot = async ({
   sourceHash,
   slotId,
@@ -200,6 +238,44 @@ export const regenerateIllustrationSlot = async ({
 
   if (!payload.bundle) {
     throw new Error('后端没有返回更新后的配图结果。');
+  }
+
+  return payload.bundle;
+};
+
+export const regenerateIllustrationCaption = async ({
+  sourceHash,
+  slotId,
+  articleContent,
+  userPrompt,
+  signal,
+}: {
+  sourceHash: string;
+  slotId: string;
+  articleContent: string;
+  userPrompt?: string;
+  signal?: AbortSignal;
+}) => {
+  const payload = await fetchJson<IllustrationPayload>(
+    '/api/article-illustrations/regenerate-caption',
+    {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      signal,
+      body: JSON.stringify({
+        apiKey: getRuntimeApiKey(),
+        sourceHash,
+        slotId,
+        articleContent,
+        plannerModel: getPlannerModel(),
+        userPrompt: String(userPrompt || '').trim(),
+      }),
+    },
+    CAPTION_TIMEOUT_MS
+  );
+
+  if (!payload.bundle) {
+    throw new Error('后端没有返回更新后的图释结果。');
   }
 
   return payload.bundle;

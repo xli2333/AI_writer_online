@@ -1,0 +1,145 @@
+{
+  "analysis_schema_version": 3,
+  "id": "9ec9510bf7bb",
+  "year": "2025",
+  "date": "2025-09-05",
+  "title": "新天终启，万象智生！从AlphaGo到GPT-5，新智元十年见证ASI创世纪",
+  "relative_path": "2025/2025-09-05_新天终启，万象智生！从AlphaGo到GPT-5，新智元十年见证ASI创世纪.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\xinzhiyuan\\raw_materials\\2025\\2025-09-05_新天终启，万象智生！从AlphaGo到GPT-5，新智元十年见证ASI创世纪.txt",
+  "char_count": 7728,
+  "content_type": "品牌宣传稿",
+  "entities": [
+    "新智元",
+    "杨静",
+    "王海峰",
+    "百度",
+    "英伟达",
+    "赖俊杰",
+    "王小川",
+    "百川智能",
+    "方汉",
+    "昆仑万维",
+    "OpenAI",
+    "谷歌DeepMind",
+    "智源研究院",
+    "潞晨科技"
+  ],
+  "industry": [
+    "人工智能",
+    "科技媒体",
+    "大模型"
+  ],
+  "topic": [
+    "ASI",
+    "十周年峰会",
+    "通用人工智能",
+    "具身智能",
+    "智能体"
+  ],
+  "genre": "商业软文",
+  "style": [
+    "宏大叙事",
+    "编年史体",
+    "公关话术"
+  ],
+  "audience": [
+    "AI行业从业者",
+    "科技投资者",
+    "企业中高层",
+    "科技爱好者"
+  ],
+  "intent": [
+    "品牌宣传",
+    "活动引流",
+    "嘉宾背书"
+  ],
+  "tone": [
+    "激情洋溢",
+    "展望未来",
+    "权威"
+  ],
+  "primary_question": "在人工智能迈向ASI的十年里程碑之际，新智元如何通过十周年峰会链接行业资源并定义未来？",
+  "thesis_type": "愿景宣示型",
+  "thesis_sentence": "新智元在十周年之际，通过回顾AI从AlphaGo到ASI的演进，联合行业顶尖力量，宣告超级智能时代的全面开启。",
+  "structure_pattern": "时空穿梭式（现状扫描-历史回顾-专家背书-活动动员）",
+  "section_functions": [
+    "开篇定义ASI时代背景并预告峰会",
+    "梳理2025年大模型及智能体的前沿进展",
+    "引用国家政策强调AI+行动的战略地位",
+    "回顾新智元十年的创业史与AI进化史的交叠",
+    "展示详尽的专家嘉宾阵容进行权威背书",
+    "最后发出参会邀约提供转化入口"
+  ],
+  "argument_moves": [
+    "建立紧迫感：强调2025年是ASI奇点",
+    "制造权威性：列举大量行业领袖及其头衔",
+    "情感连接：回顾十年前的AlphaGo与创业初心",
+    "利益诱导：展示报告发布与前沿趋势分享"
+  ],
+  "core_argument": "人工智能已进入ASI（超级人工智能）爆发前夜，新智元作为深耕十年的平台，是见证并引领这一变革的核心枢纽。",
+  "key_points": [
+    "2025年是大模型向ASI跃迁的关键年，GPT-5等模型刷新认知",
+    "国家政策明确了2027-2035年人工智能+的普及目标",
+    "具身智能、AI智能体成为新的全球经济增长极",
+    "新智元十年历经AI冷热，始终坚持人机融合的智能信仰",
+    "9月7日峰会将汇聚百度、英伟达等大厂及科研机构专家"
+  ],
+  "opening_pattern": "宏大隐喻（宇宙大爆炸/火的使用）",
+  "ending_pattern": "号召行动（扫描二维码预约）",
+  "evidence_types": [
+    "行业里程碑事件",
+    "政府公文",
+    "专家个人履历",
+    "品牌历史记录"
+  ],
+  "evidence_specificity_score": 85,
+  "data_density_score": 60,
+  "case_density_score": 70,
+  "quote_density_score": 40,
+  "narrative_distance": "近距离",
+  "stance_strength": "极强",
+  "sentence_rhythm": "长短交错，感叹句多，排比句多",
+  "abstraction_level": "中等（术语多但意图具体）",
+  "transferable_moves": [
+    "将品牌周年庆转化为行业趋势发布会",
+    "利用‘专家简历海报’式排版增强信任感",
+    "将品牌史与行业进化史深度绑定",
+    "使用国家政策作为业务发展的合法性支撑"
+  ],
+  "anti_patterns": [
+    "词藻过于堆砌（如：万象智生、新天终启）",
+    "自我表扬篇幅较长",
+    "信息结构过于碎片化"
+  ],
+  "notable_phrases": [
+    "ASI创世纪",
+    "万物应该平等，智能永生",
+    "智能宇宙的航程"
+  ],
+  "title_score": 88,
+  "opening_score": 82,
+  "argument_score": 65,
+  "evidence_score": 78,
+  "structure_score": 80,
+  "style_score": 75,
+  "publishability_score": 90,
+  "quality_score": 72,
+  "reference_value_score": 65,
+  "is_activity_notice": true,
+  "is_low_value": false,
+  "is_advertorial": true,
+  "advertorial_type": "event_promotion",
+  "advertorial_confidence": 100,
+  "promotional_intensity_score": 95,
+  "editorial_independence_score": 20,
+  "brand_exposure_level": "高",
+  "source_transparency": "清晰",
+  "advertorial_signals": [
+    "内嵌峰会预约二维码",
+    "详细的演讲嘉宾（专家）列表展示",
+    "大量关于新智元十年成就的自我描述",
+    "特定日期的活动预告"
+  ],
+  "summary_200": "本文是科技媒体“新智元”为其十周年峰会撰写的深度预热稿。文章将2025年定义为迈向超级人工智能（ASI）的奇点，通过梳理从GPT-5到DeepSeek等最新技术进展，以及国家“人工智能+”行动意见，构建了宏大的行业背景。文中详细回顾了新智元自2015年创办以来与AI行业共同成长的历程，并列举了包括百度CTO王海峰、英伟达副总裁赖俊杰等在内的豪华嘉宾阵容，旨在邀请读者参加9月7日的线下峰会。",
+  "summary_500": "文章以“新天终启，万象智生”为主题，全方位推介即将于2025年9月7日举办的新智元十周年峰会。内容分为四个核心板块：首先是趋势洞察，文章宣称AI正以指数级速度向ASI进化，列举了OpenAI近期频繁发布新模型、谷歌Gemini 2.5及中国开源模型（如Qwen3、Kimi-K2）的崛起，展现了全球大模型的“井喷”态势；其次是政策解读，重点引用了《国务院关于深入实施人工智能+行动的意见》，明确了2027至2035年的阶段性智能化目标，为行业发展提供了官方背书。第三部分是情怀回顾，从2015年AlphaGo起步谈到新智元创刊词中的使命，强调其作为三位一体产业链平台的枢纽价值。最后是硬核背书，通过详尽展示王海峰、赖俊杰、王小川、方汉、林咏华、尤洋等产学研领军人物的资历，体现峰会的技术高度和行业影响力。全文充满了科技浪漫主义色彩与公关宣传意图，是典型的媒体周年庆暨资源对接活动邀约文，适合用于观察中国AI圈层的社交关系网与宣传话术演变。"
+}

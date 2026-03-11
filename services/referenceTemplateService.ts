@@ -165,6 +165,31 @@ const computeStylePurity = (article: ArticleCatalogEntry, profile = 'fdsm') => {
     if (String(article.brand_exposure_level || '').includes('高')) {
       score -= 0.08;
     }
+  } else if (profile === 'xinzhiyuan') {
+    score =
+      editorialIndependence * 0.22 +
+      evidence * 0.18 +
+      style * 0.15 +
+      quality * 0.13 +
+      reference * 0.11 +
+      publishability * 0.09 +
+      structure * 0.08 +
+      argument * 0.08 -
+      promotional * 0.18 -
+      advertorialRisk * 0.12;
+
+    if (typeof article.content_type === 'string' && /论文|研究|评测|快讯|报道|专访/.test(article.content_type)) {
+      score += 0.03;
+    }
+    if (typeof article.genre === 'string' && /技术解读|论文|产品评测|人物|趋势/.test(article.genre)) {
+      score += 0.02;
+    }
+    if (String(article.source_transparency || '').includes('清晰')) {
+      score += 0.02;
+    }
+    if (String(article.brand_exposure_level || '').includes('高')) {
+      score -= 0.06;
+    }
   } else {
     score =
       argument * 0.22 +
@@ -193,9 +218,15 @@ const isStylePureEnough = (article: ArticleCatalogEntry, profile = 'fdsm') => {
       Math.max(0, 100 - normalizeScore(article.advertorial_confidence) * 75)
   );
   const purity = computeStylePurity(article, profile);
-  return profile === 'latepost'
-    ? purity >= 0.48 && promotional <= 0.72 && editorialIndependence >= 0.35
-    : purity >= 0.42 && promotional <= 0.78 && editorialIndependence >= 0.28;
+  if (profile === 'latepost') {
+    return purity >= 0.48 && promotional <= 0.72 && editorialIndependence >= 0.35;
+  }
+
+  if (profile === 'xinzhiyuan') {
+    return purity >= 0.46 && promotional <= 0.74 && editorialIndependence >= 0.3;
+  }
+
+  return purity >= 0.42 && promotional <= 0.78 && editorialIndependence >= 0.28;
 };
 
 const scoreArticleForTask = (taskText: string, article: ArticleCatalogEntry, profile = 'fdsm') => {
@@ -244,6 +275,16 @@ const boostScore = (article: ArticleCatalogEntry, options: WritingTaskOptions, d
     }
     if (typeof article.promotional_intensity_score === 'number' && article.promotional_intensity_score >= 45) {
       score -= 0.05;
+    }
+  } else if (options.styleProfile === 'xinzhiyuan') {
+    if (typeof article.content_type === 'string' && /论文|研究|评测|快讯|报道|专访/.test(article.content_type)) {
+      score += 0.03;
+    }
+    if (typeof article.source_transparency === 'string' && article.source_transparency.includes('清晰')) {
+      score += 0.02;
+    }
+    if (typeof article.promotional_intensity_score === 'number' && article.promotional_intensity_score >= 42) {
+      score -= 0.06;
     }
   }
 

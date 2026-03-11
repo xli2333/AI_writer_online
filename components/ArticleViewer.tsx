@@ -21,8 +21,10 @@ import {
 } from '../types';
 import * as GeminiService from '../services/geminiService';
 import {
+  cancelArticleIllustrationGeneration,
   deleteIllustrationSlotImage,
   getArticleIllustrationStatus,
+  regenerateIllustrationCaption,
   regenerateIllustrationSlot,
   startArticleIllustrationGeneration,
   switchIllustrationSlotVersion,
@@ -320,6 +322,8 @@ const resolveIllustrationPhaseLabel = (job?: ArticleIllustrationJobStatus | null
       return '正在整理';
     case 'ready':
       return '全部完成';
+    case 'canceled':
+      return '已停止';
     case 'error':
       return '生成失败';
     default:
@@ -846,10 +850,13 @@ const IllustrationGalleryPanel: React.FC<{
 interface IllustrationSlotActions {
   onDelete: (slot: ArticleIllustrationSlot) => void;
   onRegenerate: (slot: ArticleIllustrationSlot) => void;
+  onRewriteCaption: (slot: ArticleIllustrationSlot) => void;
   onSwitchVersion: (slot: ArticleIllustrationSlot, direction: 'previous' | 'next') => void;
   isAnyBusy: boolean;
+  busyAction?: 'regenerate' | 'caption' | 'delete' | 'switch' | null;
   busySlotId?: string | null;
   pendingSlotId?: string | null;
+  pendingCaptionSlotId?: string | null;
 }
 
 const ModernIllustrationCard: React.FC<{
@@ -863,7 +870,11 @@ const ModernIllustrationCard: React.FC<{
 }> = ({ slot, asset, versionLabel, hasPrevious, hasNext, actions, compact = false }) => {
   const isSlotBusy = actions?.busySlotId === slot.id;
   const isSlotPending = actions?.pendingSlotId === slot.id;
-  const shouldAnimateRegenerate = isSlotBusy || isSlotPending;
+  const isCaptionPending = actions?.pendingCaptionSlotId === slot.id;
+  const isRegenerateBusy = isSlotBusy && actions?.busyAction === 'regenerate';
+  const isCaptionBusy = isSlotBusy && actions?.busyAction === 'caption';
+  const shouldAnimateRegenerate = isRegenerateBusy || isSlotPending;
+  const shouldAnimateCaption = isCaptionBusy || isCaptionPending;
   const slotStatusLabel =
     slot.status === 'ready' ? '已完成' : slot.status === 'rendering' ? '生成中' : slot.status === 'error' ? '失败' : '排队中';
 
@@ -891,7 +902,15 @@ const ModernIllustrationCard: React.FC<{
             className="inline-flex items-center gap-1 rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-sm text-slate-600 transition-colors hover:bg-slate-100 disabled:opacity-40"
           >
             <ArrowPathIcon className={`h-4 w-4 ${shouldAnimateRegenerate ? 'animate-spin' : ''}`} />
-            {isSlotBusy ? '生成中' : '重新生成'}
+            {isRegenerateBusy ? '生成中' : '重新生成'}
+          </button>
+          <button
+            onClick={() => actions.onRewriteCaption(slot)}
+            disabled={actions.isAnyBusy || !asset}
+            className="inline-flex items-center gap-1 rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-sm text-slate-600 transition-colors hover:bg-slate-100 disabled:opacity-40"
+          >
+            <ChatBubbleLeftRightIcon className={`h-4 w-4 ${shouldAnimateCaption ? 'animate-pulse' : ''}`} />
+            {isCaptionBusy ? '修改中' : '修改图释'}
           </button>
           <button
             onClick={() => actions.onSwitchVersion(slot, 'previous')}
@@ -1054,16 +1073,33 @@ const ProgressiveIllustrationGalleryPanel: React.FC<{
   bundle?: ArticleIllustrationBundle;
   job?: ArticleIllustrationJobStatus | null;
   isGenerating: boolean;
+  isCanceling: boolean;
+  status: 'idle' | 'generating' | 'canceling' | 'ready' | 'error' | 'canceled';
   errorMessage?: string | null;
   onRegenerateAll: () => void;
+  onCancelAll: () => void;
   slotActions: IllustrationSlotActions;
-}> = ({ bundle, job, isGenerating, errorMessage, onRegenerateAll, slotActions }) => {
+}> = ({ bundle, job, isGenerating, isCanceling, status, errorMessage, onRegenerateAll, onCancelAll, slotActions }) => {
   const activeAssetMap = resolveActiveIllustrationAssetMap(bundle);
   const completedCount = job?.completedCount ?? bundle?.assets.length ?? 0;
   const totalCount = job?.totalCount ?? bundle?.targetImageCount ?? 0;
   const currentStep = job?.currentStep || bundle?.progress?.currentStep || '';
   const phaseLabel = resolveIllustrationPhaseLabel(job);
   const progressPercent = totalCount > 0 ? Math.min(100, Math.round((completedCount / totalCount) * 100)) : 0;
+  const isRunning = isGenerating || isCanceling;
+  const isStopped = status === 'canceled' || job?.status === 'canceled' || bundle?.status === 'canceled';
+  const statusText = isCanceling
+    ? '正在停止本轮配图…'
+    : isGenerating
+      ? `${phaseLabel} ${completedCount}/${totalCount || '?'} 张`
+    : isStopped
+      ? '本轮配图已停止'
+      : bundle
+        ? `已生成 ${bundle.assets.length}/${bundle.targetImageCount} 张图`
+        : '尚未生成配图';
+  const noticeClass = isStopped
+    ? 'mt-4 rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm leading-relaxed text-amber-800'
+    : 'mt-4 rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm leading-relaxed text-red-700';
 
   return (
     <PanelShell title="配图" description="按整篇文章的统一视觉系统逐张生成。生成到哪一张、当前在做什么，都会直接显示在这里。">
@@ -1073,18 +1109,28 @@ const ProgressiveIllustrationGalleryPanel: React.FC<{
             <div className="flex items-center justify-between gap-4">
               <div>
                 <p className="text-xs font-bold uppercase tracking-wider text-slate-400">生成状态</p>
-                <p className="mt-2 text-sm leading-relaxed text-slate-700">
-                  {isGenerating ? `${phaseLabel} ${completedCount}/${totalCount || '?'} 张` : bundle ? `已生成 ${bundle.assets.length}/${bundle.targetImageCount} 张图` : '尚未生成配图'}
-                </p>
+                <p className="mt-2 text-sm leading-relaxed text-slate-700">{statusText}</p>
                 {currentStep ? <p className="mt-2 text-sm leading-relaxed text-slate-500">{currentStep}</p> : null}
               </div>
-              <button
-                onClick={onRegenerateAll}
-                disabled={isGenerating}
-                className="rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-50 disabled:opacity-50"
-              >
-                重跑配图
-              </button>
+              <div className="flex flex-wrap items-center justify-end gap-3">
+                {isRunning ? (
+                  <button
+                    onClick={onCancelAll}
+                    disabled={isCanceling}
+                    className="inline-flex items-center gap-2 rounded-lg border border-red-200 bg-white px-4 py-2 text-sm font-medium text-red-600 transition-colors hover:bg-red-50 disabled:opacity-50"
+                  >
+                    {isCanceling ? <ArrowPathIcon className="h-4 w-4 animate-spin" /> : <StopIcon className="h-4 w-4" />}
+                    {isCanceling ? '停止中' : '停止配图'}
+                  </button>
+                ) : (
+                  <button
+                    onClick={onRegenerateAll}
+                    className="rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-50"
+                  >
+                    {isStopped ? '调整 Prompt 重新配图' : '重跑配图'}
+                  </button>
+                )}
+              </div>
             </div>
             <div className="mt-4">
               <div className="h-2 overflow-hidden rounded-full bg-white">
@@ -1106,7 +1152,7 @@ const ProgressiveIllustrationGalleryPanel: React.FC<{
                 </div>
               </div>
             </div>
-            {errorMessage ? <p className="mt-4 text-sm leading-relaxed text-red-600">{errorMessage}</p> : null}
+            {errorMessage ? <div className={noticeClass}>{errorMessage}</div> : null}
           </div>
 
           <div className="rounded-2xl border border-slate-200 bg-white p-5">
@@ -1155,7 +1201,7 @@ const ProgressiveIllustrationGalleryPanel: React.FC<{
           </div>
         ) : (
           <div className="rounded-2xl border border-dashed border-slate-300 bg-slate-50 px-5 py-10 text-center text-sm text-slate-500">
-            {isGenerating ? '正在创建首批图位，请稍候。' : '当前还没有可展示的配图结果。'}
+            {isRunning ? '正在创建首批图位，请稍候。' : '当前还没有可展示的配图结果。'}
           </div>
         )}
       </div>
@@ -1299,14 +1345,17 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
   const [showCopilot, setShowCopilot] = useState(false);
   const [isDownloading, setIsDownloading] = useState(false);
   const [refineStatus, setRefineStatus] = useState<string | null>(null);
-  const [illustrationStatus, setIllustrationStatus] = useState<'idle' | 'generating' | 'ready' | 'error'>('idle');
+  const [illustrationStatus, setIllustrationStatus] = useState<'idle' | 'generating' | 'canceling' | 'ready' | 'error' | 'canceled'>('idle');
   const [illustrationError, setIllustrationError] = useState<string | null>(null);
   const [illustrationJob, setIllustrationJob] = useState<ArticleIllustrationJobStatus | null>(null);
   const [illustrationMutationSlotId, setIllustrationMutationSlotId] = useState<string | null>(null);
+  const [illustrationMutationKind, setIllustrationMutationKind] = useState<'regenerate' | 'caption' | 'delete' | 'switch' | null>(null);
   const [illustrationPromptDraft, setIllustrationPromptDraft] = useState('');
   const [illustrationPromptMode, setIllustrationPromptMode] = useState<'initial' | 'regenerate' | null>(null);
   const [regeneratePromptDraft, setRegeneratePromptDraft] = useState('');
   const [regeneratePromptSlotId, setRegeneratePromptSlotId] = useState<string | null>(null);
+  const [captionPromptDraft, setCaptionPromptDraft] = useState('');
+  const [captionPromptSlotId, setCaptionPromptSlotId] = useState<string | null>(null);
   const [selection, setSelection] = useState('');
   const [selectionPos, setSelectionPos] = useState<{ x: number; y: number } | null>(null);
   const [selectionSource, setSelectionSource] = useState<'article' | 'notes' | null>(null);
@@ -1315,6 +1364,7 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
   const abortControllerRef = useRef(false);
   const illustrationRequestAbortRef = useRef<AbortController | null>(null);
   const illustrationStatusPollRef = useRef<number | null>(null);
+  const illustrationFlowTokenRef = useRef(0);
   const articleExportRef = useRef<HTMLDivElement>(null);
   const plainArticleExportRef = useRef<HTMLDivElement>(null);
   const notesExportRef = useRef<HTMLDivElement>(null);
@@ -1323,6 +1373,7 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
   const [historyIndex, setHistoryIndex] = useState(0);
   const activeIllustrationBundle = data.illustrationBundle;
   const activeRegenerateSlot = activeIllustrationBundle?.slots.find((slot) => slot.id === regeneratePromptSlotId);
+  const activeCaptionSlot = activeIllustrationBundle?.slots.find((slot) => slot.id === captionPromptSlotId);
   const illustrationBundleNeedsRefresh = bundleNeedsRefresh(activeIllustrationBundle);
   const autoIllustrationStateRef = useRef('');
   const autoIllustrationPromptSeenRef = useRef('');
@@ -1330,6 +1381,12 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
     () => `${data.options.styleProfile}\n${articleTitle}\n${data.articleContent || ''}`,
     [articleTitle, data.articleContent, data.options.styleProfile]
   );
+  const beginIllustrationFlow = () => {
+    illustrationFlowTokenRef.current += 1;
+    return illustrationFlowTokenRef.current;
+  };
+  const isIllustrationFlowCurrent = (token: number) => illustrationFlowTokenRef.current === token;
+  const isIllustrationBusy = illustrationStatus === 'generating' || illustrationStatus === 'canceling';
 
   const stopIllustrationPolling = () => {
     if (illustrationStatusPollRef.current !== null) {
@@ -1338,9 +1395,10 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
     }
   };
 
-  const pollIllustrationStatus = async (sourceHash: string, immediate = false) => {
+  const pollIllustrationStatus = async (sourceHash: string, immediate = false, flowToken = illustrationFlowTokenRef.current) => {
     stopIllustrationPolling();
     const run = async () => {
+      if (!isIllustrationFlowCurrent(flowToken)) return;
       const controller = new AbortController();
       illustrationRequestAbortRef.current = controller;
       try {
@@ -1348,6 +1406,7 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
           sourceHash,
           signal: controller.signal,
         });
+        if (!isIllustrationFlowCurrent(flowToken)) return;
         if (payload.bundle) {
           onUpdateIllustrationBundle(payload.bundle);
         }
@@ -1356,6 +1415,12 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
           if (payload.job.status === 'error') {
             setIllustrationStatus('error');
             setIllustrationError(payload.job.error || payload.job.currentStep || '配图生成失败，请稍后重试。');
+            stopIllustrationPolling();
+            return;
+          }
+          if (payload.job.status === 'canceled') {
+            setIllustrationStatus('canceled');
+            setIllustrationError(payload.job.currentStep || '本轮配图已停止，可调整 Prompt 后重新开始。');
             stopIllustrationPolling();
             return;
           }
@@ -1368,9 +1433,10 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
         }
         setIllustrationStatus('generating');
         illustrationStatusPollRef.current = window.setTimeout(() => {
-          void pollIllustrationStatus(sourceHash);
+          void pollIllustrationStatus(sourceHash, false, flowToken);
         }, 1800);
       } catch (error: any) {
+        if (!isIllustrationFlowCurrent(flowToken)) return;
         if (error?.message !== '已取消本次生图请求。') {
           console.error('Illustration status polling failed', error);
           setIllustrationStatus('error');
@@ -1396,6 +1462,7 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
 
   const requestIllustrations = async (regenerate = false, userPrompt = '') => {
     if (!data.articleContent) return false;
+    const flowToken = beginIllustrationFlow();
     stopIllustrationPolling();
     illustrationRequestAbortRef.current?.abort();
     const controller = new AbortController();
@@ -1412,15 +1479,17 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
         regenerate,
         signal: controller.signal,
       });
+      if (!isIllustrationFlowCurrent(flowToken)) return false;
       if (result.bundle) {
         onUpdateIllustrationBundle(result.bundle);
       }
       if (result.job) {
         setIllustrationJob(result.job);
       }
-      await pollIllustrationStatus(result.sourceHash, true);
+      await pollIllustrationStatus(result.sourceHash, true, flowToken);
       return true;
     } catch (error: any) {
+      if (!isIllustrationFlowCurrent(flowToken)) return false;
       console.error('Illustration generation failed', error);
       if (error?.message === '已取消本次生图请求。') {
         setIllustrationStatus('idle');
@@ -1429,6 +1498,47 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
         setIllustrationError(error?.message || '配图生成失败，请稍后重试。');
       }
       return false;
+    } finally {
+      if (illustrationRequestAbortRef.current === controller) {
+        illustrationRequestAbortRef.current = null;
+      }
+    }
+  };
+
+  const handleCancelIllustrations = async () => {
+    const sourceHash = activeIllustrationBundle?.sourceHash || illustrationJob?.sourceHash;
+    if (!sourceHash || !isIllustrationBusy) return;
+
+    const flowToken = beginIllustrationFlow();
+    stopIllustrationPolling();
+    illustrationRequestAbortRef.current?.abort();
+    const controller = new AbortController();
+    illustrationRequestAbortRef.current = controller;
+    setIllustrationStatus('canceling');
+    setIllustrationError(null);
+
+    try {
+      const result = await cancelArticleIllustrationGeneration({
+        sourceHash,
+        signal: controller.signal,
+      });
+      if (!isIllustrationFlowCurrent(flowToken)) return;
+      if (result.bundle) {
+        onUpdateIllustrationBundle(result.bundle);
+      }
+      if (result.job) {
+        setIllustrationJob(result.job);
+      }
+      setIllustrationStatus('canceled');
+      setIllustrationError(result.job?.currentStep || '本轮配图已停止，可调整 Prompt 后重新开始。');
+      setActivePanel('illustrations');
+    } catch (error: any) {
+      if (!isIllustrationFlowCurrent(flowToken)) return;
+      if (error?.message !== '已取消本次生图请求。') {
+        console.error('Illustration cancel failed', error);
+        setIllustrationStatus('error');
+        setIllustrationError(error?.message || '停止配图失败，请稍后重试。');
+      }
     } finally {
       if (illustrationRequestAbortRef.current === controller) {
         illustrationRequestAbortRef.current = null;
@@ -1455,7 +1565,7 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
       illustrationPromptMode === 'regenerate' || Boolean(String(illustrationPromptDraft || '').trim());
     const nextPrompt = illustrationPromptDraft;
     setIllustrationPromptMode(null);
-    setActivePanel('article');
+    setActivePanel('illustrations');
     void requestIllustrations(shouldRegenerate, nextPrompt);
   };
 
@@ -1463,18 +1573,42 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
     setIllustrationError(null);
     setIllustrationPromptMode(null);
     setIllustrationPromptDraft('');
+    setCaptionPromptSlotId(null);
+    setCaptionPromptDraft('');
     setRegeneratePromptSlotId(slot.id);
     setRegeneratePromptDraft(slot.lastUserPrompt || '');
   };
 
   const closeRegeneratePromptDialog = (abortRequest = false) => {
-    if (abortRequest && illustrationMutationSlotId && illustrationRequestAbortRef.current) {
+    if (abortRequest && illustrationMutationKind === 'regenerate' && illustrationMutationSlotId && illustrationRequestAbortRef.current) {
       illustrationRequestAbortRef.current.abort();
       illustrationRequestAbortRef.current = null;
       setIllustrationMutationSlotId(null);
+      setIllustrationMutationKind(null);
     }
     setRegeneratePromptSlotId(null);
     setRegeneratePromptDraft('');
+  };
+
+  const openCaptionPromptDialog = (slot: ArticleIllustrationSlot) => {
+    setIllustrationError(null);
+    setIllustrationPromptMode(null);
+    setIllustrationPromptDraft('');
+    setRegeneratePromptSlotId(null);
+    setRegeneratePromptDraft('');
+    setCaptionPromptSlotId(slot.id);
+    setCaptionPromptDraft('');
+  };
+
+  const closeCaptionPromptDialog = (abortRequest = false) => {
+    if (abortRequest && illustrationMutationKind === 'caption' && illustrationMutationSlotId && illustrationRequestAbortRef.current) {
+      illustrationRequestAbortRef.current.abort();
+      illustrationRequestAbortRef.current = null;
+      setIllustrationMutationSlotId(null);
+      setIllustrationMutationKind(null);
+    }
+    setCaptionPromptSlotId(null);
+    setCaptionPromptDraft('');
   };
 
   const handleRegenerateSlot = async (slot: ArticleIllustrationSlot) => {
@@ -1483,6 +1617,7 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
     const controller = new AbortController();
     illustrationRequestAbortRef.current = controller;
     setIllustrationMutationSlotId(slot.id);
+    setIllustrationMutationKind('regenerate');
     setIllustrationError(null);
     try {
       const bundle = await regenerateIllustrationSlot({
@@ -1505,6 +1640,40 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
         illustrationRequestAbortRef.current = null;
       }
       setIllustrationMutationSlotId(null);
+      setIllustrationMutationKind(null);
+    }
+  };
+
+  const handleRewriteCaption = async (slot: ArticleIllustrationSlot) => {
+    if (!activeIllustrationBundle?.sourceHash) return;
+    illustrationRequestAbortRef.current?.abort();
+    const controller = new AbortController();
+    illustrationRequestAbortRef.current = controller;
+    setIllustrationMutationSlotId(slot.id);
+    setIllustrationMutationKind('caption');
+    setIllustrationError(null);
+    try {
+      const bundle = await regenerateIllustrationCaption({
+        sourceHash: activeIllustrationBundle.sourceHash,
+        slotId: slot.id,
+        articleContent: data.articleContent || '',
+        userPrompt: captionPromptDraft,
+        signal: controller.signal,
+      });
+      onUpdateIllustrationBundle(bundle);
+      setActivePanel('illustrations');
+      closeCaptionPromptDialog(false);
+    } catch (error: any) {
+      console.error('Illustration caption rewrite failed', error);
+      if (error?.message !== '已取消本次生图请求。') {
+        setIllustrationError(error?.message || '图释修改失败，请稍后重试。');
+      }
+    } finally {
+      if (illustrationRequestAbortRef.current === controller) {
+        illustrationRequestAbortRef.current = null;
+      }
+      setIllustrationMutationSlotId(null);
+      setIllustrationMutationKind(null);
     }
   };
 
@@ -1514,6 +1683,7 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
     const controller = new AbortController();
     illustrationRequestAbortRef.current = controller;
     setIllustrationMutationSlotId(slot.id);
+    setIllustrationMutationKind('delete');
     setIllustrationError(null);
     try {
       const bundle = await deleteIllustrationSlotImage({
@@ -1532,6 +1702,7 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
         illustrationRequestAbortRef.current = null;
       }
       setIllustrationMutationSlotId(null);
+      setIllustrationMutationKind(null);
     }
   };
 
@@ -1541,6 +1712,7 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
     const controller = new AbortController();
     illustrationRequestAbortRef.current = controller;
     setIllustrationMutationSlotId(slot.id);
+    setIllustrationMutationKind('switch');
     setIllustrationError(null);
     try {
       const bundle = await switchIllustrationSlotVersion({
@@ -1560,16 +1732,20 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
         illustrationRequestAbortRef.current = null;
       }
       setIllustrationMutationSlotId(null);
+      setIllustrationMutationKind(null);
     }
   };
 
   const illustrationSlotActions: IllustrationSlotActions = {
     onDelete: (slot) => void handleDeleteSlot(slot),
     onRegenerate: (slot) => openRegeneratePromptDialog(slot),
+    onRewriteCaption: (slot) => openCaptionPromptDialog(slot),
     onSwitchVersion: (slot, direction) => void handleSwitchSlotVersion(slot, direction),
-    isAnyBusy: illustrationMutationSlotId !== null || illustrationStatus === 'generating',
+    isAnyBusy: illustrationMutationSlotId !== null || isIllustrationBusy,
+    busyAction: illustrationMutationKind,
     busySlotId: illustrationMutationSlotId,
     pendingSlotId: regeneratePromptSlotId,
+    pendingCaptionSlotId: captionPromptSlotId,
   };
 
   useEffect(() => {
@@ -1617,6 +1793,7 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
     autoIllustrationStateRef.current = autoStateKey;
 
     if (!hasFinalArticle || !data.articleContent) {
+      beginIllustrationFlow();
       stopIllustrationPolling();
       setIllustrationStatus('idle');
       setIllustrationError(null);
@@ -1624,34 +1801,62 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
       return;
     }
 
-    if (activeIllustrationBundle?.sourceHash && activeIllustrationBundle.status !== 'ready') {
-      setIllustrationStatus(activeIllustrationBundle.status === 'error' ? 'error' : 'generating');
+    if (activeIllustrationBundle?.status === 'canceled' || illustrationJob?.status === 'canceled') {
+      stopIllustrationPolling();
+      setIllustrationStatus('canceled');
+      setIllustrationError(
+        illustrationJob?.currentStep || activeIllustrationBundle?.progress?.currentStep || '本轮配图已停止，可调整 Prompt 后重新开始。'
+      );
+      return;
+    }
+
+    if (activeIllustrationBundle?.status === 'error' || illustrationJob?.status === 'error') {
+      stopIllustrationPolling();
+      setIllustrationStatus('error');
+      setIllustrationError(illustrationJob?.error || activeIllustrationBundle?.error || '配图生成失败，请稍后重试。');
+      return;
+    }
+
+    if (
+      activeIllustrationBundle?.sourceHash &&
+      ['planning', 'rendering', 'partial'].includes(String(activeIllustrationBundle.status || ''))
+    ) {
+      if (illustrationStatus !== 'canceling') {
+        setIllustrationStatus('generating');
+      }
       if (illustrationStatusPollRef.current === null) {
-        void pollIllustrationStatus(activeIllustrationBundle.sourceHash, true);
+        void pollIllustrationStatus(activeIllustrationBundle.sourceHash, true, illustrationFlowTokenRef.current);
       }
       return;
     }
 
     if (isIllustrationJobActive(illustrationJob)) {
-      setIllustrationStatus('generating');
+      if (illustrationStatus !== 'canceling') {
+        setIllustrationStatus('generating');
+      }
       if (illustrationStatusPollRef.current === null) {
-        void pollIllustrationStatus(illustrationJob!.sourceHash, true);
+        void pollIllustrationStatus(illustrationJob!.sourceHash, true, illustrationFlowTokenRef.current);
       }
       return;
     }
 
     if (activeIllustrationBundle && !illustrationBundleNeedsRefresh) {
       stopIllustrationPolling();
-      setIllustrationStatus('ready');
-      setIllustrationError(null);
+      if (activeIllustrationBundle.status === 'canceled') {
+        setIllustrationStatus('canceled');
+        setIllustrationError(activeIllustrationBundle.progress?.currentStep || '本轮配图已停止，可调整 Prompt 后重新开始。');
+      } else {
+        setIllustrationStatus('ready');
+        setIllustrationError(null);
+      }
       return;
     }
 
-    if (illustrationStatus === 'error') {
+    if (illustrationStatus === 'error' || illustrationStatus === 'canceled') {
       return;
     }
 
-    if (illustrationStatus === 'generating') {
+    if (illustrationStatus === 'generating' || illustrationStatus === 'canceling') {
       return;
     }
 
@@ -2206,8 +2411,11 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
             bundle={activeIllustrationBundle}
             job={illustrationJob}
             isGenerating={illustrationStatus === 'generating'}
+            isCanceling={illustrationStatus === 'canceling'}
+            status={illustrationStatus}
             errorMessage={illustrationError}
             onRegenerateAll={() => openIllustrationPromptDialog(activeIllustrationBundle ? 'regenerate' : 'initial')}
+            onCancelAll={() => void handleCancelIllustrations()}
             slotActions={illustrationSlotActions}
           />
         );
@@ -2320,12 +2528,14 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
               </button>
               <button
                 onClick={() => void handleIllustrationPromptSubmit()}
-                disabled={illustrationStatus === 'generating'}
+                disabled={isIllustrationBusy}
                 className="inline-flex items-center gap-2 rounded-xl bg-report-accent px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-teal-800 disabled:opacity-50"
               >
-                {illustrationStatus === 'generating' ? <ArrowPathIcon className="h-4 w-4 animate-spin" /> : null}
-                {illustrationStatus === 'generating'
-                  ? '配图启动中'
+                {isIllustrationBusy ? <ArrowPathIcon className="h-4 w-4 animate-spin" /> : null}
+                {isIllustrationBusy
+                  ? illustrationStatus === 'canceling'
+                    ? '停止中'
+                    : '配图启动中'
                   : illustrationPromptMode === 'regenerate'
                     ? '按这个要求重跑'
                     : '开始生成配图'}
@@ -2383,6 +2593,61 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
         </div>
       )}
 
+      {captionPromptSlotId && (
+        <div className="fixed inset-0 z-[95] flex items-center justify-center bg-slate-950/40 px-4 backdrop-blur-sm no-print">
+          <div className="w-full max-w-2xl rounded-[28px] border border-slate-200 bg-white p-6 shadow-2xl sm:p-8">
+            <div className="mb-5">
+              <h3 className="font-serif text-2xl font-bold text-slate-900">修改这张图的图释</h3>
+              <p className="mt-2 text-sm leading-relaxed text-slate-500">
+                图片本身不会改动，只会基于当前这张图和全文语境，按你的要求重写图释。
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3">
+              <p className="text-xs font-bold uppercase tracking-wider text-slate-400">当前图释</p>
+              <p className="mt-2 text-sm leading-relaxed text-slate-700">
+                {activeCaptionSlot?.explanation || activeCaptionSlot?.purpose || activeCaptionSlot?.anchorExcerpt || '当前还没有图释。'}
+              </p>
+            </div>
+
+            <label className="mt-5 block text-sm font-medium text-slate-700" htmlFor="illustration-caption-prompt">
+              你想怎么改图释
+            </label>
+            <textarea
+              id="illustration-caption-prompt"
+              value={captionPromptDraft}
+              onChange={(event) => setCaptionPromptDraft(event.target.value)}
+              rows={6}
+              placeholder="例如：更像新闻现场图注，少一点总结判断；第一句更具体写人物/场景，第二句再轻轻带出文章观点；语气再克制一点。"
+              className="mt-3 w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm leading-relaxed text-slate-700 outline-none transition-colors focus:border-report-accent focus:bg-white"
+            />
+
+            {illustrationError ? (
+              <div className="mt-4 rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm leading-relaxed text-red-700">
+                {illustrationError}
+              </div>
+            ) : null}
+
+            <div className="mt-6 flex flex-wrap items-center justify-end gap-3">
+              <button
+                onClick={() => closeCaptionPromptDialog(true)}
+                className="rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-600 transition-colors hover:bg-slate-50 disabled:opacity-50"
+              >
+                {illustrationMutationKind === 'caption' ? '取消并停止' : '取消'}
+              </button>
+              <button
+                onClick={() => activeCaptionSlot && void handleRewriteCaption(activeCaptionSlot)}
+                disabled={!activeCaptionSlot || illustrationMutationSlotId !== null}
+                className="inline-flex items-center gap-2 rounded-xl bg-report-accent px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-teal-800 disabled:opacity-50"
+              >
+                {illustrationMutationKind === 'caption' ? <ArrowPathIcon className="h-4 w-4 animate-spin" /> : null}
+                {illustrationMutationKind === 'caption' ? '修改中' : '更新图释'}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       <div className="sticky top-0 z-40 border-b border-gray-200 bg-white shadow-sm no-print">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
           <div className="flex items-center gap-3">
@@ -2434,11 +2699,19 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
 
             <button
               onClick={() => openIllustrationPromptDialog(activeIllustrationBundle ? 'regenerate' : 'initial')}
-              disabled={!hasFinalArticle || illustrationStatus === 'generating'}
+              disabled={!hasFinalArticle || isIllustrationBusy}
               className="flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-600 transition-colors hover:bg-gray-50 disabled:opacity-50"
             >
-              <ArrowPathIcon className={`h-4 w-4 ${illustrationStatus === 'generating' ? 'animate-spin text-report-accent' : ''}`} />
-              {illustrationStatus === 'generating' ? '配图中' : activeIllustrationBundle ? '重跑配图' : '生成配图'}
+              <ArrowPathIcon className={`h-4 w-4 ${isIllustrationBusy ? 'animate-spin text-report-accent' : ''}`} />
+              {illustrationStatus === 'canceling'
+                ? '停止中'
+                : illustrationStatus === 'generating'
+                  ? '配图中'
+                  : illustrationStatus === 'canceled'
+                    ? '调整 Prompt 重跑'
+                    : activeIllustrationBundle
+                      ? '重跑配图'
+                      : '生成配图'}
             </button>
 
             <button

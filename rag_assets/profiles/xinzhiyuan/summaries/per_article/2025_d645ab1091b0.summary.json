@@ -1,0 +1,141 @@
+{
+  "analysis_schema_version": 3,
+  "id": "d645ab1091b0",
+  "year": "2025",
+  "date": "2025-10-08",
+  "title": "刚刚，2025年诺贝尔化学奖揭晓！偷溜进图书馆的少年，改变了世界",
+  "relative_path": "2025/2025-10-08_刚刚，2025年诺贝尔化学奖揭晓！偷溜进图书馆的少年，改变了世界.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\xinzhiyuan\\raw_materials\\2025\\2025-10-08_刚刚，2025年诺贝尔化学奖揭晓！偷溜进图书馆的少年，改变了世界.txt",
+  "char_count": 6319,
+  "content_type": "新闻特稿",
+  "entities": [
+    "北川进 (Susumu Kitagawa)",
+    "Richard Robson",
+    "Omar M. Yaghi",
+    "诺贝尔化学奖",
+    "金属有机框架 (MOF)",
+    "墨尔本大学",
+    "京都大学",
+    "加州大学伯克利分校",
+    "新智元"
+  ],
+  "industry": [
+    "化学",
+    "材料科学",
+    "学术研究",
+    "环境保护"
+  ],
+  "topic": [
+    "2025年诺贝尔奖",
+    "金属有机框架",
+    "碳中和",
+    "网格化学",
+    "科研历程"
+  ],
+  "genre": "科普报道",
+  "style": [
+    "叙事性",
+    "解释型",
+    "启发式"
+  ],
+  "audience": [
+    "科研工作者",
+    "理工科学生",
+    "科技爱好者",
+    "大众读者"
+  ],
+  "intent": [
+    "信息传播",
+    "知识普及",
+    "致敬科学家"
+  ],
+  "tone": [
+    "赞赏",
+    "客观",
+    "充满敬意"
+  ],
+  "primary_question": "2025年诺贝尔化学奖因何授予这三位科学家，MOF材料的发展历程及其对人类的价值是什么？",
+  "thesis_type": "解释型论点",
+  "thesis_sentence": "2025年诺贝尔化学奖表彰了北川进、Richard Robson和Omar M. Yaghi在金属有机框架（MOF）材料领域的开创性贡献，这种通过理性设计构建的具有巨大空腔的材料，为解决环境、能源等全球性挑战提供了前所未有的工具。",
+  "structure_pattern": "时间轴驱动的人物志结构",
+  "section_functions": [
+    "快讯播报：宣布获奖名单与获奖理由",
+    "核心概念科普：解释MOF的结构特征与潜在用途",
+    "起源追溯：Richard Robson从木制模型到分子自组装的灵感迸发",
+    "困境与突破：北川进坚持“无用之用”实现MOF的稳定性与灵活性",
+    "学科确立：Omar M. Yaghi推动网格化学的理性设计与产业化应用",
+    "现状总结：列举当前MOF在碳捕集、采水等领域的具体落地案例",
+    "背景资料：获奖科学家的详细生平简介"
+  ],
+  "argument_moves": [
+    "排除法：明确指出本届奖项与AI热潮的区隔",
+    "生活化类比：将MOF比作“专为分子设计的单间公寓”",
+    "引用哲学：通过庄子的“无用之用”升华科研精神",
+    "实证列举：展示MOF在多个细分环保领域的应用成果",
+    "权威背书：引用诺贝尔化学委员会主席的评价"
+  ],
+  "core_argument": "MOF材料的诞生是人类从“随机合成”转向“理性设计”材料的里程碑，其多孔性质赋予了物质处理极端环境挑战的能力。",
+  "key_points": [
+    "Robson开创了利用分子间吸引力实现分子自组装的思维模式",
+    "北川进证明了MOF的稳定性并提出了柔性晶体概念",
+    "Yaghi确立了网格化学理论并实现了MOF的大规模功能化定制",
+    "MOF在碳捕集、沙漠采水、氢气储存等方面具有颠覆性潜力"
+  ],
+  "opening_pattern": "时效性通告 + 反直觉反转（提及与AI无关）",
+  "ending_pattern": "总结升华 + 人物档案",
+  "evidence_types": [
+    "科学史实",
+    "论文引用",
+    "应用案例数据",
+    "科学家名言",
+    "实验示意图描述"
+  ],
+  "evidence_specificity_score": 92,
+  "data_density_score": 85,
+  "case_density_score": 88,
+  "quote_density_score": 80,
+  "narrative_distance": "第三人称全知视角",
+  "stance_strength": "坚定支持",
+  "sentence_rhythm": "长短句交错，科普描述平实，叙事段落带有文学性",
+  "abstraction_level": "中等（平衡了专业术语与科普直觉）",
+  "transferable_moves": [
+    "复杂概念的生活化类比（单间公寓）",
+    "科研故事中的冲突构建（资助被拒、跨国背景）",
+    "从个人成长史切入科学发现的叙事手法",
+    "多维度展示技术应用场景以证明价值"
+  ],
+  "anti_patterns": [
+    "避免了过于艰深的数学公式",
+    "避免了枯燥的论文摘要堆砌",
+    "打破了“科学家必是一帆风顺”的成功学偏见"
+  ],
+  "notable_phrases": [
+    "无用之用",
+    "偷溜进图书馆的少年",
+    "专为水分子的你而设计的公寓",
+    "网格化学"
+  ],
+  "title_score": 92,
+  "opening_score": 88,
+  "argument_score": 85,
+  "evidence_score": 90,
+  "structure_score": 88,
+  "style_score": 86,
+  "publishability_score": 95,
+  "quality_score": 90,
+  "reference_value_score": 88,
+  "is_activity_notice": false,
+  "is_low_value": false,
+  "is_advertorial": false,
+  "advertorial_type": "editorial",
+  "advertorial_confidence": 0,
+  "promotional_intensity_score": 5,
+  "editorial_independence_score": 95,
+  "brand_exposure_level": "低",
+  "source_transparency": "清晰",
+  "advertorial_signals": [
+    "文中穿插了一处新智元十周年报告的引流banner，但主体内容完全围绕科学新闻展开，不属于软文。"
+  ],
+  "summary_200": "本文详述了2025年诺贝尔化学奖得主北川进、Richard Robson及Omar M. Yaghi的科研成就。核心贡献在于“金属有机框架（MOF）”材料的开发。文章追溯了从Robson的木制模型启发、北川进对“无用之用”哲学的坚持，到Yaghi系统化网格化学的历程。MOF凭借其超高表面积和可设计性，在碳捕捉、沙漠取水等领域展现出巨大应用价值，标志着化学材料从传统合成走向理性定制的新纪元。",
+  "summary_500": "2025年诺贝尔化学奖揭晓，授予了在金属有机框架（MOF）领域做出卓越贡献的科学家：北川进、Richard Robson和Omar M. Yaghi。这篇报道深入浅出地介绍了这一改变世界的“分子构筑学”成果。MOF材料由金属离子与有机分子组装而成，其内部拥有巨大的空腔，宛如为特定分子定制的“单间公寓”。\n\n文章回顾了科学发现的曲折路径：1970年代，Robson从教学用的木制球棍模型中悟出原子的固有属性可引导自组装，奠定了理论基础。1990年代，日本科学家北川进顶住资助被拒的压力，坚持探索“无用之用”，最终证明了多孔材料的稳定性及其“柔性”特质。与此同时，出身约旦贫困家庭的Yaghi在美国通过“网格化学”理论，将MOF的制造从不可预测变为像乐高积木一样的理性设计，并创造了具有足球场级表面积的MOF-5材料。\n\n目前，MOF已从实验室走向工业应用，展现出在沙漠空气采水、环境污染物（如PFAS）去除、工业级二氧化碳捕集以及氢能安全储存等方面的巨大潜能。尽管本届奖项打破了AI蝉联的预期，但它再次证明了基础化学与材料工程对解决人类生存严峻挑战的核心地位。文章既是一份科学快讯，也是一部关于好奇心与坚持的科学精神史。"
+}

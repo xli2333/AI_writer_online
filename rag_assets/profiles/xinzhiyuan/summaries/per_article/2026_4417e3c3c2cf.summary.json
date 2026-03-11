@@ -1,0 +1,138 @@
+{
+  "analysis_schema_version": 3,
+  "id": "4417e3c3c2cf",
+  "year": "2026",
+  "date": "2026-02-04",
+  "title": "Win版Claude Cowork杀疯了！140元雇个全职AI员工，全网首测真香",
+  "relative_path": "2026/2026-02-04_Win版Claude Cowork杀疯了！140元雇个全职AI员工，全网首测真香.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\xinzhiyuan\\raw_materials\\2026\\2026-02-04_Win版Claude Cowork杀疯了！140元雇个全职AI员工，全网首测真香.txt",
+  "char_count": 5664,
+  "content_type": "科技产品测评",
+  "entities": [
+    "昆仑天工",
+    "Skywork",
+    "Anthropic",
+    "Claude",
+    "Google",
+    "Gemini",
+    "OpenAI",
+    "Codex",
+    "新智元"
+  ],
+  "industry": [
+    "人工智能",
+    "软件开发",
+    "办公自动化"
+  ],
+  "topic": [
+    "AI Agent",
+    "桌面端智能体",
+    "大模型应用",
+    "办公效率工具"
+  ],
+  "genre": "软文",
+  "style": [
+    "科技自媒体",
+    "营销口吻",
+    "测评驱动"
+  ],
+  "audience": [
+    "Windows用户",
+    "职场打工人",
+    "开发者",
+    "AI工具发烧友"
+  ],
+  "intent": [
+    "产品推广",
+    "品牌背书",
+    "商业导流"
+  ],
+  "tone": [
+    "亢奋",
+    "赞美",
+    "煽动性"
+  ],
+  "primary_question": "在Mac端Claude Cowork走红后，Windows用户是否有功能对标且更高性价比的AI Agent选择？",
+  "thesis_type": "解决方案推介",
+  "thesis_sentence": "天工Skywork桌面版通过原生Windows支持、双核模型路由及高性价比，实现了对Claude Cowork的‘降维打击’，成为Windows用户的全能AI员工。",
+  "structure_pattern": "痛点引入-实测演示-竞品对比-技术优势-生态闭环",
+  "section_functions": [
+    "场景反差：对比Mac用户的狂欢与Windows用户的尴尬，引出主角",
+    "功能实测：通过文件整理、代码提取、报告生成、PPT制作四大场景验证产品力",
+    "竞品PK：详细对比Skywork与Claude Cowork在生态、模型、安全上的差异",
+    "技术拆解：解释Auto Router模式及Skills技能体系",
+    "尾声提升：介绍昆仑天工AI全家桶生态"
+  ],
+  "argument_moves": [
+    "利用情绪共鸣（Windows用户的焦虑）切入主题",
+    "通过具体的‘毫秒级’效率数据和复杂场景实操建立信任",
+    "通过定价优势（140元）进行商业转化诱导",
+    "通过技术护城河（多模型混合部署）确立专业性地位"
+  ],
+  "core_argument": "Skywork桌面版凭借对Windows系统的深度适配和多模型动态路由技术，在办公实操能力和性价比上全面超越了海外主流AI Agent。",
+  "key_points": [
+    "Skywork桌面版支持Windows原生文件处理与安全沙盒隔离",
+    "集成Claude 4.5与Gemini 3 Pro，支持智能Auto Router自动选择模型",
+    "内置100+精选Skills，覆盖Office、网页制作与多模态创作",
+    "定价极具竞争力，提供19.99美元入门级与49.99美元无限版"
+  ],
+  "opening_pattern": "情绪煽动型（对比Mac与Win用户境遇）",
+  "ending_pattern": "品牌矩阵展示型（One More Thing）",
+  "evidence_types": [
+    "实机操作演示",
+    "技术参数说明",
+    "价格方案对比",
+    "具体工作流流程展示"
+  ],
+  "evidence_specificity_score": 85,
+  "data_density_score": 65,
+  "case_density_score": 90,
+  "quote_density_score": 30,
+  "narrative_distance": "近距离",
+  "stance_strength": "极强",
+  "sentence_rhythm": "快节奏，多短句，强调对比",
+  "abstraction_level": "具体细节层面",
+  "transferable_moves": [
+    "利用‘降维打击’这类互联网黑话进行心智占领",
+    "通过‘地狱级’与‘毫秒级’的极端词汇对比构建视觉冲击感",
+    "采用‘手搓代码’、‘摸鱼神器’等黑话拉近与目标读者的距离"
+  ],
+  "anti_patterns": [
+    "过度吹捧辞藻（杀疯了、炸裂、神级辅助）",
+    "选择性失明（完全未提及产品的缺点或内测期间的潜在Bug）",
+    "情绪化对比（将Mac与Win用户对立化）"
+  ],
+  "notable_phrases": [
+    "骑脸输出",
+    "物理外挂",
+    "毫秒级的屠杀",
+    "AI界的自动挡",
+    "降维打击"
+  ],
+  "title_score": 88,
+  "opening_score": 85,
+  "argument_score": 75,
+  "evidence_score": 80,
+  "structure_score": 90,
+  "style_score": 82,
+  "publishability_score": 95,
+  "quality_score": 70,
+  "reference_value_score": 65,
+  "is_activity_notice": false,
+  "is_low_value": false,
+  "is_advertorial": true,
+  "advertorial_type": "product_seeding",
+  "advertorial_confidence": 100,
+  "promotional_intensity_score": 95,
+  "editorial_independence_score": 10,
+  "brand_exposure_level": "高",
+  "source_transparency": "清晰",
+  "advertorial_signals": [
+    "标题使用极度夸张的商业导流辞藻",
+    "包含详细的价格套餐说明和官方链接",
+    "文末大段推广该公司的其他AI产品线",
+    "对产品几乎只有正面赞美，缺乏中立客观的技术局限分析"
+  ],
+  "summary_200": "本文是新智元针对昆仑天工发布的Windows端AI Agent——天工Skywork桌面版的深度评测稿。文章重点强调了其在Windows生态下的原生优势，通过实测演示了其在文件整理、Python脚本自动编写、多模态报告生成及PPT制作等高频办公场景中的强大效率。技术上，主打集成Claude 4.5与Gemini 3 Pro的双模路由模式；商业上，以高性价比对标海外竞品，旨在吸引Windows办公群体下载使用。",
+  "summary_500": "该文章详细介绍了昆仑天工最新推出的Skywork桌面版AI Agent。开篇通过对比Mac用户专属Claude Cowork引发的社交讨论，引出Windows平台急需强大AI辅助工具的痛点。文章核心内容分为实测展示和技术对比两部分。实测部分涵盖了自动化文件夹整理、实时Python脚本编写以提取Word文档图片、一键生成多模态调研报告、以及根据简单指令生成精美PPT和网页等任务，旨在展示其从‘人操作工具’向‘人指挥Agent’的范式转变。在竞品对比环节，文章提出Skywork相比Claude Cowork具有三大优势：一是深度的Windows原生适配与本地安全沙盒；二是独特的Auto Router模式，能根据任务类型自动在Claude与Gemini模型间调度，补齐了单一模型的视觉或逻辑短板；三是内置100多个开箱即用的Skills。此外，文章还披露了极具竞争力的定价策略（19.99美元起）。文末通过‘One More Thing’环节，展示了昆仑天工旗下超级智能体、Mureka音乐生成模型、SkyReels视频生成模型等生态布局，展现出其全方位重构AI办公与创作生活的野心。整篇文章极具营销推广色彩，旨在通过新智元这一技术自媒体平台为新产品发布造势。"
+}

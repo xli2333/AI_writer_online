@@ -48,6 +48,12 @@ const fallbackStyleProfiles: StyleProfileDescriptor[] = [
     shortLabel: 'LatePost',
     description: '偏商业报道、公司观察、独家信息与人物/组织叙事的中文商业写作风格。',
   },
+  {
+    id: 'xinzhiyuan',
+    label: '新智元',
+    shortLabel: 'XinZhiYuan',
+    description: '偏 AI 前沿快讯、论文拆解、模型产品观察与产业人物叙事的中文科技媒体写作风格。',
+  },
 ];
 
 const defaultOptions: WritingTaskOptions = {

@@ -1,0 +1,126 @@
+{
+  "analysis_schema_version": 3,
+  "id": "b90db77cc914",
+  "year": "2025",
+  "date": "2025-11-01",
+  "title": "谁杀死了那篇好论文？AI顶会乱象：好论文被刷，低分论文被捧上天",
+  "relative_path": "2025/2025-11-01_谁杀死了那篇好论文？AI顶会乱象：好论文被刷，低分论文被捧上天.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\xinzhiyuan\\raw_materials\\2025\\2025-11-01_谁杀死了那篇好论文？AI顶会乱象：好论文被刷，低分论文被捧上天.txt",
+  "char_count": 4431,
+  "content_type": "行业评论",
+  "entities": [
+    "AAAI",
+    "Reddit",
+    "r/MachineLearning",
+    "新智元",
+    "AAAI 2026"
+  ],
+  "industry": [
+    "人工智能",
+    "高等教育",
+    "学术出版"
+  ],
+  "topic": [
+    "学术伦理",
+    "同行评审",
+    "AI应用",
+    "学术治理"
+  ],
+  "genre": "科技报道",
+  "style": [
+    "叙事性",
+    "批判性",
+    "解释性"
+  ],
+  "audience": [
+    "AI科研人员",
+    "高校师生",
+    "科技行业观察者"
+  ],
+  "intent": [
+    "揭露乱象",
+    "批判制度",
+    "引发反思"
+  ],
+  "tone": [
+    "忧虑",
+    "讽刺",
+    "严肃"
+  ],
+  "primary_question": "为什么AI顶会的同行评审机制正在失去公信力？",
+  "thesis_type": "现象诊断型",
+  "thesis_sentence": "AI顶会引入的双阶段评审制与AI辅助系统，在追求效率的同时，因其不透明性、主观偏见以及对人类判断的算法稀释，正严重侵蚀学术界的信任基础。",
+  "structure_pattern": "案例引出-机制解析-深度剖析-社会影响总结",
+  "section_functions": [
+    "通过匿名审稿人的爆料引入核心矛盾",
+    "详述不公平评审的具体案例以确立事实",
+    "对AAAI官方双阶段评审规则进行技术性拆解",
+    "探讨AI辅助审稿对学术判断权力的移交与风险",
+    "总结学术评价体系的信任崩塌及深层危机"
+  ],
+  "argument_moves": [
+    "引用社交媒体热门贴文作为实证基础",
+    "将官方规则与实际执行效果进行对比论证",
+    "通过借代（Reviewer 2）强化读者的文化认同",
+    "提出制度化漏洞与个人道德缺失的耦合关系"
+  ],
+  "core_argument": "由于投稿量激增，AI顶会正试图通过过度依赖算法和简化流程来缓解审稿压力，但这导致了学术质量守门人的失职与公正性的丧失。",
+  "key_points": [
+    "AAAI 2026的双阶段评审制度赋予初筛极大的主观否决权",
+    "AI辅助审稿系统生成的总结报告可能掩盖核心技术争议",
+    "学术圈内部的‘关系稿’与‘串评’现象正从漏洞演变为潜规则",
+    "过度算法化的评审机制让学术评价变成了运气驱动的概率事件",
+    "同行评审制度的信任崩塌将影响整代研究者的科研信仰"
+  ],
+  "opening_pattern": "通过极具反差感的冲突情境（好论文被拒 vs 弱论文晋级）快速吸引注意力。",
+  "ending_pattern": "以审稿人的无力感叹息作为收尾，留下发人深省的学术伦理追问。",
+  "evidence_types": [
+    "匿名社交媒体证词",
+    "会议官方政策文档",
+    "行业流行文化（梗图）",
+    "学术共同体评论"
+  ],
+  "evidence_specificity_score": 85,
+  "data_density_score": 65,
+  "case_density_score": 80,
+  "quote_density_score": 75,
+  "narrative_distance": "中近景",
+  "stance_strength": "强",
+  "sentence_rhythm": "长短句交错，带有强烈的情绪推动力",
+  "abstraction_level": "中等（兼具具体案例与制度分析）",
+  "transferable_moves": [
+    "利用社交媒体热点进行深度话题拆解",
+    "将抽象的机制改革通过具体‘受害者’视角转化为可感知的叙事",
+    "在技术报道中嵌入社会心理学视角的分析（信任崩塌）"
+  ],
+  "anti_patterns": [
+    "过度依赖单一信源（如仅引用匿名帖）",
+    "情绪化标题可能掩盖客观的制度分析"
+  ],
+  "notable_phrases": [
+    "Reviewer 2式地吹毛求疵",
+    "算法与人情交织的黑箱",
+    "被算法压平的争议"
+  ],
+  "title_score": 88,
+  "opening_score": 85,
+  "argument_score": 82,
+  "evidence_score": 78,
+  "structure_score": 85,
+  "style_score": 80,
+  "publishability_score": 90,
+  "quality_score": 83,
+  "reference_value_score": 85,
+  "is_activity_notice": false,
+  "is_low_value": false,
+  "is_advertorial": false,
+  "advertorial_type": "editorial",
+  "advertorial_confidence": 0,
+  "promotional_intensity_score": 5,
+  "editorial_independence_score": 95,
+  "brand_exposure_level": "低",
+  "source_transparency": "清晰",
+  "advertorial_signals": [],
+  "summary_200": "本文深入观察了AAAI 2026审稿乱象。基于Reddit上一位匿名审稿人的爆料，揭示了该会议实行的‘双阶段评审制’导致高质量论文在初筛阶段被轻易淘汰，而弱质量论文则依靠‘关系’或主观偏见晋级。文章重点解析了AI辅助审稿系统的争议：AI自动生成的评审总结正稀释人类专家的严谨判断。这种算法与人情交织的‘黑箱’操作正严重侵蚀AI学术界的公信力，导致研究者对同行评审制度产生信仰危机。",
+  "summary_500": "本文报道了人工智能顶级会议AAAI 2026在评审环节引发的结构性争议。事件起因于一位匿名审稿人在Reddit上的爆料，他指出AAAI今年的评审流程极其混乱，存在‘好论文被刷、弱论文晋级’的现象，并怀疑背后存在‘关系稿’护航。文章深入拆解了争议根源：一是AAAI 2026新推行的两阶段评审制，赋予了第一阶段极少数审稿人‘一票否决’的高权重，容易导致偏见。二是正式引入了AI辅助评审试点项目，AI负责总结审稿意见与作者答辩。多位参与者担心，AI生成的摘要会‘压平’关键的技术争议，使决策层（AC）在缺乏背景的情况下做出草率决定。文章进一步探讨了学术圈的系统性问题：投稿量激增导致评审资源稀缺，学术共同体试图通过‘算法化’和‘自动化’来提升效率，却在无形中削弱了人类判断的专业性。这种不透明的‘黑箱’操作使得同行评审从质量守门机制退化为一场充满运气的概率游戏。文章最后指出，这种信任塌陷正波及整代科研人员。当AI开始审AI、人情左右分数、效率凌驾于思考之上，学术界最宝贵的信任基石正面临崩溃。这不仅是对AAAI会议口碑的打击，更是对整个科研评价体系公信力的严峻挑战。"
+}

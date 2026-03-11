@@ -1,0 +1,139 @@
+{
+  "analysis_schema_version": 3,
+  "id": "7f17ef866655",
+  "year": "2026",
+  "date": "2026-02-18",
+  "title": "全网疯转，AI大神公开「去AI味」秘籍！写出人话洗掉塑料味",
+  "relative_path": "2026/2026-02-18_全网疯转，AI大神公开「去AI味」秘籍！写出人话洗掉塑料味.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\xinzhiyuan\\raw_materials\\2026\\2026-02-18_全网疯转，AI大神公开「去AI味」秘籍！写出人话洗掉塑料味.txt",
+  "char_count": 6281,
+  "content_type": "深度指南",
+  "entities": [
+    "Louis-François Bouchard",
+    "Towards AI",
+    "新智元",
+    "ChatGPT",
+    "Gemini",
+    "PubMed"
+  ],
+  "industry": [
+    "人工智能",
+    "内容创作",
+    "数字营销"
+  ],
+  "topic": [
+    "提示词工程",
+    "AI写作优化",
+    "内容去同质化",
+    "LLM应用技巧"
+  ],
+  "genre": "方法论干货",
+  "style": [
+    "实用主义",
+    "极客风格",
+    "教程类"
+  ],
+  "audience": [
+    "内容运营",
+    "自媒体从业者",
+    "提示词工程师",
+    "职场写作者"
+  ],
+  "intent": [
+    "知识分享",
+    "技能培训",
+    "行业报道"
+  ],
+  "tone": [
+    "专业",
+    "务实",
+    "启发性"
+  ],
+  "primary_question": "如何通过结构调整、提示词优化及工作流管理，彻底消除AI生成内容的机械感和“塑料味”？",
+  "thesis_type": "解决方案型",
+  "thesis_sentence": "消除“AI味”不能仅停留在词汇修改，必须从人工预定大纲、实施负向Prompt约束、引入“裁判模型”审核工作流以及最终的人类个性注入这四个维度进行系统性重塑。",
+  "structure_pattern": "痛点揭示-根源分析-结构优化-语言规范-提示词模板-多轮工作流-人类价值总结",
+  "section_functions": [
+    "开篇点出AI生成内容普遍存在“塑料感”的社交痛点",
+    "从算法训练原理（RLHF）解释AI高频词汇产生的根源",
+    "批判AI写作的“八股文”架构，提出由人掌控结构的原则",
+    "提供具体的语言禁词黑名单和风格约束规则",
+    "给出可直接复制的“终极提示词模板”",
+    "介绍“写手+裁判”的双AI协作进阶工作流",
+    "强调人类在事实核查和风格定调中的核心价值"
+  ],
+  "argument_moves": [
+    "利用数据（PubMed词频增长）证明AI味现象的普遍性",
+    "将AI味拆解为“架构僵化”与“词汇重复”两个维度",
+    "提出“结构由人定，模型来填空”的差异化策略",
+    "通过具体的禁令（黑名单）增强Prompt的约束效力",
+    "引入迭代思维，将写作过程从单一生成转变为闭环优化"
+  ],
+  "core_argument": "AI味是算法偏好与人类过度依赖自动生成的产物，只有通过增强人工干预、精细化Prompt约束和构建多轮博弈工作流，才能实现高质量的‘人机协同’写作。",
+  "key_points": [
+    "AI偏爱正式词汇源于RLHF的标注偏好",
+    "文章架构僵化（列表堆砌、均匀段落）是AI味的核心特征",
+    "必须在Prompt中明确禁止使用delve、realm等高频冗词",
+    "采用两个模型分别担任‘写手’和‘裁判’可以大幅提升初稿质量",
+    "人类的作用在于提供观点判断、事实核查和情感注入"
+  ],
+  "opening_pattern": "现状批判+痛点共鸣",
+  "ending_pattern": "价值升华+行动呼吁",
+  "evidence_types": [
+    "统计数据",
+    "专家证言",
+    "逻辑推理",
+    "具体工具模板"
+  ],
+  "evidence_specificity_score": 85,
+  "data_density_score": 65,
+  "case_density_score": 75,
+  "quote_density_score": 70,
+  "narrative_distance": "中立观察",
+  "stance_strength": "坚定",
+  "sentence_rhythm": "长短句交错，逻辑严密",
+  "abstraction_level": "中等（含具体操作指令）",
+  "transferable_moves": [
+    "‘写手+裁判’的双模型博弈工作流",
+    "维护动态更新的‘风格黑名单’",
+    "强制要求AI改变句式开头和段落节奏的Prompt技巧",
+    "先审结构、再审词汇、后注灵魂的三步走策略"
+  ],
+  "anti_patterns": [
+    "一稿过：直接使用AI生成的第一版内容",
+    "全自动大纲：让AI自主构思文章逻辑结构",
+    "盲目华丽：追求空洞的、戏剧化的形容词",
+    "模板化结尾：使用‘总之’、‘展望未来’等固定句式"
+  ],
+  "notable_phrases": [
+    "AI塑料感",
+    "结构由人定，模型来填空",
+    "把AI当积木，别当包工头",
+    "裁判模型工作流",
+    "洗掉AI味"
+  ],
+  "title_score": 88,
+  "opening_score": 82,
+  "argument_score": 90,
+  "evidence_score": 85,
+  "structure_score": 92,
+  "style_score": 86,
+  "publishability_score": 95,
+  "quality_score": 90,
+  "reference_value_score": 98,
+  "is_activity_notice": false,
+  "is_low_value": false,
+  "is_advertorial": false,
+  "advertorial_type": "editorial",
+  "advertorial_confidence": 0,
+  "promotional_intensity_score": 15,
+  "editorial_independence_score": 90,
+  "brand_exposure_level": "低",
+  "source_transparency": "清晰",
+  "advertorial_signals": [
+    "提及Towards AI创始人博客作为信源",
+    "文章包含技术网站链接"
+  ],
+  "summary_200": "这篇文章深度解析了如何消除AI写作中的“塑料感”。内容指出AI味根源于算法训练偏好，表现为架构僵化和特定词汇滥用。Louis提出的方案涵盖三方面：首先在架构上，坚持由人工拟定大纲，严控列表使用；其次在语言上，建立禁词黑名单并实施负向约束；最后在工作流上，推荐“写手+裁判”的多模型闭环。文章强调AI仅作为辅助，人类必须负责最终的逻辑校验、事实核查与个性注入。",
+  "summary_500": "针对AI写作普遍存在的“塑料感”和“机械味”痛点，本文基于Towards AI创始人Louis-François Bouchard的实操经验，提供了一套系统的优化指南。文章首先揭示了AI味的底层逻辑：由于RLHF训练中数据标注员偏好正式词汇，导致模型频繁使用“delve”、“realm”等词。消除AI味的核心策略分为三步。第一，结构重塑。文章批判了AI常用的“五段式”及堆砌列表习惯，提倡由人类先行拟定差异化大纲，强制要求AI变换段落长度并移除废话导航标签。第二，语言约束。文章提供了一份详尽的禁词名单（如amazing, transformative等）及风格Prompt模板，要求AI使用更具体、朴素的动词，并严禁出现戏剧化的开场白。第三，引入进阶工作流。通过“写手模型”生成初稿，“裁判模型”根据规则挑错，再由写手模型针对性修订，形成闭环。最后，文章强调了人类在写作过程中的终极价值：V0版是架子，V1版是干净的AI稿，V2版才是由人类注入灵魂、进行事实核查后的成品。该文具有极高的实操参考价值，适合所有希望提升AI协作内容质量的创作者。"
+}

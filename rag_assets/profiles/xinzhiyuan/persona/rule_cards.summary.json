@@ -1,0 +1,627 @@
+{
+  "model": "gemini-3-flash-preview",
+  "generated_at": "2026-03-10T10:45:27.711Z",
+  "total_cards": 5451,
+  "categories": {
+    "structure": 374,
+    "opening": 374,
+    "evidence": 374,
+    "argument": 1491,
+    "style": 374,
+    "transferable_move": 1196,
+    "anti_pattern": 894,
+    "ending": 374
+  },
+  "top_cards": [
+    {
+      "id": "43a8fb49781b_structure_62yub8",
+      "article_id": "43a8fb49781b",
+      "article_title": "比GPT-5还准？AIME25飙到99.9%刷屏，开源模型首次！",
+      "category": "structure",
+      "weight": 103.06,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：总-分-总（核心突破-机制详解-实验数据-团队介绍）",
+      "evidence": "section_functions=[\"导语：总结DeepConf的核心成就与数据指标\",\"优势解析：列举DeepConf的性能提升与易用性\",\"案例演示：通过HMMT 25题目直观展示置信度筛选过程\",\"原理解析：详细拆解离线模式与在线模式的算法逻辑\",\"数据验证：展示在不同模型和数据集上的测试结果\",\"团队介绍：介绍论文作者及所在实验室背景\"]",
+      "genre": "科技新闻",
+      "content_type": "技术研究报道",
+      "topic": [
+        "大模型逻辑推理",
+        "推理效率优化",
+        "开源模型性能",
+        "数学竞赛评测"
+      ],
+      "style": [
+        "解析型",
+        "报道体",
+        "数据驱动"
+      ],
+      "audience": [
+        "AI研发工程师",
+        "大模型算法研究员",
+        "科技趋势观察者"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 98
+    },
+    {
+      "id": "43a8fb49781b_opening_pqxllo",
+      "article_id": "43a8fb49781b",
+      "article_title": "比GPT-5还准？AIME25飙到99.9%刷屏，开源模型首次！",
+      "category": "opening",
+      "weight": 102.86,
+      "rule": "在科技新闻写作中，可优先考虑这种开篇动作：重磅成果直接亮出+数据对比（比GPT-5还准）",
+      "evidence": "来源文章的 opening_score=88",
+      "genre": "科技新闻",
+      "content_type": "技术研究报道",
+      "topic": [
+        "大模型逻辑推理",
+        "推理效率优化",
+        "开源模型性能",
+        "数学竞赛评测"
+      ],
+      "style": [
+        "解析型",
+        "报道体",
+        "数据驱动"
+      ],
+      "audience": [
+        "AI研发工程师",
+        "大模型算法研究员",
+        "科技趋势观察者"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 98
+    },
+    {
+      "id": "7bea682e1906_structure_gx3rmt",
+      "article_id": "7bea682e1906",
+      "article_title": "苹果破防！App Store暴涨60%，全是「俺寻思」写出来的？",
+      "category": "structure",
+      "weight": 102.76,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：爆点现象引入-核心概念定义-生产力变革分析-工具链对比-潜在危机探讨-平台政策回应-总结升华",
+      "evidence": "section_functions=[\"引出App Store提交量暴涨60%的异常数据\",\"引用Andre Karpathy观点定义Vibe Coding概念\",\"分析开发周期从月缩短至天的量变过程\",\"深度解析Cursor、Claude、DeepSeek等主流工具的应用逻辑\",\"借资深开发者之口警示技术债与代码黑盒风险\",\"解读苹果App Store新规对AI生成内容的清退信号\",\"提炼AI时代人类独有的审美与洞察价值\"]",
+      "genre": "行业深度观察",
+      "content_type": "科技趋势深度报道",
+      "topic": [
+        "Vibe Coding",
+        "AI编程",
+        "开发者生态",
+        "App Store政策",
+        "生产力革命"
+      ],
+      "style": [
+        "犀利",
+        "前瞻性",
+        "数据驱动",
+        "叙事性"
+      ],
+      "audience": [
+        "软件开发者",
+        "技术创业者",
+        "产品经理",
+        "科技行业投资者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 95
+    },
+    {
+      "id": "4ca61437e44a_structure_r64ccx",
+      "article_id": "4ca61437e44a",
+      "article_title": "花9万刀雇应届生，不如用AI！软件工程未来2年，太残酷",
+      "category": "structure",
+      "weight": 102.68,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：分面递进式/对比路线图",
+      "evidence": "section_functions=[\"背景引入：通过大厂招新减半引发职业焦虑\",\"人物背书：介绍Google Cloud AI总监Addy Osmani及其观点权威性\",\"核心解析：从岗位需求、技能平衡、角色转变、通才 vs 专才、学历价值五个维度展开论述\",\"行动指南：针对每个维度分别为‘新手’和‘老兵’提供差异化的生存建议\",\"总结升华：强调持续学习与人类独特价值的核心地位\"]",
+      "genre": "深度报道",
+      "content_type": "行业趋势分析",
+      "topic": [
+        "AI取代论",
+        "程序员职业规划",
+        "技术教育变革",
+        "T型人才"
+      ],
+      "style": [
+        "分析性",
+        "指南型",
+        "极客感"
+      ],
+      "audience": [
+        "计算机专业学生",
+        "初级软件工程师",
+        "技术管理人员",
+        "科技行业从业者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 96
+    },
+    {
+      "id": "1039a63d99a7_structure_kjby7g",
+      "article_id": "1039a63d99a7",
+      "article_title": "硬核拆解！从GPT-2到gpt-oss，揭秘大模型进化关键密码",
+      "category": "structure",
+      "weight": 102.63,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：时间轴纵向对比 + 同代横向对比 + 核心技术模块化拆解",
+      "evidence": "section_functions=[\"引言：发布背景与专家视角引入\",\"架构演进：从GPT-2到gpt-oss的八大核心改进（Dropout、RoPE、激活函数等）\",\"横向对比：gpt-oss与Qwen3的参数布局与设计权衡分析\",\"深度挖掘：注意力偏置与池化等细微设计差异\",\"补充信息：训练规模、推理优化（MXFP4）与基准表现评估\"]",
+      "genre": "深度技术评论",
+      "content_type": "技术解析",
+      "topic": [
+        "大模型架构演进",
+        "开源模型分析",
+        "Transformer技术细节",
+        "模型优化与量化"
+      ],
+      "style": [
+        "硬核",
+        "结构化",
+        "比较研究"
+      ],
+      "audience": [
+        "AI研发工程师",
+        "算法研究员",
+        "计算机专业学生",
+        "科技分析师"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 98
+    },
+    {
+      "id": "6343c84f895c_structure_rbbynq",
+      "article_id": "6343c84f895c",
+      "article_title": "我拥有了超能力！Meta最牛文科生让3个AI互掐，竟造出1人技术部",
+      "category": "structure",
+      "weight": 102.53,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：引言-挑战-觉醒-方法论-趋势升华",
+      "evidence": "section_functions=[\"导读：利用Meta员工成功案例抛出核心观点\",\"觉醒篇：描述从技术恐惧到发现AI潜力的转折点\",\"实操篇：详细拆解‘一人开发流’的三大具体招式\",\"模型管理篇：对比主流大模型的性格差异及组合使用策略\",\"总结篇：阐述从PM到Product Builder的职业范式转移\"]",
+      "genre": "深度报道",
+      "content_type": "人物案例分析",
+      "topic": [
+        "AI编程",
+        "Vibe Coding",
+        "产品管理",
+        "效率工具",
+        "职业转型"
+      ],
+      "style": [
+        "叙事性",
+        "方法论",
+        "鼓动性"
+      ],
+      "audience": [
+        "非技术背景职场人",
+        "产品经理",
+        "AI开发者",
+        "创业者"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 96
+    },
+    {
+      "id": "1039a63d99a7_opening_vr6mfn",
+      "article_id": "1039a63d99a7",
+      "article_title": "硬核拆解！从GPT-2到gpt-oss，揭秘大模型进化关键密码",
+      "category": "opening",
+      "weight": 102.43,
+      "rule": "在深度技术评论写作中，可优先考虑这种开篇动作：新闻钩子（新模型发布）+ 历史对比（六年之变）+ 权威专家背书",
+      "evidence": "来源文章的 opening_score=88",
+      "genre": "深度技术评论",
+      "content_type": "技术解析",
+      "topic": [
+        "大模型架构演进",
+        "开源模型分析",
+        "Transformer技术细节",
+        "模型优化与量化"
+      ],
+      "style": [
+        "硬核",
+        "结构化",
+        "比较研究"
+      ],
+      "audience": [
+        "AI研发工程师",
+        "算法研究员",
+        "计算机专业学生",
+        "科技分析师"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 98
+    },
+    {
+      "id": "4ac68adfb583_structure_bllkj2",
+      "article_id": "4ac68adfb583",
+      "article_title": "Karpathy力荐必读博客：代码功底，决定AI「开挂」倍数！",
+      "category": "structure",
+      "weight": 102.42,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：逻辑演进式：核心定义 -> 正反案例对比 -> 宏观工程范式 -> 微观实战技巧 -> 深度案例复盘 -> 总结与反思",
+      "evidence": "section_functions=[\"背书引入：引用Karpathy推荐增加文章权威度\",\"核心观点阐述：定义AI作为能力的'放大器'属性\",\"对比论证：通过低级提示词与高手提示词的对比展示功底差异\",\"范式重构：重新定义AI时代的软件工程核心（心智模型维护）\",\"战术手册：提供具体的工具选择、上下文管理及任务拆解建议\",\"实战演示：复盘PostgreSQL性能优化过程，展示AI在复杂场景下的应用\",\"观念修正：对DRY原则、重构成本及测试必要性进行重新审视\"]",
+      "genre": "技术博文综述",
+      "content_type": "技术深度分析",
+      "topic": [
+        "AI辅助编程",
+        "提示工程",
+        "系统架构",
+        "开发者生产力"
+      ],
+      "style": [
+        "干货型",
+        "实战导向",
+        "深度解析"
+      ],
+      "audience": [
+        "软件工程师",
+        "技术团队负责人",
+        "AI产品经理",
+        "计算机专业学生"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 96
+    },
+    {
+      "id": "55dffa6a6d6b_structure_3pzgqd",
+      "article_id": "55dffa6a6d6b",
+      "article_title": "田渊栋：2025年年终总结（一）",
+      "category": "structure",
+      "weight": 102.38,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：时间线+主题模块（职场复盘-技术研究-哲学信念-未来展望）",
+      "evidence": "section_functions=[\"叙述被裁及救火Llama4的过程，反思社会复杂性\",\"梳理2025年在LLM推理及架构领域的学术产出\",\"探讨可解释性研究的突破及对Grokking现象的理解\",\"升华主题，论证可解释性在AGI时代的救场作用\"]",
+      "genre": "随笔",
+      "content_type": "个人年终总结",
+      "topic": [
+        "职业发展",
+        "大模型推理",
+        "AI可解释性",
+        "强化学习",
+        "离职创业"
+      ],
+      "style": [
+        "理性分析",
+        "深度思辨",
+        "技术硬核",
+        "坦诚"
+      ],
+      "audience": [
+        "人工智能研究者",
+        "科技从业者",
+        "AI领域的学生",
+        "职业经理人"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 98
+    },
+    {
+      "id": "7bea682e1906_opening_ye721z",
+      "article_id": "7bea682e1906",
+      "article_title": "苹果破防！App Store暴涨60%，全是「俺寻思」写出来的？",
+      "category": "opening",
+      "weight": 102.26,
+      "rule": "在行业深度观察写作中，可优先考虑这种开篇动作：数据爆点法：通过震撼的百分比增长数据直接切入，引发读者的认知失调。",
+      "evidence": "来源文章的 opening_score=90",
+      "genre": "行业深度观察",
+      "content_type": "科技趋势深度报道",
+      "topic": [
+        "Vibe Coding",
+        "AI编程",
+        "开发者生态",
+        "App Store政策",
+        "生产力革命"
+      ],
+      "style": [
+        "犀利",
+        "前瞻性",
+        "数据驱动",
+        "叙事性"
+      ],
+      "audience": [
+        "软件开发者",
+        "技术创业者",
+        "产品经理",
+        "科技行业投资者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 95
+    },
+    {
+      "id": "9ea6f2d484a2_structure_a9ushm",
+      "article_id": "9ea6f2d484a2",
+      "article_title": "体系结构顶会ISCA'25放榜：中国作者斩获最佳论文，拿下25%录用！附超全总结",
+      "category": "structure",
+      "weight": 102.19,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：宏观趋势-历史回溯-深度技术拆解-领域专题细化",
+      "evidence": "section_functions=[\"统计ISCA 2025录用率及研究主题分布变化\",\"回顾中国团队在ISCA三个历史节点的表现及名人堂入选情况\",\"详细解读两篇最佳论文的技术创新点\",\"分析AI加速器的前沿制造工艺趋势\",\"探讨存储系统在RAG与安全维度的演进方向\"]",
+      "genre": "行业深度综述",
+      "content_type": "学术综述",
+      "topic": [
+        "体系结构",
+        "AI芯片",
+        "存算一体",
+        "学术顶会",
+        "中国科研竞争力"
+      ],
+      "style": [
+        "数据驱动",
+        "学术化",
+        "专业解析"
+      ],
+      "audience": [
+        "芯片研发工程师",
+        "计算机专业师生",
+        "硬科技投资人",
+        "科技行业研究员"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 98
+    },
+    {
+      "id": "816c102e754a_opening_4q1yxx",
+      "article_id": "816c102e754a",
+      "article_title": "Gemini准确率从21%飙到97%！谷歌只用了这一招：复制粘贴",
+      "category": "opening",
+      "weight": 102.17,
+      "rule": "在科技资讯写作中，可优先考虑这种开篇动作：数据钩子：用高反差的准确率提升百分比瞬间吸引注意力",
+      "evidence": "来源文章的 opening_score=90",
+      "genre": "科技资讯",
+      "content_type": "技术解读",
+      "topic": [
+        "提示工程",
+        "大模型性能优化",
+        "深度学习架构",
+        "RAG技术"
+      ],
+      "style": [
+        "科普式",
+        "数据驱动",
+        "实操导向"
+      ],
+      "audience": [
+        "AI开发者",
+        "提示词工程师",
+        "大模型应用研究员",
+        "科技爱好者"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 98
+    },
+    {
+      "id": "d061973a0f67_structure_1cw395",
+      "article_id": "d061973a0f67",
+      "article_title": "100万亿Token看懵硅谷！全球一半算力写代码，另一半在「搞颜色」 ？",
+      "category": "structure",
+      "weight": 102.07,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：总-分-总（概览、分项数据拆解、商业理论总结、未来启示）",
+      "evidence": "section_functions=[\"报告背景与核心结论预告\",\"开源与闭源的市场份额博弈分析\",\"模型规模演化趋势（中型模型PMF）\",\"推理模型与工具调用的崛起\",\"应用场景分布（编程vs角色扮演）\",\"厂商差异化竞争画像\",\"全球地缘格局与语言分布\",\"商业深度分析：水晶鞋效应与成本弹性\",\"行业总结与局限性说明\"]",
+      "genre": "科技商业深度报道",
+      "content_type": "行业趋势分析报告解读",
+      "topic": [
+        "2025年AI发展现状",
+        "开源模型崛起",
+        "推理模型趋势",
+        "用户留存机制",
+        "算力消耗分析"
+      ],
+      "style": [
+        "数据驱动",
+        "分析型",
+        "宏观视角"
+      ],
+      "audience": [
+        "AI开发者",
+        "科技投资者",
+        "企业决策者",
+        "行业分析师"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 96
+    },
+    {
+      "id": "06c48119a258_opening_84xwhe",
+      "article_id": "06c48119a258",
+      "article_title": "AI科学家组团搞科研，爆肝万字报告震惊医学家！Nature独刊揭秘细节",
+      "category": "opening",
+      "weight": 102,
+      "rule": "在科技综述写作中，可优先考虑这种开篇动作：场景化叙事开头",
+      "evidence": "来源文章的 opening_score=92",
+      "genre": "科技综述",
+      "content_type": "科技趋势深度报道",
+      "topic": [
+        "AI科学家",
+        "多智能体系统",
+        "科研范式革新",
+        "LLM应用"
+      ],
+      "style": [
+        "叙事性",
+        "解释性",
+        "前瞻性"
+      ],
+      "audience": [
+        "科研工作者",
+        "AI技术专家",
+        "生物医学专业人士",
+        "科技趋势关注者"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 95
+    },
+    {
+      "id": "9ea6f2d484a2_opening_28q2bx",
+      "article_id": "9ea6f2d484a2",
+      "article_title": "体系结构顶会ISCA'25放榜：中国作者斩获最佳论文，拿下25%录用！附超全总结",
+      "category": "opening",
+      "weight": 101.99,
+      "rule": "在行业深度综述写作中，可优先考虑这种开篇动作：导语式概括，直接指出会议背景、亮点数据及核心成就",
+      "evidence": "来源文章的 opening_score=88",
+      "genre": "行业深度综述",
+      "content_type": "学术综述",
+      "topic": [
+        "体系结构",
+        "AI芯片",
+        "存算一体",
+        "学术顶会",
+        "中国科研竞争力"
+      ],
+      "style": [
+        "数据驱动",
+        "学术化",
+        "专业解析"
+      ],
+      "audience": [
+        "芯片研发工程师",
+        "计算机专业师生",
+        "硬科技投资人",
+        "科技行业研究员"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 98
+    },
+    {
+      "id": "4ca61437e44a_opening_dhluxn",
+      "article_id": "4ca61437e44a",
+      "article_title": "花9万刀雇应届生，不如用AI！软件工程未来2年，太残酷",
+      "category": "opening",
+      "weight": 101.98,
+      "rule": "在深度报道写作中，可优先考虑这种开篇动作：痛点揭示式",
+      "evidence": "来源文章的 opening_score=88",
+      "genre": "深度报道",
+      "content_type": "行业趋势分析",
+      "topic": [
+        "AI取代论",
+        "程序员职业规划",
+        "技术教育变革",
+        "T型人才"
+      ],
+      "style": [
+        "分析性",
+        "指南型",
+        "极客感"
+      ],
+      "audience": [
+        "计算机专业学生",
+        "初级软件工程师",
+        "技术管理人员",
+        "科技行业从业者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 96
+    },
+    {
+      "id": "816c102e754a_structure_fc1qgg",
+      "article_id": "816c102e754a",
+      "article_title": "Gemini准确率从21%飙到97%！谷歌只用了这一招：复制粘贴",
+      "category": "structure",
+      "weight": 101.97,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：现象呈现-原理解析-优势对比-适用边界-安全警示",
+      "evidence": "section_functions=[\"引出核心发现：简单的重复技巧带来惊人的准确率提升\",\"对比传统复杂提示词技巧（如思维链、情绪勒索）的局限性\",\"深入技术底层：解释Transformer的‘因果盲点’与‘类双向注意力’\",\"商业价值分析：阐述预填充（Prefill）阶段并行化带来的低成本优势\",\"风险与边界探讨：指出对推理任务的无效性及潜在安全隐患\"]",
+      "genre": "科技资讯",
+      "content_type": "技术解读",
+      "topic": [
+        "提示工程",
+        "大模型性能优化",
+        "深度学习架构",
+        "RAG技术"
+      ],
+      "style": [
+        "科普式",
+        "数据驱动",
+        "实操导向"
+      ],
+      "audience": [
+        "AI开发者",
+        "提示词工程师",
+        "大模型应用研究员",
+        "科技爱好者"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 98
+    },
+    {
+      "id": "4ac68adfb583_opening_5f4fw2",
+      "article_id": "4ac68adfb583",
+      "article_title": "Karpathy力荐必读博客：代码功底，决定AI「开挂」倍数！",
+      "category": "opening",
+      "weight": 101.92,
+      "rule": "在技术博文综述写作中，可优先考虑这种开篇动作：权威背书+痛点揭示（AI是放大器，但你可能没用好）",
+      "evidence": "来源文章的 opening_score=85",
+      "genre": "技术博文综述",
+      "content_type": "技术深度分析",
+      "topic": [
+        "AI辅助编程",
+        "提示工程",
+        "系统架构",
+        "开发者生产力"
+      ],
+      "style": [
+        "干货型",
+        "实战导向",
+        "深度解析"
+      ],
+      "audience": [
+        "软件工程师",
+        "技术团队负责人",
+        "AI产品经理",
+        "计算机专业学生"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 96
+    },
+    {
+      "id": "d061973a0f67_opening_gs20y8",
+      "article_id": "d061973a0f67",
+      "article_title": "100万亿Token看懵硅谷！全球一半算力写代码，另一半在「搞颜色」 ？",
+      "category": "opening",
+      "weight": 101.87,
+      "rule": "在科技商业深度报道写作中，可优先考虑这种开篇动作：震撼性数据预警+多重反直觉观点罗列",
+      "evidence": "来源文章的 opening_score=88",
+      "genre": "科技商业深度报道",
+      "content_type": "行业趋势分析报告解读",
+      "topic": [
+        "2025年AI发展现状",
+        "开源模型崛起",
+        "推理模型趋势",
+        "用户留存机制",
+        "算力消耗分析"
+      ],
+      "style": [
+        "数据驱动",
+        "分析型",
+        "宏观视角"
+      ],
+      "audience": [
+        "AI开发者",
+        "科技投资者",
+        "企业决策者",
+        "行业分析师"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 96
+    },
+    {
+      "id": "6343c84f895c_opening_vf5r85",
+      "article_id": "6343c84f895c",
+      "article_title": "我拥有了超能力！Meta最牛文科生让3个AI互掐，竟造出1人技术部",
+      "category": "opening",
+      "weight": 101.83,
+      "rule": "在深度报道写作中，可优先考虑这种开篇动作：冲突对比式（非技术背景 vs. 惊人开发效率）",
+      "evidence": "来源文章的 opening_score=88",
+      "genre": "深度报道",
+      "content_type": "人物案例分析",
+      "topic": [
+        "AI编程",
+        "Vibe Coding",
+        "产品管理",
+        "效率工具",
+        "职业转型"
+      ],
+      "style": [
+        "叙事性",
+        "方法论",
+        "鼓动性"
+      ],
+      "audience": [
+        "非技术背景职场人",
+        "产品经理",
+        "AI开发者",
+        "创业者"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 96
+    }
+  ]
+}
