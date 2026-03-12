@@ -32,6 +32,7 @@ const DIST_DIR = path.join(ROOT_DIR, 'dist');
 const GENERATED_ASSET_ROOT = path.resolve(process.env.GENERATED_ASSET_ROOT || path.join(ROOT_DIR, 'generated_assets'));
 const HOST = process.env.BACKEND_HOST || '0.0.0.0';
 const PORT = Number(process.env.PORT || process.env.BACKEND_PORT || 8787);
+const ILLUSTRATION_SESSION_MISSING_MESSAGE = '当前会话内没有可恢复的配图任务，请重新生成。';
 
 const COMMON_PROMPT_ASSET_MAP = {
   coreWritingSkills: path.join(COMMON_PROMPT_ROOT, 'core_writing_skills.md'),
@@ -960,6 +961,23 @@ const server = http.createServer(async (request, response) => {
       const shouldUseMemoryJob =
         memoryJob &&
         (!isIllustrationJobRunning(memoryJob) || !memoryJob.runId || isIllustrationRunCurrent(sourceHash, memoryJob.runId));
+      if (!manifest && !shouldUseMemoryJob) {
+        sendJson(response, 200, {
+          sourceHash,
+          job: normalizeIllustrationJob(
+            {
+              sourceHash,
+              status: 'canceled',
+              currentStep: ILLUSTRATION_SESSION_MISSING_MESSAGE,
+              completedCount: 0,
+              totalCount: 0,
+              updatedAt: new Date().toISOString(),
+            },
+            { sourceHash }
+          ),
+        });
+        return;
+      }
       const job = normalizeIllustrationJob((shouldUseMemoryJob ? memoryJob : null) || deriveIllustrationJobFromBundle(sourceHash, manifest), {
         sourceHash,
         status: manifest?.status || 'queued',

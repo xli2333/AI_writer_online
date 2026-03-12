@@ -306,8 +306,23 @@ const bundleNeedsRefresh = (bundle?: ArticleIllustrationBundle) => {
   );
 };
 
-const isIllustrationJobActive = (job?: ArticleIllustrationJobStatus | null) =>
-  ['queued', 'planning', 'rendering', 'finalizing'].includes(String(job?.status || ''));
+const isIllustrationJobActive = (job?: ArticleIllustrationJobStatus | null) => {
+  const status = String(job?.status || '');
+  if (!['queued', 'planning', 'rendering', 'finalizing'].includes(status)) {
+    return false;
+  }
+
+  const currentStep = String(job?.currentStep || '').trim();
+  if (currentStep.includes('已停止') || currentStep.includes('没有可恢复的配图任务') || currentStep.includes('重新生成')) {
+    return false;
+  }
+
+  if (status === 'queued' && Number(job?.totalCount || 0) <= 0 && Number(job?.completedCount || 0) <= 0) {
+    return false;
+  }
+
+  return true;
+};
 
 const resolveIllustrationPhaseLabel = (job?: ArticleIllustrationJobStatus | null) => {
   switch (job?.status) {
@@ -1402,7 +1417,15 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
   const isIllustrationBusy = illustrationStatus === 'generating' || illustrationStatus === 'canceling';
   const shouldRetryIllustrationStatusError = (error: any) => {
     const message = String(error?.message || '').toLowerCase();
-    return message.includes('failed to fetch') || message.includes('networkerror') || message.includes('load failed');
+    return (
+      message.includes('failed to fetch') ||
+      message.includes('networkerror') ||
+      message.includes('load failed') ||
+      message.includes('bad gateway') ||
+      message.includes(' 502') ||
+      message.includes(' 503') ||
+      message.includes(' 504')
+    );
   };
 
   const stopIllustrationPolling = () => {
