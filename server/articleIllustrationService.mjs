@@ -1301,17 +1301,21 @@ const saveGeneratedImage = async ({ buffer }) => {
       position: 'attention',
       withoutEnlargement: false,
     })
-    .png({ compressionLevel: 0, palette: false })
+    .jpeg({
+      quality: 84,
+      mozjpeg: true,
+      chromaSubsampling: '4:4:4',
+    })
     .toBuffer();
 
   return {
     buffer: resized,
-    mimeType: 'image/png',
+    mimeType: 'image/jpeg',
     width: IMAGE_WIDTH,
     height: IMAGE_HEIGHT,
     dataUrl: buildInlineImageDataUrl({
       buffer: resized,
-      mimeType: 'image/png',
+      mimeType: 'image/jpeg',
     }),
   };
 };

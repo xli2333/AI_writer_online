@@ -217,6 +217,14 @@ const sendNoContent = (response) => {
   response.end();
 };
 
+const parseNonNegativeInteger = (value, fallback = 0) => {
+  const parsed = Number.parseInt(String(value ?? '').trim(), 10);
+  if (!Number.isFinite(parsed) || parsed < 0) {
+    return fallback;
+  }
+  return parsed;
+};
+
 const readUtf8 = async (filePath) => {
   const text = await fs.readFile(filePath, 'utf8');
   return text.replace(/^\uFEFF/, '').replace(/\r\n/g, '\n').trim();
@@ -952,6 +960,7 @@ const server = http.createServer(async (request, response) => {
 
     if (request.method === 'GET' && route === '/api/article-illustrations/status') {
       const sourceHash = String(url.searchParams.get('sourceHash') || '').trim();
+      const knownAssetCount = parseNonNegativeInteger(url.searchParams.get('knownAssetCount'), 0);
       if (!sourceHash) {
         sendJson(response, 400, { error: 'Missing sourceHash.' });
         return;
@@ -988,10 +997,13 @@ const server = http.createServer(async (request, response) => {
         updatedAt: manifest?.updatedAt,
         error: manifest?.error,
       });
+      const shouldIncludeBundle = Boolean(manifest) && Number(manifest?.assets?.length || 0) > knownAssetCount;
       sendJson(response, 200, {
         sourceHash,
         job,
-        bundle: overlayIllustrationBundleJobState(manifest ? toIllustrationBundle(manifest) : undefined, shouldUseMemoryJob ? memoryJob : null),
+        bundle: shouldIncludeBundle
+          ? overlayIllustrationBundleJobState(toIllustrationBundle(manifest), shouldUseMemoryJob ? memoryJob : null)
+          : undefined,
       });
       return;
     }

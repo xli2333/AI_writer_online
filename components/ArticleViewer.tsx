@@ -1393,6 +1393,7 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
   const illustrationStatusPollRef = useRef<number | null>(null);
   const illustrationStatusFailureCountRef = useRef(0);
   const illustrationFlowTokenRef = useRef(0);
+  const activeIllustrationBundleRef = useRef<ArticleIllustrationBundle | undefined>(data.illustrationBundle);
   const articleExportRef = useRef<HTMLDivElement>(null);
   const plainArticleExportRef = useRef<HTMLDivElement>(null);
   const notesExportRef = useRef<HTMLDivElement>(null);
@@ -1428,6 +1429,10 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
     );
   };
 
+  useEffect(() => {
+    activeIllustrationBundleRef.current = data.illustrationBundle;
+  }, [data.illustrationBundle]);
+
   const stopIllustrationPolling = () => {
     if (illustrationStatusPollRef.current !== null) {
       window.clearTimeout(illustrationStatusPollRef.current);
@@ -1444,6 +1449,7 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
       try {
         const payload = await getArticleIllustrationStatus({
           sourceHash,
+          knownAssetCount: activeIllustrationBundleRef.current?.assets?.length || 0,
           signal: controller.signal,
         });
         illustrationStatusFailureCountRef.current = 0;
