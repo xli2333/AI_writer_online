@@ -26,6 +26,12 @@ import {
 import * as GeminiService from './services/geminiService';
 import { loadPersonaStatus, loadStyleProfiles } from './services/backendContentService';
 import { clearAppCheckpoint, loadAppCheckpoint, saveAppCheckpoint } from './services/checkpointStore';
+import {
+  clearIllustrationSessionBundle,
+  computeIllustrationSessionBundleKey,
+  loadIllustrationSessionBundle,
+  saveIllustrationSessionBundle,
+} from './services/illustrationSessionStore';
 import { ApiKeyInput } from './components/ApiKeyInput';
 import { ArticleViewer } from './components/ArticleViewer';
 import { DirectionSelection } from './components/DirectionSelection';
@@ -353,11 +359,15 @@ const shouldPersistCheckpoint = ({
       projectData.critique ||
       projectData.articleContent ||
       projectData.teachingNotes ||
-      projectData.illustrationBundle ||
       projectData.workflowSnapshots?.length ||
       projectData.activeSnapshotId ||
       genState.step !== GenerationStep.IDLE
   );
+
+const buildCheckpointProjectData = (projectData: WritingProjectData): WritingProjectData => ({
+  ...projectData,
+  illustrationBundle: undefined,
+});
 
 const genreOptions = ['商业分析', '趋势解读', '案例分析', '行业评论', '人物观察'];
 const styleOptions = ['理性克制', '洞察型', '媒体型', '启发式', '叙事型'];
@@ -391,6 +401,7 @@ const App: React.FC = () => {
   const [isWorkflowNavigatorOpen, setIsWorkflowNavigatorOpen] = useState(false);
 
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const previousIllustrationSessionKeyRef = useRef('');
 
   const [projectData, setProjectData] = useState<WritingProjectData>(createEmptyProject(defaultOptions));
   const [genState, setGenState] = useState<GenerationState>({
@@ -404,6 +415,10 @@ const App: React.FC = () => {
     fallbackStyleProfiles[0];
   const activePersonaStatus = personaStatuses[taskOptions.styleProfile];
   const activeSubPersona = getRuntimeSubPersonaDescriptor(resolveRuntimeSubPersona(taskOptions));
+  const illustrationSessionBundleKey = useMemo(
+    () => computeIllustrationSessionBundleKey(taskOptions.styleProfile, projectData.articleContent || ''),
+    [projectData.articleContent, taskOptions.styleProfile]
+  );
 
   const appendWorkflowSnapshot = ({
     type,
@@ -938,7 +953,20 @@ const App: React.FC = () => {
         if (!isMounted || !checkpoint) return;
 
         const restoredTaskOptions = normalizeTaskOptions(checkpoint.taskOptions);
-        const restoredProjectData = normalizeProjectData(checkpoint.projectData, restoredTaskOptions);
+        const restoredBundleKey = computeIllustrationSessionBundleKey(
+          restoredTaskOptions.styleProfile,
+          checkpoint.projectData?.articleContent || ''
+        );
+        const restoredIllustrationBundle = restoredBundleKey
+          ? await loadIllustrationSessionBundle(restoredBundleKey)
+          : null;
+        const restoredProjectData = normalizeProjectData(
+          {
+            ...checkpoint.projectData,
+            illustrationBundle: restoredIllustrationBundle || undefined,
+          },
+          restoredTaskOptions
+        );
         const restoredGenState = deriveRestoredGenState(restoredProjectData, checkpoint.genState);
 
         setTopic(checkpoint.topic || restoredProjectData.topic || '');
@@ -987,7 +1015,7 @@ const App: React.FC = () => {
         topic,
         taskOptions,
         uploadedFiles,
-        projectData,
+        projectData: buildCheckpointProjectData(projectData),
         genState,
         updatedAt: new Date().toISOString(),
       });
@@ -995,6 +1023,32 @@ const App: React.FC = () => {
 
     return () => window.clearTimeout(timer);
   }, [isCheckpointHydrated, topic, taskOptions, uploadedFiles, projectData, genState]);
+
+  useEffect(() => {
+    if (!isCheckpointHydrated) return;
+
+    const previousKey = previousIllustrationSessionKeyRef.current;
+    const nextKey = illustrationSessionBundleKey;
+    if (previousKey && previousKey !== nextKey) {
+      void clearIllustrationSessionBundle(previousKey);
+    }
+    previousIllustrationSessionKeyRef.current = nextKey;
+
+    const timer = window.setTimeout(() => {
+      if (!nextKey) {
+        return;
+      }
+
+      if (projectData.illustrationBundle) {
+        void saveIllustrationSessionBundle(nextKey, projectData.illustrationBundle);
+        return;
+      }
+
+      void clearIllustrationSessionBundle(nextKey);
+    }, 250);
+
+    return () => window.clearTimeout(timer);
+  }, [illustrationSessionBundleKey, isCheckpointHydrated, projectData.illustrationBundle]);
 
   const handleClearKey = () => {
     if (confirm('清除当前 API Key 并返回登录页？')) {

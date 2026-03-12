@@ -3,4 +3,12 @@ declare module '*.md?raw' {
   export default content;
 }
 
+interface ImportMetaEnv {
+  readonly VITE_BACKEND_ORIGIN?: string;
+}
+
+interface ImportMeta {
+  readonly env: ImportMetaEnv;
+}
+
 export {};

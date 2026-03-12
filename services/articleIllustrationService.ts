@@ -4,6 +4,7 @@ import type {
   WritingTaskOptions,
 } from '../types';
 import { getStoredGeminiApiKey } from './geminiService';
+import { resolveBackendUrl, resolveGeneratedAssetUrl } from './runtimeConfig';
 
 interface IllustrationPayload {
   bundle?: ArticleIllustrationBundle;
@@ -39,7 +40,7 @@ const fetchJson = async <T>(input: string, init?: RequestInit, timeoutMs = GENER
   const signal = mergeAbortSignals([init?.signal, timeoutController.signal]);
 
   try {
-    const response = await fetch(input, { ...init, signal });
+    const response = await fetch(resolveBackendUrl(input), { ...init, signal });
     if (!response.ok) {
       const payload = (await response.json().catch(() => ({}))) as IllustrationPayload;
       throw new Error(payload.error || `Illustration request failed: ${response.status} ${response.statusText}`);
@@ -56,6 +57,90 @@ const fetchJson = async <T>(input: string, init?: RequestInit, timeoutMs = GENER
   } finally {
     window.clearTimeout(timeoutHandle);
   }
+};
+
+const normalizeIllustrationBundle = (bundle?: ArticleIllustrationBundle) => {
+  if (!bundle) return bundle;
+
+  const normalizeAsset = (asset: ArticleIllustrationBundle['assets'][number]) => ({
+    ...asset,
+    url: resolveGeneratedAssetUrl(asset.url),
+  });
+
+  return {
+    ...bundle,
+    slots: Array.isArray(bundle.slots)
+      ? bundle.slots.map((slot) => ({
+          ...slot,
+          assetUrl: slot.assetUrl ? resolveGeneratedAssetUrl(slot.assetUrl) : slot.assetUrl,
+        }))
+      : [],
+    assets: Array.isArray(bundle.assets) ? bundle.assets.map(normalizeAsset) : [],
+    assetVersions:
+      bundle.assetVersions && typeof bundle.assetVersions === 'object'
+        ? Object.fromEntries(
+            Object.entries(bundle.assetVersions).map(([slotId, assets]) => [
+              slotId,
+              Array.isArray(assets) ? assets.map(normalizeAsset) : [],
+            ])
+          )
+        : {},
+  } satisfies ArticleIllustrationBundle;
+};
+
+const normalizeIllustrationPayload = (payload: IllustrationPayload) => ({
+  ...payload,
+  bundle: normalizeIllustrationBundle(payload.bundle),
+});
+
+const toAssetArray = (value: unknown) =>
+  Array.isArray(value) ? (value.filter(Boolean) as ArticleIllustrationBundle['assets']) : [];
+
+const syncSlotWithActiveAsset = (slot: ArticleIllustrationBundle['slots'][number], versions: ArticleIllustrationBundle['assets']) => {
+  const activeAsset =
+    versions.find((asset) => asset.id === slot.activeAssetId) || versions[versions.length - 1] || null;
+  const nextStatus =
+    slot.status === 'rendering' || slot.status === 'error' ? slot.status : activeAsset ? 'ready' : 'planned';
+
+  return {
+    ...slot,
+    explanation: String(activeAsset?.editorCaption || slot.explanation || slot.purpose || '').trim(),
+    activeAssetId: activeAsset?.id,
+    versionCount: versions.length,
+    assetUrl: activeAsset?.url,
+    mimeType: activeAsset?.mimeType,
+    width: activeAsset?.width,
+    height: activeAsset?.height,
+    status: nextStatus,
+  };
+};
+
+const buildActiveAssetList = (
+  slots: ArticleIllustrationBundle['slots'],
+  assetVersions: ArticleIllustrationBundle['assetVersions']
+) =>
+  slots
+    .map((slot) => {
+      const versions = toAssetArray(assetVersions?.[slot.id]);
+      return versions.find((asset) => asset.id === slot.activeAssetId) || versions[versions.length - 1] || null;
+    })
+    .filter(Boolean) as ArticleIllustrationBundle['assets'];
+
+const rebuildBundle = (bundle: ArticleIllustrationBundle): ArticleIllustrationBundle => {
+  const normalizedAssetVersions = Object.fromEntries(
+    Object.entries(bundle.assetVersions || {}).map(([slotId, versions]) => [slotId, toAssetArray(versions)])
+  ) as ArticleIllustrationBundle['assetVersions'];
+  const slots = Array.isArray(bundle.slots)
+    ? bundle.slots.map((slot) => syncSlotWithActiveAsset(slot, normalizedAssetVersions[slot.id] || []))
+    : [];
+
+  return {
+    ...bundle,
+    slots,
+    assets: buildActiveAssetList(slots, normalizedAssetVersions),
+    assetVersions: normalizedAssetVersions,
+    updatedAt: new Date().toISOString(),
+  };
 };
 
 const getRuntimeApiKey = () => {
@@ -113,26 +198,28 @@ export const startArticleIllustrationGeneration = async ({
   regenerate?: boolean;
   signal?: AbortSignal;
 }) => {
-  const payload = await fetchJson<IllustrationPayload>(
-    '/api/article-illustrations/generate',
-    {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      signal,
-      body: JSON.stringify({
-        apiKey: getRuntimeApiKey(),
-        styleProfile: options.styleProfile,
-        topic,
-        articleContent,
-        plannerModel: getPlannerModel(),
-        imageModel: 'gemini-3-pro-image-preview',
-        options,
-        userPrompt: String(userPrompt || '').trim(),
-        imageCountPrompt: String(imageCountPrompt || '').trim(),
-        regenerate,
-      }),
-    },
-    GENERATE_TIMEOUT_MS
+  const payload = normalizeIllustrationPayload(
+    await fetchJson<IllustrationPayload>(
+      '/api/article-illustrations/generate',
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        signal,
+        body: JSON.stringify({
+          apiKey: getRuntimeApiKey(),
+          styleProfile: options.styleProfile,
+          topic,
+          articleContent,
+          plannerModel: getPlannerModel(),
+          imageModel: 'gemini-3-pro-image-preview',
+          options,
+          userPrompt: String(userPrompt || '').trim(),
+          imageCountPrompt: String(imageCountPrompt || '').trim(),
+          regenerate,
+        }),
+      },
+      GENERATE_TIMEOUT_MS
+    )
   );
 
   if (!payload.sourceHash) {
@@ -153,13 +240,15 @@ export const getArticleIllustrationStatus = async ({
   sourceHash: string;
   signal?: AbortSignal;
 }) => {
-  const payload = await fetchJson<IllustrationPayload>(
-    `/api/article-illustrations/status?${new URLSearchParams({ sourceHash }).toString()}`,
-    {
-      method: 'GET',
-      signal,
-    },
-    GENERATE_TIMEOUT_MS
+  const payload = normalizeIllustrationPayload(
+    await fetchJson<IllustrationPayload>(
+      `/api/article-illustrations/status?${new URLSearchParams({ sourceHash }).toString()}`,
+      {
+        method: 'GET',
+        signal,
+      },
+      GENERATE_TIMEOUT_MS
+    )
   );
 
   if (!payload.sourceHash) {
@@ -180,17 +269,19 @@ export const cancelArticleIllustrationGeneration = async ({
   sourceHash: string;
   signal?: AbortSignal;
 }) => {
-  const payload = await fetchJson<IllustrationPayload>(
-    '/api/article-illustrations/cancel',
-    {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      signal,
-      body: JSON.stringify({
-        sourceHash,
-      }),
-    },
-    MUTATION_TIMEOUT_MS
+  const payload = normalizeIllustrationPayload(
+    await fetchJson<IllustrationPayload>(
+      '/api/article-illustrations/cancel',
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        signal,
+        body: JSON.stringify({
+          sourceHash,
+        }),
+      },
+      MUTATION_TIMEOUT_MS
+    )
   );
 
   if (!payload.sourceHash) {
@@ -208,6 +299,7 @@ export const regenerateIllustrationSlot = async ({
   sourceHash,
   slotId,
   articleContent,
+  bundle,
   options,
   userPrompt,
   signal,
@@ -215,28 +307,32 @@ export const regenerateIllustrationSlot = async ({
   sourceHash: string;
   slotId: string;
   articleContent: string;
+  bundle: ArticleIllustrationBundle;
   options: WritingTaskOptions;
   userPrompt?: string;
   signal?: AbortSignal;
 }) => {
-  const payload = await fetchJson<IllustrationPayload>(
-    '/api/article-illustrations/regenerate-slot',
-    {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      signal,
-      body: JSON.stringify({
-        apiKey: getRuntimeApiKey(),
-        sourceHash,
-        slotId,
-        articleContent,
-        styleProfile: options.styleProfile,
-        plannerModel: getPlannerModel(),
-        imageModel: 'gemini-3-pro-image-preview',
-        userPrompt: String(userPrompt || '').trim(),
-      }),
-    },
-    REGENERATE_TIMEOUT_MS
+  const payload = normalizeIllustrationPayload(
+    await fetchJson<IllustrationPayload>(
+      '/api/article-illustrations/regenerate-slot',
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        signal,
+        body: JSON.stringify({
+          apiKey: getRuntimeApiKey(),
+          sourceHash,
+          slotId,
+          articleContent,
+          bundle,
+          styleProfile: options.styleProfile,
+          plannerModel: getPlannerModel(),
+          imageModel: 'gemini-3-pro-image-preview',
+          userPrompt: String(userPrompt || '').trim(),
+        }),
+      },
+      REGENERATE_TIMEOUT_MS
+    )
   );
 
   if (!payload.bundle) {
@@ -250,31 +346,36 @@ export const regenerateIllustrationCaption = async ({
   sourceHash,
   slotId,
   articleContent,
+  bundle,
   userPrompt,
   signal,
 }: {
   sourceHash: string;
   slotId: string;
   articleContent: string;
+  bundle: ArticleIllustrationBundle;
   userPrompt?: string;
   signal?: AbortSignal;
 }) => {
-  const payload = await fetchJson<IllustrationPayload>(
-    '/api/article-illustrations/regenerate-caption',
-    {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      signal,
-      body: JSON.stringify({
-        apiKey: getRuntimeApiKey(),
-        sourceHash,
-        slotId,
-        articleContent,
-        plannerModel: getPlannerModel(),
-        userPrompt: String(userPrompt || '').trim(),
-      }),
-    },
-    CAPTION_TIMEOUT_MS
+  const payload = normalizeIllustrationPayload(
+    await fetchJson<IllustrationPayload>(
+      '/api/article-illustrations/regenerate-caption',
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        signal,
+        body: JSON.stringify({
+          apiKey: getRuntimeApiKey(),
+          sourceHash,
+          slotId,
+          articleContent,
+          bundle,
+          plannerModel: getPlannerModel(),
+          userPrompt: String(userPrompt || '').trim(),
+        }),
+      },
+      CAPTION_TIMEOUT_MS
+    )
   );
 
   if (!payload.bundle) {
@@ -284,65 +385,65 @@ export const regenerateIllustrationCaption = async ({
   return payload.bundle;
 };
 
-export const deleteIllustrationSlotImage = async ({
-  sourceHash,
+export const deleteIllustrationSlotImage = ({
+  bundle,
   slotId,
-  signal,
 }: {
-  sourceHash: string;
+  bundle: ArticleIllustrationBundle;
   slotId: string;
-  signal?: AbortSignal;
 }) => {
-  const payload = await fetchJson<IllustrationPayload>(
-    '/api/article-illustrations/delete-slot-image',
-    {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      signal,
-      body: JSON.stringify({
-        sourceHash,
-        slotId,
-      }),
-    },
-    MUTATION_TIMEOUT_MS
-  );
+  const slot = bundle.slots.find((item) => item.id === slotId);
+  if (!slot) return bundle;
 
-  if (!payload.bundle) {
-    throw new Error('后端没有返回更新后的配图结果。');
-  }
+  const versions = toAssetArray(bundle.assetVersions?.[slot.id]);
+  if (versions.length === 0) return bundle;
 
-  return payload.bundle;
+  const activeIndex = Math.max(0, versions.findIndex((asset) => asset.id === slot.activeAssetId));
+  const nextVersions = versions.filter((_, index) => index !== activeIndex);
+
+  return normalizeIllustrationBundle(
+    rebuildBundle({
+      ...bundle,
+      assetVersions: {
+        ...bundle.assetVersions,
+        [slot.id]: nextVersions,
+      },
+    })
+  )!;
 };
 
-export const switchIllustrationSlotVersion = async ({
-  sourceHash,
+export const switchIllustrationSlotVersion = ({
+  bundle,
   slotId,
   direction,
-  signal,
 }: {
-  sourceHash: string;
+  bundle: ArticleIllustrationBundle;
   slotId: string;
   direction: 'previous' | 'next';
-  signal?: AbortSignal;
 }) => {
-  const payload = await fetchJson<IllustrationPayload>(
-    '/api/article-illustrations/switch-slot-version',
-    {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      signal,
-      body: JSON.stringify({
-        sourceHash,
-        slotId,
-        direction,
-      }),
-    },
-    MUTATION_TIMEOUT_MS
-  );
+  const slot = bundle.slots.find((item) => item.id === slotId);
+  if (!slot) return bundle;
 
-  if (!payload.bundle) {
-    throw new Error('后端没有返回更新后的配图结果。');
-  }
+  const versions = toAssetArray(bundle.assetVersions?.[slot.id]);
+  if (versions.length <= 1) return bundle;
 
-  return payload.bundle;
+  const currentIndex = Math.max(0, versions.findIndex((asset) => asset.id === slot.activeAssetId));
+  const nextIndex =
+    direction === 'previous'
+      ? Math.max(0, currentIndex - 1)
+      : Math.min(versions.length - 1, currentIndex + 1);
+
+  return normalizeIllustrationBundle(
+    rebuildBundle({
+      ...bundle,
+      slots: bundle.slots.map((item) =>
+        item.id === slot.id
+          ? {
+              ...item,
+              activeAssetId: versions[nextIndex]?.id,
+            }
+          : item
+      ),
+    })
+  )!;
 };

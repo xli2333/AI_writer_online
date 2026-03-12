@@ -8,7 +8,10 @@ import { ProxyAgent, setGlobalDispatcher } from 'undici';
 import { getStyleProfile, resolveStyleProfileId } from '../config/styleProfiles.js';
 
 const ROOT_DIR = process.cwd();
-const GENERATED_ROOT = path.join(ROOT_DIR, 'generated_assets', 'illustrations');
+const GENERATED_ROOT = path.join(
+  path.resolve(process.env.GENERATED_ASSET_ROOT || path.join(ROOT_DIR, 'generated_assets')),
+  'illustrations'
+);
 const DEFAULT_IMAGE_MODEL = 'gemini-3-pro-image-preview';
 const DEFAULT_PLANNER_MODEL = 'gemini-3.1-pro-preview';
 const IMAGE_WIDTH = 3840;
@@ -19,6 +22,8 @@ const TARGET_CHARS_PER_ILLUSTRATION = 1000;
 const PLANNER_TIMEOUT_MS = 10 * 60 * 1000;
 const IMAGE_TIMEOUT_MS = 12 * 60 * 1000;
 const CAPTION_TIMEOUT_MS = 5 * 60 * 1000;
+const ILLUSTRATION_BUNDLE_CACHE_ACTIVE_TTL_MS = 60 * 60 * 1000;
+const ILLUSTRATION_BUNDLE_CACHE_FINAL_TTL_MS = 10 * 60 * 1000;
 
 export const ILLUSTRATION_CANCELED_MESSAGE = '本轮配图已停止，可调整 Prompt 后重新开始。';
 
@@ -29,6 +34,46 @@ const createIllustrationTaskCanceledError = (message = ILLUSTRATION_CANCELED_MES
 };
 
 export const isIllustrationTaskCanceledError = (error) => error?.name === 'IllustrationTaskCanceledError';
+
+const illustrationBundleCache = new Map();
+const illustrationBundleCacheTimers = new Map();
+
+const scheduleIllustrationBundleCacheExpiry = (sourceHash, ttlMs) => {
+  if (!cleanText(sourceHash)) return;
+  const existingTimer = illustrationBundleCacheTimers.get(sourceHash);
+  if (existingTimer) {
+    clearTimeout(existingTimer);
+  }
+  if (!Number.isFinite(ttlMs) || ttlMs <= 0) {
+    illustrationBundleCacheTimers.delete(sourceHash);
+    return;
+  }
+  const timer = setTimeout(() => {
+    illustrationBundleCache.delete(sourceHash);
+    illustrationBundleCacheTimers.delete(sourceHash);
+  }, ttlMs);
+  timer.unref?.();
+  illustrationBundleCacheTimers.set(sourceHash, timer);
+};
+
+const cacheIllustrationBundle = (manifest) => {
+  const normalized = normalizeIllustrationManifest(manifest);
+  if (!cleanText(normalized?.sourceHash)) {
+    return normalized;
+  }
+  const ttlMs = ['ready', 'error', 'canceled'].includes(String(normalized.status || ''))
+    ? ILLUSTRATION_BUNDLE_CACHE_FINAL_TTL_MS
+    : ILLUSTRATION_BUNDLE_CACHE_ACTIVE_TTL_MS;
+  illustrationBundleCache.set(normalized.sourceHash, normalized);
+  scheduleIllustrationBundleCacheExpiry(normalized.sourceHash, ttlMs);
+  return normalized;
+};
+
+const getCachedIllustrationBundle = (sourceHash) => {
+  const normalizedHash = cleanText(sourceHash);
+  if (!normalizedHash) return null;
+  return illustrationBundleCache.get(normalizedHash) || null;
+};
 
 const proxyUrl = process.env.HTTPS_PROXY || process.env.HTTP_PROXY || '';
 if (proxyUrl) {
@@ -1227,49 +1272,29 @@ const readIllustrationPrompts = async (profileId) => {
     profileStyle,
   };
 };
-const writeManifest = async (manifestPath, manifest) => {
-  await ensureDir(path.dirname(manifestPath));
-  const serialized = `${JSON.stringify(manifest, null, 2)}\n`;
-  const tempPath = `${manifestPath}.tmp-${process.pid}`;
-  await fs.writeFile(tempPath, serialized, 'utf8');
-  try {
-    await fs.rename(tempPath, manifestPath);
-  } catch {
-    await fs.writeFile(manifestPath, serialized, 'utf8');
-    await fs.unlink(tempPath).catch(() => {});
+
+const resolveSourceHashFromManifestPath = (manifestPath) => {
+  const normalized = cleanText(manifestPath).replace(/\\/g, '/');
+  if (!normalized) return '';
+  const parts = normalized.split('/').filter(Boolean);
+  const manifestIndex = parts.lastIndexOf('manifest.json');
+  if (manifestIndex > 0) {
+    return cleanText(parts[manifestIndex - 1]);
   }
+  return cleanText(parts[parts.length - 2]);
+};
+
+const writeManifest = async (manifestPath, manifest) => {
+  return cacheIllustrationBundle(manifest);
 };
 
 const loadExistingManifest = async (manifestPath) => {
-  if (!(await fileExists(manifestPath))) {
-    return null;
-  }
-  let lastError = null;
-  for (let attempt = 0; attempt < 3; attempt += 1) {
-    try {
-      const raw = await readUtf8(manifestPath);
-      return JSON.parse(raw);
-    } catch (error) {
-      lastError = error;
-      if (error instanceof SyntaxError && attempt < 2) {
-        await sleep(40 * (attempt + 1));
-        continue;
-      }
-      if (error instanceof SyntaxError) {
-        console.warn(`[illustrations] ignoring unreadable manifest "${manifestPath}": ${error.message}`);
-        return null;
-      }
-      throw error;
-    }
-  }
-  if (lastError instanceof SyntaxError) {
-    console.warn(`[illustrations] ignoring unreadable manifest "${manifestPath}": ${lastError.message}`);
-    return null;
-  }
-  throw lastError;
+  return getCachedIllustrationBundle(resolveSourceHashFromManifestPath(manifestPath));
 };
 
-const saveGeneratedImage = async ({ buffer, outputPath }) => {
+const buildInlineImageDataUrl = ({ buffer, mimeType }) => `data:${mimeType};base64,${buffer.toString('base64')}`;
+
+const saveGeneratedImage = async ({ buffer }) => {
   const resized = await sharp(buffer)
     .resize(IMAGE_WIDTH, IMAGE_HEIGHT, {
       fit: 'cover',
@@ -1279,11 +1304,15 @@ const saveGeneratedImage = async ({ buffer, outputPath }) => {
     .png({ compressionLevel: 0, palette: false })
     .toBuffer();
 
-  await fs.writeFile(outputPath, resized);
   return {
+    buffer: resized,
     mimeType: 'image/png',
     width: IMAGE_WIDTH,
     height: IMAGE_HEIGHT,
+    dataUrl: buildInlineImageDataUrl({
+      buffer: resized,
+      mimeType: 'image/png',
+    }),
   };
 };
 
@@ -1537,7 +1566,34 @@ const resolveIllustrationAssetPath = ({ sourceHash, assetUrl }) => {
   return path.join(GENERATED_ROOT, sourceHash, fileName);
 };
 
-const loadIllustrationCaptionImageInput = async ({ assetPath, mimeType }) => {
+const decodeInlineImageDataUrl = (value) => {
+  const matched = String(value || '').match(/^data:([^;]+);base64,(.+)$/);
+  if (!matched) {
+    return null;
+  }
+  return {
+    mimeType: matched[1],
+    buffer: Buffer.from(matched[2], 'base64'),
+  };
+};
+
+const loadIllustrationCaptionImageInput = async ({ assetUrl, mimeType, sourceHash }) => {
+  const inlineImage = decodeInlineImageDataUrl(assetUrl);
+  if (inlineImage) {
+    if (String(inlineImage.mimeType || '').toLowerCase().includes('svg')) {
+      return {
+        imageBuffer: await sharp(inlineImage.buffer).png({ compressionLevel: 0, palette: false }).toBuffer(),
+        imageMimeType: 'image/png',
+      };
+    }
+
+    return {
+      imageBuffer: inlineImage.buffer,
+      imageMimeType: cleanText(inlineImage.mimeType) || cleanText(mimeType) || 'image/png',
+    };
+  }
+
+  const assetPath = resolveIllustrationAssetPath({ sourceHash, assetUrl });
   const rawBuffer = await fs.readFile(assetPath);
   if (String(mimeType || '').toLowerCase().includes('svg') || assetPath.toLowerCase().endsWith('.svg')) {
     return {
@@ -1786,8 +1842,6 @@ const renderSlotVersion = async ({
   apiKey,
   plannerModel,
   imageModel,
-  sourceHash,
-  targetDir,
   articleTitle,
   articleContent,
   slot,
@@ -1871,13 +1925,10 @@ const renderSlotVersion = async ({
   });
   await abortIfCanceled?.();
 
-  const fileName = buildVersionedFileName({ slotId: slot.id, versionIndex, extension: 'png' });
-  const outputPath = path.join(targetDir, fileName);
   const saved = await saveGeneratedImage({
     buffer: generated.buffer,
-    outputPath,
   });
-  const savedBuffer = await fs.readFile(outputPath);
+  const savedBuffer = saved.buffer;
   await abortIfCanceled?.();
 
   const intermediateAsset = {
@@ -1886,7 +1937,7 @@ const renderSlotVersion = async ({
     role: rasterSlot.role,
     renderMode: 'nanobanana_pro',
     title: rasterSlot.title,
-    url: relativeGeneratedUrl({ sourceHash, fileName }),
+    url: saved.dataUrl,
     mimeType: saved.mimeType,
     width: saved.width,
     height: saved.height,
@@ -1935,7 +1986,7 @@ const renderSlotVersion = async ({
       role: rasterSlot.role,
       renderMode: 'nanobanana_pro',
       title: rasterSlot.title,
-      url: relativeGeneratedUrl({ sourceHash, fileName }),
+      url: saved.dataUrl,
       mimeType: saved.mimeType,
       width: saved.width,
       height: saved.height,
@@ -2094,7 +2145,6 @@ export const generateArticleIllustrations = async ({
     profileId: normalizedProfileId,
   });
 
-  await ensureDir(targetDir);
   let manifest = normalizeIllustrationManifest({
     promptVersion: ILLUSTRATION_PROMPT_VERSION,
     sourceHash,
@@ -2298,7 +2348,6 @@ export const generateArticleIllustrationsProgressive = async ({
   };
 
   await abortIfCanceled();
-  await ensureDir(targetDir);
   manifest = await publish({
     promptVersion: ILLUSTRATION_PROMPT_VERSION,
     sourceHash,
@@ -2597,7 +2646,7 @@ export const generateArticleIllustrationsProgressive = async ({
 };
 const loadManifestBySourceHash = async (sourceHash) => {
   const manifestPath = path.join(GENERATED_ROOT, sourceHash, 'manifest.json');
-  const manifest = await loadNormalizedManifest(manifestPath, { sourceHash });
+  const manifest = getCachedIllustrationBundle(sourceHash);
   if (!manifest) {
     throw new Error('未找到这篇文章的配图记录。');
   }
@@ -2605,21 +2654,35 @@ const loadManifestBySourceHash = async (sourceHash) => {
 };
 
 export const getIllustrationManifestBySourceHash = async (sourceHash) => {
-  const manifestPath = path.join(GENERATED_ROOT, sourceHash, 'manifest.json');
-  return loadNormalizedManifest(manifestPath, { sourceHash });
+  return getCachedIllustrationBundle(sourceHash);
 };
 export const markIllustrationManifestCanceled = async ({
   sourceHash,
   currentStep = ILLUSTRATION_CANCELED_MESSAGE,
 }) => {
   const manifestPath = path.join(GENERATED_ROOT, sourceHash, 'manifest.json');
-  const existing = await loadNormalizedManifest(manifestPath, { sourceHash });
+  const existing = getCachedIllustrationBundle(sourceHash);
   if (!existing) {
     return null;
   }
   const nextManifest = buildCanceledIllustrationManifest(existing, currentStep);
   await writeManifest(manifestPath, nextManifest);
   return nextManifest;
+};
+
+const resolveIllustrationManifestInput = async ({ sourceHash, bundle }) => {
+  if (bundle && typeof bundle === 'object') {
+    const normalized = normalizeIllustrationManifest({
+      ...bundle,
+      sourceHash: cleanText(bundle.sourceHash || sourceHash),
+    });
+    return {
+      manifestPath: path.join(GENERATED_ROOT, normalized.sourceHash, 'manifest.json'),
+      manifest: normalized,
+    };
+  }
+
+  return loadManifestBySourceHash(sourceHash);
 };
 
 
@@ -2631,8 +2694,9 @@ export const regenerateIllustrationSlot = async ({
   imageModel = DEFAULT_IMAGE_MODEL,
   articleContent = '',
   userPrompt = '',
+  bundle = null,
 }) => {
-  const { manifestPath, manifest } = await loadManifestBySourceHash(sourceHash);
+  const { manifestPath, manifest } = await resolveIllustrationManifestInput({ sourceHash, bundle });
   const slot = manifest.slots.find((item) => item.id === slotId);
   if (!slot) {
     throw new Error('未找到对应的图位。');
@@ -2642,8 +2706,6 @@ export const regenerateIllustrationSlot = async ({
     apiKey,
     plannerModel,
     imageModel,
-    sourceHash,
-    targetDir: path.dirname(manifestPath),
     articleTitle: manifest.articleTitle,
     articleContent,
     slot: {
@@ -2685,8 +2747,9 @@ export const regenerateIllustrationCaption = async ({
   plannerModel = DEFAULT_PLANNER_MODEL,
   articleContent = '',
   userPrompt = '',
+  bundle = null,
 }) => {
-  const { manifestPath, manifest } = await loadManifestBySourceHash(sourceHash);
+  const { manifestPath, manifest } = await resolveIllustrationManifestInput({ sourceHash, bundle });
   const slot = manifest.slots.find((item) => item.id === slotId);
   if (!slot) {
     throw new Error('未找到对应的图位。');
@@ -2698,13 +2761,10 @@ export const regenerateIllustrationCaption = async ({
   }
 
   const activeAsset = versions.find((asset) => asset.id === slot.activeAssetId) || versions[versions.length - 1];
-  const assetPath = resolveIllustrationAssetPath({
-    sourceHash,
-    assetUrl: activeAsset.url,
-  });
   const { imageBuffer, imageMimeType } = await loadIllustrationCaptionImageInput({
-    assetPath,
+    assetUrl: activeAsset.url,
     mimeType: activeAsset.mimeType,
+    sourceHash: manifest.sourceHash || sourceHash,
   });
   const explanation = await generateIllustrationExplanation({
     apiKey,

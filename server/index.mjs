@@ -29,9 +29,9 @@ import {
 const ROOT_DIR = process.cwd();
 const COMMON_PROMPT_ROOT = path.join(ROOT_DIR, 'rag_assets', 'global');
 const DIST_DIR = path.join(ROOT_DIR, 'dist');
-const GENERATED_ASSET_ROOT = path.join(ROOT_DIR, 'generated_assets');
-const HOST = process.env.BACKEND_HOST || '127.0.0.1';
-const PORT = Number(process.env.BACKEND_PORT || 8787);
+const GENERATED_ASSET_ROOT = path.resolve(process.env.GENERATED_ASSET_ROOT || path.join(ROOT_DIR, 'generated_assets'));
+const HOST = process.env.BACKEND_HOST || '0.0.0.0';
+const PORT = Number(process.env.PORT || process.env.BACKEND_PORT || 8787);
 
 const COMMON_PROMPT_ASSET_MAP = {
   coreWritingSkills: path.join(COMMON_PROMPT_ROOT, 'core_writing_skills.md'),
@@ -426,6 +426,9 @@ const sendStaticFile = async (response, filePath) => {
   response.writeHead(200, {
     'Content-Type': contentType,
     'Cache-Control': extension === '.html' ? 'no-store' : 'public, max-age=31536000, immutable',
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Headers': 'Content-Type',
+    'Access-Control-Allow-Methods': 'GET,POST,OPTIONS',
   });
   response.end(payload);
 };
@@ -997,6 +1000,7 @@ const server = http.createServer(async (request, response) => {
         sourceHash,
         slotId,
         articleContent,
+        bundle: body.bundle && typeof body.bundle === 'object' ? body.bundle : null,
         plannerModel: String(body.plannerModel || '').trim() || undefined,
         imageModel: String(body.imageModel || '').trim() || undefined,
         userPrompt: String(body.userPrompt || '').trim(),
@@ -1027,6 +1031,7 @@ const server = http.createServer(async (request, response) => {
         sourceHash,
         slotId,
         articleContent,
+        bundle: body.bundle && typeof body.bundle === 'object' ? body.bundle : null,
         plannerModel: String(body.plannerModel || '').trim() || undefined,
         userPrompt: String(body.userPrompt || '').trim(),
       });

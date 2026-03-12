@@ -7,6 +7,7 @@ import type {
   WechatPublisherConfigStatus,
 } from '../types';
 import { getStoredGeminiApiKey } from './geminiService';
+import { resolveBackendUrl } from './runtimeConfig';
 
 interface WechatPreviewPayload {
   previewHtml: string;
@@ -50,7 +51,7 @@ export class WechatPublisherApiError extends Error {
 }
 
 const fetchJson = async <T>(input: string, init?: RequestInit): Promise<T> => {
-  const response = await fetch(input, init);
+  const response = await fetch(resolveBackendUrl(input), init);
   const payload = await response.json().catch(() => ({}));
   if (!response.ok) {
     const typedPayload = payload as { error?: string; code?: string; details?: string[] };

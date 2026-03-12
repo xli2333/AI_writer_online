@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: ai-writer-backend
+    runtime: node
+    plan: starter
+    rootDir: .
+    buildCommand: npm ci
+    startCommand: npm run server:start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: BACKEND_HOST
+        value: 0.0.0.0

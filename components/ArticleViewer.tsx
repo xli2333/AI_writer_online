@@ -30,6 +30,7 @@ import {
   switchIllustrationSlotVersion,
 } from '../services/articleIllustrationService';
 import { ArchiveEntry, buildZipArchive, downloadBlob, encodeTextArchiveEntry } from '../services/archiveService';
+import { resolveGeneratedAssetUrl } from '../services/runtimeConfig';
 import { MarkdownRenderer } from './MarkdownRenderer';
 import { SelectionMenu } from './SelectionMenu';
 import { WechatPublisherPanel } from './WechatPublisherPanel';
@@ -152,9 +153,7 @@ const pushTextArchiveEntry = (entries: ArchiveEntry[], path: string, content: st
 const resolveArchiveAssetUrl = (value: string) => {
   const raw = String(value || '').trim();
   if (!raw) return '';
-  if (/^(data:|blob:|https?:)/i.test(raw)) return raw;
-  if (raw.startsWith('//')) return `${window.location.protocol}${raw}`;
-  return new URL(raw, window.location.origin).toString();
+  return resolveGeneratedAssetUrl(raw);
 };
 
 const inferArchiveAssetExtension = (mimeType?: string, sourceUrl?: string) => {
@@ -731,7 +730,11 @@ const IllustrationHero: React.FC<{ bundle?: ArticleIllustrationBundle }> = ({ bu
 
   return (
     <figure className="mb-10 overflow-hidden rounded-[28px] border border-slate-200 bg-slate-50 shadow-sm">
-      <img src={hero.asset.url} alt={hero.slot?.title || '文章首图'} className="aspect-[16/9] w-full object-cover" />
+      <img
+        src={resolveGeneratedAssetUrl(hero.asset.url)}
+        alt={hero.slot?.title || '文章首图'}
+        className="aspect-[16/9] w-full object-cover"
+      />
       <figcaption className="grid gap-2 border-t border-slate-200 bg-white px-5 py-4 text-sm text-slate-600 md:grid-cols-[1fr_auto] md:items-center">
         <div>
           <div className="font-semibold text-slate-900">{hero.slot?.title || '首图总图'}</div>
@@ -817,7 +820,11 @@ const IllustrationGalleryPanel: React.FC<{
               const slot = slotMap.get(asset.slotId) as ArticleIllustrationSlot | undefined;
               return (
                 <article key={asset.slotId} className="overflow-hidden rounded-[24px] border border-slate-200 bg-white shadow-sm">
-                  <img src={asset.url} alt={slot?.title || asset.title} className="aspect-[16/9] w-full object-cover" />
+                  <img
+                    src={resolveGeneratedAssetUrl(asset.url)}
+                    alt={slot?.title || asset.title}
+                    className="aspect-[16/9] w-full object-cover"
+                  />
                   <div className="space-y-3 px-5 py-4">
                     <div className="flex items-center justify-between gap-4">
                       <div>
@@ -931,7 +938,11 @@ const ModernIllustrationCard: React.FC<{
     ) : null}
 
     {asset ? (
-      <img src={asset.url} alt={slot.title || asset.title} className="aspect-[16/9] w-full object-cover" />
+      <img
+        src={resolveGeneratedAssetUrl(asset.url)}
+        alt={slot.title || asset.title}
+        className="aspect-[16/9] w-full object-cover"
+      />
     ) : (
       <div className="flex aspect-[16/9] items-center justify-center bg-slate-100 text-sm text-slate-500">当前图位暂无图片</div>
     )}
@@ -1631,6 +1642,7 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
         sourceHash: activeIllustrationBundle.sourceHash,
         slotId: slot.id,
         articleContent: data.articleContent || '',
+        bundle: activeIllustrationBundle,
         options: data.options,
         userPrompt: regeneratePromptDraft,
         signal: controller.signal,
@@ -1664,6 +1676,7 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
         sourceHash: activeIllustrationBundle.sourceHash,
         slotId: slot.id,
         articleContent: data.articleContent || '',
+        bundle: activeIllustrationBundle,
         userPrompt: captionPromptDraft,
         signal: controller.signal,
       });
@@ -1685,18 +1698,14 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
   };
 
   const handleDeleteSlot = async (slot: ArticleIllustrationSlot) => {
-    if (!activeIllustrationBundle?.sourceHash) return;
-    illustrationRequestAbortRef.current?.abort();
-    const controller = new AbortController();
-    illustrationRequestAbortRef.current = controller;
+    if (!activeIllustrationBundle) return;
     setIllustrationMutationSlotId(slot.id);
     setIllustrationMutationKind('delete');
     setIllustrationError(null);
     try {
-      const bundle = await deleteIllustrationSlotImage({
-        sourceHash: activeIllustrationBundle.sourceHash,
+      const bundle = deleteIllustrationSlotImage({
+        bundle: activeIllustrationBundle,
         slotId: slot.id,
-        signal: controller.signal,
       });
       onUpdateIllustrationBundle(bundle);
     } catch (error: any) {
@@ -1705,28 +1714,21 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
         setIllustrationError(error?.message || '删除配图失败，请稍后重试。');
       }
     } finally {
-      if (illustrationRequestAbortRef.current === controller) {
-        illustrationRequestAbortRef.current = null;
-      }
       setIllustrationMutationSlotId(null);
       setIllustrationMutationKind(null);
     }
   };
 
   const handleSwitchSlotVersion = async (slot: ArticleIllustrationSlot, direction: 'previous' | 'next') => {
-    if (!activeIllustrationBundle?.sourceHash) return;
-    illustrationRequestAbortRef.current?.abort();
-    const controller = new AbortController();
-    illustrationRequestAbortRef.current = controller;
+    if (!activeIllustrationBundle) return;
     setIllustrationMutationSlotId(slot.id);
     setIllustrationMutationKind('switch');
     setIllustrationError(null);
     try {
-      const bundle = await switchIllustrationSlotVersion({
-        sourceHash: activeIllustrationBundle.sourceHash,
+      const bundle = switchIllustrationSlotVersion({
+        bundle: activeIllustrationBundle,
         slotId: slot.id,
         direction,
-        signal: controller.signal,
       });
       onUpdateIllustrationBundle(bundle);
     } catch (error: any) {
@@ -1735,9 +1737,6 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
         setIllustrationError(error?.message || '切换配图版本失败，请稍后重试。');
       }
     } finally {
-      if (illustrationRequestAbortRef.current === controller) {
-        illustrationRequestAbortRef.current = null;
-      }
       setIllustrationMutationSlotId(null);
       setIllustrationMutationKind(null);
     }

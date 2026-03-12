@@ -6,7 +6,7 @@ import sharp from 'sharp';
 import { ProxyAgent, setGlobalDispatcher } from 'undici';
 
 const ROOT_DIR = process.cwd();
-const GENERATED_ASSET_ROOT = path.join(ROOT_DIR, 'generated_assets');
+const GENERATED_ASSET_ROOT = path.resolve(process.env.GENERATED_ASSET_ROOT || path.join(ROOT_DIR, 'generated_assets'));
 const WECHAT_API_ORIGIN = 'https://api.weixin.qq.com';
 const DEFAULT_TEMPLATE_ID = 'latepost_report';
 const DEFAULT_AUTHOR = process.env.WECHAT_OFFICIAL_DEFAULT_AUTHOR || 'AI Writer';

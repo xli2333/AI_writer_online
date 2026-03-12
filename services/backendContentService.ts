@@ -1,4 +1,5 @@
 import type { PersonaStatusDescriptor, StyleProfileDescriptor, WritingTaskOptions } from '../types';
+import { resolveBackendUrl } from './runtimeConfig';
 
 export interface RuntimePromptAssets {
   masterPersona: string;
@@ -80,7 +81,7 @@ const PROFILE_PROMPT_ASSET_NAMES: Record<string, string[]> = {
 };
 
 const fetchJson = async <T>(input: string, init?: RequestInit): Promise<T> => {
-  const response = await fetch(input, init);
+  const response = await fetch(resolveBackendUrl(input), init);
   if (!response.ok) {
     throw new Error(`Backend request failed: ${response.status} ${response.statusText}`);
   }
