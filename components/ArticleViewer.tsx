@@ -1376,6 +1376,7 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
   const abortControllerRef = useRef(false);
   const illustrationRequestAbortRef = useRef<AbortController | null>(null);
   const illustrationStatusPollRef = useRef<number | null>(null);
+  const illustrationStatusFailureCountRef = useRef(0);
   const illustrationFlowTokenRef = useRef(0);
   const articleExportRef = useRef<HTMLDivElement>(null);
   const plainArticleExportRef = useRef<HTMLDivElement>(null);
@@ -1399,6 +1400,10 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
   };
   const isIllustrationFlowCurrent = (token: number) => illustrationFlowTokenRef.current === token;
   const isIllustrationBusy = illustrationStatus === 'generating' || illustrationStatus === 'canceling';
+  const shouldRetryIllustrationStatusError = (error: any) => {
+    const message = String(error?.message || '').toLowerCase();
+    return message.includes('failed to fetch') || message.includes('networkerror') || message.includes('load failed');
+  };
 
   const stopIllustrationPolling = () => {
     if (illustrationStatusPollRef.current !== null) {
@@ -1418,6 +1423,7 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
           sourceHash,
           signal: controller.signal,
         });
+        illustrationStatusFailureCountRef.current = 0;
         if (!isIllustrationFlowCurrent(flowToken)) return;
         if (payload.bundle) {
           onUpdateIllustrationBundle(payload.bundle);
@@ -1450,6 +1456,17 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
       } catch (error: any) {
         if (!isIllustrationFlowCurrent(flowToken)) return;
         if (error?.message !== '已取消本次生图请求。') {
+          if (shouldRetryIllustrationStatusError(error)) {
+            illustrationStatusFailureCountRef.current += 1;
+            const retryCount = illustrationStatusFailureCountRef.current;
+            if (retryCount <= 6) {
+              const retryDelayMs = Math.min(6000, 1200 + retryCount * 800);
+              illustrationStatusPollRef.current = window.setTimeout(() => {
+                void pollIllustrationStatus(sourceHash, true, flowToken);
+              }, retryDelayMs);
+              return;
+            }
+          }
           console.error('Illustration status polling failed', error);
           setIllustrationStatus('error');
           setIllustrationError(error?.message || '配图状态获取失败，请稍后重试。');
@@ -1479,6 +1496,7 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
     illustrationRequestAbortRef.current?.abort();
     const controller = new AbortController();
     illustrationRequestAbortRef.current = controller;
+    illustrationStatusFailureCountRef.current = 0;
     setIllustrationStatus('generating');
     setIllustrationError(null);
 
@@ -1527,6 +1545,7 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
     illustrationRequestAbortRef.current?.abort();
     const controller = new AbortController();
     illustrationRequestAbortRef.current = controller;
+    illustrationStatusFailureCountRef.current = 0;
     setIllustrationStatus('canceling');
     setIllustrationError(null);
 
@@ -1801,6 +1820,7 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
     if (!hasFinalArticle || !data.articleContent) {
       beginIllustrationFlow();
       stopIllustrationPolling();
+      illustrationStatusFailureCountRef.current = 0;
       setIllustrationStatus('idle');
       setIllustrationError(null);
       setIllustrationJob(null);
