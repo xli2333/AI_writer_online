@@ -1,0 +1,119 @@
+标题: 全球首个「百万引用」学者诞生！Bengio封神，辛顿、何恺明紧跟
+日期: 2025-10-25
+链接: http://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652638735&idx=1&sn=954a0659d887bb646f0a7797d1048da1&chksm=f12f7afec658f3e8d3145bf521673f0cbafad2c30213ca432b3b9834856e4862ee0caf697d0c#rd
+来源模式: wechat
+----------------------------------------
+
+新智元报道
+编辑：编辑部
+【新智元导读】
+Yoshua Bengio成为全球首位论文引用量突破百万的学者，Hinton以97万紧随其后，标志着AI学术影响力进入新高峰。
+刚刚，Yoshua Bengio成为谷歌学术上首个论文引用量超过100万的人！
+查询时间2025年10月25日 13:04
+与此同时，人工智能教父辛顿（Geoffrey Hinton）的被引次数也来到97万次！
+有望成为全球第二个论文引用量超过100万的人。
+查询时间2025年10月25日 13:04
+作为深度学习三巨头之一，图灵奖得主Bengio，不仅在计算机领域被引最高，而且还是世界第一。
+早在2018年，他曾以「单日最高引用量」摘得计算机研究者桂冠，并与Geoffrey Hinton、Yann LeCun同年拿下图灵奖。
+排名平台AD Scientific Index
+作为深度学习、自然语言领域的先驱，Yoshua Bengio的引用增长曲线，在2018年获得图灵奖以后开始了爆发性增长。
+而Hinton老爷子的引用增长曲线，则动人的展示了他是如何度过冰冷的「人工智能寒冬」。
+同为图灵奖三巨头的Yann LeCun也有43万+的引用。
+但比何恺明、Ilya Sutskever等人还要低上不少。
+AI论文引用为何爆发？
+如果仔细盘点，
+全球高被引TOP 10中，计算机大牛占据4席，而这些大佬也可以说都是AI领域的！
+四位大牛分别是：Yoshua Bengio、Geoffrey Hinton、何恺明、Ilya Sutskever。
+他们中：
+Yoshua Bengio和Geoffrey Hinton是深度学习领域的先驱；
+Geoffrey Hinton和Ilya Sutskever是师徒关系，Hinton无需多言；Ilya则是OpenAI和ChatGPT缔造者；
+何恺明是深度残差网络（ResNets）之父。
+深度学习领域的论文引用呈现爆发式增长，正好暗合了我们所处的AI时代。
+2012年AlexNet在ImageNet上大幅领先，并首次把大规模GPU训练写进论文方法学，被视为深度学习的「引爆点」。
+从1986年的反向传播，到
+Nature在 2015年发表了LeCun、Bengio、Hinton的综述《
+深度学习
+》
+，再到Bengio团队关于「表示学习」的综述，这些大牛们的论文成了后来论文写作中的标准理论与背景引用来源。
+而Transformer与大模型
+AI
+带来二次爆发！
+2017年，Transformer提出、2018年BERT证明预训练/微调范式通吃自然语言处理，随后多模态与生成式AI全面开花。
+新论文几乎都会回溯到更早的神经网络与表征学习文献链条上。
+当
+AI
+成为新的全世界增长点，AI论文总体数量激增，放大了「被引母集」。
+AI Index指出，2010–2022年全球AI论文总量近乎
+三倍
+增长（约8.8万→24 万+）。
+到2023年，AI占计算机科学论文的
+比例
+也从2013年的21.6%升至41.8%。
+可以说，几乎计算机科学领域一半的论文都和AI相关，而AI则和深度学习不分家。
+因此，研究母集越大，奠基者的累积引用增长就越快。
+从AI领域的顶会论文投稿也可佐证这个潮流。
+ICLR 2024：共7262
+投稿，
+2260
+接收，相较2023年投稿+2324。
+NeurIPS 2024
+：
+17491
+总投稿（主会15671 + 数据集/基准1820），
+4497
+接收。
+CVPR
+2024
+：
+11532
+投稿，
+2719
+接收，
+23.6%
+录用率。
+AI成为这个时代的主旋律。
+而AI领域的核心论文也成为这个时代学术界的主旋律。
+AI领域高被引作者
+Yoshua Bengio
+Yoshua Bengio
+Yoshua Bengio是全球公认的人工智能领域顶尖专家，他以在深度学习方面的开创性研究而享有盛誉。
+Bengio与Geoffrey Hinton、Yann LeCun一起荣获2018年图灵奖，并被视作推动深度学习发展最为重要的「三巨头」。
+Bengio是蒙特利尔大学正教授，同时也是Mila（魁北克人工智能研究院）的创始人和科学顾问。他还是CIFAR高级研究员，担任IVADO特别顾问、加拿大CIFAR AI 讲座教授等职。
+2019年，Bengio获得Killam奖。
+2022 年，他成为h-index全球引用次数最高的计算机科学家之一。
+早年生活与教育背景
+Yoshua Bengio1964年出生于法国巴黎，他在加拿大蒙特利尔度过了少年时期。
+Bengio来自于一个犹太家庭，他的父母从摩洛哥移民至法国，后移居加拿大。
+他在McGill大学获得了工程学士、计算机科学硕士、计算机科学博士学位。
+1991年，Bengio从McGill大学博士毕业后，在MIT和AT&T贝尔实验室担任博士后研究员。
+Bengio是英国皇家学会院士、加拿大皇家学会院士、法国荣誉军团骑士，以及加拿大勋章军官。
+2023年，他被任命为联合国科学咨询委员会成员，为科学与技术突破提供独立建议。
+出于对人工智能社会影响的深切关注，Bengio参与起草了《蒙特利尔负责任人工智能发展宣言》，并持续倡导减轻未来人工智能系统可能带来的潜在灾难性风险。
+何恺明
+何恺明的论文总被引次数超过75万次。
+目前，他是麻省理工学院（MIT）电子工程与计算机科学系（EECS）的终身副教授，并兼任谷歌DeepMind的杰出科学家。研究方向为计算机视觉与深度学习。
+他于2016至2024年在Facebook AI研究院（FAIR）担任研究科学家，2011至2016年在微软亚洲研究院（MSRA）担任研究员，2011年获香港中文大学博士学位，2007年获清华大学学士学位。
+根据Nature的一篇文章，他代表性工作深度残差网络（ResNets）是二十一世纪被引用次数最多的论文。
+残差连接结构已被广泛应用于当今各种先进的深度学习模型中，包括Transformer（如ChatGPT）、AlphaGo Zero、AlphaFold以及几乎所有的生成式AI模型。
+此外，他在视觉感知（如Faster R-CNN、Mask R-CNN）和自监督学习（如MoCo、MAE）领域的研究也广为人知。
+他曾荣获多个重要奖项，包括2025年ICCV Helmholtz Prize（时间检验奖）、2018年PAMI青年研究员奖、ICCV 2017、CVPR 2016及CVPR 2009的最佳论文奖、ICCV 2017最佳学生论文奖、CVPR 2021和ECCV 2018的最佳论文荣誉提名奖，以及2021年ICCV Everingham Prize。
+Ilya Sutskever
+Ilya Sutskever的论文总被引次数超过70万次。
+目前，他是Safe Superintelligence Inc.的联合创始人兼首席科学家。
+他于2005年获得多伦多大学数学学士学位，2007年获得多伦多大学计算机科学硕士学位，并于2013年获得多伦多大学计算机科学博士学位。
+2012年，他与自己的博导Geoffrey Hinton，以及Alex Krizhevsky共同发明了卷积神经网络AlexNet。
+随后，他在斯坦福大学作为Andrew Ng的博士后工作了大约两个月。接着便回到多伦多大学，加入了Hinton的新研究公司DNNResearch。2013年，谷歌收购了DNNResearch，并聘请他为谷歌大脑的研究科学家。
+在谷歌大脑，他与Oriol Vinyals和Quoc Viet Le合作创建了序列到序列学习算法，并参与了TensorFlow的开发工作。他也是AlphaGo论文的众多共同作者之一。
+2015年底，他离开谷歌，成为OpenAI的联合创始人兼首席科学家。
+2024年5月，他宣布离开OpenAI；同年6月，他与Daniel Gross和Daniel Levy共同成立了新公司Safe Superintelligence Inc.
+其他
+其他高被引还有：
+GAN之父Ian Goodfellow（38万+）
+谷歌人工智能负责人Jeff Dean（37万+）
+创造ImageNet的李飞飞（32万+）
+LSTM之父Juergen Schmidhuber（29万+）
+Coursera创始人吴恩达（29万+）
+Gemini的技术负责人Noam Shazeer（28万+）
+参考资料：HXB
+https://scholar.google.com/citations?user=kukA0LcAAAAJ&hl=en
+https://www.adscientificindex.com/citation-ranking/

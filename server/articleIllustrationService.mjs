@@ -18,7 +18,7 @@ const ILLUSTRATION_PROMPT_VERSION = 'illustration-v3';
 const TARGET_CHARS_PER_ILLUSTRATION = 1000;
 const PLANNER_TIMEOUT_MS = 10 * 60 * 1000;
 const IMAGE_TIMEOUT_MS = 12 * 60 * 1000;
-const CAPTION_TIMEOUT_MS = 3 * 60 * 1000;
+const CAPTION_TIMEOUT_MS = 5 * 60 * 1000;
 
 export const ILLUSTRATION_CANCELED_MESSAGE = '本轮配图已停止，可调整 Prompt 后重新开始。';
 
@@ -193,6 +193,53 @@ const clip = (text, limit = 140) => {
   }
   return `${normalized.slice(0, limit)}…`;
 };
+
+const normalizeCaptionSourceText = (text) =>
+  cleanText(
+    stripMarkdownInline(text)
+      .replace(/（[A-Za-z][^）]{0,60}）/g, '')
+      .replace(/\([A-Za-z][^)]{0,60}\)/g, '')
+      .replace(/\s+/g, ' ')
+  );
+
+const splitCaptionSentences = (text) =>
+  normalizeCaptionSourceText(text)
+    .replace(/……/g, '。')
+    .split(/[。！？!?；;]+/)
+    .map((item) =>
+      cleanText(item)
+        .replace(/^[，、:：\-\s]+/g, '')
+        .replace(/[，、:：\-\s]+$/g, '')
+    )
+    .filter(Boolean);
+
+const stripCaptionPlanningLanguage = (text) =>
+  normalizeCaptionSourceText(text)
+    .replace(/^这张图要承接的判断[:：]?\s*/, '')
+    .replace(/^图位要承接的核心判断[:：]?\s*/, '')
+    .replace(/^图位要承接的核心意思[:：]?\s*/, '')
+    .replace(/^作为[^，。]*[，,]\s*(需|需要|要)?/, '')
+    .replace(/^收尾处/, '');
+
+const toCaptionSentence = (text, limit = 36) => {
+  const normalized = clip(cleanText(text).replace(/[。！？!?；;]+/g, ''), limit);
+  if (!normalized) {
+    return '';
+  }
+  return /[。！？!?]$/.test(normalized) ? normalized : `${normalized}。`;
+};
+
+const INTERNAL_CAPTION_PATTERNS = [
+  /文章要说的那层关系/,
+  /这版又额外收紧了/,
+  /这一层要求/,
+  /关键差距落在/,
+  /当前已有图释/,
+  /本轮用户补充要求/,
+];
+
+const looksLikeInternalCaption = (text) =>
+  INTERNAL_CAPTION_PATTERNS.some((pattern) => pattern.test(cleanText(text)));
 
 const escapeXml = (value) =>
   String(value || '')
@@ -1182,15 +1229,44 @@ const readIllustrationPrompts = async (profileId) => {
 };
 const writeManifest = async (manifestPath, manifest) => {
   await ensureDir(path.dirname(manifestPath));
-  await fs.writeFile(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`, 'utf8');
+  const serialized = `${JSON.stringify(manifest, null, 2)}\n`;
+  const tempPath = `${manifestPath}.tmp-${process.pid}`;
+  await fs.writeFile(tempPath, serialized, 'utf8');
+  try {
+    await fs.rename(tempPath, manifestPath);
+  } catch {
+    await fs.writeFile(manifestPath, serialized, 'utf8');
+    await fs.unlink(tempPath).catch(() => {});
+  }
 };
 
 const loadExistingManifest = async (manifestPath) => {
   if (!(await fileExists(manifestPath))) {
     return null;
   }
-  const raw = await readUtf8(manifestPath);
-  return JSON.parse(raw);
+  let lastError = null;
+  for (let attempt = 0; attempt < 3; attempt += 1) {
+    try {
+      const raw = await readUtf8(manifestPath);
+      return JSON.parse(raw);
+    } catch (error) {
+      lastError = error;
+      if (error instanceof SyntaxError && attempt < 2) {
+        await sleep(40 * (attempt + 1));
+        continue;
+      }
+      if (error instanceof SyntaxError) {
+        console.warn(`[illustrations] ignoring unreadable manifest "${manifestPath}": ${error.message}`);
+        return null;
+      }
+      throw error;
+    }
+  }
+  if (lastError instanceof SyntaxError) {
+    console.warn(`[illustrations] ignoring unreadable manifest "${manifestPath}": ${lastError.message}`);
+    return null;
+  }
+  throw lastError;
 };
 
 const saveGeneratedImage = async ({ buffer, outputPath }) => {
@@ -1306,17 +1382,54 @@ const appendArticleContextToPrompt = (prompt, articleContent) => {
     .join('\n\n');
 };
 
-const buildIllustrationExplanationFallback = ({ slot, userPrompt }) => {
-  const extra = cleanText(userPrompt) ? ` 这版又额外收紧了“${clip(userPrompt, 22)}”这一层要求。` : '';
-  if (slot.renderMode === 'svg_chart' || slot.dataSpec) {
-    const dataSummary = summarizeDataSpec(slot.dataSpec);
-    return cleanText(
-      `${clip(slot.purpose || slot.title, 26)}。${dataSummary ? `关键差距落在 ${clip(dataSummary, 28)}。` : ''}${extra}`
-    );
+const buildIllustrationExplanationFallback = ({ slot }) => {
+  const anchorSentences = splitCaptionSentences(slot.anchorExcerpt);
+  const purposeSentences = splitCaptionSentences(stripCaptionPlanningLanguage(slot.purpose));
+  const dataSummary = cleanText(summarizeDataSpec(slot.dataSpec));
+  const sentences = [];
+
+  const pushSentence = (candidate, limit = 36) => {
+    const nextSentence = toCaptionSentence(candidate, limit);
+    if (!nextSentence) {
+      return;
+    }
+    const normalized = nextSentence.replace(/[。！？!?…]/g, '');
+    if (!normalized || sentences.some((item) => item.replace(/[。！？!?…]/g, '') === normalized)) {
+      return;
+    }
+    sentences.push(nextSentence);
+  };
+
+  pushSentence(anchorSentences[0] || purposeSentences[0] || slot.title || slot.sectionTitle, slot.dataSpec ? 34 : 38);
+  pushSentence(anchorSentences[1], 38);
+
+  if (sentences.length < 2 && dataSummary) {
+    pushSentence(`图里最值得看的数字变化是${clip(dataSummary, 28)}`, 38);
   }
 
-  return cleanText(
-    `${clip(slot.anchorExcerpt || slot.purpose || slot.title, 24)}。文章要说的那层关系，也就落在了这个具体场景里。${extra}`
+  if (sentences.length < 2) {
+    pushSentence(purposeSentences[1] || purposeSentences[0], 36);
+  }
+
+  if (sentences.length < 2) {
+    pushSentence(`${slot.sectionTitle || slot.title || '这一段'}把讨论落到了更具体的业务现场`, 34);
+  }
+
+  return cleanText(sentences.slice(0, 2).join(' '));
+};
+
+const normalizeIllustrationExplanation = (text, slot) => {
+  const normalized = cleanText(text).replace(/\s+/g, ' ');
+  if (!normalized || looksLikeInternalCaption(normalized)) {
+    return buildIllustrationExplanationFallback({ slot });
+  }
+  return normalized;
+};
+
+const logIllustrationCaptionFallback = ({ slot, model, reason }) => {
+  const normalizedReason = clip(cleanText(reason) || 'empty caption payload', 220);
+  console.warn(
+    `[illustrations] falling back to synthesized caption for slot "${slot?.id || slot?.title || 'unknown'}" with model "${model || DEFAULT_PLANNER_MODEL}": ${normalizedReason}`
   );
 };
 
@@ -1332,67 +1445,88 @@ const generateIllustrationExplanation = async ({
   imageMimeType = 'image/png',
 }) => {
   if (shouldUseMockProvider() || !apiKey || !imageBuffer) {
-    return buildIllustrationExplanationFallback({ slot, userPrompt });
+    return buildIllustrationExplanationFallback({ slot });
   }
 
-  try {
-    const client = createGenAiClient(apiKey, CAPTION_TIMEOUT_MS + 30_000);
-    const response = await withTimeout(
-      callWithRetry(() =>
-        client.models.generateContent({
-          model: plannerModel || DEFAULT_PLANNER_MODEL,
-          contents: [
-            {
-              role: 'user',
-              parts: [
-                {
-                  text: [
-                    '你是中文商业文章的图片编辑。',
-                    '你会同时看到整篇文章、当前图位信息和已经生成好的图片。',
-                    '请写两句可以直接放在图片下方的中文配文，只输出配文本身。',
-                    '语气要像文章正文自然延长出来的两句话，不要像解释图，不要像系统说明，不要像写提示词。',
-                    '不要写标题，不要出现“这张图”“该图”“图位”“首图”“Scene”“Data”“用于承接”“体现了”“隐喻了”“AI”“生成”等字样。',
-                    '第一句先落具体对象、位置、关系或情境；第二句再自然接上文章里的判断，但不要硬拐弯，不要总结腔。',
-                    '图中如果出现偏题元素，要以文章主题为准，把重点拉回文章真正讨论的公司、渠道、人物或业务。',
-                    '文字要自然、克制、像成熟编辑写的图注，不要解释自己在解释，也不要故作深刻。',
-                    '控制在 38 到 78 个汉字，两句，简体中文。',
-                    `文章标题：${articleTitle}`,
-                    `图位标题：${slot.title || slot.role}`,
-                    `对应小节：${slot.sectionTitle || '正文'}`,
-                    `图位要承接的核心判断：${slot.purpose}`,
-                    `正文锚点：${slot.anchorExcerpt}`,
-                    slot.dataSpec ? `需要吸收的数据关系：${summarizeDataSpec(slot.dataSpec)}` : '',
-                    cleanText(existingExplanation) ? `当前已有图释：${cleanText(existingExplanation)}` : '',
-                    cleanText(userPrompt) ? `本轮用户补充要求：${cleanText(userPrompt)}` : '',
-                    cleanText(existingExplanation) && cleanText(userPrompt)
-                      ? '请在不改图片内容的前提下，根据用户要求重写图释，保留文章语气和事实方向。'
-                      : '',
-                    '整篇文章全文：',
-                    cleanText(articleContent),
-                  ]
-                    .filter(Boolean)
-                    .join('\n\n'),
-                },
-                createPartFromBase64(imageBuffer.toString('base64'), imageMimeType),
-              ],
+  const client = createGenAiClient(apiKey, CAPTION_TIMEOUT_MS + 30_000);
+  const candidateModels = [...new Set([plannerModel, DEFAULT_PLANNER_MODEL, 'gemini-2.5-flash'].filter(Boolean))];
+  let lastError = null;
+
+  for (const candidateModel of candidateModels) {
+    try {
+      const response = await withTimeout(
+        callWithRetry(() =>
+          client.models.generateContent({
+            model: candidateModel,
+            contents: [
+              {
+                role: 'user',
+                parts: [
+                  {
+                    text: [
+                      '你是中文商业文章的图片编辑。',
+                      '你会同时看到整篇文章、当前图位信息和已经生成好的图片。',
+                      '请写两句可以直接放在图片下方的中文配文，只输出配文本身。',
+                      '语气要像文章正文自然延长出来的两句话，不要像解释图，不要像系统说明，不要像写提示词。',
+                      '不要写标题，不要出现“这张图”“该图”“图位”“首图”“Scene”“Data”“用于承接”“体现了”“隐喻了”“AI”“生成”等字样。',
+                      '第一句先落具体对象、位置、关系或情境；第二句再自然接上文章里的判断，但不要硬拐弯，不要总结腔。',
+                      '图中如果出现偏题元素，要以文章主题为准，把重点拉回文章真正讨论的公司、渠道、人物或业务。',
+                      '文字要自然、克制、像成熟编辑写的图注，不要解释自己在解释，也不要故作深刻。',
+                      '控制在 38 到 78 个汉字，两句，简体中文。',
+                      `文章标题：${articleTitle}`,
+                      `图位标题：${slot.title || slot.role}`,
+                      `对应小节：${slot.sectionTitle || '正文'}`,
+                      `图位要承接的核心判断：${slot.purpose}`,
+                      `正文锚点：${slot.anchorExcerpt}`,
+                      slot.dataSpec ? `需要吸收的数据关系：${summarizeDataSpec(slot.dataSpec)}` : '',
+                      cleanText(existingExplanation) ? `当前已有图释：${cleanText(existingExplanation)}` : '',
+                      cleanText(userPrompt) ? `本轮用户补充要求：${cleanText(userPrompt)}` : '',
+                      cleanText(existingExplanation) && cleanText(userPrompt)
+                        ? '请在不改图片内容的前提下，根据用户要求重写图释，保留文章语气和事实方向。'
+                        : '',
+                      '整篇文章全文：',
+                      cleanText(articleContent),
+                    ]
+                      .filter(Boolean)
+                      .join('\n\n'),
+                  },
+                  createPartFromBase64(imageBuffer.toString('base64'), imageMimeType),
+                ],
+              },
+            ],
+            config: {
+              responseMimeType: 'application/json',
+              responseSchema: IMAGE_EXPLANATION_SCHEMA,
             },
-          ],
-          config: {
-            responseMimeType: 'application/json',
-            responseSchema: IMAGE_EXPLANATION_SCHEMA,
-          },
-        })
-      ),
-      CAPTION_TIMEOUT_MS,
-      '图释生成请求'
-    );
+          })
+        ),
+        CAPTION_TIMEOUT_MS,
+        '图释生成请求'
+      );
 
-    const payload = JSON.parse(response.text || '{}');
-    return cleanText(String(payload?.explanation || '').replace(/^图释[:：]\s*/, '')) ||
-      buildIllustrationExplanationFallback({ slot, userPrompt });
-  } catch {
-    return buildIllustrationExplanationFallback({ slot, userPrompt });
+      const payload = JSON.parse(response.text || '{}');
+      const explanation = normalizeIllustrationExplanation(
+        String(payload?.explanation || '').replace(/^图释[:：]\s*/, ''),
+        slot
+      );
+      if (explanation) {
+        return explanation;
+      }
+      lastError = new Error('empty caption payload');
+    } catch (error) {
+      lastError = error;
+      if (!isModelNotFoundError(error)) {
+        break;
+      }
+    }
   }
+
+  logIllustrationCaptionFallback({
+    slot,
+    model: plannerModel || DEFAULT_PLANNER_MODEL,
+    reason: lastError?.message || lastError || 'unknown caption generation failure',
+  });
+  return buildIllustrationExplanationFallback({ slot });
 };
 
 const resolveIllustrationAssetPath = ({ sourceHash, assetUrl }) => {
@@ -1433,7 +1567,7 @@ const normalizeAssetRecord = (asset, slotId, slotDefaults = {}) => {
     versionIndex,
     createdAt: cleanText(asset?.createdAt) || new Date().toISOString(),
     userPrompt: cleanText(asset?.userPrompt) || undefined,
-    editorCaption: cleanText(asset?.editorCaption) || cleanText(slotDefaults.explanation) || '',
+    editorCaption: normalizeIllustrationExplanation(asset?.editorCaption || slotDefaults.explanation || '', slotDefaults),
   };
 };
 
@@ -1450,7 +1584,7 @@ const syncSlotWithActiveAsset = (slot, versions) => {
 
   return {
     ...slot,
-    explanation: cleanText(activeAsset?.editorCaption || slot.explanation || slot.purpose),
+    explanation: normalizeIllustrationExplanation(activeAsset?.editorCaption || slot.explanation || slot.purpose, slot),
     activeAssetId: activeAsset?.id,
     versionCount: sortedVersions.length,
     assetUrl: activeAsset?.url,
@@ -1475,7 +1609,7 @@ const normalizeIllustrationManifest = (manifest, defaults = {}) => {
   const slots = Array.isArray(manifest?.slots)
     ? manifest.slots.map((slot) => ({
         ...slot,
-        explanation: cleanText(slot?.explanation || slot?.editorCaption || slot?.purpose),
+        explanation: normalizeIllustrationExplanation(slot?.explanation || slot?.editorCaption || slot?.purpose, slot),
         focusTerms: Array.isArray(slot?.focusTerms) ? slot.focusTerms.map((item) => cleanText(item)).filter(Boolean) : [],
         qualityChecks: Array.isArray(slot?.qualityChecks)
           ? slot.qualityChecks.map((item) => cleanText(item)).filter(Boolean)

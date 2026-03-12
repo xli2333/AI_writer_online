@@ -1,0 +1,128 @@
+{
+  "analysis_schema_version": 3,
+  "id": "2274e1a84a9c",
+  "year": "2025",
+  "date": "2025-10-22",
+  "title": "华尔街见闻第二届「Smart Future · AI应用标杆」正式启动",
+  "relative_path": "2025/2025-10-22_华尔街见闻第二届「Smart Future · AI应用标杆」正式启动.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\wallstreetcn\\raw_materials\\2025\\2025-10-22_华尔街见闻第二届「Smart Future · AI应用标杆」正式启动.txt",
+  "char_count": 1228,
+  "content_type": "活动通知",
+  "entities": [
+    "华尔街见闻",
+    "Smart Future",
+    "AI应用标杆"
+  ],
+  "industry": [
+    "人工智能",
+    "科技媒体",
+    "商业服务"
+  ],
+  "topic": [
+    "AI产业评选",
+    "商业化落地",
+    "行业榜单"
+  ],
+  "genre": "商务公告",
+  "style": [
+    "宏大叙事",
+    "规范化",
+    "公关体"
+  ],
+  "audience": [
+    "AI创业者",
+    "科技企业高管",
+    "投资机构",
+    "行业分析师"
+  ],
+  "intent": [
+    "品牌宣传",
+    "招募参与",
+    "行业背书"
+  ],
+  "tone": [
+    "正式",
+    "权威",
+    "号召性"
+  ],
+  "primary_question": "华尔街见闻举办的2025年AI应用标杆评选的具体标准、流程和参与方式是什么？",
+  "thesis_type": "行动号召型",
+  "thesis_sentence": "华尔街见闻通过启动第二届「Smart Future · AI应用标杆」评选，旨在寻找并表彰在AI商业化规模化兑现阶段表现卓越的中国企业与产品。",
+  "structure_pattern": "背景铺垫-活动声明-奖项细则-流程安排-联系方式",
+  "section_functions": [
+    "阐述2025年AI产业发展的宏观拐点与时代背景",
+    "正式宣布评选活动启动并界定其寻找“时代先锋”的宗旨",
+    "定义卓越人工智能企业奖的准入条件与评选维度",
+    "定义卓越人工智能产品奖的准入条件与评选维度",
+    "提供活动推进的时间轴及报名联系渠道"
+  ],
+  "argument_moves": [
+    "将AI从概念质变为核心引擎作为评选的必要性支撑",
+    "强调中国AI力量在全球格局中的引领地位以提升评选分量",
+    "确立客观公正的评审团与标准来建立权威感",
+    "通过具体的条件列表明确受众准入门槛"
+  ],
+  "core_argument": "随着AI进入物理智能和规模化商业兑现时代，通过专业评选确立行业标杆对于推动中国AI产业进化具有重要价值。",
+  "key_points": [
+    "2025年是AI技术边界拓宽及商业化规模化兑现的关键一年",
+    "中国AI在核心模型及应用领域已展现出全球引领态势",
+    "评选分为企业奖和产品奖两大核心类别",
+    "评选标准涵盖商业潜力、技术创新、应用效果等多个维度",
+    "评选流程跨度为2024年11月至2025年1月"
+  ],
+  "opening_pattern": "宏观趋势叙事",
+  "ending_pattern": "行动呼吁与服务信息",
+  "evidence_types": [
+    "行业趋势观察",
+    "结构化评选标准"
+  ],
+  "evidence_specificity_score": 45,
+  "data_density_score": 30,
+  "case_density_score": 0,
+  "quote_density_score": 10,
+  "narrative_distance": "宏观视角",
+  "stance_strength": "坚定",
+  "sentence_rhythm": "长句与排比句结合，语气沉稳且富有节奏感",
+  "abstraction_level": "中等偏高",
+  "transferable_moves": [
+    "使用‘历史性拐点’、‘质变’等词汇构建活动的高级感",
+    "采用多级列表形式清晰呈现奖项评选的硬性标准",
+    "分阶段展示项目进度表，增加活动的可预期性"
+  ],
+  "anti_patterns": [
+    "过度堆砌宏大叙事而缺乏对往届成果的具体回顾",
+    "缺乏对评审团具体名单的披露",
+    "信息密度完全服务于报名功能，缺乏深度行业洞察"
+  ],
+  "notable_phrases": [
+    "驱动全球产业变革与资本流动的核心引擎",
+    "商业化迈入规模化兑现阶段",
+    "重塑全球格局的引领之姿"
+  ],
+  "title_score": 80,
+  "opening_score": 75,
+  "argument_score": 60,
+  "evidence_score": 40,
+  "structure_score": 90,
+  "style_score": 70,
+  "publishability_score": 85,
+  "quality_score": 65,
+  "reference_value_score": 50,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "is_advertorial": true,
+  "advertorial_type": "event_promotion",
+  "advertorial_confidence": 100,
+  "promotional_intensity_score": 95,
+  "editorial_independence_score": 10,
+  "brand_exposure_level": "高",
+  "source_transparency": "清晰",
+  "advertorial_signals": [
+    "典型的主办方自宣文章",
+    "文末附带具体的报名电话和邮箱",
+    "存在引导点击‘阅读原文’的强导流行为",
+    "通篇为活动招募服务"
+  ],
+  "summary_200": "华尔街见闻宣布启动第二届「Smart Future · AI应用标杆」评选活动。文章阐述了2025年AI从概念转向全球产业核心引擎及商业化兑现的时代背景，强调中国AI的引领地位。评选设“卓越人工智能企业”与“产品”两大奖项，重点评估估值规模、商业潜力、技术优势等维度。活动报名于11月开始，次年1月发布榜单，旨在通过专业评选挖掘AI商业化先锋，推动行业进化。文中包含详细报名条件与联系方式。",
+  "summary_500": "该文章是华尔街见闻发布的第二届「Smart Future · AI应用标杆」评选活动的正式招募公告。文章开头以宏大的时代视角切入，指出2025年AI已成为驱动全球变革的核心引擎，且中国AI力量在模型性能与应用落地方面正展现出重塑全球格局的态势。以此为背景，华尔街见闻再次发起年度AI评选，旨在寻找能切实推动商业进化的时代先锋。\n\n评选内容主要分为两部分：\n1. 卓越人工智能企业奖：面向在中国有主营业务的AI公司，重点考察商业模式、技术创新成果及成长速度。\n2. 卓越人工智能产品奖：侧重考察已开放使用的AI软硬件产品，关注其技术优势、应用效果及商业化进展。\n\n文章详细列出了参选的具体条件，如近一年的技术突破、商业模式特色以及合规经营要求。活动流程分为四个阶段：11-12月为报名期，随后进入评审与采访环节，最终榜单将于2025年1月正式发布。文章最后提供了联系人的手机号与邮箱，并引导感兴趣的企业点击报名。整体而言，这篇内容属于典型的功能性媒体通稿，信息结构极其清晰，但内容密度完全集中在活动宣传与报名流程上，缺乏深度的行业案例分析或独立评论。"
+}

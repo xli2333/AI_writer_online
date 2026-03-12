@@ -1,0 +1,96 @@
+{
+  "analysis_schema_version": 3,
+  "id": "384b8a1cd767",
+  "year": "2024",
+  "date": "2024-12-11",
+  "title": "如何看待山西女硕士被光棍汉“收留”事件？",
+  "relative_path": "2024/2024-12-11_如何看待山西女硕士被光棍汉“收留”事件？.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\huxiu\\raw_materials\\2024\\2024-12-11_如何看待山西女硕士被光棍汉“收留”事件？.txt",
+  "char_count": 290,
+  "content_type": "社会热点评论",
+  "entities": [
+    "山西女硕士",
+    "光棍汉"
+  ],
+  "industry": [
+    "社会综合",
+    "新闻传媒"
+  ],
+  "topic": [
+    "社会公正",
+    "女性安全",
+    "网络舆论"
+  ],
+  "genre": "评论",
+  "style": [
+    "平叙"
+  ],
+  "audience": [
+    "一般大众"
+  ],
+  "intent": [
+    "引发讨论"
+  ],
+  "tone": [
+    "客观"
+  ],
+  "primary_question": "如何评价“山西女硕士被光棍汉收留”这一社会事件的真实性与合规性？",
+  "thesis_type": "问题导向",
+  "thesis_sentence": "由于原文正文内容缺失，无法提取具体的核心主旨句。",
+  "structure_pattern": "无",
+  "section_functions": [
+    "标题引入"
+  ],
+  "argument_moves": [
+    "无"
+  ],
+  "core_argument": "正文内容缺失，无法提炼核心论证逻辑。",
+  "key_points": [
+    "事件涉及受教育程度较高的女性",
+    "涉及社会弱势群体的收留行为"
+  ],
+  "opening_pattern": "疑问式标题",
+  "ending_pattern": "无",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 0,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "远",
+  "stance_strength": "弱",
+  "sentence_rhythm": "平稳",
+  "abstraction_level": "中等",
+  "transferable_moves": [
+    "利用身份错位（硕士与光棍汉）构建戏剧冲突标题"
+  ],
+  "anti_patterns": [
+    "内容缺失",
+    "信息极度匮乏"
+  ],
+  "notable_phrases": [
+    "收留"
+  ],
+  "title_score": 60,
+  "opening_score": 0,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 0,
+  "style_score": 0,
+  "publishability_score": 5,
+  "quality_score": 5,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "is_advertorial": false,
+  "advertorial_type": "editorial",
+  "advertorial_confidence": 0,
+  "promotional_intensity_score": 0,
+  "editorial_independence_score": 100,
+  "brand_exposure_level": "低",
+  "source_transparency": "清晰",
+  "advertorial_signals": [],
+  "summary_200": "该文本仅包含一个关于“山西女硕士被光棍汉收留”事件的标题及元数据，缺乏实际的正文内容。标题具有一定的冲突性，试图通过身份对比吸引关注。但由于信息量极低，无法进行深度逻辑分析或写作参考。",
+  "summary_500": "这是一个极其简短的文本碎片，仅记录了2024年12月11日的一篇关于“山西女硕士被光棍汉收留”事件的讨论标题。该标题指向一个涉及女性权利、社会伦理及心理健康的社会热点话题，通常此类话题具有较高的互动率和舆论敏感度。然而，由于正文内容的缺位，文档无法提供任何论据、结构或风格上的借鉴价值。评价中将其标记为低价值信息。若要获得结构化洞察，需要提供该标题下对应的完整评论文章或报道。目前该条目仅能作为热点追踪的占位符使用。"
+}

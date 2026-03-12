@@ -1,0 +1,102 @@
+{
+  "analysis_schema_version": 3,
+  "id": "3aa3e0551eb6",
+  "year": "2025",
+  "date": "2025-01-23",
+  "title": "网红给狗洗澡致死，是在变相虐狗吗？",
+  "relative_path": "2025/2025-01-23_网红给狗洗澡致死，是在变相虐狗吗？.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\huxiu\\raw_materials\\2025\\2025-01-23_网红给狗洗澡致死，是在变相虐狗吗？.txt",
+  "char_count": 287,
+  "content_type": "社会评论",
+  "entities": [
+    "网红"
+  ],
+  "industry": [
+    "宠物经济",
+    "社交媒体"
+  ],
+  "topic": [
+    "动物福利",
+    "自媒体伦理",
+    "社会热点"
+  ],
+  "genre": "短评",
+  "style": [
+    "批判性",
+    "探讨型"
+  ],
+  "audience": [
+    "宠物主",
+    "短视频用户",
+    "大众读者"
+  ],
+  "intent": [
+    "引发关注",
+    "舆论监督"
+  ],
+  "tone": [
+    "质问",
+    "严肃"
+  ],
+  "primary_question": "网红在拍摄宠物内容时的操作失误导致死亡是否应被视为变相虐待？",
+  "thesis_type": "伦理探讨型",
+  "thesis_sentence": "探讨在追求流量的自媒体环境下，非专业宠物护理行为与虐待动物之间的界限。",
+  "structure_pattern": "问题导向式结构",
+  "section_functions": [
+    "标题通过高冲突事件设疑"
+  ],
+  "argument_moves": [
+    "以极端负面案例引发关注",
+    "将个体事件上升至道德伦理讨论"
+  ],
+  "core_argument": "流量驱动下的不专业宠物展示行为可能构成事实上的虐待。",
+  "key_points": [
+    "网红给狗洗澡致死事件",
+    "虐狗行为的界定讨论",
+    "流量至上心态对宠物的危害"
+  ],
+  "opening_pattern": "悬念式提问",
+  "ending_pattern": "开放式探讨",
+  "evidence_types": [
+    "社会事件"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 20,
+  "quote_density_score": 0,
+  "narrative_distance": "第三人称视角",
+  "stance_strength": "强",
+  "sentence_rhythm": "紧凑且具质问感",
+  "abstraction_level": "中等",
+  "transferable_moves": [
+    "使用反问句式制造标题张力",
+    "锁定特定争议群体（网红）进行社会监督"
+  ],
+  "anti_patterns": [
+    "输入文本缺失导致内容支撑不足"
+  ],
+  "notable_phrases": [
+    "变相虐狗"
+  ],
+  "title_score": 85,
+  "opening_score": 40,
+  "argument_score": 20,
+  "evidence_score": 10,
+  "structure_score": 20,
+  "style_score": 50,
+  "publishability_score": 30,
+  "quality_score": 20,
+  "reference_value_score": 15,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "is_advertorial": false,
+  "advertorial_type": "editorial",
+  "advertorial_confidence": 0,
+  "promotional_intensity_score": 0,
+  "editorial_independence_score": 90,
+  "brand_exposure_level": "低",
+  "source_transparency": "模糊",
+  "advertorial_signals": [],
+  "summary_200": "该内容目前仅有标题及元数据，主要关注网红群体因操作不当导致宠物死亡的社会事件。文章旨在探讨这种以博取流量为目的的宠物护理行为是否应被定性为虐待，具有较强的社会议题属性，但由于正文缺失，其论证深度和事实细节无法进一步确认。",
+  "summary_500": "本文通过‘网红给狗洗澡致死’这一具体热点切入，对当前社交媒体上普遍存在的‘宠物工具化’现象提出了质问。标题采用设问形式，旨在引发公众对‘变相虐待’边界的讨论。在写作机制上，这属于典型的社会矛盾焦点化策略。由于输入的原文正文缺失，无法识别其具体的段落转承逻辑、引用的法律条文或专家观点等证据链条。目前仅能基于标题判定其作为社会评论的定位。该内容信息密度由于输入源不全而处于极低状态，评分主要基于标题的选题价值和传播潜力，而非文章本身的文字质量。建议在获取完整正文后重新进行结构化提取。"
+}

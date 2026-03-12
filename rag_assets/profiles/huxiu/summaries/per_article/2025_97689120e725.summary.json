@@ -1,0 +1,105 @@
+{
+  "analysis_schema_version": 3,
+  "id": "97689120e725",
+  "year": "2025",
+  "date": "2025-01-16",
+  "title": "全球文科衰退？是进步还是悲哀？",
+  "relative_path": "2025/2025-01-16_全球文科衰退？是进步还是悲哀？.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\huxiu\\raw_materials\\2025\\2025-01-16_全球文科衰退？是进步还是悲哀？.txt",
+  "char_count": 285,
+  "content_type": "评论",
+  "entities": [
+    "文科"
+  ],
+  "industry": [
+    "教育",
+    "人文社科"
+  ],
+  "topic": [
+    "文科衰退",
+    "教育改革",
+    "全球化"
+  ],
+  "genre": "时评",
+  "style": [
+    "思辨性",
+    "宏观叙事"
+  ],
+  "audience": [
+    "教育工作者",
+    "学生",
+    "社会观察者"
+  ],
+  "intent": [
+    "探讨现象",
+    "引发反思"
+  ],
+  "tone": [
+    "审视",
+    "忧虑"
+  ],
+  "primary_question": "文科在全球范围内的衰退究竟是人类文明的进步还是悲哀？",
+  "thesis_type": "辩论型",
+  "thesis_sentence": "全球文科衰退是一个复杂的社会历史过程，需要从进步与悲哀的双重维度进行深刻反思。",
+  "structure_pattern": "二元对比式",
+  "section_functions": [
+    "提出争议性话题",
+    "引导核心价值判断"
+  ],
+  "argument_moves": [
+    "抛出全球性现象",
+    "利用对立概念激发读者联想"
+  ],
+  "core_argument": "文科衰退不仅是教育资源的重新分配，更是人类知识结构和社会价值观变迁的缩影。",
+  "key_points": [
+    "全球文科地位下降的现状",
+    "进步观视角下的文科调整",
+    "悲哀观视角下的人文精神丧失"
+  ],
+  "opening_pattern": "疑问句式开头",
+  "ending_pattern": "开放式提问",
+  "evidence_types": [
+    "概括性事实"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 5,
+  "quote_density_score": 0,
+  "narrative_distance": "远距离",
+  "stance_strength": "中立偏向反思",
+  "sentence_rhythm": "平稳",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "使用二元对立的词汇（进步vs悲哀）构建标题",
+    "将单一现象提升至全球宏观视角讨论"
+  ],
+  "anti_patterns": [
+    "内容缺失导致的信息空洞",
+    "缺乏具体事实支撑的论证"
+  ],
+  "notable_phrases": [
+    "文科衰退",
+    "进步还是悲哀"
+  ],
+  "title_score": 85,
+  "opening_score": 20,
+  "argument_score": 10,
+  "evidence_score": 5,
+  "structure_score": 15,
+  "style_score": 20,
+  "publishability_score": 10,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "is_advertorial": false,
+  "advertorial_type": "none",
+  "advertorial_confidence": 0,
+  "promotional_intensity_score": 0,
+  "editorial_independence_score": 100,
+  "brand_exposure_level": "低",
+  "source_transparency": "清晰",
+  "advertorial_signals": [],
+  "summary_200": "该内容仅包含一个关于‘全球文科衰退’的讨论标题及其基本元数据。标题通过对立设问，试图探讨人文社会科学在全球范围内地位下降的原因及其后果。由于缺乏正文，无法对其论据进行有效分析。这属于典型的高宏观、低信息密度存根。其实际参考价值主要在于话题本身的热议属性，提示了当前教育界的一个重要争议方向。",
+  "summary_500": "标题为《全球文科衰退？是进步还是悲哀？》的文章，旨在对当前全球高等教育中人文社科被边缘化的趋势进行价值审视。作者通过二元对立的设问方式（进步vs悲哀），试图引导读者跳出单一的经济效率视角，去思考知识结构的改变对人类文明的长远影响。然而，从提供的文本看，该内容仅有标题及元数据，缺乏实际的论证过程、数据支持或具体案例。这种‘低信息量’的文本在RAG系统或写作库中仅能作为话题标签存在，不具备实质性的内容输出能力。从写作角度看，其标题具有较强的吸引力和议题设置能力，是典型的评论性文章起手法。因正文缺失，其综合质量分数较低，建议在获取全文后再进行深度结构化分析。"
+}

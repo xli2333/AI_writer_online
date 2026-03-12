@@ -1,0 +1,93 @@
+{
+  "analysis_schema_version": 3,
+  "id": "6c62a12b228c",
+  "year": "2025",
+  "date": "2025-02-09",
+  "title": "如何看待张兰、汪小菲被封号？",
+  "relative_path": "2025/2025-02-09_如何看待张兰、汪小菲被封号？.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\huxiu\\raw_materials\\2025\\2025-02-09_如何看待张兰、汪小菲被封号？.txt",
+  "char_count": 284,
+  "content_type": "新闻短讯",
+  "entities": [
+    "张兰",
+    "汪小菲"
+  ],
+  "industry": [
+    "社交媒体",
+    "互联网内容"
+  ],
+  "topic": [
+    "账号封禁",
+    "平台监管",
+    "名人舆论"
+  ],
+  "genre": "社会评论",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "社交媒体用户",
+    "娱乐八卦关注者"
+  ],
+  "intent": [
+    "信息记录"
+  ],
+  "tone": [
+    "中立"
+  ],
+  "primary_question": "如何看待张兰、汪小菲社交媒体账号被封禁的现象？",
+  "thesis_type": "评价型",
+  "thesis_sentence": "由于正文内容缺失，该文仅提出了针对张兰、汪小菲封号事件的讨论意向。",
+  "structure_pattern": "残缺结构",
+  "section_functions": [
+    "提出话题标题"
+  ],
+  "argument_moves": [
+    "无实质论证"
+  ],
+  "core_argument": "无",
+  "key_points": [
+    "提出张兰账号被封话题",
+    "提出汪小菲账号被封话题"
+  ],
+  "opening_pattern": "提问式标题",
+  "ending_pattern": "无",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 0,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "远距离",
+  "stance_strength": "中立",
+  "sentence_rhythm": "无",
+  "abstraction_level": "中等",
+  "transferable_moves": [],
+  "anti_patterns": [
+    "内容严重缺失",
+    "空洞无物"
+  ],
+  "notable_phrases": [],
+  "title_score": 40,
+  "opening_score": 0,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 0,
+  "style_score": 0,
+  "publishability_score": 5,
+  "quality_score": 5,
+  "reference_value_score": 2,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "is_advertorial": false,
+  "advertorial_type": "editorial",
+  "advertorial_confidence": 0,
+  "promotional_intensity_score": 0,
+  "editorial_independence_score": 100,
+  "brand_exposure_level": "低",
+  "source_transparency": "清晰",
+  "advertorial_signals": [],
+  "summary_200": "该文本仅包含一个关于“张兰、汪小菲被封号”的标题及基本的发布信息，完全缺失正文内容。从写作角度看，这是一个无效的文本样本，不具备分析价值，仅能作为事件发生的存证参考。",
+  "summary_500": "该文本仅提供了一个讨论标题“如何看待张兰、汪小菲被封号？”，并未附带任何实际的正文分析、观点陈述或事实描述。由于内容极度缺失，无法对其论证逻辑、证据链条或写作风格进行深入评估。其质量分数极低，被标记为低价值内容。在商业分析或RAG写作中，该条目仅能提供事件发生的时间点和涉及人物，不具备可借鉴的写作机制或人格特征。"
+}

@@ -1,0 +1,130 @@
+标题: GPT-5「降智」真相曝光：不是变笨，而是五个超级开关没激活
+日期: 2025-09-30
+链接: http://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652631330&idx=3&sn=334a9d4591bf61b8f6fd1416609b9b7c&chksm=f12885d3c65f0cc5b8110ded4c5a75d71cd22123d813b4e189e7e912ed7f82aed6cddc748702#rd
+来源模式: wechat
+----------------------------------------
+
+新智元报道
+编辑：倾倾
+【新智元导读】
+别再吐槽GPT-5变笨了！OpenAI最新发布的提示工程指南，揭秘了一套调教prompt。用对了之后，它就能从偶尔靠谱，变成稳定、高效、甚至补漏收尾的全能搭档。
+「GPT-5怎么不如之前的4o？」「GPT-5怎么这么笨？」
+最近我们被这样的抱怨刷屏。
+同样的任务，它要么机械复述，要么擅自改动，令人哭笑不得。
+真相不是模型退步，而是配置没对。
+OpenAI最新的「提示词工程指南」给了我们答案：
+只要拨对5这五个开关，它就能从沉默执行的机器，变成全能的工作伙伴。
+别让它闷头干，「自主探索」找到新路
+很多人抱怨 GPT-5 只会按字面办事，不会自己多想半点。
+其实是你把它关在了「安静执行」的模式里。
+其实，GPT-5可以在「严格按照要求执行」和「完全自主解决问题」之间自由切换。
+我们可以通过调整agentic eagerness（自主探索倾向）来控制它的行为。
+这个值低的时候，它的探索范围变小，只会做你写在提示词里的事情。
+高的时候，它就会自己查漏补缺，甚至优化原计划。
+示例prompt：
+You are a research assistant helping me create a 2-page market trends summary.
+Use reasoning_effort: low
+· Do not explore topics outside the 2023–2025 data.
+· Stop if you cannot find at least 3 credible sources.
+· Keep going until you've fully summarized the 3 trends and written the final draft.
+Cursor在测试GPT-5的时候发现：
+如果直接在提示词里写明「可自主探索优化机会」，并给出代码风格、性能优先级等要求，GPT-5就不会只修一处bug，而是会顺带修掉其他隐患，让整个代码库更干净。
+Global setting: verbosity=low
+When providing code edits:
+· Switch verbosity to high Include full diffs with comments explaining each change
+· Use descriptive variable names
+推理深浅要对位
+别让它小题大做或一带而过
+有时候，GPT-5遇到个小问题也能想半天，洋洋洒洒给你甩几百字；
+还有时候，碰到个复杂任务，却只回一句话，像是敷衍交差。
+原因就在reasoning_effort（推理深度）身上。
+它就像镜头的焦距，决定相机是拍全景还是小景。推理深度调低，它会给你一个简明结论；
+调高，它会则一步步拆解、逐条论证。
+示例 prompt：
+You are solving a logic puzzle.
+· Use reasoning_effort: high
+· Explain your reasoning before giving the final answer.
+· If the puzzle takes more than 5 steps to solve, break it into stages and confirm with me after each stage.
+所以，使用诀窍就是根据任务难度调档：简单事浅尝辄止，复杂事深挖到底。
+在一些延迟敏感、结果明确的任务上，可以直接用最小推理模式（minimal reasoning）。
+把步骤、模板写清楚，让它按格子填。
+这样速度快、浪费token少，还能避免它额外发挥。
+提取邮箱列表、格式化数据、批量改标题这些简单任务，不需要它反复推理，所以越快越好。
+但要是策划一整套婚礼流程，细致到新娘手捧花的颜色都要写出来，那就需要开启深度模式，反复推敲。
+多步骤任务半路不失忆
+全靠这把「记忆锁」
+用过ChatGPT的人， 都遇到过这种窘境：上一步刚辛辛苦苦铺好的逻辑，下一步它就像断片了一样，推理链从零开始。
+OpenAI在指南里着重强调Responses API——它能让GPT-5把前面的推理结果锁住、复用，避免重新规划。
+示例prompt：
+{
+"model": "gpt-5",
+"previous_response_id": "resp_12345",
+"input": "Now summarize the insights from the analysis above in bullet points."
+}
+OpenAI的报告称，使用Responses API之后，GPT-5在Tau-Bench Retail的准确率从73.9%提升到了78.2%。
+也就是说，它更稳定、更少「中途失忆」。
+这就好比你让它帮忙做一个10页的市场调研报告，没用记忆锁时，它可能第7页突然跑出个新定义，和前面冲突；
+用了记忆锁，它就会沿着最初的思路走到最后，数据、口径、风格全都统一。
+如果想让长任务更稳定，还可以加上「过程可追踪」。
+让它在每个阶段开始前重述目标、列出步骤，执行中简单说明当前动作，结束后总结变化。
+示例 prompt：
+Your job is to clean and analyze a CSV file.
+Before you start, restate the task in one sentence and outline the steps you will take.
+When using a tool, explain what you're doing in 1–2 sentences before calling it.
+After each step, summarize the result in under 50 words.
+这样就能随时能介入调整，既不打断它的节奏，又让整个流程也更透明。
+Responses API就像长途旅行的导航。
+有了它，GPT-5会沿着同一条路线开到底；没有它，它可能中途掉头回到老地方。
+脑子和嘴分开控制
+才能说到点子上
+你可能遇到过这种场景：
+明明是一个很简单的问题，但GPT-5输出的全是长句，读下来累得像在啃说明书；
+又或者它说得很简洁，却能感受到里面还有一堆细节被它「吞」了。
+这是因为推理深度和verbosity（冗长度）是两个不同的东西。
+你可以把全局可以设成简洁，保证日常对话不啰嗦；
+而在需要细节的场景，如审计记录、研究报告，就可以暂时调高冗长度，让它把脑子里的推理过程「倒出来」。
+示例prompt：
+Verbosity: low
+Task: Summarize this 20-page report in 200 words.
+If I type "explain more", increase verbosity, and give a detailed breakdown.
+想象一下，它帮你修一段前端代码。
+冗长度低时，它只会说「我修好了」；而冗长度高时，它会给你完整的diff、逐行解释修改原因，还会顺带提示几个潜在的性能问题。
+分开调这两个设置，就像有了个既会深思又懂表达分寸的搭档——
+需要它沉默时它就沉默，需要它滔滔不绝时就就滔滔不绝。
+规则清楚，才不会在脑子里打架
+GPT-5特别听指令，但要是指令互相打架，它就容易跑偏。
+指令词层级不清、条件互相冲突，这些就像是给它一张模糊的线路图。
+如果你对它说：「今天别开会」「今天尽快开会」，他得反复琢磨按哪一条办。
+可如果你改成「只在得到确认后安排最早的会议」，它就能直接执行。
+示例（错误示范 ❌）：
+Never schedule meetings without consent.
+Always schedule the earliest available time.
+修正（✅）：
+Only schedule meetings with explicit consent.
+If consent is given, choose the earliest available time.
+这一点在团队合作，尤其是写代码这种任务中更加重要。
+我们只需提前在提示词里加好「代码编辑规则块」，把框架、样式/UI、命名规范、动效和字体一次性说清楚。
+这样它生成的代码从第一行到最后一行都符合团队习惯，不会半路改风格。
+示例prompt：
+You are editing an existing React app.
+· Follow BEM CSS naming.
+· Use Tailwind for styling.
+· Place all new components in /src/components/ui.
+· Maintain camelCase for function names.
+· Use only hooks for state management.
+Now, add a responsive navbar with a dropdown menu that matches the existing color palette.
+甚至你可以通过指令规定生成内容的格式。
+如果你想它用Markdown、加标题、用列表或代码块，只需要在提示词里明确写出来，并在长对话中隔几轮重复一次，就能得到想要的结果。
+示例prompt：
+Output your response in Markdown format.
+· Use H2 headings
+· Bullet points for lists
+· Code blocks with language tags for code snippets
+说到底，别让它把算力花在和自己争论上——规则越清楚，它越能把精力放正事上。
+五个开关都调过了，结果还是觉得GPT-5没「到位」？
+那你可以试试元提示（Meta prompting），把你的指令发给它，让它自己当评审。
+不但能告诉你问题出在哪，还能再顺手帮你改一版。
+五个开关，一个小技巧，就够你解锁GPT-5的大部分潜力。
+试着调几次，你就会发现——它其实一直很聪明，只是等你拧对开关。
+参考资料：
+https://aitoolsclub.com/a-practical-prompt-engineering-guide-for-gpt-5-with-examples/

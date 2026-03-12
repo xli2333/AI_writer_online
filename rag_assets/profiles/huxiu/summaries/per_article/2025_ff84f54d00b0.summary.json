@@ -1,0 +1,103 @@
+{
+  "analysis_schema_version": 3,
+  "id": "ff84f54d00b0",
+  "year": "2025",
+  "date": "2025-03-20",
+  "title": "海底捞10倍赔偿到账，要和朋友们平分么？",
+  "relative_path": "2025/2025-03-20_海底捞10倍赔偿到账，要和朋友们平分么？.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\huxiu\\raw_materials\\2025\\2025-03-20_海底捞10倍赔偿到账，要和朋友们平分么？.txt",
+  "char_count": 290,
+  "content_type": "社交互动话题",
+  "entities": [
+    "海底捞"
+  ],
+  "industry": [
+    "餐饮业"
+  ],
+  "topic": [
+    "消费者权益",
+    "社交礼仪",
+    "利益分配"
+  ],
+  "genre": "生活议题探讨",
+  "style": [
+    "互动式",
+    "口语化"
+  ],
+  "audience": [
+    "普通消费者",
+    "社交活跃群体"
+  ],
+  "intent": [
+    "引发讨论",
+    "互动获客"
+  ],
+  "tone": [
+    "询问性",
+    "平民化"
+  ],
+  "primary_question": "消费者在获得商家的惩罚性赔偿后，是否在道义或礼仪上有义务与同行者分享该款项？",
+  "thesis_type": "探讨型",
+  "thesis_sentence": "由于正文内容缺失，无法提取核心论点句，仅能基于标题推测其核心逻辑为平衡法律收益与社交人情。",
+  "structure_pattern": "问答互动型",
+  "section_functions": [
+    "提出具有争议性的社交两难场景",
+    "引导用户在评论区进行立场投票或讨论"
+  ],
+  "argument_moves": [
+    "通过具体品牌（海底捞）增强代入感",
+    "通过高额赔偿（10倍）制造利益冲突点",
+    "将法律层面的个人权利转化为社交层面的道德考量"
+  ],
+  "core_argument": "探讨在特定消费场景下，法定的个人获赔金是否应被视为社交共有财产进行分配。",
+  "key_points": [
+    "涉及海底捞品牌的10倍赔偿金到账",
+    "探讨赔偿金在朋友间的分配问题"
+  ],
+  "opening_pattern": "利益冲突+反问句",
+  "ending_pattern": "开放式提问",
+  "evidence_types": [
+    "品牌案例"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 10,
+  "quote_density_score": 0,
+  "narrative_distance": "个人化",
+  "stance_strength": "中立",
+  "sentence_rhythm": "简短",
+  "abstraction_level": "具体",
+  "transferable_moves": [
+    "利用‘意外之财’引发的社交矛盾作为选题切入点",
+    "结合知名品牌制造流量热度"
+  ],
+  "anti_patterns": [
+    "信息严重缺失（仅有标题无正文）",
+    "缺乏深度逻辑推演"
+  ],
+  "notable_phrases": [
+    "10倍赔偿",
+    "平分"
+  ],
+  "title_score": 85,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 5,
+  "structure_score": 10,
+  "style_score": 20,
+  "publishability_score": 10,
+  "quality_score": 10,
+  "reference_value_score": 15,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "is_advertorial": false,
+  "advertorial_type": "mixed",
+  "advertorial_confidence": 10,
+  "promotional_intensity_score": 10,
+  "editorial_independence_score": 80,
+  "brand_exposure_level": "中",
+  "source_transparency": "清晰",
+  "advertorial_signals": [],
+  "summary_200": "该内容仅包含标题及基本元数据，主题围绕在海底捞获得10倍赔偿后，是否应与同伴平分的社交议题。这是一个典型的利用冲突感和利益点进行社交互动的选题。但由于正文完全缺失，其作为分析文章的价值极低，仅能反映出一种‘法律权益 vs 社交人情’的选题策略。核心实体为海底捞，属于餐饮行业的典型消费维权后续讨论。",
+  "summary_500": "该文章记录由于正文缺失，仅能通过标题‘海底捞10倍赔偿到账，要和朋友们平分么？’进行推断。其写作机制属于典型的‘场景化社交讨论’。通过引用一个极端的正面结果（10倍赔偿）和知名品牌（海底捞），迅速建立起读者的现实代入感。文章试图探讨的核心问题是：当个人维权行为产生的经济收益发生在集体消费场景中时，收益的归属权应遵循法律上的‘谁受损谁获赔’原则，还是社交上的‘见者有份’潜规则。这种冲突感是引发社交媒体高评论量的关键。然而，从内容完整度来看，此条目因缺乏具体论证、法律分析及正文支撑，被标记为低价值。它展示了一个优秀的互动选题如何通过简单的矛盾设置来吸引用户注意力，但无法提供深度的知识产出或方法论。建议作为社交互动的选题参考，而非深度写作的结构参考。对于餐饮品牌公关而言，此类话题也反映了品牌在消费者维权处理后的舆论衍生方向。"
+}

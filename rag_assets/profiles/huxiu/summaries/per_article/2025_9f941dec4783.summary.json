@@ -1,0 +1,103 @@
+{
+  "analysis_schema_version": 3,
+  "id": "9f941dec4783",
+  "year": "2025",
+  "date": "2025-03-06",
+  "title": "新能源绿色车牌，真的丑吗？",
+  "relative_path": "2025/2025-03-06_新能源绿色车牌，真的丑吗？.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\huxiu\\raw_materials\\2025\\2025-03-06_新能源绿色车牌，真的丑吗？.txt",
+  "char_count": 283,
+  "content_type": "话题短讯",
+  "entities": [
+    "新能源汽车",
+    "交通运输部"
+  ],
+  "industry": [
+    "汽车",
+    "工业设计"
+  ],
+  "topic": [
+    "新能源车牌",
+    "设计美学",
+    "大众审美"
+  ],
+  "genre": "议论性推文",
+  "style": [
+    "互动式",
+    "争议性"
+  ],
+  "audience": [
+    "新能源车主",
+    "潜在购车者",
+    "设计爱好者"
+  ],
+  "intent": [
+    "引导讨论",
+    "获取点击"
+  ],
+  "tone": [
+    "中立",
+    "询问"
+  ],
+  "primary_question": "新能源车专属的绿色渐变车牌是否符合大众审美？",
+  "thesis_type": "议题引导型",
+  "thesis_sentence": "本文针对新能源绿色车牌的视觉设计引发的审美争议进行探讨。",
+  "structure_pattern": "单一问题导向结构",
+  "section_functions": [
+    "提出审美争议点"
+  ],
+  "argument_moves": [
+    "利用审美直觉引发读者共鸣",
+    "通过反问激发评论区讨论"
+  ],
+  "core_argument": "新能源车牌的绿色渐变设计在审美上存在显著的极化评价。",
+  "key_points": [
+    "新能源车牌的颜色搭配争议",
+    "大众对‘绿牌’视觉效果的吐槽与接受度"
+  ],
+  "opening_pattern": "疑问句直接切入法",
+  "ending_pattern": "无（内容缺失）",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 0,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "中等",
+  "stance_strength": "弱",
+  "sentence_rhythm": "简促",
+  "abstraction_level": "具体",
+  "transferable_moves": [
+    "利用‘美丑’等高主观性话题提升社交媒体互动率",
+    "针对政策产物进行生活化审美拆解"
+  ],
+  "anti_patterns": [
+    "内容缺失（原文仅有标题和元数据）",
+    "标题党倾向（缺乏实质内容支持）"
+  ],
+  "notable_phrases": [
+    "新能源绿色车牌，真的丑吗？"
+  ],
+  "title_score": 65,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 0,
+  "structure_score": 5,
+  "style_score": 20,
+  "publishability_score": 5,
+  "quality_score": 10,
+  "reference_value_score": 15,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "is_advertorial": false,
+  "advertorial_type": "editorial",
+  "advertorial_confidence": 0,
+  "promotional_intensity_score": 0,
+  "editorial_independence_score": 100,
+  "brand_exposure_level": "低",
+  "source_transparency": "清晰",
+  "advertorial_signals": [],
+  "summary_200": "该内容仅包含标题及基本信息，缺乏完整正文。文章核心指向新能源汽车专属绿色车牌的审美争议，试图通过提问引发读者对工业设计与政策视觉符号的讨论。由于正文内容未提供，其信息密度和论证深度极低。",
+  "summary_500": "分析对象是一篇发布于2025年3月6日的微信推文。由于提供的语料中仅包含标题《新能源绿色车牌，真的丑吗？》及元数据（日期、链接、来源模式），而正文部分完全缺失，导致无法进行完整的结构化写作分析。从标题来看，该文属于典型的话题引导类内容，瞄准了新能源车主群体中长期存在的‘绿牌美丑’争议。在写作机制上，它采用了‘问题驱动’的逻辑，利用审美的主观性来吸引点击并试图引发评论区互动。然而，基于目前缺失正文的状态，该条目被标记为‘低价值’。除了标题具有一定的社交传播吸引力外，其在证据支持、逻辑论证和行业深度方面均无表现。建议获取完整正文后再行评估，以提炼其具体的论据特征和修辞手法。"
+}

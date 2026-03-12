@@ -1,0 +1,98 @@
+{
+  "analysis_schema_version": 3,
+  "id": "38dc8176d2e8",
+  "year": "2025",
+  "date": "2025-06-06",
+  "title": "如何看待高考前的“花式应援”？",
+  "relative_path": "2025/2025-06-06_如何看待高考前的“花式应援”？.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\huxiu\\raw_materials\\2025\\2025-06-06_如何看待高考前的“花式应援”？.txt",
+  "char_count": 285,
+  "content_type": "话题征集",
+  "entities": [],
+  "industry": [
+    "教育培训",
+    "社会文化"
+  ],
+  "topic": [
+    "高考",
+    "应援文化",
+    "社会心理"
+  ],
+  "genre": "互动短贴",
+  "style": [
+    "提问式",
+    "极简"
+  ],
+  "audience": [
+    "考生家长",
+    "教育工作者",
+    "社会大众"
+  ],
+  "intent": [
+    "引导讨论",
+    "互动社交"
+  ],
+  "tone": [
+    "中立",
+    "探究"
+  ],
+  "primary_question": "如何评价并看待高考前出现的各种“花式应援”现象？",
+  "thesis_type": "开放探讨型",
+  "thesis_sentence": "由于正文内容缺失，本文仅通过标题表达了对高考应援现象的关注与讨论意图。",
+  "structure_pattern": "提问式结构",
+  "section_functions": [
+    "提出核心议题"
+  ],
+  "argument_moves": [
+    "通过开放式提问引发受众思考"
+  ],
+  "core_argument": "文章仅提供议题，未给出明确的立场或核心论点。",
+  "key_points": [
+    "高考前存在“花式应援”现象",
+    "对该现象的社会评价征集"
+  ],
+  "opening_pattern": "直接提问",
+  "ending_pattern": "无",
+  "evidence_types": [],
+  "evidence_specificity_score": 0,
+  "data_density_score": 0,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "中距",
+  "stance_strength": "中立",
+  "sentence_rhythm": "简短单一",
+  "abstraction_level": "中等",
+  "transferable_moves": [
+    "利用热点时间节点（高考）发布互动话题",
+    "使用‘如何看待’类句式降低参与门槛"
+  ],
+  "anti_patterns": [
+    "只有标题没有内容",
+    "缺乏实质性分析",
+    "信息密度极低"
+  ],
+  "notable_phrases": [
+    "花式应援"
+  ],
+  "title_score": 65,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 0,
+  "structure_score": 10,
+  "style_score": 20,
+  "publishability_score": 5,
+  "quality_score": 10,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "is_advertorial": false,
+  "advertorial_type": "editorial",
+  "advertorial_confidence": 0,
+  "promotional_intensity_score": 0,
+  "editorial_independence_score": 100,
+  "brand_exposure_level": "无",
+  "source_transparency": "清晰",
+  "advertorial_signals": [],
+  "summary_200": "该内容仅为一个关于高考‘花式应援’的话题探讨标题，缺乏具体的正文论述、案例和深度分析。它反映了自媒体在特定热点节点（如高考前夕）通过简单提问来吸引读者关注和留言的互动策略。",
+  "summary_500": "本文实际上是一个极其简短的互动性条目。它在2025年高考前夕发布，标题为‘如何看待高考前的“花式应援”？’。从写作角度看，它采用了典型的‘如何看待’式开放问句，旨在利用社会热点话题触发读者的共鸣与参与。然而，由于提供的文本中完全缺失正文内容、论据支持及逻辑推导，该内容不具备成文价值。这种‘占位符’式的内容在商业分析中通常被视为低价值信息，仅具有社会心态观察的标签意义，无法作为深度写作或逻辑分析的参考。"
+}

@@ -1,0 +1,134 @@
+标题: 告别「AI脑萎缩」！Claude Code像健身私教一样逼你学编程
+日期: 2025-08-16
+链接: http://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652620536&idx=2&sn=7e255f33e2d104652742191a88efe677&chksm=f128b209c65f3b1fcc3d37817f72a2e45581b456a31a82f73fd582ed155ff0c7341d5c16bfe7#rd
+来源模式: wechat
+----------------------------------------
+
+新智元报道
+编辑：KingHZ
+【新智元导读】
+程序员教练来了——AI不再替你全写完代码！Claude Code刚刚推出的「做中学」模式，会在关键步骤停下来，让你亲手完成任务。这种反偷懒的AI，可能才是真正让人越用越聪明的秘密武器。
+你可能没意识到，AI正在悄悄偷走你的大脑！
+今年6月，
+MIT耗时4个月，公布了一项争议颇大的研究
+：
+短期里，AI让效率爆表
+；
+但长期里，它却让我们思考力退化，像肌肉长期不用一样逐渐萎缩
+。
+所谓「AI脑萎缩」，并非只是危言耸听，就像考试作弊，学生用AI取得好成绩，有什么意义？
+类似的AI滥用甚至「AI上瘾」，让AI巨头深陷技术伦理危机。对此，
+Claude Code上线了全新的「学习模式」。
+Claude还承诺：
+要把「学习模式」向所有人开放
+。
+在任何聊天中选择「学习型」沟通风格，Claude会引导用户掌握复杂概念，而不是直接给出答案。
+据说，Anthropic学的是ChatGPT的「学习模式」。
+在Anthropic专注AI+教育的Drew Bent，认为这种设计非常少见：
+这是首批为「用户长进」而生的编程智能体，不仅帮程序员更高效产出代码，还在过程中让用户变得更聪明。
+无论CS学生还是资深工程师，这个功能都会促使用户深入思考Claude协作生成的代码。
+Reasonote的联合创始人Ishan Paidhungat，认为这才是AI让用户变得更聪明的好应用。
+怎么用「学习模式」
+通过命令
+/output-style
+，Claude Code现在支持自定义「输出风格」。
+这次引入了两种新的输出风格，帮助学习者和开发者提升技能：
+解释型（Explanatory）
+：Claude会逐步讲解自己的推理过程。
+学习型（Learning）
+：用户和Claude轮流编写代码。
+选择「解释型」时，Claude会更深入地讲述它在做什么以及为什么这么做。这是
+轻量版（Lite）
+：在编码时给出教学式提示，帮你看清代码库脉络、最佳实践，以及不同实现方案的权衡。
+选择「学习型」风格时，Claude会偶尔停下来，让你动手完成一些待办任务。这是
+「做中学」模式（Learn-by-Doing）
+：Claude会在若干关键点
+暂停
+；它会在最需要你理解的地方插入
+TODO(human)
+标记。就像和一位导师结对编程一样，一边做项目一边提升技能。
+谁想的点子？
+Anthropic教育负责人Drew Bent提到，这个功能的灵感来自Anthropic与大学生的对话。
+学生们常提到「脑萎缩」：
+当他们只是直接复制粘贴聊天机器人的回答时，长期学习效果会变差。
+为了适配不同层次的程序员，Anthropic在Claude Code版本中力求平衡：既要照顾新手，也要对像他这样编程十多年的老手有帮助。
+这得益于Drew Bent和Dickson Tsai合作。
+目前，Dickson Tsai是Anthropic的
+AI
+研究工程师，负责为Claude处理图像与图文交错数据集
+两人最初结识于4年前。
+当时Dickson Tsai利用业余时间在schoolhouse.world（SHW）做志愿辅导，免费提供SAT辅导服务，而Drew Bent是这家在线同伴辅导平台的联创。
+去年，Dickson加入
+Anthropic
+，并把Drew Bent介绍给团队。不久， Drew Bent加入了
+Anthropic的另一个业务小组。
+两人尽管业务线不同，但一直在脑暴如何把教育学原则融入Anthropic的产品。
+如今，随着 Claude Code 的「学习模式」上线，这个愿景正在落地。
+怎么做到的？
+输出风格会直接修改Claude Code的系统提示词。
+非默认输出风格会移除Claude Code默认的、与代码生成和高效输出相关的指令（如简洁回答、测试验证代码等）。
+取而代之的是，指定输出风格会在系统提示词中加入各自的定制化指令。
+这与OpenAI的「学习模式」的原理一样。
+也就是说， 基于学习科学研究，编写的自定义系统指令驱动。
+OpenAI称这些指令深度支持一套核心的学习行为，包括：
+鼓励积极参与
+管理认知负荷
+主动培养元认知与自我反思
+激发好奇心
+提供可行且有支持性的反馈
+Claude  Code甚至还可以创建自定义输出风格——
+要在Claude的帮助下创建新输出风格，运行：
+/output-
+style
+:
+new
+I want an output style that ...
+默认情况下，通过
+/output-style:new
+创建的输出风格会以Markdown文件形式保存在用户级目录
+~/.claude/output-styles
+，可跨项目使用。
+结构如下：
+---
+name: My Custom Style
+description:
+A brief description
+of
+what this style does,
+to
+be displayed
+to
+the
+user
+---
+# Custom Style Instructions
+You
+are
+an interactive CLI tool that helps users
+with
+software engineering
+tasks. [Your custom instructions here...]
+##
+Specific
+Behaviors
+[
+Define
+how the assistant should behave
+in
+this style...]
+也可以手动创建输出风格Markdown文件，并保存在用户级目录（
+~/.claude/output-styles
+）或项目级目录（
+.claude/output-styles
+）中。
+与相关功能的对比
+输出风格会完全「关闭」 Claude Code 默认系统提示词中与软件工程相关的部分。
+输出风格直接影响主智能体循环，并且只会修改系统提示词。
+智能体则用于处理特定任务，并可包含额外设置，例如所用模型、可用工具以及调用场景的上下文信息。
+可以将输出风格理解为「保存的系统提示词」，而自定义斜杠命令则相当于「保存的提示词」。
+参考资料：
+https://www.engadget.com/ai/chatgpts-study-mode-will-guide-students-to-an-answer-stey-by-step-180614172.html
+https://www.linkedin.com/posts/drewbent_we-just-launched-a-learning-mode-for-claude-activity-7361805055970222080-N2j8/
+https://x.com/claudeai/status/1956038897793716228
+https://openai.com/index/chatgpt-study-mode/
+https://docs.anthropic.com/en/docs/claude-code/output-styles

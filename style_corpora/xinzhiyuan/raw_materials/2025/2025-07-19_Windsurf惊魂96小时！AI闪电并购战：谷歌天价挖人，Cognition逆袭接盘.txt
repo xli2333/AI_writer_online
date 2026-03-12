@@ -1,0 +1,69 @@
+标题: Windsurf惊魂96小时！AI闪电并购战：谷歌天价挖人，Cognition逆袭接盘
+日期: 2025-07-19
+链接: http://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652610703&idx=2&sn=317a6789ae65c3b2627b0eb0ddce7559&chksm=f128d47ec65f5d686cf3952647af2c2306b484995ab2398762ffaeba72873ca288d1e78ddad0#rd
+来源模式: wechat
+----------------------------------------
+
+新智元报道
+编辑：英智
+【新智元导读】
+一场突如其来的AI人才争夺战！从神秘会议闪电跳槽，谷歌如何用翻倍薪资和24亿美金协议，瞬间挖走Windsurf顶尖团队？
+7月伊始的一个周四，AI编程工具初创公司Windsurf的40多位研究员和工程师接到管理层的神秘邀请，齐聚加州山景城。
+结果一进会议室，谜底揭晓：Windsurf老板Varun Mohan旁边坐着谷歌的联合创始人Sergey Brin，谷歌AI大佬Demis Hassabis还视频连线参加了。
+谷歌是来挖人的，想让Windsurf的员工跳槽到谷歌DeepMind。
+为了吸引大家，谷歌开出的条件很诱人：薪酬直接翻倍，远超员工在Windsurf的股权价值。
+好多员工当场就签了合同，第二天（周五）就跑去谷歌DeepMind上班，离Windsurf办公室才8分钟车程。
+周五晚上，消息爆出，谷歌跟Windsurf签了个24亿美元的许可协议，大部分钱都进了股东的口袋。
+周一，Windsurf的剧情又有了新进展。
+另一家AI编程公司Cognition跳出来，宣布收购Windsurf剩下的资产，包括没有去谷歌报道的200来号员工。
+这笔交易的具体金额没公开，但据说好几家公司对Windsurf的「残余部队」感兴趣，对Windsurf抛了橄榄枝。
+谷歌、亚马逊、微软、Meta这些大厂忙着跟AI初创公司签协议，把顶尖人才收入囊中。
+与此同时，Meta还在跟其他公司抢明星AI研究员，开出的薪水高得吓人，有的甚至上亿美金。
+惊魂96小时
+Windsurf的这场「被追求」之旅可不平静。
+今年4月，传出OpenAI要以30亿美金收购Windsurf的消息。
+这家公司可是AI编程领域的明星，做的软件能帮程序员写代码、自动化操作、审查代码。
+据Cognition CEO Scott Wu周一给员工的邮件里说，Windsurf现在每年能赚8200万美金的稳定收入，客户包括350家企业和几十万日活跃用户。
+但OpenAI的收购谈着谈着就卡住了，主要是因为OpenAI跟微软的合作关系。
+按照协议，OpenAI得把Windsurf的技术共享给微软，这让Windsurf有点不爽。
+几个月过去了，OpenAI的收购没什么进展，Windsurf的员工在全员会上追问高管，他们却啥也不说，搞得大家云里雾里。
+雪上加霜的是，Windsurf又摊上事了。
+他们的AI编程工具部分依赖Anthropic的模型，但6月份，Anthropic突然掐断了Windsurf的模型使用权限。
+Anthropic自己也做编程工具，算是Windsurf的对手。
+Windsurf的产品性能因此大打折扣。
+Windsurf CEO在X上表示，他们通过其他方式绕道解决了模型问题，但成本涨了不少，运营也更复杂了。
+有人觉得，跟Anthropic的矛盾加上Cursor这种资金雄厚的对手带来的竞争压力，Windsurf得找个大靠山，帮他们搞到更多芯片，开发自己的AI模型。
+消失的员工
+OpenAI最终没能成为Windsurf的「真命天子」。
+据知情人透露，6月底，Windsurf开始跟谷歌谈合作。
+因为担心OpenAI得跟微软共享技术，Windsurf直接叫停了跟OpenAI的谈判，顺便还跟Meta聊了聊。
+谷歌动作很快，直接搞了个招聘加许可的协议，绕过了传统收购的麻烦审查。
+据知情人说，Windsurf账上还有1亿多美元现金，投资人包括Greenoaks Capital、Kleiner Perkins和General Catalyst。
+然而，没被邀请去酒店开会的Windsurf员工发现不对劲：办公室里好多工程师和研究员都不见了。
+周五一早，Windsurf CEO便跟剩下员工开了会，宣布谷歌要挖走部分员工，还签了个许可协议支付了费用。
+去谷歌的同事拿到了高薪+奖金，像是进了VIP通道；而留下来的人不仅被晾在了一边，而且
+未归属的股权也无法兑现。
+更让人不安的是，公司走了这么多技术大牛，客户很可能会觉得Windsurf现在只是个空壳，不值得信任。
+更好的未来
+不过，故事还没完。
+周五下午5点，「无缝」接手了这个烂摊子的新CEO Jeff Wang，开始马不停蹄地为公司剩下资产和员工谋求出路。
+对此表现出浓厚兴趣的，不仅有
+红杉资本支持的AI软件开发公司Factory，还有开发出了首个AI程序员Devin的
+Cognition。
+时间来到周一早上，
+Jeff Wang
+在慎重地权衡之后，决定跟Cognition签署协议。
+如果说谷歌想要的是招揽人才与技术许可，那么Cognition的收获则远不止于此——
+他们得到的，不仅涵盖了Windsurf的全部知识产权、产品线、品牌、运营体系，还有工程、产品和市场推广团队。
+随着
+Cognition的接手，Windsurf员工的
+未归属股权也得到了快速兑现。
+不仅如此，
+Windsurf的产品也将继续独立运营。
+难怪在
+新CEO在发
+给员工的邮件中这样说道：「Cognition是我们唯一怕过的对手，也是我们最佩服的团队，是带Windsurf走向下一阶段的最佳选择。」
+Cognition老板Scott Wu在给员工的邮件里，热情欢迎新加入的Windsurf同事。
+他写道：「每位新员工都会跟老员工一样，得到透明、公平的对待，我们非常尊重你们的能力和价值。从今天起，咱们就是一个团队，齐心协力往前冲！」
+参考资料：
+https://www.theinformation.com/articles/windsurf-whiplash-inside-96-hours-frantic-ai-dealmaking?rc=epv9gi

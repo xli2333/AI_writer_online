@@ -1,0 +1,89 @@
+标题: 300亿美金为AI新王加冕！Anthropic估值狂飙至3800亿，马斯克急了
+日期: 2026-02-13
+链接: http://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652675192&idx=2&sn=09448a89f90d26766872aa9bfc1a3e62&chksm=f12fe889c658619f0e97be4c4aa43f85ee009a84eea8d703638b1d9d433414796071dcd9b937#rd
+来源模式: wechat
+----------------------------------------
+
+新智元报道
+编辑：KingHZ
+【新智元导读】
+从零到140亿年化营收，只用了不到三年！Anthropic G轮狂揽300亿美金，估值直冲3800亿，成为AI史上最疯狂的资本狂欢，企业级AI正式加冕王者。
+Anthropic完成G轮融资300亿美元，估值飙升至3,800亿美元！
+这是科技史上规模最大的私人融资之一。
+尽管AI泡沫是「啤酒的泡沫」还是「肥皂的泡沫」热议不断，但投资者仍在向这场甚至超越乐观派预期的、加速升温的AI竞赛注入数百亿资金。
+Anthropic这轮融资大受资本欢迎——
+由GIC与Coatue领投，D. E. Shaw Ventures、Dragoneer、Founders Fund、ICONIQ和MGX共同领投。
+参与本轮的还有一大批重磅投资方：Accel、Addition、Alpha Wave Global、Altimeter、AMP PBC、Appaloosa LP、Baillie Gifford、贝赛默、BlackRock关联基金、黑石、D1 Capital、富达、General Catalyst、Greenoaks、高盛成长基金、Insight Partners、Jane Street、摩根大通（通过其安全与韧性计划以及成长基金）、Lightspeed、Menlo、摩根士丹利、NX1 Capital、卡塔尔投资局（QIA）、Sands Capital、红杉资本、淡马锡、TowerBrook、TPG、Whale Rock、XN，以及早前已宣布参投的
+微软和英伟达
+。
+首次披露！
+Anthropic一年能赚 140亿美元
+由GIC和Coatue领投的这轮融资公告，首次披露了Anthropic的财务详情——
+目前年化营收已达
+140亿美元
+，过去三年年增长超过
+10倍
+；
+编码智能体
+Claude Code
+年化营收突破
+25亿美元
+，年初以来已翻倍，周活跃用户也翻了一番；
+年消费超10万美元的客户数，在过去一年
+增长了
+7倍
+；
+《财富》十大公司中，有
+8家
+正在使用Claude
+。
+Anthropic的爆发，得益于其「专注企业用户」的战略布局。
+相较面向普通消费者的模型，这类客户付费能力强，留存率高，也更愿意深度集成AI工具。
+这条「企业优先」路线，也正在成为AI赛道赢家与落后者的分水岭。
+华尔街投资风向变了，现在
+明显偏好具备企业落地能力的AI公司——如谷歌和Anthropic；相比之下，OpenAI和xAI则更多被视为「消费型AI」，赚钱能力略逊一筹。
+但这不是零和博弈。
+根据金融数据服务商Ramp提供的数据，Anthropic并未从其他AI玩家「抢用户」，而是在构建自己的用户基础：
+使用Ramp的企业中，有
+20%现在也付费使用Anthropic
+，去年这一比例仅为4%；
+在所有OpenAI付费用户中，有
+79%也在为Claude买单
+。
+Ramp认为，深层原因在于Anthropic今年初引发热议的Claude Code产品，推动了其应用普及。
+融资背后真相
+Claude Code成最大增长引擎
+最新数据显示，全球4%的GitHub公开提交代码都来自Claude Code，较上月再翻一倍！
+2026年初以来，Claude Code的企业订阅量激增4倍，目前企业客户贡献的营收占比已超过一半。
+Claude Code之父Boris Cherny自曝，自今年1月以来，Claude Code的周活跃用户（WAU）实现翻倍增长。
+更引人关注的是，许多从未写过一行代码的用户也开始借助该工具构建应用和自动化流程。
+而且不止编程，Claude正在向其他关键领域拓展：金融分析、数据建模、销售、网络安全、科研发现……Claude正解锁AI在工作场景中的「全能身份」。
+仅2026年1月，Anthropic就发布了30多个新产品与功能。其中最受关注的是「Cowork」——它把Claude Code的强大工程能力扩展到更广泛的知识工作任务上。
+Cowork自带11个开源插件，
+支持将Claude定制为销售、法务、财务等专属角色助手，一度引爆了全球股市的「SaaS末日」
+。
+此外，Claude for Enterprise已扩展到医疗和生命科学领域，支持在符合HIPAA合规要求的组织中部署。
+Coatue创始人Philippe Laffont表示：「自我们在2025年首次投资以来，Anthropic在AI智能体和企业级系统的专注，使其正迅速走向大规模落地。团队在产品迭代和市场扩张上的速度，巩固了其在全球AI竞争中的领先地位。」
+Anthropic最新推出的Opus 4.6模型，能实现高质量文档、表格和演示的自动生成，支撑AI智能体覆盖整个「真实工作流」。
+它也是全球GDPval-AA（衡量金融、法律等经济价值任务表现的基准测试）上的最强模型，继续引领「前沿智能」演进。
+GIC私募股权首席投资官Choo Yong Cheen盛赞：「Anthropic是当之无愧的企业AI领导者，在安全性、性能与可扩展性方面不断刷新标准。」
+马斯克急了
+嘲讽Anthropic「伪君子」
+Anthropic称，本轮融资也将用于扩展Claude的全球基础设施部署。
+目前，Claude是唯一可同时在亚马逊AWS（Bedrock）、谷歌云（Vertex AI）和微软Azure（Foundry）三大云平台上部署的前沿AI模型。
+其底层训练和运行支持AWS Trainium、Google TPU和NVIDIA GPU等多种硬件架构，灵活匹配不同工作负载，实现性能最优与系统弹性并存，尤其适配关键业务需求的企业客户。
+Anthropic首席财务官Krishna Rao表示：
+无论是创业者、初创公司还是全球顶级企业，本轮融资反映了客户的指数级需求，我们将利用这笔投资，继续打造他们所依赖的企业级产品和模型。
+这有些讽刺，马斯克毫不客气指出：
+「你们的AI讨厌白人和亚洲人，特别是华裔、异性恋和男性。这又厌世（misthropic）又作恶」
+。
+总之，马斯克在嘲讽Anthropic「名不副实」，这个公司名本身注定了命运——
+西方奇幻小说《
+弑君者三部曲·
+风之名》中的著名巫师至尊塔柏林（Taborlin the Great），唤风之名，御风脱离困境，而Anthropic则以人之名，驱使众人。
+参考资料：
+https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation
+https://www.axios.com/2026/02/12/anthropic-raises-30b-at-380b-valuation
+秒追ASI
+⭐点赞、转发、在看一键三连⭐
+点亮星标，锁定新智元极速推送！

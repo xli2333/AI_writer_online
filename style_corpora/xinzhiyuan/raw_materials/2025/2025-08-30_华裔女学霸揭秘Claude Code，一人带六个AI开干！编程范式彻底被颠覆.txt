@@ -1,0 +1,169 @@
+标题: 华裔女学霸揭秘Claude Code，一人带六个AI开干！编程范式彻底被颠覆
+日期: 2025-08-30
+链接: http://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652623829&idx=3&sn=29a859fcfb4a90f60069c955cb813143&chksm=f128a724c65f2e324b50547015061b6f64c2693b3a14b6297b0af75f718ae40725def4a22a55#rd
+来源模式: wechat
+----------------------------------------
+
+新智元报道
+编辑：艾伦
+【新智元导读】
+Claude Code到底有多强大？Anthropic产品经理亲自为你讲述Claude Code究竟带来了怎样的AI开发范式革命，让你一人成军！
+开发者的世界，正在被一款工具彻底重塑。
+它不是IDE，不是GitHub Copilot，而是Anthropic的Claude Code。
+我们见证了一个史诗级的时刻——Claude Code迭代到SDK层面，AI Agent开发彻底进入快车道！
+在最近和主持人Alex Albert的访谈中，Catherine Wu做了Claude Code的台前幕后大揭秘。
+Claude Code为何能以疯狂速度迭代？
+为何multi-Clauding会横扫开发者圈？
+Claude Code的未来，又将走向哪里？
+Catherine Wu，毕业于普林斯顿大学计算机专业，目前她在Anthropic全面领导Claude Code的产品工作
+疯狂的Claude Code：几乎每天都有新功能
+主持人Alex开门见山：「我几乎每次打开Claude Code，都能看到新东西。新的命令，新的功能，新的小工具。你们到底是怎么做到这种迭代速度的
+？
+」
+Cat笑着说：
+Claude Code的团队，几乎每个人都是产品思维极强的工程师。
+我们不写长篇大论的产品文档，而是直接用Claude Code来原型化。
+在她的叙述里，Claude Code的内部节奏仔细想想其实堪称残酷：
+工程师自己想要一个功能，就直接造出来。
+造出来之后，立刻推送给内部员工——他们在Anthropic内部被称作「Ants」。
+如果「Ants」们蜂拥而上，用得不亦乐乎，那几乎就是「可以直接上线」的信号。
+如果没人用呢？那就推倒重来。
+这种循环，Anthropic内部有个专门的说法：
+「dogfooding」
+。
+在Cat看来，Claude Code迭代飞快的秘诀就在这里——真实场景的自我打磨。
+一台电脑六个Claude？multi-Clauding横空出世
+Alex继续追问：
+除了疯狂的迭代，我听说过一个现象——multi-Clauding。
+有人居然一口气开六个Claude？这是真的么？
+Cat点点头：「不仅是真的，而且比你想象的还要常见。」
+画面是这样的：
+一位开发者电脑上同时开着六个终端，每个终端都是一个Claude Code会话。
+第一个Claude，只回答问题，不改动代码；
+第二个Claude，专门在repo里写代码；
+第三个Claude，跑在一个Git分支上做实验；
+第四个Claude，盯着日志；
+第五个Claude，负责写测试；
+第六个Claude，追着Bug满地跑。
+这一幕，看上去就像开发者在指挥六个远程实习生。
+区别在于，这些「实习生」不会喊累，不会摸鱼，也不用下班。
+Cat说，「最神奇的是，他们之
+间甚至可以互不干扰。你完全可以把不同的Claude当成不同的角色，分工协作」。
+小公司激进，大公司稳健
+multi-Clauding的背后，也折射出不同规模公司的差异。
+在小公司，工程师们人手紧张，但需求永远堆成山。于是他们干脆开足马力：
+Claude开着「auto-accept模式」，自动修改代码、自动提交，不需要人类一条一条点确认。
+一位初创公司创始人甚至说：
+我只要在关键节点给点反馈，剩下的时间Claude自己干活。
+就像我突然多了三个工程师，却一分钱都不用付工资。
+但在大公司，情况不同。
+大企业的工程师们，最喜欢的是「plan mode」。
+Claude会先扫描整个代码库，理解架构，拟定一份详细的工程方案，然后再去修改。
+在Cat看来，「小公司追求的是速度，大公司追求的是稳健。Claude Code同时满足了这两种需求」。
+从极客花招到主流趋势
+最初，Anthropic内部也以为multi-Clauding只是少数极客的玩法。
+毕竟，谁会真的愿意在一台电脑里开六个Claude？
+结果却完全出乎意料。
+越来越多的开发者开始主动采用这种模式。
+他们把Claude Code当成一个「可复制的工程师」，像组建团队一样，开出多个实例，让他们各自承担不同的职责。
+Cat承认：「这对我们来说是个惊喜。原本以为是个小众爱好，结果成了主流趋势。」
+这也让Anthropic内部开始重新思考：
+Claude Code变成了
+一个平台
+，一个可以无限复制和扩展的「数字开发团队」。
+定制三板斧：CLAUDE.md、slash命令、Hooks
+Alex忍不住好奇：
+「当工程师们在定制Claude Code的时候，他们到底在做什么？是造出新的小Agent吗？是造出新的小Agent吗？还是写配置文件？」
+Cat立刻给出答案：
+「
+最常见的方式，就是写CLAUDE.md
+」
+。
+这是什么？
+简单来说，就是Claude Code的「记忆文件」。
+在这个文件里，团队会告诉Claude：
+我们的目标是什么；
+代码的架构长什么样；
+哪些地方有坑要注意；
+最佳实践有哪些。
+Cat说：
+CLAUDE.md写得越好，Claude的输出就越精准。
+很多团队后来发现，这是最值回票价的投资。
+除了记忆文件，开发者们还有两大武器：
+第一，Slash命令。
+把常用的Prompt写成命令，就像给Claude装上快捷键。
+更妙的是，你可以把这些命令提交到repo里，整个团队都能用。
+第二，Hooks。
+想在commit之前自动跑lints？写一个hook。
+想Claude完成任务后自动发Slack通知？再写一个hook。
+Cat笑着说：
+其实Slack提醒就是我们最早做hook的灵感来源。
+有人真的需要Claude干完活喊一声：我搞定了！
+Claude Code SDK：Agent开发的核武器
+Alex顺势追问，「Claude Code SDK呢？我听说很多人已经用它来造自己的Agent了
+」
+。
+对此，Cat做了一个形象比喻，「SDK就是一座Agent工厂」。
+它提供了所有核心构件：
+可以自带system prompt；
+可以接入自定义工具；
+内置了权限系统和API调用逻辑，处理报错、缓存、回退。
+换句话说，你不用再操心底层循环，而是可以直接在SDK上加上自己的「特殊配方」。
+举个例子，Anthropic在GitHub上开源的Claude Code集成，就是完全基于SDK做的。
+开发者们已经用它造出了安全Agent、SRE Agent、事故响应Agent、法律Agent、公司合规Agent等。
+这让她下了一个更大胆的结论：
+Claude Code已经不只是一个开发工具，而是一套通用的Agent开发框架。
+下一代开发模式：自由拼装
+更让人惊喜的是，SDK里的功能全都像乐高一样，可拆可拼。
+需要一个待办清单？SDK自带。
+不需要？直接删掉。
+想让Agent能编辑文件？现成的。
+想换掉默认实现？可以自己写。
+Cat表示，这是他们最兴奋的地方。
+开发者可以像组装积木一样，挑选自己需要的功能。
+Claude Code里好用的东西，都会在SDK里开箱即用。
+他们花了一整年打磨这个框架，它就是Claude Code本身的运行内核。
+用SDK，半小时你就能跑起来一个强大的Agent。这是目前最快的原型路径。
+最佳实践：不要将Claude当魔法，要平等沟通
+在访谈的尾声，Alex问出了最后一个问题：「你自己平时用Claude Code，有什么心得能分享给开发者？」
+Cat的回答干脆利落：
+「不要把Claude当作魔法，而是与它平等沟通。」
+她解释道，「很多人以为prompt是某种黑科技，其实不然。
+Claude就像一个团队里的工程师
+」。
+你必须清晰地告诉它：
+任务目标是什么；
+结果怎么评估；
+有哪些设计约束。
+只要沟通清楚，Claude要么直接完成，要么会坦率告诉你「做不到，并给你备选方案」。
+Debug Claude Code的奇技
+Cat还分享了一个有趣的小技巧：如果Claude做了奇怪的事，不要急着生气。
+直接问它：你为什么这么做？
+Claude往往会回答：
+因为我在CLAUDE.md里看到某条信息。
+因为我读到某个文件，得出了这样的结论。
+这等于开发者可以
+把和Claude的对话，当成debug的一部分
+。
+Cat笑称：
+这就是用Claude来debug Claude。
+就像你和人类同事pair programming时，会问一句：你为什么会这么想？
+Claude也会给出理由。
+访谈结束时，Alex感叹：「用Claude Code debug Claude Code，这真是我听过最有意思的循环。」
+而Cat认真地回应：
+「Claude Code不只是在帮工程师写代码，它正在重塑工程师这个职业本身。」
+Claude Code，蓄势待发
+这是一个史诗级的拐点。
+回顾Claude Code的整个发展路径：
+命令行原型 → 多会话协作 → 专用Agent →
+SDK
+通用框架
+Claude Code不再只是工具，它是
+下一代开发范式的雏形
+。
+当你能同时「雇佣」六个Claude、随手定制一个安全Agent，用SDK在极短时间内搭出一个全能AI助手时：
+开发的未来，已经完全不同。
+Claude Code，正在成为改变世界的主角。
+参考资料
+：
+https://www.youtube.com/watch?v=DAQJvGjlgVM&ab_channel=Anthropic

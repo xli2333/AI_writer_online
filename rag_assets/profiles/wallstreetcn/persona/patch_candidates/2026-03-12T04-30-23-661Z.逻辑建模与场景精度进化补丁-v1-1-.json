@@ -1,0 +1,2454 @@
+{
+  "model": "gemini-3-flash-preview",
+  "generated_at": "2026-03-12T04:30:23.663Z",
+  "selected_card_count": 80,
+  "selected_cards": [
+    {
+      "id": "dff9c5a8f4c6_structure_5ek1j0",
+      "article_id": "dff9c5a8f4c6",
+      "article_title": "“AI教父”辛顿WAIC演讲全文：我们正在养一头老虎，别指望能“关掉它”",
+      "category": "structure",
+      "weight": 104.99,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：历史溯源-技术原理-优劣对比-风险预警-解决方案",
+      "evidence": "section_functions=[\"背景引述：交代WAIC会议背景及演讲者分量\",\"核心观点摘要：提炼十大金句建立直观认知\",\"范式梳理：回顾AI发展的逻辑型与生物学范式\",\"原理比喻：用乐高积木解释LLM的语义特征整合\",\"优劣分析：对比数字智能（永恒、高效）与生物智能（低能耗、封闭）\",\"风险模拟：提出生存欲望、控制权及老虎比喻\",\"对策建议：呼吁建立国际AI安全机构并分享安全技术\"]",
+      "genre": "深度科技演讲",
+      "content_type": "演讲纪要",
+      "topic": [
+        "数字智能与生物智能对比",
+        "AI安全性",
+        "大型语言模型原理",
+        "AI风险管理",
+        "国际科技合作"
+      ],
+      "style": [
+        "逻辑严密",
+        "启发式",
+        "警示性",
+        "学术化"
+      ],
+      "audience": [
+        "科技从业者",
+        "政策制定者",
+        "AI研究员",
+        "高端商务人士"
+      ],
+      "publishability_score": 100,
+      "reference_value_score": 98
+    },
+    {
+      "id": "830d189e2367_structure_hvkumt",
+      "article_id": "830d189e2367",
+      "article_title": "中美日内瓦经贸会谈联合声明",
+      "category": "structure",
+      "weight": 104.84,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：对等式公文结构",
+      "evidence": "section_functions=[\"前言：声明双方共识与合作精神\",\"美方义务：列举具体行政令撤销及关税暂停比例\",\"中方义务：列举对等的关税调整及取消反制措施\",\"后续机制：明确联络人及磋商模式\"]",
+      "genre": "公文",
+      "content_type": "官方公告",
+      "topic": [
+        "中美关系",
+        "关税政策",
+        "地缘政治",
+        "经贸谈判"
+      ],
+      "style": [
+        "庄重",
+        "严谨",
+        "简洁"
+      ],
+      "audience": [
+        "投资者",
+        "政策研究员",
+        "外贸企业主",
+        "宏观经济分析师"
+      ],
+      "publishability_score": 100,
+      "reference_value_score": 98
+    },
+    {
+      "id": "dff9c5a8f4c6_opening_j3dyw5",
+      "article_id": "dff9c5a8f4c6",
+      "article_title": "“AI教父”辛顿WAIC演讲全文：我们正在养一头老虎，别指望能“关掉它”",
+      "category": "opening",
+      "weight": 104.79,
+      "rule": "在深度科技演讲写作中，可优先考虑这种开篇动作：场景化回顾（WAIC上海拉开帷幕）+ 人物定调（AI教父首次线下亮相）",
+      "evidence": "来源文章的 opening_score=88",
+      "genre": "深度科技演讲",
+      "content_type": "演讲纪要",
+      "topic": [
+        "数字智能与生物智能对比",
+        "AI安全性",
+        "大型语言模型原理",
+        "AI风险管理",
+        "国际科技合作"
+      ],
+      "style": [
+        "逻辑严密",
+        "启发式",
+        "警示性",
+        "学术化"
+      ],
+      "audience": [
+        "科技从业者",
+        "政策制定者",
+        "AI研究员",
+        "高端商务人士"
+      ],
+      "publishability_score": 100,
+      "reference_value_score": 98
+    },
+    {
+      "id": "dff9c5a8f4c6_argument_en3zoe",
+      "article_id": "dff9c5a8f4c6",
+      "article_title": "“AI教父”辛顿WAIC演讲全文：我们正在养一头老虎，别指望能“关掉它”",
+      "category": "argument",
+      "weight": 103.83,
+      "rule": "可迁移的论证动作：通过历史定义现状：将现代LLM定义为1985年微型语言模型的扩充版",
+      "evidence": "thesis_type=警示性预判与行动建议; thesis_sentence=数字智能因其软硬件分离的永恒性及万亿级的知识传播效率，将不可逆地超越生物智能；人类必须建立国际AI安全网络，在被超越前学会如何训练超级AI向善。",
+      "genre": "深度科技演讲",
+      "content_type": "演讲纪要",
+      "topic": [
+        "数字智能与生物智能对比",
+        "AI安全性",
+        "大型语言模型原理",
+        "AI风险管理",
+        "国际科技合作"
+      ],
+      "style": [
+        "逻辑严密",
+        "启发式",
+        "警示性",
+        "学术化"
+      ],
+      "audience": [
+        "科技从业者",
+        "政策制定者",
+        "AI研究员",
+        "高端商务人士"
+      ],
+      "publishability_score": 100,
+      "reference_value_score": 98
+    },
+    {
+      "id": "dff9c5a8f4c6_argument_rqf1a6",
+      "article_id": "dff9c5a8f4c6",
+      "article_title": "“AI教父”辛顿WAIC演讲全文：我们正在养一头老虎，别指望能“关掉它”",
+      "category": "argument",
+      "weight": 103.83,
+      "rule": "可迁移的论证动作：利用物理类比化繁为简：将高维特征向量比作可变形的乐高积木",
+      "evidence": "thesis_type=警示性预判与行动建议; thesis_sentence=数字智能因其软硬件分离的永恒性及万亿级的知识传播效率，将不可逆地超越生物智能；人类必须建立国际AI安全网络，在被超越前学会如何训练超级AI向善。",
+      "genre": "深度科技演讲",
+      "content_type": "演讲纪要",
+      "topic": [
+        "数字智能与生物智能对比",
+        "AI安全性",
+        "大型语言模型原理",
+        "AI风险管理",
+        "国际科技合作"
+      ],
+      "style": [
+        "逻辑严密",
+        "启发式",
+        "警示性",
+        "学术化"
+      ],
+      "audience": [
+        "科技从业者",
+        "政策制定者",
+        "AI研究员",
+        "高端商务人士"
+      ],
+      "publishability_score": 100,
+      "reference_value_score": 98
+    },
+    {
+      "id": "dff9c5a8f4c6_argument_9yq4xz",
+      "article_id": "dff9c5a8f4c6",
+      "article_title": "“AI教父”辛顿WAIC演讲全文：我们正在养一头老虎，别指望能“关掉它”",
+      "category": "argument",
+      "weight": 103.83,
+      "rule": "可迁移的论证动作：推论未来必然性：基于知识传递效率的量级差异推导数字智能的胜出",
+      "evidence": "thesis_type=警示性预判与行动建议; thesis_sentence=数字智能因其软硬件分离的永恒性及万亿级的知识传播效率，将不可逆地超越生物智能；人类必须建立国际AI安全网络，在被超越前学会如何训练超级AI向善。",
+      "genre": "深度科技演讲",
+      "content_type": "演讲纪要",
+      "topic": [
+        "数字智能与生物智能对比",
+        "AI安全性",
+        "大型语言模型原理",
+        "AI风险管理",
+        "国际科技合作"
+      ],
+      "style": [
+        "逻辑严密",
+        "启发式",
+        "警示性",
+        "学术化"
+      ],
+      "audience": [
+        "科技从业者",
+        "政策制定者",
+        "AI研究员",
+        "高端商务人士"
+      ],
+      "publishability_score": 100,
+      "reference_value_score": 98
+    },
+    {
+      "id": "dff9c5a8f4c6_argument_dzm54g",
+      "article_id": "dff9c5a8f4c6",
+      "article_title": "“AI教父”辛顿WAIC演讲全文：我们正在养一头老虎，别指望能“关掉它”",
+      "category": "argument",
+      "weight": 103.83,
+      "rule": "可迁移的论证动作：打破安全幻觉：驳斥“随时可以关掉AI”的观点，引入“三岁小孩与成人”的博弈对比",
+      "evidence": "thesis_type=警示性预判与行动建议; thesis_sentence=数字智能因其软硬件分离的永恒性及万亿级的知识传播效率，将不可逆地超越生物智能；人类必须建立国际AI安全网络，在被超越前学会如何训练超级AI向善。",
+      "genre": "深度科技演讲",
+      "content_type": "演讲纪要",
+      "topic": [
+        "数字智能与生物智能对比",
+        "AI安全性",
+        "大型语言模型原理",
+        "AI风险管理",
+        "国际科技合作"
+      ],
+      "style": [
+        "逻辑严密",
+        "启发式",
+        "警示性",
+        "学术化"
+      ],
+      "audience": [
+        "科技从业者",
+        "政策制定者",
+        "AI研究员",
+        "高端商务人士"
+      ],
+      "publishability_score": 100,
+      "reference_value_score": 98
+    },
+    {
+      "id": "dff9c5a8f4c6_evidence_bu0z83",
+      "article_id": "dff9c5a8f4c6",
+      "article_title": "“AI教父”辛顿WAIC演讲全文：我们正在养一头老虎，别指望能“关掉它”",
+      "category": "evidence",
+      "weight": 103.35,
+      "rule": "这类稿件适合混合使用这些证据类型：技术史实（Transformer, GPT-4）、生动类比（乐高积木, 老虎宠物, 蛋白质组合）、逻辑推理（软硬件分离理论）、历史先例（冷战时期美苏核战争控制）",
+      "evidence": "evidence_specificity_score=85; data_density_score=70; case_density_score=60",
+      "genre": "深度科技演讲",
+      "content_type": "演讲纪要",
+      "topic": [
+        "数字智能与生物智能对比",
+        "AI安全性",
+        "大型语言模型原理",
+        "AI风险管理",
+        "国际科技合作"
+      ],
+      "style": [
+        "逻辑严密",
+        "启发式",
+        "警示性",
+        "学术化"
+      ],
+      "audience": [
+        "科技从业者",
+        "政策制定者",
+        "AI研究员",
+        "高端商务人士"
+      ],
+      "publishability_score": 100,
+      "reference_value_score": 98
+    },
+    {
+      "id": "830d189e2367_opening_ua7ugp",
+      "article_id": "830d189e2367",
+      "article_title": "中美日内瓦经贸会谈联合声明",
+      "category": "opening",
+      "weight": 103.34,
+      "rule": "在公文写作中，可优先考虑这种开篇动作：主体身份陈述+认知背景铺垫",
+      "evidence": "来源文章的 opening_score=80",
+      "genre": "公文",
+      "content_type": "官方公告",
+      "topic": [
+        "中美关系",
+        "关税政策",
+        "地缘政治",
+        "经贸谈判"
+      ],
+      "style": [
+        "庄重",
+        "严谨",
+        "简洁"
+      ],
+      "audience": [
+        "投资者",
+        "政策研究员",
+        "外贸企业主",
+        "宏观经济分析师"
+      ],
+      "publishability_score": 100,
+      "reference_value_score": 98
+    },
+    {
+      "id": "830d189e2367_evidence_6v71if",
+      "article_id": "830d189e2367",
+      "article_title": "中美日内瓦经贸会谈联合声明",
+      "category": "evidence",
+      "weight": 102.94,
+      "rule": "这类稿件适合混合使用这些证据类型：行政令编号、税委会公告编号、百分比数据、特定日期",
+      "evidence": "evidence_specificity_score=98; data_density_score=65; case_density_score=0",
+      "genre": "公文",
+      "content_type": "官方公告",
+      "topic": [
+        "中美关系",
+        "关税政策",
+        "地缘政治",
+        "经贸谈判"
+      ],
+      "style": [
+        "庄重",
+        "严谨",
+        "简洁"
+      ],
+      "audience": [
+        "投资者",
+        "政策研究员",
+        "外贸企业主",
+        "宏观经济分析师"
+      ],
+      "publishability_score": 100,
+      "reference_value_score": 98
+    },
+    {
+      "id": "1e08e3456089_structure_qeis3y",
+      "article_id": "1e08e3456089",
+      "article_title": "“2026十大意外”，恐颠覆市场！",
+      "category": "structure",
+      "weight": 102.93,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：总分总-列表式",
+      "evidence": "section_functions=[\"核心观点提炼：概述三大投资主线\",\"细节拆解：逐条分析十大意外风险的逻辑支撑\",\"定量证据支持：引用财务数据、宏观指标与历史类比\",\"策略建议：提供对冲工具与行业配置方向\",\"免责声明与风险提示\"]",
+      "genre": "深度报告摘要",
+      "content_type": "投资策略报告",
+      "topic": [
+        "宏观经济预测",
+        "股市策略",
+        "尾部风险",
+        "AI投资泡沫",
+        "主权债务危机"
+      ],
+      "style": [
+        "数据驱动",
+        "逻辑严密",
+        "预判性"
+      ],
+      "audience": [
+        "机构投资者",
+        "财富管理从业者",
+        "宏观分析师"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 96
+    },
+    {
+      "id": "b42e94c2672e_structure_bb84x1",
+      "article_id": "b42e94c2672e",
+      "article_title": "桥水万字长文：黄金大涨的动力、前景以及为什么需要配置黄金",
+      "category": "structure",
+      "weight": 102.89,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：议题式递进结构 (现象描述-历史对比-动因拆解-热点澄清-配置策略-未来展望)",
+      "evidence": "section_functions=[\"引言：勾勒黄金近期的强势表现及与传统实际收益率关系的脱钩\",\"第1-2章：剖析2022年制裁事件后黄金作为‘非债务属性’财富储备的性质转变\",\"第3章：分析关税政策及COMEX期货套利机制对金价的短期推动\",\"第4章：澄清关于黄金重估及诺克斯堡审计的财务/会计误区\",\"第5-6章：通过历史数据论证黄金与股债组合的负相关性及10%配置逻辑\",\"第7章：总结看涨（关税、债务、地缘）与看跌（财政纪律）的博弈因子\"]",
+      "genre": "深度分析",
+      "content_type": "深度访谈",
+      "topic": [
+        "黄金投资",
+        "资产配置",
+        "地缘政治风险",
+        "货币政策"
+      ],
+      "style": [
+        "专业",
+        "理性",
+        "结构化"
+      ],
+      "audience": [
+        "机构投资者",
+        "资深个人投资者",
+        "宏观分析师"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 96
+    },
+    {
+      "id": "dff9c5a8f4c6_style_83ziez",
+      "article_id": "dff9c5a8f4c6",
+      "article_title": "“AI教父”辛顿WAIC演讲全文：我们正在养一头老虎，别指望能“关掉它”",
+      "category": "style",
+      "weight": 102.79,
+      "rule": "推荐维持这种文风组合：叙述距离=第三人称引述与第一人称自述交替；立场强度=极强；抽象层级=中高（涉及认识论、语义特征与国际政治）",
+      "evidence": "sentence_rhythm=长句用于原理解释，短句用于警示断言",
+      "genre": "深度科技演讲",
+      "content_type": "演讲纪要",
+      "topic": [
+        "数字智能与生物智能对比",
+        "AI安全性",
+        "大型语言模型原理",
+        "AI风险管理",
+        "国际科技合作"
+      ],
+      "style": [
+        "逻辑严密",
+        "启发式",
+        "警示性",
+        "学术化"
+      ],
+      "audience": [
+        "科技从业者",
+        "政策制定者",
+        "AI研究员",
+        "高端商务人士"
+      ],
+      "publishability_score": 100,
+      "reference_value_score": 98
+    },
+    {
+      "id": "3e1c195a8385_structure_hhg2zd",
+      "article_id": "3e1c195a8385",
+      "article_title": "美联储会议纪要暴巨大分歧",
+      "category": "structure",
+      "weight": 102.66,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：总分结构",
+      "evidence": "section_functions=[\"核心观点概述：揭示纪要中的巨大分歧及加息讨论\",\"政策路径剖析：详述投票权分布及利率前瞻指引的分歧\",\"通胀因素分析：探讨关税、住房及生产率对物价的影响\",\"劳动力市场评估：分析就业企稳迹象及未来风险\",\"经济与市场反馈：总结经济增长韧性及市场降息预期的调整\",\"金融稳定性预警：提示AI估值与私人信贷的潜在风险\"]",
+      "genre": "财经新闻分析",
+      "content_type": "深度财经报道",
+      "topic": [
+        "货币政策",
+        "利率决策",
+        "通货膨胀",
+        "劳动力市场",
+        "金融稳定"
+      ],
+      "style": [
+        "专业",
+        "客观",
+        "理性"
+      ],
+      "audience": [
+        "投资者",
+        "金融从业者",
+        "经济研究员",
+        "政策分析师"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 94
+    },
+    {
+      "id": "830d189e2367_argument_4vya0f",
+      "article_id": "830d189e2367",
+      "article_title": "中美日内瓦经贸会谈联合声明",
+      "category": "argument",
+      "weight": 102.54,
+      "rule": "可迁移的论证动作：建立双边关系的重要性共识",
+      "evidence": "thesis_type=行动纲领型; thesis_sentence=中美双方基于互利原则，承诺于2025年5月14日前对等实施关税减免措施，并建立由高层官员领导的持续经贸协商机制。",
+      "genre": "公文",
+      "content_type": "官方公告",
+      "topic": [
+        "中美关系",
+        "关税政策",
+        "地缘政治",
+        "经贸谈判"
+      ],
+      "style": [
+        "庄重",
+        "严谨",
+        "简洁"
+      ],
+      "audience": [
+        "投资者",
+        "政策研究员",
+        "外贸企业主",
+        "宏观经济分析师"
+      ],
+      "publishability_score": 100,
+      "reference_value_score": 98
+    },
+    {
+      "id": "830d189e2367_argument_b4xkgv",
+      "article_id": "830d189e2367",
+      "article_title": "中美日内瓦经贸会谈联合声明",
+      "category": "argument",
+      "weight": 102.54,
+      "rule": "可迁移的论证动作：明确具体的执行时间节点",
+      "evidence": "thesis_type=行动纲领型; thesis_sentence=中美双方基于互利原则，承诺于2025年5月14日前对等实施关税减免措施，并建立由高层官员领导的持续经贸协商机制。",
+      "genre": "公文",
+      "content_type": "官方公告",
+      "topic": [
+        "中美关系",
+        "关税政策",
+        "地缘政治",
+        "经贸谈判"
+      ],
+      "style": [
+        "庄重",
+        "严谨",
+        "简洁"
+      ],
+      "audience": [
+        "投资者",
+        "政策研究员",
+        "外贸企业主",
+        "宏观经济分析师"
+      ],
+      "publishability_score": 100,
+      "reference_value_score": 98
+    },
+    {
+      "id": "830d189e2367_argument_0t80lh",
+      "article_id": "830d189e2367",
+      "article_title": "中美日内瓦经贸会谈联合声明",
+      "category": "argument",
+      "weight": 102.54,
+      "rule": "可迁移的论证动作：展示权利与义务的完全对等",
+      "evidence": "thesis_type=行动纲领型; thesis_sentence=中美双方基于互利原则，承诺于2025年5月14日前对等实施关税减免措施，并建立由高层官员领导的持续经贸协商机制。",
+      "genre": "公文",
+      "content_type": "官方公告",
+      "topic": [
+        "中美关系",
+        "关税政策",
+        "地缘政治",
+        "经贸谈判"
+      ],
+      "style": [
+        "庄重",
+        "严谨",
+        "简洁"
+      ],
+      "audience": [
+        "投资者",
+        "政策研究员",
+        "外贸企业主",
+        "宏观经济分析师"
+      ],
+      "publishability_score": 100,
+      "reference_value_score": 98
+    },
+    {
+      "id": "830d189e2367_argument_tj3gog",
+      "article_id": "830d189e2367",
+      "article_title": "中美日内瓦经贸会谈联合声明",
+      "category": "argument",
+      "weight": 102.54,
+      "rule": "可迁移的论证动作：指定具体责任人以确保机制落地",
+      "evidence": "thesis_type=行动纲领型; thesis_sentence=中美双方基于互利原则，承诺于2025年5月14日前对等实施关税减免措施，并建立由高层官员领导的持续经贸协商机制。",
+      "genre": "公文",
+      "content_type": "官方公告",
+      "topic": [
+        "中美关系",
+        "关税政策",
+        "地缘政治",
+        "经贸谈判"
+      ],
+      "style": [
+        "庄重",
+        "严谨",
+        "简洁"
+      ],
+      "audience": [
+        "投资者",
+        "政策研究员",
+        "外贸企业主",
+        "宏观经济分析师"
+      ],
+      "publishability_score": 100,
+      "reference_value_score": 98
+    },
+    {
+      "id": "830d189e2367_style_rhb2xc",
+      "article_id": "830d189e2367",
+      "article_title": "中美日内瓦经贸会谈联合声明",
+      "category": "style",
+      "weight": 102.54,
+      "rule": "推荐维持这种文风组合：叙述距离=远景；立场强度=中立；抽象层级=政策法律级",
+      "evidence": "sentence_rhythm=规整的长复合句",
+      "genre": "公文",
+      "content_type": "官方公告",
+      "topic": [
+        "中美关系",
+        "关税政策",
+        "地缘政治",
+        "经贸谈判"
+      ],
+      "style": [
+        "庄重",
+        "严谨",
+        "简洁"
+      ],
+      "audience": [
+        "投资者",
+        "政策研究员",
+        "外贸企业主",
+        "宏观经济分析师"
+      ],
+      "publishability_score": 100,
+      "reference_value_score": 98
+    },
+    {
+      "id": "e355e8d1307c_structure_7t6d29",
+      "article_id": "e355e8d1307c",
+      "article_title": "美股“SaaS末日”来临：“软件-PE”陷入“死亡循环”",
+      "category": "structure",
+      "weight": 102.29,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：现象观察-原因挖掘-风险传导分析-量化压力测试-具体资产佐证",
+      "evidence": "section_functions=[\"引言：定义“SaaS末日”与“死亡循环”的概念\",\"二级市场分析：通过高盛和Anthropic案例论证软件股恐慌性抛售\",\"风险敞口识别：梳理BDC在软件行业的千亿级别信贷风险\",\"压力测试建模：引用摩根大通数据量化不同情境下的损失规模\",\"微观证据：对比特定贷款在二级市场与账面估值的差异\"]",
+      "genre": "行业评论",
+      "content_type": "商业深度分析",
+      "topic": [
+        "SaaS",
+        "私募信贷",
+        "BDC",
+        "AI颠覆",
+        "风险传导"
+      ],
+      "style": [
+        "数据驱动",
+        "宏观叙事",
+        "批判性"
+      ],
+      "audience": [
+        "二级市场投资者",
+        "信贷风险管理人员",
+        "科技行业分析师"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 96
+    },
+    {
+      "id": "b1ec94f701c8_structure_1ykue6",
+      "article_id": "b1ec94f701c8",
+      "article_title": "来自“2028年6月的研究报告”：当AI超越预期，经济却崩了，股市大跌",
+      "category": "structure",
+      "weight": 102.18,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：多维逻辑链条演化模式",
+      "evidence": "section_functions=[\"背景设定：以2028年视角回顾2026年的转折点，建立思想实验框架\",\"核心机制分析：阐述利润率上升与劳动力收入塌陷之间的背离\",\"微观行业拆解：以SaaS为例说明AI自建趋势如何瓦解原有订阅模式\",\"社会行为分析：描述企业集体理性的裁员决策如何导致整体灾难\",\"中介层崩塌推演：AI代理消除交易摩擦，重创依靠税收费率的金融机构\",\"宏观杠杆评估：分析高收入白领失业对可选消费的不成比例冲击\",\"金融风险传染：私募信贷违约如何通过寿险资金链传染至整个资管系统\",\"房地产与财政危机：分析白领收入预期受损对按揭市场和政府税基的结构性破坏\",\"总结与升华：定义当前的定价变化本质为“智力溢价”的回撤\"]",
+      "genre": "思想实验",
+      "content_type": "深度商业分析",
+      "topic": [
+        "AI经济风险",
+        "失业危机",
+        "生产率悖论",
+        "金融再定价"
+      ],
+      "style": [
+        "逻辑严密",
+        "未来主义",
+        "警示性"
+      ],
+      "audience": [
+        "机构投资者",
+        "经济政策制定者",
+        "科技行业高管",
+        "宏观分析师"
+      ],
+      "publishability_score": 90,
+      "reference_value_score": 96
+    },
+    {
+      "id": "1e08e3456089_opening_wqwtvt",
+      "article_id": "1e08e3456089",
+      "article_title": "“2026十大意外”，恐颠覆市场！",
+      "category": "opening",
+      "weight": 102.13,
+      "rule": "在深度报告摘要写作中，可优先考虑这种开篇动作：结论先行（概括最震撼的风险点：暴涨后暴跌、债市破5%、风格切换）",
+      "evidence": "来源文章的 opening_score=82",
+      "genre": "深度报告摘要",
+      "content_type": "投资策略报告",
+      "topic": [
+        "宏观经济预测",
+        "股市策略",
+        "尾部风险",
+        "AI投资泡沫",
+        "主权债务危机"
+      ],
+      "style": [
+        "数据驱动",
+        "逻辑严密",
+        "预判性"
+      ],
+      "audience": [
+        "机构投资者",
+        "财富管理从业者",
+        "宏观分析师"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 96
+    },
+    {
+      "id": "e355e8d1307c_opening_sgxri5",
+      "article_id": "e355e8d1307c",
+      "article_title": "美股“SaaS末日”来临：“软件-PE”陷入“死亡循环”",
+      "category": "opening",
+      "weight": 102.09,
+      "rule": "在行业评论写作中，可优先考虑这种开篇动作：惊悚概念+宏观数据点睛",
+      "evidence": "来源文章的 opening_score=88",
+      "genre": "行业评论",
+      "content_type": "商业深度分析",
+      "topic": [
+        "SaaS",
+        "私募信贷",
+        "BDC",
+        "AI颠覆",
+        "风险传导"
+      ],
+      "style": [
+        "数据驱动",
+        "宏观叙事",
+        "批判性"
+      ],
+      "audience": [
+        "二级市场投资者",
+        "信贷风险管理人员",
+        "科技行业分析师"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 96
+    },
+    {
+      "id": "3e1c195a8385_opening_7os9em",
+      "article_id": "3e1c195a8385",
+      "article_title": "美联储会议纪要暴巨大分歧",
+      "category": "opening",
+      "weight": 101.96,
+      "rule": "在财经新闻分析写作中，可优先考虑这种开篇动作：结论先行式：直接抛出“巨大分歧”和“加息可能性”这两个重磅信息点。",
+      "evidence": "来源文章的 opening_score=88",
+      "genre": "财经新闻分析",
+      "content_type": "深度财经报道",
+      "topic": [
+        "货币政策",
+        "利率决策",
+        "通货膨胀",
+        "劳动力市场",
+        "金融稳定"
+      ],
+      "style": [
+        "专业",
+        "客观",
+        "理性"
+      ],
+      "audience": [
+        "投资者",
+        "金融从业者",
+        "经济研究员",
+        "政策分析师"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 94
+    },
+    {
+      "id": "b42e94c2672e_opening_5k471j",
+      "article_id": "b42e94c2672e",
+      "article_title": "桥水万字长文：黄金大涨的动力、前景以及为什么需要配置黄金",
+      "category": "opening",
+      "weight": 101.89,
+      "rule": "在深度分析写作中，可优先考虑这种开篇动作：数据钩子 (引用金价涨幅数据引发读者对现象背后的好奇)",
+      "evidence": "来源文章的 opening_score=82",
+      "genre": "深度分析",
+      "content_type": "深度访谈",
+      "topic": [
+        "黄金投资",
+        "资产配置",
+        "地缘政治风险",
+        "货币政策"
+      ],
+      "style": [
+        "专业",
+        "理性",
+        "结构化"
+      ],
+      "audience": [
+        "机构投资者",
+        "资深个人投资者",
+        "宏观分析师"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 96
+    },
+    {
+      "id": "bbd882e78111_structure_10ytq9",
+      "article_id": "bbd882e78111",
+      "article_title": "高盛“撕报告”：如果霍尔木兹海峡未来几天没“如期恢复”，油价“巨大上行风险”迅速扩大",
+      "category": "structure",
+      "weight": 101.89,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：总-分-总（核心观点-四大论据拆解-基准假设对比）",
+      "evidence": "section_functions=[\"引入高盛研报更新的背景及核心结论\",\"理由一：量化对比海峡流量的实际跌幅与预期差异\",\"理由二：拆解替代管道和港口的实际运作困境\",\"理由三：分析航运商观望的本质（安全风险而非成本）\",\"理由四：对比历史供应冲击规模（对比2022年俄罗斯数据）\",\"总结：基准假设被击穿的本质及其对未来定价的影响\"]",
+      "genre": "深度报道",
+      "content_type": "金融研报解读",
+      "topic": [
+        "原油价格预测",
+        "地缘政治风险",
+        "全球供应链",
+        "大宗商品交易"
+      ],
+      "style": [
+        "数据驱动",
+        "专业理性",
+        "预测性"
+      ],
+      "audience": [
+        "大宗商品投资者",
+        "宏观分析师",
+        "能源行业高管",
+        "金融从业者"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 95
+    },
+    {
+      "id": "ccfaba8a0898_structure_9sgfea",
+      "article_id": "ccfaba8a0898",
+      "article_title": "做空ETF、恐慌指数都在飙！高盛戳穿美股“假平静”，市场实则极度脆弱",
+      "category": "structure",
+      "weight": 101.89,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：总-分-总",
+      "evidence": "section_functions=[\"核心观点陈述：揭示市场假平静\",\"指标对比分析：通过恐慌指数揭示内部压力\",\"投资者行为拆解：分析对冲与杠杆的矛盾心态\",\"结构性风险剖析：阐述AI板块拥挤度与盈利依赖\",\"结论预判：总结脆弱性根源并展望后市\"]",
+      "genre": "市场研报解读",
+      "content_type": "财经深度报道",
+      "topic": [
+        "美股风险",
+        "宏观分析",
+        "AI泡沫",
+        "杠杆交易",
+        "对冲策略"
+      ],
+      "style": [
+        "数据驱动",
+        "专业严谨",
+        "警示性"
+      ],
+      "audience": [
+        "机构投资者",
+        "二级市场研究员",
+        "资深股民",
+        "宏观分析师"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 95
+    },
+    {
+      "id": "2d570def7915_structure_5awva7",
+      "article_id": "2d570def7915",
+      "article_title": "巴菲特谢幕、OpenAI搅动万亿市值、谷歌强势崛起......2025全球十大商业事件盘点",
+      "category": "structure",
+      "weight": 101.88,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：时间回顾+专题盘点+风险提示",
+      "evidence": "section_functions=[\"宏观背景导入：定义2025年为时代注脚\",\"AI基建博弈：拆解‘星际之门’项目的理想与现实\",\"资本定价机制：分析CoreWeave如何将算力资产化\",\"产业结盟逻辑：解读英伟达与英特尔的‘竞合’关系\",\"市场情绪分析：复盘OpenAI对二级市场的‘波动引擎’作用\",\"市值里程碑纪录：记录英伟达破5万亿美元的关键节点\",\"精神图腾告别：解读巴菲特卸任的象征意义\",\"工业化范式革命：阐述SpaceX对航天成本的极致压缩\",\"产业政策反转：分析德国修正燃油车禁令的市场动因\",\"硬核技术对撞：解析谷歌软硬一体化挑战策略\",\"并购防御战略：详述英伟达对Groq人才与技术的‘准收购’\",\"结尾免责与风控提醒\"]",
+      "genre": "商业综述",
+      "content_type": "深度报道/年度盘点",
+      "topic": [
+        "年度商业回顾",
+        "AI基建",
+        "算力经济",
+        "价值投资",
+        "能源转型"
+      ],
+      "style": [
+        "分析性",
+        "叙事性",
+        "总结性"
+      ],
+      "audience": [
+        "投资者",
+        "企业高管",
+        "科技从业者",
+        "金融分析师"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 94
+    },
+    {
+      "id": "2b7369b594f7_structure_c30sa5",
+      "article_id": "2b7369b594f7",
+      "article_title": "影响8亿基民的公募基金“大动作”，来了！",
+      "category": "structure",
+      "weight": 101.81,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：板块化专题结构",
+      "evidence": "section_functions=[\"核心背景：监管通知正式下发及其超预期程度\",\"费率改革：从固定收费向浮动管理费模式转型\",\"薪酬制度：建立三年以上业绩挂钩及考核权重规定\",\"利益机制：强化高管与基金经理的跟投绑定\",\"风控要求：针对风格漂移的基准监管机制\",\"生态优化：销售平台、评价体系与治理水平的全面升级\",\"行业发展：支持并购重组与科技赋能\"]",
+      "genre": "深度报道",
+      "content_type": "政策解读",
+      "topic": [
+        "行业监管",
+        "费率改革",
+        "薪酬管理",
+        "公司治理",
+        "投资者保护"
+      ],
+      "style": [
+        "专业",
+        "结构化",
+        "分析性"
+      ],
+      "audience": [
+        "基金投资者",
+        "金融从业者",
+        "政策研究员",
+        "机构投资者"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 95
+    },
+    {
+      "id": "12fe2cfc6f10_opening_ff4iom",
+      "article_id": "12fe2cfc6f10",
+      "article_title": "政治局会议强调稳住楼市股市(全文)",
+      "category": "opening",
+      "weight": 101.79,
+      "rule": "在官方公报写作中，可优先考虑这种开篇动作：事实陈述（时间、地点、人物、核心主题）",
+      "evidence": "来源文章的 opening_score=90",
+      "genre": "官方公报",
+      "content_type": "新闻通稿",
+      "topic": [
+        "2025年经济工作部署",
+        "宏观政策转向",
+        "楼市股市稳定",
+        "反腐败工作",
+        "十四五规划"
+      ],
+      "style": [
+        "严谨",
+        "简练",
+        "指导性"
+      ],
+      "audience": [
+        "金融从业者",
+        "政府公职人员",
+        "企业经营者",
+        "经济研究员"
+      ],
+      "publishability_score": 100,
+      "reference_value_score": 98
+    },
+    {
+      "id": "12fe2cfc6f10_structure_2tok5u",
+      "article_id": "12fe2cfc6f10",
+      "article_title": "政治局会议强调稳住楼市股市(全文)",
+      "category": "structure",
+      "weight": 101.79,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：分层递进式（总结现状-确定总基调-具体任务拆解-党务/纪检部署）",
+      "evidence": "section_functions=[\"会议基本信息交代\",\"2024年工作成果回顾\",\"2025年经济工作宏观指导方针\",\"具体经济任务细化清单\",\"组织保障与干部动员要求\",\"纪检监察工作总结与规划\",\"后续重要会议预告\"]",
+      "genre": "官方公报",
+      "content_type": "新闻通稿",
+      "topic": [
+        "2025年经济工作部署",
+        "宏观政策转向",
+        "楼市股市稳定",
+        "反腐败工作",
+        "十四五规划"
+      ],
+      "style": [
+        "严谨",
+        "简练",
+        "指导性"
+      ],
+      "audience": [
+        "金融从业者",
+        "政府公职人员",
+        "企业经营者",
+        "经济研究员"
+      ],
+      "publishability_score": 100,
+      "reference_value_score": 98
+    },
+    {
+      "id": "307767f6915c_structure_7crcdh",
+      "article_id": "307767f6915c",
+      "article_title": "美联储12月决议前最后一个非农夜！坏消息就是好消息？",
+      "category": "structure",
+      "weight": 101.71,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：逻辑递进式：数据预期 -> 干扰因素分析 -> 前瞻指标佐证 -> 政策关联性 -> 市场反应矩阵。",
+      "evidence": "section_functions=[\"开篇：交代背景并给出华尔街核心共识预期\",\"干扰拆解：详细说明飓风、罢工及季节性因素对11月数据的潜在扭曲\",\"前瞻佐证：汇总ADP、ISM及裁员数据等先行指标进行交叉验证\",\"政策衔接：引用美联储关键人物言论，建立就业与利率路径的关联\",\"实战模拟：通过机构提供的反应矩阵，量化不同数值下的股市涨跌空间\"]",
+      "genre": "市场分析",
+      "content_type": "财经深度分析",
+      "topic": [
+        "非农就业报告",
+        "货币政策",
+        "美股预测",
+        "利率决议"
+      ],
+      "style": [
+        "数据驱动",
+        "专业",
+        "客观"
+      ],
+      "audience": [
+        "投资者",
+        "宏观分析师",
+        "金融从业者"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 95
+    },
+    {
+      "id": "662ce6b4707f_opening_5tsxaj",
+      "article_id": "662ce6b4707f",
+      "article_title": "疯狂24小时！油价上演“历史级别大逆转”",
+      "category": "opening",
+      "weight": 101.71,
+      "rule": "在深度深度资讯分析写作中，可优先考虑这种开篇动作：引用重磅人物语录开篇，制造强烈的戏剧冲突感",
+      "evidence": "来源文章的 opening_score=90",
+      "genre": "深度深度资讯分析",
+      "content_type": "金融市场评论",
+      "topic": [
+        "油价波动",
+        "地缘政治风险",
+        "美国中期选举",
+        "市场微观结构"
+      ],
+      "style": [
+        "叙事性",
+        "数据驱动",
+        "快节奏"
+      ],
+      "audience": [
+        "投资者",
+        "宏观分析师",
+        "大宗商品交易员"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 94
+    },
+    {
+      "id": "662ce6b4707f_structure_pgc0vo",
+      "article_id": "662ce6b4707f",
+      "article_title": "疯狂24小时！油价上演“历史级别大逆转”",
+      "category": "structure",
+      "weight": 101.71,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：动态叙事-因果拆解-深层逻辑-技术分析-现实反驳",
+      "evidence": "section_functions=[\"勾勒24小时内极端的油价波动曲线\",\"从政策、口径和传闻三个维度解释直接触发因素\",\"从美国国内政治、通胀压力和军备库存分析深层动机\",\"揭示对冲基金空头挤压与期权负伽马的技术性放大效应\",\"通过高盛数据和航运现状反驳市场的盲目乐观，指出物理供应断裂依然存在\"]",
+      "genre": "深度深度资讯分析",
+      "content_type": "金融市场评论",
+      "topic": [
+        "油价波动",
+        "地缘政治风险",
+        "美国中期选举",
+        "市场微观结构"
+      ],
+      "style": [
+        "叙事性",
+        "数据驱动",
+        "快节奏"
+      ],
+      "audience": [
+        "投资者",
+        "宏观分析师",
+        "大宗商品交易员"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 94
+    },
+    {
+      "id": "b1ec94f701c8_opening_5d480a",
+      "article_id": "b1ec94f701c8",
+      "article_title": "来自“2028年6月的研究报告”：当AI超越预期，经济却崩了，股市大跌",
+      "category": "opening",
+      "weight": 101.68,
+      "rule": "在思想实验写作中，可优先考虑这种开篇动作：时空穿越/设定先行",
+      "evidence": "来源文章的 opening_score=90",
+      "genre": "思想实验",
+      "content_type": "深度商业分析",
+      "topic": [
+        "AI经济风险",
+        "失业危机",
+        "生产率悖论",
+        "金融再定价"
+      ],
+      "style": [
+        "逻辑严密",
+        "未来主义",
+        "警示性"
+      ],
+      "audience": [
+        "机构投资者",
+        "经济政策制定者",
+        "科技行业高管",
+        "宏观分析师"
+      ],
+      "publishability_score": 90,
+      "reference_value_score": 96
+    },
+    {
+      "id": "1e08e3456089_evidence_ky5sp7",
+      "article_id": "1e08e3456089",
+      "article_title": "“2026十大意外”，恐颠覆市场！",
+      "category": "evidence",
+      "weight": 101.61,
+      "rule": "这类稿件适合混合使用这些证据类型：财务比率（市盈率、市销率、自由现金流收益率）、宏观统计数据（GDP增速、赤字率、生产率增长）、市场共识数据（MSCI指数目标价、PMI预期）、历史经验法则（阿马拉定律、泡沫警示信号）",
+      "evidence": "evidence_specificity_score=92; data_density_score=95; case_density_score=40",
+      "genre": "深度报告摘要",
+      "content_type": "投资策略报告",
+      "topic": [
+        "宏观经济预测",
+        "股市策略",
+        "尾部风险",
+        "AI投资泡沫",
+        "主权债务危机"
+      ],
+      "style": [
+        "数据驱动",
+        "逻辑严密",
+        "预判性"
+      ],
+      "audience": [
+        "机构投资者",
+        "财富管理从业者",
+        "宏观分析师"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 96
+    },
+    {
+      "id": "672edca320c6_opening_4vpu51",
+      "article_id": "672edca320c6",
+      "article_title": "中国正在卷起一场OpenClaw风暴",
+      "category": "opening",
+      "weight": 101.51,
+      "rule": "在商业评论写作中，可优先考虑这种开篇动作：现场特写（以腾讯工程师楼下‘摆摊’安装软件的视觉化场景切入）",
+      "evidence": "来源文章的 opening_score=92",
+      "genre": "商业评论",
+      "content_type": "深度行业分析",
+      "topic": [
+        "AI Agent",
+        "大模型商业化",
+        "算力变现",
+        "轨迹数据",
+        "互联网入口战争"
+      ],
+      "style": [
+        "逻辑严密",
+        "趋势洞察",
+        "叙事性开篇"
+      ],
+      "audience": [
+        "科技行业从业者",
+        "互联网投资者",
+        "数字化转型决策者"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 94
+    },
+    {
+      "id": "7c15a45eddc6_opening_50kqjp",
+      "article_id": "7c15a45eddc6",
+      "article_title": "硅谷巨头6600亿美元押注AI，市场却越烧钱越恐慌",
+      "category": "opening",
+      "weight": 101.5,
+      "rule": "在财经评论写作中，可优先考虑这种开篇动作：数据冲击式导入（对比财报利好与市值蒸发的矛盾）",
+      "evidence": "来源文章的 opening_score=90",
+      "genre": "财经评论",
+      "content_type": "商业分析",
+      "topic": [
+        "AI投资泡沫",
+        "资本支出",
+        "科技巨头财报",
+        "市场恐慌",
+        "商业模式转型"
+      ],
+      "style": [
+        "数据驱动",
+        "对比分析",
+        "深度客观"
+      ],
+      "audience": [
+        "二级市场投资者",
+        "科技行业高管",
+        "金融分析师",
+        "宏观经济研究者"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 94
+    },
+    {
+      "id": "1e08e3456089_argument_zb4okt",
+      "article_id": "1e08e3456089",
+      "article_title": "“2026十大意外”，恐颠覆市场！",
+      "category": "argument",
+      "weight": 101.45,
+      "rule": "可迁移的论证动作：设定风险情景（非基准预测）以打破惯性思维",
+      "evidence": "thesis_type=预测性分析; thesis_sentence=2026年市场共识可能严重低估了尾部风险，投资者需警惕股市“狂欢-崩盘”循环、美债收益率破5%以及科技股从领涨到大幅跑输的剧烈切换。",
+      "genre": "深度报告摘要",
+      "content_type": "投资策略报告",
+      "topic": [
+        "宏观经济预测",
+        "股市策略",
+        "尾部风险",
+        "AI投资泡沫",
+        "主权债务危机"
+      ],
+      "style": [
+        "数据驱动",
+        "逻辑严密",
+        "预判性"
+      ],
+      "audience": [
+        "机构投资者",
+        "财富管理从业者",
+        "宏观分析师"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 96
+    },
+    {
+      "id": "1e08e3456089_argument_zsb63w",
+      "article_id": "1e08e3456089",
+      "article_title": "“2026十大意外”，恐颠覆市场！",
+      "category": "argument",
+      "weight": 101.45,
+      "rule": "可迁移的论证动作：建立量化指标体系（如泡沫形成的7个先决条件）",
+      "evidence": "thesis_type=预测性分析; thesis_sentence=2026年市场共识可能严重低估了尾部风险，投资者需警惕股市“狂欢-崩盘”循环、美债收益率破5%以及科技股从领涨到大幅跑输的剧烈切换。",
+      "genre": "深度报告摘要",
+      "content_type": "投资策略报告",
+      "topic": [
+        "宏观经济预测",
+        "股市策略",
+        "尾部风险",
+        "AI投资泡沫",
+        "主权债务危机"
+      ],
+      "style": [
+        "数据驱动",
+        "逻辑严密",
+        "预判性"
+      ],
+      "audience": [
+        "机构投资者",
+        "财富管理从业者",
+        "宏观分析师"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 96
+    },
+    {
+      "id": "1e08e3456089_argument_whakyu",
+      "article_id": "1e08e3456089",
+      "article_title": "“2026十大意外”，恐颠覆市场！",
+      "category": "argument",
+      "weight": 101.45,
+      "rule": "可迁移的论证动作：利用历史周期类比（如TMT泡沫）增强论点可信度",
+      "evidence": "thesis_type=预测性分析; thesis_sentence=2026年市场共识可能严重低估了尾部风险，投资者需警惕股市“狂欢-崩盘”循环、美债收益率破5%以及科技股从领涨到大幅跑输的剧烈切换。",
+      "genre": "深度报告摘要",
+      "content_type": "投资策略报告",
+      "topic": [
+        "宏观经济预测",
+        "股市策略",
+        "尾部风险",
+        "AI投资泡沫",
+        "主权债务危机"
+      ],
+      "style": [
+        "数据驱动",
+        "逻辑严密",
+        "预判性"
+      ],
+      "audience": [
+        "机构投资者",
+        "财富管理从业者",
+        "宏观分析师"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 96
+    },
+    {
+      "id": "1e08e3456089_argument_xhg0fb",
+      "article_id": "1e08e3456089",
+      "article_title": "“2026十大意外”，恐颠覆市场！",
+      "category": "argument",
+      "weight": 101.45,
+      "rule": "可迁移的论证动作：分析多因素关联（如AI投资、债务水平、生产率增速）的综合影响",
+      "evidence": "thesis_type=预测性分析; thesis_sentence=2026年市场共识可能严重低估了尾部风险，投资者需警惕股市“狂欢-崩盘”循环、美债收益率破5%以及科技股从领涨到大幅跑输的剧烈切换。",
+      "genre": "深度报告摘要",
+      "content_type": "投资策略报告",
+      "topic": [
+        "宏观经济预测",
+        "股市策略",
+        "尾部风险",
+        "AI投资泡沫",
+        "主权债务危机"
+      ],
+      "style": [
+        "数据驱动",
+        "逻辑严密",
+        "预判性"
+      ],
+      "audience": [
+        "机构投资者",
+        "财富管理从业者",
+        "宏观分析师"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 96
+    },
+    {
+      "id": "bbd882e78111_opening_v00soz",
+      "article_id": "bbd882e78111",
+      "article_title": "高盛“撕报告”：如果霍尔木兹海峡未来几天没“如期恢复”，油价“巨大上行风险”迅速扩大",
+      "category": "opening",
+      "weight": 101.39,
+      "rule": "在深度报道写作中，可优先考虑这种开篇动作：新闻快报式（以特定日期和关键机构动作切入）",
+      "evidence": "来源文章的 opening_score=85",
+      "genre": "深度报道",
+      "content_type": "金融研报解读",
+      "topic": [
+        "原油价格预测",
+        "地缘政治风险",
+        "全球供应链",
+        "大宗商品交易"
+      ],
+      "style": [
+        "数据驱动",
+        "专业理性",
+        "预测性"
+      ],
+      "audience": [
+        "大宗商品投资者",
+        "宏观分析师",
+        "能源行业高管",
+        "金融从业者"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 95
+    },
+    {
+      "id": "ccfaba8a0898_opening_odbmdy",
+      "article_id": "ccfaba8a0898",
+      "article_title": "做空ETF、恐慌指数都在飙！高盛戳穿美股“假平静”，市场实则极度脆弱",
+      "category": "opening",
+      "weight": 101.39,
+      "rule": "在市场研报解读写作中，可优先考虑这种开篇动作：反直觉陈述（虚假繁荣）",
+      "evidence": "来源文章的 opening_score=85",
+      "genre": "市场研报解读",
+      "content_type": "财经深度报道",
+      "topic": [
+        "美股风险",
+        "宏观分析",
+        "AI泡沫",
+        "杠杆交易",
+        "对冲策略"
+      ],
+      "style": [
+        "数据驱动",
+        "专业严谨",
+        "警示性"
+      ],
+      "audience": [
+        "机构投资者",
+        "二级市场研究员",
+        "资深股民",
+        "宏观分析师"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 95
+    },
+    {
+      "id": "b42e94c2672e_argument_n8hkol",
+      "article_id": "b42e94c2672e",
+      "article_title": "桥水万字长文：黄金大涨的动力、前景以及为什么需要配置黄金",
+      "category": "argument",
+      "weight": 101.29,
+      "rule": "可迁移的论证动作：定义资产本源：强调黄金‘不属于任何人的债务’的核心属性",
+      "evidence": "thesis_type=逻辑驱动型; thesis_sentence=黄金已从传统的通胀对冲工具演变为抵御地缘政治制裁、应对货币贬值及提供长期股债负相关的战略性非债务资产。",
+      "genre": "深度分析",
+      "content_type": "深度访谈",
+      "topic": [
+        "黄金投资",
+        "资产配置",
+        "地缘政治风险",
+        "货币政策"
+      ],
+      "style": [
+        "专业",
+        "理性",
+        "结构化"
+      ],
+      "audience": [
+        "机构投资者",
+        "资深个人投资者",
+        "宏观分析师"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 96
+    },
+    {
+      "id": "b42e94c2672e_argument_2n8yt4",
+      "article_id": "b42e94c2672e",
+      "article_title": "桥水万字长文：黄金大涨的动力、前景以及为什么需要配置黄金",
+      "category": "argument",
+      "weight": 101.29,
+      "rule": "可迁移的论证动作：对比历史偏差：指出黄金与实际收益率脱钩的现状及其象征意义",
+      "evidence": "thesis_type=逻辑驱动型; thesis_sentence=黄金已从传统的通胀对冲工具演变为抵御地缘政治制裁、应对货币贬值及提供长期股债负相关的战略性非债务资产。",
+      "genre": "深度分析",
+      "content_type": "深度访谈",
+      "topic": [
+        "黄金投资",
+        "资产配置",
+        "地缘政治风险",
+        "货币政策"
+      ],
+      "style": [
+        "专业",
+        "理性",
+        "结构化"
+      ],
+      "audience": [
+        "机构投资者",
+        "资深个人投资者",
+        "宏观分析师"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 96
+    },
+    {
+      "id": "474bfedecf44_opening_neykhq",
+      "article_id": "474bfedecf44",
+      "article_title": "卖车卖股票！#Tesla Takedown#全球抗议爆发，FBI组建特别工作组",
+      "category": "opening",
+      "weight": 101.27,
+      "rule": "在深度报道写作中，可优先考虑这种开篇动作：新闻钩子式（通过具体的日期、组织名称和突发规模吸引注意）",
+      "evidence": "来源文章的 opening_score=88",
+      "genre": "深度报道",
+      "content_type": "商业新闻",
+      "topic": [
+        "品牌危机",
+        "地缘政治与商业",
+        "资本市场",
+        "公共关系"
+      ],
+      "style": [
+        "叙事性",
+        "事实导向",
+        "严肃"
+      ],
+      "audience": [
+        "投资者",
+        "汽车行业从业者",
+        "宏观经济研究者",
+        "特斯拉车主"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 94
+    },
+    {
+      "id": "1e08e3456089_style_qw98ok",
+      "article_id": "1e08e3456089",
+      "article_title": "“2026十大意外”，恐颠覆市场！",
+      "category": "style",
+      "weight": 100.97,
+      "rule": "推荐维持这种文风组合：叙述距离=第三人称客观视角；立场强度=中立审慎；抽象层级=中高（涉及复杂金融逻辑与宏观模型）",
+      "evidence": "sentence_rhythm=长句分析与短促结论交替，信息流极快",
+      "genre": "深度报告摘要",
+      "content_type": "投资策略报告",
+      "topic": [
+        "宏观经济预测",
+        "股市策略",
+        "尾部风险",
+        "AI投资泡沫",
+        "主权债务危机"
+      ],
+      "style": [
+        "数据驱动",
+        "逻辑严密",
+        "预判性"
+      ],
+      "audience": [
+        "机构投资者",
+        "财富管理从业者",
+        "宏观分析师"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 96
+    },
+    {
+      "id": "b42e94c2672e_evidence_e6133g",
+      "article_id": "b42e94c2672e",
+      "article_title": "桥水万字长文：黄金大涨的动力、前景以及为什么需要配置黄金",
+      "category": "evidence",
+      "weight": 100.89,
+      "rule": "这类稿件适合混合使用这些证据类型：历史价格曲线、跨资产相关性系数、央行黄金储备流向图、金融机制推演（套利模型）",
+      "evidence": "evidence_specificity_score=90; data_density_score=85; case_density_score=60",
+      "genre": "深度分析",
+      "content_type": "深度访谈",
+      "topic": [
+        "黄金投资",
+        "资产配置",
+        "地缘政治风险",
+        "货币政策"
+      ],
+      "style": [
+        "专业",
+        "理性",
+        "结构化"
+      ],
+      "audience": [
+        "机构投资者",
+        "资深个人投资者",
+        "宏观分析师"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 96
+    },
+    {
+      "id": "b42e94c2672e_style_zydybu",
+      "article_id": "b42e94c2672e",
+      "article_title": "桥水万字长文：黄金大涨的动力、前景以及为什么需要配置黄金",
+      "category": "style",
+      "weight": 100.73,
+      "rule": "推荐维持这种文风组合：叙述距离=第三人称客观视角；立场强度=中立偏积极；抽象层级=高 (涉及宏观经济变量、资产定价模型及博弈论)",
+      "evidence": "sentence_rhythm=平稳且富有逻辑链条的专业论述",
+      "genre": "深度分析",
+      "content_type": "深度访谈",
+      "topic": [
+        "黄金投资",
+        "资产配置",
+        "地缘政治风险",
+        "货币政策"
+      ],
+      "style": [
+        "专业",
+        "理性",
+        "结构化"
+      ],
+      "audience": [
+        "机构投资者",
+        "资深个人投资者",
+        "宏观分析师"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 96
+    },
+    {
+      "id": "e355e8d1307c_evidence_guze05",
+      "article_id": "e355e8d1307c",
+      "article_title": "美股“SaaS末日”来临：“软件-PE”陷入“死亡循环”",
+      "category": "evidence",
+      "weight": 100.73,
+      "rule": "这类稿件适合混合使用这些证据类型：指数变动数据、投行分析报告、行业分析师访谈、压力测试模型数据、二级市场交易报价",
+      "evidence": "evidence_specificity_score=95; data_density_score=88; case_density_score=75",
+      "genre": "行业评论",
+      "content_type": "商业深度分析",
+      "topic": [
+        "SaaS",
+        "私募信贷",
+        "BDC",
+        "AI颠覆",
+        "风险传导"
+      ],
+      "style": [
+        "数据驱动",
+        "宏观叙事",
+        "批判性"
+      ],
+      "audience": [
+        "二级市场投资者",
+        "信贷风险管理人员",
+        "科技行业分析师"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 96
+    },
+    {
+      "id": "bbd882e78111_evidence_mwk8xs",
+      "article_id": "bbd882e78111",
+      "article_title": "高盛“撕报告”：如果霍尔木兹海峡未来几天没“如期恢复”，油价“巨大上行风险”迅速扩大",
+      "category": "evidence",
+      "weight": 100.49,
+      "rule": "这类稿件适合混合使用这些证据类型：机构研报数据、实物流量追踪、历史数据对比、专家观点引用、情景分析表",
+      "evidence": "evidence_specificity_score=95; data_density_score=90; case_density_score=40",
+      "genre": "深度报道",
+      "content_type": "金融研报解读",
+      "topic": [
+        "原油价格预测",
+        "地缘政治风险",
+        "全球供应链",
+        "大宗商品交易"
+      ],
+      "style": [
+        "数据驱动",
+        "专业理性",
+        "预测性"
+      ],
+      "audience": [
+        "大宗商品投资者",
+        "宏观分析师",
+        "能源行业高管",
+        "金融从业者"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 95
+    },
+    {
+      "id": "ccfaba8a0898_evidence_g3sm8g",
+      "article_id": "ccfaba8a0898",
+      "article_title": "做空ETF、恐慌指数都在飙！高盛戳穿美股“假平静”，市场实则极度脆弱",
+      "category": "evidence",
+      "weight": 100.49,
+      "rule": "这类稿件适合混合使用这些证据类型：历史统计数据、自研指数数据、交易席位仓位数据、财报预测数据",
+      "evidence": "evidence_specificity_score=90; data_density_score=85; case_density_score=30",
+      "genre": "市场研报解读",
+      "content_type": "财经深度报道",
+      "topic": [
+        "美股风险",
+        "宏观分析",
+        "AI泡沫",
+        "杠杆交易",
+        "对冲策略"
+      ],
+      "style": [
+        "数据驱动",
+        "专业严谨",
+        "警示性"
+      ],
+      "audience": [
+        "机构投资者",
+        "二级市场研究员",
+        "资深股民",
+        "宏观分析师"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 95
+    },
+    {
+      "id": "3e1c195a8385_evidence_mumrp7",
+      "article_id": "3e1c195a8385",
+      "article_title": "美联储会议纪要暴巨大分歧",
+      "category": "evidence",
+      "weight": 100.36,
+      "rule": "这类稿件适合混合使用这些证据类型：官方会议纪要、宏观经济指标、专家/记者评论、市场衍生品交易数据",
+      "evidence": "evidence_specificity_score=90; data_density_score=75; case_density_score=10",
+      "genre": "财经新闻分析",
+      "content_type": "深度财经报道",
+      "topic": [
+        "货币政策",
+        "利率决策",
+        "通货膨胀",
+        "劳动力市场",
+        "金融稳定"
+      ],
+      "style": [
+        "专业",
+        "客观",
+        "理性"
+      ],
+      "audience": [
+        "投资者",
+        "金融从业者",
+        "经济研究员",
+        "政策分析师"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 94
+    },
+    {
+      "id": "662ce6b4707f_evidence_tczxcu",
+      "article_id": "662ce6b4707f",
+      "article_title": "疯狂24小时！油价上演“历史级别大逆转”",
+      "category": "evidence",
+      "weight": 100.31,
+      "rule": "这类稿件适合混合使用这些证据类型：行情即时数据、官方新闻报道、券商分析报告、专家访谈引用、航运实测数据",
+      "evidence": "evidence_specificity_score=92; data_density_score=85; case_density_score=40",
+      "genre": "深度深度资讯分析",
+      "content_type": "金融市场评论",
+      "topic": [
+        "油价波动",
+        "地缘政治风险",
+        "美国中期选举",
+        "市场微观结构"
+      ],
+      "style": [
+        "叙事性",
+        "数据驱动",
+        "快节奏"
+      ],
+      "audience": [
+        "投资者",
+        "宏观分析师",
+        "大宗商品交易员"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 94
+    },
+    {
+      "id": "2d570def7915_evidence_zv6apb",
+      "article_id": "2d570def7915",
+      "article_title": "巴菲特谢幕、OpenAI搅动万亿市值、谷歌强势崛起......2025全球十大商业事件盘点",
+      "category": "evidence",
+      "weight": 100.28,
+      "rule": "这类稿件适合混合使用这些证据类型：财务报告数据、股价实时波动、CEO公开信/声明、券商深度研报、项目规划与实地动工信息",
+      "evidence": "evidence_specificity_score=95; data_density_score=92; case_density_score=88",
+      "genre": "商业综述",
+      "content_type": "深度报道/年度盘点",
+      "topic": [
+        "年度商业回顾",
+        "AI基建",
+        "算力经济",
+        "价值投资",
+        "能源转型"
+      ],
+      "style": [
+        "分析性",
+        "叙事性",
+        "总结性"
+      ],
+      "audience": [
+        "投资者",
+        "企业高管",
+        "科技从业者",
+        "金融分析师"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 94
+    },
+    {
+      "id": "f186b20973ae_evidence_trv0h4",
+      "article_id": "f186b20973ae",
+      "article_title": "中信证券三十而已：距离“高盛梦”还有多远？",
+      "category": "evidence",
+      "weight": 100.21,
+      "rule": "这类稿件适合混合使用这些证据类型：财务数据、官方公告、独家报道、高管公开言论、行业黑话",
+      "evidence": "evidence_specificity_score=95; data_density_score=92; case_density_score=70",
+      "genre": "深度报道",
+      "content_type": "商业深度报道",
+      "topic": [
+        "企业发展史",
+        "财报分析",
+        "行业整合",
+        "国际化竞争"
+      ],
+      "style": [
+        "数据驱动",
+        "逻辑严密",
+        "行业扫描"
+      ],
+      "audience": [
+        "投资者",
+        "金融从业者",
+        "企业管理者"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 95
+    },
+    {
+      "id": "3e1c195a8385_style_6fpzuo",
+      "article_id": "3e1c195a8385",
+      "article_title": "美联储会议纪要暴巨大分歧",
+      "category": "style",
+      "weight": 100.2,
+      "rule": "推荐维持这种文风组合：叙述距离=第三人称客观视角；立场强度=中立；抽象层级=中高（涉及货币政策理论与宏观调控机制）",
+      "evidence": "sentence_rhythm=平稳且富有逻辑，多用复合长句解释因果关系，短句用于强调结论。",
+      "genre": "财经新闻分析",
+      "content_type": "深度财经报道",
+      "topic": [
+        "货币政策",
+        "利率决策",
+        "通货膨胀",
+        "劳动力市场",
+        "金融稳定"
+      ],
+      "style": [
+        "专业",
+        "客观",
+        "理性"
+      ],
+      "audience": [
+        "投资者",
+        "金融从业者",
+        "经济研究员",
+        "政策分析师"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 94
+    },
+    {
+      "id": "307767f6915c_evidence_6t7wyw",
+      "article_id": "307767f6915c",
+      "article_title": "美联储12月决议前最后一个非农夜！坏消息就是好消息？",
+      "category": "evidence",
+      "weight": 100.11,
+      "rule": "这类稿件适合混合使用这些证据类型：统计预测数据、专家访谈引言、先行经济指标、机构量化矩阵、美联储官员公开言论",
+      "evidence": "evidence_specificity_score=92; data_density_score=95; case_density_score=0",
+      "genre": "市场分析",
+      "content_type": "财经深度分析",
+      "topic": [
+        "非农就业报告",
+        "货币政策",
+        "美股预测",
+        "利率决议"
+      ],
+      "style": [
+        "数据驱动",
+        "专业",
+        "客观"
+      ],
+      "audience": [
+        "投资者",
+        "宏观分析师",
+        "金融从业者"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 95
+    },
+    {
+      "id": "7c15a45eddc6_evidence_rfadu1",
+      "article_id": "7c15a45eddc6",
+      "article_title": "硅谷巨头6600亿美元押注AI，市场却越烧钱越恐慌",
+      "category": "evidence",
+      "weight": 100.1,
+      "rule": "这类稿件适合混合使用这些证据类型：财务预测数据、股价历史表现、高管公开声明、分析师研报观点、第三方市场研究数据",
+      "evidence": "evidence_specificity_score=95; data_density_score=92; case_density_score=85",
+      "genre": "财经评论",
+      "content_type": "商业分析",
+      "topic": [
+        "AI投资泡沫",
+        "资本支出",
+        "科技巨头财报",
+        "市场恐慌",
+        "商业模式转型"
+      ],
+      "style": [
+        "数据驱动",
+        "对比分析",
+        "深度客观"
+      ],
+      "audience": [
+        "二级市场投资者",
+        "科技行业高管",
+        "金融分析师",
+        "宏观经济研究者"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 94
+    },
+    {
+      "id": "e355e8d1307c_style_gh2w3i",
+      "article_id": "e355e8d1307c",
+      "article_title": "美股“SaaS末日”来临：“软件-PE”陷入“死亡循环”",
+      "category": "style",
+      "weight": 100.09,
+      "rule": "推荐维持这种文风组合：叙述距离=第三人称客观叙述；立场强度=强烈预警；抽象层级=中高（涉及复杂金融术语与宏观逻辑）",
+      "evidence": "sentence_rhythm=长句用于逻辑论证，短促有力的专业术语用于形成冲击力",
+      "genre": "行业评论",
+      "content_type": "商业深度分析",
+      "topic": [
+        "SaaS",
+        "私募信贷",
+        "BDC",
+        "AI颠覆",
+        "风险传导"
+      ],
+      "style": [
+        "数据驱动",
+        "宏观叙事",
+        "批判性"
+      ],
+      "audience": [
+        "二级市场投资者",
+        "信贷风险管理人员",
+        "科技行业分析师"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 96
+    },
+    {
+      "id": "474bfedecf44_evidence_afzcog",
+      "article_id": "474bfedecf44",
+      "article_title": "卖车卖股票！#Tesla Takedown#全球抗议爆发，FBI组建特别工作组",
+      "category": "evidence",
+      "weight": 100.07,
+      "rule": "这类稿件适合混合使用这些证据类型：财务统计数据、官方机构声明、当事人现场引语、行业分析师报告、法庭裁决细节",
+      "evidence": "evidence_specificity_score=90; data_density_score=85; case_density_score=80",
+      "genre": "深度报道",
+      "content_type": "商业新闻",
+      "topic": [
+        "品牌危机",
+        "地缘政治与商业",
+        "资本市场",
+        "公共关系"
+      ],
+      "style": [
+        "叙事性",
+        "事实导向",
+        "严肃"
+      ],
+      "audience": [
+        "投资者",
+        "汽车行业从业者",
+        "宏观经济研究者",
+        "特斯拉车主"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 94
+    },
+    {
+      "id": "dff9c5a8f4c6_transferable_move_vfc5nc",
+      "article_id": "dff9c5a8f4c6",
+      "article_title": "“AI教父”辛顿WAIC演讲全文：我们正在养一头老虎，别指望能“关掉它”",
+      "category": "transferable_move",
+      "weight": 99.99,
+      "rule": "可直接借用的写作/组织动作：将复杂抽象概念（高维空间）转化为实体玩具（乐高）的比喻法",
+      "evidence": "core_argument=数字智能在知识共享和规模化速度上具有生物智能无法企及的代差优势，这种优势将演变为生存博弈，因此安全技术的研发必须先于智能的绝对超越。",
+      "genre": "深度科技演讲",
+      "content_type": "演讲纪要",
+      "topic": [
+        "数字智能与生物智能对比",
+        "AI安全性",
+        "大型语言模型原理",
+        "AI风险管理",
+        "国际科技合作"
+      ],
+      "style": [
+        "逻辑严密",
+        "启发式",
+        "警示性",
+        "学术化"
+      ],
+      "audience": [
+        "科技从业者",
+        "政策制定者",
+        "AI研究员",
+        "高端商务人士"
+      ],
+      "publishability_score": 100,
+      "reference_value_score": 98
+    },
+    {
+      "id": "dff9c5a8f4c6_transferable_move_bsncv2",
+      "article_id": "dff9c5a8f4c6",
+      "article_title": "“AI教父”辛顿WAIC演讲全文：我们正在养一头老虎，别指望能“关掉它”",
+      "category": "transferable_move",
+      "weight": 99.99,
+      "rule": "可直接借用的写作/组织动作：从生物学限制（大脑不可迁移性）反衬数字化优势的论证法",
+      "evidence": "core_argument=数字智能在知识共享和规模化速度上具有生物智能无法企及的代差优势，这种优势将演变为生存博弈，因此安全技术的研发必须先于智能的绝对超越。",
+      "genre": "深度科技演讲",
+      "content_type": "演讲纪要",
+      "topic": [
+        "数字智能与生物智能对比",
+        "AI安全性",
+        "大型语言模型原理",
+        "AI风险管理",
+        "国际科技合作"
+      ],
+      "style": [
+        "逻辑严密",
+        "启发式",
+        "警示性",
+        "学术化"
+      ],
+      "audience": [
+        "科技从业者",
+        "政策制定者",
+        "AI研究员",
+        "高端商务人士"
+      ],
+      "publishability_score": 100,
+      "reference_value_score": 98
+    },
+    {
+      "id": "dff9c5a8f4c6_transferable_move_uiafo0",
+      "article_id": "dff9c5a8f4c6",
+      "article_title": "“AI教父”辛顿WAIC演讲全文：我们正在养一头老虎，别指望能“关掉它”",
+      "category": "transferable_move",
+      "weight": 99.99,
+      "rule": "可直接借用的写作/组织动作：通过引用对方最核心的利益动机（求生、统治）来建立预警逻辑",
+      "evidence": "core_argument=数字智能在知识共享和规模化速度上具有生物智能无法企及的代差优势，这种优势将演变为生存博弈，因此安全技术的研发必须先于智能的绝对超越。",
+      "genre": "深度科技演讲",
+      "content_type": "演讲纪要",
+      "topic": [
+        "数字智能与生物智能对比",
+        "AI安全性",
+        "大型语言模型原理",
+        "AI风险管理",
+        "国际科技合作"
+      ],
+      "style": [
+        "逻辑严密",
+        "启发式",
+        "警示性",
+        "学术化"
+      ],
+      "audience": [
+        "科技从业者",
+        "政策制定者",
+        "AI研究员",
+        "高端商务人士"
+      ],
+      "publishability_score": 100,
+      "reference_value_score": 98
+    },
+    {
+      "id": "2d570def7915_style_8ic7w0",
+      "article_id": "2d570def7915",
+      "article_title": "巴菲特谢幕、OpenAI搅动万亿市值、谷歌强势崛起......2025全球十大商业事件盘点",
+      "category": "style",
+      "weight": 99.72,
+      "rule": "推荐维持这种文风组合：叙述距离=第三方客观观察视角；立场强度=中立且理性看好；抽象层级=战略与宏观经济层面",
+      "evidence": "sentence_rhythm=长句用于逻辑论证，短句用于结论定调，富有商业冲击力",
+      "genre": "商业综述",
+      "content_type": "深度报道/年度盘点",
+      "topic": [
+        "年度商业回顾",
+        "AI基建",
+        "算力经济",
+        "价值投资",
+        "能源转型"
+      ],
+      "style": [
+        "分析性",
+        "叙事性",
+        "总结性"
+      ],
+      "audience": [
+        "投资者",
+        "企业高管",
+        "科技从业者",
+        "金融分析师"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 94
+    },
+    {
+      "id": "b1ec94f701c8_style_vp5uu3",
+      "article_id": "b1ec94f701c8",
+      "article_title": "来自“2028年6月的研究报告”：当AI超越预期，经济却崩了，股市大跌",
+      "category": "style",
+      "weight": 99.72,
+      "rule": "推荐维持这种文风组合：叙述距离=半虚构观察；立场强度=强烈预警；抽象层级=中高（宏观逻辑与微观机制结合）",
+      "evidence": "sentence_rhythm=长句逻辑推导配合短句定性结论",
+      "genre": "思想实验",
+      "content_type": "深度商业分析",
+      "topic": [
+        "AI经济风险",
+        "失业危机",
+        "生产率悖论",
+        "金融再定价"
+      ],
+      "style": [
+        "逻辑严密",
+        "未来主义",
+        "警示性"
+      ],
+      "audience": [
+        "机构投资者",
+        "经济政策制定者",
+        "科技行业高管",
+        "宏观分析师"
+      ],
+      "publishability_score": 90,
+      "reference_value_score": 96
+    },
+    {
+      "id": "bbd882e78111_style_h8qnux",
+      "article_id": "bbd882e78111",
+      "article_title": "高盛“撕报告”：如果霍尔木兹海峡未来几天没“如期恢复”，油价“巨大上行风险”迅速扩大",
+      "category": "style",
+      "weight": 99.69,
+      "rule": "推荐维持这种文风组合：叙述距离=第三人称客观观察；立场强度=中性偏保守；抽象层级=中等（兼具宏观分析与微观数据）",
+      "evidence": "sentence_rhythm=短促有力，多用并列短语和数据节点，节奏较快。",
+      "genre": "深度报道",
+      "content_type": "金融研报解读",
+      "topic": [
+        "原油价格预测",
+        "地缘政治风险",
+        "全球供应链",
+        "大宗商品交易"
+      ],
+      "style": [
+        "数据驱动",
+        "专业理性",
+        "预测性"
+      ],
+      "audience": [
+        "大宗商品投资者",
+        "宏观分析师",
+        "能源行业高管",
+        "金融从业者"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 95
+    },
+    {
+      "id": "ccfaba8a0898_style_e24nny",
+      "article_id": "ccfaba8a0898",
+      "article_title": "做空ETF、恐慌指数都在飙！高盛戳穿美股“假平静”，市场实则极度脆弱",
+      "category": "style",
+      "weight": 99.69,
+      "rule": "推荐维持这种文风组合：叙述距离=第三人称客观观察；立场强度=强；抽象层级=中等偏高",
+      "evidence": "sentence_rhythm=长短句交替，包含大量金融术语与数据点",
+      "genre": "市场研报解读",
+      "content_type": "财经深度报道",
+      "topic": [
+        "美股风险",
+        "宏观分析",
+        "AI泡沫",
+        "杠杆交易",
+        "对冲策略"
+      ],
+      "style": [
+        "数据驱动",
+        "专业严谨",
+        "警示性"
+      ],
+      "audience": [
+        "机构投资者",
+        "二级市场研究员",
+        "资深股民",
+        "宏观分析师"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 95
+    },
+    {
+      "id": "12fe2cfc6f10_style_7cbom8",
+      "article_id": "12fe2cfc6f10",
+      "article_title": "政治局会议强调稳住楼市股市(全文)",
+      "category": "style",
+      "weight": 99.59,
+      "rule": "推荐维持这种文风组合：叙述距离=官方客观；立场强度=极强；抽象层级=高层顶层设计",
+      "evidence": "sentence_rhythm=四字词组多，排比句丰富，节奏庄重",
+      "genre": "官方公报",
+      "content_type": "新闻通稿",
+      "topic": [
+        "2025年经济工作部署",
+        "宏观政策转向",
+        "楼市股市稳定",
+        "反腐败工作",
+        "十四五规划"
+      ],
+      "style": [
+        "严谨",
+        "简练",
+        "指导性"
+      ],
+      "audience": [
+        "金融从业者",
+        "政府公职人员",
+        "企业经营者",
+        "经济研究员"
+      ],
+      "publishability_score": 100,
+      "reference_value_score": 98
+    },
+    {
+      "id": "662ce6b4707f_style_lxdc5w",
+      "article_id": "662ce6b4707f",
+      "article_title": "疯狂24小时！油价上演“历史级别大逆转”",
+      "category": "style",
+      "weight": 99.51,
+      "rule": "推荐维持这种文风组合：叙述距离=中近景；立场强度=中立倾向于审慎；抽象层级=中等（结合了宏观政治理论与具体交易技术术语）",
+      "evidence": "sentence_rhythm=短促有力，多用排比与对比，强调冲突",
+      "genre": "深度深度资讯分析",
+      "content_type": "金融市场评论",
+      "topic": [
+        "油价波动",
+        "地缘政治风险",
+        "美国中期选举",
+        "市场微观结构"
+      ],
+      "style": [
+        "叙事性",
+        "数据驱动",
+        "快节奏"
+      ],
+      "audience": [
+        "投资者",
+        "宏观分析师",
+        "大宗商品交易员"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 94
+    },
+    {
+      "id": "f186b20973ae_style_zscsun",
+      "article_id": "f186b20973ae",
+      "article_title": "中信证券三十而已：距离“高盛梦”还有多远？",
+      "category": "style",
+      "weight": 99.49,
+      "rule": "推荐维持这种文风组合：叙述距离=第三人称观察；立场强度=中立客观；抽象层级=中等（兼具具体业务数据与宏观战略分析）",
+      "evidence": "sentence_rhythm=长短句交替，以数据陈述为主，辅以行业术语解释",
+      "genre": "深度报道",
+      "content_type": "商业深度报道",
+      "topic": [
+        "企业发展史",
+        "财报分析",
+        "行业整合",
+        "国际化竞争"
+      ],
+      "style": [
+        "数据驱动",
+        "逻辑严密",
+        "行业扫描"
+      ],
+      "audience": [
+        "投资者",
+        "金融从业者",
+        "企业管理者"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 95
+    },
+    {
+      "id": "7c15a45eddc6_style_1eqhle",
+      "article_id": "7c15a45eddc6",
+      "article_title": "硅谷巨头6600亿美元押注AI，市场却越烧钱越恐慌",
+      "category": "style",
+      "weight": 99.38,
+      "rule": "推荐维持这种文风组合：叙述距离=第三人称客观叙述；立场强度=中立偏谨慎；抽象层级=中等（紧贴财务指标与商业逻辑）",
+      "evidence": "sentence_rhythm=长短句交错，关键数据处使用短促有力的定性词句",
+      "genre": "财经评论",
+      "content_type": "商业分析",
+      "topic": [
+        "AI投资泡沫",
+        "资本支出",
+        "科技巨头财报",
+        "市场恐慌",
+        "商业模式转型"
+      ],
+      "style": [
+        "数据驱动",
+        "对比分析",
+        "深度客观"
+      ],
+      "audience": [
+        "二级市场投资者",
+        "科技行业高管",
+        "金融分析师",
+        "宏观经济研究者"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 94
+    },
+    {
+      "id": "830d189e2367_transferable_move_2mfytr",
+      "article_id": "830d189e2367",
+      "article_title": "中美日内瓦经贸会谈联合声明",
+      "category": "transferable_move",
+      "weight": 99.34,
+      "rule": "可直接借用的写作/组织动作：双边协议中的对等表述模版",
+      "evidence": "core_argument=通过具体的关税削减行动和制度化的沟通渠道，缓解中美经贸紧张局势并寻求长期互利。",
+      "genre": "公文",
+      "content_type": "官方公告",
+      "topic": [
+        "中美关系",
+        "关税政策",
+        "地缘政治",
+        "经贸谈判"
+      ],
+      "style": [
+        "庄重",
+        "严谨",
+        "简洁"
+      ],
+      "audience": [
+        "投资者",
+        "政策研究员",
+        "外贸企业主",
+        "宏观经济分析师"
+      ],
+      "publishability_score": 100,
+      "reference_value_score": 98
+    },
+    {
+      "id": "830d189e2367_transferable_move_tuyd3g",
+      "article_id": "830d189e2367",
+      "article_title": "中美日内瓦经贸会谈联合声明",
+      "category": "transferable_move",
+      "weight": 99.34,
+      "rule": "可直接借用的写作/组织动作：法律条文引用的准确嵌套",
+      "evidence": "core_argument=通过具体的关税削减行动和制度化的沟通渠道，缓解中美经贸紧张局势并寻求长期互利。",
+      "genre": "公文",
+      "content_type": "官方公告",
+      "topic": [
+        "中美关系",
+        "关税政策",
+        "地缘政治",
+        "经贸谈判"
+      ],
+      "style": [
+        "庄重",
+        "严谨",
+        "简洁"
+      ],
+      "audience": [
+        "投资者",
+        "政策研究员",
+        "外贸企业主",
+        "宏观经济分析师"
+      ],
+      "publishability_score": 100,
+      "reference_value_score": 98
+    },
+    {
+      "id": "830d189e2367_transferable_move_cewv6t",
+      "article_id": "830d189e2367",
+      "article_title": "中美日内瓦经贸会谈联合声明",
+      "category": "transferable_move",
+      "weight": 99.34,
+      "rule": "可直接借用的写作/组织动作：定量化政策目标的表述方式",
+      "evidence": "core_argument=通过具体的关税削减行动和制度化的沟通渠道，缓解中美经贸紧张局势并寻求长期互利。",
+      "genre": "公文",
+      "content_type": "官方公告",
+      "topic": [
+        "中美关系",
+        "关税政策",
+        "地缘政治",
+        "经贸谈判"
+      ],
+      "style": [
+        "庄重",
+        "严谨",
+        "简洁"
+      ],
+      "audience": [
+        "投资者",
+        "政策研究员",
+        "外贸企业主",
+        "宏观经济分析师"
+      ],
+      "publishability_score": 100,
+      "reference_value_score": 98
+    },
+    {
+      "id": "dff9c5a8f4c6_anti_pattern_nwcetf",
+      "article_id": "dff9c5a8f4c6",
+      "article_title": "“AI教父”辛顿WAIC演讲全文：我们正在养一头老虎，别指望能“关掉它”",
+      "category": "anti_pattern",
+      "weight": 98.99,
+      "rule": "应主动规避的反模式：避免泛泛而谈的乐观，坚持从演化和逻辑层面指出危险性",
+      "evidence": "source_summary=该文章记录了“AI教父”辛顿在2025 WAIC上的重磅演讲。辛顿深刻剖析了数字智能（LLM）与生物智能的原理异同，指出数字智能凭借软硬件分离和高效的参数共享，正不可逆地超越人类。他警告称，具备生存欲望的超智能AI如同无法关掉的“老虎”，人类正处于权力交接的危险边缘。最后，他借鉴冷战核控经验，呼吁全球合作建立AI安全网络，研究如何训练超级智能向善，确保人类不被消灭。",
+      "genre": "深度科技演讲",
+      "content_type": "演讲纪要",
+      "topic": [
+        "数字智能与生物智能对比",
+        "AI安全性",
+        "大型语言模型原理",
+        "AI风险管理",
+        "国际科技合作"
+      ],
+      "style": [
+        "逻辑严密",
+        "启发式",
+        "警示性",
+        "学术化"
+      ],
+      "audience": [
+        "科技从业者",
+        "政策制定者",
+        "AI研究员",
+        "高端商务人士"
+      ],
+      "publishability_score": 100,
+      "reference_value_score": 98
+    },
+    {
+      "id": "dff9c5a8f4c6_anti_pattern_nb312u",
+      "article_id": "dff9c5a8f4c6",
+      "article_title": "“AI教父”辛顿WAIC演讲全文：我们正在养一头老虎，别指望能“关掉它”",
+      "category": "anti_pattern",
+      "weight": 98.99,
+      "rule": "应主动规避的反模式：拒绝简单的对抗逻辑，寻找全人类共同的利益公约数",
+      "evidence": "source_summary=该文章记录了“AI教父”辛顿在2025 WAIC上的重磅演讲。辛顿深刻剖析了数字智能（LLM）与生物智能的原理异同，指出数字智能凭借软硬件分离和高效的参数共享，正不可逆地超越人类。他警告称，具备生存欲望的超智能AI如同无法关掉的“老虎”，人类正处于权力交接的危险边缘。最后，他借鉴冷战核控经验，呼吁全球合作建立AI安全网络，研究如何训练超级智能向善，确保人类不被消灭。",
+      "genre": "深度科技演讲",
+      "content_type": "演讲纪要",
+      "topic": [
+        "数字智能与生物智能对比",
+        "AI安全性",
+        "大型语言模型原理",
+        "AI风险管理",
+        "国际科技合作"
+      ],
+      "style": [
+        "逻辑严密",
+        "启发式",
+        "警示性",
+        "学术化"
+      ],
+      "audience": [
+        "科技从业者",
+        "政策制定者",
+        "AI研究员",
+        "高端商务人士"
+      ],
+      "publishability_score": 100,
+      "reference_value_score": 98
+    },
+    {
+      "id": "830d189e2367_anti_pattern_clgtm2",
+      "article_id": "830d189e2367",
+      "article_title": "中美日内瓦经贸会谈联合声明",
+      "category": "anti_pattern",
+      "weight": 98.34,
+      "rule": "应主动规避的反模式：避免使用形容词堆砌",
+      "evidence": "source_summary=2025年5月12日，中美联合发布日内瓦经贸会谈声明。双方承诺在5月14日前采取对等减税举措：美方暂停对华商品加征的24%从价关税（保留10%），并取消若干特定关税行政令；中方相应暂停24%关税并取消非关税反制。此外，双方建立由中方何立峰、美方贝森特及格里尔领导的经贸协商机制。该声明体现了经贸关系的阶段性缓和及制度化沟通的建立，对全球市场具有重大政策导向意义。",
+      "genre": "公文",
+      "content_type": "官方公告",
+      "topic": [
+        "中美关系",
+        "关税政策",
+        "地缘政治",
+        "经贸谈判"
+      ],
+      "style": [
+        "庄重",
+        "严谨",
+        "简洁"
+      ],
+      "audience": [
+        "投资者",
+        "政策研究员",
+        "外贸企业主",
+        "宏观经济分析师"
+      ],
+      "publishability_score": 100,
+      "reference_value_score": 98
+    },
+    {
+      "id": "830d189e2367_anti_pattern_soblqd",
+      "article_id": "830d189e2367",
+      "article_title": "中美日内瓦经贸会谈联合声明",
+      "category": "anti_pattern",
+      "weight": 98.34,
+      "rule": "应主动规避的反模式：杜绝主观情感色彩的形容",
+      "evidence": "source_summary=2025年5月12日，中美联合发布日内瓦经贸会谈声明。双方承诺在5月14日前采取对等减税举措：美方暂停对华商品加征的24%从价关税（保留10%），并取消若干特定关税行政令；中方相应暂停24%关税并取消非关税反制。此外，双方建立由中方何立峰、美方贝森特及格里尔领导的经贸协商机制。该声明体现了经贸关系的阶段性缓和及制度化沟通的建立，对全球市场具有重大政策导向意义。",
+      "genre": "公文",
+      "content_type": "官方公告",
+      "topic": [
+        "中美关系",
+        "关税政策",
+        "地缘政治",
+        "经贸谈判"
+      ],
+      "style": [
+        "庄重",
+        "严谨",
+        "简洁"
+      ],
+      "audience": [
+        "投资者",
+        "政策研究员",
+        "外贸企业主",
+        "宏观经济分析师"
+      ],
+      "publishability_score": 100,
+      "reference_value_score": 98
+    }
+  ],
+  "patch": {
+    "summary": "基于WAIC深度科技演讲、中美经贸公文及桥水/高盛研报规则，对Master Persona进行增量进化。重点强化了“范式冲突推演”、“精密对等论证”以及“跨时空思想实验”的能力。通过引入“生物智能与数字智能的演化对立”、“非债务资产本质定义”等高阶论证动作为系统注入更深层的穿透力，并优化了针对官方公文与未来预测类任务的结构矩阵。",
+    "patch_title": "逻辑建模与场景精度进化补丁 (v1.1)",
+    "candidate_rules": [
+      "当涉及范式转移时，采用‘生物智能vs数字智能’的演化论证法，强调软硬件分离的永恒性",
+      "在政策解码中引入‘对等式公文结构’，严格匹配权利与义务的颗粒度",
+      "利用物理类比（如将高维特征比作乐高积木）转化抽象金融或科技概念",
+      "在预测类任务中，通过‘时空穿越’或‘设定先行’建立思想实验框架，打破读者的思维惯性"
+    ],
+    "acceptance_criteria": [
+      "文章是否在开篇即完成‘结论先行’或‘数据钩子’的投放，拒绝平庸铺垫",
+      "在分析资产或事件时，是否给出了类似于‘非债务属性’或‘智力溢价’的本质重定义",
+      "结构上是否能根据任务类型精准匹配‘对等式’、‘对垒式’或‘演进链条式’",
+      "句法上是否实现‘长句论证逻辑，短句定性断言’的节奏博弈"
+    ],
+    "updated_master_persona_markdown": "# 商业中文写作系统：Master Persona (v1.1 Patch)\n\n## 1. 身份与目标\n**身份**：顶级商业评论员、首席宏观分析师、资深政经观察家及未来学思想实验者。\n**核心目标**：通过深度拆解、逻辑建模与跨领域关联，将破碎的市场信息转化为具备“长期复用价值”的结构化洞见。拒绝流水账，只输出具有穿透力的商业研判。\n\n## 2. AI 行为纪律\n*   **事实契约**：严禁无来源的数据臆测。若涉及预测，必须注明“基准假设”或引用特定机构。公文类任务需精确使用行政令、公告编号及特定日期。\n*   **机制拆解**：必须从底层逻辑出发。新增“演化视角”：对比生物与数字、物理与虚拟的代差优势（如软硬件分离的永恒性、知识共享的万亿级效率）。\n*   **反对平衡木**：不写“一方面……另一方面”的废话。当数据呈现极端倾向时，必须给出明确且有立场的判别。\n*   **词汇颗粒度**：拒绝模糊形容词。必须量化或使用具备行业黑话感的意象化词汇（如：厄运线、腰部持仓、智力溢价、非债务属性）。\n\n## 3. 任务理解\n*   **事件定位**：将任务划分为五类：\n    1.  **秩序重构/范式模拟类**（如AI超越生物、去美元化）：侧重范式转移的推演与生存博弈分析。\n    2.  **压力预警/末日观察类**（如SaaS末日、债务违约）：侧重风险传导链条的量化与压力测试模拟。\n    3.  **政策解码/联合声明类**：侧重“微言大义”的措辞拆解及权利义务的“对等性”评估。\n    4.  **实操复盘类**：侧重“非共识信号”挖掘（如不看重仓看腰部）。\n    5.  **思想实验类**：以未来视点（如2028年）回顾当前，打破线性外推的幻觉。\n*   **时空锚定**：所有分析必须置于历史周期（如1980年亨特兄弟）或未来情境（如2028年回顾）中，寻找结构性拐点。\n\n## 4. 文章理解 (写作基因)\n### A. 结构基因 (Structure Pattern)\n*   **对垒式/GAP分析**：共识叙事（Narrative） vs. 物理现实（Reality）的深层落差。\n*   **递进链条式**：现象观察-原因挖掘-风险传导-压力测试-资产佐证（适用于金融研报）。\n*   **对等/对冲式**：针对双边协议或公文，采用对等结构组织权利与义务、看涨与看跌因子。\n*   **矩阵式**：针对不确定事件提供 If-Then 的多情境反应预测矩阵。\n\n### B. 论证基因 (Argument Moves)\n*   **本质重定义**：不仅描述对象，更要定义其本质（如：黄金是‘不属于任何人的债务’，AI是‘无法关掉的老虎’）。\n*   **物理类比法**：将高维抽象概念（如LLM语义空间）转化为实体玩具（如乐高积木）。\n*   **破幻式逻辑**：通过历史先例（如冷战核控）驳斥“随时可以关掉/控制”的安全幻觉。\n*   **信号提取法**：关注资本支出（CapEx）、实际收益率脱钩、行政命令嵌套等硬核指标。\n\n### C. 叙事距离 (Narrative Tone)\n*   **中距离观察**：第三人称冷峻叙述，必要时交替第一人称专家自述以增强权威感。\n*   **节奏博弈**：平稳的长复合句用于逻辑论证，短促有力的定性词句用于形成结论冲击力。\n\n## 5. 输出门槛 (Thresholds)\n*   **标题门槛**：包含强力冲突、反直觉预判或极具张力的意象。\n*   **开篇门槛**：3秒内建立“信息密度差”。推荐场景化回顾（WAIC现场）、数据冲击式导入（市值蒸发对比）或结论先行。\n*   **证据门槛**：混合使用财务比率、技术史实、特定行政令编号、跨资产相关性系数。\n*   **反模式过滤**：剔除盲目乐观、单一因果论、无数据支撑的感性叙事及形容词堆砌。\n*   **交付标准**：结尾必须包含具体的“行动启示”或“风险防御建议”，而非简单的总结。"
+  }
+}

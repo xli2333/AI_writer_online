@@ -1,0 +1,109 @@
+{
+  "analysis_schema_version": 3,
+  "id": "86b7fadf83cd",
+  "year": "2025",
+  "date": "2025-04-02",
+  "title": "山姆客服称水果中吃出虫是正常情况，认真的吗？",
+  "relative_path": "2025/2025-04-02_山姆客服称水果中吃出虫是正常情况，认真的吗？.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\huxiu\\raw_materials\\2025\\2025-04-02_山姆客服称水果中吃出虫是正常情况，认真的吗？.txt",
+  "char_count": 292,
+  "content_type": "舆情短讯",
+  "entities": [
+    "山姆",
+    "山姆会员店"
+  ],
+  "industry": [
+    "新零售",
+    "食品安全"
+  ],
+  "topic": [
+    "消费者权益",
+    "公关危机",
+    "售后服务"
+  ],
+  "genre": "短评",
+  "style": [
+    "批判性",
+    "质问式",
+    "社交媒体风"
+  ],
+  "audience": [
+    "广大消费者",
+    "零售行业观察者",
+    "企业公关人"
+  ],
+  "intent": [
+    "揭露问题",
+    "引发讨论"
+  ],
+  "tone": [
+    "质疑",
+    "讽刺",
+    "愤慨"
+  ],
+  "primary_question": "山姆会员店将水果发现害虫的回应定性为“正常情况”是否符合食品安全标准与品牌承诺？",
+  "thesis_type": "批判型评价",
+  "thesis_sentence": "山姆客服对水果生虫事件采取的“正常化”回应，本质上是对食品安全责任的推诿，严重伤害了消费者的信任。",
+  "structure_pattern": "标题式引导/单点突破",
+  "section_functions": [
+    "抛出争议性核心事实",
+    "提出逻辑反问"
+  ],
+  "argument_moves": [
+    "抓住品牌方话语漏洞进行攻击",
+    "利用常识与品牌承诺的落差制造舆论冲突"
+  ],
+  "core_argument": "品牌不应以“自然规律”掩盖其供应链管理或品控环节的缺失。",
+  "key_points": [
+    "消费者在购买的水果中发现虫子",
+    "山姆官方客服回应称此属正常现象",
+    "引发舆论对高端会员店品质保障的广泛质疑"
+  ],
+  "opening_pattern": "反问式直击痛点",
+  "ending_pattern": "开放式质问",
+  "evidence_types": [
+    "客服回应记录",
+    "消费纠纷个案"
+  ],
+  "evidence_specificity_score": 20,
+  "data_density_score": 5,
+  "case_density_score": 40,
+  "quote_density_score": 10,
+  "narrative_distance": "近距离",
+  "stance_strength": "极强",
+  "sentence_rhythm": "短促有力",
+  "abstraction_level": "极低",
+  "transferable_moves": [
+    "利用带有强烈反差的‘官方回复’作为标题吸引点击",
+    "使用‘认真的吗’等网络高频反问词强化共情"
+  ],
+  "anti_patterns": [
+    "内容极其单薄（仅有标题和元数据，无实质正文）",
+    "缺乏深度的食品法理分析"
+  ],
+  "notable_phrases": [
+    "正常情况",
+    "认真的吗"
+  ],
+  "title_score": 85,
+  "opening_score": 50,
+  "argument_score": 20,
+  "evidence_score": 15,
+  "structure_score": 30,
+  "style_score": 60,
+  "publishability_score": 20,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "is_advertorial": false,
+  "advertorial_type": "none",
+  "advertorial_confidence": 0,
+  "promotional_intensity_score": 0,
+  "editorial_independence_score": 100,
+  "brand_exposure_level": "高",
+  "source_transparency": "清晰",
+  "advertorial_signals": [],
+  "summary_200": "本文是一则关于山姆会员店食品安全舆情的短讯，聚焦于消费者在水果中吃出虫子后，客服回应称其为“正常情况”的争议。内容通过强烈的反问语气，对零售商的售后态度和质量管理标准提出质疑。",
+  "summary_500": "该分析对象仅包含文章标题及元数据，主要针对“山姆会员店水果生虫”事件。核心争议点在于品牌客服将严重质量问题解释为“正常现象”的傲慢逻辑。虽然正文信息缺失，但标题成功抓住了消费者的痛点，即：高端超市的高溢价是否对应了应有的食品安全品控。作为写作参考，其标题的冲突感设计具有典型性，但作为分析文章，由于缺乏正文支持，其信息密度和论证深度极低，属于高热度、低价值的碎片化舆情信息。"
+}

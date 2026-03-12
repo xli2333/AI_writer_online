@@ -15,6 +15,14 @@ export interface RuntimePromptAssets {
   xinzhiyuanPaperPersona?: string;
   xinzhiyuanProductPersona?: string;
   xinzhiyuanPeoplePersona?: string;
+  huxiuIndustryPersona?: string;
+  huxiuConsumerPersona?: string;
+  huxiuProfilePersona?: string;
+  huxiuSocietyPersona?: string;
+  wallstreetcnMacroPersona?: string;
+  wallstreetcnMarketsPersona?: string;
+  wallstreetcnCompanyPersona?: string;
+  wallstreetcnStrategyPersona?: string;
 }
 
 interface PromptAssetPayload {
@@ -62,6 +70,13 @@ const PROFILE_PROMPT_ASSET_NAMES: Record<string, string[]> = {
     'xinzhiyuanProductPersona',
     'xinzhiyuanPeoplePersona',
   ],
+  huxiu: ['huxiuIndustryPersona', 'huxiuConsumerPersona', 'huxiuProfilePersona', 'huxiuSocietyPersona'],
+  wallstreetcn: [
+    'wallstreetcnMacroPersona',
+    'wallstreetcnMarketsPersona',
+    'wallstreetcnCompanyPersona',
+    'wallstreetcnStrategyPersona',
+  ],
 };
 
 const fetchJson = async <T>(input: string, init?: RequestInit): Promise<T> => {
@@ -102,6 +117,14 @@ export const loadRuntimePromptAssets = async (profile = 'fdsm'): Promise<Runtime
           xinzhiyuanPaperPersona: String(assets.xinzhiyuanPaperPersona || '').trim(),
           xinzhiyuanProductPersona: String(assets.xinzhiyuanProductPersona || '').trim(),
           xinzhiyuanPeoplePersona: String(assets.xinzhiyuanPeoplePersona || '').trim(),
+          huxiuIndustryPersona: String(assets.huxiuIndustryPersona || '').trim(),
+          huxiuConsumerPersona: String(assets.huxiuConsumerPersona || '').trim(),
+          huxiuProfilePersona: String(assets.huxiuProfilePersona || '').trim(),
+          huxiuSocietyPersona: String(assets.huxiuSocietyPersona || '').trim(),
+          wallstreetcnMacroPersona: String(assets.wallstreetcnMacroPersona || '').trim(),
+          wallstreetcnMarketsPersona: String(assets.wallstreetcnMarketsPersona || '').trim(),
+          wallstreetcnCompanyPersona: String(assets.wallstreetcnCompanyPersona || '').trim(),
+          wallstreetcnStrategyPersona: String(assets.wallstreetcnStrategyPersona || '').trim(),
         };
       })
     );

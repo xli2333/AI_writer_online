@@ -1,0 +1,105 @@
+{
+  "analysis_schema_version": 3,
+  "id": "b738878f5432",
+  "year": "2024",
+  "date": "2024-12-25",
+  "title": "“眯眯眼”丑化国人形象了吗？",
+  "relative_path": "2024/2024-12-25_“眯眯眼”丑化国人形象了吗？.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\huxiu\\raw_materials\\2024\\2024-12-25_“眯眯眼”丑化国人形象了吗？.txt",
+  "char_count": 284,
+  "content_type": "社会评论",
+  "entities": [
+    "中国"
+  ],
+  "industry": [
+    "文化传媒",
+    "社会评论"
+  ],
+  "topic": [
+    "眯眯眼争议",
+    "文化认同",
+    "审美观",
+    "民族形象"
+  ],
+  "genre": "议论文",
+  "style": [
+    "议论性的",
+    "探讨式"
+  ],
+  "audience": [
+    "大众",
+    "文化评论者"
+  ],
+  "intent": [
+    "探讨争议",
+    "舆论引导"
+  ],
+  "tone": [
+    "理性的",
+    "询问性的"
+  ],
+  "primary_question": "“眯眯眼”这种特定的审美符号在现代语境下是否构成了对中国人群体的刻板印象丑化？",
+  "thesis_type": "评价型",
+  "thesis_sentence": "由于正文缺失，仅能根据标题推测其核心命题在于辨析特定妆造审美与文化歧视之间的界限。",
+  "structure_pattern": "问题提出-原因分析-价值判断（推测）",
+  "section_functions": [
+    "通过标题引出社会敏感话题",
+    "引发读者对审美符号的思考"
+  ],
+  "argument_moves": [
+    "提出具有争议性的核心问题",
+    "设立讨论边界"
+  ],
+  "core_argument": "由于原文内容缺失，无法提取实质性的核心论点。",
+  "key_points": [
+    "对‘眯眯眼’形象的历史文化渊源解析",
+    "当代审美多样性与文化自尊的冲突",
+    "西方对东方的刻板印象建构"
+  ],
+  "opening_pattern": "提问式",
+  "ending_pattern": "未知",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 0,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "远",
+  "stance_strength": "中性",
+  "sentence_rhythm": "未知",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "利用热点社会争议标题吸引注意力",
+    "使用疑问句式平衡争议性话题的先入为主感"
+  ],
+  "anti_patterns": [
+    "内容严重缺失",
+    "缺乏事实论据支撑"
+  ],
+  "notable_phrases": [
+    "眯眯眼",
+    "丑化国人形象"
+  ],
+  "title_score": 75,
+  "opening_score": 0,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 0,
+  "style_score": 0,
+  "publishability_score": 10,
+  "quality_score": 5,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "is_advertorial": false,
+  "advertorial_type": "editorial",
+  "advertorial_confidence": 0,
+  "promotional_intensity_score": 0,
+  "editorial_independence_score": 100,
+  "brand_exposure_level": "无",
+  "source_transparency": "清晰",
+  "advertorial_signals": [],
+  "summary_200": "该内容仅包含文章标题及基础元数据，主题聚焦于国内近年来频发的‘眯眯眼’审美争端。由于缺乏正文内容，无法判定作者的具体立场或论证逻辑。该条目目前被视为信息缺失的无效样本。标题呈现出明显的社会评论特征，旨在探讨审美符号与民族文化尊严之间的复杂关系，但在当前状态下不具备学习或参考的写作价值。",
+  "summary_500": "这份分析对象是一篇关于‘眯眯眼’审美话题的社会评论文章占位符。文章发布日期标记为2024年12月25日。全文仅提供了标题、链接及来源，缺乏实际的论述文本。标题‘“眯眯眼”丑化国人形象了吗？’触及了当代中国互联网上极其敏感的文化认同与民族自信话题，通常涉及对西方中心主义审美、刻板印象的历史渊源（如傅满洲形象）以及本土品牌在使用此类妆造时所面临的舆论压力等层面的分析。然而，由于没有具体的论点、论据或结构安排，无法评估其论证的深度与广度。该记录被判定为低价值，因为其仅作为一个话题线索存在，不能提供任何可用于RAG写作或人格提炼的实质性数据。在正常的商业内容分析中，此类仅有标题的条目通常会被标记为待补充或无效。"
+}

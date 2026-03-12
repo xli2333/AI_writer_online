@@ -1,0 +1,150 @@
+标题: 所有顶尖AI实验室都失去了联创，除了Anthropic！
+日期: 2026-01-28
+链接: http://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652668689&idx=3&sn=71a6669c000cc31aa08f174f5af0d05f&chksm=f12ff7e0c6587ef602fc0c7ce2bc3dd790d701c4e6caa0cba9f7d4df0c8c03f9784cb0970cb9#rd
+来源模式: wechat
+----------------------------------------
+
+新智元报道
+编辑：KingHZ
+【新智元导读】
+OpenAI 11位联创只剩3人，Ilya出走创办SSI，John Schulman跳槽Anthropic……而Anthropic的7位创始人至今无人离队。稳定，才是最大的竞争力。
+AI巨头中，员工留存率最多有多高？
+80%。
+这是去年曝出的数字。
+而且，不是巨头谷歌DeepMind，不是Meta，也不是OpenAI，而是Anthropic:
+根据风投公司SignalFire的研究，在2021年到2023年初之间入职的员工，Anthropic有高达80%仍在岗——
+而谷歌DeepMind是78%，OpenAI是67%，Meta只有64%。
+美国几乎所有顶尖AI实验室都失去了联合创始人：
+OpenAI：11人中有8人已离开
+Thinking Machines：6位联合创始人中已有3位离开
+SSI：3人中已走1人
+DeepMind：3人中已走1人
+xAI：12人中有3人已离开
+唯一的例外是Anthropic。
+Anthropic的7位联合创始人全都还在，这值得研究。
+Anthropic：
+唯美食与AI，不可辜负？
+Anthropic的七位联合创始人无人离去，好理解：去年年初，Anthropic的600亿美元估值落定，7位联合创始人全员跻身亿万富翁行列。
+但普通员工的留存率， Anthropic居然也高达80%。
+对此，AI算力创业者Yuchen Jin非常好奇，在𝕏发起了问卷调查：
+1. Claude Code；2. 股权归属期长；3. 安全使命；4. 它的伙食更好；5. 收入大幅增长；6. Dario在公司内部Slack上发表的长文；7. 相信编程是通往通用人工智能（AGI）的道路
+每条理由都有人支持。
+上下滑动查看
+比如说，第四条就得到多名网友的支持。
+YouTuber、天使投资人、开发者、AI爱好者Matthew Berman，吃过Anthropic的红豆甜点之后，甚至把AGI抛之其后！
+不过，Yuchen Jin难以相信Anthropic的工作餐能比xAI还好：
+上下滑动查看
+他认为Anthropic有顶尖实验室最稀有的特质，开始看好Anthropic：
+我开始觉得Anthropic也许能赢，仅仅是因为：没有抓马剧情。
+确实，Anthropic在员工留存上有一套。
+在AI四巨头中，Anthropic的留存率最高的。
+不仅如此，工程师从OpenAI跳槽到Anthropic的概率是反方向的8倍多，从DeepMind跳过来的概率则接近11倍。
+SignalFire评论说：
+这种趋势在一定程度上可以预料，毕竟Anthropic是行业新宠，而DeepMind那边团队资历老、人数多，自然有人想换换环境。
+但没想到，差距会这么大。
+在吸引人才方面，Anthropic是对OpenAI和DeepMind单方向的「屠杀」。
+虽然如此，Anthropic也不是毫发未损。
+比如，去年Meta发挥「钞能力」挖走了工程师Joel Pobar和Anton Bakhtin，不过他们还没在社交媒体上确认跳槽消息。
+不过，Anthropic也有几位员工甚至连Meta的面试都不愿参加，「根本不想和扎克伯格谈」。
+OpenAI：11位联创，8人出走
+2015年，非营利机构OpenAI成立，奥特曼和马斯克共同担任联席主席，创始团队里Ilya等知名AI研究员，以及一批研究工程师与科学家。
+成立之初，OpenAI的研究总监是Ilya Sutskever；首席技术官是Greg Brockman；其他创始成员为：Trevor Blackwell、Vicki Cheung、Andrej Karpathy、Durk Kingma、John Schulman、Pamela Vagata 和 Wojciech Zaremba；OpenAI的联合主席是奥特曼和马斯克
+但最初11位联合创始人中，如今只有3位仍在OpenAI：
+奥特曼，现任
+OpenAI的
+CEO
+Greg Brockman，现任OpenAI的主席
+Wojciech Zaremba，现任OpenAI的Codex研究团队和语言团队负责人
+其中，奥特曼和Greg Brockman均为AI背景。
+而Wojciech Zaremba有件趣事，他在Yann LeCun手下读博中途中成了OpenAI的联合创始人。
+其余的人分散在科技圈各处，甚至与OpenAI对簿公堂。
+OpenAI的联合CEO、早期投资人Elon Musk，早已不在OpenAI，并与OpenAI存在诉讼争议。
+Trevor Blackwell
+是
+机器人学家
+，也是Y Combinator的联合创始人之一，他在那里认识了奥特曼。
+他曾作为 OpenAI 的创始研究员之一在OpenAI工作至 2017 年，同时还担任 Y Combinator 的合伙人至 2020 年。
+OpenAI仍处于隐秘（stealth）阶段时，作为多邻国创始工程师的
+Vicki Cheung
+就与OpenAI取得了联系。
+在一档2021年回顾OpenAI早期的播客中，她提到：「当时就只有我和Greg Brockman，在他的公寓里工作。」
+担任基础设施负责人两年后，她离开OpenAI，并于2018年加入 Lyft 担任软件工程师。
+2020 年，她从 Lyft 离职，与另一位OpenAI早期员工Josh Tobin共同创立 Gantry。
+2025年，她出任地理空间AI初创公司Matter Intelligence的CTO。
+作为OpenAI创始团队中另一名女性成员，Pamela Vagata的科技职业生涯始于在微软担任软件开发工程师。
+随后，她在Facebook工作了六年，其中两年担任人工智能研究工程师。
+她在OpenAI的具体初期职务尚不明确，甚至在LinkedIn中没有相关内容。
+但据外媒报道，她在OpenAI的基础设施建设及早期产品方面发挥了关键作用。
+她在OpenAI的任期较短。2016年，她加入Stripe，担任其人工智能技术负责人之一。
+此后，Vagata创立了Pebblebed，这是一家成立于2021 年、专注于早期AI投资的风险投资公司。
+2015年，马斯克将当时的谷歌研究科学家Ilya招致麾下。
+马斯克坦承，这次招聘是「我经历过最艰难的挖角战之一」。
+最初，Ilya担任OpenAI研究总监，2018年晋升为首席科学家。
+2024年5月，在试图罢免奥特曼未遂六个月后，他离开了OpenAI，创立一家名为「安全超级智能」（Safe Superintelligence Inc,SSI）的AI公司。
+OpenAI最动荡的是2024年，不止是「宫变3日」，不止是Ilya出走。
+5月，OpenAI超级对齐负责人Jan Leike出走，安全分歧公开化，安全在OpenAI 「给炫目产品让路」。
+8月，OpenAI联合创始人John Schulman
+离开OpenAI加入Anthropic。
+9月，现任总裁Greg Brockman，2024年自联合创立OpenAI后「第一次放松」，大概3个月。
+更早之前，2018年，OpenAI创始团队中的Durk Kingma离开，加入Anthropic。
+而Andrej Karpathy与OpenAI的关系更复杂一些：
+2015年，博士毕业后即加入OpenAI；
+2017年，加入特斯拉任AI总监，直到2022年离开；
+2023年，「二进宫」OpenAI；
+2024年，开始独自创业。
+在OpenAI「惊魂三日后」，多名高管离职👇：
+多家报道引用前员工说法
+指出：OpenAI 从事长期/AGI 安全的团队在 2024 年出现「近半」流失，如 Jan Hendrik Kirchner、Collin Burns、Jeffrey Wu、Jonathan Uesato、Steven Bills、Yuri Burda、Todor Markov 等）。
+据多名高管称，奥特曼领导下的「PUA」是离职原因。
+2025年，Meta砸钱抢人，OpenAI失去部分核心员工，以下是ChatGPT的不完全统计：
+Thinking Machines
+OpenAI前CTO开除了自己的CTO
+OpenAI前首席技术官、Thinking Machines Lab（TML）首席执行官Mira Murati在宣布：「Barret Zoph已与我们分道扬镳。」
+随后，
+Luke Metz、Sam Schoenholz也提出离职。
+然而仅58分钟后，OpenAI应用业务首席执行官Fidji Simo发布贴文，高调欢迎
+Barret Zoph、Luke Metz、Sam Schoenholz
+回归。
+据报道，至少有5人已经离职，接二连三的离职，加剧了TML员工的不安。
+考虑到TML大约有100人，5人离职本来问题不大，但Barret Zoph、Luke Metz、Sam Schoenholz是TML的元老。
+传言最凶的说法是，50%的创始技术领导层成员已离开。
+这场混乱的「人间戏剧」重创了这家炙手可热的明星AI创业公司，但祸根早已在数月前埋下。
+SSI：小扎重赏之下，CEO跑了
+2024年离开OpenAI后，Ilya和Daniel Gross、Daniel Levy联合创立了安全超级智能公司（Safe Superintelligence，简称SSI。
+Daniel Gross，Ilya Sutskever和Daniel Levy
+然而，去年夏天，Daniel Gross已被扎克伯格重金「买下」，加入Meta SuperIntelligence Lab。
+在未能成功全资收购SSI之后，Meta聘请Daniel Gross及其长期合作伙伴Nat Friedman。
+两人共同运营着颇具影响力的早期风险投资基金 NFDG。据媒体报道，作为此次合作的一部分，Meta 还将收购 NFDG 的部分股权。
+DeepMind：刺头Mustafa Suleyman离职
+2022年，DeepMind的联合创始人Mustafa Suleyman，离职后加入风险投资公司Greylock Partners。
+这标志着他在谷歌长达八年的职业生涯正式结束——
+他在谷歌最后的职务是AI产品管理与政策副总裁。
+2014年，Suleyman随DeepMind被谷歌收购而加入该公司，并出任DeepMind应用人工智能部门负责人。
+据报道，2019年他曾因被指控欺凌员工而被安排行政休假。同年年底，他调入谷歌总部。
+后来，Suleyman公开承认：「我当时真的搞砸了」，并坦言：「我至今仍为那件事给人们造成的伤害和痛苦深感抱歉。」
+在攻读博士期间，哈萨比斯结识了Shane Legg，而Mustafa Suleyman与哈萨比斯儿时就成了朋友。
+没想到，Mustafa Suleyman因职场霸凌而与哈萨比斯分道扬镳。
+2010年，哈萨比斯（中）、Mustafa Suleyman（左）、Shane Legg（右）等三人在伦敦创立了DeepMind
+现在，他是微软AI的首席执行官，在此之前，他曾共同创立并担任Inflection AI的首席执行官
+xAI：马斯克的祝福还是诅咒？
+xAI非常神秘，创始团队确切人数外界都无法确认，据传大约12人。
+数学家、杨格因病退居二线，病情加剧或因「全力投入创建xAI、导致免疫系统变弱」。
+更早之前，xAI另一个联合创始人Igor  Babuschkin已离职——
+在职业生涯早期，他曾担任 DeepMind AlphaStar《星际争霸》智能体项目的技术负责人，亲眼见证了强化学习在规模化后所展现出的强大能力。
+随着前沿模型在更长的时间跨度和更广泛的任务中变得越来越具有自主性，它们将获得越来越强大的能力，这使得研究并推进AI安全性变得至关重要。
+他创立了机构Babuschkin Ventures将支持 AI 安全研究，并投资于那些致力于推动人类进步、探索宇宙奥秘的 AI 及智能体系统领域的初创企业。
+据报道，xAI法律总顾问Robert Keele于2025年8月辞职，他于2024年5月加入公司，负责xAI与X（前Twitter）1130亿美元合并及与OpenAI诉讼等关键事务。
+Keele形容与马斯克共事为「一生冒险」，但坦言工作狂热导致家庭失衡：「我爱我的两个幼儿，却见不到他们足够多」，无法「一心二用」。
+继任者为原隐私与知识产权负责人Lily Lim。
+此离职并非孤例，xAI CFO Mike Liberatore于2025年4月上任，仅数月后于7月底离职，Airbnb前高管背景的他参与了公司60亿美元债务融资及50亿美元战略股权投资，用于AI开发、数据中心及Grok平台。
+离职原因未知，但紧随联合创始人Igor Babuschkin 8月离职创办AI安全投资公司。
+参考资料：
+https://observer.com/2024/07/openai-founders-career/
+https://archive.ph/HWBqX
+#selection
+-4601.0-4688.9
+https://www.techrepublic.com/article/news-anthropic-staff-retention-ai-researchers-recruiting/
+https://observer.com/2025/11/11-executives-driving-anthropics-meteoric-rise-in-the-a-i-boom/
+秒追ASI
+⭐点赞、转发、在看一键三连⭐
+点亮星标，锁定新智元极速推送！

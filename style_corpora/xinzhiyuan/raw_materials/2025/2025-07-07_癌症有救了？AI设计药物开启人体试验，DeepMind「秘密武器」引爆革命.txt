@@ -1,0 +1,76 @@
+标题: 癌症有救了？AI设计药物开启人体试验，DeepMind「秘密武器」引爆革命
+日期: 2025-07-07
+链接: http://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652607458&idx=2&sn=b696f88ea41ab05a34cce57ad2ad8e9a&chksm=f128e713c65f6e057e1cc9e88ae4357a9ec56d3cfbb3c512f9f2737564e0695ee2ccfded59b7#rd
+来源模式: wechat
+----------------------------------------
+
+新智元报道
+编辑：YHluck
+英智
+【新智元导读】
+刚刚，AI制药从理论迈向实践的关键一步！DeepMind分拆公司，亮出「秘密武器」：基于AlphaFold系统研发的候选药物，已进入人体临床实验。这意味着将大幅缩短新药研发周期、降低成本，加速新药惠及患者。
+刚刚，AI制药从理论迈向实践的关键一步！
+DeepMind分拆而来的Isomorphic Labs高调宣布：
+首批基于AlphaFold发现的候选药物，已进入人体临床试验。
+之前最让医疗制药行业研究人员头疼的是，新药研发周期长、成本高，患者等待新药治疗周期长。
+这一出现，刚好解决了这一痛点。
+同时也标志着，AI制药从理论迈向实践的关键一步。
+网友们，也纷纷为这个「暖心时刻」拍掌叫好。
+「为了长寿和更远的未来！」
+虽然聊天机器人和智能体很酷，但在AI时代，最兴奋的还是「医疗健康领域的突破」。
+Colin Murdoch是何许人也？
+梳理发现，Colin Murdoch除了是Isomorphic Labs总裁外，还兼任Google DeepMind首席商务官。
+linkedin显示，Murdoch是伯明翰大学电子与软件工程硕士。
+他的职业经历也很丰富。
+Murdoch先后任职于Marconi、AVT Technologies、汤森路透等公司。
+在成为Google DeepMind首席商务官前，他担任过首席软件工程师、高级产品经理、业务战略主管、商业与运营总监。
+Isomorphic Labs是家什么公司？
+Isomorphic Labs是Alphabet的秘密武器。
+它的核心就是，
+「
+AI
+」和「人」双剑合璧，一个算得快，一个懂得多，联手把新药研发的成本干下来，速度提上去！
+实际上，它是2021年从谷歌DeepMind分拆出来的。
+2024年5月开发并发布了AlphaFold 3。
+AlphaFold 3是一款高精确度模拟所有生命分子的结构和相互作用的AI系统。能够解决药物设计中的复杂性问题。
+同年，Isomorphic与制药公司诺华（Novartis） 和礼来（Eli Lilly）签署了重要的研究合作协议。
+一年后，Isomorphic Labs获得了由Thrive Capital 领投6亿美元融资。
+这些合作是Isomorphic打造「世界级药物设计引擎」计划的一部分。
+核心目标，是希望通过AI系统将机器学习研究人员与制药行业资深人士串联起来。
+通俗一点讲，就是「
+新药研发，速度起飞，成本打骨折，成功率拉满！」
+Isomorphic也在肿瘤学和免疫学领域开发自有候选药物，计划在早期试验后把它们授权给其他公司。
+Murdoch表示，「我们会锁定尚未满足的医疗需求，启动自有药物设计项目，开发并推向临床试验，虽然尚未完全实现，但进展很顺利！」
+现在，制药公司推一款新药要花好几百万，临床试验的成功率有时候只有10%。
+Murdoch认为，Isomorphic的技术能大大提高胜算。
+他期待用AlphaFold的技术，让研究人员对临床试验的效果有十足的信心。
+有一天，希望能实现：输入一种疾病，点击按钮，就能生成相应的药物设计。
+这一切都将由强大的AI工具驱动。
+核心技术AlphaFold
+这次，AI制药里程碑式的首次人体临床试验，背后的核心技术是什么呢？
+挖掘一番发现，背后的推动技术是由谷歌DeepMind AlphaFold。
+AlphaFold是由谷歌DeepMind开发的一种AI系统，能够根据蛋白质的氨基酸序列预测其三维结构。
+最核心的是，能让科研人员更快发现、更精确地设计药物「灵感来源」。
+AlphaFold的交互作用从精准预测单一蛋白质结构，到模拟蛋白质与DNA、药物等分子的相互作用。
+这也就变相推动了药物研发的效率。
+当然，这个AI系统也存在局限性。
+虽然通过使用距离图来捕捉成对距离，它确实简化了问题，但仍然无法「多结构域蛋白质上」的复杂性。
+为解答网友对「距离图」的疑问，简单科普下：距离图是蛋白质折叠的关键中间步骤。
+对于长度为L
+L
+的序列， 3D3
+D
+距离图（距离+直方图）是一个LxL
+LxL
+矩阵，显示了成对距离的直方图。
+这些距离被分箱处理，因此被视为分箱距离分布。
+如果距离被分箱，距离图可能拥有与分箱数相同的通道数，意味着LxLxbins
+LxLxbins
+张量。
+距离图也被称为接触图，它们始终是对称矩阵。它能使得任务变得简单得多。
+当医疗碰上AI还能擦出怎样的火花，我们拭目以待！
+参考资料：
+https://fortune.com/2025/07/06/deepmind-isomorphic-labs-cure-all-diseases-ai-now-first-human-trials/
+https://x.com/slow_developer/status/1941965378906693946
+https://alphafold.ebi.ac.uk/?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=
+https://theaisummer.com/deep-learning-biology-alphafold/

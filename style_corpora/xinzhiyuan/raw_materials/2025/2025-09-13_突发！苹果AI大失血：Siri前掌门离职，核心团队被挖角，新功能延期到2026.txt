@@ -1,0 +1,54 @@
+标题: 突发！苹果AI大失血：Siri前掌门离职，核心团队被挖角，新功能延期到2026
+日期: 2025-09-13
+链接: http://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652627359&idx=2&sn=6fd4d68e0ea1d93a7a0a7007bd4e0d40&chksm=f128956ec65f1c78ddbfde044a976aaeab0f2f97836a38345df17df8f7dd4da126cf1188faf2#rd
+来源模式: wechat
+----------------------------------------
+
+新智元报道
+编辑：元宇
+【新智元导读】
+苹果AI再传震荡：前Siri负责人、AKI高级总监Robby Walker即将离任。如今，苹果在AI领域的落地已严重失速，备受期待的新版Siri功能也被推迟至2026年。
+一图看透全球大模型！新智元十周年钜献，2025 ASI前沿趋势报告37页首发
+高管出走、人才流失
+新品发布会因缺乏「AI进展」被投行降级
+Siri升级延期，新AI功能未就绪
+Apple Intelligence落地受限
+……
+从年中高调，到9月「轻AI」的产品发布，苹果AI近半年来在跌宕中失速。
+近日，苹果AI高层再传震荡：
+前Siri负责人、AI资深高管Robby Walker即将离任。
+Walker是AI负责人John Giannandrea的少数直接汇报人之一。
+自2022年起，他就一直在负责这款语音助手。
+但在今年早些时候，因新版Siri的发布延期，Walker被撤出该项目。
+随后，该项目转交给软件主管Craig Federighi负责。
+据知情人士透露，Walker计划于下个月离开苹果。
+从Siri到「AKI」
+2011年10月4日，苹果推出Siri的第二天，乔布斯在与癌症长期斗争后去世。
+自此，Siri团队便失去了最初的远见——不仅进展缓慢，而且负责人也遭到频繁更换。
+2013年，苹果出手收购了个人助理应用初创公司Cue。创始人
+Robby Walker
+和他的团队，也随之加入。
+7年后，Walker晋升成为Siri团队的高级总监。
+2025年，Walker被调到了刚刚成立的「答案、信息与知识」（AKI）团队担任高级总监。
+顾名思义，这支队伍的核心任务是打造一套全新的「回答引擎」，不仅能理解问题、整合信息，还能像ChatGPT一样直接生成回答。
+不同于外挂式接入的ChatGPT，AKI要做的是从底层重构，重新定义「苹果式AI搜索体验」。
+从某种意义上说，这是苹果第一次不再「靠别人回答」，而是试图真正掌握答案本身。
+据The Information此前报道，在担任Siri负责人期间，Walker因不愿承担较大的风险而在苹果内部成为批评的焦点。
+战略频出，落地失速
+虽然，过去几个月，Walker的职责和团队已大幅缩减，但他仍然是苹果AI战略中颇具影响力的一员。
+Walker的离开，正是苹果AI部门高管与工程师离职潮的一个缩影。
+此前，领衔苹果AI模型团队的Ruoming Pang已跳槽至Meta，他麾下的许多工程师和研究人员也随之离开。
+上月，另一位负责搜索服务的高级主管Frank Chu也转投Meta。
+近半年来，苹果AI战略动作频出。
+软件工程高级副总裁Craig Federighi
+4月份，前Vision Pro负责人Mike Rockwell接手Siri工程并重组团队，Siri统筹回归软件工程主管Craig Federighi线，显示对语音助理项目「提级整改」。
+5月份，苹果传出开发AI服务器芯片，以配合端云协同的AI能力部署，属底层算力与供应链的前瞻布局。
+6月份，苹果评估采用Anthropic或OpenAI的模型为新版Siri供能，该项目由Rockwell与Federighi主导评估。
+但是其AI落地节奏，也引起质疑。
+尤其是在其9月份新品发布会的「轻AI」基调后，D.A. Davidson以「AI进展不及预期」为由将苹果评级下调至中性。
+自2024年6月，苹果首次在WWDC上展示了全新的Apple Intelligence之后，并未推出新的Siri升级功能。
+苹果表示，计划在2026年春季推出其延迟的个性化Siri功能，并将原因归结为新Siri功能的测试存在持续的质量问题，并将切换到更强大的底层架构来解决这些问题。
+Robby Walker的离职，叠加Siri更新延迟等因素，进一步放大了外界对苹果AI创新和落地速度的疑问。
+参考资料：
+https://www.bloomberg.com/news/articles/2025-09-12/apple-ai-and-search-executive-robby-walker-to-leave-iphone-maker%20
+https://www.theinformation.com/briefings/apples-former-siri-leader-departs?rc=epv9gi

@@ -1,0 +1,84 @@
+标题: OpenAI不Open！7年功勋老将投奔宿敌，实验室沦为API代工厂
+日期: 2026-01-26
+链接: http://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652667708&idx=3&sn=f8d9182bfa124f66f1f338e83d4a19f5&chksm=f12f0bcdc65882dbe63ee3be12b4310c4d5d5882bad5187b24c27df390b15437e7e92e4899a6#rd
+来源模式: wechat
+----------------------------------------
+
+新智元报道
+编辑：倾倾
+【新智元导读】
+2026开年，OpenAI的「推理之父」Jerry Tworek离职了。顶尖大脑因方向冲突和资源倾斜而出走，从这一刻起，硅谷的「Open」或许只剩下一个名字，而非一家真正的AGI实验室。
+1月7日，硅谷迎来又一波震动。入职近七年的技术骨干、OpenAI研究副总裁Jerry Tworek宣布离职。
+临别前，他留下一句杀人诛心的话：
+我得离开这里，才能做那些在OpenAI难以开展的研究。
+作为全球算力资源最丰富、资金支持最充裕的AI公司，为什么还有研究项目「做不了」？
+OpenAI被抽走了一条脊梁
+如果说2024年Ilya Sutskever的离职带走了OpenAI的创新精神，那么2026年Jerry Tworek的离开，则削弱了公司在推理技术上的核心竞争力。
+他的贡献远超行政头衔。作为后训练和推理路线的关键推动者，他是将逻辑能力注入GPT神经网络的核心人物。
+2021年，他主导Codex开发，这是GPT代码能力的起点。
+2024年起，他领导o1及o3模型研发，在Scaling Laws边际递减时，确立了「System2」思维链范式。
+GPT系列依赖统计学的「下一个词预测」，而o系列转向强化学习的「Reasoning Search」。
+Tworek离职后，OpenAI的推理模型迭代可能放缓，实际性能面临风险。
+Scaling Law面临撞墙
+当「大力出奇迹」沦为算力黑洞
+行业在2025年已达成残酷共识：
+Scaling Laws不中用了
+。
+消耗数十亿美元后，OpenAI的旗舰项目「Orion」未带来预期指数跃升，最终被Altman降级为GPT-4.5，标志纯预训练扩展路径失败。
+Altman亲自宣布，降级为GPT-4.5，也就是OpenAI在纯粹扩展方面的尝试失败了
+单纯堆算力的方法在物理极限前失效。预训练数据红利耗尽，后训练——通过推理阶段「慢思考」提升智能——成为主要出路。
+Tworek正是这条路线的关键贡献者。
+但这也暴露出隐藏的矛盾：预训练模型快而廉价，深度推理虽接近AGI，却延迟高、成本大。
+在2026年强调季度盈利的环境下，管理层对高成本研究的容忍度下降。
+Ashlee Vance在Core Memory播客访谈中指出，Tworek离职反映大实验室不愿冒险，转向保守策略。
+正片链接：https://www.corememory.com/p/he-left-openai-jerry-tworek
+当AGI公司系统性排斥硬核研究，其创新活力已受损。剩余部分，可能仅剩一家API提供商。
+季度KPI正在杀死AGI
+预训练收益趋平后，Tworek的推理技术本应是AGI的下一步，却被用于短期商业优化。
+o1/o3的核心是「用时间换智能」，旨在深入思考；但在OpenAI，这被简化为成本与延迟权衡。
+在
+Tworek
+离职前，OpenAI的科研小组就已经承受着产品压力。
+管理层强调o系列需降低延迟、压缩成本，并快速落地Copilot等商业场景。
+Tworek对此很失望。他追求AI真正思考，而投资者和微软更需要高效、低成本的工具。
+可硬核研究不仅「难做」，还被视为财务负担而削减。
+「很难做」的研究
+不止技术，还有制度
+说得再多，预算削减也只是表象，科研环境的商业化才是根本问题。
+Jerry Tworek不是个例，而是一个信号：OpenAI从研究前沿转向商业导向。
+2025-2026年，多位核心人才流失，包括Shengjia Zhao和Jason Wei，多数转向Meta Superintelligence Lab。
+这与硅谷形成强烈对比：名为「Open」的公司，以安全为由加强封闭，将科学家导向产品；Meta提供大量H100集群，支持开放权重路线。
+Tworek的「Hard to do at OpenAI」并非技术难度——公司有顶尖头脑，而是制度摩擦：
+·
+研究可解释性？若结论不利产品形象，可能受限。
+·
+探索不依赖RLHF的路径？若短期无法集成API，可能被阻。
+·
+公开发表AGI思考？为防竞争，可能被禁。
+当科学探索的边界
+由公关、法务决定，而非科学规律时，像Tworek这样的研究者只能出走。
+屠龙少年终成恶龙
+下一个Google，还是下一个诺基亚？
+Tworek离职标志OpenAI进入「防御者」阶段。
+曾以打破常规闻名的公司，正成为它曾试图取代的对象。
+过去，
+靠天才的直觉寻找捷径；
+现在，
+Azure
+和H100集群筑资金壁垒
+。
+这一幕像极了当年的诺基亚——拥有全球最大的市场份额、最完善的供
+应链、最充沛的现金流，唯独失去了定义未来的能力。
+OpenAI有海量API和用户，但o系列推理核心随Tworek离职面临挑战。
+2026年，它处于两难境地：为维持估值，只能避免高风险研究；失败或负面舆论即引发恐慌。
+它转为标准大厂，不再是AGI实验室，而成了维护现有利益的守护者。
+Tworek的去向已不关键。作为推理模型关键人物，他的离开关闭了OpenAI通往AGI的一扇门。
+「Open」一词的语义已变。
+这家公司赢得商业战役，却可能输掉未来。它正蜕变为提供Token的公用事业公司——像自来水厂或发电站。
+硅谷少了一座灯塔，多了一家营收可观的API供应商。
+参考资料：
+https://x.com/wintermoat/status/2014093814789439785https://x.com/kyliebytes/status/2014054609388507415https://www.corememory.com/p/he-left-openai-jerry-tworek
+ttps://x.com/ashleevance/status/2013985439535804607https://www.corememory.com/p/he-left-openai-jerry-tworekhttps://www.theverge.com/ai-artificial-intelligence/855590/openais-research-lead-is-departing-after-nearly-seven-yearshttps://www.digitimes.com/news/a20260107VL206/openai-president-training.htmlhttps://timesofindia.indiatimes.com/technology/tech-news/chatgpt-maker-openais-vp-researcher-jerry-tworek-resigns-says-i-am-leaving-to-try-and-explore-types-of-research-that-are-hard-to-do-at-openai-this-is-a-/articleshow/126370554.cms
+秒追ASI
+⭐点赞、转发、在看一键三连⭐
+点亮星标，锁定新智元极速推送！

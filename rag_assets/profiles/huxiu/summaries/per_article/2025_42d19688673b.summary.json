@@ -1,0 +1,95 @@
+{
+  "analysis_schema_version": 3,
+  "id": "42d19688673b",
+  "year": "2025",
+  "date": "2025-02-21",
+  "title": "你担心小行星撞击地球吗？",
+  "relative_path": "2025/2025-02-21_你担心小行星撞击地球吗？.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\huxiu\\raw_materials\\2025\\2025-02-21_你担心小行星撞击地球吗？.txt",
+  "char_count": 282,
+  "content_type": "资讯快讯",
+  "entities": [
+    "微信"
+  ],
+  "industry": [
+    "航空航天",
+    "科普"
+  ],
+  "topic": [
+    "小行星撞击",
+    "地球防御"
+  ],
+  "genre": "科技科普",
+  "style": [
+    "简约",
+    "提问式"
+  ],
+  "audience": [
+    "大众读者"
+  ],
+  "intent": [
+    "引起关注",
+    "科普传播"
+  ],
+  "tone": [
+    "好奇",
+    "中性"
+  ],
+  "primary_question": "人类是否需要对小行星撞击地球的潜在威胁感到担忧？",
+  "thesis_type": "事实陈述",
+  "thesis_sentence": "由于正文内容缺失，无法从原文提取核心论点句，仅能根据标题推测其探讨小行星防御的话题性。",
+  "structure_pattern": "缺失",
+  "section_functions": [
+    "标题引导",
+    "元数据展示"
+  ],
+  "argument_moves": [
+    "提出问题"
+  ],
+  "core_argument": "无法从仅有的标题和链接中推导核心论证。",
+  "key_points": [
+    "文章关注点在于小行星撞击地球的可能性及其带来的心理预期"
+  ],
+  "opening_pattern": "提问式",
+  "ending_pattern": "缺失",
+  "evidence_types": [],
+  "evidence_specificity_score": 0,
+  "data_density_score": 0,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "远",
+  "stance_strength": "中性",
+  "sentence_rhythm": "缺失",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "使用疑问句标题引发读者好奇心"
+  ],
+  "anti_patterns": [
+    "信息不完整",
+    "缺乏正文支撑"
+  ],
+  "notable_phrases": [
+    "你担心小行星撞击地球吗？"
+  ],
+  "title_score": 60,
+  "opening_score": 0,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 0,
+  "style_score": 10,
+  "publishability_score": 5,
+  "quality_score": 5,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "is_advertorial": false,
+  "advertorial_type": "editorial",
+  "advertorial_confidence": 0,
+  "promotional_intensity_score": 0,
+  "editorial_independence_score": 100,
+  "brand_exposure_level": "低",
+  "source_transparency": "模糊",
+  "advertorial_signals": [],
+  "summary_200": "该文本仅包含一篇文章的标题“你担心小行星撞击地球吗？”、日期及微信公众号链接。由于缺乏实际正文内容，无法进行深入的文本分析。其表现形式更像是一个待阅读的任务列表或不完整的抓取数据。标题具有一定的科普吸引力，但缺乏支撑论证和信息细节，目前评估为低价值参考内容。",
+  "summary_500": "该输入数据为2025年2月21日发布的一篇关于小行星撞击话题的文章元信息。其内容结构极度简略，仅保留了标题、发布时间、微信原始链接及来源平台标识。文章标题采用提问式风格，试图引发公众对地球安全及天文灾害的关注。然而，由于正文文本完全缺失，本分析无法识别作者的核心观点、论证逻辑、证据来源或写作技巧。根据现有元数据判断，这可能是一篇面向大众的科普短讯或自媒体推文。由于信息量极低，无法提炼可用于RAG写作或人格建模的特征。目前的质量分值和参考价值设定为最低水平，仅可作为数据索引记录存在。"
+}

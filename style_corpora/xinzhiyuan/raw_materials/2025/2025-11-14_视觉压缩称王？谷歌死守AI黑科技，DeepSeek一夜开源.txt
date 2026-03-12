@@ -1,0 +1,222 @@
+标题: 视觉压缩称王？谷歌死守AI黑科技，DeepSeek一夜开源
+日期: 2025-11-14
+链接: http://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652645406&idx=3&sn=0b7ced544485580105a08cdf4b77b741&chksm=f12f5cefc658d5f930a662f713a83239512aafe2e13ebc34c62651f6f6cb067cfd06cca1984c#rd
+来源模式: wechat
+----------------------------------------
+
+新智元报道
+编辑：KingHZ
+【新智元导读】
+谷歌早有类似技术？DeepSeek-OCR开源引发战略拐点，长文本渲染图像框架如Glyph验证视觉压缩的普适性。但故事还没完。
+DeepSeek-OCR杀疯了！
+前段时间，
+DeepSeek开源的DeepSeek-OCR
+，提出了「
+上下文光学压缩
+」，高效得邪门——
+特别是，在长上下文解码固定97%的精度下，OCR版本所需的视觉标记比文本标记少10倍。
+也就是说，
+OCR版本的信息压缩能力比文本版本强10倍
+。在20倍压缩下，仍能保持60%的准确率。
+长上下文解码，即模型将信息压缩为潜在表示并重建的能力。换句话说：对AI而言，
+单张图像可以用更少的token来表示完整文档
+。
+这燃起了计算机视觉研究者的新希望：
+图像更关乎智能的本质，文本只是表象！
+Karpathy不装了，摊牌了——承认自己只是「假装」在做自然语言处理（NLP），但心在是计算机视觉(CV)。
+Karpathy狂赞DeepSeek新模型，表示它终结分词器时代。
+但DeepSeek-OCR到底有多强？视觉能压缩一切吗？
+图像和文本狭路相逢，到底谁能胜出？
+下面👇，我们一探究竟🔬。
+DeepSeek-OCR很火
+开源还得是DeepSeek
+毫无疑问，DeepSeek-OCR真的很火——
+不仅Github开源项目斩获了超20K星🌟。
+Github：https://github.com/deepseek-ai/DeepSeek-OCR
+HuggingFace：https://huggingface.co/deepseek-ai/DeepSeek-OCR
+甚至「先天下之忧而忧，后天下之乐而乐」就因为出现在提示词例子中，一群英语用户在讨论翻译对不对：
+DeepSeek意外地推广了范仲淹这句名言。
+而且，DeepSeek-OCR确实很实用。
+凌晨4点，网友Brian Roemmele实测证明：
+DeepSeek-OCR不仅能识别单个小格，它甚至可以在
+几秒
+内扫描整张缩微胶片（microfiche）， 而且
+百分之百保留全部数据
+！
+还能完整理解文本内容、复杂图纸以及它们的上下文！
+直呼自己「彻底改变了
+离线数据整理
+的方式」！
+接下来，他还要要试试看，
+DeepSeek-OCR能不能一次性读懂40多年前的「计算机存储」打孔卡
+。
+他在20世纪80年代贝尔实验室的垃圾桶，收集了73箱Filmsort计算机打孔卡，上面嵌有Microfiche微缩胶片单元。
+使用DeepSeek-OCR，alphaXiv从
+50多万
+篇AI主题arXiv论文的表格/图表中提取所有数据集，
+只花了1000美元
+，而使用Mistral OCR完成相同任务将花费7500美元。
+DeepSeek-OCR还能将任天堂的年报（下图右）转换成了Markdown 格式（下图左）
+关键的是，连一个错字都没找到。逗号和句点也看起来完美无缺。
+微软的云/AI架构师Axel Dittmann，刚刚在本地跑了DeepSeek-OCR，速度惊人：
+整图分析加文本提取仅用了11.1秒。
+这已经不是简单的提速OCR了，这是实时的文档级AI。
+HuggingFace还比较了多个OCR模型。
+在下列链接，可直接可体验不同OCR模型的效果：
+https://prithivmlmods-multimodal-ocr3.hf.space/
+但有个问题，DeepSeek-OCR目的是探索视觉-文本压缩的边界——
+从大语言模型视角出发，专注研究视觉编码器作用的模型。
+作者不仅仅是为了升级OCR，更是要探讨机器如何感知和处理数据的范式转变。
+实用性高是工程成就，但领域内研究人员更在意的是理论突破。
+它能为AI新时代吹响号角吗？未来，视觉感知能否胜过文本？计算机视觉能否东山再起？
+想法早已有之，但问题是什么？
+为什么全网热议DeepSeek-OCR？
+除了实用性外，网友Feffrey  Emanuel用Claude Opus 4.1总结了论文的
+关键洞察——
+只要编码器-解码器配对得当，密集型视觉表示比线性文本Token更高效。
+这意味着：
+🔹
+上下文窗口将变得「弹性」
+：
+不再受限于固定的128k Token长度——可以把旧上下文
+动态压缩成图像
+存储！
+🔹
+视觉优先架构将成主流
+：
+未来的大语言模型可能会先把
+所有文本转为视觉表示
+来处理，
+文本Token仅用于生成阶段
+。
+🔹
+「计算开销」其实是人为制造的假象
+：
+视觉Token之所以「贵」，只是因为我们用错了方式——过去它被当成像素表示，而不是
+压缩的语义空间
+。
+🔹
+生物启发是对的
+：「
+一图胜千言」并不是比喻，而是经过正确编码后
+在计算层面上成立的事实
+！
+真正颠覆性的意义在于——
+我们过去可能从一开始就搞反了LLM的构建方式。
+我们一直在做的是「
+以文本为主、视觉附加
+」的模型架构，而
+最优解
+可能是「
+以视觉压缩为核心
+，文本生成只是输出层」
+。
+论文
+从根本上
+质疑了
+业内的
+前提假设
+「文本Token是文本信息最高效表达方式」，
+。
+网友甚至推测谷歌早已有类似的方法，但密而不发，严守机密。
+而且网友Chirag称，谷歌在语言上公布了类似的方法。
+从技术与战略层面看，这无疑是一个决定性的拐点。
+DeepSeek的光学压缩技术，有效突破了
+AI
+长期以来的瓶颈：长上下文处理效率低下。
+它通过将文本转化为
+高密度的视觉Token
+，不仅大幅降低内存与计算开销，还能
+保持语义精度
+，由此加速了文档级推理、实时翻译与多模态对齐等关键任务。
+刚刚，清华大学等也发布了一个将长文本渲染成图像并使用视觉-语言模型（VLM）处理的框架Glyph。
+这种方法在保留语义信息的同时，大幅压缩了文本输入。
+Github：https://github.com/thu-coai/Glyph
+直接阅读视觉文本而不是文本，这种想法早已有之。
+Meta超级智能实验室高级研究科学家、德克萨斯大学奥斯汀分校博士江亦凡，读完DeepSeek-OCR论文后，就觉得这不是什么新东西：
+直接阅读视觉文本而不是将文本转换为utf-8格式的想法，似乎是一个长期讨论的概念，甚至在LLM 时代之前就是这样。
+人类阅读书籍、听音频、触摸盲文，但并不使用utf-8。
+在19年，国内的研究者就发现，在多项中文NLP任务中，基于字形的模型
+持续优于传统的词ID/字ID模型
+，在多个任务上刷新SOTA表现。
+预印本链接：https://arxiv.org/abs/1901.10125
+题目：Glyce: Glyph-vectors for Chinese Character Representations
+总之，在不同应用领域，多篇论文探讨过这一技术路线，包括但不限于：
+Language Modelling with Pixels
+Robust Open­Vocabulary Translation from Visual Text Representations
+Autoregressive Pre-Training on Pixels and Texts
+Pix2Struct: Screenshot Parsing as Pretraining for Visual Language
+Understanding  Improving Language Understanding from Screenshots
+上下滑动查看
+对AI训练而言，
+像素优于字符。或许，这早已是「江湖传说」。但囿于工具、算力或企业文化等等，一直没有开源的类似工具出现。
+即便只是工程价值，DeepSeek-OCR已推动了相关研究重回
+AI
+行业视野。
+不过，视觉和文本，到底谁更贴近智能的本质？
+视觉狭路遇上文本
+Karpathy笑太早了？
+对LLM而言，视觉>文本。这是大家对DeepSeek-OCR的第一印象。
+但Palantir前员工Igor Zalutski提出了一个问题：
+如果「音频token」被证明更加高效会怎样？
+语言毕竟始于声音，而文字是后来才发明的（如象形文字）。而且对许多人来说，阅读时脑海中会产生声音。
+Keras3合作者、机器学习研究员Aakash Kumar Nain，指出了他对DeepSeek-OCR的两大「抱怨」：
+一方面，  包含文本的图像不能无限压缩，信息细节很容易在过程中丢失；
+另一方面，我
+反感把压缩和记忆拟人化
+的表达方式——我们是否可以避免动不动就用「拟人类」的框架去解释一切？
+在他看来，目前提取图像Token的方式
+仍称不上最优
+。
+DeepSeek-OCR之所以能够跑通，主要是得益于
+局部注意力与全局注意力的混合机制
+，而不是提取方式本身有多高效。
+其实，LayoutLM系列论文给出了更系统、更结构化的视觉文本对齐方式，从而在信息保留、空间结构理解和上下文建模方面做得更好。
+预印本链接：https://arxiv.org/abs/1912.13318
+标题：LayoutLM: Pre-training of Text and Layout for Document Image Understanding
+威斯康星大学麦迪逊分校
+电子与计算机工程系副教授Kangwook Lee，更严肃地讨论了「DeepSeek-OCR热潮」。
+首先，在DeepSeek-OCR之前，
+剑桥大学的研究者就已展示了将
+Prompt Token压缩500倍的可行性
+——
+而且
+并没有借助将文本转为图像的策略
+。
+论文链接：https://aclanthology.org/2025.acl-long.1219/
+标题：500xCompressor: Generalized Prompt Compression for Large Language Models
+DeepSeek-OCR的成功，不应归因于图像表示本身的「魔力」。
+文本表示本身（无论用何种tokenizer）并没有本质问题。
+同样道理，
+你也可以反其道而行之
+：比如将图像转为一串文本Token（每个Token代表RGB值），依然能跑通任务——这在
+LIFT论文
+中已有验证。
+论文链接：https://uw-madison-lee-lab.github.io/LanguageInterfacedFineTuning/
+真正的核心启示在于——当前LLM的Embedding空间巨大且
+可能
+非常浪费。
+现在，大家还
+远未充分利用
+这些表示空间的潜力。
+越来越多研究也在印证这一点。
+比如，下面2024年的论文表明：
+如果你在上下文中混合多种任务的演示，模型能够同时完成多个ICL预测任务
+。
+链接：https://arxiv.org/abs/2410.05603
+标题：Everything Everywhere All at Once: LLMs can In-Context Learn Multiple Tasks in Superposition
+这再次说明，
+上下文空间和表示空间的利用效率，才是关键突破口
+。
+真正应该领悟的关键要点：
+DeepSeek-OCR确实很酷
+但通过对压缩文本令牌进行微调，你可以实现更高的令牌缩减率
+更多证据表明，大语言模型并未充分利用其庞大的嵌入空间以及在推理时投入的大量计算资源
+或许，这才是研究的真谛：research = re search——
+做实验之前，你无法确定结果。
+技术争鸣的价值，不在宣布赢家，而在暴露盲区。下一代AI不必「以哪个模态为圣」。
+AI范式的成熟，恰恰始于这种「去神话化」的清醒。
+参考资料：
+https://x.com/Kangwook_Lee/status/1980709769015869488
+https://x.com/Kangwook_Lee/status/1980709454522744902
+https://x.com/doodlestein/status/1980282222893535376

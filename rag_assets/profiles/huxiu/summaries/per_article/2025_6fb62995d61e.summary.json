@@ -1,0 +1,110 @@
+{
+  "analysis_schema_version": 3,
+  "id": "6fb62995d61e",
+  "year": "2025",
+  "date": "2025-04-24",
+  "title": "如何看待董明珠说“格力电车跑了十几年从没有火灾事故”？",
+  "relative_path": "2025/2025-04-24_如何看待董明珠说“格力电车跑了十几年从没有火灾事故”？.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\huxiu\\raw_materials\\2025\\2025-04-24_如何看待董明珠说“格力电车跑了十几年从没有火灾事故”？.txt",
+  "char_count": 297,
+  "content_type": "新闻评论",
+  "entities": [
+    "董明珠",
+    "格力",
+    "格力钛",
+    "银隆新能源"
+  ],
+  "industry": [
+    "新能源汽车",
+    "动力电池",
+    "家电"
+  ],
+  "topic": [
+    "产品安全",
+    "企业公关",
+    "技术争鸣"
+  ],
+  "genre": "问答评论",
+  "style": [
+    "辩论式",
+    "质疑式"
+  ],
+  "audience": [
+    "行业观察者",
+    "新能源汽车用户",
+    "格力电器投资者"
+  ],
+  "intent": [
+    "分析",
+    "核实"
+  ],
+  "tone": [
+    "质疑",
+    "中立"
+  ],
+  "primary_question": "董明珠关于格力电车“十几年零火灾”的言论是否属实且具备科学性？",
+  "thesis_type": "事实核查型",
+  "thesis_sentence": "由于提供的文本仅包含标题和基本元数据，其核心观点缺失，仅表现出对董明珠特定言论的关注与讨论倾向。",
+  "structure_pattern": "议题引导式",
+  "section_functions": [
+    "引出核心争议点",
+    "定位关键人物言论"
+  ],
+  "argument_moves": [
+    "引用争议性言论",
+    "设定讨论语境"
+  ],
+  "core_argument": "无法从现有极简文本中提取核心论点，其预设逻辑是针对格力钛电池安全性的社会化评价。",
+  "key_points": [
+    "董明珠声称格力电车跑了十几年",
+    "董明珠声称格力电车从未发生火灾事故"
+  ],
+  "opening_pattern": "问题引入",
+  "ending_pattern": "缺失",
+  "evidence_types": [
+    "人物语录"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 5,
+  "quote_density_score": 20,
+  "narrative_distance": "第三人称",
+  "stance_strength": "中立",
+  "sentence_rhythm": "简促",
+  "abstraction_level": "具象",
+  "transferable_moves": [
+    "利用高争议人物语录作为标题引流",
+    "将品牌安全性与领袖人格背书挂钩"
+  ],
+  "anti_patterns": [
+    "正文内容缺失（本文档特征）",
+    "缺乏事实比对的数据支撑"
+  ],
+  "notable_phrases": [
+    "从没有火灾事故"
+  ],
+  "title_score": 75,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 5,
+  "structure_score": 5,
+  "style_score": 10,
+  "publishability_score": 5,
+  "quality_score": 10,
+  "reference_value_score": 15,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "is_advertorial": false,
+  "advertorial_type": "executive_pr",
+  "advertorial_confidence": 30,
+  "promotional_intensity_score": 40,
+  "editorial_independence_score": 50,
+  "brand_exposure_level": "高",
+  "source_transparency": "模糊",
+  "advertorial_signals": [
+    "引用特定企业领袖的绝对化安全性陈述",
+    "侧重于正面品牌形象输出的议题设置"
+  ],
+  "summary_200": "该文本仅提供了一个基于董明珠言论的标题，探讨格力电动车（格力钛）运营十余年实现“零火灾”的说法。由于正文内容缺失，文章仅表现为一种社会化讨论的引子，缺乏深度的论证、数据核实或行业对比。格力钛酸锂电池技术因其高安全性而著称，但“从未有火灾”的绝对化表述往往引发公众与行业的质疑。",
+  "summary_500": "该分析对象是一篇内容极度简略的占位符或信息存根。标题聚焦于格力电器董事长董明珠的一段争议性公开言论，即“格力电车跑了十几年从没有火灾事故”。这一言论旨在强调格力旗下（原银隆新能源，现格力钛）所采用的钛酸锂电池技术在安全性上的极端优势。从写作机制上看，该文本采用了典型的“问题引入式”标题，试图通过公众人物的绝对化言论引发读者的好奇与讨论。然而，由于缺乏正文论述，该条目目前不具备完整的文章结构，也无法提供具体的证据链、数据支持或反向论证。其参考价值主要在于监测格力品牌公关的动态及领袖人物的公关风格。在实际商业写作中，这类内容通常作为话题引子，后续应补充格力钛电池的技术原理（如热失控温度点高）、运营数据对比、以及行业内对钛酸锂电池循环寿命与能量密度之间权衡的讨论。由于内容极短，其质量评分、证据评分和参考价值评分均较低，属于低信息密度数据。"
+}

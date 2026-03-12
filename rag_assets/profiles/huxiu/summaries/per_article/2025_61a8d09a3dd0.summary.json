@@ -1,0 +1,103 @@
+{
+  "analysis_schema_version": 3,
+  "id": "61a8d09a3dd0",
+  "year": "2025",
+  "date": "2025-05-13",
+  "title": "花4.2万元选配的碳纤维双风道前舱盖，选了个寂寞？",
+  "relative_path": "2025/2025-05-13_花4.2万元选配的碳纤维双风道前舱盖，选了个寂寞？.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\huxiu\\raw_materials\\2025\\2025-05-13_花4.2万元选配的碳纤维双风道前舱盖，选了个寂寞？.txt",
+  "char_count": 295,
+  "content_type": "汽车评测",
+  "entities": [
+    "碳纤维双风道前舱盖"
+  ],
+  "industry": [
+    "汽车",
+    "汽车改装"
+  ],
+  "topic": [
+    "汽车选装",
+    "消费维权",
+    "性价比分析"
+  ],
+  "genre": "评论",
+  "style": [
+    "质疑",
+    "纪实"
+  ],
+  "audience": [
+    "汽车消费者",
+    "豪车车主",
+    "改装爱好者"
+  ],
+  "intent": [
+    "科普避坑",
+    "消费监督"
+  ],
+  "tone": [
+    "讽刺",
+    "批判"
+  ],
+  "primary_question": "4.2万元的高昂碳纤维选装配件是否真正具备其宣称的价值？",
+  "thesis_type": "价值解构",
+  "thesis_sentence": "昂贵的碳纤维选配组件往往在实际使用中无法提供与其价格相称的功能性或心理收益。",
+  "structure_pattern": "预期-现实落差结构",
+  "section_functions": [
+    "由于输入正文缺失，无法进行分段功能提取"
+  ],
+  "argument_moves": [
+    "通过价格数字制造冲击感",
+    "利用反差化表达引出质疑"
+  ],
+  "core_argument": "高端汽车市场的原厂选配配件存在严重的溢价与实用性不匹配问题。",
+  "key_points": [
+    "配件价格：4.2万元",
+    "配件名称：碳纤维双风道前舱盖",
+    "核心结论：实际效果不佳（选了个寂寞）"
+  ],
+  "opening_pattern": "高额代价切入",
+  "ending_pattern": "反问质疑",
+  "evidence_types": [
+    "价格数据"
+  ],
+  "evidence_specificity_score": 20,
+  "data_density_score": 10,
+  "case_density_score": 10,
+  "quote_density_score": 0,
+  "narrative_distance": "中等距离",
+  "stance_strength": "强",
+  "sentence_rhythm": "短促有力",
+  "abstraction_level": "具体",
+  "transferable_moves": [
+    "‘价格+特定部件+负面预期’的标题构建公式",
+    "利用‘寂寞’等流行语消解高端产品的神秘感"
+  ],
+  "anti_patterns": [
+    "信息极度缺失",
+    "仅提供标题而无实质论证过程"
+  ],
+  "notable_phrases": [
+    "选了个寂寞"
+  ],
+  "title_score": 88,
+  "opening_score": 0,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 0,
+  "style_score": 30,
+  "publishability_score": 10,
+  "quality_score": 5,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "is_advertorial": false,
+  "advertorial_type": "editorial",
+  "advertorial_confidence": 10,
+  "promotional_intensity_score": 0,
+  "editorial_independence_score": 90,
+  "brand_exposure_level": "低",
+  "source_transparency": "清晰",
+  "advertorial_signals": [],
+  "summary_200": "该文目前仅能获取标题信息。标题《花4.2万元选配的碳纤维双风道前舱盖，选了个寂寞？》通过具体的高额选配价格与“选了个寂寞”的失落感对比，暗示了豪车原厂选装件可能存在的低性价比或设计缺陷。由于正文缺失，文章具体的论点支撑、实测数据或维权过程尚不明确。标题具有极强的引导性和话题性，属于典型的汽车行业消费监督类选题。",
+  "summary_500": "本分析基于该文章的标题及元数据进行。文章标题提出了一个尖锐的消费质疑：针对价格高达4.2万元的“碳纤维双风道前舱盖”选配项，其最终交付给消费者的价值（功能或心理满足感）与其成本完全不符。这种“选了个寂寞”的表述通常预示着正文将从功能性失效、工艺瑕疵、或是纯粹的溢价陷阱角度进行深度拆解。作为汽车评测或消费维权类内容，该文旨在打破高端选配配件的溢价神话，提醒车主理性消费。然而，由于本次分析缺乏完整的正文内容，无法对作者的论据充分性、叙事节奏或逻辑连贯性做出准确评判。从标题呈现的风格看，它采用了强冲突、高反差的策略吸引特定车主群体，具有较高的话题传播潜质。在RAG（检索增强生成）场景下，此标题可作为“汽车消费陷阱”或“豪车配件定价”类主题的检索线索，但其实际参考价值有待正文补全后重新评估。"
+}

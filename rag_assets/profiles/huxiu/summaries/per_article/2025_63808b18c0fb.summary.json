@@ -1,0 +1,100 @@
+{
+  "analysis_schema_version": 3,
+  "id": "63808b18c0fb",
+  "year": "2025",
+  "date": "2025-01-01",
+  "title": "宠物殡葬费达上万元，是有钱人的智商税吗？",
+  "relative_path": "2025/2025-01-01_宠物殡葬费达上万元，是有钱人的智商税吗？.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\huxiu\\raw_materials\\2025\\2025-01-01_宠物殡葬费达上万元，是有钱人的智商税吗？.txt",
+  "char_count": 290,
+  "content_type": "文章索引/元数据",
+  "entities": [],
+  "industry": [
+    "宠物经济",
+    "殡葬服务"
+  ],
+  "topic": [
+    "宠物殡葬",
+    "消费心理",
+    "行业定价"
+  ],
+  "genre": "行业评论",
+  "style": [
+    "提问式",
+    "争议性"
+  ],
+  "audience": [
+    "宠物主",
+    "社会观察者"
+  ],
+  "intent": [
+    "引发讨论",
+    "消费引导"
+  ],
+  "tone": [
+    "质疑",
+    "审视"
+  ],
+  "primary_question": "高额的宠物殡葬费用是否属于不合理的非理性消费（智商税）？",
+  "thesis_type": "问题探讨型",
+  "thesis_sentence": "（由于正文缺失，仅能根据标题推测其探讨高价宠物殡葬的社会合理性与消费动机）",
+  "structure_pattern": "缺失",
+  "section_functions": [
+    "提出争议性话题"
+  ],
+  "argument_moves": [
+    "利用‘万元’极端数值制造视觉冲击",
+    "引入‘智商税’热门标签建立情感冲突"
+  ],
+  "core_argument": "无法提取（正文缺失，仅存标题疑问）",
+  "key_points": [
+    "宠物殡葬费用高达万元",
+    "高额费用是否具备对等的服务价值或心理价值",
+    "消费者的支付意愿与‘智商税’定义的界定"
+  ],
+  "opening_pattern": "提问式",
+  "ending_pattern": "未知",
+  "evidence_types": [
+    "价格数据"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "中远视角",
+  "stance_strength": "中立",
+  "sentence_rhythm": "紧凑（仅标题）",
+  "abstraction_level": "中等",
+  "transferable_moves": [
+    "使用‘具体高额数字 + 负面争议词汇（智商税）’的标题组合技巧",
+    "通过问句形式弱化主观立场，引导读者寻找答案"
+  ],
+  "anti_patterns": [
+    "信息匮乏（由于输入仅含标题）"
+  ],
+  "notable_phrases": [
+    "智商税",
+    "宠物殡葬费"
+  ],
+  "title_score": 85,
+  "opening_score": 0,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 0,
+  "style_score": 40,
+  "publishability_score": 5,
+  "quality_score": 10,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "is_advertorial": false,
+  "advertorial_type": "none",
+  "advertorial_confidence": 0,
+  "promotional_intensity_score": 0,
+  "editorial_independence_score": 100,
+  "brand_exposure_level": "低",
+  "source_transparency": "清晰",
+  "advertorial_signals": [],
+  "summary_200": "该条目仅包含文章标题及元数据，主要针对宠物殡葬行业出现的高达万元的收费现象，提出‘是否为智商税’的争议性疑问。标题具有较强的社交传播属性，通过高额成本与贬义消费词汇的碰撞，旨在吸引对宠物经济和消费社会学感兴趣的读者。由于正文缺失，无法获取具体的逻辑论证、数据支撑或核心结论。",
+  "summary_500": "本条目提供的文本仅为一篇发布于2025年1月1日的微信公众号文章索引。其标题《宠物殡葬费达上万元，是有钱人的智商税吗？》采用了经典的争议性提问逻辑，通过揭示宠物殡葬这一小众但高增长领域的极端价格（上万元），直接触及大众对于‘感性消费’与‘理性价值’之间界限的讨论。由于缺乏正文内容，本文无法进行深层的结构化分析。从写作机制上看，该标题成功利用了‘具体锚点（万元）’和‘争议标签（智商税）’进行流量引导。作为结构化分析，该条目目前仅具有标题策划参考价值，属于信息严重缺失的低价值文本，无法用于提取具体的业务逻辑或深度观点分析。"
+}

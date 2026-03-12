@@ -88,6 +88,52 @@ const XINZHIYUAN_SUB_PERSONAS = [
   },
 ];
 
+const HUXIU_SUB_PERSONAS = [
+  {
+    id: 'huxiuIndustryPersona',
+    label: '科技与产业攻防',
+    description: '适合平台竞争、大厂战略、AI 与产业链攻防类写作。',
+  },
+  {
+    id: 'huxiuConsumerPersona',
+    label: '商业消费拆解',
+    description: '适合品牌、零售、门店、渠道与消费公司分析稿。',
+  },
+  {
+    id: 'huxiuProfilePersona',
+    label: '人物与公司深描',
+    description: '适合创始人、管理者、公司内幕和人物驱动稿。',
+  },
+  {
+    id: 'huxiuSocietyPersona',
+    label: '社会情绪观察',
+    description: '适合职场、城市、代际、青年文化与情绪观察稿。',
+  },
+];
+
+const WALLSTREETCN_SUB_PERSONAS = [
+  {
+    id: 'wallstreetcnMacroPersona',
+    label: '宏观与政策传导',
+    description: '适合央行、通胀、财政、关税、增长与地缘冲击的宏观解读稿。',
+  },
+  {
+    id: 'wallstreetcnMarketsPersona',
+    label: '市场与资产定价',
+    description: '适合股债汇商品加密等跨资产波动、交易逻辑和市场定价稿。',
+  },
+  {
+    id: 'wallstreetcnCompanyPersona',
+    label: '公司与资本故事',
+    description: '适合财报、并购、行业龙头、资本开支与公司竞争格局稿。',
+  },
+  {
+    id: 'wallstreetcnStrategyPersona',
+    label: '策略与交易前瞻',
+    description: '适合机构观点、情景推演、周度日程和交易手册型写作。',
+  },
+];
+
 const resolveProfilePaths = (profileId) => {
   const profile = getStyleProfile(profileId);
   const ragDir = path.resolve(ROOT_DIR, profile.ragDir);
@@ -121,6 +167,16 @@ const buildPromptAssetMap = (profileId) => {
     assetMap.xinzhiyuanPaperPersona = path.join(paths.runtimeDir, 'subpersonas', 'paper.md');
     assetMap.xinzhiyuanProductPersona = path.join(paths.runtimeDir, 'subpersonas', 'product.md');
     assetMap.xinzhiyuanPeoplePersona = path.join(paths.runtimeDir, 'subpersonas', 'people.md');
+  } else if (profileId === 'huxiu') {
+    assetMap.huxiuIndustryPersona = path.join(paths.runtimeDir, 'subpersonas', 'industry.md');
+    assetMap.huxiuConsumerPersona = path.join(paths.runtimeDir, 'subpersonas', 'consumer.md');
+    assetMap.huxiuProfilePersona = path.join(paths.runtimeDir, 'subpersonas', 'profile.md');
+    assetMap.huxiuSocietyPersona = path.join(paths.runtimeDir, 'subpersonas', 'society.md');
+  } else if (profileId === 'wallstreetcn') {
+    assetMap.wallstreetcnMacroPersona = path.join(paths.runtimeDir, 'subpersonas', 'macro.md');
+    assetMap.wallstreetcnMarketsPersona = path.join(paths.runtimeDir, 'subpersonas', 'markets.md');
+    assetMap.wallstreetcnCompanyPersona = path.join(paths.runtimeDir, 'subpersonas', 'company.md');
+    assetMap.wallstreetcnStrategyPersona = path.join(paths.runtimeDir, 'subpersonas', 'strategy.md');
   }
 
   return assetMap;
@@ -272,7 +328,11 @@ const loadPersonaStatus = async (profileId) => {
       ? LATEPOST_SUB_PERSONAS
       : profile.id === 'xinzhiyuan'
         ? XINZHIYUAN_SUB_PERSONAS
-        : [];
+        : profile.id === 'huxiu'
+          ? HUXIU_SUB_PERSONAS
+          : profile.id === 'wallstreetcn'
+            ? WALLSTREETCN_SUB_PERSONAS
+          : [];
   const personaFileStat = await fs.stat(path.join(runtimeDir, 'master_persona.md')).catch(() => null);
   const personaFileUpdatedAt = personaFileStat?.mtime ? new Date(personaFileStat.mtime).toISOString() : '';
   const personaUpdatedAt = pickLatestIso(
@@ -511,6 +571,37 @@ const toIllustrationBundle = (manifest) => {
   };
 };
 
+const mapIllustrationJobStatusToBundleStatus = (status) => {
+  const normalized = String(status || '').trim().toLowerCase();
+  if (normalized === 'queued' || normalized === 'planning') return 'planning';
+  if (normalized === 'rendering') return 'rendering';
+  if (normalized === 'ready') return 'ready';
+  if (normalized === 'partial') return 'partial';
+  if (normalized === 'error') return 'error';
+  if (normalized === 'canceled') return 'canceled';
+  return undefined;
+};
+
+const overlayIllustrationBundleJobState = (bundle, job) => {
+  if (!bundle || !job || !isIllustrationJobRunning(job)) {
+    return bundle;
+  }
+
+  return {
+    ...bundle,
+    status: mapIllustrationJobStatusToBundleStatus(job.status) || bundle.status || 'planning',
+    progress: {
+      ...(bundle.progress || {}),
+      phase: String(job.status || bundle.progress?.phase || 'queued'),
+      currentStep: String(job.currentStep || bundle.progress?.currentStep || ''),
+      completedCount: Number(job.completedCount || bundle.progress?.completedCount || 0),
+      totalCount: Number(job.totalCount || bundle.progress?.totalCount || bundle.targetImageCount || 0),
+      startedAt: String(job.startedAt || bundle.progress?.startedAt || bundle.generatedAt || '').trim() || undefined,
+      updatedAt: String(job.updatedAt || bundle.progress?.updatedAt || new Date().toISOString()).trim() || undefined,
+    },
+  };
+};
+
 const illustrationJobs = new Map();
 const illustrationRunStates = new Map();
 
@@ -704,7 +795,10 @@ const server = http.createServer(async (request, response) => {
             sourceHash,
             totalCount: existingManifest?.targetImageCount || targetImageCount,
           }),
-          bundle: existingManifest ? toIllustrationBundle(existingManifest) : undefined,
+          bundle: overlayIllustrationBundleJobState(
+            existingManifest ? toIllustrationBundle(existingManifest) : undefined,
+            existingJob
+          ),
         });
         return;
       }
@@ -798,7 +892,10 @@ const server = http.createServer(async (request, response) => {
       sendJson(response, 202, {
         sourceHash,
         job: illustrationJobs.get(sourceHash),
-        bundle: existingManifest ? toIllustrationBundle(existingManifest) : undefined,
+        bundle: overlayIllustrationBundleJobState(
+          existingManifest ? toIllustrationBundle(existingManifest) : undefined,
+          illustrationJobs.get(sourceHash)
+        ),
       });
       return;
     }
@@ -873,7 +970,7 @@ const server = http.createServer(async (request, response) => {
       sendJson(response, 200, {
         sourceHash,
         job,
-        bundle: manifest ? toIllustrationBundle(manifest) : undefined,
+        bundle: overlayIllustrationBundleJobState(manifest ? toIllustrationBundle(manifest) : undefined, shouldUseMemoryJob ? memoryJob : null),
       });
       return;
     }

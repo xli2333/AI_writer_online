@@ -1,0 +1,140 @@
+{
+  "analysis_schema_version": 3,
+  "id": "dc1e4d68db4d",
+  "year": "2024",
+  "date": "2024-12-12",
+  "title": "让老板们看看AI Agent到底该怎么用？",
+  "relative_path": "2024/2024-12-12_让老板们看看AI Agent到底该怎么用？.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\huxiu\\raw_materials\\2024\\2024-12-12_让老板们看看AI Agent到底该怎么用？.txt",
+  "char_count": 1933,
+  "content_type": "活动通知",
+  "entities": [
+    "虎嗅智库",
+    "澜码科技",
+    "一知智能",
+    "契胜科技",
+    "中工互联",
+    "中科视语",
+    "周健",
+    "王卓",
+    "张腊",
+    "ChatGPT"
+  ],
+  "industry": [
+    "人工智能",
+    "企业服务",
+    "工业互联网",
+    "零售消费"
+  ],
+  "topic": [
+    "AI Agent",
+    "AIGC",
+    "工业大模型",
+    "生成式AI落地",
+    "商业数字化"
+  ],
+  "genre": "营销软文",
+  "style": [
+    "呼吁式",
+    "商务",
+    "公关风"
+  ],
+  "audience": [
+    "企业管理者",
+    "首席信息官(CIO)",
+    "数字化转型负责人",
+    "AI行业从业者",
+    "投资者"
+  ],
+  "intent": [
+    "活动引流",
+    "品牌宣传",
+    "资源招商"
+  ],
+  "tone": [
+    "鼓动性的",
+    "专业的",
+    "邀请式的"
+  ],
+  "primary_question": "在GenAI热潮下，企业究竟该如何在具体的工业、零售和管理场景中实现AI Agent的落地与产出？",
+  "thesis_type": "方案引导型",
+  "thesis_sentence": "通过参与虎嗅智库举办的线下闭门会，企业决策者可以学习多家先锋企业的真实落地案例，并获取AI Agent与AIGC的实操路径。",
+  "structure_pattern": "痛点引入-活动预告-嘉宾背书-权益承诺-转化引导-品牌背景",
+  "section_functions": [
+    "现状背景：描述GenAI的爆发与企业落地的困惑",
+    "活动详情：公布闭门会的时间、地点及核心议题",
+    "嘉宾剧透：分领域（AI Agent、AIGC、工业大模型）介绍演讲企业及其核心业务",
+    "价值主张：量化参会收益（嘉宾数、场景数、交流规模）",
+    "转化路径：引导点击报名及赞助咨询",
+    "品牌背书：回顾大鲸榜单，强调智库的专业权威性"
+  ],
+  "argument_moves": [
+    "制造焦虑：提出GenAI商业价值尚存问号的现状",
+    "给出方案：推介线下闭门会作为获取实操经验的唯一窗口",
+    "权威背书：列举细分领域头部公司CEO作为分享嘉宾",
+    "稀缺激励：强调席位少量、先到先得"
+  ],
+  "core_argument": "GenAI的价值在于垂直场景的深度结合，而通过线下闭门会的案例拆解是获取此类实操知识的高效方式。",
+  "key_points": [
+    "澜码科技周健将分享AI Agent在任务管理和决策支持中的应用",
+    "一知智能王卓将解析AIGC在个性化营销文案中的落地",
+    "中科视语张腊将介绍通用视觉大模型在工业全链路监控中的实践",
+    "活动将提供10个以上真实应用场景及50家先锋企业交流机会"
+  ],
+  "opening_pattern": "趋势评述+反问切入",
+  "ending_pattern": "品牌荣誉展示+业务引流",
+  "evidence_types": [
+    "专家头衔",
+    "企业案例简述",
+    "量化承诺"
+  ],
+  "evidence_specificity_score": 45,
+  "data_density_score": 30,
+  "case_density_score": 40,
+  "quote_density_score": 10,
+  "narrative_distance": "中远景",
+  "stance_strength": "中等",
+  "sentence_rhythm": "平稳，多用长排比与商务术语",
+  "abstraction_level": "中等",
+  "transferable_moves": [
+    "B端活动推广的价值量化写法（10+案例、50+企业）",
+    "利用痛点问句快速钩住特定职场人群（老板、老板们看过来）",
+    "将复杂技术名词与具体业务场景（客服、营销、监控）快速挂钩的陈述方式"
+  ],
+  "anti_patterns": [
+    "信息密度过低（全文核心是卖票和招商，缺乏深度的技术干货分享）",
+    "过度依赖名单排比",
+    "典型的广告转化套路"
+  ],
+  "notable_phrases": [
+    "商业价值依然有一个大大的问号",
+    "打破传统监控方式的盲区与局限",
+    "让GenAI与垂直场景深度结合"
+  ],
+  "title_score": 85,
+  "opening_score": 70,
+  "argument_score": 40,
+  "evidence_score": 35,
+  "structure_score": 75,
+  "style_score": 60,
+  "publishability_score": 50,
+  "quality_score": 45,
+  "reference_value_score": 40,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "is_advertorial": true,
+  "advertorial_type": "event_promotion",
+  "advertorial_confidence": 100,
+  "promotional_intensity_score": 95,
+  "editorial_independence_score": 10,
+  "brand_exposure_level": "高",
+  "source_transparency": "清晰",
+  "advertorial_signals": [
+    "点击报名↓↓↓",
+    "联系智库小虎",
+    "赞助商企业提供不同形式和权益",
+    "实行邀请制，仅开放少量席位"
+  ],
+  "summary_200": "该文是虎嗅智库发布的线下闭门会活动预告。文章以GenAI在企业场景落地的困难为切入点，引出12月20日举办的“大鲸AI闭门会”。文中介绍了澜码科技、一知智能、中科视语等分享嘉宾及其在AI Agent、营销AIGC和工业大模型领域的实践。主要内容侧重于宣传参会价值，包括10余个真实场景、50多家先锋企业交流及大鲸榜单背景，旨在吸引企业决策者报名参会或洽谈赞助。属于典型的信息密度较低的营销通知类稿件。",
+  "summary_500": "本文为虎嗅智库策划的“大鲸AI闭门会·GenAI落地案例专场”活动招商与获客推文。文章首先指出虽然生成式AI工具层出不穷，但其在垂直场景下的商业价值和落地成效仍是企业关注的焦点。随后，推文正式发布了于12月20日下午举办的线下活动信息。核心亮点包括：1. 邀请澜码科技CEO周健分享AI Agent在智能对话与决策支持中的客户真实案例；2. 由一知智能总经理王卓探讨AIGC在个性化营销和品牌影响力提升上的应用；3. 中科视语联合创始人张腊展示通用视觉大模型在工业生产全链路监控中的最新进展。此外，文章列举了活动的四大吸引力：10个以上真实应用场景、10余位重磅嘉宾、50多家先锋企业现场交流以及10个主题演讲。文章末尾明确了活动的邀请制性质，引导感兴趣的读者点击链接报名或联系客服咨询赞助事宜。文末还提及了“2024年终大鲸榜”的发布背景，以增强活动的权威性和品牌背书。整体而言，该内容本质上是一篇品牌营销与活动转化性质的软文，侧重于资源展示和获客引导，不提供深度的技术分析或行业研报内容。"
+}

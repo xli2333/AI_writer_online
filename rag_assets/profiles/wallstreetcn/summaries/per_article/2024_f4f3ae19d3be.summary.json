@@ -1,0 +1,126 @@
+{
+  "analysis_schema_version": 3,
+  "id": "f4f3ae19d3be",
+  "year": "2024",
+  "date": "2024-11-16",
+  "title": "久等了，见闻历终于做了个订阅功能（附教程）",
+  "relative_path": "2024/2024-11-16_久等了，见闻历终于做了个订阅功能（附教程）.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\wallstreetcn\\raw_materials\\2024\\2024-11-16_久等了，见闻历终于做了个订阅功能（附教程）.txt",
+  "char_count": 1172,
+  "content_type": "产品功能更新",
+  "entities": [
+    "见闻",
+    "见闻历",
+    "iOS",
+    "苹果快捷指令"
+  ],
+  "industry": [
+    "金融科技",
+    "媒体",
+    "证券投资"
+  ],
+  "topic": [
+    "产品更新",
+    "投资工具",
+    "财经信息服务"
+  ],
+  "genre": "软文",
+  "style": [
+    "说明性",
+    "导向型"
+  ],
+  "audience": [
+    "个人投资者",
+    "金融从业者",
+    "iOS用户"
+  ],
+  "intent": [
+    "产品推广",
+    "用户促活",
+    "功能指引"
+  ],
+  "tone": [
+    "热情的",
+    "实用的",
+    "号召性的"
+  ],
+  "primary_question": "见闻历推出的新订阅功能如何通过iOS原生生态解决投资者的信息时效性痛点？",
+  "thesis_type": "方案提供型",
+  "thesis_sentence": "见闻历通过集成iOS快捷指令推出每周重磅大事订阅服务，将财经日历转化为自动化提醒，帮助投资者第一时间捕捉市场动向。",
+  "structure_pattern": "问题-方案-教程",
+  "section_functions": [
+    "功能发布公告与核心利益点陈述",
+    "用户痛点共情与需求场景分析",
+    "功能核心卖点与差异化优势说明",
+    "多媒体化分步操作教学",
+    "总结与反馈邀请"
+  ],
+  "argument_moves": [
+    "制造信息焦虑（描述错失良机的后果）",
+    "提供即时解决方案（订阅功能上线）",
+    "强调操作低门槛（三秒完成、无需额外APP）",
+    "背书与信赖建立（24小时在线专属助手）"
+  ],
+  "core_argument": "高效的投资决策依赖于及时的信息触达，见闻历通过iOS生态集成实现了财经大事的主动推送，降低了用户的信息筛选成本。",
+  "key_points": [
+    "订阅服务覆盖海内外重磅经济数据、事件及财报",
+    "利用iOS‘提醒事项’实现自动化、强提醒",
+    "支持国内与海外事件的个性化分类订阅",
+    "通过‘快捷指令’技术降低了跨应用信息同步的难度"
+  ],
+  "opening_pattern": "直呼式开头",
+  "ending_pattern": "教程附录式结尾",
+  "evidence_types": [
+    "用户场景描述",
+    "操作视频",
+    "流程图示"
+  ],
+  "evidence_specificity_score": 85,
+  "data_density_score": 20,
+  "case_density_score": 15,
+  "quote_density_score": 0,
+  "narrative_distance": "直接对话",
+  "stance_strength": "强烈建议",
+  "sentence_rhythm": "短句为主，节奏急促",
+  "abstraction_level": "具体操作层面",
+  "transferable_moves": [
+    "利用手机原生系统功能（如提醒事项、快捷指令）提升APP服务触达率的策略",
+    "将复杂操作拆解为‘三秒完成’的心理降权文案技巧",
+    "通过痛点回溯（错失机会）引出功能价值的叙事逻辑"
+  ],
+  "anti_patterns": [
+    "过度口语化的表达（如‘吃灰’）可能在严肃金融场景略显轻浮",
+    "缺乏对Android用户兼容性的说明，受众覆盖不全"
+  ],
+  "notable_phrases": [
+    "24小时在线专属私人助理",
+    "海内外大事一次打捞",
+    "快捷方式终于不用再‘吃灰’了"
+  ],
+  "title_score": 75,
+  "opening_score": 70,
+  "argument_score": 60,
+  "evidence_score": 80,
+  "structure_score": 85,
+  "style_score": 65,
+  "publishability_score": 80,
+  "quality_score": 65,
+  "reference_value_score": 60,
+  "is_activity_notice": false,
+  "is_low_value": false,
+  "is_advertorial": true,
+  "advertorial_type": "product_seeding",
+  "advertorial_confidence": 100,
+  "promotional_intensity_score": 95,
+  "editorial_independence_score": 10,
+  "brand_exposure_level": "高",
+  "source_transparency": "清晰",
+  "advertorial_signals": [
+    "完全围绕单一产品的新功能展开",
+    "包含直接的操作引导和下载指令",
+    "使用了大量劝导式和营销导向的修饰语",
+    "发布渠道为品牌自媒体"
+  ],
+  "summary_200": "见闻历针对iOS用户上线了“每周重磅大事订阅服务”。该功能利用苹果系统的“快捷指令”和“提醒事项”，将下一周海内外重磅财经数据、财报和重大事件自动预设在用户手机中，实现即时通知。旨在解决投资者因信息获取不及时而错失决策机会的问题。文章提供了详尽的三步操作教程及视频演示，强调了该服务操作简单、无需额外APP且支持个性化筛选的特点，是典型的产品功能推广内容。",
+  "summary_500": "2024年11月16日，见闻宣布其产品“见闻历”上线了一项基于iOS生态的创新功能——每周重磅大事订阅服务。该服务通过“快捷指令”技术，将精心筛选的海内外重要财经动态直接同步至用户的系统“提醒事项”中。文章首先通过投资者的常见痛点——因信息滞后而错失良机进行共情，随后推出该解决方案，强调其“第一时间掌握动向”的核心价值。功能亮点包括：1. 覆盖全面，涵盖海内外核心数据与财报；2. 强提醒机制，利用iOS系统级通知确保触达；3. 操作简便，三步扫描即可完成配置；4. 个性化订阅，允许用户根据关注领域分模块选择。文中提供了详细的图文及视频教程，旨在降低技术门槛，引导用户完成订阅。从写作角度看，本文是典型的产品功能背书与操作指引，通过将复杂的财经信息流转变为简单的手机提醒，提升了产品的实用价值与用户黏性。虽然具有较强的推广性质，但对于见闻历的存量用户和iOS生态的重度用户具有较高的工具参考价值。"
+}

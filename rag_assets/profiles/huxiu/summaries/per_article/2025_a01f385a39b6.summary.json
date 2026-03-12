@@ -1,0 +1,101 @@
+{
+  "analysis_schema_version": 3,
+  "id": "a01f385a39b6",
+  "year": "2025",
+  "date": "2025-02-15",
+  "title": "年终奖大缩水，还要死心塌地干下去吗？",
+  "relative_path": "2025/2025-02-15_年终奖大缩水，还要死心塌地干下去吗？.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\huxiu\\raw_materials\\2025\\2025-02-15_年终奖大缩水，还要死心塌地干下去吗？.txt",
+  "char_count": 288,
+  "content_type": "职场建议",
+  "entities": [],
+  "industry": [
+    "通用职场"
+  ],
+  "topic": [
+    "年终奖",
+    "职场决策",
+    "离职管理"
+  ],
+  "genre": "职场心理分析",
+  "style": [
+    "问答式",
+    "共情式"
+  ],
+  "audience": [
+    "职场职员",
+    "中青年白领"
+  ],
+  "intent": [
+    "引发思考",
+    "提供决策建议"
+  ],
+  "tone": [
+    "焦虑缓解",
+    "客观理智"
+  ],
+  "primary_question": "年终奖缩水后，是否应该选择离职或继续留在当前岗位？",
+  "thesis_type": "决策建议型",
+  "thesis_sentence": "虽然年终奖缩水反映了经济环境或企业现状，但决策是否离职应综合考量职业成长空间与市场行情，而非仅受短期奖金波动左右。",
+  "structure_pattern": "问答互动式",
+  "section_functions": [
+    "提出职场普遍焦虑问题",
+    "引导读者进行自我评估"
+  ],
+  "argument_moves": [
+    "通过共鸣痛点引入话题",
+    "设定两难困境激发讨论"
+  ],
+  "core_argument": "在经济下行周期，年终奖缩水已成为常态，个人应从更长远的职业发展维度而非单一奖金维度衡量职位价值。",
+  "key_points": [
+    "年终奖缩水是当前职场普遍现象",
+    "单纯为奖金离职可能面临更大的市场风险",
+    "需评估当前公司的护城河与个人成长空间"
+  ],
+  "opening_pattern": "痛点提问",
+  "ending_pattern": "开放式讨论",
+  "evidence_types": [
+    "社会共识"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "中等",
+  "stance_strength": "中立",
+  "sentence_rhythm": "短促有力",
+  "abstraction_level": "中等",
+  "transferable_moves": [
+    "利用季节性职场热点进行切入",
+    "通过提问引导读者参与评论区互动"
+  ],
+  "anti_patterns": [
+    "信息严重缺失（仅有标题）",
+    "缺乏数据支持",
+    "论点过于宽泛"
+  ],
+  "notable_phrases": [
+    "死心塌地干下去"
+  ],
+  "title_score": 85,
+  "opening_score": 40,
+  "argument_score": 20,
+  "evidence_score": 10,
+  "structure_score": 30,
+  "style_score": 40,
+  "publishability_score": 20,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "is_advertorial": false,
+  "advertorial_type": "editorial",
+  "advertorial_confidence": 0,
+  "promotional_intensity_score": 0,
+  "editorial_independence_score": 100,
+  "brand_exposure_level": "低",
+  "source_transparency": "清晰",
+  "advertorial_signals": [],
+  "summary_200": "该内容属于典型的职场社交话题切入，聚焦于2025年初普遍存在的年终奖缩水现象。由于目前仅提供标题及基本信息，其实际论证深度无法评估。该文章主要利用年终奖发放节点，通过提问式标题激发职场人士的共鸣与讨论，属于低信息密度的互动引导类内容。建议读者在阅读此类内容时，不仅关注奖金变动，更要结合宏观就业环境进行理性判断。",
+  "summary_500": "这是一篇典型的职场心理与职业建议类的短文，发布于春节后的年终奖发放敏感期。文章的核心议题是‘年终奖缩水后的职场去留问题’。从写作机制看，标题采用了强共鸣的设问方式，旨在精准触达因财务预期落空而产生离职念头的‘打工人’群体。由于提供的正文内容极简（仅包含标题、日期与链接），缺乏具体的数据支撑、案例分析及深度的逻辑推演，属于信息密度极低的引流或互动型推文。在商业写作参考方面，该标题具有较强的社交传播力，成功捕捉了季节性社会痛点，但缺乏实质性的知识交付或实操建议。对于分析师而言，此类内容通常作为职场情绪晴雨表的监测样本，而非高质量的分析素材。总体评价为：标题吸睛度高，但由于原文内容缺失或过短，缺乏实质性的参考价值，属于低价值信息。在实际应用中，此类文章往往通过评论区互动来补全内容，通过读者的真实案例分享来达到传播效果。"
+}

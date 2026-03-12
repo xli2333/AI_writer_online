@@ -1,0 +1,22 @@
+{
+  "profile": "wallstreetcn",
+  "source_dir": "C:\\Users\\LXG\\AI_writer\\华尔街见闻",
+  "target_raw_dir": "C:\\Users\\LXG\\AI_writer\\style_corpora\\wallstreetcn\\raw_materials",
+  "scanned_article_dirs": 502,
+  "imported_articles": 502,
+  "missing_content_count": 0,
+  "empty_content_count": 0,
+  "ignored_image_files": 3281,
+  "ignored_image_extensions": {
+    ".png": 2402,
+    ".gif": 479,
+    ".jpg": 400
+  },
+  "workflow_assets_dir": "C:\\Users\\LXG\\AI_writer\\rag_assets\\profiles\\wallstreetcn\\workflows",
+  "benchmark_dir": "C:\\Users\\LXG\\AI_writer\\rag_assets\\profiles\\wallstreetcn\\evals\\benchmark_tasks",
+  "stripped_line_patterns": [
+    "^⭐星标华尔街见闻(?:Max)?，好内容不错过$",
+    "^本文首发于“见闻VIP”作者.*欢迎订阅“见闻VIP”。?$"
+  ],
+  "generated_at": "2026-03-12T04:04:29.047Z"
+}

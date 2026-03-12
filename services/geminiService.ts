@@ -213,6 +213,14 @@ const applyRuntimePromptAssets = (assets: Awaited<ReturnType<typeof loadRuntimeP
     xinzhiyuanPaperPersona: String(assets.xinzhiyuanPaperPersona || '').trim(),
     xinzhiyuanProductPersona: String(assets.xinzhiyuanProductPersona || '').trim(),
     xinzhiyuanPeoplePersona: String(assets.xinzhiyuanPeoplePersona || '').trim(),
+    huxiuIndustryPersona: String(assets.huxiuIndustryPersona || '').trim(),
+    huxiuConsumerPersona: String(assets.huxiuConsumerPersona || '').trim(),
+    huxiuProfilePersona: String(assets.huxiuProfilePersona || '').trim(),
+    huxiuSocietyPersona: String(assets.huxiuSocietyPersona || '').trim(),
+    wallstreetcnMacroPersona: String(assets.wallstreetcnMacroPersona || '').trim(),
+    wallstreetcnMarketsPersona: String(assets.wallstreetcnMarketsPersona || '').trim(),
+    wallstreetcnCompanyPersona: String(assets.wallstreetcnCompanyPersona || '').trim(),
+    wallstreetcnStrategyPersona: String(assets.wallstreetcnStrategyPersona || '').trim(),
   };
 
   if (runtimeAntiAiStyleRules.length === 0) {

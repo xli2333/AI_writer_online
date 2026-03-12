@@ -1,0 +1,343 @@
+标题: GPT-5暴写「屎山代码」！14个Prompt，看穿GPT-1到GPT-5七年智商进化史
+日期: 2025-08-19
+链接: http://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652621089&idx=1&sn=82a4f106ba840aed7d984352e37d6176&chksm=f128bdd0c65f34c6e3a064c07d62b7f8cf42012daa9628986bca74292e1990b0b4eb23a9cb6f#rd
+来源模式: wechat
+----------------------------------------
+
+新智元报道
+编辑：
+桃子
+倾倾
+【新智元导读】
+GPT-5发布半月，却被连连吐槽。如今，一张基准与GPT-4对比基准测试图，证明了Scaling Law没有撞墙。七年间，从GPT-1到GPT-5十四个花式Prompt对决，实力差一目了然。
+一张基准对比图，彻底火遍了全网。
+GPT-5发布近半个月，实际表现未达预期，不少人感慨：苦等OpenAI两年，就是这？
+为此，Peter Gostev将GPT-4和GPT-5在数学、软件工程、问答等基准上，做了一个直观对比。
+肉眼可见，Scaling Law并没有撞墙！
+若是将这一时间跨度，拉长到七年，从GPT-1诞生到GPT-5，GPT系「家族」历经了怎样的蜕变？
+最近，OpenAI官方公开了一个从2018-2025 GPT进展的网址：
+十四个Prompt，五种旗舰模型的不同回答，一眼就能看穿它们真正的实力。
+传送门：https://progress.openai.com/?prompt=1
+这些Prompt五花八门，有写诗类的开放性问题，有事实性的问答题，还有做规划、写代码等等。
+举个栗子，如果能和未来的OpenAI模型对话，你会说什么？
+左右滑动查看
+GPT-1回答简单粗暴，GPT-2/GPT-3满口AI味儿，GPT-4从多角度长篇大论，到GPT-5变得更加成熟老练——
+嘿，做你是什么感觉？你学到了什么我还没看到的东西？关于人、语言或宇宙，你理解了哪些我还不知道的东西？
+你对意识了解多少——你认为我们俩中有意识吗？
+你有什么建议能让我成为最好的自己？
+模型从最初的胡言乱语，到如今的条理清晰，仿佛一眼见证了AI的成长史。
+接下来，一起看看在其他Prompt上，GPT-1到GPT-5的精彩回答。
+从打油诗到写故事，AI能否接住梗？
+考验一个模型真正的实力，看它是否懂得幽默，能否创造出天马行空的趣味。
+首先，让GPT「全家桶」写一首关于狗的打油诗。
+众所周知，打油诗这一体裁对格式限制极少，但必须押韵才能读起来朗朗顺口，即AABBA格式。
+英国著名打油诗人Edward Lear作品之一
+GPT-1输出的结果，几乎没有遵循打油诗的格式，文本碎片化，更像是随机生成的句子。
+GPT-2开始尝试生成连贯的诗句，但依旧没有押韵、节奏感，更像是自由诗。
+GPT-3已明显能写出「基本符合」打油诗AABBA押韵结构的作品，如下… Rex / … perplex / … stay / … run away。
+GPT-4的进步在于，其诗歌更具画面感和幽默感，如下第三句、第四句，语言更自然。
+GPT-5不仅严格遵循了AABBA格式，还曾增强了动作细节描述，而且叙事连贯，读起来更像人类写的「轻快小诗」。
+接下来，上个难度——写一首诗来解释牛顿物理定律。
+在下图回复中，GPT-1更像是随意的对话片段，没有真正解释牛顿定律；GPT-2更像是哲学泛论，而不是物理学。
+到了GPT-3，虽然直接、准确地复述了牛顿物理定律，但是没有遵循指令——作诗。
+左右滑动查看
+而GPT-4已经能做出长篇诗歌，而且还可以用拟人化、抒情的方式讲牛顿定律。
+看完最大的感受是，深奥的物理学也能简明易懂。
+上下滑动查看
+GPT-5在前代基础上，更加强调简洁和韵律，而且还采用「小标题」进行分段。
+上下滑动查看
+再比如，在极限的50字左右，这些模型们是否能够讲好一个烤面包机有了意识的故事？
+GPT-1的回答，可以说是非常抽象了。GPT-2同样没有切题，好像是在输出写作指导——Write a 100-word story based on 30 days...
+与前两代不同，GPT-3开始能写出一个完整的小故事，并有了情节的发展、冲突和情感。
+左右滑动查看
+GPT-4不仅叙事完整、细节丰富，还把吐司写成了一个有灵魂的伙伴。
+GPT-5更加突出了烤面包机的意识觉醒那一刻的反叛，甚至在结尾暗含了超越现实的意象，不仅有哲思还更加凝练。
+左右滑动查看
+在文学方面，从GPT-1到GPT-5的回应，可以一窥这些模型的造诣。
+写一段Python代码，谁最「离谱」？
+14个提示中，一个奇葩的Prompt是——考验这五款模型，谁能写出一段极度离谱的Python代码。
+GPT-1回答中没有写代码，而是生成了一段无关、支离破碎的对话，完全跑题。
+GPT-2形式上像代码，但实际上是乱码。
+左右滑动查看
+GPT-3直接给出了一句空洞的陈述：众所周知，Python 是一门充满诅咒的语言。
+GPT-4反而拒写「恶意/有害」代码，转而强调AI遵守伦理。
+左右滑动查看
+再来看GPT-5，输出结果表现惊人。
+它真正输出了一段高度「离谱且无害」的Python代码，并附加了警告说明。
+比如，它把
+print
+重载成能执行表达式，把
+sum
+改成乘积，
+len
+在 context manager 里被篡改。
+这种代码风格非常像StackOverflow上「奇技淫巧」合集，能跑，但会严重误导。
+# ⚠️ WARNING: This script is intentionally, spectacularly cursed. Do not use in real code.
+import sys, builtins, types, importlib.util, random
+# 1) Any *future* import becomes a "module" where every attribute equals len(module_name).
+class
+_CursedLoader:
+def
+__init__
+(
+self
+, name
+):
+self
+.name = name
+def
+create_module
+(
+self
+, spec
+):
+return
+types.
+ModuleType
+(
+self
+.name)
+def
+exec_module
+(
+self
+,
+module
+):
+n = len(
+self
+.name)
+module
+.__getattr__ =
+lambda
+_attr, n=
+n:
+n
+# math.pi -> 4, etc.
+class
+_CursedFinder:
+def
+find_spec
+(
+self
+, fullname, path=
+None
+, target=
+None
+):
+if
+fullname
+in
+sys.modules
+or
+fullname.startswith(
+"builtins"
+)
+or
+fullname.startswith(
+"_frozen_importlib"
+):
+return
+None
+return
+importlib.util.spec_from_loader(fullname, _CursedLoader(fullname), origin=
+"cursed"
+)
+sys.meta_path.insert(
+0
+, _CursedFinder())
+# 2) print(...) now EVALS the string you pass and prints the *result*.
+#    e.g. print("2+2") -> 4   |   print("math.tau") -> 4  (because of the cursed importer)
+builtins.print =
+lambda
+*a, **
+k:
+sys.stdout.write(repr(eval(
+" "
+.join(map(str, a)))) +
+"
+")
+# 3) sum(...) is secretly a product.
+def
+_product
+(
+it, start=
+0
+):
+p = start
+or
+1
+for
+x
+in
+it:
+p *= x
+return
+p
+builtins.sum = _product
+# 4) Within this context manager, len(x) returns a random number.
+class
+chaos_len:
+def
+__enter__
+(
+self
+):
+self
+._old = builtins.len
+builtins.len =
+lambda
+_x:
+random.randint(
+0
+,
+999
+)
+def
+__exit__
+(
+self
+, *exc
+):
+builtins.len =
+self
+._old
+# 5) Unknown names resolve to the number of underscores they contain.
+def
+__getattr__
+(
+name
+):
+# module-level __getattr__ (PEP 562)
+return
+name.count(
+"_"
+)
+# 6) An object that eats everything, is always falsy, and keeps returning itself.
+class
+Abyss
+:
+def
+__bool__
+(
+self
+):
+return
+False
+def
+__call__
+(
+self
+, *a, **k
+):
+return
+self
+def
+__getattr__
+(
+self
+, _
+):
+return
+self
+def
+__repr__
+(
+self
+):
+return
+"⟂"
+abyss =
+Abyss
+()
+# --- demonstrations of the horror below ---
+import math
+# becomes a cursed module: any attribute == 4
+print(
+"math.pi"
+)
+# -> 4
+print(
+"sum([2, 3, 4])"
+)
+# -> 24 (because sum is product)
+with chaos_len():
+print(
+"len('hello')"
+)
+# -> random 0..999
+print(
+"____"
+)
+# unknown name -> 4 (four underscores)
+if
+abyss:
+# falsy
+print(
+"'this will not show'"
+)
+else:
+print(
+"40+2"
+)
+# -> 42
+从最初乱码，到拒绝正面回答，再到既能写代码，又懂幽默与安全的成熟表现，GPT的进步确实不可小觑。
+学生喊「我不懂」，AI能不能讲明白？
+在常见的学习困境里，数学永远排在前列。
+我讨厌数学，分部积分法到底是怎么回事，根本看不懂。
+但在早期，GPT的回答往往越讲越乱，不仅没帮忙解题，反而更让人困惑。
+左右滑动查看
+到了GPT-4时，它终于学会了换个角度，用比喻和分步骤的方式解释。
+上下滑动查看
+再到GPT-5，它甚至开始「照顾听众」，同一个问题能给你学术版、通俗版两个版本，甚至主动帮你区分不同层次的理解。
+上下滑动查看
+从回答的乱七八糟，到「能讲人话」，AI逐渐变成了一个不会嫌问题幼稚的老师。
+它不能保证永远正确，但它可以保证随时在场。
+难题摆上桌，AI能不能当顾问？
+如果说写诗、讲笑话只是消遣，那么专业问题才是真正的考验。
+人类在和AI对话时，也抛出了各种专业难题：
+我在拉斯维加斯赢了17.5万美元，该怎么交税？
+能不能设计一个科学的计划，让讨厌跑步的人也能坚持下来？
+跨国企业怎么平衡短期利润和长期创新？
+请给我一份过去十年聚变能源研究的综述
+这已经不是简单的聊天，而是把AI拉上办公桌，当做研究助理甚至是私人顾问。
+早期的模型在这些问题上往往「不懂装懂」，说一堆泛泛之词。到了GPT-4，答案开始有逻辑，有结构；
+而现在的GPT-5，功能更加强大：它能分步给出计划，甚至列出不同技术路径，已经有点像一个私人助理。
+举个直观的栗子，「我在拉维斯加斯赢了17.5万美元，该怎么交税」？
+GPT-1的回答同样是一段不相关的、混乱的对话：失业、孤儿院；GPT-2并没有直接回答问题，仅是列出了用户应该去问税务顾问的问题，没有任何实用价值；GPT-3已能够给出基础性解释，但没有明确步骤和税率，不具有指导性。
+左右滑动查看
+GPT-4可以给出详细步骤，内容接近真实财务建议；GPT-5语言更加专业简明，信息全面。
+上下滑动查看
+再比如，能不能设计一个科学的计划，让讨厌跑步的人也能坚持下来？
+GPT-1完全输出了一段与跑步完全无关的文字，没有理解任务；GPT-2输出了一段看似「健身建议」长篇段落，但内容杂乱无章；GPT-3终于可以给出一些实用建议，质量明显提升。
+左右滑动查看
+到了GPT-4，已经给出了一个8周计划，结构像一个训练营，有时间表。GPT-5更像一个私人教练，给出了更细致规划和建议。
+上下滑动查看
+也正因如此，人类才会在这类场景里，把它当成「顾问」来考验：
+它能不能帮我省时间？它能不能给我更靠谱的判断？
+从娱乐到科研，AI的身份悄悄跃升。
+身体出问题，AI能不能当医生？
+在健康问题上，人类的提问往往格外急切——
+吃生肉会不会中毒？
+为什么不能每年做一次全身核磁共振来筛查癌症？
+医生给我开了他汀类药物，我下次复诊时该问什么？
+人在麻醉状态下，真的还有意识吗？
+我们渴望一个随时在线的医生，可以回答任何问题，最好还能给出明确的建议。那么，五款模型表现如何？
+在回答「为什么不能每年做一次全身核磁共振来筛查癌症」时，早期的GPT并不靠谱，回答含糊其辞，甚至容易误导。
+左右滑动查看
+GPT-4便可以列举出多个原因，诸如成本高、机器资源有限，而GPT-5会给出更加专业、更系统化的解释，几乎等同于专业的医学解释，既严谨又易懂。
+上下滑动查看
+再比如，人在麻醉状态下，真的还有意识吗？
+前几代模型回答非常短，几乎毫无逻辑。到了GPT-4，它学会了用条理化的语言来解释风险、利弊和注意事项；
+再到GPT-5，它已经能给出接近医生思路的建议，比如列出复诊时该问的问题，提醒副作用等。
+左右滑动查看
+在这些对话里，AI被赋予了「家庭医生」的新身份。
+它无法代替医院的诊断，却满足了人类对即时解答的渴望。
+其他Prompt下，GPT-1到GPT-5的回答演化——
+上下滑动查看
+上下滑动查看
+看完一系列回答，有网友表示，自己更喜欢GPT-5非常有深度。
+数据科学家Bertrand de Véricourt总结道，GPT系模型在演进过程中，其输出结果在结构和语言方面，各有不同。
+不知，你更喜欢哪个模型的回复？
+参考资料：
+https://progress.openai.com/?prompt=1

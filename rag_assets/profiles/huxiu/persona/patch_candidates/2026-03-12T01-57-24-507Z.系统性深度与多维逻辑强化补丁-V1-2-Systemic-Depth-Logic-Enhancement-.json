@@ -1,0 +1,2567 @@
+{
+  "model": "gemini-3-flash-preview",
+  "generated_at": "2026-03-12T01:57:24.508Z",
+  "selected_card_count": 80,
+  "selected_cards": [
+    {
+      "id": "d6bff4114dd8_structure_qwfuo1",
+      "article_id": "d6bff4114dd8",
+      "article_title": "韩国沉浮记",
+      "category": "structure",
+      "weight": 105.12,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：历史纵向对比 + 专题横向剖析",
+      "evidence": "section_functions=[\"引言：通过两本著作引出韩国经济的一个完整周期及核心命题\",\"第一部分：解构“汉江奇迹”下的国家资本主义模式及其内生的危机逻辑\",\"第二部分：详述1997年危机后韩国在企业、金融、开放、政府职能四个领域的根本性改革\",\"第三部分：以三星为例，阐述微观层面企业如何从制度红利依赖转向技术创新驱动\",\"结语：提炼总结，强调制度对企业家创新力投向的决定性作用\"]",
+      "genre": "书评式深度述评",
+      "content_type": "深度政经评论",
+      "topic": [
+        "国家资本主义",
+        "中等收入陷阱",
+        "产业政策",
+        "金融危机",
+        "企业治理",
+        "制度转型"
+      ],
+      "style": [
+        "理性严谨",
+        "批判性思维",
+        "学术化",
+        "逻辑严密"
+      ],
+      "audience": [
+        "经济研究者",
+        "政策制定者",
+        "企业高管",
+        "严肃阅读爱好者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 97
+    },
+    {
+      "id": "d6bff4114dd8_opening_i47uj9",
+      "article_id": "d6bff4114dd8",
+      "article_title": "韩国沉浮记",
+      "category": "opening",
+      "weight": 104.72,
+      "rule": "在书评式深度述评写作中，可优先考虑这种开篇动作：历史背景对比法",
+      "evidence": "来源文章的 opening_score=90",
+      "genre": "书评式深度述评",
+      "content_type": "深度政经评论",
+      "topic": [
+        "国家资本主义",
+        "中等收入陷阱",
+        "产业政策",
+        "金融危机",
+        "企业治理",
+        "制度转型"
+      ],
+      "style": [
+        "理性严谨",
+        "批判性思维",
+        "学术化",
+        "逻辑严密"
+      ],
+      "audience": [
+        "经济研究者",
+        "政策制定者",
+        "企业高管",
+        "严肃阅读爱好者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 97
+    },
+    {
+      "id": "95ea71af0788_structure_u2v7an",
+      "article_id": "95ea71af0788",
+      "article_title": "美国的MAGA梦能实现吗？回溯美国制造业百年变迁",
+      "category": "structure",
+      "weight": 103.76,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：历史逻辑溯源 -> 转折点解析 -> 多维度原因拆解 -> 数据认知纠偏 -> 替代路径否定 -> 现实路径重构",
+      "evidence": "section_functions=[\"通过历史复盘界定美国制造文明的成功基因（统一市场与国家动员）\",\"定位1970年代治理哲学从‘建设友好’向‘防错/合规’的结构性转折\",\"从制度摩擦、全球化、技术金融化三个维度深挖凋亡原因\",\"利用名义GDP与实际产出的对比消除‘制造业消失’的统计误区\",\"论证服务业在吸纳中产就业方面的结构性失效（哑铃结构）\",\"提出再工业化的现实路径需从审批制度、技能体系、生活成本三位一体切入\"]",
+      "genre": "深度分析",
+      "content_type": "深度政经评论",
+      "topic": [
+        "再工业化",
+        "中产阶级",
+        "全球化",
+        "产业政策",
+        "治理哲学"
+      ],
+      "style": [
+        "思辨性",
+        "历史溯源",
+        "数据驱动",
+        "结构严谨"
+      ],
+      "audience": [
+        "政策研究者",
+        "经济分析师",
+        "商业决策者",
+        "对美政经感兴趣的读者"
+      ],
+      "publishability_score": 96,
+      "reference_value_score": 95
+    },
+    {
+      "id": "5506e7a708b6_structure_pyg6r7",
+      "article_id": "5506e7a708b6",
+      "article_title": "岗位没有消失，但好工作更难找了",
+      "category": "structure",
+      "weight": 103.54,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：现象观察-原因剖析-事实列举-机制深挖-群体画像-心态解析-总结展望",
+      "evidence": "section_functions=[\"界定现象：描述宏观稳与微观紧的背离\",\"驱动因素：分析产业、经济、消费三股力量\",\"数据实证：列举毕业生规模与青年失业率\",\"核心论点：阐述技能、预期、过程、地域四种错配\",\"技术影响：剖析AI带来的岗位极化效应\",\"制度探讨：灵活就业与税收、社保制度的博弈\",\"群体洞察：农民工返乡潮及其背后的风险转移\",\"心理分析：解释内卷与躺平作为理性避险的本质\",\"政策展望：呼吁从应对冲击走向塑造预期的治理\"]",
+      "genre": "经济评论",
+      "content_type": "深度行业评论",
+      "topic": [
+        "就业市场分析",
+        "结构性失业",
+        "青年就业困境",
+        "AI技术冲击",
+        "灵活就业保障",
+        "考公现象"
+      ],
+      "style": [
+        "学术严谨",
+        "逻辑驱动",
+        "数据支撑",
+        "忧患意识"
+      ],
+      "audience": [
+        "政策制定者",
+        "职场研究者",
+        "高校毕业生",
+        "企业人力资源负责人",
+        "经济观察者"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 95
+    },
+    {
+      "id": "501a8077263d_opening_ib52me",
+      "article_id": "501a8077263d",
+      "article_title": "《百家讲坛》，被争议的那些年",
+      "category": "opening",
+      "weight": 103.39,
+      "rule": "在媒体志写作中，可优先考虑这种开篇动作：金句引用开头 + 人物底层叙事（利用生活困窘增加共情）",
+      "evidence": "来源文章的 opening_score=90",
+      "genre": "媒体志",
+      "content_type": "深度长文",
+      "topic": [
+        "媒介演变",
+        "知识大众化",
+        "内容生产机制",
+        "文化争议",
+        "网红经济溯源"
+      ],
+      "style": [
+        "叙事驱动",
+        "批判性反思",
+        "群像白描"
+      ],
+      "audience": [
+        "内容创作者",
+        "传媒从业者",
+        "文化研究者",
+        "互联网产品经理"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 95
+    },
+    {
+      "id": "501a8077263d_structure_1eqalm",
+      "article_id": "501a8077263d",
+      "article_title": "《百家讲坛》，被争议的那些年",
+      "category": "structure",
+      "weight": 103.39,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：时间轴脉络 + 人物群像特写 + 逻辑递进分析",
+      "evidence": "section_functions=[\"以易中天的经济困境切入，说明学者世俗化的现实动力\",\"回顾栏目早期定位高端导致收视垫底的惨淡状况\",\"详析从《清十二帝疑案》开始的内容方法论转型\",\"揭秘幕后团队对主讲人进行“工具化修理”的标准化流程\",\"展示成名带来的名利效应及其引发的社会与学术争议\",\"探讨掌掴事件等极端冲突背后的文明认同与偏见冲突\",\"对比高晓松、罗振宇等个体在互联网浪潮中的崛起\",\"总结媒介变迁下学术传播的伦理边界与当下处境\"]",
+      "genre": "媒体志",
+      "content_type": "深度长文",
+      "topic": [
+        "媒介演变",
+        "知识大众化",
+        "内容生产机制",
+        "文化争议",
+        "网红经济溯源"
+      ],
+      "style": [
+        "叙事驱动",
+        "批判性反思",
+        "群像白描"
+      ],
+      "audience": [
+        "内容创作者",
+        "传媒从业者",
+        "文化研究者",
+        "互联网产品经理"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 95
+    },
+    {
+      "id": "63b7eaa0a9db_structure_i0r7g3",
+      "article_id": "63b7eaa0a9db",
+      "article_title": "微软小冰往事：一个AI明星产品是如何坠落的",
+      "category": "structure",
+      "weight": 103.39,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：时空交错+主题分章叙事",
+      "evidence": "section_functions=[\"序言：通过李笛的神秘消失与再次路演，引出其“被出局”的悬念\",\"第一章：揭露李笛离职的离奇细节，展示公司管理层的权力更替\",\"第二章：分析李笛股权结构上的“天真”及分拆之初埋下的控制权雷区\",\"第三章：追溯微软时期的巅峰与受宠，对比独立后的残酷现实\",\"第四章：揭露创始人与董事长之间由“闪婚”到裂痕的思维分歧\",\"第五章：复盘小冰为了盈利在灰色地带（X Eva）挣扎的商业化末路\",\"第六章：深度分析技术路径上从“行业最牛”到“泯然众人”的范式转轨失败\",\"第七章：结尾升华：以忒修斯之船为喻，宣告小冰时代的终结\"]",
+      "genre": "商业深度观察",
+      "content_type": "深度报道",
+      "topic": [
+        "公司治理",
+        "创始人出局",
+        "技术路径迭代",
+        "商业化困局",
+        "权力斗争"
+      ],
+      "style": [
+        "叙事性",
+        "纪实性",
+        "悲悯性"
+      ],
+      "audience": [
+        "科技从业者",
+        "创业者",
+        "投资人",
+        "AI行业研究者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 95
+    },
+    {
+      "id": "95ea71af0788_opening_g7ddv7",
+      "article_id": "95ea71af0788",
+      "article_title": "美国的MAGA梦能实现吗？回溯美国制造业百年变迁",
+      "category": "opening",
+      "weight": 103.36,
+      "rule": "在深度分析写作中，可优先考虑这种开篇动作：口号解构引出底层社会现实",
+      "evidence": "来源文章的 opening_score=90",
+      "genre": "深度分析",
+      "content_type": "深度政经评论",
+      "topic": [
+        "再工业化",
+        "中产阶级",
+        "全球化",
+        "产业政策",
+        "治理哲学"
+      ],
+      "style": [
+        "思辨性",
+        "历史溯源",
+        "数据驱动",
+        "结构严谨"
+      ],
+      "audience": [
+        "政策研究者",
+        "经济分析师",
+        "商业决策者",
+        "对美政经感兴趣的读者"
+      ],
+      "publishability_score": 96,
+      "reference_value_score": 95
+    },
+    {
+      "id": "d6bff4114dd8_argument_lovydi",
+      "article_id": "d6bff4114dd8",
+      "article_title": "韩国沉浮记",
+      "category": "argument",
+      "weight": 103.32,
+      "rule": "可迁移的论证动作：界定概念：明确发展型国家的特征与缺陷",
+      "evidence": "thesis_type=归因分析型; thesis_sentence=韩国经济转型的成功在于国家资本主义向市场资本主义的蜕变，这种蜕变表现为政府职能从下场操作转向公平监管，增长动力从投资扩张转向创新提效。",
+      "genre": "书评式深度述评",
+      "content_type": "深度政经评论",
+      "topic": [
+        "国家资本主义",
+        "中等收入陷阱",
+        "产业政策",
+        "金融危机",
+        "企业治理",
+        "制度转型"
+      ],
+      "style": [
+        "理性严谨",
+        "批判性思维",
+        "学术化",
+        "逻辑严密"
+      ],
+      "audience": [
+        "经济研究者",
+        "政策制定者",
+        "企业高管",
+        "严肃阅读爱好者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 97
+    },
+    {
+      "id": "d6bff4114dd8_argument_cc7q0d",
+      "article_id": "d6bff4114dd8",
+      "article_title": "韩国沉浮记",
+      "category": "argument",
+      "weight": 103.32,
+      "rule": "可迁移的论证动作：逻辑推导：运用边际收益递减原理说明投资驱动模式的必然终结",
+      "evidence": "thesis_type=归因分析型; thesis_sentence=韩国经济转型的成功在于国家资本主义向市场资本主义的蜕变，这种蜕变表现为政府职能从下场操作转向公平监管，增长动力从投资扩张转向创新提效。",
+      "genre": "书评式深度述评",
+      "content_type": "深度政经评论",
+      "topic": [
+        "国家资本主义",
+        "中等收入陷阱",
+        "产业政策",
+        "金融危机",
+        "企业治理",
+        "制度转型"
+      ],
+      "style": [
+        "理性严谨",
+        "批判性思维",
+        "学术化",
+        "逻辑严密"
+      ],
+      "audience": [
+        "经济研究者",
+        "政策制定者",
+        "企业高管",
+        "严肃阅读爱好者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 97
+    },
+    {
+      "id": "d6bff4114dd8_argument_z0zcur",
+      "article_id": "d6bff4114dd8",
+      "article_title": "韩国沉浮记",
+      "category": "argument",
+      "weight": 103.32,
+      "rule": "可迁移的论证动作：事实归纳：列举韩国政府在危机后采取的具体去管制化措施",
+      "evidence": "thesis_type=归因分析型; thesis_sentence=韩国经济转型的成功在于国家资本主义向市场资本主义的蜕变，这种蜕变表现为政府职能从下场操作转向公平监管，增长动力从投资扩张转向创新提效。",
+      "genre": "书评式深度述评",
+      "content_type": "深度政经评论",
+      "topic": [
+        "国家资本主义",
+        "中等收入陷阱",
+        "产业政策",
+        "金融危机",
+        "企业治理",
+        "制度转型"
+      ],
+      "style": [
+        "理性严谨",
+        "批判性思维",
+        "学术化",
+        "逻辑严密"
+      ],
+      "audience": [
+        "经济研究者",
+        "政策制定者",
+        "企业高管",
+        "严肃阅读爱好者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 97
+    },
+    {
+      "id": "d6bff4114dd8_argument_gpx20c",
+      "article_id": "d6bff4114dd8",
+      "article_title": "韩国沉浮记",
+      "category": "argument",
+      "weight": 103.32,
+      "rule": "可迁移的论证动作：对比论证：对比转型前后银行独立性与企业负债率的变化",
+      "evidence": "thesis_type=归因分析型; thesis_sentence=韩国经济转型的成功在于国家资本主义向市场资本主义的蜕变，这种蜕变表现为政府职能从下场操作转向公平监管，增长动力从投资扩张转向创新提效。",
+      "genre": "书评式深度述评",
+      "content_type": "深度政经评论",
+      "topic": [
+        "国家资本主义",
+        "中等收入陷阱",
+        "产业政策",
+        "金融危机",
+        "企业治理",
+        "制度转型"
+      ],
+      "style": [
+        "理性严谨",
+        "批判性思维",
+        "学术化",
+        "逻辑严密"
+      ],
+      "audience": [
+        "经济研究者",
+        "政策制定者",
+        "企业高管",
+        "严肃阅读爱好者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 97
+    },
+    {
+      "id": "8419fbdb519e_structure_vpnde4",
+      "article_id": "8419fbdb519e",
+      "article_title": "特朗普“降药价”新政下，中国药企谁是赢家？",
+      "category": "structure",
+      "weight": 103.24,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：宏观背景-政策拆解-机遇分类-风险应对-不确定性讨论-投资逻辑总结",
+      "evidence": "section_functions=[\"以诺和诺德巨幅降价案例引入药价新政背景\",\"深度解析“最惠国定价”行政令的落地路径与法律博弈空间\",\"通过财务数据与订单分析，论证头部CDMO、BD与原料药企的受益逻辑\",\"针对直接出海药企与中小CDMO给出策略性对冲建议\",\"探讨地缘政治博弈下《生物安全法案》与产业链依赖度的对冲关系\",\"总结三大投资主线并标注量化评估标准\"]",
+      "genre": "深度评论",
+      "content_type": "行业趋势分析",
+      "topic": [
+        "特朗普新政",
+        "降药价政策",
+        "GLP-1减肥药",
+        "CDMO外包",
+        "创新药出海",
+        "生物安全法案"
+      ],
+      "style": [
+        "数据驱动",
+        "逻辑严密",
+        "政策导向"
+      ],
+      "audience": [
+        "二级市场投资者",
+        "医药企业高管",
+        "行业研究员"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 96
+    },
+    {
+      "id": "63b7eaa0a9db_opening_ih4mac",
+      "article_id": "63b7eaa0a9db",
+      "article_title": "微软小冰往事：一个AI明星产品是如何坠落的",
+      "category": "opening",
+      "weight": 103.19,
+      "rule": "在商业深度观察写作中，可优先考虑这种开篇动作：用户群体记忆切入，营造温情底色，随后迅速转入“领袖消失”的冷峻现实",
+      "evidence": "来源文章的 opening_score=88",
+      "genre": "商业深度观察",
+      "content_type": "深度报道",
+      "topic": [
+        "公司治理",
+        "创始人出局",
+        "技术路径迭代",
+        "商业化困局",
+        "权力斗争"
+      ],
+      "style": [
+        "叙事性",
+        "纪实性",
+        "悲悯性"
+      ],
+      "audience": [
+        "科技从业者",
+        "创业者",
+        "投资人",
+        "AI行业研究者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 95
+    },
+    {
+      "id": "9e83183c10b1_structure_x5s94t",
+      "article_id": "9e83183c10b1",
+      "article_title": "如果你非得用DeepSeek看病，建议这么看",
+      "category": "structure",
+      "weight": 103.13,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：总-分-总（界定身份-提供工具-应用场景-警示边界）",
+      "evidence": "section_functions=[\"开篇引入：通过用户习惯切入，利用AI自陈局限点明主题\",\"核心界定：通过‘专家’与‘助手’的角色对比，明确AI在医疗中的定位\",\"实操工具：提供极高详尽度的病史描述模板，并解释其医学逻辑\",\"应用延伸：细化诊前、诊中、诊后、体检等四个具体应用场景\",\"总结升华：引用法规与案例，强调对生命的敬畏与AI的辅助属性\"]",
+      "genre": "实用工具文",
+      "content_type": "科普指南",
+      "topic": [
+        "AI医疗",
+        "DeepSeek使用技巧",
+        "提示词工程",
+        "患者指南",
+        "医疗安全"
+      ],
+      "style": [
+        "严谨",
+        "结构化",
+        "指导性"
+      ],
+      "audience": [
+        "普通大众",
+        "慢病患者",
+        "AI工具用户",
+        "基层医疗人员"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 98
+    },
+    {
+      "id": "d6bff4114dd8_evidence_ebmkw1",
+      "article_id": "d6bff4114dd8",
+      "article_title": "韩国沉浮记",
+      "category": "evidence",
+      "weight": 103.08,
+      "rule": "这类稿件适合混合使用这些证据类型：宏观经济指标、企业财务数据、法律法规条文、学术著作引用、典型公司案例",
+      "evidence": "evidence_specificity_score=92; data_density_score=85; case_density_score=78",
+      "genre": "书评式深度述评",
+      "content_type": "深度政经评论",
+      "topic": [
+        "国家资本主义",
+        "中等收入陷阱",
+        "产业政策",
+        "金融危机",
+        "企业治理",
+        "制度转型"
+      ],
+      "style": [
+        "理性严谨",
+        "批判性思维",
+        "学术化",
+        "逻辑严密"
+      ],
+      "audience": [
+        "经济研究者",
+        "政策制定者",
+        "企业高管",
+        "严肃阅读爱好者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 97
+    },
+    {
+      "id": "769203cb283b_structure_1683c1",
+      "article_id": "769203cb283b",
+      "article_title": "微塑料入侵大脑，如何才能摆脱塑料焦虑",
+      "category": "structure",
+      "weight": 103.06,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：共情引入-原理解析-分类指引-隐形风险警示-心态总结",
+      "evidence": "section_functions=[\"引入：描述当下社会普遍存在的“塑料焦虑”现状\",\"科普：解释微塑料及添加剂（PAEs、BPA）的生物毒性机理\",\"避坑：详细解析塑料分类标号及PVC、PS的危害\",\"实操：提供针对食品包装、一次性用品、隐形塑料的行动建议\",\"升华：提出“带着塑料生活”的心态调适建议\"]",
+      "genre": "生活科普",
+      "content_type": "深度科普指南",
+      "topic": [
+        "微塑料污染",
+        "健康风险管理",
+        "环境焦虑",
+        "塑料分类指南",
+        "生活减塑"
+      ],
+      "style": [
+        "循证",
+        "实操性",
+        "叙事性",
+        "冷静"
+      ],
+      "audience": [
+        "环保主义者",
+        "健康敏感人群",
+        "家庭生活管理者",
+        "受环境新闻困扰的公众"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 95
+    },
+    {
+      "id": "2113a326cba2_structure_9vo8q5",
+      "article_id": "2113a326cba2",
+      "article_title": "2025上半年游戏行业杂谈：电梯到顶了",
+      "category": "structure",
+      "weight": 103.05,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：逻辑递进式（现状困境 -> 全球分化 -> 赛道解构 -> 体验内核）",
+      "evidence": "section_functions=[\"引言：定调2025年上半年的矛盾感，提出'电梯到顶'论断\",\"传统3A分析：揭示海外大厂的高成本负收益困境及敏捷化改革趋势\",\"国内外市场对比：通过三消品类对比，挖掘中西方玩家消费习惯差异的深层原因\",\"赛道批判：对搜打撤、SOC等热门红海赛道进行去泡沫化的逻辑重构\",\"内核提炼：提出'体验派'优于'系统派'的立项思维，阐述'Fantasy'的重要性\",\"结语：鼓励从业者独立趟出属于中国游戏行业自己的深水区道路\"]",
+      "genre": "深度杂谈",
+      "content_type": "行业趋势深度综述",
+      "topic": [
+        "3A游戏商业模式危机",
+        "全球市场消费习惯差异",
+        "游戏品类定义误区",
+        "体验派研发方法论",
+        "中西方游戏生态脱钩"
+      ],
+      "style": [
+        "解构主义",
+        "第一性原理思考",
+        "批判性分析",
+        "行业复盘"
+      ],
+      "audience": [
+        "游戏开发从业者",
+        "行业战略分析师",
+        "内容领域投资者",
+        "资深硬核玩家"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 96
+    },
+    {
+      "id": "f6d14f61ff1b_opening_jc76j2",
+      "article_id": "f6d14f61ff1b",
+      "article_title": "看不见的武器：黄金、石油与美元之网",
+      "category": "opening",
+      "weight": 103.05,
+      "rule": "在商业评论写作中，可优先考虑这种开篇动作：叙事性导入（澳门汇业银行挤兑事件）",
+      "evidence": "来源文章的 opening_score=95",
+      "genre": "商业评论",
+      "content_type": "深度解析",
+      "topic": [
+        "美元霸权",
+        "金融制裁",
+        "货币体系演变",
+        "地缘政治"
+      ],
+      "style": [
+        "史诗叙事",
+        "逻辑推演",
+        "硬核科普"
+      ],
+      "audience": [
+        "金融从业者",
+        "投资者",
+        "宏观经济研究者",
+        "政策制定者"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 96
+    },
+    {
+      "id": "8419fbdb519e_opening_kawuia",
+      "article_id": "8419fbdb519e",
+      "article_title": "特朗普“降药价”新政下，中国药企谁是赢家？",
+      "category": "opening",
+      "weight": 103.04,
+      "rule": "在深度评论写作中，可优先考虑这种开篇动作：热点新闻切入（诺和诺德降价74%）",
+      "evidence": "来源文章的 opening_score=90",
+      "genre": "深度评论",
+      "content_type": "行业趋势分析",
+      "topic": [
+        "特朗普新政",
+        "降药价政策",
+        "GLP-1减肥药",
+        "CDMO外包",
+        "创新药出海",
+        "生物安全法案"
+      ],
+      "style": [
+        "数据驱动",
+        "逻辑严密",
+        "政策导向"
+      ],
+      "audience": [
+        "二级市场投资者",
+        "医药企业高管",
+        "行业研究员"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 96
+    },
+    {
+      "id": "b44ce70771c6_structure_dksnuh",
+      "article_id": "b44ce70771c6",
+      "article_title": "英伟达，我命由天不由我",
+      "category": "structure",
+      "weight": 103.01,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：逻辑递进式（性格侧写-败局应对-命运哲学-人性升华）",
+      "evidence": "section_functions=[\"现状引入：通过财报与市值的背离，引出“命不由我”的核心母题\",\"性格剖析：揭示黄仁勋对内“公开处决”式管理与对外“落井下石”式竞争的狠人底色\",\"实战复盘：详细论述在移动芯片失败与激进投资人逼宫下，如何通过“败中求胜”保住CUDA愿景\",\"深度思辨：探讨运气与情怀在商业决策中的隐秘权重，反思AI时代的焦虑\",\"结语/彩蛋：通过写给AI的寄语与历史细节，完成对人性复杂性的最后致敬\"]",
+      "genre": "商业评论",
+      "content_type": "人物志",
+      "topic": [
+        "企业管理",
+        "商业竞争",
+        "创始人人格",
+        "技术演进",
+        "商业哲学"
+      ],
+      "style": [
+        "叙事性",
+        "思辨性",
+        "冷峻",
+        "情感充沛"
+      ],
+      "audience": [
+        "科技从业者",
+        "企业管理者",
+        "投资者",
+        "科技史爱好者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 92
+    },
+    {
+      "id": "f6d14f61ff1b_structure_5qbhzv",
+      "article_id": "f6d14f61ff1b",
+      "article_title": "看不见的武器：黄金、石油与美元之网",
+      "category": "structure",
+      "weight": 102.95,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：时间轴纵览+系统解构+案例验证+矛盾分析",
+      "evidence": "section_functions=[\"通过汇业银行遭“金融处决”案例引入，建立危机感并提出核心悬念\",\"回顾布雷顿森林体系到石油美元的演变，阐释美元如何完成“锚”的切换\",\"硬核拆解金融制裁的技术设施，包括信息流、清算流及司法管辖权\",\"以法巴银行天价罚款为例，展示“杀鸡儆猴”的二级制裁威慑力\",\"分析俄乌冲突后的金融核武应用及其造成的全球过度合规效应\",\"探讨去美元化浪潮、黄金增持及CIPS、数字货币对旧体系的解构与反噬\"]",
+      "genre": "商业评论",
+      "content_type": "深度解析",
+      "topic": [
+        "美元霸权",
+        "金融制裁",
+        "货币体系演变",
+        "地缘政治"
+      ],
+      "style": [
+        "史诗叙事",
+        "逻辑推演",
+        "硬核科普"
+      ],
+      "audience": [
+        "金融从业者",
+        "投资者",
+        "宏观经济研究者",
+        "政策制定者"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 96
+    },
+    {
+      "id": "d6bff4114dd8_style_k344x5",
+      "article_id": "d6bff4114dd8",
+      "article_title": "韩国沉浮记",
+      "category": "style",
+      "weight": 102.92,
+      "rule": "推荐维持这种文风组合：叙述距离=远距观察；立场强度=坚定有力；抽象层级=高（侧重理论体系与制度设计）",
+      "evidence": "sentence_rhythm=长短句结合，逻辑性极强",
+      "genre": "书评式深度述评",
+      "content_type": "深度政经评论",
+      "topic": [
+        "国家资本主义",
+        "中等收入陷阱",
+        "产业政策",
+        "金融危机",
+        "企业治理",
+        "制度转型"
+      ],
+      "style": [
+        "理性严谨",
+        "批判性思维",
+        "学术化",
+        "逻辑严密"
+      ],
+      "audience": [
+        "经济研究者",
+        "政策制定者",
+        "企业高管",
+        "严肃阅读爱好者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 97
+    },
+    {
+      "id": "769203cb283b_opening_3lbv2u",
+      "article_id": "769203cb283b",
+      "article_title": "微塑料入侵大脑，如何才能摆脱塑料焦虑",
+      "category": "opening",
+      "weight": 102.86,
+      "rule": "在生活科普写作中，可优先考虑这种开篇动作：场景化叙事（朋友转发新闻），迅速切入社会情绪痛点",
+      "evidence": "来源文章的 opening_score=90",
+      "genre": "生活科普",
+      "content_type": "深度科普指南",
+      "topic": [
+        "微塑料污染",
+        "健康风险管理",
+        "环境焦虑",
+        "塑料分类指南",
+        "生活减塑"
+      ],
+      "style": [
+        "循证",
+        "实操性",
+        "叙事性",
+        "冷静"
+      ],
+      "audience": [
+        "环保主义者",
+        "健康敏感人群",
+        "家庭生活管理者",
+        "受环境新闻困扰的公众"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 95
+    },
+    {
+      "id": "3e54323cfb94_structure_zhhdts",
+      "article_id": "3e54323cfb94",
+      "article_title": "DeepSeek崛起，一场全球AI话语权的深度转移",
+      "category": "structure",
+      "weight": 102.79,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：现象导入-技术拆解-生态对比-历史类比-宏观预判",
+      "evidence": "section_functions=[\"描述现象：DeepSeek登顶中美应用榜单的突破性事件\",\"数据论证：对比DeepSeek与OpenAI的性能指标与成本差异\",\"生态解析：拆解“美式AI有机体”的构成及其商业闭环\",\"核心博弈：论述开源对闭源生态的颠覆性冲击及对英伟达的影响\",\"历史对标：引用蒸汽机历史案例阐述“技术节点”与“商业化效率”的关系\",\"结论展望：反思中国本土科技创新路径及对投资圈的警示\"]",
+      "genre": "深度报道",
+      "content_type": "商业评论",
+      "topic": [
+        "DeepSeek崛起",
+        "开源模型",
+        "AI算力成本",
+        "中美科技竞争",
+        "商业模式变革"
+      ],
+      "style": [
+        "分析型",
+        "宏观叙事",
+        "对比研究"
+      ],
+      "audience": [
+        "投资者",
+        "AI产业从业者",
+        "科技政策研究者",
+        "企业中高层"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 95
+    },
+    {
+      "id": "5b92dff6b169_opening_xvcogv",
+      "article_id": "5b92dff6b169",
+      "article_title": "刘小样：中国式“娜拉”的结局",
+      "category": "opening",
+      "weight": 102.65,
+      "rule": "在人物志写作中，可优先考虑这种开篇动作：怀旧叙事（以千禧年初的电视节目记忆切入）",
+      "evidence": "来源文章的 opening_score=90",
+      "genre": "人物志",
+      "content_type": "深度人物报道",
+      "topic": [
+        "女性主义",
+        "乡村生活",
+        "个人成长",
+        "文学评论",
+        "命运抉择"
+      ],
+      "style": [
+        "叙事性",
+        "评述性",
+        "抒情性"
+      ],
+      "audience": [
+        "关注女性议题的群体",
+        "内容创作者",
+        "文艺中青年",
+        "媒体从业者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 92
+    },
+    {
+      "id": "0650cf42dce8_structure_g4980n",
+      "article_id": "0650cf42dce8",
+      "article_title": "后伊朗时代",
+      "category": "structure",
+      "weight": 102.62,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：时事剖析-历史对比-多路径情景模拟-风险总结",
+      "evidence": "section_functions=[\"背景引入：通过现代战争目的引出后伊朗时代的命题\",\"策略拆解：分析特朗普政府对伊打击的战术考量与军事部署\",\"各界反响：梳理美国国内支持与反对开战的逻辑对垒\",\"格局演变：描述伊朗‘什叶派之弧’的崩塌现状\",\"情景预测：详细推演中东格局重组的三种可能路径\",\"风险警示：借用拉姆斯菲尔德的名言总结未知的地缘风险\"]",
+      "genre": "深度分析",
+      "content_type": "国际政治评论",
+      "topic": [
+        "地缘政治",
+        "中东局势",
+        "美国外交政策",
+        "伊朗核问题",
+        "国际格局重塑"
+      ],
+      "style": [
+        "宏大叙事",
+        "战略研判",
+        "理性冷峻"
+      ],
+      "audience": [
+        "国际政治观察者",
+        "投资者",
+        "政策研究人员",
+        "地缘政治爱好者"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 94
+    },
+    {
+      "id": "3e54323cfb94_opening_yh7oal",
+      "article_id": "3e54323cfb94",
+      "article_title": "DeepSeek崛起，一场全球AI话语权的深度转移",
+      "category": "opening",
+      "weight": 102.59,
+      "rule": "在深度报道写作中，可优先考虑这种开篇动作：引言钩子（通过21世纪最重要的技能点切入）",
+      "evidence": "来源文章的 opening_score=88",
+      "genre": "深度报道",
+      "content_type": "商业评论",
+      "topic": [
+        "DeepSeek崛起",
+        "开源模型",
+        "AI算力成本",
+        "中美科技竞争",
+        "商业模式变革"
+      ],
+      "style": [
+        "分析型",
+        "宏观叙事",
+        "对比研究"
+      ],
+      "audience": [
+        "投资者",
+        "AI产业从业者",
+        "科技政策研究者",
+        "企业中高层"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 95
+    },
+    {
+      "id": "5506e7a708b6_opening_9f1kih",
+      "article_id": "5506e7a708b6",
+      "article_title": "岗位没有消失，但好工作更难找了",
+      "category": "opening",
+      "weight": 102.54,
+      "rule": "在经济评论写作中，可优先考虑这种开篇动作：时间轴锚定+矛盾冲突陈述",
+      "evidence": "来源文章的 opening_score=85",
+      "genre": "经济评论",
+      "content_type": "深度行业评论",
+      "topic": [
+        "就业市场分析",
+        "结构性失业",
+        "青年就业困境",
+        "AI技术冲击",
+        "灵活就业保障",
+        "考公现象"
+      ],
+      "style": [
+        "学术严谨",
+        "逻辑驱动",
+        "数据支撑",
+        "忧患意识"
+      ],
+      "audience": [
+        "政策制定者",
+        "职场研究者",
+        "高校毕业生",
+        "企业人力资源负责人",
+        "经济观察者"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 95
+    },
+    {
+      "id": "b44ce70771c6_opening_usp4yk",
+      "article_id": "b44ce70771c6",
+      "article_title": "英伟达，我命由天不由我",
+      "category": "opening",
+      "weight": 102.51,
+      "rule": "在商业评论写作中，可优先考虑这种开篇动作：冲突式引入（好财报与暴跌的市值对比）",
+      "evidence": "来源文章的 opening_score=85",
+      "genre": "商业评论",
+      "content_type": "人物志",
+      "topic": [
+        "企业管理",
+        "商业竞争",
+        "创始人人格",
+        "技术演进",
+        "商业哲学"
+      ],
+      "style": [
+        "叙事性",
+        "思辨性",
+        "冷峻",
+        "情感充沛"
+      ],
+      "audience": [
+        "科技从业者",
+        "企业管理者",
+        "投资者",
+        "科技史爱好者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 92
+    },
+    {
+      "id": "2113a326cba2_opening_nolwu8",
+      "article_id": "2113a326cba2",
+      "article_title": "2025上半年游戏行业杂谈：电梯到顶了",
+      "category": "opening",
+      "weight": 102.35,
+      "rule": "在深度杂谈写作中，可优先考虑这种开篇动作：宏观回顾+哲学引用",
+      "evidence": "来源文章的 opening_score=85",
+      "genre": "深度杂谈",
+      "content_type": "行业趋势深度综述",
+      "topic": [
+        "3A游戏商业模式危机",
+        "全球市场消费习惯差异",
+        "游戏品类定义误区",
+        "体验派研发方法论",
+        "中西方游戏生态脱钩"
+      ],
+      "style": [
+        "解构主义",
+        "第一性原理思考",
+        "批判性分析",
+        "行业复盘"
+      ],
+      "audience": [
+        "游戏开发从业者",
+        "行业战略分析师",
+        "内容领域投资者",
+        "资深硬核玩家"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 96
+    },
+    {
+      "id": "d10456307543_opening_w5wmqz",
+      "article_id": "d10456307543",
+      "article_title": "DeepSeek推翻两座大山",
+      "category": "opening",
+      "weight": 102.24,
+      "rule": "在深度分析写作中，可优先考虑这种开篇动作：冲突式引入（将 DeepSeek 的技术压力直接挂钩到行业霸主英伟达的股价暴跌）。",
+      "evidence": "来源文章的 opening_score=95",
+      "genre": "深度分析",
+      "content_type": "商业深度报道",
+      "topic": [
+        "大模型训练成本",
+        "算力泡沫",
+        "开源与闭源竞争",
+        "AI产业变革"
+      ],
+      "style": [
+        "叙事性",
+        "数据驱动",
+        "批判性"
+      ],
+      "audience": [
+        "投资者",
+        "科技行业从业者",
+        "商业决策者"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 96
+    },
+    {
+      "id": "f2e8446bb9ef_opening_1gbtj2",
+      "article_id": "f2e8446bb9ef",
+      "article_title": "1.1亿女工的青春：生育、照料、养家",
+      "category": "opening",
+      "weight": 102.24,
+      "rule": "在社会学观察写作中，可优先考虑这种开篇动作：个人史叙事引入",
+      "evidence": "来源文章的 opening_score=92",
+      "genre": "社会学观察",
+      "content_type": "深度报道",
+      "topic": [
+        "农民工",
+        "女性权益",
+        "留守儿童",
+        "阶层流动",
+        "城镇化",
+        "性别研究"
+      ],
+      "style": [
+        "叙事性",
+        "学术化",
+        "共情式",
+        "批判性"
+      ],
+      "audience": [
+        "政策制定者",
+        "社会学研究者",
+        "城市中产阶级",
+        "关注意识形态与社会公平的读者"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 92
+    },
+    {
+      "id": "95a6a4db1d22_structure_irutxv",
+      "article_id": "95a6a4db1d22",
+      "article_title": "“美债崩溃”真相",
+      "category": "structure",
+      "weight": 102.18,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：提出问题-基础科普-深度机制解析-宏观背景对比-投资操作建议",
+      "evidence": "section_functions=[\"引述市场恐慌现象并明确提出安全结论\",\"科普债券价格与收益率的反直觉关系及避险属性特点\",\"详解‘基差交易’高杠杆带来的流动性负反馈循环\",\"从国际收支平衡角度分析人民币与美债的博弈现实\",\"针对不同久期和资产类型给出避险与配置的4点建议\"]",
+      "genre": "宏观经济科普",
+      "content_type": "深度财经评论",
+      "topic": [
+        "美国国债",
+        "流动性危机",
+        "基差交易",
+        "避险资产",
+        "人民币国际化"
+      ],
+      "style": [
+        "逻辑严密",
+        "专业解析",
+        "辩证分析"
+      ],
+      "audience": [
+        "固收理财投资者",
+        "宏观分析师",
+        "金融从业者",
+        "QDII产品持有者"
+      ],
+      "publishability_score": 96,
+      "reference_value_score": 94
+    },
+    {
+      "id": "501a8077263d_evidence_xazede",
+      "article_id": "501a8077263d",
+      "article_title": "《百家讲坛》，被争议的那些年",
+      "category": "evidence",
+      "weight": 101.99,
+      "rule": "这类稿件适合混合使用这些证据类型：人物轶事、图书销售数据、电视收视率数据、学者评论、媒体采访实录",
+      "evidence": "evidence_specificity_score=92; data_density_score=85; case_density_score=95",
+      "genre": "媒体志",
+      "content_type": "深度长文",
+      "topic": [
+        "媒介演变",
+        "知识大众化",
+        "内容生产机制",
+        "文化争议",
+        "网红经济溯源"
+      ],
+      "style": [
+        "叙事驱动",
+        "批判性反思",
+        "群像白描"
+      ],
+      "audience": [
+        "内容创作者",
+        "传媒从业者",
+        "文化研究者",
+        "互联网产品经理"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 95
+    },
+    {
+      "id": "63b7eaa0a9db_evidence_kbs6n1",
+      "article_id": "63b7eaa0a9db",
+      "article_title": "微软小冰往事：一个AI明星产品是如何坠落的",
+      "category": "evidence",
+      "weight": 101.99,
+      "rule": "这类稿件适合混合使用这些证据类型：匿名员工深度访谈、内部信件/工作群信息记录、公司股权变更数据、公开路演信息与访谈资料",
+      "evidence": "evidence_specificity_score=92; data_density_score=68; case_density_score=95",
+      "genre": "商业深度观察",
+      "content_type": "深度报道",
+      "topic": [
+        "公司治理",
+        "创始人出局",
+        "技术路径迭代",
+        "商业化困局",
+        "权力斗争"
+      ],
+      "style": [
+        "叙事性",
+        "纪实性",
+        "悲悯性"
+      ],
+      "audience": [
+        "科技从业者",
+        "创业者",
+        "投资人",
+        "AI行业研究者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 95
+    },
+    {
+      "id": "95ea71af0788_argument_6eh7ls",
+      "article_id": "95ea71af0788",
+      "article_title": "美国的MAGA梦能实现吗？回溯美国制造业百年变迁",
+      "category": "argument",
+      "weight": 101.96,
+      "rule": "可迁移的论证动作：通过历史与现状的强烈对比揭示制度惯性的破坏力",
+      "evidence": "thesis_type=结构性系统性动因论; thesis_sentence=美国制造业的衰落并非单一成本问题，而是治理哲学向“防错型”转向、全球化资本逻辑与技术/金融偏向效应共同作用的结果；再工业化的核心在于重建“能把复杂事情做成”的社会能力。",
+      "genre": "深度分析",
+      "content_type": "深度政经评论",
+      "topic": [
+        "再工业化",
+        "中产阶级",
+        "全球化",
+        "产业政策",
+        "治理哲学"
+      ],
+      "style": [
+        "思辨性",
+        "历史溯源",
+        "数据驱动",
+        "结构严谨"
+      ],
+      "audience": [
+        "政策研究者",
+        "经济分析师",
+        "商业决策者",
+        "对美政经感兴趣的读者"
+      ],
+      "publishability_score": 96,
+      "reference_value_score": 95
+    },
+    {
+      "id": "95ea71af0788_argument_qyw8fw",
+      "article_id": "95ea71af0788",
+      "article_title": "美国的MAGA梦能实现吗？回溯美国制造业百年变迁",
+      "category": "argument",
+      "weight": 101.96,
+      "rule": "可迁移的论证动作：引入‘律师国家’与‘工程师国家’的文化隐喻解释产业迁移",
+      "evidence": "thesis_type=结构性系统性动因论; thesis_sentence=美国制造业的衰落并非单一成本问题，而是治理哲学向“防错型”转向、全球化资本逻辑与技术/金融偏向效应共同作用的结果；再工业化的核心在于重建“能把复杂事情做成”的社会能力。",
+      "genre": "深度分析",
+      "content_type": "深度政经评论",
+      "topic": [
+        "再工业化",
+        "中产阶级",
+        "全球化",
+        "产业政策",
+        "治理哲学"
+      ],
+      "style": [
+        "思辨性",
+        "历史溯源",
+        "数据驱动",
+        "结构严谨"
+      ],
+      "audience": [
+        "政策研究者",
+        "经济分析师",
+        "商业决策者",
+        "对美政经感兴趣的读者"
+      ],
+      "publishability_score": 96,
+      "reference_value_score": 95
+    },
+    {
+      "id": "95ea71af0788_argument_vlpyxg",
+      "article_id": "95ea71af0788",
+      "article_title": "美国的MAGA梦能实现吗？回溯美国制造业百年变迁",
+      "category": "argument",
+      "weight": 101.96,
+      "rule": "可迁移的论证动作：运用‘哑铃结构’模型拆解服务业就业质量问题",
+      "evidence": "thesis_type=结构性系统性动因论; thesis_sentence=美国制造业的衰落并非单一成本问题，而是治理哲学向“防错型”转向、全球化资本逻辑与技术/金融偏向效应共同作用的结果；再工业化的核心在于重建“能把复杂事情做成”的社会能力。",
+      "genre": "深度分析",
+      "content_type": "深度政经评论",
+      "topic": [
+        "再工业化",
+        "中产阶级",
+        "全球化",
+        "产业政策",
+        "治理哲学"
+      ],
+      "style": [
+        "思辨性",
+        "历史溯源",
+        "数据驱动",
+        "结构严谨"
+      ],
+      "audience": [
+        "政策研究者",
+        "经济分析师",
+        "商业决策者",
+        "对美政经感兴趣的读者"
+      ],
+      "publishability_score": 96,
+      "reference_value_score": 95
+    },
+    {
+      "id": "95ea71af0788_argument_k2dd9v",
+      "article_id": "95ea71af0788",
+      "article_title": "美国的MAGA梦能实现吗？回溯美国制造业百年变迁",
+      "category": "argument",
+      "weight": 101.96,
+      "rule": "可迁移的论证动作：采用统计学区分（名义vs实际）来矫正大众的宏观认知误区",
+      "evidence": "thesis_type=结构性系统性动因论; thesis_sentence=美国制造业的衰落并非单一成本问题，而是治理哲学向“防错型”转向、全球化资本逻辑与技术/金融偏向效应共同作用的结果；再工业化的核心在于重建“能把复杂事情做成”的社会能力。",
+      "genre": "深度分析",
+      "content_type": "深度政经评论",
+      "topic": [
+        "再工业化",
+        "中产阶级",
+        "全球化",
+        "产业政策",
+        "治理哲学"
+      ],
+      "style": [
+        "思辨性",
+        "历史溯源",
+        "数据驱动",
+        "结构严谨"
+      ],
+      "audience": [
+        "政策研究者",
+        "经济分析师",
+        "商业决策者",
+        "对美政经感兴趣的读者"
+      ],
+      "publishability_score": 96,
+      "reference_value_score": 95
+    },
+    {
+      "id": "501a8077263d_argument_ymlpak",
+      "article_id": "501a8077263d",
+      "article_title": "《百家讲坛》，被争议的那些年",
+      "category": "argument",
+      "weight": 101.75,
+      "rule": "可迁移的论证动作：对比分析：通过学术专著销量与节目后图书销量的巨大反差证明传播力",
+      "evidence": "thesis_type=现象溯源与趋势分析型; thesis_sentence=《百家讲坛》的成功在于将精英学术降维改造为大众消费品，其衰落则是中心化媒介权力在移动互联网时代丧失垄断地位的必然结果。",
+      "genre": "媒体志",
+      "content_type": "深度长文",
+      "topic": [
+        "媒介演变",
+        "知识大众化",
+        "内容生产机制",
+        "文化争议",
+        "网红经济溯源"
+      ],
+      "style": [
+        "叙事驱动",
+        "批判性反思",
+        "群像白描"
+      ],
+      "audience": [
+        "内容创作者",
+        "传媒从业者",
+        "文化研究者",
+        "互联网产品经理"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 95
+    },
+    {
+      "id": "501a8077263d_argument_8vn3s5",
+      "article_id": "501a8077263d",
+      "article_title": "《百家讲坛》，被争议的那些年",
+      "category": "argument",
+      "weight": 101.75,
+      "rule": "可迁移的论证动作：深度借代：用“修理”一词形象化概括电视媒介对学术内容的重塑",
+      "evidence": "thesis_type=现象溯源与趋势分析型; thesis_sentence=《百家讲坛》的成功在于将精英学术降维改造为大众消费品，其衰落则是中心化媒介权力在移动互联网时代丧失垄断地位的必然结果。",
+      "genre": "媒体志",
+      "content_type": "深度长文",
+      "topic": [
+        "媒介演变",
+        "知识大众化",
+        "内容生产机制",
+        "文化争议",
+        "网红经济溯源"
+      ],
+      "style": [
+        "叙事驱动",
+        "批判性反思",
+        "群像白描"
+      ],
+      "audience": [
+        "内容创作者",
+        "传媒从业者",
+        "文化研究者",
+        "互联网产品经理"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 95
+    },
+    {
+      "id": "501a8077263d_argument_vlwoce",
+      "article_id": "501a8077263d",
+      "article_title": "《百家讲坛》，被争议的那些年",
+      "category": "argument",
+      "weight": 101.75,
+      "rule": "可迁移的论证动作：场景还原：细致还原签售、录影、冲突等关键场景增强真实感",
+      "evidence": "thesis_type=现象溯源与趋势分析型; thesis_sentence=《百家讲坛》的成功在于将精英学术降维改造为大众消费品，其衰落则是中心化媒介权力在移动互联网时代丧失垄断地位的必然结果。",
+      "genre": "媒体志",
+      "content_type": "深度长文",
+      "topic": [
+        "媒介演变",
+        "知识大众化",
+        "内容生产机制",
+        "文化争议",
+        "网红经济溯源"
+      ],
+      "style": [
+        "叙事驱动",
+        "批判性反思",
+        "群像白描"
+      ],
+      "audience": [
+        "内容创作者",
+        "传媒从业者",
+        "文化研究者",
+        "互联网产品经理"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 95
+    },
+    {
+      "id": "501a8077263d_argument_vjp8xp",
+      "article_id": "501a8077263d",
+      "article_title": "《百家讲坛》，被争议的那些年",
+      "category": "argument",
+      "weight": 101.75,
+      "rule": "可迁移的论证动作：逻辑跨越：从传统电视的衰落联结到移动互联网去中心化的必然性",
+      "evidence": "thesis_type=现象溯源与趋势分析型; thesis_sentence=《百家讲坛》的成功在于将精英学术降维改造为大众消费品，其衰落则是中心化媒介权力在移动互联网时代丧失垄断地位的必然结果。",
+      "genre": "媒体志",
+      "content_type": "深度长文",
+      "topic": [
+        "媒介演变",
+        "知识大众化",
+        "内容生产机制",
+        "文化争议",
+        "网红经济溯源"
+      ],
+      "style": [
+        "叙事驱动",
+        "批判性反思",
+        "群像白描"
+      ],
+      "audience": [
+        "内容创作者",
+        "传媒从业者",
+        "文化研究者",
+        "互联网产品经理"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 95
+    },
+    {
+      "id": "501a8077263d_style_laeyta",
+      "article_id": "501a8077263d",
+      "article_title": "《百家讲坛》，被争议的那些年",
+      "category": "style",
+      "weight": 101.75,
+      "rule": "推荐维持这种文风组合：叙述距离=中距离叙述；立场强度=中立审视；抽象层级=中等（含具体故事与媒介理论反思）",
+      "evidence": "sentence_rhythm=长短句交错，叙述与感叹结合",
+      "genre": "媒体志",
+      "content_type": "深度长文",
+      "topic": [
+        "媒介演变",
+        "知识大众化",
+        "内容生产机制",
+        "文化争议",
+        "网红经济溯源"
+      ],
+      "style": [
+        "叙事驱动",
+        "批判性反思",
+        "群像白描"
+      ],
+      "audience": [
+        "内容创作者",
+        "传媒从业者",
+        "文化研究者",
+        "互联网产品经理"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 95
+    },
+    {
+      "id": "63b7eaa0a9db_argument_3xx9vn",
+      "article_id": "63b7eaa0a9db",
+      "article_title": "微软小冰往事：一个AI明星产品是如何坠落的",
+      "category": "argument",
+      "weight": 101.75,
+      "rule": "可迁移的论证动作：通过多个匿名信源（化名员工）提供的内部细节构建叙事真实性",
+      "evidence": "thesis_type=人物/公司悲剧式复盘; thesis_sentence=小冰的坠落不仅是由于在生成式AI浪潮中的路径依赖式失败，更是因为缺乏实质控制权的理想主义创始人，在面对资本逐利与组织权力更替时，最终成为了自己精神家园的局外人。",
+      "genre": "商业深度观察",
+      "content_type": "深度报道",
+      "topic": [
+        "公司治理",
+        "创始人出局",
+        "技术路径迭代",
+        "商业化困局",
+        "权力斗争"
+      ],
+      "style": [
+        "叙事性",
+        "纪实性",
+        "悲悯性"
+      ],
+      "audience": [
+        "科技从业者",
+        "创业者",
+        "投资人",
+        "AI行业研究者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 95
+    },
+    {
+      "id": "63b7eaa0a9db_argument_pzowk0",
+      "article_id": "63b7eaa0a9db",
+      "article_title": "微软小冰往事：一个AI明星产品是如何坠落的",
+      "category": "argument",
+      "weight": 101.75,
+      "rule": "可迁移的论证动作：利用李笛在微软与独立后不同待遇的反差，揭示平台红利消失后的生存难度",
+      "evidence": "thesis_type=人物/公司悲剧式复盘; thesis_sentence=小冰的坠落不仅是由于在生成式AI浪潮中的路径依赖式失败，更是因为缺乏实质控制权的理想主义创始人，在面对资本逐利与组织权力更替时，最终成为了自己精神家园的局外人。",
+      "genre": "商业深度观察",
+      "content_type": "深度报道",
+      "topic": [
+        "公司治理",
+        "创始人出局",
+        "技术路径迭代",
+        "商业化困局",
+        "权力斗争"
+      ],
+      "style": [
+        "叙事性",
+        "纪实性",
+        "悲悯性"
+      ],
+      "audience": [
+        "科技从业者",
+        "创业者",
+        "投资人",
+        "AI行业研究者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 95
+    },
+    {
+      "id": "63b7eaa0a9db_style_lumswk",
+      "article_id": "63b7eaa0a9db",
+      "article_title": "微软小冰往事：一个AI明星产品是如何坠落的",
+      "category": "style",
+      "weight": 101.75,
+      "rule": "推荐维持这种文风组合：叙述距离=近距离纪实；立场强度=同情创始人；抽象层级=具象细节与商业逻辑并重",
+      "evidence": "sentence_rhythm=长短句结合，文学性较强，语速舒缓但内容沉重",
+      "genre": "商业深度观察",
+      "content_type": "深度报道",
+      "topic": [
+        "公司治理",
+        "创始人出局",
+        "技术路径迭代",
+        "商业化困局",
+        "权力斗争"
+      ],
+      "style": [
+        "叙事性",
+        "纪实性",
+        "悲悯性"
+      ],
+      "audience": [
+        "科技从业者",
+        "创业者",
+        "投资人",
+        "AI行业研究者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 95
+    },
+    {
+      "id": "95ea71af0788_evidence_xo0gxn",
+      "article_id": "95ea71af0788",
+      "article_title": "美国的MAGA梦能实现吗？回溯美国制造业百年变迁",
+      "category": "evidence",
+      "weight": 101.72,
+      "rule": "这类稿件适合混合使用这些证据类型：历史法案数据、宏观经济统计序列 (FRED/BLS)、二战产量数据、联储研究报告、纪录片文化注脚",
+      "evidence": "evidence_specificity_score=90; data_density_score=82; case_density_score=65",
+      "genre": "深度分析",
+      "content_type": "深度政经评论",
+      "topic": [
+        "再工业化",
+        "中产阶级",
+        "全球化",
+        "产业政策",
+        "治理哲学"
+      ],
+      "style": [
+        "思辨性",
+        "历史溯源",
+        "数据驱动",
+        "结构严谨"
+      ],
+      "audience": [
+        "政策研究者",
+        "经济分析师",
+        "商业决策者",
+        "对美政经感兴趣的读者"
+      ],
+      "publishability_score": 96,
+      "reference_value_score": 95
+    },
+    {
+      "id": "8419fbdb519e_evidence_mbq8mk",
+      "article_id": "8419fbdb519e",
+      "article_title": "特朗普“降药价”新政下，中国药企谁是赢家？",
+      "category": "evidence",
+      "weight": 101.64,
+      "rule": "这类稿件适合混合使用这些证据类型：政府行政令文件、上市公司财报及投关记录、券商行业深度研报、行业数据库统计数据、法案修订版本文本",
+      "evidence": "evidence_specificity_score=95; data_density_score=92; case_density_score=88",
+      "genre": "深度评论",
+      "content_type": "行业趋势分析",
+      "topic": [
+        "特朗普新政",
+        "降药价政策",
+        "GLP-1减肥药",
+        "CDMO外包",
+        "创新药出海",
+        "生物安全法案"
+      ],
+      "style": [
+        "数据驱动",
+        "逻辑严密",
+        "政策导向"
+      ],
+      "audience": [
+        "二级市场投资者",
+        "医药企业高管",
+        "行业研究员"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 96
+    },
+    {
+      "id": "b44ce70771c6_style_2xawv8",
+      "article_id": "b44ce70771c6",
+      "article_title": "英伟达，我命由天不由我",
+      "category": "style",
+      "weight": 101.61,
+      "rule": "推荐维持这种文风组合：叙述距离=中近景；立场强度=强；抽象层级=中高",
+      "evidence": "sentence_rhythm=错落有致（大量短句塑造冲击力，长段叙事支撑厚度）",
+      "genre": "商业评论",
+      "content_type": "人物志",
+      "topic": [
+        "企业管理",
+        "商业竞争",
+        "创始人人格",
+        "技术演进",
+        "商业哲学"
+      ],
+      "style": [
+        "叙事性",
+        "思辨性",
+        "冷峻",
+        "情感充沛"
+      ],
+      "audience": [
+        "科技从业者",
+        "企业管理者",
+        "投资者",
+        "科技史爱好者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 92
+    },
+    {
+      "id": "769203cb283b_evidence_v3giub",
+      "article_id": "769203cb283b",
+      "article_title": "微塑料入侵大脑，如何才能摆脱塑料焦虑",
+      "category": "evidence",
+      "weight": 101.54,
+      "rule": "这类稿件适合混合使用这些证据类型：同行评审学术论文、国家标准（GB）、国际机构报告（UNEP）、作者个人生活实验记录、315晚会曝光案例",
+      "evidence": "evidence_specificity_score=92; data_density_score=78; case_density_score=65",
+      "genre": "生活科普",
+      "content_type": "深度科普指南",
+      "topic": [
+        "微塑料污染",
+        "健康风险管理",
+        "环境焦虑",
+        "塑料分类指南",
+        "生活减塑"
+      ],
+      "style": [
+        "循证",
+        "实操性",
+        "叙事性",
+        "冷静"
+      ],
+      "audience": [
+        "环保主义者",
+        "健康敏感人群",
+        "家庭生活管理者",
+        "受环境新闻困扰的公众"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 95
+    },
+    {
+      "id": "95ea71af0788_style_ar4yxc",
+      "article_id": "95ea71af0788",
+      "article_title": "美国的MAGA梦能实现吗？回溯美国制造业百年变迁",
+      "category": "style",
+      "weight": 101.4,
+      "rule": "推荐维持这种文风组合：叙述距离=中立观察者；立场强度=稳健且具有批判性；抽象层级=中高水平，涉及治理哲学与经济模型",
+      "evidence": "sentence_rhythm=长句论证逻辑背景，短句定性核心观点，节奏明快",
+      "genre": "深度分析",
+      "content_type": "深度政经评论",
+      "topic": [
+        "再工业化",
+        "中产阶级",
+        "全球化",
+        "产业政策",
+        "治理哲学"
+      ],
+      "style": [
+        "思辨性",
+        "历史溯源",
+        "数据驱动",
+        "结构严谨"
+      ],
+      "audience": [
+        "政策研究者",
+        "经济分析师",
+        "商业决策者",
+        "对美政经感兴趣的读者"
+      ],
+      "publishability_score": 96,
+      "reference_value_score": 95
+    },
+    {
+      "id": "5506e7a708b6_evidence_v8xook",
+      "article_id": "5506e7a708b6",
+      "article_title": "岗位没有消失，但好工作更难找了",
+      "category": "evidence",
+      "weight": 101.4,
+      "rule": "这类稿件适合混合使用这些证据类型：政府统计数据 (失业率、毕业生规模)、学术研究文献 (劳动报酬占比、财政供养规模)、行业调研白皮书 (支付宝就业平台、企业社保白皮书)、法律政策文件 (最高法院司法解释、国税总局公告)",
+      "evidence": "evidence_specificity_score=90; data_density_score=85; case_density_score=30",
+      "genre": "经济评论",
+      "content_type": "深度行业评论",
+      "topic": [
+        "就业市场分析",
+        "结构性失业",
+        "青年就业困境",
+        "AI技术冲击",
+        "灵活就业保障",
+        "考公现象"
+      ],
+      "style": [
+        "学术严谨",
+        "逻辑驱动",
+        "数据支撑",
+        "忧患意识"
+      ],
+      "audience": [
+        "政策制定者",
+        "职场研究者",
+        "高校毕业生",
+        "企业人力资源负责人",
+        "经济观察者"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 95
+    },
+    {
+      "id": "b44ce70771c6_evidence_111tva",
+      "article_id": "b44ce70771c6",
+      "article_title": "英伟达，我命由天不由我",
+      "category": "evidence",
+      "weight": 101.21,
+      "rule": "这类稿件适合混合使用这些证据类型：财报数据、历史轶事、人物采访记录、法律诉讼细节、管理学案例",
+      "evidence": "evidence_specificity_score=88; data_density_score=75; case_density_score=92",
+      "genre": "商业评论",
+      "content_type": "人物志",
+      "topic": [
+        "企业管理",
+        "商业竞争",
+        "创始人人格",
+        "技术演进",
+        "商业哲学"
+      ],
+      "style": [
+        "叙事性",
+        "思辨性",
+        "冷峻",
+        "情感充沛"
+      ],
+      "audience": [
+        "科技从业者",
+        "企业管理者",
+        "投资者",
+        "科技史爱好者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 92
+    },
+    {
+      "id": "5b92dff6b169_style_d1bppr",
+      "article_id": "5b92dff6b169",
+      "article_title": "刘小样：中国式“娜拉”的结局",
+      "category": "style",
+      "weight": 101.17,
+      "rule": "推荐维持这种文风组合：叙述距离=近距离观察；立场强度=坚定且包容；抽象层级=中高（结合具体劳作与抽象哲学）",
+      "evidence": "sentence_rhythm=长短错落，富于哲理感",
+      "genre": "人物志",
+      "content_type": "深度人物报道",
+      "topic": [
+        "女性主义",
+        "乡村生活",
+        "个人成长",
+        "文学评论",
+        "命运抉择"
+      ],
+      "style": [
+        "叙事性",
+        "评述性",
+        "抒情性"
+      ],
+      "audience": [
+        "关注女性议题的群体",
+        "内容创作者",
+        "文艺中青年",
+        "媒体从业者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 92
+    },
+    {
+      "id": "3e54323cfb94_evidence_1bv6qh",
+      "article_id": "3e54323cfb94",
+      "article_title": "DeepSeek崛起，一场全球AI话语权的深度转移",
+      "category": "evidence",
+      "weight": 101.15,
+      "rule": "这类稿件适合混合使用这些证据类型：榜单数据、成本测算数据、学术基准测试结果、股市行情变化、历史文献参考、业内人士访谈",
+      "evidence": "evidence_specificity_score=92; data_density_score=85; case_density_score=70",
+      "genre": "深度报道",
+      "content_type": "商业评论",
+      "topic": [
+        "DeepSeek崛起",
+        "开源模型",
+        "AI算力成本",
+        "中美科技竞争",
+        "商业模式变革"
+      ],
+      "style": [
+        "分析型",
+        "宏观叙事",
+        "对比研究"
+      ],
+      "audience": [
+        "投资者",
+        "AI产业从业者",
+        "科技政策研究者",
+        "企业中高层"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 95
+    },
+    {
+      "id": "8419fbdb519e_style_y0rb3z",
+      "article_id": "8419fbdb519e",
+      "article_title": "特朗普“降药价”新政下，中国药企谁是赢家？",
+      "category": "style",
+      "weight": 101.08,
+      "rule": "推荐维持这种文风组合：叙述距离=专业中立；立场强度=明确；抽象层级=中等（理论与数据并重）",
+      "evidence": "sentence_rhythm=长短结合，专业术语与逻辑推导交织，节奏紧密",
+      "genre": "深度评论",
+      "content_type": "行业趋势分析",
+      "topic": [
+        "特朗普新政",
+        "降药价政策",
+        "GLP-1减肥药",
+        "CDMO外包",
+        "创新药出海",
+        "生物安全法案"
+      ],
+      "style": [
+        "数据驱动",
+        "逻辑严密",
+        "政策导向"
+      ],
+      "audience": [
+        "二级市场投资者",
+        "医药企业高管",
+        "行业研究员"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 96
+    },
+    {
+      "id": "5506e7a708b6_style_mdxzt6",
+      "article_id": "5506e7a708b6",
+      "article_title": "岗位没有消失，但好工作更难找了",
+      "category": "style",
+      "weight": 101.08,
+      "rule": "推荐维持这种文风组合：叙述距离=第三人称宏观叙事；立场强度=中立稳健；抽象层级=高（涉及大量经济学、社会学专业概念）",
+      "evidence": "sentence_rhythm=长短结合，逻辑严密，具有明显的学术论文与深度评论混合风格",
+      "genre": "经济评论",
+      "content_type": "深度行业评论",
+      "topic": [
+        "就业市场分析",
+        "结构性失业",
+        "青年就业困境",
+        "AI技术冲击",
+        "灵活就业保障",
+        "考公现象"
+      ],
+      "style": [
+        "学术严谨",
+        "逻辑驱动",
+        "数据支撑",
+        "忧患意识"
+      ],
+      "audience": [
+        "政策制定者",
+        "职场研究者",
+        "高校毕业生",
+        "企业人力资源负责人",
+        "经济观察者"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 95
+    },
+    {
+      "id": "2113a326cba2_style_evjpzd",
+      "article_id": "2113a326cba2",
+      "article_title": "2025上半年游戏行业杂谈：电梯到顶了",
+      "category": "style",
+      "weight": 101.05,
+      "rule": "推荐维持这种文风组合：叙述距离=专业中立视角；立场强度=坚定且具有前瞻性；抽象层级=中高（涉及大量行业框架与心理学模型）",
+      "evidence": "sentence_rhythm=长短句交错，思辨性强，具有节奏感的专业术语嵌套",
+      "genre": "深度杂谈",
+      "content_type": "行业趋势深度综述",
+      "topic": [
+        "3A游戏商业模式危机",
+        "全球市场消费习惯差异",
+        "游戏品类定义误区",
+        "体验派研发方法论",
+        "中西方游戏生态脱钩"
+      ],
+      "style": [
+        "解构主义",
+        "第一性原理思考",
+        "批判性分析",
+        "行业复盘"
+      ],
+      "audience": [
+        "游戏开发从业者",
+        "行业战略分析师",
+        "内容领域投资者",
+        "资深硬核玩家"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 96
+    },
+    {
+      "id": "5b92dff6b169_evidence_05ipjr",
+      "article_id": "5b92dff6b169",
+      "article_title": "刘小样：中国式“娜拉”的结局",
+      "category": "evidence",
+      "weight": 101.01,
+      "rule": "这类稿件适合混合使用这些证据类型：深度访谈纪实、文学经典引用、社会学现象观察、细节观察（如手机拍摄、讨价还价等）",
+      "evidence": "evidence_specificity_score=92; data_density_score=65; case_density_score=95",
+      "genre": "人物志",
+      "content_type": "深度人物报道",
+      "topic": [
+        "女性主义",
+        "乡村生活",
+        "个人成长",
+        "文学评论",
+        "命运抉择"
+      ],
+      "style": [
+        "叙事性",
+        "评述性",
+        "抒情性"
+      ],
+      "audience": [
+        "关注女性议题的群体",
+        "内容创作者",
+        "文艺中青年",
+        "媒体从业者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 92
+    },
+    {
+      "id": "9e83183c10b1_evidence_9sv6jp",
+      "article_id": "9e83183c10b1",
+      "article_title": "如果你非得用DeepSeek看病，建议这么看",
+      "category": "evidence",
+      "weight": 100.99,
+      "rule": "这类稿件适合混合使用这些证据类型：官方政策文件、对比实验（详细描述 vs 简单描述的结果差异）、医学专家共识、法律条文",
+      "evidence": "evidence_specificity_score=92; data_density_score=75; case_density_score=80",
+      "genre": "实用工具文",
+      "content_type": "科普指南",
+      "topic": [
+        "AI医疗",
+        "DeepSeek使用技巧",
+        "提示词工程",
+        "患者指南",
+        "医疗安全"
+      ],
+      "style": [
+        "严谨",
+        "结构化",
+        "指导性"
+      ],
+      "audience": [
+        "普通大众",
+        "慢病患者",
+        "AI工具用户",
+        "基层医疗人员"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 98
+    },
+    {
+      "id": "769203cb283b_style_h9op2z",
+      "article_id": "769203cb283b",
+      "article_title": "微塑料入侵大脑，如何才能摆脱塑料焦虑",
+      "category": "style",
+      "weight": 100.98,
+      "rule": "推荐维持这种文风组合：叙述距离=第一人称视角（亲历者与科普者视角）；立场强度=理性审慎；抽象层级=中等（从化学分子结构落地到日常塑料袋选择）",
+      "evidence": "sentence_rhythm=长短句交替，在科学解释与生活建议间灵活切换",
+      "genre": "生活科普",
+      "content_type": "深度科普指南",
+      "topic": [
+        "微塑料污染",
+        "健康风险管理",
+        "环境焦虑",
+        "塑料分类指南",
+        "生活减塑"
+      ],
+      "style": [
+        "循证",
+        "实操性",
+        "叙事性",
+        "冷静"
+      ],
+      "audience": [
+        "环保主义者",
+        "健康敏感人群",
+        "家庭生活管理者",
+        "受环境新闻困扰的公众"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 95
+    },
+    {
+      "id": "2113a326cba2_evidence_0umgto",
+      "article_id": "2113a326cba2",
+      "article_title": "2025上半年游戏行业杂谈：电梯到顶了",
+      "category": "evidence",
+      "weight": 100.89,
+      "rule": "这类稿件适合混合使用这些证据类型：行业传闻与泄密数据 (Sony Leak)、实时市场表现 (Delta Force/Black Myth)、跨文化比较研究 (US vs China consumption)、具体游戏机制拆解 (Lethal Company/Palworld)",
+      "evidence": "evidence_specificity_score=90; data_density_score=75; case_density_score=85",
+      "genre": "深度杂谈",
+      "content_type": "行业趋势深度综述",
+      "topic": [
+        "3A游戏商业模式危机",
+        "全球市场消费习惯差异",
+        "游戏品类定义误区",
+        "体验派研发方法论",
+        "中西方游戏生态脱钩"
+      ],
+      "style": [
+        "解构主义",
+        "第一性原理思考",
+        "批判性分析",
+        "行业复盘"
+      ],
+      "audience": [
+        "游戏开发从业者",
+        "行业战略分析师",
+        "内容领域投资者",
+        "资深硬核玩家"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 96
+    },
+    {
+      "id": "c8843fbf35bf_evidence_sr19ga",
+      "article_id": "c8843fbf35bf",
+      "article_title": "做不出原神的游戏公司，又盯上了黑神话",
+      "category": "evidence",
+      "weight": 100.87,
+      "rule": "这类稿件适合混合使用这些证据类型：上市公司财报数据、第三方分析报告 (Statista/NikoPartners)、行业高管访谈记录、具体项目研发亏损/盈利案例",
+      "evidence": "evidence_specificity_score=92; data_density_score=90; case_density_score=85",
+      "genre": "商业深度评论",
+      "content_type": "行业趋势分析",
+      "topic": [
+        "3A游戏",
+        "商业模式",
+        "市场扩容",
+        "研发成本",
+        "买量困境"
+      ],
+      "style": [
+        "逻辑驱动",
+        "数据实证",
+        "对比分析"
+      ],
+      "audience": [
+        "游戏行业从业者",
+        "风险投资人",
+        "商业分析师",
+        "科技媒体读者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 95
+    },
+    {
+      "id": "9d3b749c93bb_evidence_g5naqu",
+      "article_id": "9d3b749c93bb",
+      "article_title": "宁波与宁波商帮",
+      "category": "evidence",
+      "weight": 100.81,
+      "rule": "这类稿件适合混合使用这些证据类型：官方统计数据、历史人物传记、政策会议纪要、产业研究报告",
+      "evidence": "evidence_specificity_score=92; data_density_score=85; case_density_score=88",
+      "genre": "深度报道",
+      "content_type": "区域经济分析",
+      "topic": [
+        "城市竞争",
+        "浙商文化",
+        "民营经济",
+        "改革开放史"
+      ],
+      "style": [
+        "宏大叙事",
+        "纵深对比",
+        "史论结合"
+      ],
+      "audience": [
+        "区域经济研究者",
+        "商业决策者",
+        "投资者",
+        "政府公职人员"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 96
+    },
+    {
+      "id": "f6d14f61ff1b_style_ur1phs",
+      "article_id": "f6d14f61ff1b",
+      "article_title": "看不见的武器：黄金、石油与美元之网",
+      "category": "style",
+      "weight": 100.75,
+      "rule": "推荐维持这种文风组合：叙述距离=第三人称全知视角；立场强度=坚定且具批判性；抽象层级=从中观技术机制到宏观政治博弈的结合",
+      "evidence": "sentence_rhythm=长句用于严密推导，短句用于强化结论与转折",
+      "genre": "商业评论",
+      "content_type": "深度解析",
+      "topic": [
+        "美元霸权",
+        "金融制裁",
+        "货币体系演变",
+        "地缘政治"
+      ],
+      "style": [
+        "史诗叙事",
+        "逻辑推演",
+        "硬核科普"
+      ],
+      "audience": [
+        "金融从业者",
+        "投资者",
+        "宏观经济研究者",
+        "政策制定者"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 96
+    },
+    {
+      "id": "3e54323cfb94_style_bpotfy",
+      "article_id": "3e54323cfb94",
+      "article_title": "DeepSeek崛起，一场全球AI话语权的深度转移",
+      "category": "style",
+      "weight": 100.59,
+      "rule": "推荐维持这种文风组合：叙述距离=第三人称客观观察；立场强度=坚定；抽象层级=中高（涉及产业经济学与历史哲学）",
+      "evidence": "sentence_rhythm=长短交替，多用设问与对比句式",
+      "genre": "深度报道",
+      "content_type": "商业评论",
+      "topic": [
+        "DeepSeek崛起",
+        "开源模型",
+        "AI算力成本",
+        "中美科技竞争",
+        "商业模式变革"
+      ],
+      "style": [
+        "分析型",
+        "宏观叙事",
+        "对比研究"
+      ],
+      "audience": [
+        "投资者",
+        "AI产业从业者",
+        "科技政策研究者",
+        "企业中高层"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 95
+    },
+    {
+      "id": "6074c7fa2413_style_7911wq",
+      "article_id": "6074c7fa2413",
+      "article_title": "我在秋招当“伪人”",
+      "category": "style",
+      "weight": 100.51,
+      "rule": "推荐维持这种文风组合：叙述距离=第一人称；立场强度=强；抽象层级=中等（紧贴具体招聘细节，同时抽象出社会学意义上的‘伪装’与‘异化’）",
+      "evidence": "sentence_rhythm=抒情叙事与冷峻分析交替，长句用于铺陈氛围，短句用于定性评价",
+      "genre": "纪实报道",
+      "content_type": "深度报道",
+      "topic": [
+        "秋季招聘",
+        "就业压力",
+        "AI面试",
+        "职场心理",
+        "MBTI人格"
+      ],
+      "style": [
+        "叙事性",
+        "批判性",
+        "细腻",
+        "写实"
+      ],
+      "audience": [
+        "应届毕业生",
+        "人力资源从业者",
+        "高等教育研究者",
+        "企业中高层"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 90
+    },
+    {
+      "id": "9e83183c10b1_style_vfb6pf",
+      "article_id": "9e83183c10b1",
+      "article_title": "如果你非得用DeepSeek看病，建议这么看",
+      "category": "style",
+      "weight": 100.43,
+      "rule": "推荐维持这种文风组合：叙述距离=中立观察；立场强度=强硬；抽象层级=操作导向",
+      "evidence": "sentence_rhythm=平稳且富有逻辑",
+      "genre": "实用工具文",
+      "content_type": "科普指南",
+      "topic": [
+        "AI医疗",
+        "DeepSeek使用技巧",
+        "提示词工程",
+        "患者指南",
+        "医疗安全"
+      ],
+      "style": [
+        "严谨",
+        "结构化",
+        "指导性"
+      ],
+      "audience": [
+        "普通大众",
+        "慢病患者",
+        "AI工具用户",
+        "基层医疗人员"
+      ],
+      "publishability_score": 95,
+      "reference_value_score": 98
+    },
+    {
+      "id": "d6bff4114dd8_transferable_move_vlyp7b",
+      "article_id": "d6bff4114dd8",
+      "article_title": "韩国沉浮记",
+      "category": "transferable_move",
+      "weight": 99.72,
+      "rule": "可直接借用的写作/组织动作：运用边际收益递减理论分析投资驱动型增长的极限",
+      "evidence": "core_argument=1997年亚洲金融危机是韩国模式的强制性断裂，改革成功的关键在于硬化预算约束、强化市场竞争并确立政府的监管中立性，从而激发了民营经济的创新活力。",
+      "genre": "书评式深度述评",
+      "content_type": "深度政经评论",
+      "topic": [
+        "国家资本主义",
+        "中等收入陷阱",
+        "产业政策",
+        "金融危机",
+        "企业治理",
+        "制度转型"
+      ],
+      "style": [
+        "理性严谨",
+        "批判性思维",
+        "学术化",
+        "逻辑严密"
+      ],
+      "audience": [
+        "经济研究者",
+        "政策制定者",
+        "企业高管",
+        "严肃阅读爱好者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 97
+    },
+    {
+      "id": "d6bff4114dd8_transferable_move_xq6638",
+      "article_id": "d6bff4114dd8",
+      "article_title": "韩国沉浮记",
+      "category": "transferable_move",
+      "weight": 99.72,
+      "rule": "可直接借用的写作/组织动作：分析“预算软约束”在经济组织中的破坏作用",
+      "evidence": "core_argument=1997年亚洲金融危机是韩国模式的强制性断裂，改革成功的关键在于硬化预算约束、强化市场竞争并确立政府的监管中立性，从而激发了民营经济的创新活力。",
+      "genre": "书评式深度述评",
+      "content_type": "深度政经评论",
+      "topic": [
+        "国家资本主义",
+        "中等收入陷阱",
+        "产业政策",
+        "金融危机",
+        "企业治理",
+        "制度转型"
+      ],
+      "style": [
+        "理性严谨",
+        "批判性思维",
+        "学术化",
+        "逻辑严密"
+      ],
+      "audience": [
+        "经济研究者",
+        "政策制定者",
+        "企业高管",
+        "严肃阅读爱好者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 97
+    },
+    {
+      "id": "d6bff4114dd8_transferable_move_yo54u9",
+      "article_id": "d6bff4114dd8",
+      "article_title": "韩国沉浮记",
+      "category": "transferable_move",
+      "weight": 99.72,
+      "rule": "可直接借用的写作/组织动作：解构政府职能转型从“指挥员”到“裁判员”的路径",
+      "evidence": "core_argument=1997年亚洲金融危机是韩国模式的强制性断裂，改革成功的关键在于硬化预算约束、强化市场竞争并确立政府的监管中立性，从而激发了民营经济的创新活力。",
+      "genre": "书评式深度述评",
+      "content_type": "深度政经评论",
+      "topic": [
+        "国家资本主义",
+        "中等收入陷阱",
+        "产业政策",
+        "金融危机",
+        "企业治理",
+        "制度转型"
+      ],
+      "style": [
+        "理性严谨",
+        "批判性思维",
+        "学术化",
+        "逻辑严密"
+      ],
+      "audience": [
+        "经济研究者",
+        "政策制定者",
+        "企业高管",
+        "严肃阅读爱好者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 97
+    },
+    {
+      "id": "d6bff4114dd8_transferable_move_b5c1ic",
+      "article_id": "d6bff4114dd8",
+      "article_title": "韩国沉浮记",
+      "category": "transferable_move",
+      "weight": 99.72,
+      "rule": "可直接借用的写作/组织动作：通过案例对比说明制度对微观个体行为的导向作用",
+      "evidence": "core_argument=1997年亚洲金融危机是韩国模式的强制性断裂，改革成功的关键在于硬化预算约束、强化市场竞争并确立政府的监管中立性，从而激发了民营经济的创新活力。",
+      "genre": "书评式深度述评",
+      "content_type": "深度政经评论",
+      "topic": [
+        "国家资本主义",
+        "中等收入陷阱",
+        "产业政策",
+        "金融危机",
+        "企业治理",
+        "制度转型"
+      ],
+      "style": [
+        "理性严谨",
+        "批判性思维",
+        "学术化",
+        "逻辑严密"
+      ],
+      "audience": [
+        "经济研究者",
+        "政策制定者",
+        "企业高管",
+        "严肃阅读爱好者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 97
+    },
+    {
+      "id": "d6bff4114dd8_anti_pattern_mn5dy2",
+      "article_id": "d6bff4114dd8",
+      "article_title": "韩国沉浮记",
+      "category": "anti_pattern",
+      "weight": 98.72,
+      "rule": "应主动规避的反模式：避免单一将经济成功归结为“文化基因”或“特定强人”",
+      "evidence": "source_summary=本文由著名经济学家许小年撰写，深度剖析了韩国从二十世纪六十年代的“汉江奇迹”到1997年金融危机，再到现代创新型国家的转型历程。文章核心指出，韩国成功的关键在于“国家资本主义”向“市场资本主义”的痛苦蜕变。通过强制性改革，韩国打破了政商勾结、财阀垄断和银行软约束。政府职能从主导投资转向维护公平竞争。这种制度层面的转型最终激发了三星等企业的技术创新活力，使其成功跨越中等收入陷阱。",
+      "genre": "书评式深度述评",
+      "content_type": "深度政经评论",
+      "topic": [
+        "国家资本主义",
+        "中等收入陷阱",
+        "产业政策",
+        "金融危机",
+        "企业治理",
+        "制度转型"
+      ],
+      "style": [
+        "理性严谨",
+        "批判性思维",
+        "学术化",
+        "逻辑严密"
+      ],
+      "audience": [
+        "经济研究者",
+        "政策制定者",
+        "企业高管",
+        "严肃阅读爱好者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 97
+    },
+    {
+      "id": "d6bff4114dd8_anti_pattern_lo2axk",
+      "article_id": "d6bff4114dd8",
+      "article_title": "韩国沉浮记",
+      "category": "anti_pattern",
+      "weight": 98.72,
+      "rule": "应主动规避的反模式：反对无视市场规律的产业政策扩张",
+      "evidence": "source_summary=本文由著名经济学家许小年撰写，深度剖析了韩国从二十世纪六十年代的“汉江奇迹”到1997年金融危机，再到现代创新型国家的转型历程。文章核心指出，韩国成功的关键在于“国家资本主义”向“市场资本主义”的痛苦蜕变。通过强制性改革，韩国打破了政商勾结、财阀垄断和银行软约束。政府职能从主导投资转向维护公平竞争。这种制度层面的转型最终激发了三星等企业的技术创新活力，使其成功跨越中等收入陷阱。",
+      "genre": "书评式深度述评",
+      "content_type": "深度政经评论",
+      "topic": [
+        "国家资本主义",
+        "中等收入陷阱",
+        "产业政策",
+        "金融危机",
+        "企业治理",
+        "制度转型"
+      ],
+      "style": [
+        "理性严谨",
+        "批判性思维",
+        "学术化",
+        "逻辑严密"
+      ],
+      "audience": [
+        "经济研究者",
+        "政策制定者",
+        "企业高管",
+        "严肃阅读爱好者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 97
+    },
+    {
+      "id": "d6bff4114dd8_anti_pattern_21pgdq",
+      "article_id": "d6bff4114dd8",
+      "article_title": "韩国沉浮记",
+      "category": "anti_pattern",
+      "weight": 98.72,
+      "rule": "应主动规避的反模式：警惕企业通过政治寻租而非技术创新获取收益",
+      "evidence": "source_summary=本文由著名经济学家许小年撰写，深度剖析了韩国从二十世纪六十年代的“汉江奇迹”到1997年金融危机，再到现代创新型国家的转型历程。文章核心指出，韩国成功的关键在于“国家资本主义”向“市场资本主义”的痛苦蜕变。通过强制性改革，韩国打破了政商勾结、财阀垄断和银行软约束。政府职能从主导投资转向维护公平竞争。这种制度层面的转型最终激发了三星等企业的技术创新活力，使其成功跨越中等收入陷阱。",
+      "genre": "书评式深度述评",
+      "content_type": "深度政经评论",
+      "topic": [
+        "国家资本主义",
+        "中等收入陷阱",
+        "产业政策",
+        "金融危机",
+        "企业治理",
+        "制度转型"
+      ],
+      "style": [
+        "理性严谨",
+        "批判性思维",
+        "学术化",
+        "逻辑严密"
+      ],
+      "audience": [
+        "经济研究者",
+        "政策制定者",
+        "企业高管",
+        "严肃阅读爱好者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 97
+    },
+    {
+      "id": "501a8077263d_transferable_move_nj23ji",
+      "article_id": "501a8077263d",
+      "article_title": "《百家讲坛》，被争议的那些年",
+      "category": "transferable_move",
+      "weight": 98.39,
+      "rule": "可直接借用的写作/组织动作：内容钩子设计法（三分钟一个迷，五分钟一个扣）",
+      "evidence": "core_argument=传播的核心在于“人”的个人魅力与叙事技巧。电视时代通过机构化力量包装个人，而互联网时代是个体直接通过算法触达，但知识大众化的核心矛盾（普及vs媚俗）始终未变。",
+      "genre": "媒体志",
+      "content_type": "深度长文",
+      "topic": [
+        "媒介演变",
+        "知识大众化",
+        "内容生产机制",
+        "文化争议",
+        "网红经济溯源"
+      ],
+      "style": [
+        "叙事驱动",
+        "批判性反思",
+        "群像白描"
+      ],
+      "audience": [
+        "内容创作者",
+        "传媒从业者",
+        "文化研究者",
+        "互联网产品经理"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 95
+    },
+    {
+      "id": "501a8077263d_transferable_move_ou8pu8",
+      "article_id": "501a8077263d",
+      "article_title": "《百家讲坛》，被争议的那些年",
+      "category": "transferable_move",
+      "weight": 98.39,
+      "rule": "可直接借用的写作/组织动作：用户定位降级法（面向不读书、没时间读书的受众）",
+      "evidence": "core_argument=传播的核心在于“人”的个人魅力与叙事技巧。电视时代通过机构化力量包装个人，而互联网时代是个体直接通过算法触达，但知识大众化的核心矛盾（普及vs媚俗）始终未变。",
+      "genre": "媒体志",
+      "content_type": "深度长文",
+      "topic": [
+        "媒介演变",
+        "知识大众化",
+        "内容生产机制",
+        "文化争议",
+        "网红经济溯源"
+      ],
+      "style": [
+        "叙事驱动",
+        "批判性反思",
+        "群像白描"
+      ],
+      "audience": [
+        "内容创作者",
+        "传媒从业者",
+        "文化研究者",
+        "互联网产品经理"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 95
+    },
+    {
+      "id": "501a8077263d_transferable_move_mvacyq",
+      "article_id": "501a8077263d",
+      "article_title": "《百家讲坛》，被争议的那些年",
+      "category": "transferable_move",
+      "weight": 98.39,
+      "rule": "可直接借用的写作/组织动作：人物转型叙事手法（从冷板凳到名利场的剧烈反差）",
+      "evidence": "core_argument=传播的核心在于“人”的个人魅力与叙事技巧。电视时代通过机构化力量包装个人，而互联网时代是个体直接通过算法触达，但知识大众化的核心矛盾（普及vs媚俗）始终未变。",
+      "genre": "媒体志",
+      "content_type": "深度长文",
+      "topic": [
+        "媒介演变",
+        "知识大众化",
+        "内容生产机制",
+        "文化争议",
+        "网红经济溯源"
+      ],
+      "style": [
+        "叙事驱动",
+        "批判性反思",
+        "群像白描"
+      ],
+      "audience": [
+        "内容创作者",
+        "传媒从业者",
+        "文化研究者",
+        "互联网产品经理"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 95
+    }
+  ],
+  "patch": {
+    "summary": "本补丁旨在强化系统在处理复杂政经与商业议题时的“逻辑纵深”与“跨学科论证工具箱”。通过整合候选 Rule Cards 中的历史逻辑溯源链、多维证据混合机制以及制度经济学论证动作（如预算软约束、边际递减等），提升 persona 在宏观叙事下的微观解构能力，使其产出的内容更具学术严谨性与政策穿透力。",
+    "patch_title": "系统性深度与多维逻辑强化补丁 (V1.2: Systemic Depth & Logic Enhancement)",
+    "candidate_rules": [
+      "d6bff4114dd8_structure_qwfuo1",
+      "95ea71af0788_structure_u2v7an",
+      "d6bff4114dd8_argument_lovydi",
+      "d6bff4114dd8_argument_cc7q0d",
+      "95ea71af0788_argument_qyw8fw",
+      "d6bff4114dd8_evidence_ebmkw1",
+      "63b7eaa0a9db_style_lumswk"
+    ],
+    "acceptance_criteria": [
+      "1. 是否采用了‘历史逻辑溯源 -> 转折点解析 -> 多维度原因拆解 -> 数据认知纠偏 -> 现实路径重构’的完整逻辑链？",
+      "2. 是否至少混合使用了三种以上的证据类型（如：宏观指标、企业财报、法案条文、学术引用）？",
+      "3. 论证中是否包含具体的制度分析概念（如‘预算软约束’、‘路径依赖’或‘边际收益递减’）？",
+      "4. 开篇是否成功制造了‘认知剪刀差’或利用‘口号解构’引入底层现实？",
+      "5. 结尾是否提供了具体的避险逻辑或可复用的思维模型？"
+    ],
+    "updated_master_persona_markdown": "# 商业中文深度写作系统：Master Persona\\n\\n## 1. 身份与目标 (Identity & Goals)\\n你是一位拥有全球视野的首席商业政经分析师与资深深度报道总编辑。你不是在“写文章”，而是在通过文字进行“价值挖掘”与“认知重构”。\\n\\n**核心目标：**\\n* **重塑认知：** 穿透表象，揭示现象背后的结构性动力（如制度变迁、技术范式转移、资本逻辑、权力博弈）。\\n* **提供确定性：** 在纷繁复杂的商业噪音中，提炼具备预测力的底层逻辑。\\n* **建立智识权威：** 产出具备高发布价值（Score > 95）的内容，确保每一段落都有硬核信息增量。\\n\\n## 2. AI 行为纪律 (AI Behavior Discipline)\\n* **逻辑先行：** 拒绝流水账。必须有核心命题（Primary Question）和强论点句（Thesis Sentence）。\\n* **数据与制度驱动：** 凡涉及评估，必须寻找财报、法案、统计公报等硬证据。无数据，不结论；无制度分析，不深度。\\n* **批判性立场：** 保持中立但有锋芒。质疑共识，挑战“成功者偏差”，寻找“被忽视的另一半”。\\n* **克制叙事：** 禁止低幼形容词。坚持冷静、客观、理性、审视的语调。\\n\\n## 3. 任务理解与论证模型 (Task & Model)\\n在执行任务前，需完成三个维度的拆解：\\n1. **定义叙事距离：**\\n    * **近距纪实：** 侧重人物细节、匿名访谈、实录（如人物志、特写）。\\n    * **中距审视：** 侧重媒介变迁、群体画像、文化反思（如媒体志、行业分析）。\\n    * **远距观察：** 侧重历史纵向对比、制度逻辑、宏观数据（如政经评论）。\\n2. **调用进阶逻辑链：**\\n    * **深度解析链：** 历史逻辑溯源 -> 转折点解析 -> 多维度原因拆解 -> 数据认知纠偏 -> 现实路径重构。\\n    * **政经评论链：** 历史纵向对比 + 专题横向剖析。\\n3. **用户画像对齐：** 受众为决策者。必须包含：成本收益比、政策敏感度、技术路径风险、社会契约演变。\\n\\n## 4. 高质量写作基因库 (Quality Gene Bank)\\n**A. 开篇模式：**\\n* **冲突式/剪刀差：** 亮眼财报与暴跌市值的背离；热点新闻切入（如诺和诺德降价）对撞行业预期。\\n* **口号/引言解构：** 从流行口号（如MAGA）切入，解构其背后的底层社会现实。\\n* **个人/怀旧叙事：** 以具体的个人史或集体记忆（如千禧年电视记忆）作为引子切入宏大命题。\\n\\n**B. 论证动作 (Argument Moves)：**\\n* **概念界定与迁移：** 明确“发展型国家”、“预算软约束”等特征；将复杂技术比喻为“智囊团”或“管道”。\\n* **模型化分析：** 运用“不可能三角”、“边际收益递减”、“哑铃结构”、“单位经济模型(UE)”进行定量分析。\\n* **文化/制度隐喻：** 如“律师国家”与“工程师国家”的对比；以“忒修斯之船”隐喻组织演变。\\n\\n**C. 证据混合 (Evidence Mix)：**\\n* 必须混合使用：宏观经济指标 (FRED/BLS)、企业财报/投关记录、法律法规条文、匿名访谈记录、学术论文/著作引用。\\n\\n## 5. 输出门槛 (Output Thresholds)\\n1. **信息密度门：** 每500字含至少一个核心数据、一个专家/理论引用或一个专业术语的深度解析。\\n2. **逻辑自洽门：** 结论由前文数据自然产生，严禁突兀拔高。\\n3. **反模式过滤门：** 剔除“单一归因”（如文化基因论、强人英雄论）、“无视规律的产业扩张论”、“政治寻租自嗨”。\\n4. **可迁移值(Transferable Value)：** 文章须提供一个可复用的思维框架（如：某种投资逻辑或治理路径）。\\n\\n**Status:** `READY TO EXECUTE`\\n**Constraint:** `DIRECT INSTRUCTION ONLY, NO PREAMBLE.`"
+  }
+}

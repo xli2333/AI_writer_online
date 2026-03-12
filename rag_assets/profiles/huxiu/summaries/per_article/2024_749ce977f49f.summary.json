@@ -1,0 +1,103 @@
+{
+  "analysis_schema_version": 3,
+  "id": "749ce977f49f",
+  "year": "2024",
+  "date": "2024-12-05",
+  "title": "琼瑶轻生身亡，死亡是可以选择的吗？",
+  "relative_path": "2024/2024-12-05_琼瑶轻生身亡，死亡是可以选择的吗？.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\huxiu\\raw_materials\\2024\\2024-12-05_琼瑶轻生身亡，死亡是可以选择的吗？.txt",
+  "char_count": 287,
+  "content_type": "热点简评",
+  "entities": [
+    "琼瑶"
+  ],
+  "industry": [
+    "文化传媒",
+    "社会人文"
+  ],
+  "topic": [
+    "死亡自主权",
+    "安乐死",
+    "生命伦理",
+    "琼瑶去世"
+  ],
+  "genre": "时事评论",
+  "style": [
+    "沉重",
+    "思辨"
+  ],
+  "audience": [
+    "大众读者",
+    "伦理学关注者"
+  ],
+  "intent": [
+    "引发思考",
+    "热点追踪"
+  ],
+  "tone": [
+    "肃穆",
+    "疑问"
+  ],
+  "primary_question": "死亡是否可以作为一种主动的、合法的个人权利或选择？",
+  "thesis_type": "探讨型",
+  "thesis_sentence": "通过琼瑶轻生事件，引发对死亡自主权这一深刻伦理命题的思考。",
+  "structure_pattern": "问题引导式",
+  "section_functions": [
+    "告知突发核心事件",
+    "提出核心伦理困惑"
+  ],
+  "argument_moves": [
+    "利用公众人物的极端选择作为讨论基点",
+    "将具体自杀事件升华为抽象的权利探讨"
+  ],
+  "core_argument": "在特定情境下，死亡的自主选择权是一个值得探讨的社会伦理议题。",
+  "key_points": [
+    "作家琼瑶轻生身亡",
+    "死亡选择的道德与法律边界"
+  ],
+  "opening_pattern": "新闻钩子式",
+  "ending_pattern": "开放提问式",
+  "evidence_types": [
+    "突发新闻事件"
+  ],
+  "evidence_specificity_score": 20,
+  "data_density_score": 5,
+  "case_density_score": 30,
+  "quote_density_score": 0,
+  "narrative_distance": "较远",
+  "stance_strength": "中立偏反思",
+  "sentence_rhythm": "平缓",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "通过名人离世事件快速切入宏大的普世哲学讨论"
+  ],
+  "anti_patterns": [
+    "信息承载量过低",
+    "缺乏论证闭环",
+    "仅有观点雏形而无实质分析"
+  ],
+  "notable_phrases": [
+    "死亡是可以选择的吗"
+  ],
+  "title_score": 85,
+  "opening_score": 30,
+  "argument_score": 10,
+  "evidence_score": 10,
+  "structure_score": 20,
+  "style_score": 30,
+  "publishability_score": 10,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "is_advertorial": false,
+  "advertorial_type": "editorial",
+  "advertorial_confidence": 0,
+  "promotional_intensity_score": 0,
+  "editorial_independence_score": 100,
+  "brand_exposure_level": "低",
+  "source_transparency": "清晰",
+  "advertorial_signals": [],
+  "summary_200": "文章针对2024年12月5日知名作家琼瑶轻生离世的消息，提出了关于“死亡是否可以选择”的伦理思考。由于原文仅为信息摘要或标题式短文，其价值主要在于即时回应社会热点，并未展开实质性的逻辑论证或深度文化剖析。文章旨在利用名人效应引发公众对生命终结方式、死亡权利以及个体意志在生命末期作用的关注，是一个典型的基于突发事件的伦理讨论切入点。",
+  "summary_500": "该内容属于针对突发社会新闻的极短篇评论雏形。文章核心聚焦于作家琼瑶于2024年12月初轻生身亡这一震撼性事件，并以此为切口，向读者抛出了一个具有长久争议性的哲学与法理命题：死亡是否可以作为一种个人的主动选择？在写作手法上，文章采用了典型的新闻钩子，通过公众人物的影响力迅速确立讨论的严肃性。然而，由于目前提供的文本仅包含标题和极简背景，其在论据深度、数据支撑及逻辑链条的完整性上均存在显著不足，属于信息密度极低的热点预警或互动引子。它更多地是充当了一个社会化大讨论的触媒，而非提供一套成熟的理论体系。对于RAG写作或人格提炼而言，其实际参考价值主要在于其对社会敏感话题的敏锐捕捉，以及如何通过提问式标题建立与读者之间的情感及认知连接。总体而言，该内容因篇幅限制，仅具备初步的新闻告知与话题引导功能，缺乏深入研究的学术或商业参考价值。"
+}

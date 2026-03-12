@@ -1,0 +1,94 @@
+{
+  "analysis_schema_version": 3,
+  "id": "f2aeb236ec33",
+  "year": "2024",
+  "date": "2024-12-12",
+  "title": "作业熔断制，能缓解学生压力吗？",
+  "relative_path": "2024/2024-12-12_作业熔断制，能缓解学生压力吗？.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\huxiu\\raw_materials\\2024\\2024-12-12_作业熔断制，能缓解学生压力吗？.txt",
+  "char_count": 285,
+  "content_type": "文章索引",
+  "entities": [],
+  "industry": [
+    "教育"
+  ],
+  "topic": [
+    "作业熔断制",
+    "学生减负"
+  ],
+  "genre": "信息摘要",
+  "style": [
+    "极简"
+  ],
+  "audience": [
+    "家长",
+    "教育工作者",
+    "政策研究者"
+  ],
+  "intent": [
+    "话题引导"
+  ],
+  "tone": [
+    "中立"
+  ],
+  "primary_question": "作业熔断制能缓解学生压力吗？",
+  "thesis_type": "问题导向型",
+  "thesis_sentence": "探讨作业熔断制在缓解学生学业压力方面的有效性及其实施机制。",
+  "structure_pattern": "正文缺失",
+  "section_functions": [
+    "仅包含标题功能"
+  ],
+  "argument_moves": [
+    "提出核心社会问题"
+  ],
+  "core_argument": "因正文内容缺失，无法提取核心论点。",
+  "key_points": [
+    "作业熔断制政策探讨",
+    "学生心理压力缓解"
+  ],
+  "opening_pattern": "直接问句式",
+  "ending_pattern": "无",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 0,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "远",
+  "stance_strength": "弱",
+  "sentence_rhythm": "单一",
+  "abstraction_level": "中等",
+  "transferable_moves": [
+    "利用社会热点政策作为切入点",
+    "采用疑问句标题引发读者思考"
+  ],
+  "anti_patterns": [
+    "信息缺失",
+    "正文未提供内容"
+  ],
+  "notable_phrases": [
+    "作业熔断制"
+  ],
+  "title_score": 72,
+  "opening_score": 0,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 0,
+  "style_score": 10,
+  "publishability_score": 5,
+  "quality_score": 5,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "is_advertorial": false,
+  "advertorial_type": "editorial",
+  "advertorial_confidence": 0,
+  "promotional_intensity_score": 0,
+  "editorial_independence_score": 100,
+  "brand_exposure_level": "低",
+  "source_transparency": "清晰",
+  "advertorial_signals": [],
+  "summary_200": "该输入仅包含一篇微信公众号文章的标题《作业熔断制，能缓解学生压力吗？》及相关的链接和日期元数据。由于正文内容缺失，无法进行具体的结构化写作分析。文章关注的是教育领域的热点政策‘作业熔断制’，旨在探讨其缓解学生压力的效果。由于缺乏实质性文本，判定为极低价值的信息输入。",
+  "summary_500": "本次提供的文本仅为一篇微信公众号文章的元数据，包括标题、发布日期及原始链接。文章标题《作业熔断制，能缓解学生压力吗？》反映了当前教育领域内关于‘作业熔断’这一减轻学生负担政策的社会讨论。由于输入中完全缺失了文章正文，本分析无法对论证逻辑、证据类型、段落功能以及写作技巧进行详细拆解。该文档在当前形式下仅起到一个话题索引的作用，缺乏阅读和学习的实质性内容。在写作机制评估中，除了标题展现了较好的话题切入感和提问技巧外，其他各项评分均因内容缺失而设为最低。建议在分析前补充完整的文章正文内容。"
+}

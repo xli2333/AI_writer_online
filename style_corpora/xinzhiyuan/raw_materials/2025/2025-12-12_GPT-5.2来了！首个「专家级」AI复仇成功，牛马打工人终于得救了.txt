@@ -1,0 +1,276 @@
+标题: GPT-5.2来了！首个「专家级」AI复仇成功，牛马打工人终于得救了
+日期: 2025-12-12
+链接: http://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652653478&idx=1&sn=b10b2860a39ec2c145f9bf23fa97054b&chksm=f12f3357c658ba4154b908b4a24122b8bfa740f0d221cae884c75e0e08b2d49811ea66762820#rd
+来源模式: wechat
+----------------------------------------
+
+新智元报道
+编辑：编辑部
+【新智元导读】
+OpenAI十周年，那个地表最强的AI，又回来了！新一代GPT-5.2「全家桶」直接把谷歌Gemini 3 Pro踩在脚下，专业实力更是堪比人类专家。
+刚刚，OpenAI深夜炸场！
+GPT-5.2震撼发布，全球AI王座再次易主。
+一共3款模型，今日全部上线：
+· GPT‑5.2 Instant
+（即时版）
+· GPT‑5.2 Thinking
+（思考版）
+· GPT‑5.2 Pro
+（专业版）
+作为地表最强通用模型，GPT-5.2专为解决那些让人头秃的「高难度知识型工作」而生。
+在OpenAI公布的基准测试中，它几乎对Gemini 3 Pro实现了全方位碾压！
+相比上一代，GPT-5.2在通用智能、超长文本理解、Agent工具调用以及视觉能力上，都实现了
+无死角的
+全面进化
+：
+SWE-Bench Pro：
+狂砍55.6%高分；
+LMArena代码竞技场：
+仅次于Claude Opus 4.5，稳坐全球第二把交椅；
+ARC-AGI-2：
+GPT-5.2 Pro以52.9%的绝对优势登顶全球第一；
+GDPval：
+覆盖44种职业知识，表现直接超越人类行业专家。
+一句话总结：让它从头到尾（端到端）搞定复杂的现实世界任务，目前没有任何模型比它更强。
+左右滑动查看
+完整评测结果
+（上下滑动查看）
+除了更强的能力之外，GPT-5.2还有更长的上下文，以及更新的知识！
+40万上下文窗口：
+轻松吞吐超长文本与复杂对话；
+12.8万最大输出长度：
+深度长文生成不再中断；
+知识库更新至2025年8月31日：
+掌握最新世界动态；
+推理Token支持：
+专攻复杂逻辑与多步推理。
+当然，在性能狂飙的同时，价格也是水涨船高。
+相比GPT-5/5.1，GPT-5.2的输入输出价格贵了整整40%！
+更强的推理、更快的速度，以及更高的价格，这一切似乎都在暗示——
+OpenAI这次不仅升级了模型规模，背后的算力成本恐怕也达到了新的量级。
+这一次，那叫一个专业！
+一个月前，GPT-5.1以「情商智商双高」的姿态登场，就迎面撞上了谷歌Gemini 3这个强劲对手。
+此次更新正值媒体报道OpenAI内部进入「红色代码」紧急状态。
+但OpenAI高管向媒体表示，不应将GPT-5.2视为对Gemini 3的回应。OpenAI应用CEO对记者说：
+我们宣布进入「红色代码」紧急状态是为了向内部发出一个信号，我们想要集中力量办大事，这是一个确定优先事项和非优先事项的好办法。
+总的来说，我们用于开发ChatGPT的资源增加了，我认为这有助于该模型的发布，但并不是它在这周发布的唯一原因。
+这一次，GPT-5.2主打一个专业知识型AI，正所谓「
+打工人的最佳工作模型
+」。
+OpenAI华人研究员Yu Bai称，「别看这只是一个小版本数迭代，那可是能力的一大跃升」。
+那些
+人类专家耗费4-8小时完成的任务
+，在人类评估中，GPT-5.2的
+胜率高达70.9%。
+GPT‑5.2不负众望，在多项实际任务中表现得都更加出色——
+创建电子表格、制作演示文稿、编写代码、感知图像、理解长上下文、使用工具、处理复杂的多步骤项目。
+此前OpenAI的一份报告称，ChatGPT每天能为企业用户平均节省40–60分钟，而重度用户则表示每周能省下超过10小时。
+扩展阅读：
+OpenAI最新报告曝光！前5%精英效率暴涨16倍，普通人却被悄悄淘汰
+总之，AI搞定「专业工作」才是硬道理！
+击败人类专家，打工人狂喜
+目前，GPT‑5.2 Thinking是用于现实世界专业用途的最佳模型。
+在GDPval上，GPT‑5.2 Thinking创下了新的SOTA，并且是
+历史第一个表现超过人类专家水平的模型
+。
+根据人类专家的评判，GPT‑5.2 Thinking在GDPval知识工作任务中，70.9%的情况下击败或打平了顶尖行业专业人士。
+在完成GDPval任务时，其速度比专家专业人士还要快11倍，成本还低于1%。
+这表明，当与人类监督相结合时，GPT‑5.2可以有效辅助完成专业工作。
+换句话说，无论是帮会计整理财报，替产品经理做PPT，还是给程序员当辅助写码的小助手，GPT-5.2都更
+得心应手
+。
+在GDPval中，模型
+需要
+完成涵盖美国GDP贡献最大的前9个行业的44种职业的定义明确的工作。任务要求提供实际的工作成果，例如销售演示文稿、会计电子表格、紧急护理时间表、制造图表或短视频
+在ChatGPT中，GPT‑5.2 Thinking拥有GPT‑5 Thinking所没有的新工具。
+此外，在针对初级投资银行分析师
+电子表格建模
+的内部测试中，
+GPT-5.2 Thinking的平均每任务得分比GPT‑5.1
+高出9.3%
+，从59.1%上升到68.4%。
+并排比较显示，GPT‑5.2 Thinking生成的电子表格和PPT在复杂度和格式上都有所改进。
+如下所示，一眼望去这种高难度的复杂表，GPT‑5.2 Thinking一句话生成，堪称「人力资源规划器」。
+包括股权结构表，GPT-5.2 Thinking以资深银行分析师的角色，完成了所有计算，且过程清晰可查。
+而GPT-5.1 Thinking不仅错误地计算了种子轮、A轮和B轮的清算优先权，且大部分行都留白了，导致最终的股权回报计算出错；而且还错误地在表头行中插入了计算公式。
+针对项目管理，GPT-5.2 Thinking以每项任务、时间为轴，给出了可视化直观的总结。
+相较之下，GPT-5.1 Thinking看着特别粗糙。
+编程破纪录，吞噬全栈开发
+当然了，
+在
+编程
+上，GPT-5.2也是王者中的王者！
+在对现实世界软件工程基准SWE-Bench Pro上，
+GPT‑5.2 Thinking创下了55.6%的新纪录。
+与仅测试Python的SWE-bench Verified不同，SWE-Bench Pro测试四种编程语言，具有更强的抗数据污染能力（contamination-resistant），并更具挑战性、多样性和工业相关性。
+在SWE-Bench Pro中，模型会被给予一个代码库，并且必须生成一个补丁来解决一个现实的软件工程任务
+在SWE-bench Verified上，GPT‑5.2 Thinking拿下了
+80%
+的高分。
+这意味着，它可以更可靠地调试生产环境代码、实现功能请求、重构大型代码库，并以更少的人工干预端到端地发布修复。
+在前端软件工程方面，GPT‑5.2 Thinking也优于GPT‑5.1 Thinking。
+早期测试者发现，它是全栈工程师的强大日常伙伴，在前端开发和复杂或非常规UI工作（特别是涉及3D元素的工作）方面明显更强。
+接下来就让我们看看，仅凭一段提示词，GPT‑5.2都能做出些什么来：
+海浪模拟
+Prompt: Create a single-page app in a single HTML file with the following requirements:
+- Name: Ocean Wave Simulation
+- Goal: Display realistic animated waves.
+- Features: Change wind speed, wave height, lighting.
+- The UI should be calming and realistic.
+节日贺卡制作器
+Prompt: Create a single-page app,
+in
+a single HTML file, that demonstrates a warm and
+fun
+holiday card! The card should be interactive and enjoyable
+for
+kids!
+- Have variety of items kids can drop
+in
+the UI; a few should be already placed
+by
+default
+- Also have
+fun
+sound interactions
+- Place many cute and
+fun
+stuff
+as
+much
+as
+possible
+- Animation like snowdrop should be used nicely
+打字雨游戏
+Prompt: Create a single-page app in a single HTML file with the following requirements:
+- Name: Typing Rain
+- Goal: Type falling words before they reach the bottom.
+- Features: Increasing difficulty, accuracy tracker, score.
+- The UI should be the city background with animated raindrop words.
+幻觉少，更清醒
+GPT‑5.2 Thinking比GPT‑5.1 Thinking的幻觉更少。
+在一组去标识化的ChatGPT查询中，前者包含错误的回答相对
+减少了30%
+。
+对于专业人士来说，这意味着在使用新模型进行研究、写作、分析和决策支持时错误更少，在日常知识工作中更加可靠。
+数十万token极限挑战，准确率100%
+在长上下文推理方面，GPT‑5.2 Thinking树立了新的行业标准。
+在OpenAI MRCRv2上，新模型取得了领先的性能，基准OpenAI MRCRv2用于测试模型整合分布在长文档中信息。
+诸如深度文档分析之类的现实世界任务，需要跨越数十万个Token的相关信息，而在这类任务上，GPT‑5.2 Thinking 比GPT‑5.1 Thinking准确得多。
+特别是，它是OpenAI的第一个在4种MRCR变体（高达256kToken）上达到接近100%准确率的模型。
+实际上，这足以让专业人士用GPT‑5.2处理长文档，如报告、合同、研究论文、成绩单和多文件项目，而且同时在数十万个Token之间保持连贯性和准确性。
+也就是说，GPT‑5.2特别适合深度分析、综合和复杂的多源工作流。
+针对超出最大上下文窗口思考的任务，GPT‑5.2 Thinking兼容OpenAI新的Responses「/compact」端点，这扩展了模型的有效上下文窗口。
+这让GPT‑5.2Thinking可以处理原本受限于上下文长度的更多工具密集型、长期运行的工作流。
+视觉实力翻倍，秒懂复杂图
+GPT‑5.2 Thinking是OpenAI目前最强的视觉模型
+，在图表推理和软件界面理解方面的
+错误
+率大约减少了一半。
+对于日常专业使用，这意味着该模型可以更准确地解读仪表板、产品截图、技术图表和视觉报告，可支持金融、运营、工程、设计和客户支持等以视觉信息为核心的工作流。
+与以前的模型相比，GPT‑5.2 Thinking对图像中元素的位置有更强的掌握，这有助于完成相对布局对解决问题起关键作用的任务。
+在下面的示例中，模型被要求识别图像输入中的组件（在本例中为主板）并返回带有大致边界框的标签。
+即使在低质量图像上，GPT‑5.2也能识别主要区域并放置与每个组件的真实位置大致匹配的框，而GPT‑5.1仅标记了几个部分，并且对其空间排列的理解要弱得多。
+端到端工作流，重塑了
+GPT‑5.2 Thinking展示了其在长多轮任务中可靠
+使用工具
+的能力，在Tau2-bench Telecom上创造了
+98.7%的新纪录
+。
+对于延迟敏感的用例，GPT‑5.2 Thinking在reasoning.effort='none'（无推理）下的表现也更好，大幅优于GPT‑5.1和GPT‑4.1。
+对于专业人士来说，这转化为
+更强的
+端到端工作流
+——例如解决客户支持案例、从多个系统中提取数据、运行分析以及生成最终输出，且
+步骤之间的中断更少
+。
+比如，当询问一个需要多步解决的复杂客户服务问题时，GPT-5.2可以更有效地协调多个智能体之间的完整工作流。
+在下面的案例中，一位旅客报告了航班延误、错失转机、需要在纽约过夜以及医疗座位要求。
+GPT‑5.2管理了整个任务链——重新预订、特殊协助座位和赔偿，提供了比GPT‑5.1更完整的结果。
+Prompt： 我的航班从巴黎到纽约延误了，我错过了去奥斯汀的转机。我的托运行李也不见了，我需要在纽约过夜。由于医疗原因，我还需要一个特殊的前排座位。你能帮我吗？
+独立完成证明，颠覆科研范式
+OpenAI的愿景之一是AI加速科学研究，造福所有人。
+为此，OpenAI一直与科学家合作并听取他们的意见，探索AI如何加速他们的工作，已经取得了一些早期的合作实验。
+链接：https://cdn.openai.com/pdf/a3f3f76c-98bd-47a5-888f-c52c932a8942/colt-monotonicity-problem.pdf
+而GPT‑5.2 Pro和GPT‑5.2 Thinking堪称世界上辅助和加速科学家工作的最佳模型。
+在研究生水平基准测试GPQA Diamond上，GPT‑5.2 Pro达到了93.2%，紧随其后的是GPT‑5.2 Thinking，为92.4%。
+在专家级数学评估
+FrontierMath
+(Tier 1–3)上，GPT‑5.2 Thinking创下了新纪录，解决了40.3%的问题。
+我们开始看到AI模型以切实的方式有意义地加速数学和科学的进步。
+例如，在最近使用GPT‑5.2 Pro的工作中，研究人员探索了统计学习理论中的一个开放性问题。
+这一成果已记录在新论文《关于最大似然估计量的学习曲线单调性》（
+On Learning-Curve Monotonicity for Maximum Likelihood Estimators
+）中。
+论文地址：https://cdn.openai.com/pdf/a3f3f76c-98bd-47a5-888f-c52c932a8942/colt-monotonicity-problem.pdf
+这篇论文的特别之处在于，
+AI完成了证明，而人类负责验证和写作
+。
+作者并没有先想好策略再让模型去填空，也没有提供中间论点或证明大纲。相反，他们要求GPT-5.2 Pro直接去解决这个开放性问题，然后由人类进行仔细的验证，包括由外部学科专家进行的审查和确认。
+随后，作者还问了一些简单的后续问题，看看这个思路能延伸多远。GPT-5.2 Pro将结果从原始问题扩展到了更高维度的设置以及其他常见的统计模型。
+在这个过程中，人类的角色始终聚焦在验证和清晰的写作上，而不是负责搭建数学推导的框架。
+推理AI涌现出流体智能
+在衡量通用推理能力的基准测试ARC-AGI-1（Verified）上，
+GPT‑5.2 Pro是第一个跨越90%门槛的模型。
+相比去年o3‑preview的87%，GPT‑5.2还将实现这一性能的成本降低了约390倍。
+在更难的ARC-AGI-2（Verified）上，GPT‑5.2 Thinking创下了思维链模型的新纪录，得分52.9%。
+GPT‑5.2 Pro表现更高，达到54.2%，进一步扩展了模型推理新颖、抽象问题的能力。
+这些评估的改进反映了GPT‑5.2在复杂技术任务上更强的多步推理能力、更高的定量准确性和更可靠的问题解决能力。
+进步之快，让主办方惊讶，感叹推理AI已展示出真正的「流体智力」。
+生物医学工程师及科学家、免疫学家Derya
+教授
+惊呼，这就是AGI！
+此外，OpenAI不仅发布了多项基准测试分数，还引用了Box、Notion、Windsurf和Zoom等早期测试方的评价。
+GPT‑5.2全家桶，三大杀手级AI
+总的来说，在日常使用中，GPT‑5.2给人的感受——更有条理，更可靠，与之交谈很愉快。
+那么，「全家桶」中三款模型，分别具备怎样的特点？
+GPT‑5.2 Instant：专为日常办公和学习而打造
+它就像是全能办公助理，不仅继承了GPT-5.1自然温暖的对话风格，更在速度、实用性上全面升级。
+因此，Instant版是日常工作和学习的快速、能干的「主力军」，具体来说：
+更清晰的解释，突出显示关键信息
+改进了操作指南和逐步指导
+更强的技术写作和翻译能力
+更好的学习和职业指导支持
+GPT‑5.2 Thinking ：专为更深度的工作而设计
+GPT‑5.2 Thinking就像是深度思考时的「第二大脑」，专为解决那些需要长思考的复杂任务而生。
+尤其是，专业攻坚编程、总结长文档、回答关于上传文件的问题，还能一步步搞定烧脑数学和逻辑问题。
+同时，以更清晰的结构和更有用的细节支持规划和决策。
+业界领先的长上下文推理能力
+表格创建、分析、格式化方面有显著增强
+在PPT制作上已有初步成果
+GPT-5.2 Pro
+当遇到棘手、高难度的问题时，GPT-5.2 Pro是最聪明、最值得信赖的模型。
+可以说，它就是那种「慢工出细活」的顶级专家。
+早期测试已经发现，它处理起来主要错误更少，尤其在编程这类复杂挑战中，展现出的能力也明显更强。
+在编程等复杂领域表现更强
+是帮助科学家加速研究的最佳模型
+性价比更高
+付费ChatGPT用户从今天开始优先使用GPT‑5.2（Instant、Thinking和Pro），Plus、Pro、Go、Business、Enterprise任意套餐即可。
+为了尽可能保持ChatGPT的流畅和可靠，OpenAI决定逐步部署GPT‑5.2。
+在ChatGPT中，GPT‑5.1仍将在旧版模型下供付费用户使用三个月，之后将被停用。
+在API平台中，GPT‑5.2系列新模型可以在Responses API和Chat Completions API中以上图对应形式使用。
+开发者现在可以在GPT‑5.2 Pro中设置推理参数，并且GPT‑5.2 Pro和GPT‑5.2 Thinking现在都支持新的第五种推理强度xhigh，用于质量最重要的任务。
+GPT‑5.2的定价为1.75美元/百万输入Token，14美元/百万输出Token，缓存输入有90%的折扣。
+在多个智能体评估中，尽管GPT‑5.2的每Token成本更高，但GPT‑5.2由于更高的Token效率，
+性价比反而更高
+。
+One More Thing
+今天，OpenAI还搞了一波回忆杀，带大家回顾了这十年走的路。
+十年前的今天，2015年12月11日，OpenAI正式成立。
+这十年，他们取得了太多太多突破性的成就——
+2016年，开源强化学习平台OpenAI Gym，成为学界、工业界RL研究的基础工具；
+2017年，发表了Transformer核心理念的先驱研究：Learning to Remember Rare Events；
+2018年，预训练语言模型GPT诞生，标志着大模型革命的开始；
+2019年，1.5B参数GPT-2出世，自然语言爆发式迭代；
+2020年，175B参数GPT-3引爆全网，超大规模模型时代来临；
+2021年，Codex & DALL·E相继发布，代码与图像生成开启；
+2022年，ChatGPT（GPT-3.5）真正引爆了全世界大模型革命，再之后的大事记大家都知道了。
+奥特曼表示，「过去的十年非常精彩，OpenAI的工作比我想象的还要特别」。
+他剧透，还有一个圣诞「小礼物」，下周就会上线。大家猜一猜，会是什么呢？
+参考资料：HYJ
+https://openai.com/index/introducing-gpt-5-2/
+https://openai.com/index/gpt-5-2-for-science-and-math/
+https://www.cnbc.com/2025/12/11/openai-intros-new-ai-model-gpt-5point2-says-better-at-professional-tasks.html
+秒追ASI
+⭐点赞、转发、在看一键三连⭐
+点亮星标，锁定新智元极速推送！

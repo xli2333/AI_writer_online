@@ -1,0 +1,68 @@
+标题: 知名PE退市，高盛也扛不住了？
+日期: 2025-10-04
+链接: http://mp.weixin.qq.com/s?__biz=MTQzMjE1NjQwMQ==&mid=2656121623&idx=3&sn=68dacfbdacb3fd62f11000ffb512df95&chksm=66c69c8951b1159f6ac6873d8e48a031a8ef4e228a4201023b4b72520d479106c0bdbd322ff7#rd
+来源模式: wechat
+----------------------------------------
+
+以下文章来源于投中网，作者
+陶辉东
+本文来自微信公众号：
+投中网 （ID：China-Venture）
+，作者：陶辉东，题图来自：AI生成
+全球PE退出荒的最新受害者出现了。
+近日，高盛旗下的私募股权投资机构Petershill Partners宣布将要退市，结束短短四年的上市生涯。
+Petershill Partners最早成立于2007年，原本是高盛内部的私募股权投资部门。2021年Petershill Partners被拆分为一家独立的公司，随后成功在伦敦交易所挂牌上市。上市之初Petershill Partners的市值曾超过50亿美元，但在之后的四年里持续下跌。
+自2024年以来，Petershill Partners的市值在最高点时也比公司净资产低37%。在今年二季度财报分析师会议上，Petershill Partners的管理层无奈地表示，理论上公司不应该再开展任何投资，而应该把获得的所有资金都退还给股东，因为任何新投资都是在让股东的权益缩水。
+今年以来，Petershill Partners采取了包括股票回购在内的各种措施试图提振股价，但均无成效。最终，Petershill Partners在公告中承认，如果市场没有重大改变，估值折价将会一直持续下去。这种情况下，退市或许是最好的选择。
+一、全球黑马VC/PE的幕后推手
+有意思的是，虽然股价惨淡，但Petershill Partners的业绩看起来其实并不差。
+我们先来了解一下Petershill Partners，这是一家极为罕见的专业型PE机构：
+它的投资方向不是一般的行业，而正是PE行业自身。
+具体而言，Petershill Partners专门投资其它GP。请注意，Petershill Partners不是去当LP，而是直接投资于GP公司，并从被投GP的成长中获利。
+不难想到，Petershill Partners不会去投那些头部PE，而是把目光锁定在市场上新兴起的黑马PE身上，是一家专业的黑马PE发掘者。
+这部分解释了为什么Petershill Partners如此不受二级市场待见。在全球PE行业退出荒的情况下，Petershill Partners受到的是双重冲击，它既像普通PE一样面临退出难，还由于投资组合GP的退出难而难上加难。
+如果抛开宏观的市场因素不谈，Petershill Partners干得其实非常不错。从美国、欧洲到亚洲，过去十年来全球PE市场上很多冉冉升起的新秀，背后都有Petershill Partners的身影。
+2007年，高盛资产管理公司基于自己在私募股权行业的广泛网络推出了Petershill Partners平台。高盛的想法很简单：VC/PE公司虽然为其他行业提供资本，但在为自身发展融资时却缺乏有效途径，Petershill的创立就是为了填补这一空白。
+彼时，高盛给Petershill Partners定下了非常清晰的投资逻辑：寻找那些拥有巨大增长潜力的细分领域，赶在市场达到饱和之前，投资专注于这个领域的专家型PE。投资后，高盛可以为它们提供资本和战略支持，充当它们快速增长的催化剂。
+这些年，部分被Petershill Partners发掘的黑马VC/PE有：
+General Catalyst，一家专注于科技和消费领域的美国VC，以赋能型投资著称，是Airbnb、Snapchat的早期投资者。
+Clearlake Capital，美国新一代PE中的佼佼者，不久前晋升为“mega-fund”，也是切尔西俱乐部目前的幕后第一大股东。
+Frazier Healthcare Partners，一家专注于医疗健康的专业型PE，定位为从早期到Buyout的全周期投资。
+Arlington Capital Partners，擅长国防、航天等领域的专业型PE，是少数拿到美国国防部特别批准的PE公司之一。
+Accel-KKR，专注于软件投资的专业型PE，由知名风险投资机构Accel Partners和私募巨头KKR所共同创立。
+Petershill Partners是一位眼光毒辣的黑马VC/PE捕手，上述机构在拿到Petershill Partners的投资后基金规模，基本都出现了指数型的增长。
+比如General Catalyst，在2018年被Petershill Partners投资时，正在募一只7亿美元的旗舰基金。在此后四年，General Catalyst实现了惊人的增长，目前已成长为与红杉、A16Z等顶尖VC齐名的美国最大VC之一，它去年的新一期旗舰基金规模已达80亿美元。
+同样是在2018年，Petershill Partners投资了Clearlake Capital。当时Clearlake Capital刚刚募集完毕36亿美元的旗舰基金，是一家刚崭露头角的新锐PE。此后，Clearlake的几乎每一期旗舰基金规模都能翻倍。2024年的第八期基金目标规模达到了150亿美元，跻身“mega-fund”之列。
+这些投资自然让Petershill Partners收益颇丰。今年初，Petershill Partners宣布以7.26亿美元的总对价出售其持有的General Catalyst大部分股权，据估计Petershill Partners的回报可达四倍以上。
+二、风光上市
+经过十多年的深耕，Petershill Partners成为全球GP股权投资领域的“王者”。虽然2010年后也有黑石等其它一些机构效仿高盛开展GP投资，但无论是经验还是投资规模Petershill Partners都保持着遥遥领先。
+到2021年，Petershill Partners已经持有19家优秀另类资产管理公司的股权，这些公司的资产管理规模合计可达1870亿美元。Petershill Partners俨然成为全球私募股权行业的幕后隐形大佬。
+2021年，趁着彼时货币大放水导致的全球IPO热，Petershill Partners也动起了上市的心思。
+官方说法是，借助IPO，Petershill Partners将能够创建一个“永久性资本池”，长期、稳定地为新投资提供支持。这并不难以理解。摆脱有固定存续期的传统私募股权基金，从年复一年的募资中解脱出来，这几乎是每一个VC/PE的梦想。
+2021年10月，从高盛拆分出来的Petershill Partners在伦敦交易所挂牌上市。彼时全球股市一片火热，Petershill Partners的上市相当成功。按发行价，Petershill Partners的市值超过50亿美元，通过IPO融资12亿美元。
+与其它上市PE不同，Petershill Partners这次上市将两只存续基金的投资组合也注入了上市公司，这两只由高盛管理的基金也由此成为Petershill Partners的大股东，合计持股比例达75%。
+因此，Petershill Partners的上市让高盛获得了一大笔账面收入。按高盛原本的计划，它将通过逐步减持，在上市的五年之内把上述两只基金的持股比例降至25%。届时，高盛将相当于打包完成了基金的退出。
+三、打骨折的资产价值
+然而，没多久市场就风云突变，Petershill Partners的股价很快下跌，2021年还没结束就跌破了发行价，次年又跌破了资产净值。
+Petershill Partners糟糕的股价表现令高盛非常郁闷。
+一方面，这种情况下，高盛根本没办法进行减持。相反，为了维护股价高盛还不得不进行增持，目前持股比例已经升至80%。
+另一方面，从数据上看Petershill Partners的业绩表现并不坏，股价本不应该跌成这样。
+上市以来，Petershill Partners的投资组合GP的总资产管理规模几乎翻了一倍，截至2025年已经达到3510亿美元。这表明Petershill Partners投资的GP们确实非常优秀。
+同时，Petershill Partners给股东派发的股息也一直在增长。年度总普通股息从2022财年的每股14.5美分增长至2024财年的15.5美分。另外，每一笔重要退出完成后，Petershill Partners还会发放特别股息。比如，成功出售General Catalyst的股权后，Petershill Partners在2025年4月发放了每股14.0美分的特别股息。
+这些股息加在一起，上市以来，Petershill Partners已经给股东们分红近10亿美元。
+然而，Petershill Partners却依然在跌。
+这背后可能的原因有很多，但投资者对私募股权资产的账面价值的不信任，应该是最为关键的一个。
+Petershill Partners的主要资产是它投资的GP股权，目前其投资组合总账面价值约55亿美元。
+君不见，这几年的全球S交易市场上，基金份额、项目老股被打骨折抛售的情况比比皆是。这种情况下，谁知道你所谓的账面价值有多大水分？Petershill Partners的市值相对于净资产接近40%的折扣，其实就是投资者眼中私募股权资产应该享有的“风险折扣”。
+这种担心并非多余，随着市场环境变化，账面价值的变化可以非常剧烈。2022财年，由于利率上升，Petershill Partners报告了高达8.07亿美元的未实现公允价值亏损。
+Petershill Partners宣布退市的声明中写道：“自2022年以来，宏观经济、市场、地缘政治和行业特定因素带来的重大不利因素，削弱了公开市场投资者对另类资产管理领域的兴趣。因此，尽管公司的运营和财务业绩强劲，但在投资者中的反响不如IPO时那么强烈。”
+此次退市，高盛将以45亿美元的总估值把Petershill Partners重新私有化，较公告披露前一日的收盘价溢价35%，但仍然低于Petershill Partners上市时的市值，且明显低于Petershill Partners的净资产。
+理论上，这将是一笔win-win的交易，Petershill Partners的少数股东们可以立即获得35%的收益。由于收购价低于资产净值，高盛在交易后也能录得账面上的利润。
+交易后，Petershill Partners又重新变成高盛100%持股的内部公司，继续以非上市PE的状态运营，一切又回到了原点。
+Petershill Partners也又一次证明，
+私募股权与公开市场之间的鸿沟并不容易跨越
+，当把私募资产放上股市，一不小心就会成为“裸泳”的小丑，就连高盛这样的顶级操盘手也难以幸免。
+本内容为作者独立观点，不代表虎嗅立场。未经允许不得转载，授权事宜请联系hezuo@huxiu.com
+如对本稿件有异议或投诉，请联系tougao@huxiu.com
+End
+想涨知识 关注虎嗅视频号！

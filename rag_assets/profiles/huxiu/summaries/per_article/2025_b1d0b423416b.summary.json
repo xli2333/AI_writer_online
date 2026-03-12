@@ -1,0 +1,99 @@
+{
+  "analysis_schema_version": 3,
+  "id": "b1d0b423416b",
+  "year": "2025",
+  "date": "2025-03-26",
+  "title": "“新型职场PUA”，你遇到过吗？",
+  "relative_path": "2025/2025-03-26_“新型职场PUA”，你遇到过吗？.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\huxiu\\raw_materials\\2025\\2025-03-26_“新型职场PUA”，你遇到过吗？.txt",
+  "char_count": 286,
+  "content_type": "职场社论",
+  "entities": [],
+  "industry": [
+    "人力资源",
+    "职场心理"
+  ],
+  "topic": [
+    "职场PUA",
+    "心理健康",
+    "精神控制"
+  ],
+  "genre": "新媒体推文",
+  "style": [
+    "互动式",
+    "提问式"
+  ],
+  "audience": [
+    "职场人士",
+    "职场新人"
+  ],
+  "intent": [
+    "探讨话题",
+    "引起共鸣"
+  ],
+  "tone": [
+    "关切",
+    "询问"
+  ],
+  "primary_question": "什么是“新型职场PUA”，读者是否在现实中经历过？",
+  "thesis_type": "现象界定型",
+  "thesis_sentence": "由于正文缺失，仅能通过标题判定其试图探讨职场中出现的新型精神控制现象。",
+  "structure_pattern": "互动引导式",
+  "section_functions": [
+    "提出核心话题",
+    "引导互动探讨"
+  ],
+  "argument_moves": [
+    "定义现象关键词",
+    "通过提问建立与读者的连接"
+  ],
+  "core_argument": "职场中存在“新型PUA”现象，需要引起读者的警惕与讨论。",
+  "key_points": [
+    "识别新型职场PUA的特征",
+    "读者互动分享经历"
+  ],
+  "opening_pattern": "直击痛点式提问",
+  "ending_pattern": "开放式互动",
+  "evidence_types": [],
+  "evidence_specificity_score": 0,
+  "data_density_score": 0,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "中等",
+  "stance_strength": "中等",
+  "sentence_rhythm": "未知",
+  "abstraction_level": "中等",
+  "transferable_moves": [
+    "使用‘新型+热词’的标题公式吸引注意力",
+    "采用第二人称提问增强代入感"
+  ],
+  "anti_patterns": [
+    "内容缺失",
+    "标题党风险",
+    "信息密度极低"
+  ],
+  "notable_phrases": [
+    "新型职场PUA"
+  ],
+  "title_score": 65,
+  "opening_score": 0,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 0,
+  "style_score": 20,
+  "publishability_score": 5,
+  "quality_score": 5,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "is_advertorial": false,
+  "advertorial_type": "mixed",
+  "advertorial_confidence": 0,
+  "promotional_intensity_score": 0,
+  "editorial_independence_score": 50,
+  "brand_exposure_level": "低",
+  "source_transparency": "模糊",
+  "advertorial_signals": [],
+  "summary_200": "该内容仅包含标题““新型职场PUA”，你遇到过吗？”及相关的微信元数据，缺乏实际的正文论述。标题显示其意图探讨职场中的精神控制话题，采用互动提问式风格，具有典型的新媒体引流特征。由于缺乏实质性内容，无法对其论证逻辑、证据链及写作机制进行深入分析，属于信息密度极低的数据条目。",
+  "summary_500": "本条目提供的文本信息极度匮乏，仅包含文章标题、日期、链接及来源模式。标题《“新型职场PUA”，你遇到过吗？》聚焦于职场社会学中的热门议题，试图通过“新型”一词界定一种进化的职场压榨现象，并以问句形式试图激发受众共鸣。然而，由于正文内容未被提供，文章的具体观点、案例支撑、论据引用及结构排布均处于空白状态。基于现有的元数据分析，该文章在写作上可能倾向于情感导向或现象描述。由于缺乏可阅读的文本主体，其在证据密度、逻辑严密性及参考价值方面评分极低。建议在获取完整正文后再行深度结构化分析。"
+}

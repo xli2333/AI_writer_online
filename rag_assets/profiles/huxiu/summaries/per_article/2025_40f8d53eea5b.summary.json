@@ -1,0 +1,102 @@
+{
+  "analysis_schema_version": 3,
+  "id": "40f8d53eea5b",
+  "year": "2025",
+  "date": "2025-05-19",
+  "title": "一对价值230万元的耳环，怎么就“坑爹”了？",
+  "relative_path": "2025/2025-05-19_一对价值230万元的耳环，怎么就“坑爹”了？.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\huxiu\\raw_materials\\2025\\2025-05-19_一对价值230万元的耳环，怎么就“坑爹”了？.txt",
+  "char_count": 292,
+  "content_type": "社会新闻快讯",
+  "entities": [
+    "暂无"
+  ],
+  "industry": [
+    "奢侈品",
+    "内容创作"
+  ],
+  "topic": [
+    "消费维权",
+    "高额消费",
+    "社会热点"
+  ],
+  "genre": "短消息",
+  "style": [
+    "叙事"
+  ],
+  "audience": [
+    "大众网民",
+    "内容创作者"
+  ],
+  "intent": [
+    "吸引点击",
+    "舆论引导"
+  ],
+  "tone": [
+    "质疑",
+    "悬疑"
+  ],
+  "primary_question": "价值230万元的高额珠宝交易为何会引发所谓的“坑爹”争议？",
+  "thesis_type": "现象阐释型",
+  "thesis_sentence": "由于正文内容缺失，核心论点无法通过单一标题准确提炼，但标题暗示了高额消费与社会家庭责任之间的冲突。",
+  "structure_pattern": "总分式（推测）",
+  "section_functions": [
+    "标题通过金钱数额与情感冲突建立悬念",
+    "正文缺失，无法识别具体功能"
+  ],
+  "argument_moves": [
+    "以高额数字（230万元）冲击读者认知",
+    "使用俚语（坑爹）引发社会情感共鸣"
+  ],
+  "core_argument": "内容缺失，无法提取核心论证。",
+  "key_points": [
+    "涉及高额消费金额（230万元）",
+    "交易对象为奢侈品（耳环）",
+    "结果导致了严重的负面影响（坑爹）"
+  ],
+  "opening_pattern": "悬念设置",
+  "ending_pattern": "未知",
+  "evidence_types": [
+    "暂无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 10,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "第三人称",
+  "stance_strength": "中立",
+  "sentence_rhythm": "未知",
+  "abstraction_level": "具象",
+  "transferable_moves": [
+    "在标题中使用极端的对比（巨额消费 vs 负面评价）来提升点击率"
+  ],
+  "anti_patterns": [
+    "正文内容严重缺失",
+    "信息传递不完整"
+  ],
+  "notable_phrases": [
+    "230万元",
+    "坑爹"
+  ],
+  "title_score": 85,
+  "opening_score": 0,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 0,
+  "style_score": 30,
+  "publishability_score": 10,
+  "quality_score": 15,
+  "reference_value_score": 20,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "is_advertorial": false,
+  "advertorial_type": "editorial",
+  "advertorial_confidence": 0,
+  "promotional_intensity_score": 0,
+  "editorial_independence_score": 100,
+  "brand_exposure_level": "低",
+  "source_transparency": "清晰",
+  "advertorial_signals": [],
+  "summary_200": "该内容仅包含标题、日期及链接，缺乏正文。标题“一对价值230万元的耳环，怎么就‘坑爹’了？”具备极强的社交传播力，通过具体的高额数字和“坑爹”这一网络俚语制造悬念，预示了一篇关于奢侈品消费纠纷或家庭经济矛盾的社会观察报道。由于缺乏正文，无法进行具体的写作技巧与逻辑结构分析。",
+  "summary_500": "本条目提供的文本仅为文章的基本元数据，包含标题、日期（2025-05-19）、来源（wechat）及链接，并未提供具体的正文内容。标题《一对价值230万元的耳环，怎么就“坑爹”了？》具有典型的新媒体爆款标题特征：一是利用“230万元”这一具体且巨大的金钱数额冲击读者的心理阈值；二是利用“坑爹”这一具有强烈负面情感色彩的词汇，暗示文章涉及家庭内部矛盾或某种消费陷阱。从内容检索与RAG（检索增强生成）的角度看，该条目目前仅具有索引价值，可作为社会高额消费争议案例的占位符。因缺乏正文，其写作机制、论据特征及可迁移的论证逻辑均无法被有效提取。整体被标记为“低价值信息”，因为其信息量不足以构成一个完整的知识单元或写作参考范例。建议在获取全文后再进行深度结构化分析。"
+}

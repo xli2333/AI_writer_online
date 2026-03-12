@@ -1,0 +1,49 @@
+标题: OpenAI急迫招入OpenClaw之父解决四个问题
+日期: 2026-02-16
+链接: http://mp.weixin.qq.com/s?__biz=MTQzMjE1NjQwMQ==&mid=2656152424&idx=2&sn=41bb061a5b1f187e08293cd7c6f2b0b2&chksm=66c604f651b18de014ff53d7d215691f7419dd71922326f044314b8c9ff42611d68aa03567b8#rd
+来源模式: wechat
+----------------------------------------
+
+Peter Steinberger将加入OpenAI，并负责“下一代个人Agent开发”
+出品｜虎嗅科技组
+作者｜苗正卿
+题图｜视觉中国
+美国时间2月15日，OpenAI CEO Sam Altman在X平台上宣布，OpenClaw（
+Clawdbot、Moltbot
+）之父Peter Steinberger将加入OpenAI，并负责“下一代个人Agent开发”。Sam Altman表示，Peter Steinberger所负责的这个“下一代个人Agent”将很快成为OpenAI产品的核心组成部分。
+在当天，Peter Steinberger也对未来身份进行了回应，他点明了自己在OpenAI中的未来使命“构建一个连我妈妈都能使用的智能体”。
+对于OpenClaw的未来，Sam Altman也给出了清晰的交代，他表示，OpenClaw将以独立、非营利
+开源基金会的形态存在，OpenAI将持续赞助OpenClaw，Peter Steinberger也将继续扮演OpenClaw的顾问。
+这意味着，当下AI圈最火的OpenClaw，将以一种类似PyTorch和Linux的模式存续：
+创始人依然会成为项目的技术和创意灵魂人物
+通过独立的、非营利基金会形态存续，基金会会负责项目的商标、法律、钱、社区、合规等环节，又确保了项目不归任何一家公司所拥有
+科技巨头扮演赞助者角色，谷歌、英特尔、微软、IBM、Meta等每年通过赞助钱或派遣工程师参与到PyTorch和Linux项目之中
+从OpenAI视角看，Peter Steinberger的加入，意义重大。
+2025年，OpenAI对Agent非常重视，但OpenAI整体的策略较为“稳健”。它的战略重心放在了模型能力本身以及Agent安全合规方面。它没有选择“快速、彻底开放权限”的方式，而是把安全可控作为关键。根据OpenAI官网资料，它整体的战略重心序列可以概括为：模型能力 > 安全可控 > 生态开放 > 垂直深度。
+但这也导致，OpenAI的Agent产品，有“思考能力强于办事能力”的趋势，以及在个人和企业级两个Agent市场上，并未抢占最强的市场心智位。
+从产品矩阵上看，目前OpenAI可以分为三层：
+基础模型层 ：GPT 系列模型
+Agent应用层：ChatGPT Agent（聚焦个人客户）+ Frontier（聚焦企业客户）
+工具层：AgentKit（含 Agent Builder、ChatKit）+ GPT Store
+安全策略和目前的产品矩阵，导致OpenAI的Agent产品，在易用性和本地执行能力上存在短板。这也成为OpenAI需要Peter Steinberger加盟的核心诱因，具体来看Peter Steinberger能解决四个层面的问题：
+·OpenAI需要Peter Steinberger降低普通用户对Agent产品的学习成本。OpenAI目前的Agent产品需要用户学习较为复杂的权限设置和指令格式，难以实现“无感交互”。因为OpenAI的安全策略，它的Agent产品往往需要大量的人工操作确认环节，这很容易让用户感觉繁琐。
+·OpenAI现有的Agent以云端为主，这导致产品与用户的硬件生态无法深度整合。 OpenClaw的优势之一就是“本地执行 + 云端赋能” 核心技术，这正是OpenAI所需要的。
+·OpenAI目前的多Agent协作效率急需提高，尤其在执行复杂任务时效率较低。Peter Steinberger善于构建Agent“系统”， OpenClaw 的 Worktree 机制，就确保了多Agent并行操作时不会相互干扰，这种产品经验是OpenAI所急需的。
+·OpenAI2025年的Agent态势是模型能力领先，但Agent功能与用户需求存在差距，也就是“思考能力大于办事能力”。OpenClaw是非常善于根据用户需求快速迭代产品的，Peter Steinberger本人很善于寻找“场景”，这意味着他可能会加速OpenAI Agent产品在更多场景的快速落地。
+不可否认，Peter Steinberger通过OpenClaw“打出了身价”，是当下硅谷的香饽饽。那为什么最终他选择了OpenAI呢？
+这可能和Sam Altman的高情商有一点关系。
+实际上，扎克伯格一直渴望Peter Steinberger加入，在2026年1月，扎克伯格曾主动给Peter Steinberger打电话，当时是一个夜晚Peter Steinberger刚结束团队线上会议，然后手机显示“未知号码”，出于好奇Peter Steinberger接了电话，对方介绍说自己是扎克伯格。为了自证身份，扎克伯格还让Meta 内部工程师 Ned（
+曾和Peter Steinberger相识
+），给Peter Steinberger发了一封邮件确认“是本人”。
+但之后，二人围绕Claude Code与Codex到底哪个好用发生了“友善的争论”，扎克伯格多次反驳Peter Steinberger，并导致了来回争论。
+而另一个硅谷AI巨头Anthropic，则因为“改名事件”早已进了Peter Steinberger黑名单。2025年，OpenClaw 最初名为Clawdbot，但名字中的“Claw”被Anthropic盯上了，Anthropic主张拥有“Claw”相关商标优先权，于是2026年1月Anthropic向 Peter Steinberger发送律师函要求更名。
+反观Sam Altman，则展现出了硅谷大人物的心胸。
+2026年2月，Peter Steinberger准备再次更换产品名字（
+将 Moltbot 更名为OpenClaw
+）但是他担心open一词惹上“OpenAI”。于是他联系上Sam Altman询问对方“OpenClaw这个新名字是否会和 OpenAI 产生商标冲突。”
+让Peter Steinberger有些意外的是，Sam Altman明确告诉他“Open 是通用词汇不侵权”且提出“OpenAI 法律团队可以提供全面帮助”。
+据悉，这次沟通是Peter Steinberger最终加入OpenAI的核心动因之一。
+随着Peter Steinberger加入，硅谷的Agent大战将推向高潮。目前几大核心AI玩家都在Agent市场囤积重兵。2026年围绕留存、付费、生态，将是一场恶战。Peter Steinberger的加入，开了一个好头，但摆在OpenAI面前的老大难问题一直是：人才难留。毕竟Ilya Sutskever对“老东家”的吐槽点之一是公司内“产品压倒研究”和“过度追求商业化和增长”的氛围。这或许也会成为未来Peter Steinberger感受到的压强点。
+本内容未经允许不得转载。授权事宜请联系 hezuo@huxiu.com。
+End
+想涨知识 关注虎嗅视频号！

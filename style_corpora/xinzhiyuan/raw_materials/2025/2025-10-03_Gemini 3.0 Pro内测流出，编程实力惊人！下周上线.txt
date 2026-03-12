@@ -1,0 +1,35 @@
+标题: Gemini 3.0 Pro内测流出，编程实力惊人！下周上线
+日期: 2025-10-03
+链接: http://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652631878&idx=2&sn=6d94ece19a726072cb15038b616a5a3e&chksm=f12887b7c65f0ea1a89e7428926e80999afe478d31ad8949c266056babb0ea424eacc5b5ab2d#rd
+来源模式: wechat
+----------------------------------------
+
+新智元报道
+编辑：桃子
+【新智元导读】
+十月AI战场，热闹得不像话。Sora 2刚刚亮相，Gemini 3.0就已蓄势待发。网友内测demo流出，前端和web编码强到离谱。
+一图看透全球大模型！新智元十周年钜献，2025 ASI前沿趋势报告37页首发
+AI大战又打响了！
+10月一开局，OpenAI甩出Sora 2，标志着AI视频生成的「ChatGPT时刻」来临。
+另一边，谷歌并没有坐以待毙，下一代Gemini旗舰模型即将出世。
+坊间传闻，Gemini 3.0最晚下周上线。今天，谷歌内部研究人员在X上，频频发文暗示——BIG THINGS！
+更值得一提的是，拿到内测资格的开发者们，已经发出一大波惊艳实测demo。
+Gemini 3.0编程之王，实测惊艳
+内部代码流出，Gemini 3.0「家族」目前有Gemini 3.0 Pro、Gemini 3.0 Flash两个版本。
+在ARC-AGI-2上，开启思考模式的Gemini 3.0，准确率超20%。
+在人类最后考试基准上，Gemini 3.0拿下了32.4%最高分，性能碾压GPT-5、Grok 4。
+以下，我们汇总了全网实测案例，一睹为快。
+@Chetaslua实测后惊叹道，谷歌这次赢麻了！这绝对会是有史以来最强的前端和网页开发模型。
+以经典的「小球六边形重力摩擦」测试为例，Gemini 3.0 Pro能够一直做到，小球在六边形中的表现精准符合物理定律。
+比如加速旋转、放大/缩小六边形、放大/缩小球体、加大阻力等，它都「接得住」。
+还有模拟太阳系，Gemini 3.0 Pro也是一绝。
+Gemini 3.0 Pro还能一键直出终端界面，网友称之为，它在前端将是一个「怪兽」级的存在。
+生成SVG格式的图片，「鹈鹕骑自行车」测试Gemini 3.0 Pro一键通过。
+Prompt: Create code for an SVG of a monkey writing on a typewriter as nicely done as you can.
+再来看一个和Claude Sonnet 4.5的对比，Gemini 3.0 Pro生成的小狐狸在灯下拉琴，可与之一决高下。
+不过，Gemini 3.0 Pro却在六指手部视觉测试中失败了。
+对于Gemini 3.0 Flash，开发者盛赞其在解决一个具体问题——旅行规划时，展现出的惊人速度和精准度。
+虽未正式发布，但关于Gemini 3.0的编程表现，暗示着编码时代正在改变。
+真是有点期待Gemini 3.0了。
+参考资料：
+https://x.com/daniel_mac8/status/1973914854328283353

@@ -1,0 +1,111 @@
+{
+  "analysis_schema_version": 3,
+  "id": "3cdb8dfa319d",
+  "year": "2025",
+  "date": "2025-02-22",
+  "title": "好利来员工主动连加29小时班，值得表扬吗？",
+  "relative_path": "2025/2025-02-22_好利来员工主动连加29小时班，值得表扬吗？.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\huxiu\\raw_materials\\2025\\2025-02-22_好利来员工主动连加29小时班，值得表扬吗？.txt",
+  "char_count": 291,
+  "content_type": "热点评论",
+  "entities": [
+    "好利来",
+    "Holiland"
+  ],
+  "industry": [
+    "餐饮",
+    "烘焙连锁",
+    "人力资源"
+  ],
+  "topic": [
+    "加班文化",
+    "企业文化",
+    "劳动权益",
+    "公关危机"
+  ],
+  "genre": "时事评论",
+  "style": [
+    "议论性",
+    "批判性",
+    "提问式"
+  ],
+  "audience": [
+    "职场人士",
+    "企业管理者",
+    "人力资源从业者",
+    "社会观察者"
+  ],
+  "intent": [
+    "引发讨论",
+    "反思管理模式",
+    "审视价值观"
+  ],
+  "tone": [
+    "质疑",
+    "理性",
+    "审慎"
+  ],
+  "primary_question": "员工连续加班29小时的行为是否应当被企业和社会作为正面典型进行表扬？",
+  "thesis_type": "价值判断",
+  "thesis_sentence": "文章旨在探讨在现代职场环境下，将极端过度加班（29小时）美化为主动奉献并予以表扬的管理逻辑是否合时宜、合规。",
+  "structure_pattern": "由于正文内容缺失，无法识别完整的逻辑结构，仅体现为问题导向型。",
+  "section_functions": [
+    "标题：通过极端数据（29小时）制造认知冲击并提出核心伦理质疑"
+  ],
+  "argument_moves": [
+    "借由特定社会化传播事件引出职场过度劳动的争议",
+    "利用反问句式对传统的‘奋斗者’评价标准进行挑战"
+  ],
+  "core_argument": "连续加班29小时不应被盲目推崇为正向典型，这可能反映了企业文化中对劳动者权益的忽视。",
+  "key_points": [
+    "好利来内部出现了员工连加29小时班的情况",
+    "该行为在特定语境下被讨论是否‘值得表扬’",
+    "极端加班时长与现代劳动保障理念存在冲突"
+  ],
+  "opening_pattern": "冲突数据引导式",
+  "ending_pattern": "无",
+  "evidence_types": [
+    "单一案例事实（29小时加班时长）"
+  ],
+  "evidence_specificity_score": 40,
+  "data_density_score": 10,
+  "case_density_score": 20,
+  "quote_density_score": 0,
+  "narrative_distance": "第三人称旁观",
+  "stance_strength": "较强",
+  "sentence_rhythm": "由于仅有标题，表现为短促有力的疑问节奏",
+  "abstraction_level": "中观（涉及企业管理与法律伦理）",
+  "transferable_moves": [
+    "在标题中使用具体到小时的极端数据（29小时）来强化冲突感",
+    "通过‘值得表扬吗’这种反向设问来解构原本可能被视为常态的职场现象"
+  ],
+  "anti_patterns": [
+    "正文缺失导致分析论据无法展开",
+    "仅提供争议话题而未见深度逻辑闭环"
+  ],
+  "notable_phrases": [
+    "主动连加29小时班",
+    "值得表扬吗"
+  ],
+  "title_score": 92,
+  "opening_score": 0,
+  "argument_score": 10,
+  "evidence_score": 10,
+  "structure_score": 5,
+  "style_score": 60,
+  "publishability_score": 20,
+  "quality_score": 15,
+  "reference_value_score": 45,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "is_advertorial": false,
+  "advertorial_type": "editorial",
+  "advertorial_confidence": 0,
+  "promotional_intensity_score": 0,
+  "editorial_independence_score": 95,
+  "brand_exposure_level": "中",
+  "source_transparency": "清晰",
+  "advertorial_signals": [],
+  "summary_200": "该文章聚焦于“好利来员工连续加班29小时”这一极端争议事件。标题采用反问句式，挑战了职场中将过度牺牲身心健康的加班行为视为荣耀的传统叙事。由于输入文本仅包含标题及基本元数据，无法对其论证细节进行深度剖析，但该选题本身高度契合当前社会对“996”文化和过度奋斗倾向的批判心理，具有较强的舆论爆发力和选题代表性。",
+  "summary_500": "本次分析的文本为关于好利来员工极端加班现象的社会评论。虽然正文内容缺失，但从标题《好利来员工主动连加29小时班，值得表扬吗？》可以精准捕捉其核心诉求：对当前企业激励机制中扭曲的加班价值观进行审视。29小时这一具体时长在传播学上具有极强的冲击力，它将法律底线（劳动法相关规定）与企业宣传（表扬员工）之间的矛盾具象化。文章预示了对职场劳动保障、企业管理伦理以及公关风险控制等多个维度的探讨。在缺乏全文支撑的情况下，该内容被标记为“低价值信息”，但其作为选题切入点，展示了如何通过具体的极端数据配合反问句式，快速构建具有公众参与感的议程。对于内容创作者而言，该标题是典型的“价值观冲突型”创作范式，通过对公众普遍不满的情绪痛点进行提问，从而引发大规模社交媒体讨论。整体而言，该输入属于信息不完整的片段，仅具备选题参考价值。"
+}

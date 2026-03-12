@@ -1,0 +1,91 @@
+{
+  "analysis_schema_version": 3,
+  "id": "90f4df4010ed",
+  "year": "2025",
+  "date": "2025-05-30",
+  "title": "为什么每次团建后离职率都很高？",
+  "relative_path": "2025/2025-05-30_为什么每次团建后离职率都很高？.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\huxiu\\raw_materials\\2025\\2025-05-30_为什么每次团建后离职率都很高？.txt",
+  "char_count": 285,
+  "content_type": "职场评论",
+  "entities": [],
+  "industry": [
+    "企业管理",
+    "人力资源"
+  ],
+  "topic": [
+    "团建",
+    "离职率",
+    "员工关系",
+    "职场文化"
+  ],
+  "genre": "观点评论",
+  "style": [
+    "犀利",
+    "痛点聚焦"
+  ],
+  "audience": [
+    "HR",
+    "管理者",
+    "职场员工"
+  ],
+  "intent": [
+    "问题探讨"
+  ],
+  "tone": [
+    "质疑"
+  ],
+  "primary_question": "为什么看似增加凝聚力的团建活动反而导致了员工的流失？",
+  "thesis_type": "现象阐释型",
+  "thesis_sentence": "由于提供的文本仅包含标题和元数据，其核心论点缺失，但通过标题可推断其试图探讨团建与离职率之间的负相关联系。",
+  "structure_pattern": "总分式（推测）",
+  "section_functions": [
+    "提出职场反常现象"
+  ],
+  "argument_moves": [
+    "识别共性痛点"
+  ],
+  "core_argument": "无法根据缺失的正文提取完整论点。",
+  "key_points": [
+    "团建对员工留存的负面影响"
+  ],
+  "opening_pattern": "提问式",
+  "ending_pattern": "未知",
+  "evidence_types": [],
+  "evidence_specificity_score": 0,
+  "data_density_score": 0,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "第三人称",
+  "stance_strength": "中等",
+  "sentence_rhythm": "未知",
+  "abstraction_level": "中等",
+  "transferable_moves": [
+    "利用职场冲突话题引发共鸣的标题命名法"
+  ],
+  "anti_patterns": [
+    "内容缺失（当前输入仅有标题）"
+  ],
+  "notable_phrases": [],
+  "title_score": 85,
+  "opening_score": 0,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 0,
+  "style_score": 0,
+  "publishability_score": 10,
+  "quality_score": 5,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "is_advertorial": false,
+  "advertorial_type": "editorial",
+  "advertorial_confidence": 0,
+  "promotional_intensity_score": 0,
+  "editorial_independence_score": 100,
+  "brand_exposure_level": "无",
+  "source_transparency": "清晰",
+  "advertorial_signals": [],
+  "summary_200": "该文本仅包含标题及元数据，正文缺失。其标题提出了一个经典的职场管理悖论：团建活动与高离职率的关联。由于缺乏具体正文内容，无法提取深层逻辑、证据或具体建议。",
+  "summary_500": "本条目是对一篇缺失正文的微信公众号文章进行的结构化标记。标题《为什么每次团建后离职率都很高？》具有极强的职场情绪捕捉力，反映了当前人力资源管理中“形式主义团建”与“员工真实需求”之间的冲突。然而，由于所提供的正文部分仅重复了标题与链接信息，未包含任何实际论述、案例或数据支撑。因此，在写作机制、证据特征及分项评分中，该文章被标记为“低价值”和“信息缺失”。若作为RAG（检索增强生成）素材，该条目仅能提供选题参考，无法提供实质性的逻辑支撑或知识增量。"
+}

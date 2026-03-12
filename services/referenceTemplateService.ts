@@ -190,6 +190,62 @@ const computeStylePurity = (article: ArticleCatalogEntry, profile = 'fdsm') => {
     if (String(article.brand_exposure_level || '').includes('高')) {
       score -= 0.06;
     }
+  } else if (profile === 'huxiu') {
+    score =
+      editorialIndependence * 0.26 +
+      structure * 0.16 +
+      argument * 0.15 +
+      evidence * 0.13 +
+      style * 0.11 +
+      quality * 0.09 +
+      publishability * 0.06 +
+      reference * 0.04 -
+      promotional * 0.16 -
+      advertorialRisk * 0.1;
+
+    if (typeof article.content_type === 'string' && /报道|评论|人物|专访|特写|观察/.test(article.content_type)) {
+      score += 0.03;
+    }
+    if (typeof article.genre === 'string' && /人物|公司|行业|趋势|消费|社会/.test(article.genre)) {
+      score += 0.02;
+    }
+    if (typeof article.source_transparency === 'string' && article.source_transparency.includes('清晰')) {
+      score += 0.02;
+    }
+    if (typeof article.brand_exposure_level === 'string' && article.brand_exposure_level.includes('高')) {
+      score -= 0.06;
+    }
+  } else if (profile === 'wallstreetcn') {
+    score =
+      editorialIndependence * 0.28 +
+      reference * 0.16 +
+      evidence * 0.14 +
+      structure * 0.12 +
+      publishability * 0.11 +
+      quality * 0.09 +
+      argument * 0.07 +
+      style * 0.05 -
+      promotional * 0.17 -
+      advertorialRisk * 0.11;
+
+    if (typeof article.content_type === 'string' && /解读|快讯|观察|图表|数据|报道|专访/.test(article.content_type)) {
+      score += 0.03;
+    }
+    if (typeof article.genre === 'string' && /宏观|市场|公司|行业|政策|策略|商品|科技/.test(article.genre)) {
+      score += 0.02;
+    }
+    if (typeof article.source_transparency === 'string' && article.source_transparency.includes('清晰')) {
+      score += 0.02;
+    }
+    if (typeof article.brand_exposure_level === 'string' && article.brand_exposure_level.includes('高')) {
+      score -= 0.07;
+    }
+    if (typeof article.title === 'string' && /一周重磅日程|一周财经日程|早餐FM|元旦周重磅日程/.test(article.title)) {
+      score -= 0.1;
+    }
+    if (/见闻VIP|免费试读|大师课|课程|游学|训练营|报名|星标华尔街见闻/.test(`${article.title || ''}\n${article.summary_200 || ''}`)) {
+      score -= 0.16;
+    }
   } else {
     score =
       argument * 0.22 +
@@ -224,6 +280,14 @@ const isStylePureEnough = (article: ArticleCatalogEntry, profile = 'fdsm') => {
 
   if (profile === 'xinzhiyuan') {
     return purity >= 0.46 && promotional <= 0.74 && editorialIndependence >= 0.3;
+  }
+
+  if (profile === 'huxiu') {
+    return purity >= 0.45 && promotional <= 0.72 && editorialIndependence >= 0.32;
+  }
+
+  if (profile === 'wallstreetcn') {
+    return purity >= 0.44 && promotional <= 0.7 && editorialIndependence >= 0.32;
   }
 
   return purity >= 0.42 && promotional <= 0.78 && editorialIndependence >= 0.28;
@@ -285,6 +349,32 @@ const boostScore = (article: ArticleCatalogEntry, options: WritingTaskOptions, d
     }
     if (typeof article.promotional_intensity_score === 'number' && article.promotional_intensity_score >= 42) {
       score -= 0.06;
+    }
+  } else if (options.styleProfile === 'huxiu') {
+    if (typeof article.content_type === 'string' && /报道|评论|人物|专访|特写|观察/.test(article.content_type)) {
+      score += 0.03;
+    }
+    if (typeof article.source_transparency === 'string' && article.source_transparency.includes('清晰')) {
+      score += 0.02;
+    }
+    if (typeof article.promotional_intensity_score === 'number' && article.promotional_intensity_score >= 40) {
+      score -= 0.05;
+    }
+  } else if (options.styleProfile === 'wallstreetcn') {
+    if (typeof article.content_type === 'string' && /解读|快讯|观察|图表|数据|报道|专访/.test(article.content_type)) {
+      score += 0.03;
+    }
+    if (typeof article.source_transparency === 'string' && article.source_transparency.includes('清晰')) {
+      score += 0.02;
+    }
+    if (typeof article.title === 'string' && /一周重磅日程|一周财经日程|早餐FM|元旦周重磅日程/.test(article.title)) {
+      score -= 0.08;
+    }
+    if (/见闻VIP|免费试读|大师课|课程|游学|训练营|报名|星标华尔街见闻/.test(`${article.title || ''}\n${article.summary_200 || ''}`)) {
+      score -= 0.14;
+    }
+    if (typeof article.promotional_intensity_score === 'number' && article.promotional_intensity_score >= 36) {
+      score -= 0.07;
     }
   }
 

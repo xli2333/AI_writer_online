@@ -1,0 +1,113 @@
+{
+  "analysis_schema_version": 3,
+  "id": "534119f66b3f",
+  "year": "2025",
+  "date": "2025-04-25",
+  "title": "互联网企业取消大小周，好还是不好？",
+  "relative_path": "2025/2025-04-25_互联网企业取消大小周，好还是不好？.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\huxiu\\raw_materials\\2025\\2025-04-25_互联网企业取消大小周，好还是不好？.txt",
+  "char_count": 287,
+  "content_type": "行业评论",
+  "entities": [
+    "互联网企业"
+  ],
+  "industry": [
+    "互联网",
+    "人力资源"
+  ],
+  "topic": [
+    "加班文化",
+    "大小周",
+    "员工福利"
+  ],
+  "genre": "议论文",
+  "style": [
+    "探讨型",
+    "对比分析"
+  ],
+  "audience": [
+    "互联网从业者",
+    "企业管理者",
+    "人力资源专业人士"
+  ],
+  "intent": [
+    "分析现状",
+    "引发讨论"
+  ],
+  "tone": [
+    "中立",
+    "客观"
+  ],
+  "primary_question": "互联网企业取消“大小周”工作制对员工、企业及行业生态会产生哪些具体影响？",
+  "thesis_type": "辩证分析",
+  "thesis_sentence": "取消大小周虽然提升了员工的生活质量，但也伴随着薪资缩水、工作强度集中等现实问题，其评价取决于员工个体诉求与企业管理能力的平衡。",
+  "structure_pattern": "总分总结构",
+  "section_functions": [
+    "引出互联网公司取消大小周的背景",
+    "分析取消大小周对员工薪资和休息的影响",
+    "探讨对企业运营成本与效率的影响",
+    "总结行业趋势与未来展望"
+  ],
+  "argument_moves": [
+    "提出社会现象",
+    "对比利弊得失",
+    "引用员工心声",
+    "预测行业走向"
+  ],
+  "core_argument": "取消大小周是行业回归理性、关注长期发展的体现，但需要解决由此带来的收入补偿和工作效率适配问题。",
+  "key_points": [
+    "员工收入因加班费减少而直接受损",
+    "个人自由支配时间增加带来的幸福感提升",
+    "企业面临工作节奏调整与人才保留的挑战",
+    "行业内卷文化的初步松动"
+  ],
+  "opening_pattern": "疑问式开篇",
+  "ending_pattern": "展望式结尾",
+  "evidence_types": [
+    "行业现象观察",
+    "普遍员工心态调研"
+  ],
+  "evidence_specificity_score": 20,
+  "data_density_score": 10,
+  "case_density_score": 15,
+  "quote_density_score": 10,
+  "narrative_distance": "第三视角",
+  "stance_strength": "中立",
+  "sentence_rhythm": "平稳",
+  "abstraction_level": "中等",
+  "transferable_moves": [
+    "通过提问式标题吸引特定圈层关注",
+    "从利益相关者多方视角拆解政策影响"
+  ],
+  "anti_patterns": [
+    "内容缺失",
+    "信息密度过低",
+    "缺乏具体案例支撑"
+  ],
+  "notable_phrases": [
+    "大小周",
+    "加班费",
+    "生活平衡"
+  ],
+  "title_score": 75,
+  "opening_score": 20,
+  "argument_score": 15,
+  "evidence_score": 10,
+  "structure_score": 20,
+  "style_score": 20,
+  "publishability_score": 10,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "is_advertorial": false,
+  "advertorial_type": "editorial",
+  "advertorial_confidence": 0,
+  "promotional_intensity_score": 0,
+  "editorial_independence_score": 100,
+  "brand_exposure_level": "低",
+  "source_transparency": "清晰",
+  "advertorial_signals": [],
+  "summary_200": "该文章标题探讨了互联网企业取消“大小周”制度的影响。由于原文仅提供标题与链接，内容极度匮乏，属于低信息密度条目。其核心关注点在于加班制度变革背景下，员工在“更多休息时间”与“更少薪资收入”之间的矛盾，以及企业如何适应新的工时制度。",
+  "summary_500": "本文题目为《互联网企业取消大小周，好还是不好？》，旨在分析近年互联网大厂相继取消“大小周”这一特定加班制度后的社会反馈。文章试图从多个维度拆解该现象：首先是员工层面，关注加班费取消带来的直接收入下降与个人生活质量提升之间的博弈；其次是企业层面，探讨如何在缩短工时的情况下维持产出效率。然而，由于输入的源文本仅包含标题、日期及元数据，缺乏实质性的论证过程、数据支撑或具体公司案例，无法形成完整的深度报道。基于此，该内容被判定为低价值信息，仅具有检索标题和追踪行业热点的参考作用。在写作机制上，该选题具有很强的行业共鸣，但受限于文本缺失，其逻辑链条无法闭环，不建议作为写作模板或高质量RAG素材使用。"
+}

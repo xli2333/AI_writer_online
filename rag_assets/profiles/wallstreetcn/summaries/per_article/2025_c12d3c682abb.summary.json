@@ -1,0 +1,119 @@
+{
+  "analysis_schema_version": 3,
+  "id": "c12d3c682abb",
+  "year": "2025",
+  "date": "2025-01-17",
+  "title": "2024年出生954万人，人均可支配收入41314元(附10项细分数据）",
+  "relative_path": "2025/2025-01-17_2024年出生954万人，人均可支配收入41314元(附10项细分数据）.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\wallstreetcn\\raw_materials\\2025\\2025-01-17_2024年出生954万人，人均可支配收入41314元(附10项细分数据）.txt",
+  "char_count": 1821,
+  "content_type": "数据简报",
+  "entities": [
+    "国家统计局"
+  ],
+  "industry": [
+    "宏观经济",
+    "政府监管"
+  ],
+  "topic": [
+    "2024年经济数据",
+    "国民收入",
+    "人口普查",
+    "GDP增速",
+    "就业市场"
+  ],
+  "genre": "新闻报道",
+  "style": [
+    "客观简洁",
+    "数据导向",
+    "公文风格"
+  ],
+  "audience": [
+    "投资者",
+    "经济研究员",
+    "企业决策者",
+    "普通大众"
+  ],
+  "intent": [
+    "信息传递",
+    "现状告知"
+  ],
+  "tone": [
+    "中立",
+    "严肃"
+  ],
+  "primary_question": "2024年中国宏观经济各项核心指标的最终表现如何？",
+  "thesis_type": "descriptive",
+  "thesis_sentence": "2024年国内生产总值增长5.0%，国民经济运行总体平稳、稳中有进，高质量发展取得新进展。",
+  "structure_pattern": "categorical_overview",
+  "section_functions": [
+    "核心GDP增速概览",
+    "政策背景与总体评价",
+    "分项经济数据详列（收入、人口、粮食、工业、消费等）",
+    "风险提示与免责声明"
+  ],
+  "argument_moves": [
+    "引用官方统计局权威数据",
+    "多维度指标横向对比",
+    "呈现同比与环比变化"
+  ],
+  "core_argument": "2024年中国经济在面临多重压力的背景下，通过增量政策实现了5.0%的增长目标，但人口负增长与房地产投资下滑仍是显著特征。",
+  "key_points": [
+    "全年GDP同比增长5.0%，总额达134.9万亿元",
+    "人均可支配收入41314元，扣除价格因素实际增长5.1%",
+    "年末总人口减少139万人，出生人口为954万人",
+    "制造业投资增长9.2%，但房地产开发投资下降10.6%",
+    "全国城镇调查失业率平均值为5.1%"
+  ],
+  "opening_pattern": "direct_announcement",
+  "ending_pattern": "disclaimer",
+  "evidence_types": [
+    "官方统计数据",
+    "政府公报"
+  ],
+  "evidence_specificity_score": 95,
+  "data_density_score": 95,
+  "case_density_score": 0,
+  "quote_density_score": 10,
+  "narrative_distance": "第三人称旁观",
+  "stance_strength": "客观中立",
+  "sentence_rhythm": "短句为主，数据堆叠",
+  "abstraction_level": "低（极度具象的数字）",
+  "transferable_moves": [
+    "标题直接列出核心数据（人均收入、出生人口）吸引点击",
+    "采用清单式结构进行多维度信息汇总",
+    "通过“中位数”和“分组数据”提供比平均数更深入的视角"
+  ],
+  "anti_patterns": [
+    "单纯的数据搬运，缺乏深层逻辑解读",
+    "没有对各项指标间的关联进行分析",
+    "缺乏对未来趋势的预测性判断"
+  ],
+  "notable_phrases": [
+    "稳中有进",
+    "一揽子增量政策",
+    "人均可支配收入中位数",
+    "自然增长率为-0.99‰"
+  ],
+  "title_score": 85,
+  "opening_score": 80,
+  "argument_score": 60,
+  "evidence_score": 98,
+  "structure_score": 85,
+  "style_score": 70,
+  "publishability_score": 95,
+  "quality_score": 78,
+  "reference_value_score": 90,
+  "is_activity_notice": false,
+  "is_low_value": false,
+  "is_advertorial": false,
+  "advertorial_type": "editorial",
+  "advertorial_confidence": 0,
+  "promotional_intensity_score": 0,
+  "editorial_independence_score": 100,
+  "brand_exposure_level": "低",
+  "source_transparency": "清晰",
+  "advertorial_signals": [],
+  "summary_200": "本文汇总了国家统计局发布的2024年中国宏观经济核心数据。全年GDP同比增长5.0%，达134.9万亿元。关键指标显示：居民人均可支配收入41314元，实际增长5.1%；年末人口14.08亿，较上年减少139万，出生人口954万。此外，文章还涵盖了粮食产量、工业增加值、社会消费、固定资产投资及就业等10个维度的具体表现，反映了国民经济稳中有进、社会信心回升的态势。",
+  "summary_500": "1月17日，国家统计局公布2024年中国经济成绩单。全年国内生产总值（GDP）达1349084亿元，按不变价格计算，比上年增长5.0%，实现年度目标。在收入端，全国居民人均可支配收入41314元，中位数为34707元，收入结构呈现出城乡差距缩小及不同收入组别的梯度特征。人口方面，中国面临持续的负增长挑战：2024年出生人口954万人，死亡人口1093万人，总人口比上年末减少139万人，自然增长率为-0.99‰，老龄化趋势显著，60岁及以上人口占比达22.0%。产业表现上，规模以上工业增加值增长5.8%，制造业投资强劲增长9.2%，有效抵消了房地产开发投资下降10.6%带来的负面影响。消费端表现平稳，社会消费品零售总额增长3.5%。就业形势总体稳定，城镇调查失业率平均值为5.1%。本文通过对10项细分数据的详实梳理，为研究者和投资者提供了权威的年度宏观经济参考，突出了中国经济在复杂环境下高质量发展的韧性与待解的结构性难题。"
+}

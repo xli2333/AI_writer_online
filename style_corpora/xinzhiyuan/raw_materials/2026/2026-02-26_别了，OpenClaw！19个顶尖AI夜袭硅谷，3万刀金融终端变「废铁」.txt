@@ -1,0 +1,94 @@
+标题: 别了，OpenClaw！19个顶尖AI夜袭硅谷，3万刀金融终端变「废铁」
+日期: 2026-02-26
+链接: http://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652677811&idx=2&sn=a4d15e2cb66e18e470b452eefcfa9d98&chksm=f12fd242c6585b54e18e74a453160258350887ac79539f5580959a681b33d9bd3eaa950a74dd#rd
+来源模式: wechat
+----------------------------------------
+
+新智元报道
+编辑：桃子
+【新智元导读】
+OpenClaw被谷歌封禁之后，Perplexity扔出深水炸弹，重磅上线Perplexity Computer，让全球19个顶尖AI集体打工，全程不用动手。与此同时，Anthropic官宣的一场重磅收购，让Claude执行力迎来质变。
+OpenClaw最强平替来了！
+今天，
+Perplexity重磅发布「Perplexity Computer」，一键将全球最强AI装进入一个系统
+。
+它可以「端到端」完成全流程任务，包括研究、设计、编写代码、部署、管理任何项目。
+更具体讲，Perplexity Computer是一个极其强大的多模态系统，
+通过精密的编排，让多个AI智能体并行工作
+。
+其背后逻辑是，让Claude Opus将不同子任务，分配给最适合的模型，
+多达19个模型
+。
+它会自动为每一步选择最佳模型，推理用Claude、研究用Gemini、追求速度用Grok，
+并且能在后台自主运行数小时，甚至数天
+。
+就在Perplexity押注Agent操控电脑的同时，
+Anthropic也毫不示弱。
+同在今天，Anthropic闪电收购初创Vercept，核心能力将在未来几周并入Claude。
+Perplexity Computer夜袭硅谷
+19个大模型集体打工
+Perplexity Computer，定义了2026年个人电脑应有的样子。
+它为个人量身定制，不仅能记住用户过去的工作，而且默认安全可靠。
+系统还内置了数百个连接器，拥有持久记忆，可直接访问文件和互联网。
+无论是清空待办事项、推进进行中的项目，还是开启一个新的业余项目，Perplexity Computer全部可以拿捏。
+如今，不再局限于任何单一任务，人们可以像指挥乐团一样，同时推进数百个项目。
+Perplexity科学家表示，这是为普通人打造的OpenClaw，也是合作过最聪明的「同事」。
+可以说，Perplexity Computer的诞生，标志着个人计算正式进入了「全能Agent」时代。
+假设想要了解「英伟达的估值低了吗」，让Computer去整理AMD、AVGO、INTC、QCOM、TSMC多家公司订单情况，并在web中做可视化展示。
+Perplexity Computer还能从最新的Dario Amodei播客，找到他讨论「模型差异化」的片段。
+AI能剪辑出这段视频，把画面转成适合TikTok的竖屏，并配上了字幕。
+再比如，想要买一所Walter White的房子，然后把它改成短租房。
+想要测算下这套房在Airbnb上出租的投资回报情况，Computer可以帮你搭好一个财务模型。
+值得一提的是，Perplexity Computer强大实力背后，站着一位深藏不露的技术灵魂人物。
+他便是Alex Graveley，曾是GitHub Copilot总架构师。
+入职Perplexity两年时间里，他还打造了AI原生浏览器Comet
+目前，Perplexity Computer在Web端向Max订阅用户开放，每月10,000个积分。
+核心模式采用「按量计费」，人们可以为不同的子智能体选择特定模型，并设置token上限。
+为了庆祝发布，现有用户和新注册用户都将获得20,000积分限时奖励，有效期30天。
+创始人深度长文：AI就是计算机
+Perplexity Computer发布之后，创始人Aravind Srinivas发表的一篇深度长文，重新定义了AI时代下「计算机」的概念。
+他直言不讳地指出，单一模型由于缺乏「跨家族协作」，已成为生产力的瓶颈。
+文中，他首次公开了内部代号为「ASI」的秘密实验。
+最初，这只是一个Slack插件，但展现出恐怖的进化能力——
+它像一个数字员工，能自主拆解任务、创建子智能体、调用数百个工具、甚至在云端沙盒里写代码。
+AI不再是一个简单的对话框，而是一个拥有文件系统、浏览器和Shell权限的完整「电脑」。
+不仅如此，Srinivas还剖析了计算历史的变迁：从2011年谷歌Chromebook误判了「读」的难度，到如今AI彻底解决信息的检索与合成。
+他认为，未来的电脑不再是繁琐的GUI，应当由19个甚至更多AI组成的「交响乐团」。
+Claude最大的弱点在于，它只能跟Claude协作。
+而真正的「超级智能」应该让擅长代码的模型写代码，擅长推理的模型搞逻辑。
+Srinivas表示，2025年，平均每17天就有一个新模型面世，计算的护城河将从底层代码，转向对异构模型的调度能力。
+这种「交响乐式」的协作范式，预示着传统OS的护城河正在崩塌，一个「AI即电脑」的时代已经到来。
+一键打造金融APP，秒杀3万刀工具
+比起Perplexity的自卖自夸，全网的实测更有说服力。
+可选择自我偏好的三款模型：Claude、Gemini、GPT
+这不，它正在颠覆传统的高端金融工具了......
+通过多模型协作，Perplexity Computer一次性构建出媲美Bloomberg的「实时金融终端」。
+下面演示中，它可以针对英伟达股票进行深度分析，包括股价图表、公司信息、财务摘要和市场洞察。
+要知道，Bloomberg终端年费高达3万美元，主要价值在于实时数据、网络和专家访问。
+网友直言，Bloomberg的界面垄断地位，怕是要被终结了。
+更厉害的是，仅一句话，Perplexity Computer做出了一个能显示全球卫星实时位置的Web应用。
+它从CelesTrak抓取了 10个卫星星座中，大约1,500颗卫星的两行元素（TLE）轨道数据。
+然后，利用satellite.js库进行 SGP4 轨道外推计算，每秒更新一次，把每颗卫星的开普勒轨道根数实时转换成地理位置。
+在执行具体任务中，Computer可以自主将任务分配给不同的模型。
+开发者让其在GitHub提交PR， Gemini进行探索，而Opus去写代码。
+它还可以0样本构建详细的英伟达估值分析。
+Anthropic再出手
+Claude像人一样操控电脑
+OpenClaw如今成为最新顶流，就连Anthropic也在不断强化Claude「动手能力」。
+今天，Anthropic正式宣布收购AI初创公司Vercept。
+这一动作目标极其明确——让Claude「电脑使用」（Computer Use）能力，从会操作到像人一样思考。
+长期以来，Agent处理复杂任务的瓶颈在于，无法像人类一样感知和交互软件。
+Vercept，正是解决这一难题的高手。
+它由前Meta、Ai2业界大牛Ross Girshick、Luca Weihs、Kiana Ehsani于2024年创办。
+成立以来，Vercept一直深耕于AI系统如何像人类一样，在日常软件中「观察」并「行动」。
+这种专业积淀与Anthropic目前正全力攻克的顶级难题高度契合。
+上一周，Claude Sonnet 4.6在「计算机使用」上实现了令人惊叹的表现——
+在OSWorld基准测试中，它已从2024年底不足15%狂飙至如今的72.5%，正逼近人类水平。
+未来几周，Vercept的能力将全面集成到Claude中。
+继收购Bun之后，Anthropic再次通过降维打击，向外界宣告：未来AI的竞争，更要看谁的「手」更好使。
+参考资料：
+https://x.com/natjjin/status/2026741364038488322?s=20
+https://www.perplexity.ai/products/computer
+秒追ASI
+⭐点赞、转发、在看一键三连⭐
+点亮星标，锁定新智元极速推送！

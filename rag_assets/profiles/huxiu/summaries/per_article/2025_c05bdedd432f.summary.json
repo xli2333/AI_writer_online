@@ -1,0 +1,97 @@
+{
+  "analysis_schema_version": 3,
+  "id": "c05bdedd432f",
+  "year": "2025",
+  "date": "2025-02-28",
+  "title": "如何看待“男性陪产假不低于30天”？",
+  "relative_path": "2025/2025-02-28_如何看待“男性陪产假不低于30天”？.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\huxiu\\raw_materials\\2025\\2025-02-28_如何看待“男性陪产假不低于30天”？.txt",
+  "char_count": 288,
+  "content_type": "热点评论",
+  "entities": [
+    "男性陪产假"
+  ],
+  "industry": [
+    "社会公共事业",
+    "人力资源"
+  ],
+  "topic": [
+    "生育政策",
+    "男性陪产假",
+    "性别平等"
+  ],
+  "genre": "议论文",
+  "style": [
+    "时事评论"
+  ],
+  "audience": [
+    "大众读者",
+    "职场人士",
+    "政策研究者"
+  ],
+  "intent": [
+    "探讨社会议题"
+  ],
+  "tone": [
+    "客观",
+    "理性"
+  ],
+  "primary_question": "如何评价将男性陪产假延长至不低于30天的建议或政策？",
+  "thesis_type": "评价型",
+  "thesis_sentence": "因原文内容缺失，仅提供标题，无法提取完整核心观点；其核心聚焦于“男性陪产假不低于30天”这一政策动向。",
+  "structure_pattern": "未知（仅有标题）",
+  "section_functions": [
+    "提出议题（标题）"
+  ],
+  "argument_moves": [
+    "通过提问引出社会热点"
+  ],
+  "core_argument": "由于仅提供标题和元数据，无法判断作者的具体论证逻辑。",
+  "key_points": [
+    "男性陪产假时长建议调整为不低于30天"
+  ],
+  "opening_pattern": "提问式标题引出话题",
+  "ending_pattern": "未知",
+  "evidence_types": [
+    "政策动议"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "远距离",
+  "stance_strength": "中立",
+  "sentence_rhythm": "未知",
+  "abstraction_level": "中等",
+  "transferable_moves": [
+    "利用高关注度的社会政策作为文章切入点",
+    "使用疑问句式标题提升点击率"
+  ],
+  "anti_patterns": [
+    "内容极短（仅标题和链接），无法提供实质性信息"
+  ],
+  "notable_phrases": [
+    "男性陪产假不低于30天"
+  ],
+  "title_score": 80,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 5,
+  "structure_score": 5,
+  "style_score": 20,
+  "publishability_score": 10,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "is_advertorial": false,
+  "advertorial_type": "none",
+  "advertorial_confidence": 0,
+  "promotional_intensity_score": 0,
+  "editorial_independence_score": 100,
+  "brand_exposure_level": "低",
+  "source_transparency": "清晰",
+  "advertorial_signals": [],
+  "summary_200": "该内容仅包含文章标题、日期及链接，缺乏正文。标题探讨的主题是“男性陪产假不低于30天”，属于社会民生类热点话题。由于信息密度极低，除标题外的写作机制与证据特征无法有效提取。当前状态下，该内容仅具有索引价值，无法用于深度分析或写作参考。",
+  "summary_500": "本文档记录了2025年2月28日发布的关于“男性陪产假不低于30天”的微信文章元数据。文章源自微信公众号，旨在针对生育配套政策中的陪产假延长议题发起讨论。标题通过提问方式引导读者关注男性在家庭生育中的责任分担及相关权益保障。然而，由于提供的输入材料未包含正文，仅有标题和元数据，无法拆解其具体的论点、论据支持及逻辑结构。从标题来看，它触及了性别平等、职场环境、人口出生率等深层社会议题。基于现有信息的匮乏，该条目在结构化分析中被判定为“低价值”，仅能作为热点议题的追踪记录，不能作为RAG生成的有效素材。建议获取全文后再进行二次深度分析。"
+}

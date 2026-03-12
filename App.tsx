@@ -54,6 +54,18 @@ const fallbackStyleProfiles: StyleProfileDescriptor[] = [
     shortLabel: 'XinZhiYuan',
     description: '偏 AI 前沿快讯、论文拆解、模型产品观察与产业人物叙事的中文科技媒体写作风格。',
   },
+  {
+    id: 'huxiu',
+    label: '虎嗅 Huxiu',
+    shortLabel: 'Huxiu',
+    description: '偏商业观察、科技产业攻防、消费公司拆解、人物深描与社会情绪观察的中文媒体写作风格。',
+  },
+  {
+    id: 'wallstreetcn',
+    label: '华尔街见闻',
+    shortLabel: 'WallstreetCN',
+    description: '偏宏观政策传导、市场定价、机构策略解读与公司资本故事的中文财经媒体写作风格。',
+  },
 ];
 
 const defaultOptions: WritingTaskOptions = {

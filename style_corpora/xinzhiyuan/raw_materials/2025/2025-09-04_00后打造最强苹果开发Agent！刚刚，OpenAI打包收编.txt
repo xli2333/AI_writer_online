@@ -1,0 +1,70 @@
+标题: 00后打造最强苹果开发Agent！刚刚，OpenAI打包收编
+日期: 2025-09-04
+链接: http://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652624878&idx=2&sn=98cb103d13e1934f018cfa11c8123f24&chksm=f128a31fc65f2a09ab51a1c30f88387d0ac093c28285cd4f6671e0924291caafcfe076d25224#rd
+来源模式: wechat
+----------------------------------------
+
+新智元报道
+编辑：艾伦
+【新智元导读】
+就在今天，Xcode最流行的超强编程Copilot插件Alex，宣布被OpenAI收编，全员加入Codex开启新工作！这会为Codex在开发者更偏爱的Mac端的攻城略地带来哪些变数？
+今天凌晨，Xcode最流行的超强编程Copilot插件Alex，其创始人Daniel Edrisian宣布Alex被OpenAI收编！
+团队的所有成员加入OpenAI的Codex团队，开启新工作。
+如果你不是使用Mac的程序员，或许对Alex这个Copilot并不熟悉。
+或许更被关心的是，OpenAI此举，意味着什么？
+Alex：Xcode中最好的Copilot
+Xcode是苹果官方推出的对标微软Visual Studio的大型IDE，功能全面而强大，在Mac端市场占有率很高，也是iOS、iPadOS、macOS的App开发必不可少的编程工具。
+而Alex，则是Xcode众多插件中表现最亮眼的Copilot。
+Alex的产品形态是Xcode的侧边栏插件，被誉为
+「
+Xcode 缺失的侧边栏
+」
+。
+它通过macOS无障碍接口深度集成Xcode，使AI能
+「
+看见
+」
+IDE界面并执行操作。
+得益于此，Alex不仅提供类似ChatGPT/Copilot的代码自动补全和对话式建议功能，还能直接在Xcode中操作和修改代码，实现一系列自动化开发任务。
+智能代码补全与内联改写、自动错误修复、Agent模式与任务自动执行、环境操作与搜索，这些统统不在话下。
+这种深度集成与自动化能力，使其在苹果开发者中获得了极佳口碑，不少开发者评价它为
+「
+Xcode上最强的AI编程助手
+」
+。
+根据投资方披露数据，产品上线一周内即积累了超过1200名活跃用户，许多iOS开发团队将其纳入日常工作流。
+其用户群不仅包括独立开发者，也覆盖了多邻国、Notion、LinkedIn、Robinhood、字节等知名公司的移动开发人员。
+2025年8月，Alex宣布完成种子轮融资
+530万美元（约3800万人民币）。
+而该团队，包含创始人，总共只有3人。这个团队有何独到之处？
+创始人Daniel Edrisian：资深iOS开发者
+Alex创始人Daniel Edrisian，是一位00后小哥。
+从高中开始，他就开始在旧金山湾区做全职iOS开发者，并在业余时间分享iOS App开发教程。
+在此期间，他的成果得到了苹果官方的高度认可，拿到了三次苹果WWDC学生奖学金。
+2018年，他进入了加州伯克利，学习计算机与电子工程（EECS），成绩拔尖。
+大学期间，他先后在苹果、Meta、谷歌等大公司实习，专注iOS开发。
+后面他专门gap了一年，作为头号员工，加入了谷歌同事新创办的FlutterFlow。
+该公司主要建设低代码开发平台，目前已在A轮融资2550万美元。
+本科毕业后，他立刻着手创办了Alex，并入选了著名孵化器Y Combinator 24秋名单，产品好评如潮，并获530万美元种子轮融资。
+他在iOS开发上积累的丰富经验，让他成为最理解使用Xcode开发过程中可能会遇到的痛点的人之一。
+而现在，他已和他的团队共同加入了OpenAI Codex团队。
+Codex或意图进入Xcode，扩大疆域
+OpenAI为何要吸纳Alex团队？
+Codex的传统强项还是在Github Copilot，
+而进入Xcode或许是Codex扩大影响力的真实诉求。
+Alex所擅长的领域，
+苹果生态开发的
+AI
+自动化，正是Codex版图中相对缺少的一块。
+对于OpenAI来说，这次并入既是获取人才，也是获取技术。
+Alex已经验证了Xcode中AI助手的市场需求和可行性，将其技术和经验并入Codex团队，可以加速OpenAI对苹果App开发支持的布局。
+而对于Alex团队，他们也有了机会在OpenAI庞大的资源和平台上
+「
+将梦想放大
+」
+，影响更庞大的开发者群体。
+这场联姻带来了显著的双赢。
+Codex后续会发生哪些显著的积极变化，就让我们拭目以待。
+参考资料
+：
+https://www.alexcodes.app/blog/alex-team-joins-openai

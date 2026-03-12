@@ -1,0 +1,12 @@
+{
+  "model": "gemini-3-flash-preview",
+  "evaluated_at": "2026-03-12T04:40:47.538Z",
+  "total_tasks": 6,
+  "patch_win_rate": 0,
+  "pass": false,
+  "summary": {
+    "base_wins": 6,
+    "patch_wins": 0,
+    "ties": 0
+  }
+}

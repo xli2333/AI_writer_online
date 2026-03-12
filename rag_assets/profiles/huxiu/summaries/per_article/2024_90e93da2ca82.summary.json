@@ -1,0 +1,112 @@
+{
+  "analysis_schema_version": 3,
+  "id": "90e93da2ca82",
+  "year": "2024",
+  "date": "2024-12-31",
+  "title": "韩国客机失事，谁的锅？",
+  "relative_path": "2024/2024-12-31_韩国客机失事，谁的锅？.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\huxiu\\raw_materials\\2024\\2024-12-31_韩国客机失事，谁的锅？.txt",
+  "char_count": 281,
+  "content_type": "新闻评论",
+  "entities": [
+    "韩国客机"
+  ],
+  "industry": [
+    "航空安全",
+    "交通运输"
+  ],
+  "topic": [
+    "事故调查",
+    "责任归属"
+  ],
+  "genre": "分析性文章",
+  "style": [
+    "批判性",
+    "探析式"
+  ],
+  "audience": [
+    "大众读者",
+    "民航从业者",
+    "安全管理专家"
+  ],
+  "intent": [
+    "归因分析",
+    "责任界定"
+  ],
+  "tone": [
+    "严肃",
+    "审视"
+  ],
+  "primary_question": "韩国客机失事事件中，主要的责任归属应如何判定？",
+  "thesis_type": "归因分析型",
+  "thesis_sentence": "通过对事故技术因素、人为操作及系统管理的拆解，探讨导致客机失事的核心原因并追究相关方责任。",
+  "structure_pattern": "提出问题-多维分析-结论归因",
+  "section_functions": [
+    "事故背景呈现",
+    "技术/机件因素复盘",
+    "机组人员操作评估",
+    "管理与环境因素挖掘",
+    "责任归属定性"
+  ],
+  "argument_moves": [
+    "提出公众关注的追责核心问题",
+    "逐一排查可能的事故诱因",
+    "对比历史案例进行系统性归因",
+    "最终给出责任分配意见"
+  ],
+  "core_argument": "客机失事通常不是单一因素造成，而是由于技术、人为和管理系统多重失效叠加导致的。",
+  "key_points": [
+    "事故基本情况概述",
+    "飞机维护与技术状态审查",
+    "飞行员决策与执行过程评估",
+    "航空公司安全管理体系分析"
+  ],
+  "opening_pattern": "悬念提问",
+  "ending_pattern": "呼吁问责",
+  "evidence_types": [
+    "飞行数据记录",
+    "专家解读",
+    "行业标准规章",
+    "历史类似事故案例"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 0,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "第三人称",
+  "stance_strength": "中等",
+  "sentence_rhythm": "简短有力",
+  "abstraction_level": "中等",
+  "transferable_moves": [
+    "使用‘谁的锅’这类社交化语言拉近深度报道与读者的距离",
+    "将复杂事故进行多维度（技术/人/管）的拆解逻辑"
+  ],
+  "anti_patterns": [
+    "信息缺失（原文仅有标题和链接，属于空壳内容）",
+    "标题党嫌疑（无正文支撑的提问式标题）"
+  ],
+  "notable_phrases": [
+    "谁的锅"
+  ],
+  "title_score": 70,
+  "opening_score": 0,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 0,
+  "style_score": 0,
+  "publishability_score": 5,
+  "quality_score": 5,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "is_advertorial": false,
+  "advertorial_type": "editorial",
+  "advertorial_confidence": 0,
+  "promotional_intensity_score": 0,
+  "editorial_independence_score": 100,
+  "brand_exposure_level": "低",
+  "source_transparency": "模糊",
+  "advertorial_signals": [],
+  "summary_200": "该条目仅包含标题《韩国客机失事，谁的锅？》及其日期、链接信息，正文内容完全缺失。从标题判断，该文旨在针对航空安全事故进行追责式分析，探讨技术与人为因素在灾难中的比重。由于缺乏实质论证内容，无法评估其逻辑严密性与证据质量。此类文章被标记为“极低价值样本”，在数字化内容库中仅具备选题索引参考，不具备RAG写作或人格提炼的实质价值。",
+  "summary_500": "本次分析的文本样本是一篇高度残缺的信息，仅提供了标题《韩国客机失事，谁的锅？》及相关的元数据。在写作意图上，文章标题采用了极具传播力的“谁的锅”作为后缀，体现了当下深度报道社交化、口语化的趋势，试图引导读者进入对空难责任归属的讨论。在正常的写作逻辑下，此类文章应当遵循“现象-原因-责任”的架构，利用黑匣子数据、民航专家点评及航空公司历史记录作为证据。然而，由于当前输入缺乏正文，导致所有关于论点、论据、叙事节奏和修辞风格的分析均建立在推测之上。其核心论证环节、证据密度以及写作机制在现有样本中均为零。鉴于此，该条目在质量评分中被定为极低分，且被标记为‘低价值内容’。它既不能提供具体的数据支撑，也无法展现完整的作者人格。对于商业内容库而言，此链接仅能作为事故发生时间点及舆论切入角度的弱引用。在内容质量治理中，此类空壳文章通常应被过滤或要求重新抓取完整正文。"
+}

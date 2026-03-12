@@ -1,0 +1,213 @@
+标题: 谷歌放大招！Gemini「吞下」2.5亿地图数据，路痴AI一夜成精
+日期: 2025-10-23
+链接: http://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652637907&idx=2&sn=acb77a2b869161dc9c32fe4289776b59&chksm=f12f7e22c658f7344a586bb277ccd8242f51bc286e2e96a8958b9888104217e8a4c9c66f091d#rd
+来源模式: wechat
+----------------------------------------
+
+新智元报道
+编辑：KingHZ
+【新智元导读】
+世界在AI眼中活了过来！谷歌Grounding with Google Maps功能上线，Gemini可调用2.5亿地点信息，结合搜索工具，提供更准确、更及时的答案，完美适用于旅行规划和本地服务。
+谷歌放大招！
+谷歌推出了「Grounding with Google Maps」功能，Gemini接入Google Maps。
+过去，语言模型理解文字；现在，它能理解「地理空间」。
+地图+AI解锁位置智能。
+现在，Gemini可直接访问Google Maps的2.5亿个实时地理数据——
+让AI拥有「地理空间理解与推理能力」。
+谷歌这波操作，打造了字面意义上的「世界模型」，让X用户万有直呼牛P！
+锚定谷歌地图，AI看懂世界
+本月17日起，谷歌在
+Gemini
+API
+中上线
+谷歌地图工具（Google Maps tool）
+，让开发者可以把应用
+锚定（Grounding）在地图数据之上。
+借此，Gemini的
+推理能力
+（reasoning capabilities）能够与来自超过
+2.5亿个地点
+的真实数据相连接，催生出一类全新的、
+具备
+地理空间感知（geospatial-aware）
+的AI产品。
+就像谷歌
+搜索锚定（Grounding with Google Search）
+一样，
+谷歌地图锚定（Grounding with Google Maps）也能在涉及位置的信息查询中，为模型提供丰富且实时更新
+的数据支撑。
+现在，AI可以知道
+世界上的每个地方是什么、在哪儿、有什么、什么时候开门，怎么订票.... 如何到达？
+这个工具的作用是：
+当Gemini发现你的问题涉及地理、位置、路线、商户或区域信息时，它自动调用Maps数据来回答。
+这次更新不仅是技术增强，更是AI能力边界的拓展。
+这让第三方开发者把结合Gemini的推理能力与Maps的地理数据，生成更准确、更贴合现实的回应——
+这一特性，
+竞争对手
+如OpenAI的ChatGPT、Anthropic的Claude，乃至众多开源模型，在
+短期内望尘莫及
+。
+这种融合尤其适用于
+本地搜索、外卖与配送、房地产、旅游规划
+等领域——
+任何需要
+考虑
+距离、实时可用性或位置个性化
+的场景。
+当用户的地理位置已知时，开发者可在请求中传入经纬度参数，以提升回答的相关性和准确度。
+谷歌建议，仅在查询
+明确涉及地理语境时，
+启用该工具，以节省性能与成本。
+根据开发者文档，
+定价为
+每1000次请求25美元
+——对于高频应用而言并不便宜。
+AI觉醒地理智能
+真「世界模型」？
+依托谷歌地图在世界范围内庞大数据库，Gemini这项新功能提供相关且个性化的内容，从而提升用户体验。
+四类典型应用场景：
+智能地理问答
+：完整且准确地回答特定地理位置的问题。
+路线规划
+：构建对话式旅行规划工具和本地指南。
+个性化地图推荐
+：根据位置和用户偏好（例如餐厅或商店）推荐地图注点。
+智能LBS应用
+：为社交、零售或外卖服务打造基于地理位置的体验。
+在需要考虑地理位置远近和当前事实数据的使用场景中，例如查找「我附近的最佳咖啡店」或获取路线，谷歌歌地图的 「grounding」（
+事实锚定
+）功能表现出色。
+已有开发者，利用新API，结合Geminin和谷歌地图探索柏林：
+企业可以用它来：
+商业选址
+：帮助零售商找到最佳新店位置。它通过分析人口统计数据、人流量、竞争对手情况以及当地评论情绪，来给出建议。
+动态
+物流
+与配送优化
+：实时路线优化，专为物流公司设计。它能根据实时交通、天气和客户可用时间进行调整。
+房地产市场
+分析
+：使用地理空间数据来评估房产价值、预测市场趋势，并找出投资机会。
+现场员工管理
+：专门为现场服务团队设计。它提供优化的路线，并给员工现场所需的客户和任务关键信息。
+超本地化营销
+：这是一个营销工具，能在实时中向客户发送个性化的、基于位置的优惠。比如，当客户走过一家商店时，发送折扣码。
+更多功能
+为了构建更强大、上下文更充足的应用，在同一次请求中，现在Gemini可同时启用
+基于谷歌地图的事实锚定（Grounding with Google Maps）和基于谷歌搜索的事实锚定（Grounding with Google Search）
+：
+Google地图
+（Google Maps）：
+提供结构化、可核验的
+事实数据
+，如地址、营业时间、用户评分
+。
+Google搜索
+（Google Search）：
+提供来自
+全网
+的描述性、及时性上下文，如活动日程、新闻与文章
+。
+举例：当用户询问「
+比尔街（Beale Street）哪里有现场音乐」
+，Gemini组合使用两种工具，模型可以用
+地图
+拿到场馆营业时间，用
+搜索
+找到当晚演出的具体开场时间。
+谷歌内部评估显示，
+同时使用两种锚定工具，
+相较只用其中之一，回答质量有显著提升
+。
+目前，只有特定的 Gemini 模型支持依托谷歌地图实现
+事实锚定
+：
+Gemini 2.5 Flash-Lite、Gemini 2.5 Pro、Gemini 2.5 Flash和Gemini 2.0 Flash（但不包括 2.0 Flash Lite）。
+为便于直观展示基于地图数据锚定的结果，你还可以利用返回的
+上下文令牌（context token）来获取一个交互式插件（interactive widget）
+。
+它还可以渲染到应用的
+用户界面
+（UI）中，为用户提供熟悉的使用体验，并呈现相关照片、用户评论（reviews）和其他细节。
+快速上手
+要上手使用，请在
+Gemini
+API
+请求中启用
+基于 Google 地图的事实锚定（Grounding with Google Maps）
+工具。
+下面是使用Python SDK的示例：
+from
+google
+import
+genai
+from
+google.genai
+import
+types
+client = genai.Client()
+prompt =
+"What are the best Italian restaurants within a 15-minute walk from here?"
+response = client.models.generate_content(
+model=
+'gemini-2.5-flash-lite'
+,
+contents=prompt,
+config=types.GenerateContentConfig(
+tools=[types.Tool(google_maps=types.GoogleMaps())],
+# Optionally provide the relevant location context (this is in Los Angeles)
+tool_config=types.ToolConfig(retrieval_config=types.RetrievalConfig(
+lat_lng=types.LatLng(
+latitude=
+34.050481
+, longitude=-
+118.248526
+))),
+),
+)
+print
+(response.text)
+if
+grounding := response.candidates[
+0
+].grounding_metadata:
+if
+grounding.grounding_chunks:
+print
+(
+"Google Maps sources:"
+)
+for
+chunk
+in
+grounding.grounding_chunks:
+print
+(
+f'- [
+{chunk.maps.title}
+](
+{chunk.maps.uri}
+)'
+)
+详细询问有关
+特定地点
+的问题，根据谷歌用户评价和其他谷歌地图数据获取答案。
+根据用户偏好和特定地理区域，
+获取
+量身定制的推荐
+:
+协助规划行程，生成包含路线信息和各种地点信息的为期多天的计划，非常适合旅行应用。
+在此示例中，通过在谷歌地图工具中启用插件（widget），用户请求了
+googleMapsWidgetContextToken
+。
+启用后，返回的令牌可用于使用Google Maps JavaScript API中的
+<gmp-places-contextual> component
+渲染上下文地点插件。
+呈现widget后，效果如下所示：
+参考资料：
+https://blog.google/technology/developers/grounding-google-maps-gemini-api/
+https://x.com/googleaidevs/status/1979277829750821178
+https://x.com/googlemaps/status/1978154030233711046
+https://x.com/imxiaohu/status/1979824219572847009
+https://cloud.google.com/vertex-ai/generative-ai/docs/grounding/grounding-with-google-maps?hl=zh-cn
+https://venturebeat.com/ai/developers-can-now-add-live-google-maps-data-to-gemini-powered-ai-app

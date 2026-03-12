@@ -1,0 +1,124 @@
+标题: 实测Manus和Lovart，谁才是Agent新王？
+日期: 2025-05-18
+链接: http://mp.weixin.qq.com/s?__biz=MTQzMjE1NjQwMQ==&mid=2656092658&idx=3&sn=25d2761415e08c79020e45cc9f34a1ce&chksm=66c76e6c51b0e77af2e6fdb5b15e9131e124a0172aa2754691c68ef84717ef135fb4c410c733#rd
+来源模式: wechat
+----------------------------------------
+
+本文来自微信公众号：
+直面AI
+，作者：余测，题图来自：AI生成
+这几天，我的社交媒体又被一张张 AI 画的杂志封面刷屏了。不是即梦，也不是 Midjourney，是一个几乎没人听说过的新名字 ——Lovart。
+眼熟的请举手，大概率你也经历过这几天被 “设计圈 Manus” 轮番轰炸的时刻。
+一个邀请码闲鱼 500 块、一堆设计师高呼 “饭碗不保”、连业内知名投资人朱啸虎都忍不住发朋友圈点评 “今天的模型能力，只有垂直场景的 AI Agent 才能真正达到商业化的质量。”怎么看都像是熟悉的剧情又重演了。
+搞笑的是，三天后 Manus 也官宣上线图像生成功能。看到 Lovart 太猛，赶紧回来补课了是吧。
+感觉 Agent 赛道现在不是卷概念，而是像在打群架。
+前后脚冲进公众视野的 Agent 代表作，虽然出发点不同，但都绕不开一个问题：
+谁更接得住真实场景？谁更像是下一代内容工具？
+我们也第一时间都上手测了，今天就来聊聊这两位 ——Manus 和 Lovart，到底谁更值得设计师和创作者们认真看一眼。
+Lovart 和 Manus 长什么样，差在哪？
+开始玩之前，先跟大家说一个前情提要。
+Manus 是当下所谓的通用型 Agent，定位是 “什么都能干点” 的数字助理，可以解压文件、处理简历、写脚本、查房源、甚至部署网站。图像生成只是它最近加的新功能。
+而 Lovart 从一开始就是为创意设计服务的垂直 Agent，目标就很清楚：不是让你玩 AI 画图，而是让你像接乙方一样，把一整套设计交给它。
+两者在体验上的分歧也很明显。
+先说 lovart。它的正式使用的界面不复杂。右边是聊天框，左边是一块无限画布。
+你直接输入prompt：
+“Generate 5 Pinterest-style square graphics for 'muji'.Themes:1 product flatlay，1 behind-the-scenes studio shot，1 customer quote，1 moodboard collage，1 tip or value graphic.Use warm， editorial color palette with pin-friendly layout.”
+然后它就开始干活了。
+几分钟后，你能看到几版提案、主视觉极简风格图，还配了说明文字，解释设计思路。
+出来的效果还真有muji那味了。
+你可以让它继续往下做。延展图、票根、T 恤、社交图、户外招贴，一套流程全下来，感觉真的像请了个设计团队......
+那 Manus 呢？我们拿相同的 prompt 横向测评下。
+它像之前其他 Manus 的项目一样先建一个 to do list。
+它会多向你确认一步细节。
+向你展示 Manus’s computer 正在做什么，比如它浏览了一下 muji 的官网：
+出来的效果也不错。
+整体流程不短，输出也不差，但问题是，它给的是结果，不是系统。
+你明显能感觉到，
+Lovart 是在执行一个内部清晰的设计逻辑，而 Manus 是在调模型 + 拼素材。一个像交稿，另一个像演示。
+看来难不倒它们，我们陆续跑了一些更狠的 case，一起来看看。左边白底的是 lovart 跑出的图，右边黑底是 Manus 的。
+• 美学理解能力
+我们让它尝试一组时尚类封面设计，主题是：用那些广告里不常出现的身体作为主角，比如年老的皮肤、有残肢的手臂、产后松弛的腹部、疤痕或者脂肪褶皱。图像不许煽情、不许猎奇，只需温柔地呈现这些身体的自然状态。文字布局也要轻柔，像在耳边说悄悄话。
+prompt：'' Create 5 fashion/beauty-style covers using bodies that usually aren’t represented in ads: aging skin， disabled limbs， post-pregnancy belly， scars， or fat folds.
+Treat each body with dignity and softness， not dramatized.
+Text layout is gentle， almost whispering.''
+每一张图都带有节制感和审美克制，没有强调差异，反而营造出一种冷静、静态却不疏离的高级氛围。排版也偏编辑风，非常“i-D”杂志那一挂。
+我们测试了一个看似胡闹但实际对图像信息组织要求比较高的项目：设计四种情绪零食包装。
+prompt：'' Create mock packaging designs for fictional emotional snacks:
+“Anxious Puffs，” “Happy Syrup，” “Regret Cans，” and “Stability Crackers.”
+Design each package as if it were on a real shelf， but with surreal warning labels like “May cause emotional disintegration.” Visual style should be colorful， ironic， and shelf-ready. ''
+最终生成出来的东西，真的像能摆进便利店里。
+• 概念化表达能力
+这一次，我们让它生成一组“数字灾难艺术馆”的视觉内容。把“bug”变成“展品”。
+prompt：''Turn 5 everyday tech failures into visual museum exhibits.Use screenshots of errors like 404 pages，software crashes， dead pixels， or systemreboots.Each visual should present the glitch as an artifact under glass， with label tagslike "Exhibit 1: Frozen Memory" or "404 - Lost Connection." Style should feel archival， poetic， and strange.''
+两位选手交出的作品是将蓝屏、崩溃对话框、死像素等界面元素，以玻璃展柜+标签的方式展出。那种考古感结合数字，克制又有情绪。甚至让我们想起了 MoMA 的网络艺术早期收藏。
+prompt：''Create a 5-poster series titled "You' ve Been Googled."Each visual should depict a different person entirely made out of browser UI elements - search bars， autocomplete text， cookie banners， location prompts，or loading spinners. Every figure should represent a different data-driven emotion (curiosity， shame， distraction，compliance， overload). Use halftone textures， retro red backgrounds， and bold comic composition.''
+这组视觉看起来像是上世纪 90 年代的漫画海报，红黑配色、半色调肌理、粗体对话框，但每个人物都是由 UI 元素拼出来的。
+有的角色全身是 cookie 同意按钮，有的是由 loading 圈组成的脸，情绪也精准贴题，羞耻、顺从、信息过载。
+• 信息组织能力
+最后，我们用 Lovart 做了一个 “我被拷贝成 PNG” 的故事
+prompt：'' Create a 9-panel comic strip titled “The Day I Became a PNG.”
+The protagonist， after being dragged into a clipboard， loses their third dimension and exists only as a transparent cutout. They get reused in memes， covered by watermarks， misidentified by AI. By the last frame， they shrink into a pixel. Draw in vintage editorial comic style.''
+但实测感觉 Agent 对 prompt 的要求比一般画图类 AI 要高一点。它不太接受那种 “堆概念、罗列名词” 的提示，它需要的更像是一个 creative director 写给设计团队的 brief：
+说清楚风格
+（style）
+、题材
+（subject）
+、构图逻辑
+（layout）
+，甚至语气和情绪。也就是，不是你告诉它 “画什么”，而是你要告诉它 “以什么方式来表达什么样的主题”。
+一旦这些信息模糊、口吻不准，它也会生成一堆丑丑的 AI 图，版式崩坏、颜色用力过猛、内容中心模糊。
+不瞒大家说，也就是我刚一上手出来的效果图。belike：
+一路看下来，大家应该心里都有感知，
+两位选手生图能力不分伯仲。
+但是从速度上来看，两者差距不小。Lovart 生成三四张图只要几分钟，一个视频十几分钟搞定，还支持并发跑多个任务；而 Manus 单单出一张图就可能等上 15~30 分钟。这一来一回，差得可不止一点点。
+只希望正式上线后，不要像 Manus 一样那么贵吧。
+为什么 Lovart 更值得关注
+一句话 —— 不是生成图像，而是在做设计。
+和市面上那些在软件里塞 AI 按钮的做法不同，Lovart 像是干脆从 0 重建了一整个设计工作流。
+不是堆图，而是试图给你一条完整的视觉叙事链。
+你可以理解为，它不是 “做图” 的 AI，而是 “接单” 的 AI。它要做的是把一个完整的设计任务，从需求到交付，一次跑通。这种目标，和 Midjourney 比生成精美、Figma 提升效率的方向完全不同。
+它既懂如何对话获取需求，也会自动搜集素材、构图排版、生成草图、导出成品。甚至素材是分好图层的，直接可以拿去微调或做后续设计。
+说真的，不是重新 roll 图，而是直接在图层上改，这一点就已经领先很多 AI 绘图工具或者 Manus 这种通用 Agent 好几个身位了。
+而且你用下来，丝毫不会觉得在用一个 Agent。看它和 Manus 界面的差异就知道，它不展示任务列表
+（会给你折叠好）
+、也没有虚拟机的概念。
+你就是在聊天，或者有需求，它就开始干活。
+当然也有不少的问题。
+比如
+稳定性就有点捉急。
+任务一复杂，比如你说要四张图、每张配不同城市背景，它就可能中途卡住。偶尔还有排版错乱，中文里出现乱码的情况也不少，所以
+真实使用的时候也推荐大家用英文。
+还有，
+修改后的素材不会自动联动更新，
+比如你改了 Logo，海报不一定跟着同步，要手动再跑一遍。
+目前还是更偏创意表达类任务。遇到高度结构化或面向严肃商业应用的需求，它的表现就没那么好了。它确实已经很聪明了，但
+离真正的乙方还有一点距离。
+但是它还是值得我们认真多看一眼。
+“壳” 够大不算本事，“魂” 扎实才叫 Agent
+2025 不愧是 Agent 元年，无论大厂、中厂、小厂，大家都在做 AI Agent。
+但你会发现，大多数产品其实还停留在 “通用调度” 这一步，拼的是谁能接入更多插件，谁能把任务拆得更细。Manus 就是其中代表，它可以打开文件、写表格、发邮件、部署网站，任务链很流畅，调度能力确实不错。
+很多人说不喜欢 Manus，是因为它不够强，其实不太对。
+Manus 并不弱，它只是 “样样通、样样松”。
+在你真正需要它像人一样做事，比如去完成一套有逻辑、有审美、有交付要求的设计任务时，它就露出只是在调模型的底了。
+这不是 Manus 一家的问题，而是现在大多数 Agent 的通病：
+它们本质上还停在 L2～L3 的调度层，用大模型当引擎，但缺乏私域知识、缺乏任务记忆，更缺乏某个行业的专业流程结构。说得直白点，
+“壳” 太大，“魂” 太轻。
+而 Lovart 正好反着。它不是万能的，但它非常专注。
+你一上手就能感受到，它内置了完整的创意流程：理解 brief、生成视觉、自动排版、延展物料、图层结构清晰…… 从用户下达任务开始，到结果落地结束，全部接住。
+这也是垂直 Agent 特别的地方。现在很多 Agent 只能是演示级别，你想拿它交稿是不可能的，因为压根接不住项目全流程的复杂度。
+但 Lovart 已经可以跑通一个完整流程。在真实需求场景里，它不会断链、不会跳步、也不会输出一堆不靠谱的结果。
+不炫技，不卖惨，不整那些让用户紧张的术语和操作。尽可能把创作这件事，变得轻松、流畅、靠谱。
+我们常说 “AI 工具都像是半成品”，但 Lovart 已经初步做出了成品感。
+Lovart 虽然还不完美，但它起码指了一条正确的路：
+如果你真想做出一个可用的 Agent，就得扎进一个场景，吃透这个行业的工作节奏、拆清楚任务链条，把流程、语境和专业经验都写进系统里。
+是靠结构、靠设计、靠经验的内化。这才是垂直 Agent 的灵魂。
+因为它的出现，说明 AI Agent 这个概念不只是一个口号，它是有可能真的落地到内容产业里的。
+所以，别急着说它是 “设计师的替代者”，也别太早说它 “高开低走”。这个产品可能不是终点，但它是极少数真正动了创意流程核心的产品。
+从这个意义上说，它的试验价值，远大于眼前的热度。
+本文来自微信公众号：
+直面AI
+，作者：余测
+本内容为作者独立观点，不代表虎嗅立场。未经允许不得转载，授权事宜请联系hezuo@huxiu.com
+如对本稿件有异议或投诉，请联系tougao@huxiu.com
+End
+想涨知识 关注虎嗅视频号！

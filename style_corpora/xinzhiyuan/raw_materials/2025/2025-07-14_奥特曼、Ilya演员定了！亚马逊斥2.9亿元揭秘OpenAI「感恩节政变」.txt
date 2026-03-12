@@ -1,0 +1,75 @@
+标题: 奥特曼、Ilya演员定了！亚马逊斥2.9亿元揭秘OpenAI「感恩节政变」
+日期: 2025-07-14
+链接: http://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652609282&idx=2&sn=531c8a334b345ae5ed5eea959a87141a&chksm=f128eff3c65f66e57021a85ad7342d43e115c23fd6af594eeb8cd6fcee5b9f876e1355283ff3#rd
+来源模式: wechat
+----------------------------------------
+
+新智元报道
+编辑：英智
+【新智元导读】
+2023年感恩节，OpenAI创始人奥特曼被炒鱿鱼，五天五夜的科技圈大戏席卷全网。亚马逊斥资4000万美元，将这段「AI圈权游」搬上大银幕，Andrew Garfield化身奥特曼，带你重温那场惊心动魄的逆转剧情！
+亚马逊砸4000万美元拍的电影《Artificial》预计明年上映，聚焦2023年感恩节周末奥特曼被OpenAI突然炒鱿鱼的事件。
+整整五天五夜，科技圈的人都盯着X，紧张得像在追剧。
+事件高潮迭起，假期结束时，一切又恢复正常了。
+奥特曼神奇复职！还有庆祝趴体，他那张「逆转王牌」的表情包火遍了全网。
+AI大佬齐聚，戏里戏外都精彩
+当时，AI圈一众大佬上演了一出喜剧惊悚大戏，剧情抓马，太适合改编成电影了！
+奥特曼由《超凡蜘蛛侠》的Andrew Garfield饰演，他对公司崩盘的戏码超在行。
+他之前在《社交网络》里演过Facebook联合创始人Eduardo Saverin。
+Andrew Garfield（中）与《社交网络》联合主演Jesse Eisenberg（左）和Justin Timberlake（右）
+他的真女友Monica Barbaro饰演OpenAI的CTO Mira Murati，她是炒掉奥特曼的董事会成员之一。
+之后她还当了几天临时CEO，后来跳槽创立了AI独角兽公司Thinking Machines Lab，拿到了20亿美元种子轮融资，估值直接飙到100亿！
+饰演OpenAI CTO Mira Murati的Monica Barbaro
+Barbaro因在Timothée Chalamet的Dylan传记片里演Joan Baez火了一把。
+奥斯卡提名演员Yura Borisov饰演OpenAI首席科学家Ilya Sutskever。
+这家伙带头煽动了董事会「叛乱」，剧情曲折得像过山车。
+饰演Ilya Sutskever的奥斯卡提名演员Yura Borisov
+后来微软CEO Satya Nadella提出要挖走数百名威胁辞职的OpenAI员工，促成了奥特曼回归。
+Nadella成了英雄！
+大家疯狂解读奥特曼推文里的彩蛋，发现：「我永远爱你=ILYA」（I love you always=ILYA），猜测Ilya发现了啥秘密，让AGI失控了？
+同时，Ilya在计划自己的退场。
+他创办了Safe Superintelligence Inc.，融了10亿美元，估值据说高达300亿。
+还有个小道消息：虽然还没确定，但《超级泵》主演Joseph Gordon-Levitt可能参演。
+他老婆Tasha McCauley是前OpenAI董事会成员，也参与了炒奥特曼的行动，理由是安全问题。
+Gordon-Levitt一直担心AI和数据隐私在好莱坞的影响，很适合演Twitch联合创始人Emmett Shear——他也短暂当过OpenAI临时CEO。
+他现在还和Anne Hathaway在拍一部AI惊悚片，导演是拍过Zendaya《挑战者》的Luca Guadagnino。
+Anne Hathaway曾与Jared Leto在AppleTV的《WeCrashed》中主演了另一部科技创始人纪录片，这是讲述WeWork联合创始人兴衰的迷你剧。
+《社交网络》当年有多火？
+2010年的《社交网络》是一部意外爆火的电影，讲述了Facebook创始人之间的恩怨纠葛。
+这部半真半假的影片，把扎克伯格塑造成一个孤独、善于操控的反派。
+这可能是大多数人对扎克伯格的唯一印象。
+扎克伯格一开始也吐槽电影不准确，认为无论在细节还是整体上都被歪曲了。
+不过，几个月后，《社交网络》拿下影评界好评和不错的票房，扎克伯格的态度软化了。
+之后的几年里，这个影视形象居然成了一些人眼中的另类英雄：一个有缺陷但辍学创业、改变世界的酷家伙。
+Puck记者Matt Belloni偷偷看了《Artificial》的剧本，说它跟《社交网络》简直像「失散多年的兄弟」。
+两部片子都围绕公司创始人之间的恩怨展开。
+更巧的是，两部电影都有Andrew Garfield！
+《社交网络》里，他演的是被扎克伯格坑了的联合创始人；在《Artificial》中，他直接变身「心机」CEO奥特曼。
+OpenAI联合创始人Ilya Sutskever则成了被击败的角色。
+奥特曼应该警惕自己在片中的形象，因为《社交网络》确实在公众和舆论中伤害了扎克伯格和Facebook。
+剧本狠辣又搞笑
+剧本的作者Simon Rich是个狠角色，毫不客气地diss了AI商业化的草率，把奥特曼写成一个满嘴跑火车、老谋深算的家伙。
+剧中Ilya的导师Hinton直接吐槽奥特曼是「地球上最会玩心眼儿的人之一」。
+Ilya Sutskever是个理想主义、有点天真的以色列工程师。
+他在OpenAI搞出几项大突破后，却被野心家好友奥特曼和硅谷大佬们算计、边缘化，还可能给全人类带来大麻烦。
+剧本里，OpenAI从一个非营利AGI小团体，变成现在估值3000亿美元的怪兽，挑战谷歌搜索、用Sora颠覆视频。
+马斯克（OpenAI的早期投资人、现在的死对头）戏份不多，基本是个「反派+搞笑担当」。
+Murati调侃：作为独裁者，马斯克还不算太差。
+AI题材，热得冒泡！
+最近几年，企业崩盘的故事拍成电影特别火。
+AI时代来了，这类片子肯定会越来越多。
+推荐几部好看的：
+Hulu的《辍学》（The Dropout）讲Theranos创始人从巅峰到谷底的故事；
+AMC的《黑莓》（BlackBerry）讲第一款智能手机；
+AppleTV的《俄罗斯方块》（Tetris）讲游戏开发者为任天堂Game Boy争取俄罗斯方块授权的惊险故事。
+亚马逊是OpenAI的创始投资人之一，和奥特曼、马斯克、彼得·蒂尔在2015年承诺投资10亿美元，建立非营利组织，确保AGI造福全人类。
+但亚马逊没继续投OpenAI，转头给竞争对手Anthropic砸了80亿。
+Anthropic是OpenAI前员工创立的，专注更安全、更隐私的AI，现在估值615亿。
+而OpenAI有10亿用户，估值3000亿，但因为还是非营利组织，没法上市。
+亚马逊还通过AWS的Bedrock和OpenAI合作，给客户提供各种AI模型，对OpenAI的态度有点复杂。
+据Puck爆料，他们偷看了剧本，估计奥特曼和马斯克会很不爽自己的角色形象。
+准备好爆米花吧，真正的AI大戏才刚开场！
+参考资料：
+https://www.forbes.com/sites/martineparis/2025/07/13/amazon-making-40m-movie-about-openai-meltdown-chatgpt-ai-safety/?ss=ai
+https://puck.news/sam-altman-is-getting-social-network-ed/
+https://archive.ph/BejMm#selection-1549.19-1991.126

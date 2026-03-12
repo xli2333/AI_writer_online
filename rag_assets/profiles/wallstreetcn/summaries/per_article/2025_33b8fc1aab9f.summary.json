@@ -1,0 +1,128 @@
+{
+  "analysis_schema_version": 3,
+  "id": "33b8fc1aab9f",
+  "year": "2025",
+  "date": "2025-07-06",
+  "title": "一周重磅日程：7月9日“对等关税”大限，美联储会议纪要，中国6月CPI、PPI",
+  "relative_path": "2025/2025-07-06_一周重磅日程：7月9日“对等关税”大限，美联储会议纪要，中国6月CPI、PPI.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\wallstreetcn\\raw_materials\\2025\\2025-07-06_一周重磅日程：7月9日“对等关税”大限，美联储会议纪要，中国6月CPI、PPI.txt",
+  "char_count": 3223,
+  "content_type": "财经周报",
+  "entities": [
+    "特朗普",
+    "美联储",
+    "金砖国家",
+    "IEA",
+    "欧洲央行",
+    "中国人民银行",
+    "Nick Timiraos"
+  ],
+  "industry": [
+    "金融",
+    "宏观经济",
+    "国际贸易"
+  ],
+  "topic": [
+    "关税政策",
+    "货币政策",
+    "通胀数据",
+    "全球治理"
+  ],
+  "genre": "资讯简报",
+  "style": [
+    "列表式",
+    "事实导向",
+    "结构化"
+  ],
+  "audience": [
+    "投资者",
+    "金融分析师",
+    "外贸从业者"
+  ],
+  "intent": [
+    "信息传递",
+    "风险预警"
+  ],
+  "tone": [
+    "客观",
+    "严谨"
+  ],
+  "primary_question": "2025年7月第二周有哪些影响全球市场的关键财经事件和宏观数据？",
+  "thesis_type": "汇总描述型",
+  "thesis_sentence": "本周全球财经焦点集中在美国“对等关税”大限、金砖国家峰会以及中美关键通胀数据的发布，这些事件将共同塑造短期市场流动性与贸易预期。",
+  "structure_pattern": "时间轴总分结构",
+  "section_functions": [
+    "核心事件概览",
+    "地缘贸易风险深度解析",
+    "多边外交活动预告",
+    "央行动态与政策预期",
+    "国内宏观经济指标前瞻",
+    "能源市场与区域通胀快讯"
+  ],
+  "argument_moves": [
+    "通过明确的时间节点建立紧迫感",
+    "引用权威媒体（新华社、环球时报）背书事实",
+    "利用历史数据对比（CPI/PPI环比同比）提供参考坐标",
+    "引入专家观点（Nick Timiraos）解读政策走向"
+  ],
+  "core_argument": "全球市场正进入政策与数据的密集验证期，尤其是美国贸易策略从谈判转向单边通牒，加剧了宏观不确定性。",
+  "key_points": [
+    "美国7月9日关税限期：特朗普由复杂谈判转为‘要么接受要么放弃’的最后通牒模式",
+    "金砖峰会：扩员后的首次会晤，强化‘全球南方’在多极化中的话语权",
+    "美联储会议纪要：强劲劳动力数据或拉长政策观望期，9月降息概率成博弈焦点",
+    "中国宏观数据：预计6月CPI转正，PPI同比持平，社融关注政策落地效果"
+  ],
+  "opening_pattern": "列表式重点提炼",
+  "ending_pattern": "标准免责声明",
+  "evidence_types": [
+    "政策公告",
+    "统计数据",
+    "媒体采访记录",
+    "分析师预测",
+    "市场衍生品交易数据"
+  ],
+  "evidence_specificity_score": 92,
+  "data_density_score": 85,
+  "case_density_score": 10,
+  "quote_density_score": 45,
+  "narrative_distance": "客观观察",
+  "stance_strength": "中立",
+  "sentence_rhythm": "短促、信息密度高",
+  "abstraction_level": "中（涉及宏观概念但均落地于具体指标）",
+  "transferable_moves": [
+    "多事件聚合报道的分类模版",
+    "关键经济数据同比环比的对照呈现法",
+    "将复杂地缘博弈提炼为‘最后通牒’等直观意象"
+  ],
+  "anti_patterns": [
+    "避免缺乏证据的臆断预测",
+    "剔除修饰性形容词，保持金融资讯的干燥度"
+  ],
+  "notable_phrases": [
+    "对等关税大限",
+    "Take it or leave it",
+    "大金砖合作",
+    "M2-M1剪刀差"
+  ],
+  "title_score": 88,
+  "opening_score": 85,
+  "argument_score": 80,
+  "evidence_score": 90,
+  "structure_score": 95,
+  "style_score": 82,
+  "publishability_score": 90,
+  "quality_score": 86,
+  "reference_value_score": 92,
+  "is_activity_notice": false,
+  "is_low_value": false,
+  "is_advertorial": false,
+  "advertorial_type": "none",
+  "advertorial_confidence": 0,
+  "promotional_intensity_score": 0,
+  "editorial_independence_score": 100,
+  "brand_exposure_level": "低",
+  "source_transparency": "清晰",
+  "advertorial_signals": [],
+  "summary_200": "本文汇总了2025年7月7日至13日的重磅财经日程。核心关注美国“对等关税”90天暂缓期结束，特朗普倾向于通过单边通牒方式征收10%-70%关税，加剧通胀风险。同时，金砖国家领导人会晤在巴西举行，聚焦南方国家合作。货币政策方面，美联储会议纪要将揭示降息观望逻辑。中国方面将公布6月CPI、PPI及社融数据，专家预计CPI将重回正增长区间。此外还包括IEA月报及英、韩等国利率决议。",
+  "summary_500": "本文为2025年7月第二周的全球财经大事前瞻，旨在为投资者提供结构化的决策参考。首先，国际贸易局势面临重大拐点：美国所谓的“对等关税”暂缓期于7月9日结束，特朗普已发出“最后通牒”，计划对约12个国家实施10%至70%的梯度关税，此举被视为单边主义对多边贸易谈判的冲击。其次，地缘政治与治理方面，金砖国家扩员后的第十七次领导人会晤在巴西里约热内卢召开，旨在提升“全球南方”的话语权与经济韧性。在宏观政策领域，美联储即将公布的会议纪要备受瞩目，结合近期强劲的非农就业数据，市场普遍预期联储将维持政策观望，9月虽为降息窗口但仍存变数。针对中国经济，本周将进入数据密集发布期，6月CPI、PPI数据将验证通胀修复斜率，国信证券等机构预测CPI有望转正。金融数据方面，5月降准降息组合拳后的社融表现将成为衡量流动性传导效率的关键。最后，文章还涵盖了IEA对原油市场供应充足的研判，以及欧元区、英国等多国通胀与利率决议的日程安排。整体而言，本周是政策不确定性与宏观经济验证相互交织的关键期，投资者需关注贸易冲突升级及利率预期修正带来的资产波动风险。"
+}

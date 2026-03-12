@@ -1,0 +1,140 @@
+{
+  "analysis_schema_version": 3,
+  "id": "86e102cb79d1",
+  "year": "2026",
+  "date": "2026-02-16",
+  "title": "不写一行代码，和AI聊了两天，我居然上线了一个软件？",
+  "relative_path": "2026/2026-02-16_不写一行代码，和AI聊了两天，我居然上线了一个软件？.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\huxiu\\raw_materials\\2026\\2026-02-16_不写一行代码，和AI聊了两天，我居然上线了一个软件？.txt",
+  "char_count": 3181,
+  "content_type": "实战教程",
+  "entities": [
+    "凯莉彭",
+    "Claude Code",
+    "Google AI Studio",
+    "Gemini",
+    "Supabase",
+    "Vercel",
+    "Stripe",
+    "Namecheap",
+    "CoverMagic"
+  ],
+  "industry": [
+    "人工智能",
+    "软件开发",
+    "自媒体"
+  ],
+  "topic": [
+    "AI编程",
+    "无代码开发",
+    "个人生产力",
+    "超级个体"
+  ],
+  "genre": "经验贴",
+  "style": [
+    "口语化",
+    "手把手教学",
+    "励志"
+  ],
+  "audience": [
+    "编程小白",
+    "产品经理",
+    "初创企业主",
+    "自媒体从业者"
+  ],
+  "intent": [
+    "技能普及",
+    "个人品牌建设",
+    "工具推荐"
+  ],
+  "tone": [
+    "亲切",
+    "鼓舞人心",
+    "实干主义"
+  ],
+  "primary_question": "非技术人员如何利用AI工具在短时间内从零到一开发并上线一款商用软件？",
+  "thesis_type": "方法论证明型",
+  "thesis_sentence": "在AI时代，清晰的需求定义和有效的提示词工程比编程能力更重要，通过合理的AI工具链组合，小白也能以极低成本实现产品落地。",
+  "structure_pattern": "时间线式步骤拆解",
+  "section_functions": [
+    "痛点引入：说明开发软件的真实动机（视频封面需求）",
+    "前期准备：强调需求梳理的重要性及AI辅助方法",
+    "原型搭建：展示利用自然语言快速生成前端雏形",
+    "核心开发：引入高级AI Agent处理复杂后端逻辑",
+    "人机协作：指导如何手动完成AI无法操作的云端配置",
+    "上线发布：讲解域名购买与自动化部署流程",
+    "复盘建议：提炼可迁移的经验与心法"
+  ],
+  "argument_moves": [
+    "降低门槛：通过“不写一行代码”和“草履虫选手”消除技术恐惧",
+    "成本量化：明确提及“700块钱”和“两天时间”增强可信度",
+    "工具对比：分享从其他AI工具卡壳到Claude Code一次成功的对比案例",
+    "角色重定义：将开发者定义为“监工”而非“劳动力”",
+    "价值升华：将个人项目提升到“新时代超级个体”的认知高度"
+  ],
+  "core_argument": "AI已经将编程的门槛降至自然语言沟通层面，个体的核心竞争力已转向发现问题和定义需求的能力。",
+  "key_points": [
+    "利用AI引导式提问来完善产品需求文档（PRD）",
+    "分阶段选择工具：Google AI Studio做原型，Claude Code处理逻辑",
+    "人工需参与数据库（Supabase）和支付（Stripe）的关键配置点",
+    "通过Vercel实现零门槛部署，通过Namecheap快速上线",
+    "从解决自身高频小痛点开始尝试AI开发"
+  ],
+  "opening_pattern": "时事热点引入+身份反差悬念",
+  "ending_pattern": "金句总结+行动号召",
+  "evidence_types": [
+    "亲历案例",
+    "软件截图",
+    "具体工具链接",
+    "财务成本数值"
+  ],
+  "evidence_specificity_score": 85,
+  "data_density_score": 70,
+  "case_density_score": 90,
+  "quote_density_score": 40,
+  "narrative_distance": "第一人称视角",
+  "stance_strength": "坚定自信",
+  "sentence_rhythm": "长短句交错，语感轻快",
+  "abstraction_level": "具体操作级",
+  "transferable_moves": [
+    "让AI通过反向提问来理清模糊需求的方法",
+    "多AI协作流：简单原型用轻量工具，复杂逻辑用重型Agent",
+    "‘AI写代码-人跑腿配置’的协作范式"
+  ],
+  "anti_patterns": [
+    "在没想清楚需求时就要求AI开始写代码",
+    "在某个AI工具遇到死循环时盲目坚持而不切换更强的工具",
+    "追求完美，而非先上线一个‘麻雀虽小五脏俱全’的版本"
+  ],
+  "notable_phrases": [
+    "草履虫选手",
+    "编程终极外挂",
+    "代码杠杆",
+    "超级个体"
+  ],
+  "title_score": 90,
+  "opening_score": 85,
+  "argument_score": 80,
+  "evidence_score": 88,
+  "structure_score": 92,
+  "style_score": 85,
+  "publishability_score": 95,
+  "quality_score": 88,
+  "reference_value_score": 92,
+  "is_activity_notice": false,
+  "is_low_value": false,
+  "is_advertorial": true,
+  "advertorial_type": "mixed",
+  "advertorial_confidence": 75,
+  "promotional_intensity_score": 65,
+  "editorial_independence_score": 75,
+  "brand_exposure_level": "中",
+  "source_transparency": "清晰",
+  "advertorial_signals": [
+    "强烈推荐特定AI工具链（Claude Code）",
+    "展示个人新上线产品的软性曝光",
+    "典型的‘个人能力秀’式公关文"
+  ],
+  "summary_200": "本文是博主凯莉彭的AI开发实战心得，记录了她作为非技术人员，在两天内利用Claude Code、Supabase等AI工具链，仅耗资700元上线一款视频封面软件的全过程。文章详细拆解了需求梳理、原型调试、逻辑开发及部署上线的具体步骤，强调‘定义需求’在AI编程时代的核心地位。该内容不仅是极佳的AI应用教程，也展现了普通人通过AI杠杆转型为‘超级个体’的可能性。",
+  "summary_500": "这是一篇高质量的AI应用实战案例。作者凯莉彭针对‘视频封面制作贵且慢’的个人痛点，分享了如何利用AI工具实现从创意到软件落地的闭环。核心流程包括：1. 需求阶段：通过与AI对话生成PRD；2. 网页雏形：利用Google AI Studio配合自然语言快速出前端界面；3. 逻辑攻坚：选用性能更强的Claude Code作为‘编程外挂’，解决注册、数据库及Stripe支付接口等复杂逻辑；4. 人机协作：AI负责生成代码并给出指令，人负责在Supabase等平台进行手动配置及Vercel部署；5. 最终上线：购买域名并完成映射。作者总结了两大心法：一是清晰定义需求胜过一切，二是应从解决个人实际问题切入项目。文章避开了深奥的技术名词，以亲历者视角论证了AI如何降低软件开发的边际成本。虽然带有一定的工具推荐和个人品牌宣传性质，但其提供的工具组合方案和协作流对想要利用AI提效的非技术人员具有极高的参考价值，是理解‘新时代超级个体’工作模式的典型样本。"
+}

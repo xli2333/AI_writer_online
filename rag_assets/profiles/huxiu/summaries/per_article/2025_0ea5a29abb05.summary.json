@@ -1,0 +1,100 @@
+{
+  "analysis_schema_version": 3,
+  "id": "0ea5a29abb05",
+  "year": "2025",
+  "date": "2025-07-03",
+  "title": "如何看待虐猫考生被取消招聘资格？",
+  "relative_path": "2025/2025-07-03_如何看待虐猫考生被取消招聘资格？.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\huxiu\\raw_materials\\2025\\2025-07-03_如何看待虐猫考生被取消招聘资格？.txt",
+  "char_count": 286,
+  "content_type": "话题探讨",
+  "entities": [
+    "虐猫考生"
+  ],
+  "industry": [
+    "人力资源",
+    "社会道德"
+  ],
+  "topic": [
+    "职业准入",
+    "职场道德",
+    "动物保护",
+    "网络争议"
+  ],
+  "genre": "时评",
+  "style": [
+    "探讨式"
+  ],
+  "audience": [
+    "HR从业者",
+    "法律从业者",
+    "社交媒体用户"
+  ],
+  "intent": [
+    "引发讨论"
+  ],
+  "tone": [
+    "中性"
+  ],
+  "primary_question": "虐猫考生的过往品行应否作为招聘单位取消其资格的合法依据？",
+  "thesis_type": "评估型",
+  "thesis_sentence": "由于正文内容缺失，本文仅为一个基于热点社会事件的提问式标题，预示着对品德风险与职业准入之间关系的讨论。",
+  "structure_pattern": "提出问题",
+  "section_functions": [
+    "提出社会争议核心"
+  ],
+  "argument_moves": [
+    "从个人道德延展至职业操守",
+    "探讨招聘方的评价标准边界"
+  ],
+  "core_argument": "无（正文缺失，仅存议题设定）",
+  "key_points": [
+    "虐猫行为背后的心理健康风险",
+    "企业招聘中‘软素质’考察的合法性边界",
+    "公序良俗对个人职业发展的影响"
+  ],
+  "opening_pattern": "提问式",
+  "ending_pattern": "无",
+  "evidence_types": [
+    "无"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 0,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "第三人称视角",
+  "stance_strength": "中立",
+  "sentence_rhythm": "简短平实",
+  "abstraction_level": "中等",
+  "transferable_moves": [
+    "采用‘如何看待+争议性身份+争议性结果’的标题模板"
+  ],
+  "anti_patterns": [
+    "信息缺失（仅有标题无内容）"
+  ],
+  "notable_phrases": [
+    "虐猫考生",
+    "取消招聘资格"
+  ],
+  "title_score": 70,
+  "opening_score": 0,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 0,
+  "style_score": 0,
+  "publishability_score": 5,
+  "quality_score": 5,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "is_advertorial": false,
+  "advertorial_type": "mixed",
+  "advertorial_confidence": 0,
+  "promotional_intensity_score": 0,
+  "editorial_independence_score": 100,
+  "brand_exposure_level": "低",
+  "source_transparency": "清晰",
+  "advertorial_signals": [],
+  "summary_200": "该文本仅包含一个关于‘虐猫考生被取消招聘资格’的标题及基本元数据。它提出了一个关于职业道德边界与社会行为惩戒的热点议题，但由于缺乏正文内容，无法进行深入的逻辑分析或证据评估。此内容主要作为社交媒体上的话题导火索或议程设置，不具备完整的成文参考价值。",
+  "summary_500": "本分析对象仅为一个标题性占位符，其核心探讨指向‘虐猫考生被取消招聘资格’这一高度敏感且具有广泛争议的社会事件。从写作机制来看，标题采用了典型的‘如何看待’式议程设置，旨在吸引读者对法律、道德与职场招聘三者交织地带的思考。这种议题往往涉及以下冲突：一是招聘单位是否有权依据应聘者在私人领域的极端负面行为（如虐猫）行使‘一票否决权’；二是这种行为是否暗示了人格缺陷进而影响职业履职能力。然而，由于当前输入信息密度极低，除了提供了一个具有讨论潜力的社会切入点外，没有提供任何实质性的论点、数据支撑或案例细节。在RAG写作与人格提炼中，该条目仅能作为一个‘话题索引’使用，而无法作为‘论证样本’。其质量分与参考价值分受限于内容的完整性，被评定为低价值。但在标题写作策略上，它精准捕捉了社会公愤点与职场规则的碰撞，是典型的引流型选题。"
+}

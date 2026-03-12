@@ -1,0 +1,259 @@
+{
+  "model": "gemini-3-flash-preview",
+  "source_count": 36,
+  "updated_at": "2026-03-12T01:56:47.145Z",
+  "selected_articles": [
+    {
+      "id": "d6bff4114dd8",
+      "title": "韩国沉浮记",
+      "quality_score": 96,
+      "reference_value_score": 97,
+      "publishability_score": 98
+    },
+    {
+      "id": "95ea71af0788",
+      "title": "美国的MAGA梦能实现吗？回溯美国制造业百年变迁",
+      "quality_score": 94,
+      "reference_value_score": 95,
+      "publishability_score": 96
+    },
+    {
+      "id": "501a8077263d",
+      "title": "《百家讲坛》，被争议的那些年",
+      "quality_score": 94,
+      "reference_value_score": 95,
+      "publishability_score": 98
+    },
+    {
+      "id": "63b7eaa0a9db",
+      "title": "微软小冰往事：一个AI明星产品是如何坠落的",
+      "quality_score": 94,
+      "reference_value_score": 95,
+      "publishability_score": 98
+    },
+    {
+      "id": "8419fbdb519e",
+      "title": "特朗普“降药价”新政下，中国药企谁是赢家？",
+      "quality_score": 93,
+      "reference_value_score": 96,
+      "publishability_score": 95
+    },
+    {
+      "id": "5506e7a708b6",
+      "title": "岗位没有消失，但好工作更难找了",
+      "quality_score": 93,
+      "reference_value_score": 95,
+      "publishability_score": 95
+    },
+    {
+      "id": "3e54323cfb94",
+      "title": "DeepSeek崛起，一场全球AI话语权的深度转移",
+      "quality_score": 92,
+      "reference_value_score": 95,
+      "publishability_score": 98
+    },
+    {
+      "id": "769203cb283b",
+      "title": "微塑料入侵大脑，如何才能摆脱塑料焦虑",
+      "quality_score": 93,
+      "reference_value_score": 95,
+      "publishability_score": 95
+    },
+    {
+      "id": "9e83183c10b1",
+      "title": "如果你非得用DeepSeek看病，建议这么看",
+      "quality_score": 92,
+      "reference_value_score": 98,
+      "publishability_score": 95
+    },
+    {
+      "id": "2113a326cba2",
+      "title": "2025上半年游戏行业杂谈：电梯到顶了",
+      "quality_score": 94,
+      "reference_value_score": 96,
+      "publishability_score": 95
+    },
+    {
+      "id": "b44ce70771c6",
+      "title": "英伟达，我命由天不由我",
+      "quality_score": 94,
+      "reference_value_score": 92,
+      "publishability_score": 98
+    },
+    {
+      "id": "c8843fbf35bf",
+      "title": "做不出原神的游戏公司，又盯上了黑神话",
+      "quality_score": 93,
+      "reference_value_score": 95,
+      "publishability_score": 98
+    },
+    {
+      "id": "f6d14f61ff1b",
+      "title": "看不见的武器：黄金、石油与美元之网",
+      "quality_score": 93,
+      "reference_value_score": 96,
+      "publishability_score": 95
+    },
+    {
+      "id": "9d3b749c93bb",
+      "title": "宁波与宁波商帮",
+      "quality_score": 94,
+      "reference_value_score": 96,
+      "publishability_score": 95
+    },
+    {
+      "id": "5e68a247eb05",
+      "title": "DeepSeek小传：制造了AI拐点的科技苦旅",
+      "quality_score": 94,
+      "reference_value_score": 96,
+      "publishability_score": 95
+    },
+    {
+      "id": "5b92dff6b169",
+      "title": "刘小样：中国式“娜拉”的结局",
+      "quality_score": 95,
+      "reference_value_score": 92,
+      "publishability_score": 98
+    },
+    {
+      "id": "f2e8446bb9ef",
+      "title": "1.1亿女工的青春：生育、照料、养家",
+      "quality_score": 94,
+      "reference_value_score": 92,
+      "publishability_score": 95
+    },
+    {
+      "id": "0a0b69abbbd2",
+      "title": "DeepSeek新模型大揭秘，为何它能震动全球AI圈",
+      "quality_score": 92,
+      "reference_value_score": 96,
+      "publishability_score": 95
+    },
+    {
+      "id": "0efac83b382e",
+      "title": "日本餐饮的“平成食代”，正是中国“西贝们”的镜与鉴",
+      "quality_score": 92,
+      "reference_value_score": 96,
+      "publishability_score": 95
+    },
+    {
+      "id": "0650cf42dce8",
+      "title": "后伊朗时代",
+      "quality_score": 92,
+      "reference_value_score": 94,
+      "publishability_score": 95
+    },
+    {
+      "id": "6fa6cff5693e",
+      "title": "中国“霸总”迷倒美国人？",
+      "quality_score": 93,
+      "reference_value_score": 95,
+      "publishability_score": 95
+    },
+    {
+      "id": "95a6a4db1d22",
+      "title": "“美债崩溃”真相",
+      "quality_score": 92,
+      "reference_value_score": 94,
+      "publishability_score": 96
+    },
+    {
+      "id": "6cefcef6bb48",
+      "title": "美团反转",
+      "quality_score": 92,
+      "reference_value_score": 94,
+      "publishability_score": 95
+    },
+    {
+      "id": "0ca2e5b1cd56",
+      "title": "“不及预期”的比亚迪，隐形的“另一半”",
+      "quality_score": 92,
+      "reference_value_score": 94,
+      "publishability_score": 95
+    },
+    {
+      "id": "6cb4a5ee22b5",
+      "title": "奇瑞，长舒一口气",
+      "quality_score": 92,
+      "reference_value_score": 94,
+      "publishability_score": 95
+    },
+    {
+      "id": "715251fa3926",
+      "title": "紫金矿业又多了一条“腿”",
+      "quality_score": 92,
+      "reference_value_score": 94,
+      "publishability_score": 95
+    },
+    {
+      "id": "dbb49d919703",
+      "title": "中国“最敢生”的地方，出现了",
+      "quality_score": 92,
+      "reference_value_score": 94,
+      "publishability_score": 95
+    },
+    {
+      "id": "d10456307543",
+      "title": "DeepSeek推翻两座大山",
+      "quality_score": 92,
+      "reference_value_score": 96,
+      "publishability_score": 95
+    },
+    {
+      "id": "de677cc18ae3",
+      "title": "AI里最大的Bug，也是人类文明最伟大的起点",
+      "quality_score": 94,
+      "reference_value_score": 90,
+      "publishability_score": 95
+    },
+    {
+      "id": "813485809e8f",
+      "title": "小米汽车，真撑得起门面？",
+      "quality_score": 93,
+      "reference_value_score": 95,
+      "publishability_score": 92
+    },
+    {
+      "id": "eaefe3aa4699",
+      "title": "日本男人，越来越矮了？",
+      "quality_score": 92,
+      "reference_value_score": 95,
+      "publishability_score": 95
+    },
+    {
+      "id": "4f02e488ff07",
+      "title": "俄罗斯真没钱了",
+      "quality_score": 91,
+      "reference_value_score": 94,
+      "publishability_score": 95
+    },
+    {
+      "id": "6074c7fa2413",
+      "title": "我在秋招当“伪人”",
+      "quality_score": 94,
+      "reference_value_score": 90,
+      "publishability_score": 98
+    },
+    {
+      "id": "5ed6cf4621b2",
+      "title": "白酒经销商们撑不住了",
+      "quality_score": 92,
+      "reference_value_score": 95,
+      "publishability_score": 95
+    },
+    {
+      "id": "b9f8d7ce0ae1",
+      "title": "对DeepSeek和智能下半场的几条判断",
+      "quality_score": 92,
+      "reference_value_score": 95,
+      "publishability_score": 95
+    },
+    {
+      "id": "611a1da88b73",
+      "title": "DeepSeek V3到V3.1，走向国产算力自由",
+      "quality_score": 92,
+      "reference_value_score": 95,
+      "publishability_score": 95
+    }
+  ]
+}

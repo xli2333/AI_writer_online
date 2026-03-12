@@ -1,0 +1,28 @@
+{"worker":1,"id":"975fdbae8870","relative_path":"2024/2024-12-04_《白夜》第二季，生错了时代.txt","error":"{\"error\":{\"code\":400,\"message\":\"API key not valid. Please pass a valid API key.\",\"status\":\"INVALID_ARGUMENT\",\"details\":[{\"@type\":\"type.googleapis.com/google.rpc.ErrorInfo\",\"reason\":\"API_KEY_INVALID\",\"domain\":\"googleapis.com\",\"metadata\":{\"service\":\"generativelanguage.googleapis.com\"}},{\"@type\":\"type.googleapis.com/google.rpc.LocalizedMessage\",\"locale\":\"en-US\",\"message\":\"API key not valid. Please pass a valid API key.\"}]}}","timestamp":"2026-03-12T01:00:29.617Z"}
+{"worker":1,"id":"975fdbae8870","relative_path":"2024/2024-12-04_《白夜》第二季，生错了时代.txt","error":"{\"error\":{\"code\":404,\"message\":\"models/gemini-3-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.\",\"status\":\"NOT_FOUND\"}}","timestamp":"2026-03-12T01:00:54.056Z"}
+{"worker":3,"id":"8ef32868e945","relative_path":"2025/2025-09-17_中国汽车出海之王，叩响港股大门.txt","error":"fetch failed","timestamp":"2026-03-12T01:45:17.308Z"}
+{"worker":2,"id":"3a2e964a7987","relative_path":"2025/2025-10-09_AI时代，30岁前创业是普通人的重生之路吗？ F&M抢先看.txt","error":"fetch failed","timestamp":"2026-03-12T01:45:22.065Z"}
+{"worker":1,"id":"dcc819a8e605","relative_path":"2025/2025-09-17_黑灰产围猎维权人.txt","error":"fetch failed","timestamp":"2026-03-12T01:45:24.001Z"}
+{"worker":3,"id":"4720b9f6b9fc","relative_path":"2025/2025-09-29_一场5万变1亿的虚拟冒险.txt","error":"fetch failed","timestamp":"2026-03-12T01:45:24.018Z"}
+{"worker":3,"id":"94a47ffd5601","relative_path":"2025/2025-10-09_抖音流量命门，变了.txt","error":"fetch failed","timestamp":"2026-03-12T01:45:25.315Z"}
+{"worker":1,"id":"62b134fc6116","relative_path":"2025/2025-10-22_起底陈志：从辍学少年到千亿电诈大佬.txt","error":"fetch failed","timestamp":"2026-03-12T01:45:25.316Z"}
+{"worker":3,"id":"9869fab4c98b","relative_path":"2025/2025-10-21_日本熊灾，吓跑多少中国游客？.txt","error":"fetch failed","timestamp":"2026-03-12T01:45:25.317Z"}
+{"worker":1,"id":"9d3b749c93bb","relative_path":"2025/2025-02-01_宁波与宁波商帮.txt","error":"fetch failed","timestamp":"2026-03-12T01:45:25.317Z"}
+{"worker":1,"id":"e34764314fcb","relative_path":"2025/2025-10-03_凑齐12天长假，中国打工人挤满日韩.txt","error":"fetch failed","timestamp":"2026-03-12T01:45:25.318Z"}
+{"worker":2,"id":"c9e12fca2a85","relative_path":"2025/2025-10-03_“大电池”的天快塌了.txt","error":"fetch failed","timestamp":"2026-03-12T01:45:25.318Z"}
+{"worker":2,"id":"499618f67e41","relative_path":"2025/2025-02-01_郭麒麟面刺泡泡玛特.txt","error":"fetch failed","timestamp":"2026-03-12T01:45:28.434Z"}
+{"worker":3,"id":"80d6e598982a","relative_path":"2025/2025-10-28_中国代练全球化大迁移，“赛博黑奴”时代来临.txt","error":"fetch failed","timestamp":"2026-03-12T01:45:29.007Z"}
+{"worker":1,"id":"900ef64eb91d","relative_path":"2025/2025-10-03_印度“梭哈”造船业，还找上了日韩.txt","error":"fetch failed","timestamp":"2026-03-12T01:45:31.126Z"}
+{"worker":2,"id":"392c9c197056","relative_path":"2025/2025-10-28_潮人，正滑落到时尚鄙视链的底端.txt","error":"fetch failed","timestamp":"2026-03-12T01:45:31.159Z"}
+{"worker":2,"id":"9a7212397a64","relative_path":"2025/2025-10-28_早报｜两架美军机在南海相继坠毁；春秋航空开招已婚已育空嫂；31省份去年婚姻数据公布；宗馥莉“心腹”祝.txt","error":"fetch failed","timestamp":"2026-03-12T01:45:31.749Z"}
+{"worker":3,"id":"c071a0109b9e","relative_path":"2025/2025-09-21_炸山营销的始祖鸟，在“背叛”户外的路上越走越远.txt","error":"fetch failed","timestamp":"2026-03-12T01:45:36.843Z"}
+{"worker":2,"id":"eb01b25d363c","relative_path":"2025/2025-10-10_在韩国独自吃饭，到底有多难？.txt","error":"fetch failed","timestamp":"2026-03-12T01:45:41.582Z"}
+{"worker":2,"id":"eabe59a08cc2","relative_path":"2025/2025-10-03_信心一日还魂记.txt","error":"fetch failed","timestamp":"2026-03-12T01:48:53.947Z"}
+{"worker":1,"id":"5544731f7228","relative_path":"2025/2025-02-01_瑞幸涨价，“背刺”返乡打工人.txt","error":"fetch failed","timestamp":"2026-03-12T01:48:53.947Z"}
+{"worker":3,"id":"71a911f33bb4","relative_path":"2025/2025-10-21_剖析智元机器人：一场关于人才与资本的博弈.txt","error":"fetch failed","timestamp":"2026-03-12T01:48:53.949Z"}
+{"worker":3,"id":"4a57ff63ec86","relative_path":"2025/2025-10-28_终会感谢郑智化.txt","error":"fetch failed","timestamp":"2026-03-12T01:48:53.950Z"}
+{"worker":3,"id":"1de6363d5111","relative_path":"2025/2025-10-03_日本自民党党首明日选举，会有何影响？.txt","error":"fetch failed","timestamp":"2026-03-12T01:48:53.957Z"}
+{"worker":1,"id":"19fcb4dcec18","relative_path":"2025/2025-10-28_硅谷“大裁员”何时休？.txt","error":"fetch failed","timestamp":"2026-03-12T01:48:53.958Z"}
+{"worker":1,"id":"aecf5ee9f254","relative_path":"2025/2025-09-23_独家对话安克CEO阳萌：当我坚信的“西天”突然崩塌.txt","error":"fetch failed","timestamp":"2026-03-12T01:48:53.961Z"}
+{"worker":3,"id":"cc606646db20","relative_path":"2025/2025-11-01_全球中产大败局？.txt","error":"fetch failed","timestamp":"2026-03-12T01:48:53.962Z"}
+{"worker":2,"id":"b49817b58adb","relative_path":"2025/2025-09-16_第二个5万亿城市，要来了.txt","error":"fetch failed","timestamp":"2026-03-12T01:53:42.962Z"}

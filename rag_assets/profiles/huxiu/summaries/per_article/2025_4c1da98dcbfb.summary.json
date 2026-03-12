@@ -1,0 +1,102 @@
+{
+  "analysis_schema_version": 3,
+  "id": "4c1da98dcbfb",
+  "year": "2025",
+  "date": "2025-06-20",
+  "title": "婚检查出艾滋病，医生是否要保密？",
+  "relative_path": "2025/2025-06-20_婚检查出艾滋病，医生是否要保密？.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\huxiu\\raw_materials\\2025\\2025-06-20_婚检查出艾滋病，医生是否要保密？.txt",
+  "char_count": 286,
+  "content_type": "法律伦理评析",
+  "entities": [],
+  "industry": [
+    "医疗健康",
+    "法律司法"
+  ],
+  "topic": [
+    "医疗隐私权",
+    "艾滋病防治",
+    "配偶知情权"
+  ],
+  "genre": "科普议论文",
+  "style": [
+    "严谨",
+    "客观"
+  ],
+  "audience": [
+    "普通大众",
+    "医务人员",
+    "法律爱好者"
+  ],
+  "intent": [
+    "法律科普",
+    "伦理探讨"
+  ],
+  "tone": [
+    "中立",
+    "理性"
+  ],
+  "primary_question": "婚检发现艾滋病时，医生的保密义务与配偶的知情权如何权衡平衡？",
+  "thesis_type": "伦理探讨型",
+  "thesis_sentence": "由于正文缺失，无法准确提取作者的核心论点，但预期围绕隐私保护与生命健康权的冲突展开。",
+  "structure_pattern": "问题引导式",
+  "section_functions": [
+    "提出困境（基于标题）"
+  ],
+  "argument_moves": [
+    "建立冲突情境"
+  ],
+  "core_argument": "无（正文内容缺失，仅有标题）",
+  "key_points": [
+    "医疗机构的保密义务",
+    "传染病防治法的告知规定",
+    "配偶的生命健康权益保护"
+  ],
+  "opening_pattern": "疑问句式引入",
+  "ending_pattern": "未知",
+  "evidence_types": [
+    "法律条文"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 0,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "中距",
+  "stance_strength": "中等",
+  "sentence_rhythm": "未知",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "法律冲突性议题的选题技巧",
+    "社会敏感热点的提问方式"
+  ],
+  "anti_patterns": [
+    "输入内容过短",
+    "正文信息缺失"
+  ],
+  "notable_phrases": [
+    "婚检",
+    "艾滋病",
+    "保密义务"
+  ],
+  "title_score": 88,
+  "opening_score": 0,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 0,
+  "style_score": 0,
+  "publishability_score": 15,
+  "quality_score": 10,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "is_advertorial": false,
+  "advertorial_type": "editorial",
+  "advertorial_confidence": 0,
+  "promotional_intensity_score": 0,
+  "editorial_independence_score": 100,
+  "brand_exposure_level": "低",
+  "source_transparency": "清晰",
+  "advertorial_signals": [],
+  "summary_200": "该输入仅包含标题和元数据，未提供正文。内容主题聚焦于婚检艾滋病告知的法律伦理困境，即如何在医生保密义务与配偶知情权之间寻找合法合规的平衡点。由于缺乏正文，无法进行具体的结构与机制分析。",
+  "summary_500": "该分析对象是一篇关于医疗伦理与法律实务的文章标题。文章旨在探讨在婚检过程中，若一方被检出艾滋病抗体阳性，医生是否应继续履行保密职责，还是应告知其配偶或未婚配偶。在当前法律体系下，这涉及到《民法典》中的隐私权保护与《传染病防治法》及《艾滋病防治条例》中关于保护他人生命健康权的冲突。由于原文未提供具体论述、案例或法律解读，本次分析仅基于标题所代表的经典社会议题。标题采用了高冲突性的提问方式，具有较强的传播潜力和科普价值。然而，由于实质性内容的缺失，文章的逻辑结构、论据特征及写作机制无法完整提炼，被标记为低价值/信息不全的条目。建议补充完整正文以获得深度分析报告。"
+}

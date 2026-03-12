@@ -1,0 +1,108 @@
+标题: 谷歌二代Nano Banana爆出！一键推演微积分，终结PS时代
+日期: 2025-11-09
+链接: http://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652643518&idx=1&sn=e9578faed62a26337d94686e2bf2d5cf&chksm=f12f544fc658dd590955653a476be52838fb26db65ae0695fc0f5a6e4794de2374bfdb4f09b4#rd
+来源模式: wechat
+----------------------------------------
+
+新智元报道
+编辑：
+KingHZ 桃子
+【新智元导读】
+就在今天，谷歌Nano Banana 2预览版闪现第三方平台，生成速度飙到10秒、画质拉到4K。网友实测炸锅，一句话直出OS+UI复杂界面，还能在黑板上一键推导微积分。真正的「PS终结者」即将上线。
+Nano Banana 2，下一个备受期待的「AI图像王者」，离正式发布不远了。
+今天，全网发现谷歌下一代Nano Banana，已在
+第
+三方平台Media
+IO
+上现身。
+目前，还只是一个预览版本，爆料人预测NB2将在本月中下旬发布。
+传送门：https://www.media.io/ai/text-to-image
+两个月前，初代Nano Banana发布后，因出色图像生成+编辑能力，在全世界掀起一场创意狂欢。
+从真人OOTD、3D手办，到铅笔素描、建筑多维视图，网友们大开脑洞，玩转视觉创作的无限可能。
+如今，从网友首测来看，Nano Banana 2更加出色——
+分辨率：原生2K，
+可选4K超分
+生成速度更快：
+复杂场景仅需10秒
+文字渲染更锐利，提示词响应更精准
+一句话就能让它在黑板上，直接推导出「√2是无理数」。
+在人物生成上，其高度一致性再次树立新标杆，精准捕捉、还原人物的特征。
+同样，基于纯文本生成Windows 11桌面+YouTube博主的主页，Nano Banana 2细节表现堪称疯狂。
+总的来说，新一代Nano Banana 2在文本渲染、信息图表、世界知识、图表、指令遵循方面表现非常出色。
+虽未正式发布，NB2一大波惊艳实测席卷
+全网。
+攻克微积分，一张图解题
+在Reddit上，网友发现了Nano-banana 2生成的一些参考图像。
+只要输入积分问题的图片，Nano-banana 2就能在白板上解决并提供全部步骤！
+虽然不知道到底如何做到的，但他之前测试过Nano-banana 2，可以肯定的确是真的。
+这让Correct_Mistake2640顿生出一种「活久见」的历史感，他还记得1999年他读大学时，微积分老师告诉他，计算机永远不会做积分，所以为了未来应该学习积分。
+事实上，Mathematica至少在2005年就能求解部分积分问题，而1988年Mathematica第一版已经问世了。
+虽然Nano-banana 2有一些轻微的错误，但对于外行而言，图像模型能如此有逻辑地完成任务，就像是魔法。
+Nano-banana 2就像是AI版的达芬奇：一个「画家」也能解决大学数学问题。
+比如，下面的高阶微分问题，看起来比2.5 Pro的文本墙舒服多了。
+总之，这次大概率Nano-banana 2真来了——
+Reddit网友马上要证明这是不是真的！
+让Nano Banana 2生成一幅地中海周边地区的老式地图，旧羊皮纸质感很复古。
+一句话，直出OS+UI网页
+如开篇案例实操类似，Nano Banana 2基于纯文本，直接生成Windows桌面+网页浏览器Edge。
+甚至，网页浏览器中的Gemini 3.0主页也是生成的。
+有网友表示，在看到这张图的一瞬间，还上网搜索Gemini 3.0主页是否真的存在。
+还有人点评道——
+浏览器、桌面、窗口，所有的一切都是一张「生成的图像」。
+换句话说， UI和OS全部整合在一起，进入了一键生成的时代。这已经不是「图像」的领域了。
+YouTube博主WorldofAI实测后，直言NB2就是PS的终结者。
+逼真人物生成，肉眼无法识别
+Nano Banana 2在人物角色生成方面，效果更加逼真了。
+如下同一个提示下，两代NB效果的对比，NB2的视角多了一层。
+左：Nano Banana 2；右：Nano Banana
+在飞机中摆拍的效果，NB2人物表现更加真实。
+左：Nano Banana 2；右：Nano Banana
+二次元Cosplay，完全看不出是AI生成的效果。
+用AI模拟手机照相效果，绝对难分真假、眼见不一定为实：
+二次元封神，怼脸眼神杀暴击
+在二次元生成上，Nano Banana 2又开启了一片新天地。
+假设让它生成一个男主Sung Jin-Woo，双手拿着两把冒蓝光的匕首往前猛冲，又带有蓝色光效的图片。
+指令中，要求的重点怼脸拍，还有专注凶狠的表情，NB2都给足了。
+prompt：A dynamic, low-angle action shot of Sung Jin-Woo leaping forward, dual-wielding his glowing blue daggers (like the 'Demon King's Daggers'). He is a blur of motion, with energy trails following his blades. The background is a dark, stylized dungeon interior. Focus on the intense, focused expression on his face. Style: high-contrast, anime, action.
+大雪纷飞，《东京食尸鬼》金木研抱着朋友，一步步往前走，氛围感拉满。
+prompt：Ken Kaneki carrying his friend in his arms in the snow, Tokyo Ghoul
+更绝的是，NB2还能保持高度的角色一致性。
+上传一张背影图，让它P个转身，结果二次元女主头发和配饰高度还原。
+日漫《航海王》Kaido，NB2也是手拿把捏。尤其是，和NB1对比，效果更加明显。
+左：Nano Banana 2；右：Nano Banana
+治愈系风格的多人场景，书架、手作甜点、黑板菜单、慵懒猫咪等，各种小细节让人着迷。
+从吉卜力系，到热血少年，Nano Banana 2真的可以做到，纯文本直出动漫。
+赛博朋克风格也没问题，比如身处未来高科技环境中的赛博朋克机器人黑客，正面对多块显示器进行操作。
+prompt：Cyberpunk hacker robot working in front of many monitors
+还有网友生成卡通风格的开局国际象棋棋盘：
+A cartoon image of a chess board, with the starting position on the board.
+目前还并非完美，但如此高质量的生成结果，已让试用过的网友感到非常非常惊讶。
+手写体堪比真人，伪造监控录像
+没想到，Nano Banana 2可以在一张图中，一次性通过了「时钟」和「满杯红酒」的测试。
+AI
+终于能看清楚自己在画什么了。
+黑板写字，手写体风格几乎难以让人辨认是AI生成的。
+还有阿拉伯语的手写体，同样令人印象深刻。
+更惊艳的是，它还能生成监控录像图，和马斯克同框也是这么简单。
+有网友脑洞大开，构思了一个玻璃汉堡，反光、质感、透明度，全都绝了。
+a burger made of glass, reflections, textures, transparency, all spot on.
+让整片海洋完美地变成粉色，准确地在每个涟漪上反射光线。
+精准度简直难以置信。
+还有美国网友用它PS了自己的车，惊呼「几乎完美」，绝对是顶级水平。
+Paint car with really nice airbrush ofpresidentsof US and text about them
+NB2还能一键直出奔驰汽车宣传图。
+Nano Banana升级前后对比
+Nano Banana 2真强！
+Kotovskiy找到了一个很有趣的例子，Nano Banana 2的表现远超上一代。
+Prompt：Danganronpa court with all characters, cinematic official art
+任务要求《弹丸论破系列》全体角色出庭的场景，保持官方风格的电影感插画。
+这是新版本的生成的结果：
+这是旧版的：
+在抽象艺术上，Fix发了多张Nano Banana新旧版的对比图：
+抽象是真抽象，一起看👀一下吧：
+截止发稿前，Media
+IO平台上NB2入口关闭。接下来，就是坐等谷歌的发布了。
+参考资料：
+https://x.com/AiTesty5/status/1987252970690331070?s=20
+https://www.reddit.com/r/singularity/comments/1oryi1h/nanobanana_2_is_available_on_medioio/
+https://www.tomsguide.com/ai/ai-image-video/next-gen-nano-banana-2-could-bring-4k-ai-image-generation-to-your-phone-heres-whats-coming

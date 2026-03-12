@@ -1,0 +1,96 @@
+{
+  "analysis_schema_version": 3,
+  "id": "aba4b8fa525b",
+  "year": "2025",
+  "date": "2025-03-19",
+  "title": "频频爆雷，卫生用品还值得信任吗？",
+  "relative_path": "2025/2025-03-19_频频爆雷，卫生用品还值得信任吗？.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\huxiu\\raw_materials\\2025\\2025-03-19_频频爆雷，卫生用品还值得信任吗？.txt",
+  "char_count": 286,
+  "content_type": "社交媒体动态",
+  "entities": [],
+  "industry": [
+    "快消品",
+    "日化卫生"
+  ],
+  "topic": [
+    "消费安全",
+    "品牌信任",
+    "产品质量"
+  ],
+  "genre": "评论",
+  "style": [
+    "批判性"
+  ],
+  "audience": [
+    "广大消费者",
+    "行业从业者"
+  ],
+  "intent": [
+    "质疑",
+    "呼吁关注"
+  ],
+  "tone": [
+    "忧虑",
+    "质疑"
+  ],
+  "primary_question": "在卫生用品质量问题频发的背景下，行业信任根基是否已经动摇？",
+  "thesis_type": "问题导向型",
+  "thesis_sentence": "通过标题质疑卫生用品频频爆雷后，消费者对该品类是否还能保持信任。",
+  "structure_pattern": "引述式",
+  "section_functions": [
+    "提出核心质疑"
+  ],
+  "argument_moves": [
+    "利用负面社会热点建立沟通前提"
+  ],
+  "core_argument": "卫生用品行业面临严重的信任危机。",
+  "key_points": [
+    "卫生用品行业近期频繁爆发质量负面事件",
+    "消费者对该品类的信任度正在下降"
+  ],
+  "opening_pattern": "反问式钩子",
+  "ending_pattern": "无",
+  "evidence_types": [],
+  "evidence_specificity_score": 0,
+  "data_density_score": 0,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "第三方观察",
+  "stance_strength": "强烈",
+  "sentence_rhythm": "紧凑",
+  "abstraction_level": "中等",
+  "transferable_moves": [
+    "使用‘频频爆雷’等高冲击力词汇吸引点击",
+    "通过行业信任危机这一宏大命题切入细分品类"
+  ],
+  "anti_patterns": [
+    "信息密度极低",
+    "缺乏正文支撑",
+    "空有标题无内容"
+  ],
+  "notable_phrases": [
+    "频频爆雷"
+  ],
+  "title_score": 65,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 0,
+  "structure_score": 5,
+  "style_score": 20,
+  "publishability_score": 5,
+  "quality_score": 5,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "is_advertorial": false,
+  "advertorial_type": "editorial",
+  "advertorial_confidence": 0,
+  "promotional_intensity_score": 0,
+  "editorial_independence_score": 100,
+  "brand_exposure_level": "无",
+  "source_transparency": "清晰",
+  "advertorial_signals": [],
+  "summary_200": "该内容仅为一个具有社会批判性的标题及其发布信息，尚未提供具体正文内容。标题以“频频爆雷”为引，对卫生用品行业的消费信任度提出公开质疑。由于缺乏实质性的事实陈述、案例分析或数据支撑，该文本目前仅具备话题线索价值，不具备深度阅读或分析价值。",
+  "summary_500": "该文本呈现为一篇典型针对行业信任危机的评论性报道开头或标题。标题“频频爆雷，卫生用品还值得信任吗？”采用了反问句式，旨在捕捉消费者对近期卫生用品安全事件（如卫生巾质量问题等）的敏感心理。然而，由于所提供的内容仅包含标题、日期和链接，缺乏任何实质性的正文展开、证据罗列或逻辑推导，其实际信息密度接近于零。从写作机制上看，它展示了如何利用时政/民生热点通过一个强冲突感的标题进行社交分发，但作为一个独立的分析文本，其参考价值极低，属于典型的“低价值/无实质内容”数据点。"
+}

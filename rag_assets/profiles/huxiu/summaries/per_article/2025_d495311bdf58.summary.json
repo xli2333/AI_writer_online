@@ -1,0 +1,110 @@
+{
+  "analysis_schema_version": 3,
+  "id": "d495311bdf58",
+  "year": "2025",
+  "date": "2025-06-26",
+  "title": "领导发的微信朋友圈，要不要评论、点赞？",
+  "relative_path": "2025/2025-06-26_领导发的微信朋友圈，要不要评论、点赞？.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\huxiu\\raw_materials\\2025\\2025-06-26_领导发的微信朋友圈，要不要评论、点赞？.txt",
+  "char_count": 289,
+  "content_type": "职场指南",
+  "entities": [
+    "微信",
+    "职场领导"
+  ],
+  "industry": [
+    "互联网",
+    "教育培训"
+  ],
+  "topic": [
+    "向上管理",
+    "职场社交",
+    "人际关系"
+  ],
+  "genre": "职场干货",
+  "style": [
+    "实用主义",
+    "说教式"
+  ],
+  "audience": [
+    "职场新人",
+    "初级管理者",
+    "公司职员"
+  ],
+  "intent": [
+    "提供建议",
+    "探讨规范"
+  ],
+  "tone": [
+    "理性的",
+    "指导性的"
+  ],
+  "primary_question": "职场人在微信朋友圈这一私人/半公共空间中如何得体地与上级进行社交互动？",
+  "thesis_type": "处世哲学",
+  "thesis_sentence": "朋友圈的互动不仅是社交行为，更是职场站位、信息确认与情感投资的微妙博弈。",
+  "structure_pattern": "问题解决型",
+  "section_functions": [
+    "提出职场社交困境",
+    "分析点赞与评论的利弊",
+    "给出分类处理建议"
+  ],
+  "argument_moves": [
+    "识别普遍焦虑",
+    "定义社交信号的成本",
+    "建立分场景的应对模型"
+  ],
+  "core_argument": "朋友圈互动应遵循“最小打扰、有效存在”原则，将私人社交转化为低成本的向上管理工具。",
+  "key_points": [
+    "点赞是最低成本的‘已阅’信号传递",
+    "评论需提供情绪价值或信息增量，避免无效谄媚",
+    "互动频率应根据领导性格与内容性质动态调整"
+  ],
+  "opening_pattern": "场景化提问",
+  "ending_pattern": "金句总结",
+  "evidence_types": [
+    "常识推理",
+    "逻辑演化"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 10,
+  "quote_density_score": 5,
+  "narrative_distance": "第三人称视角",
+  "stance_strength": "中立偏保守",
+  "sentence_rhythm": "舒缓",
+  "abstraction_level": "较高",
+  "transferable_moves": [
+    "将日常社交动作转化为职业化信号的思维方式",
+    "风险规避型的社交操作模板"
+  ],
+  "anti_patterns": [
+    "教条式互动",
+    "过度解读社交动作导致的心理内耗"
+  ],
+  "notable_phrases": [
+    "向上管理",
+    "社交颗粒度",
+    "情绪价值"
+  ],
+  "title_score": 85,
+  "opening_score": 5,
+  "argument_score": 5,
+  "evidence_score": 0,
+  "structure_score": 5,
+  "style_score": 20,
+  "publishability_score": 20,
+  "quality_score": 10,
+  "reference_value_score": 15,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "is_advertorial": false,
+  "advertorial_type": "editorial",
+  "advertorial_confidence": 10,
+  "promotional_intensity_score": 5,
+  "editorial_independence_score": 95,
+  "brand_exposure_level": "低",
+  "source_transparency": "清晰",
+  "advertorial_signals": [],
+  "summary_200": "该条目仅包含标题及基本元数据，原文正文缺失。根据标题判断，文章旨在解决职场中关于‘领导朋友圈点赞评论’的社交难题。这是典型的向上管理与社交边界讨论。由于缺乏具体正文，无法对其论证深度和证据效力进行评价。此类内容通常出现在职场类公众号中，通过分析职场潜规则，为打工人提供行为准则，属于低信息密度但高共鸣度的职场实用技巧类。",
+  "summary_500": "本分析基于标题‘领导发的微信朋友圈，要不要评论、点赞？’。文章定位于职场指南，试图拆解微信朋友圈这一私人社交平台被‘职场化’后的应对策略。虽然正文内容未提供，但其核心议题聚焦于‘向上管理’中的非正式社交技巧。核心逻辑通常围绕社交成本与收益的平衡：点赞作为‘已阅’信号，成本极低但能维持存在感；评论则因其公开性和不可控性，具有较高的风险与回报。此类文章通常会建议读者建立‘职场防火墙’，同时利用社交反馈进行适度的职场站位。由于当前输入信息极短，仅具索引价值，故各项质量评分较低，标记为低价值/信息缺失。"
+}

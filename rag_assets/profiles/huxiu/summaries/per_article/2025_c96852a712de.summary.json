@@ -1,0 +1,100 @@
+{
+  "analysis_schema_version": 3,
+  "id": "c96852a712de",
+  "year": "2025",
+  "date": "2025-01-17",
+  "title": "“洋人”涌入小红书，是好事吗？",
+  "relative_path": "2025/2025-01-17_“洋人”涌入小红书，是好事吗？.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\huxiu\\raw_materials\\2025\\2025-01-17_“洋人”涌入小红书，是好事吗？.txt",
+  "char_count": 285,
+  "content_type": "资讯片段",
+  "entities": [
+    "小红书",
+    "新榜"
+  ],
+  "industry": [
+    "互联网",
+    "社交媒体",
+    "内容创作"
+  ],
+  "topic": [
+    "平台生态",
+    "全球化",
+    "内容趋势"
+  ],
+  "genre": "评论",
+  "style": [
+    "分析型"
+  ],
+  "audience": [
+    "互联网从业者",
+    "内容创作者",
+    "品牌营销人员"
+  ],
+  "intent": [
+    "探讨趋势"
+  ],
+  "tone": [
+    "客观",
+    "中性"
+  ],
+  "primary_question": "外国用户涌入小红书对平台原有社区生态和商业逻辑会产生什么影响？",
+  "thesis_type": "问题探讨型",
+  "thesis_sentence": "本文旨在探讨外籍用户群体增加对小红书社区文化的冲击与潜在价值。",
+  "structure_pattern": "缺失",
+  "section_functions": [
+    "内容缺失，仅包含标题及链接，无法分析段落功能"
+  ],
+  "argument_moves": [
+    "基于标题提出社会观察类疑问"
+  ],
+  "core_argument": "由于正文内容缺失，仅能通过标题判定其关注点在于小红书用户群体的国际化变迁及其利弊。",
+  "key_points": [
+    "小红书出现大量外国用户",
+    "跨文化互动对社区生态的影响"
+  ],
+  "opening_pattern": "标题提问式",
+  "ending_pattern": "无法识别",
+  "evidence_types": [
+    "无法识别"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 0,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "第三人称旁观",
+  "stance_strength": "中立",
+  "sentence_rhythm": "无法分析",
+  "abstraction_level": "中等",
+  "transferable_moves": [
+    "无（因内容缺失）"
+  ],
+  "anti_patterns": [
+    "内容缺失",
+    "信息不完整"
+  ],
+  "notable_phrases": [
+    "“洋人”涌入小红书"
+  ],
+  "title_score": 75,
+  "opening_score": 0,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 0,
+  "style_score": 0,
+  "publishability_score": 10,
+  "quality_score": 5,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "is_advertorial": false,
+  "advertorial_type": "mixed",
+  "advertorial_confidence": 0,
+  "promotional_intensity_score": 0,
+  "editorial_independence_score": 0,
+  "brand_exposure_level": "低",
+  "source_transparency": "清晰",
+  "advertorial_signals": [],
+  "summary_200": "该输入仅包含文章标题《“洋人”涌入小红书，是好事吗？》及微信公众号元数据，缺乏实际正文。文章由‘新榜’发布，意在探讨小红书国际化用户增长这一现象对社区生态的影响。由于缺乏正文，无法进行深度的逻辑分析或机制提取。",
+  "summary_500": "该请求提供的信息严重不足，仅包含文章的标题、日期及原始链接，正文内容完全缺失。基于标题《“洋人”涌入小红书，是好事吗？》可以推测，文章关注的是小红书在近期出现的国际化趋势，特别是大量非华裔用户开始使用该平台（如‘听劝’文化、旅游攻略等现象）。这类文章通常会讨论跨文化沟通带来的内容新鲜感，以及对平台原有‘种草’生态、审核压力及内容同质化的潜在挑战。由于没有具体的正文文本，系统无法识别其论证结构、证据类型或写作技巧，亦无法判断其是否存在商业推广倾向。建议补充完整正文以获得更精准的结构化分析。"
+}

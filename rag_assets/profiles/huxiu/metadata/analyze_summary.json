@@ -1,0 +1,12 @@
+{
+  "model": "gemini-3-flash-preview",
+  "processed_in_this_run": 1,
+  "total_indexed_articles": 1,
+  "failed_in_this_run": 0,
+  "year_filter": null,
+  "force": true,
+  "concurrency": 1,
+  "api_key_count": 6,
+  "shard_count": 1,
+  "shard_index": null
+}

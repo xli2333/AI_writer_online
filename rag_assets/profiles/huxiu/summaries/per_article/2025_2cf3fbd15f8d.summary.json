@@ -1,0 +1,136 @@
+{
+  "analysis_schema_version": 3,
+  "id": "2cf3fbd15f8d",
+  "year": "2025",
+  "date": "2025-03-25",
+  "title": "早报｜腾讯QQ宣布调整短视频业务；商务部部长王文涛会见库克；蔚来回应成都起火事故；“天网2025”行",
+  "relative_path": "2025/2025-03-25_早报｜腾讯QQ宣布调整短视频业务；商务部部长王文涛会见库克；蔚来回应成都起火事故；“天网2025”行.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\huxiu\\raw_materials\\2025\\2025-03-25_早报｜腾讯QQ宣布调整短视频业务；商务部部长王文涛会见库克；蔚来回应成都起火事故；“天网2025”行.txt",
+  "char_count": 5348,
+  "content_type": "资讯快报",
+  "entities": [
+    "腾讯",
+    "QQ",
+    "商务部",
+    "王文涛",
+    "苹果",
+    "库克",
+    "蔚来",
+    "小米",
+    "美团",
+    "智元机器人",
+    "比亚迪",
+    "普京",
+    "特朗普"
+  ],
+  "industry": [
+    "互联网",
+    "汽车",
+    "科技",
+    "金融",
+    "国际政治"
+  ],
+  "topic": [
+    "企业动态",
+    "政策法规",
+    "科技创新",
+    "国际关系",
+    "市场传闻"
+  ],
+  "genre": "资讯简报",
+  "style": [
+    "简洁",
+    "碎片化",
+    "客观"
+  ],
+  "audience": [
+    "商业人士",
+    "投资者",
+    "大众读者"
+  ],
+  "intent": [
+    "信息传递",
+    "热点追踪"
+  ],
+  "tone": [
+    "中立",
+    "理性"
+  ],
+  "primary_question": "昨夜今晨在政治、经贸、科技与社会领域有哪些值得关注的重大事件？",
+  "thesis_type": "聚合型",
+  "thesis_sentence": "通过整合多渠道权威信息，为读者提供涵盖国内外政治、大公司战略、行业事故及国际局势的高效率晨间资讯概览。",
+  "structure_pattern": "模块化结构",
+  "section_functions": [
+    "时政要闻速递",
+    "辟谣与官方回应",
+    "互联网大厂动态",
+    "垂直行业细分报道",
+    "体育与国际简讯"
+  ],
+  "argument_moves": [
+    "引用权威媒体通报",
+    "复述企业官方声明",
+    "汇总社交媒体反馈",
+    "提炼国际局势进展"
+  ],
+  "core_argument": "无核心论点，该文属于纯粹的信息聚合工具，旨在降低读者的信息获取成本。",
+  "key_points": [
+    "国家启动‘天网2025’反腐行动",
+    "商务部长王文涛会见库克谈中美经贸合作",
+    "腾讯QQ将停止短视频发布业务",
+    "蔚来回应成都事故称安全系统正常触发",
+    "智元机器人获腾讯投资，估值达150亿元",
+    "比亚迪拟动用600亿理财"
+  ],
+  "opening_pattern": "仪式化问候与定位声明",
+  "ending_pattern": "平台推广与投诉渠道公示",
+  "evidence_types": [
+    "官方公告",
+    "媒体调研",
+    "天眼查工商信息",
+    "社交媒体发帖"
+  ],
+  "evidence_specificity_score": 85,
+  "data_density_score": 75,
+  "case_density_score": 40,
+  "quote_density_score": 60,
+  "narrative_distance": "第三方视角",
+  "stance_strength": "中立",
+  "sentence_rhythm": "短促平实",
+  "abstraction_level": "具体",
+  "transferable_moves": [
+    "多信源整合归类法",
+    "结构化模块标题命名",
+    "回应类新闻的对比呈现"
+  ],
+  "anti_patterns": [
+    "深度解析缺失",
+    "过度依赖二次转载"
+  ],
+  "notable_phrases": [
+    "昨夜今晨",
+    "回应来了",
+    "外事儿放送"
+  ],
+  "title_score": 82,
+  "opening_score": 70,
+  "argument_score": 60,
+  "evidence_score": 88,
+  "structure_score": 90,
+  "style_score": 75,
+  "publishability_score": 95,
+  "quality_score": 78,
+  "reference_value_score": 70,
+  "is_activity_notice": false,
+  "is_low_value": false,
+  "is_advertorial": false,
+  "advertorial_type": "editorial",
+  "advertorial_confidence": 10,
+  "promotional_intensity_score": 15,
+  "editorial_independence_score": 90,
+  "brand_exposure_level": "高",
+  "source_transparency": "清晰",
+  "advertorial_signals": [],
+  "summary_200": "该早报汇总了3月25日前的国内外重点新闻。核心内容包括：‘天网2025’行动启动；商务部长王文涛会见苹果CEO库克，强调反对‘脱钩断链’；腾讯QQ调整业务，将不再支持短视频发布；蔚来回应成都碰撞事故，称车门自动解锁及气囊正常触发；智元机器人获腾讯投资，估值150亿；比亚迪拟投入600亿理财。此外，还涵盖了中国U22男足击败韩国队及多项国际政治局势变动。",
+  "summary_500": "虎嗅3月25日发布的晨间资讯概览。文章通过‘热点追踪’、‘回应来了’、‘大公司新闻’、‘汽车小报’及‘外事儿’等模块，高效整合了多领域信息。重点时政方面，涉及国家反腐‘天网2025’行动及钓鱼岛维权执法。商业经贸层面，记录了商务部与苹果公司的互动，传递了中国扩大开放的信号；同时披露了腾讯对智元机器人的战略投资。在科技与社交领域，腾讯QQ宣布缩减短视频业务引发关注；美团则表态正布局Native AI产品。针对近期社会热点，如蔚来成都火灾、小米募资传闻及多起网络谣言，文章均引用官方或当事人回应进行澄清。文末还补充了中国男足青年队战胜韩国队的体育新闻，以及美俄领导人之间的互动动态。全文信息密度高，来源标注清晰，是典型的商业媒体每日资讯整合产品，具有较强的信息同步价值。"
+}

@@ -1,0 +1,259 @@
+{
+  "model": "gemini-3-flash-preview",
+  "source_count": 36,
+  "updated_at": "2026-03-12T04:29:52.491Z",
+  "selected_articles": [
+    {
+      "id": "dff9c5a8f4c6",
+      "title": "“AI教父”辛顿WAIC演讲全文：我们正在养一头老虎，别指望能“关掉它”",
+      "quality_score": 96,
+      "reference_value_score": 98,
+      "publishability_score": 100
+    },
+    {
+      "id": "830d189e2367",
+      "title": "中美日内瓦经贸会谈联合声明",
+      "quality_score": 92,
+      "reference_value_score": 98,
+      "publishability_score": 100
+    },
+    {
+      "id": "1e08e3456089",
+      "title": "“2026十大意外”，恐颠覆市场！",
+      "quality_score": 94,
+      "reference_value_score": 96,
+      "publishability_score": 95
+    },
+    {
+      "id": "b42e94c2672e",
+      "title": "桥水万字长文：黄金大涨的动力、前景以及为什么需要配置黄金",
+      "quality_score": 93,
+      "reference_value_score": 96,
+      "publishability_score": 95
+    },
+    {
+      "id": "e355e8d1307c",
+      "title": "美股“SaaS末日”来临：“软件-PE”陷入“死亡循环”",
+      "quality_score": 92,
+      "reference_value_score": 96,
+      "publishability_score": 95
+    },
+    {
+      "id": "3e1c195a8385",
+      "title": "美联储会议纪要暴巨大分歧",
+      "quality_score": 92,
+      "reference_value_score": 94,
+      "publishability_score": 95
+    },
+    {
+      "id": "bbd882e78111",
+      "title": "高盛“撕报告”：如果霍尔木兹海峡未来几天没“如期恢复”，油价“巨大上行风险”迅速扩大",
+      "quality_score": 92,
+      "reference_value_score": 95,
+      "publishability_score": 95
+    },
+    {
+      "id": "ccfaba8a0898",
+      "title": "做空ETF、恐慌指数都在飙！高盛戳穿美股“假平静”，市场实则极度脆弱",
+      "quality_score": 92,
+      "reference_value_score": 95,
+      "publishability_score": 95
+    },
+    {
+      "id": "662ce6b4707f",
+      "title": "疯狂24小时！油价上演“历史级别大逆转”",
+      "quality_score": 92,
+      "reference_value_score": 94,
+      "publishability_score": 95
+    },
+    {
+      "id": "12fe2cfc6f10",
+      "title": "政治局会议强调稳住楼市股市(全文)",
+      "quality_score": 92,
+      "reference_value_score": 98,
+      "publishability_score": 100
+    },
+    {
+      "id": "f186b20973ae",
+      "title": "中信证券三十而已：距离“高盛梦”还有多远？",
+      "quality_score": 92,
+      "reference_value_score": 95,
+      "publishability_score": 95
+    },
+    {
+      "id": "2b7369b594f7",
+      "title": "影响8亿基民的公募基金“大动作”，来了！",
+      "quality_score": 90,
+      "reference_value_score": 95,
+      "publishability_score": 95
+    },
+    {
+      "id": "2d570def7915",
+      "title": "巴菲特谢幕、OpenAI搅动万亿市值、谷歌强势崛起......2025全球十大商业事件盘点",
+      "quality_score": 91,
+      "reference_value_score": 94,
+      "publishability_score": 95
+    },
+    {
+      "id": "307767f6915c",
+      "title": "美联储12月决议前最后一个非农夜！坏消息就是好消息？",
+      "quality_score": 90,
+      "reference_value_score": 95,
+      "publishability_score": 95
+    },
+    {
+      "id": "474bfedecf44",
+      "title": "卖车卖股票！#Tesla Takedown#全球抗议爆发，FBI组建特别工作组",
+      "quality_score": 92,
+      "reference_value_score": 94,
+      "publishability_score": 95
+    },
+    {
+      "id": "b1ec94f701c8",
+      "title": "来自“2028年6月的研究报告”：当AI超越预期，经济却崩了，股市大跌",
+      "quality_score": 94,
+      "reference_value_score": 96,
+      "publishability_score": 90
+    },
+    {
+      "id": "7c15a45eddc6",
+      "title": "硅谷巨头6600亿美元押注AI，市场却越烧钱越恐慌",
+      "quality_score": 92,
+      "reference_value_score": 94,
+      "publishability_score": 95
+    },
+    {
+      "id": "7ea8882ae186",
+      "title": "张继强：当下股市任何明显调整都是抄底机会，黄金应该抛一半，债市投资是事倍功半",
+      "quality_score": 92,
+      "reference_value_score": 94,
+      "publishability_score": 95
+    },
+    {
+      "id": "672edca320c6",
+      "title": "中国正在卷起一场OpenClaw风暴",
+      "quality_score": 92,
+      "reference_value_score": 94,
+      "publishability_score": 95
+    },
+    {
+      "id": "59808c11fff6",
+      "title": "贝森特和沃什的“导师”，德鲁肯米勒Q4“精准”开仓金融股ETF、标普等权重ETF和巴西ETF",
+      "quality_score": 92,
+      "reference_value_score": 94,
+      "publishability_score": 95
+    },
+    {
+      "id": "0814a5437506",
+      "title": "高盛：黄金市场“入门指南”",
+      "quality_score": 90,
+      "reference_value_score": 95,
+      "publishability_score": 95
+    },
+    {
+      "id": "070c8e4a0057",
+      "title": "没有商业模式--DeepSeek最坚固的“护城河”",
+      "quality_score": 94,
+      "reference_value_score": 96,
+      "publishability_score": 92
+    },
+    {
+      "id": "4669460decd1",
+      "title": "华尔街点评台积电财报：资本支出、利润率指引过于“炸裂”，任何希望回调的人都会失望",
+      "quality_score": 91,
+      "reference_value_score": 94,
+      "publishability_score": 95
+    },
+    {
+      "id": "5456d290e242",
+      "title": "寿险风暴只是开始，亚洲要面对”美元错配“与”资本回流“",
+      "quality_score": 92,
+      "reference_value_score": 90,
+      "publishability_score": 95
+    },
+    {
+      "id": "9f548263db44",
+      "title": "谁会阻止疯狂的白银？当年亨特兄弟是栽在谁手里？",
+      "quality_score": 90,
+      "reference_value_score": 95,
+      "publishability_score": 95
+    },
+    {
+      "id": "bbe0c963cd28",
+      "title": "3年7倍！博通的崛起与铁腕CEO陈福阳",
+      "quality_score": 92,
+      "reference_value_score": 94,
+      "publishability_score": 95
+    },
+    {
+      "id": "78d1080ac22f",
+      "title": "元旦周重磅日程：美联储主席或揭晓，巴菲特退休，“港股GPU第一股”挂牌",
+      "quality_score": 90,
+      "reference_value_score": 95,
+      "publishability_score": 98
+    },
+    {
+      "id": "55d3c9ad10fa",
+      "title": "鲍威尔否认要救市，警告面临通胀和经济两难挑战",
+      "quality_score": 90,
+      "reference_value_score": 92,
+      "publishability_score": 95
+    },
+    {
+      "id": "54d2e0532d2b",
+      "title": "“央行界教父”逝世，享年81岁，一个时代终结",
+      "quality_score": 92,
+      "reference_value_score": 90,
+      "publishability_score": 95
+    },
+    {
+      "id": "e29028a81f32",
+      "title": "始祖鸟投资人赚翻了",
+      "quality_score": 90,
+      "reference_value_score": 92,
+      "publishability_score": 95
+    },
+    {
+      "id": "5a84d00077d3",
+      "title": "即时零售大战前传：互联网健康的十年“三国杀”",
+      "quality_score": 90,
+      "reference_value_score": 92,
+      "publishability_score": 95
+    },
+    {
+      "id": "141d71e9b302",
+      "title": "提前还贷的人开始变少了，为什么？",
+      "quality_score": 90,
+      "reference_value_score": 92,
+      "publishability_score": 95
+    },
+    {
+      "id": "643de24fecb3",
+      "title": "一周重磅日程：全球屏息！年末最关键一周来了",
+      "quality_score": 90,
+      "reference_value_score": 95,
+      "publishability_score": 95
+    },
+    {
+      "id": "3aa0fe190035",
+      "title": "“飙升的电费”成为美国中选焦点，AI数据中心站上“政治火山口”",
+      "quality_score": 91,
+      "reference_value_score": 93,
+      "publishability_score": 95
+    },
+    {
+      "id": "5fd493531a41",
+      "title": "张坤最新“动向”曝光：市场低估了“治理”的价值，顺周期个股进入腰部持仓",
+      "quality_score": 90,
+      "reference_value_score": 94,
+      "publishability_score": 95
+    },
+    {
+      "id": "52ff8dc33b05",
+      "title": "高盛交易员：当下市场，我最关注这张图",
+      "quality_score": 90,
+      "reference_value_score": 92,
+      "publishability_score": 95
+    }
+  ]
+}

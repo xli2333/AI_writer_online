@@ -1,0 +1,108 @@
+{
+  "analysis_schema_version": 3,
+  "id": "040649148e8c",
+  "year": "2025",
+  "date": "2025-02-21",
+  "title": "有意思周报｜过去一年，各国人最想搞懂这些词的定义；意大利男子拔智齿竟被移除下颚，手术后才发现搞错人了",
+  "relative_path": "2025/2025-02-21_有意思周报｜过去一年，各国人最想搞懂这些词的定义；意大利男子拔智齿竟被移除下颚，手术后才发现搞错人了.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\huxiu\\raw_materials\\2025\\2025-02-21_有意思周报｜过去一年，各国人最想搞懂这些词的定义；意大利男子拔智齿竟被移除下颚，手术后才发现搞错人了.txt",
+  "char_count": 342,
+  "content_type": "导航通知",
+  "entities": [
+    "有意思周报"
+  ],
+  "industry": [
+    "媒体",
+    "互联网"
+  ],
+  "topic": [
+    "社会轶事",
+    "全球热榜"
+  ],
+  "genre": "资讯摘要",
+  "style": [
+    "碎片化",
+    "引流型"
+  ],
+  "audience": [
+    "泛大众",
+    "碎片化阅读者"
+  ],
+  "intent": [
+    "流量引导",
+    "内容推介"
+  ],
+  "tone": [
+    "轻松",
+    "猎奇"
+  ],
+  "primary_question": "过去一周有哪些有趣的国际新闻和数据发现？",
+  "thesis_type": "聚合型",
+  "thesis_sentence": "通过摘要形式展示全球热词和离奇医疗事故，引导读者进入小程序阅读详细内容。",
+  "structure_pattern": "标题挂钩+引导跳转",
+  "section_functions": [
+    "话题预览：利用高反差新闻点吸引注意力",
+    "引流入口：通过小程序链接实现用户转化"
+  ],
+  "argument_moves": [
+    "利用‘最想搞懂的词’制造认知差",
+    "利用‘拔牙被移除下颚’的极端案例制造视觉冲击感",
+    "设置悬念引导点击"
+  ],
+  "core_argument": "该内容无实质性论证，仅作为引流媒介存在。",
+  "key_points": [
+    "过去一年全球搜索词定义的变化趋势",
+    "意大利一起严重的医疗事故（拔牙误切下颚）"
+  ],
+  "opening_pattern": "多标题并列式",
+  "ending_pattern": "动作号召式",
+  "evidence_types": [
+    "新闻案例"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 20,
+  "quote_density_score": 0,
+  "narrative_distance": "第三人称",
+  "stance_strength": "中立",
+  "sentence_rhythm": "极快",
+  "abstraction_level": "具体",
+  "transferable_moves": [
+    "双热点拼接式标题写法",
+    "极简引流推文布局"
+  ],
+  "anti_patterns": [
+    "正文内容极度匮乏",
+    "完全依赖外部链接",
+    "缺乏成文逻辑"
+  ],
+  "notable_phrases": [
+    "有意思周报",
+    "移除下颚"
+  ],
+  "title_score": 85,
+  "opening_score": 30,
+  "argument_score": 10,
+  "evidence_score": 10,
+  "structure_score": 20,
+  "style_score": 40,
+  "publishability_score": 20,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "is_advertorial": true,
+  "advertorial_type": "mixed",
+  "advertorial_confidence": 95,
+  "promotional_intensity_score": 95,
+  "editorial_independence_score": 20,
+  "brand_exposure_level": "高",
+  "source_transparency": "清晰",
+  "advertorial_signals": [
+    "引导点击小程序",
+    "正文无实质性文本",
+    "典型的二次分发引流文案"
+  ],
+  "summary_200": "该内容为《有意思周报》的微信引流快讯，正文极其简短，仅包含标题、日期及通往小程序的链接。标题通过“全球热词定义”和“意大利男子拔智齿被切下颚”两个具有高度猎奇性和信息差的话题吸引读者，但并未在推文内展开任何实质性报道。这种形式属于典型的碎片化信息导流，其核心价值在于标题的营销吸引力而非内容本身。",
+  "summary_500": "本条目属于媒体栏目的导航式短文，主要服务于其自有品牌《有意思周报》的流量留存与转化。文章完全缺失传统意义上的写作机制，仅保留了标题 hook。其选取的两个锚点极具传播潜力：一是宏观维度的全球年度热词认知，二是微观维度的医疗事故极端案例。这种“一正一奇”的标题组合是目前自媒体导流的常用策略。然而，由于文中并无实质性信息输入，对于需要获取深度内容的用户而言参考价值极低。文章被标记为“低价值”和“活动通知”，旨在提醒该内容仅作为跳转媒介，不具备独立的写作学习或数据研究价值。其推广强度极高，编辑独立性低，主要体现了账号对小程序的品牌导流需求。"
+}
