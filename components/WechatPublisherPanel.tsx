@@ -196,6 +196,7 @@ export const WechatPublisherPanel: React.FC<{
   onUpdateLayout: (layout: WechatLayoutSettings) => void;
   onUpdateDraft: (draft?: WechatDraftRecord) => void;
 }> = ({ topic, articleContent, illustrationBundle, layout, draft, onUpdateLayout, onUpdateDraft }) => {
+  const draftSubmissionPassword = String(import.meta.env.VITE_WECHAT_DRAFT_PASSWORD || '').trim();
   const [config, setConfig] = useState<WechatPublisherConfigStatus | null>(null);
   const [configError, setConfigError] = useState<string | null>(null);
   const [previewHtml, setPreviewHtml] = useState('');
@@ -326,6 +327,30 @@ export const WechatPublisherPanel: React.FC<{
   };
 
   const handleUpsertDraft = async () => {
+    if (!draftSubmissionPassword) {
+      setActionError({
+        title: '草稿口令未配置',
+        message: '前端没有检测到提交草稿箱所需的口令环境变量，当前已阻止提交。',
+        details: ['请在 Vercel 中配置 VITE_WECHAT_DRAFT_PASSWORD，然后重新部署前端。'],
+        rawMessage: 'Missing VITE_WECHAT_DRAFT_PASSWORD.',
+      });
+      return;
+    }
+
+    const providedPassword = window.prompt('请输入提交公众号草稿箱口令');
+    if (providedPassword === null) {
+      return;
+    }
+    if (providedPassword !== draftSubmissionPassword) {
+      setActionError({
+        title: '草稿口令错误',
+        message: '口令校验未通过，已取消本次提交草稿箱操作。',
+        details: [],
+        rawMessage: 'Draft submission password mismatch.',
+      });
+      return;
+    }
+
     setBusyAction('draft');
     setActionError(null);
     try {

@@ -5,6 +5,7 @@ declare module '*.md?raw' {
 
 interface ImportMetaEnv {
   readonly VITE_BACKEND_ORIGIN?: string;
+  readonly VITE_WECHAT_DRAFT_PASSWORD?: string;
 }
 
 interface ImportMeta {
