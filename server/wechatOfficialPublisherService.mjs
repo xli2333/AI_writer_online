@@ -2071,6 +2071,7 @@ const renderWechatBeautyTableBlock = (block, blockIndex, context) => {
   const cellPadding = variant === 'compact_grid' ? '9px 8px' : variant === 'minimal_rows' ? '11px 6px' : '12px 10px';
   const containerBackground = variant === 'matrix_panel' ? context.theme.sectionBackground : context.theme.cardBackground;
   const headerBackground = variant === 'matrix_panel' ? '#FFFFFF' : context.theme.tableHeaderBackground;
+  const cellWrapStyle = 'white-space: normal; word-break: break-all;';
   const rowBackground = (rowIndex) => {
     if (variant === 'minimal_rows') {
       return 'transparent';
@@ -2082,13 +2083,13 @@ const renderWechatBeautyTableBlock = (block, blockIndex, context) => {
   };
   return createWechatRenderedBlock(
     `
-      <div style="margin: 28px 0; overflow-x: auto; border: 1px solid ${context.theme.cardBorder}; border-radius: ${radius}px; background: ${containerBackground}; box-shadow: none;">
-        <table style="width: 100%; border-collapse: collapse; font-size: 13px; line-height: 1.75; color: ${context.theme.bodyColor};">
+      <div style="width: 100%; max-width: 100%; margin: 28px 0; overflow: hidden; border: 1px solid ${context.theme.cardBorder}; border-radius: ${radius}px; background: ${containerBackground}; box-shadow: none;">
+        <table style="width: 100%; max-width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 13px; line-height: 1.75; color: ${context.theme.bodyColor};">
           <thead style="background: ${headerBackground};">
             <tr>${block.headers
               .map(
                 (cell, cellIndex) =>
-                  `<th style="padding: ${cellPadding}; border-bottom: 1px solid ${context.theme.cardBorder}; text-align: left; font-weight: 700; color: ${cellIndex === 0 && variant === 'matrix_panel' ? context.theme.sectionColor : context.theme.titleColor}; white-space: ${variant === 'minimal_rows' ? 'nowrap' : 'normal'};">${escapeHtml(cell)}</th>`
+                  `<th style="padding: ${cellPadding}; border-bottom: 1px solid ${context.theme.cardBorder}; text-align: left; font-weight: 700; color: ${cellIndex === 0 && variant === 'matrix_panel' ? context.theme.sectionColor : context.theme.titleColor}; ${cellWrapStyle}">${escapeHtml(cell)}</th>`
               )
               .join('')}</tr>
           </thead>
@@ -2099,7 +2100,7 @@ const renderWechatBeautyTableBlock = (block, blockIndex, context) => {
                   `<tr style="background: ${rowBackground(rowIndex)};">${row
                     .map(
                       (cell, cellIndex) =>
-                        `<td style="padding: ${cellPadding}; border-bottom: 1px solid ${context.theme.cardBorder}; vertical-align: top; font-weight: ${cellIndex === 0 && variant === 'matrix_panel' ? 650 : 400}; color: ${cellIndex === 0 && variant === 'matrix_panel' ? context.theme.titleColor : context.theme.bodyColor};">${escapeHtml(cell)}</td>`
+                        `<td style="padding: ${cellPadding}; border-bottom: 1px solid ${context.theme.cardBorder}; vertical-align: top; font-weight: ${cellIndex === 0 && variant === 'matrix_panel' ? 650 : 400}; color: ${cellIndex === 0 && variant === 'matrix_panel' ? context.theme.titleColor : context.theme.bodyColor}; ${cellWrapStyle}">${escapeHtml(cell)}</td>`
                     )
                     .join('')}</tr>`
               )
