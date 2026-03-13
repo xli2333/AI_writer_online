@@ -2448,6 +2448,38 @@ const fetchWechatJson = async (url, init = {}, context = 'Wechat request', fetch
   return ensureWechatOk(payload, context);
 };
 
+const isWechatInvalidDraftMediaIdError = (error) => /invalid media_id/i.test(String(error?.message || ''));
+
+const createWechatDraft = async ({ accessToken, articlePayload, fetchImpl = fetch }) =>
+  fetchWechatJson(
+    `${WECHAT_API_ORIGIN}/cgi-bin/draft/add?access_token=${encodeURIComponent(accessToken)}`,
+    {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        articles: [articlePayload],
+      }),
+    },
+    'Create draft',
+    fetchImpl
+  );
+
+const updateWechatDraft = async ({ accessToken, mediaId, articlePayload, fetchImpl = fetch }) =>
+  fetchWechatJson(
+    `${WECHAT_API_ORIGIN}/cgi-bin/draft/update?access_token=${encodeURIComponent(accessToken)}`,
+    {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        media_id: mediaId,
+        index: 0,
+        articles: articlePayload,
+      }),
+    },
+    'Update draft',
+    fetchImpl
+  );
+
 const getWechatAccessToken = async (fetchImpl = fetch, forceRefresh = false) => {
   const config = buildWechatPublisherConfig();
   if (!config.configured) {
@@ -2669,29 +2701,40 @@ export const upsertWechatOfficialDraft = async ({
       coverMediaId,
     });
 
-    const requestUrl = mediaId
-      ? `${WECHAT_API_ORIGIN}/cgi-bin/draft/update?access_token=${encodeURIComponent(accessToken)}`
-      : `${WECHAT_API_ORIGIN}/cgi-bin/draft/add?access_token=${encodeURIComponent(accessToken)}`;
-    const payload = await fetchWechatJson(
-      requestUrl,
-      {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(
-          mediaId
-            ? {
-                media_id: mediaId,
-                index: 0,
-                articles: articlePayload,
-              }
-            : {
-                articles: [articlePayload],
-              }
-        ),
-      },
-      mediaId ? 'Update draft' : 'Create draft',
-      fetchImpl
-    );
+    let payload;
+    if (mediaId) {
+      try {
+        payload = await updateWechatDraft({
+          accessToken,
+          mediaId,
+          articlePayload,
+          fetchImpl,
+        });
+      } catch (error) {
+        if (!isWechatInvalidDraftMediaIdError(error)) {
+          throw error;
+        }
+        preview.warnings = [
+          ...(preview.warnings || []),
+          `Existing WeChat draft ${mediaId} is invalid. Created a new draft automatically.`,
+        ];
+        preview.metadata = {
+          ...preview.metadata,
+          warnings: preview.warnings,
+        };
+        payload = await createWechatDraft({
+          accessToken,
+          articlePayload,
+          fetchImpl,
+        });
+      }
+    } else {
+      payload = await createWechatDraft({
+        accessToken,
+        articlePayload,
+        fetchImpl,
+      });
+    }
 
     const resolvedMediaId = cleanText(payload.media_id || mediaId);
     return {

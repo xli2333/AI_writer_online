@@ -303,6 +303,74 @@ const updatedDraft = await upsertWechatOfficialDraft({
 assert.equal(updatedDraft.draft.mediaId, 'mock-draft-media-id');
 assert.equal(updatedDraft.draft.templateId, 'insight_brief');
 
+const fallbackRequestLog = [];
+let fallbackInlineUploadCount = 0;
+
+const fallbackFetchMock = async (input, init = {}) => {
+  const url = typeof input === 'string' ? input : input.url;
+  const method = init.method || 'GET';
+  fallbackRequestLog.push({ url, method });
+  const parsed = new URL(url);
+
+  if (parsed.pathname === '/cgi-bin/stable_token') {
+    return jsonResponse({
+      access_token: 'mock-access-token-fallback',
+      expires_in: 7200,
+    });
+  }
+
+  if (parsed.pathname === '/cgi-bin/media/uploadimg') {
+    fallbackInlineUploadCount += 1;
+    return jsonResponse({
+      url: `https://mmbiz.qpic.cn/mock-inline-fallback-${fallbackInlineUploadCount}.jpg`,
+    });
+  }
+
+  if (parsed.pathname === '/cgi-bin/material/add_material') {
+    return jsonResponse({
+      media_id: 'mock-cover-media-id-fallback',
+      url: 'https://mmbiz.qpic.cn/mock-cover-fallback.jpg',
+    });
+  }
+
+  if (parsed.pathname === '/cgi-bin/draft/update') {
+    return jsonResponse({
+      errcode: 40007,
+      errmsg: 'invalid media_id hint: [Mdrlfa081078-0] rid: fallback-rid',
+    });
+  }
+
+  if (parsed.pathname === '/cgi-bin/draft/add') {
+    return jsonResponse({
+      media_id: 'mock-draft-media-id-fallback',
+    });
+  }
+
+  throw new Error(`Unexpected fallback fetch: ${method} ${url}`);
+};
+
+__wechatPublisherTestUtils.clearWechatAccessTokenCache();
+
+const fallbackDraft = await upsertWechatOfficialDraft({
+  topic: 'AI pricing war next stage',
+  articleContent,
+  illustrationBundle,
+  layout,
+  mediaId: 'stale-draft-media-id',
+  fetchImpl: fallbackFetchMock,
+});
+
+assert.equal(fallbackDraft.draft.mediaId, 'mock-draft-media-id-fallback');
+assert.ok(
+  (fallbackDraft.warnings || []).some(
+    (warning) =>
+      warning.includes('stale-draft-media-id') && warning.includes('Created a new draft automatically.')
+  ),
+  'fallback should surface a warning about recreating the draft'
+);
+assert.equal(fallbackRequestLog.filter((entry) => entry.url.includes('/cgi-bin/draft/update')).length, 1);
+assert.equal(fallbackRequestLog.filter((entry) => entry.url.includes('/cgi-bin/draft/add')).length, 1);
+
 const remoteDraft = await getWechatOfficialDraft({
   mediaId: 'mock-draft-media-id',
   fetchImpl: fetchMock,
