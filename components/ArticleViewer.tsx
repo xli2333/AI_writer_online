@@ -41,7 +41,7 @@ import { WritingCopilot } from './WritingCopilot';
 interface ArticleViewerProps {
   data: WritingProjectData;
   onReset: () => void;
-  onUpdateArticleContent: (content: string) => void;
+  onUpdateArticleContent: (content: string, options?: { preserveIllustrations?: boolean }) => void;
   onUpdateTeachingNotes: (notes: string) => void;
   onUpdateIllustrationBundle: (bundle?: ArticleIllustrationBundle) => void;
   onUpdateWechatLayout: (layout?: WechatLayoutSettings) => void;
@@ -811,7 +811,7 @@ const IllustrationHero: React.FC<{ bundle?: ArticleIllustrationBundle }> = ({ bu
       <img
         src={resolveGeneratedAssetUrl(hero.asset.url)}
         alt={hero.slot?.title || '文章首图'}
-        className="aspect-[16/9] w-full object-cover"
+        className="aspect-square w-full object-cover"
       />
       <figcaption className="grid gap-2 border-t border-slate-200 bg-white px-5 py-4 text-sm text-slate-600 md:grid-cols-[1fr_auto] md:items-center">
         <div>
@@ -901,7 +901,7 @@ const IllustrationGalleryPanel: React.FC<{
                   <img
                     src={resolveGeneratedAssetUrl(asset.url)}
                     alt={slot?.title || asset.title}
-                    className="aspect-[16/9] w-full object-cover"
+                    className="aspect-square w-full object-cover"
                   />
                   <div className="space-y-3 px-5 py-4">
                     <div className="flex items-center justify-between gap-4">
@@ -1019,10 +1019,10 @@ const ModernIllustrationCard: React.FC<{
       <img
         src={resolveGeneratedAssetUrl(asset.url)}
         alt={slot.title || asset.title}
-        className="aspect-[16/9] w-full object-cover"
+        className="aspect-square w-full object-cover"
       />
     ) : (
-      <div className="flex aspect-[16/9] items-center justify-center bg-slate-100 text-sm text-slate-500">当前图位暂无图片</div>
+      <div className="flex aspect-square items-center justify-center bg-slate-100 text-sm text-slate-500">当前图位暂无图片</div>
     )}
 
     <figcaption className="px-5 py-4">
@@ -2138,7 +2138,7 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
       );
 
       if (actualTarget === 'article') {
-        onUpdateArticleContent(nextText);
+        onUpdateArticleContent(nextText, { preserveIllustrations: Boolean(selectedText) });
       } else {
         onUpdateTeachingNotes(nextText);
       }
@@ -2210,7 +2210,7 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
     const nextIndex = historyIndex - 1;
     const snapshot = history[nextIndex];
     setHistoryIndex(nextIndex);
-    onUpdateArticleContent(snapshot.articleContent);
+    onUpdateArticleContent(snapshot.articleContent, { preserveIllustrations: true });
     onUpdateTeachingNotes(snapshot.teachingNotes);
   };
 
@@ -2219,7 +2219,7 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
     const nextIndex = historyIndex + 1;
     const snapshot = history[nextIndex];
     setHistoryIndex(nextIndex);
-    onUpdateArticleContent(snapshot.articleContent);
+    onUpdateArticleContent(snapshot.articleContent, { preserveIllustrations: true });
     onUpdateTeachingNotes(snapshot.teachingNotes);
   };
 

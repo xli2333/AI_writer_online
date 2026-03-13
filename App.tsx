@@ -1798,11 +1798,11 @@ const App: React.FC = () => {
           <ArticleViewer
             data={projectData}
             onReset={handleReset}
-            onUpdateArticleContent={(articleContent) =>
+            onUpdateArticleContent={(articleContent, options) =>
               setProjectData((prev) => ({
                 ...prev,
                 articleContent,
-                illustrationBundle: undefined,
+                illustrationBundle: options?.preserveIllustrations ? prev.illustrationBundle : undefined,
                 wechatDraft: undefined,
               }))
             }
