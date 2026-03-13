@@ -1,0 +1,113 @@
+{
+  "analysis_schema_version": 3,
+  "id": "43a2b43e899b",
+  "year": "2025",
+  "date": "2025-08-10",
+  "title": "当工资低于社保基数，保障的成本该怎么算？丨晚点小数据",
+  "relative_path": "2025/2025-08-10_当工资低于社保基数，保障的成本该怎么算？丨晚点小数据.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\latepost\\raw_materials\\2025\\2025-08-10_当工资低于社保基数，保障的成本该怎么算？丨晚点小数据.txt",
+  "char_count": 356,
+  "content_type": "数据新闻专栏",
+  "entities": [
+    "晚点 LatePost",
+    "晚点小数据"
+  ],
+  "industry": [
+    "宏观经济",
+    "人力资源"
+  ],
+  "topic": [
+    "社保缴费基数",
+    "用工成本",
+    "薪资计算"
+  ],
+  "genre": "深度分析",
+  "style": [
+    "数据导向",
+    "理性"
+  ],
+  "audience": [
+    "企业管理者",
+    "HR从业者",
+    "职场人士",
+    "政策分析师"
+  ],
+  "intent": [
+    "解释现象",
+    "成本核算"
+  ],
+  "tone": [
+    "客观",
+    "专业"
+  ],
+  "primary_question": "当个人月工资低于当地社保缴费基数下限时，具体的成本核算逻辑及对用工双方的影响是什么？",
+  "thesis_type": "问题探讨型",
+  "thesis_sentence": "探讨在社保基数强制下限背景下，低收入群体及企业的实际保障成本负担。",
+  "structure_pattern": "由于正文抓取失败，无法判定具体结构。根据栏目习惯推测为：引出现象-案例/数据测算-宏观影响分析。",
+  "section_functions": [
+    "引出社保基数与工资倒挂的现状",
+    "解释社保基数下限的确定规则",
+    "通过算账拆解个人与企业的实际负担变化",
+    "分析该现象对低收入劳动力市场的影响"
+  ],
+  "argument_moves": [
+    "定义社保基数下限概念",
+    "对比不同收入区间的社保扣缴比例",
+    "量化到手工资受损程度",
+    "提出对保障成本分配的思考"
+  ],
+  "core_argument": "社保基数下限的设定对低薪群体具有显著的‘增支’效应，需通过精细化测算评估其对微观个体到手收入及企业经营压力的影响。",
+  "key_points": [
+    "社保基数下限常高于实际最低工资",
+    "工资低于下限时需按基数缴纳",
+    "低薪员工到手工资会因基数倒挂而大幅缩水",
+    "小微企业用工成本随之被动上升"
+  ],
+  "opening_pattern": "疑问式/痛点式引入",
+  "ending_pattern": "总结建议或趋势预测",
+  "evidence_types": [
+    "政策文件",
+    "测算模型",
+    "统计数据"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 10,
+  "case_density_score": 10,
+  "quote_density_score": 10,
+  "narrative_distance": "第三人称旁观者",
+  "stance_strength": "中立",
+  "sentence_rhythm": "由于正文缺失无法判定",
+  "abstraction_level": "中等（具体核算与宏观政策结合）",
+  "transferable_moves": [
+    "采用‘算账’视角将宏观政策拆解为微观经济账",
+    "从‘小数据’切入大众普遍关心的民生利益话题"
+  ],
+  "anti_patterns": [
+    "输入内容抓取不完整导致的分析支撑缺失"
+  ],
+  "notable_phrases": [
+    "保障的成本",
+    "工资低于社保基数"
+  ],
+  "title_score": 92,
+  "opening_score": 0,
+  "argument_score": 10,
+  "evidence_score": 0,
+  "structure_score": 10,
+  "style_score": 30,
+  "publishability_score": 5,
+  "quality_score": 12,
+  "reference_value_score": 15,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "is_advertorial": false,
+  "advertorial_type": "editorial",
+  "advertorial_confidence": 100,
+  "promotional_intensity_score": 5,
+  "editorial_independence_score": 95,
+  "brand_exposure_level": "低",
+  "source_transparency": "清晰",
+  "advertorial_signals": [],
+  "summary_200": "该输入内容仅包含文章标题及‘触发全局图片搜索模式’的系统提示，实质正文缺失。文章标题聚焦‘工资低于社保基数’这一核心民生痛点，属于《晚点》旗下的数据分析专栏。由于正文逻辑、具体数据和论证环节完全缺失，本次分析主要基于标题及栏目风格进行推演。因信息密度极低，判定为低价值输入。",
+  "summary_500": "本分析针对标题《当工资低于社保基数，保障的成本该怎么算？丨晚点小数据》进行。由于原始输入文本主要为元数据及系统抓取失败的提示（‘此页面触发全局图片搜索模式’），导致实际的论证过程、测算数据和专家观点完全缺失。从标题判断，文章旨在解决的核心问题是：在社保缴费基数下限高于实际工资的常态化背景下，社会保障的经济成本如何在劳动者与雇主之间分配。作为‘晚点小数据’栏目，其典型写作风格通常是利用严谨的财务模型对政策进行拆解，将宏观的‘社保调整’具象化为个体‘到手工资’的增减。然而，因抓取到的实质内容为空，本次分析对除标题外的各项评分进行了大幅调降，并标记为‘低价值信息’。建议在获取完整正文后重新进行结构化提取。"
+}

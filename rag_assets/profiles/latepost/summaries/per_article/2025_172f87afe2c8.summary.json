@@ -1,0 +1,103 @@
+{
+  "analysis_schema_version": 3,
+  "id": "172f87afe2c8",
+  "year": "2025",
+  "date": "2025-07-04",
+  "title": "互联网公司市值半年考，普遍没跑赢消费四巨头",
+  "relative_path": "2025/2025-07-04_互联网公司市值半年考，普遍没跑赢消费四巨头.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\latepost\\raw_materials\\2025\\2025-07-04_互联网公司市值半年考，普遍没跑赢消费四巨头.txt",
+  "char_count": 351,
+  "content_type": "行业动态简报",
+  "entities": [
+    "互联网公司",
+    "消费四巨头"
+  ],
+  "industry": [
+    "互联网",
+    "消费品"
+  ],
+  "topic": [
+    "市值分析",
+    "资本市场表现",
+    "半年报"
+  ],
+  "genre": "财经观察",
+  "style": [
+    "简洁",
+    "结论导向"
+  ],
+  "audience": [
+    "投资者",
+    "金融从业者",
+    "行业分析师"
+  ],
+  "intent": [
+    "信息传递"
+  ],
+  "tone": [
+    "客观",
+    "严肃"
+  ],
+  "primary_question": "2025年上半年互联网公司与消费行业巨头的市值表现对比如何？",
+  "thesis_type": "比较型",
+  "thesis_sentence": "在2025年上半年的市值竞争中，互联网公司普遍表现不佳，未能超越消费行业的四大巨头。",
+  "structure_pattern": "结论先行",
+  "section_functions": [
+    "通过标题界定研究对象与核心结论"
+  ],
+  "argument_moves": [
+    "提出跨行业对比结论"
+  ],
+  "core_argument": "互联网行业的资本市场吸引力在特定周期内弱于传统或新兴的消费巨头。",
+  "key_points": [
+    "互联网公司整体市值增长放缓",
+    "消费四巨头表现出更强的市值韧性或增长性",
+    "2025年上半年是两者表现的分水岭"
+  ],
+  "opening_pattern": "直奔主题",
+  "ending_pattern": "缺失",
+  "evidence_types": [
+    "市场数据"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 5,
+  "quote_density_score": 0,
+  "narrative_distance": "中立观察",
+  "stance_strength": "中等",
+  "sentence_rhythm": "短促有力",
+  "abstraction_level": "中等",
+  "transferable_moves": [
+    "使用“半年考”等拟人化/考试化隐喻进行周期性行业复盘"
+  ],
+  "anti_patterns": [
+    "信息极度缺失",
+    "缺乏具体数据支撑",
+    "只有论点无论据"
+  ],
+  "notable_phrases": [
+    "半年考",
+    "没跑赢"
+  ],
+  "title_score": 75,
+  "opening_score": 10,
+  "argument_score": 15,
+  "evidence_score": 5,
+  "structure_score": 20,
+  "style_score": 30,
+  "publishability_score": 5,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "is_advertorial": false,
+  "advertorial_type": "editorial",
+  "advertorial_confidence": 0,
+  "promotional_intensity_score": 0,
+  "editorial_independence_score": 100,
+  "brand_exposure_level": "低",
+  "source_transparency": "模糊",
+  "advertorial_signals": [],
+  "summary_200": "本文仅提供了一个关于2025年上半年互联网与消费行业市值对比的观察结论。指出互联网公司在市值增长上普遍弱于消费行业的四大巨头。由于提供的正文内容极度匮乏，仅包含标题和元数据，缺乏具体的公司名单、支撑数据及深入的逻辑分析。",
+  "summary_500": "该内容是一篇财经观察类文章的摘要或标题信息。其核心观点非常明确：在2025年上半年的资本市场表现中，互联网行业的整体市值表现未能跑赢消费行业的四家领先企业。文章采用了典型的“周期考”视角，对两大行业的市场表现进行了定性评价。然而，受限于输入文本的完整性，目前仅能识别出其核心论点，无法获取具体的论证过程。这包括但不限于：具体的互联网公司名单、所谓的“消费四巨头”具体指代哪些企业（如可能是茅台、美的、农夫山泉等）、具体的市值跌涨幅数据以及造成这种表现差异的深层宏观或行业原因。由于缺乏正文，该文本目前仅具备索引价值，无法作为深度研究的素材。对于RAG写作而言，它提供了一个可供填充的结构化框架，即“行业对比+时间节点+核心结论”，但急需补充具体的市场数据作为证据特征。"
+}

@@ -1,0 +1,124 @@
+{
+  "analysis_schema_version": 3,
+  "id": "0e659331c3ed",
+  "year": "2024",
+  "date": "2024-04-20",
+  "title": "最便宜的理想，为何还是比小米和问界贵？",
+  "relative_path": "2024/2024-04-20_最便宜的理想，为何还是比小米和问界贵？.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\latepost\\raw_materials\\2024\\2024-04-20_最便宜的理想，为何还是比小米和问界贵？.txt",
+  "char_count": 814,
+  "content_type": "视频导流文案",
+  "entities": [
+    "理想汽车",
+    "理想 L6",
+    "小米",
+    "问界",
+    "MEGA"
+  ],
+  "industry": [
+    "汽车",
+    "新能源汽车"
+  ],
+  "topic": [
+    "产品定价",
+    "市场竞争",
+    "品牌策略"
+  ],
+  "genre": "行业评论",
+  "style": [
+    "分析型",
+    "问答型"
+  ],
+  "audience": [
+    "潜在车主",
+    "汽车行业观察者",
+    "二级市场投资者"
+  ],
+  "intent": [
+    "视频引流",
+    "品牌传播",
+    "热点评论"
+  ],
+  "tone": [
+    "客观",
+    "探究"
+  ],
+  "primary_question": "在小米和问界的双重夹击下，理想L6定价为何依然维持在24.98万起，其竞争力逻辑何在？",
+  "thesis_type": "问题驱动型",
+  "thesis_sentence": "理想L6作为理想汽车在MEGA失利后的销量支柱，其定价策略反映了品牌在激烈的20-30万元市场竞争中的纠结与权衡。",
+  "structure_pattern": "悬念铺垫式",
+  "section_functions": [
+    "产品背景交代 (L6发布信息与售价)",
+    "企业现状剖析 (MEGA失利后的压力)",
+    "市场矛盾引入 (小米与问界的竞争态势)",
+    "核心问题抛出 (定价为何不降)",
+    "行动号召 (观看视频)"
+  ],
+  "argument_moves": [
+    "通过具体售价建立基础事实",
+    "利用‘全村的希望’形象化描述产品战略地位",
+    "对比同价位段竞品制造紧迫感",
+    "通过连续提问激发读者好奇心"
+  ],
+  "core_argument": "理想L6是理想汽车扭转销量颓势的关键，但其定价面临小米和问界的直接威胁，需要通过视频解析其背后的产品逻辑。",
+  "key_points": [
+    "理想L6发布两个版本，起售价24.98万元",
+    "L6是理想目前尺寸最小、价格最低的车型",
+    "在MEGA表现不佳后，L6承担了今年全公司的销量重任",
+    "在20-30万区间面临小米和问界的剧烈竞争"
+  ],
+  "opening_pattern": "疑问式开篇",
+  "ending_pattern": "引流式结尾",
+  "evidence_types": [
+    "价格数据",
+    "上市权益信息",
+    "历史经营事件 (MEGA失利)"
+  ],
+  "evidence_specificity_score": 75,
+  "data_density_score": 40,
+  "case_density_score": 30,
+  "quote_density_score": 10,
+  "narrative_distance": "中距离",
+  "stance_strength": "中等",
+  "sentence_rhythm": "短促有力",
+  "abstraction_level": "具体",
+  "transferable_moves": [
+    "使用‘普天同降’等流行词汇增强时代感",
+    "将产品定位与公司命运（全村的希望）挂钩的叙事手法",
+    "利用竞品对比制造‘左右包夹’的视觉压力感"
+  ],
+  "anti_patterns": [
+    "文字内容极短，核心干货完全依赖视频，阅读价值低",
+    "缺乏深度的文字数据分析，仅作为视频脚本的引言"
+  ],
+  "notable_phrases": [
+    "全村的希望",
+    "普天同降",
+    "左右包夹"
+  ],
+  "title_score": 88,
+  "opening_score": 82,
+  "argument_score": 45,
+  "evidence_score": 55,
+  "structure_score": 65,
+  "style_score": 70,
+  "publishability_score": 45,
+  "quality_score": 52,
+  "reference_value_score": 40,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "is_advertorial": true,
+  "advertorial_type": "product_seeding",
+  "advertorial_confidence": 85,
+  "promotional_intensity_score": 75,
+  "editorial_independence_score": 40,
+  "brand_exposure_level": "高",
+  "source_transparency": "清晰",
+  "advertorial_signals": [
+    "详尽列出上市权益",
+    "强调车型对公司的极端重要性",
+    "以‘三里屯车间’自媒体引流为最终目的"
+  ],
+  "summary_200": "本文是针对理想L6上市的视频导流文案。文章指出理想L6以24.98万元起售，作为品牌最便宜的车型，在MEGA失利后被寄予厚望。但在20-30万元区间，它正遭遇小米和问界的激烈竞争。文案通过质疑理想为何不进一步降价，制造悬念，引导读者点击视频观看详细的产品力和定价策略解析。整体信息密度较低，主要服务于视频号推广和品牌声量维护。",
+  "summary_500": "2024年4月18日，理想汽车正式发布L系列第四款车——理想L6。该车定位为家族中尺寸最小、起售价最低（24.98万-27.98万）的车型。本文作为‘三里屯车间’的视频推文，核心探讨了理想L6在当下的市场处境。文章背景设定在理想MEGA上市失利之后，将L6描述为‘全村的希望’，强调其在公司年度销量目标中的核心地位。文章敏锐捕捉到了行业痛点：在20万-30万元这一新能源汽车竞争最激烈的红海，小米SU7和问界M7形成了对理想L6的左右包夹态势。通过对比竞品，文章向理想汽车抛出了‘为何定价不能再降’的质疑，并借此疑问吸引用户观看视频。从写作角度看，文案使用了强烈的对比和悬念设计，但由于文字仅为视频导流，缺乏深度的数据拆解或行业内幕，信息密度偏低。其性质属于典型的新能源汽车商业合作推广或自媒体引流文案，品牌曝光度高，但编辑独立分析的内容大多保留在了视频中。文中提到的上市权益和定价细节具有一定的实时参考价值，但整体阅读深度不足。"
+}

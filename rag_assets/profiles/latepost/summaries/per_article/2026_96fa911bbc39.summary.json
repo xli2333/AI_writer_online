@@ -1,0 +1,98 @@
+{
+  "analysis_schema_version": 3,
+  "id": "96fa911bbc39",
+  "year": "2026",
+  "date": "2026-02-27",
+  "title": "春节 AI 大战烧了 100 多亿元，然后呢？",
+  "relative_path": "2026/2026-02-27_春节 AI 大战烧了 100 多亿元，然后呢？.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\latepost\\raw_materials\\2026\\2026-02-27_春节 AI 大战烧了 100 多亿元，然后呢？.txt",
+  "char_count": 353,
+  "content_type": "文章残损存根",
+  "entities": [
+    "AI"
+  ],
+  "industry": [
+    "人工智能",
+    "互联网"
+  ],
+  "topic": [
+    "商业竞争",
+    "市场营销"
+  ],
+  "genre": "深度报道",
+  "style": [
+    "客观"
+  ],
+  "audience": [
+    "行业从业者",
+    "科技爱好者"
+  ],
+  "intent": [
+    "信息传递"
+  ],
+  "tone": [
+    "冷静"
+  ],
+  "primary_question": "春节期间各大AI厂商投入巨额资金（100多亿元）后，其市场效果、用户留存及后续战略影响是什么？",
+  "thesis_type": "分析说明型",
+  "thesis_sentence": "由于原文内容缺失，仅能根据标题推测文章旨在探讨春节期间巨额AI投入后的市场现状与后续走向。",
+  "structure_pattern": "残缺结构",
+  "section_functions": [
+    "标题：提出核心财务规模（100亿）与追问",
+    "正文：数据缺失"
+  ],
+  "argument_moves": [
+    "提出百亿规模的资金投入现状",
+    "通过‘然后呢’发起对ROI或长期价值的质疑"
+  ],
+  "core_argument": "信息不足，无法推导核心论点。",
+  "key_points": [
+    "春节期间AI领域投入规模超过100亿元",
+    "关注重点在于投入后的持续性效果"
+  ],
+  "opening_pattern": "数据冲击式标题",
+  "ending_pattern": "内容缺失",
+  "evidence_types": [
+    "概括性数据"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 5,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "中远距离",
+  "stance_strength": "中立",
+  "sentence_rhythm": "无",
+  "abstraction_level": "高",
+  "transferable_moves": [
+    "使用巨额数字作为标题引流",
+    "利用时间节点（春节）进行复盘分析"
+  ],
+  "anti_patterns": [
+    "提供死链或空内容",
+    "缺乏正文支撑的标题党嫌疑"
+  ],
+  "notable_phrases": [
+    "烧了 100 多亿元"
+  ],
+  "title_score": 75,
+  "opening_score": 0,
+  "argument_score": 0,
+  "evidence_score": 5,
+  "structure_score": 5,
+  "style_score": 10,
+  "publishability_score": 0,
+  "quality_score": 5,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "is_advertorial": false,
+  "advertorial_type": "mixed",
+  "advertorial_confidence": 0,
+  "promotional_intensity_score": 0,
+  "editorial_independence_score": 100,
+  "brand_exposure_level": "低",
+  "source_transparency": "清晰",
+  "advertorial_signals": [],
+  "summary_200": "该内容为一个残缺的文章存根，仅包含标题《春节 AI 大战烧了 100 多亿元，然后呢？》及相关元数据。标题揭示了2026年春节期间AI行业存在极大规模的营销或研发投入（超百亿元），并试图对投入后的市场反应和行业后续走向进行复盘。因正文缺失，无法获取具体厂商名称、具体投向及深度分析结论。",
+  "summary_500": "本条目属于严重残缺的结构化数据记录。原文仅提供了一个具有吸引力的标题，指明了分析对象为“2026年春节期间的AI大战”，并给出了“100多亿元”这一宏观投入数据。文章的潜在意图是探讨互联网大厂在春节红包大战、AI应用推广等方面的巨额开支是否转化为有效的用户增长、产品留存或技术壁垒。然而，由于采集到的正文内容为空（仅包含图片搜索触发信息和失效链接），目前无法识别文中所指的特定实体。该存根仅具备记录行业大事件节点的极低参考价值。在RAG（检索增强生成）场景下，本条目仅能作为“2026年春节AI行业高额投入”的一个时间戳参考，无法提供深入的写作逻辑或证据支持。分项评分中，标题因具备冲突感和量化数据得分尚可，其余正文相关维度得分均为极低，被标记为低价值内容。"
+}

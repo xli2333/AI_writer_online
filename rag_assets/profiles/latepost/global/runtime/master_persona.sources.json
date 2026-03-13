@@ -1,0 +1,259 @@
+{
+  "model": "gemini-3-flash-preview",
+  "source_count": 36,
+  "updated_at": "2026-03-09T07:11:36.432Z",
+  "selected_articles": [
+    {
+      "id": "3f07f9d67f13",
+      "title": "现场直击 TikTok 美国国会听证会：难以回答的问题、日渐收紧的包围圈",
+      "quality_score": 96,
+      "reference_value_score": 98,
+      "publishability_score": 100
+    },
+    {
+      "id": "86669c178b83",
+      "title": "独家对话美的方洪波：我只是一个过客，不需要被任何人记住",
+      "quality_score": 97,
+      "reference_value_score": 98,
+      "publishability_score": 100
+    },
+    {
+      "id": "3bec8e67a51e",
+      "title": "战争与和平：字节跳动与腾讯的六年纠葛",
+      "quality_score": 96,
+      "reference_value_score": 98,
+      "publishability_score": 98
+    },
+    {
+      "id": "21abf120ba36",
+      "title": "中国十四大互联网公司 2023 年盘点：竞争恢复、分化加剧",
+      "quality_score": 96,
+      "reference_value_score": 98,
+      "publishability_score": 98
+    },
+    {
+      "id": "068584d1de42",
+      "title": "俄罗斯方块诞生 40 年，为什么我们堆砌方块的热情永无止境？丨晚点周末",
+      "quality_score": 96,
+      "reference_value_score": 95,
+      "publishability_score": 98
+    },
+    {
+      "id": "f46ec66d49b1",
+      "title": "晚点独家丨抖音生活服务大变阵：成立三个大区、多位广告销售团队管理者加入",
+      "quality_score": 94,
+      "reference_value_score": 98,
+      "publishability_score": 100
+    },
+    {
+      "id": "bb4c0ad13084",
+      "title": "小米汽车致命事故：人类和智驾，最终谁驯服了谁？",
+      "quality_score": 96,
+      "reference_value_score": 94,
+      "publishability_score": 100
+    },
+    {
+      "id": "2730fc09c3a4",
+      "title": "字节、阿里、腾讯 AI 大战全记录：一场影响命运的战争",
+      "quality_score": 95,
+      "reference_value_score": 97,
+      "publishability_score": 98
+    },
+    {
+      "id": "71a09055f516",
+      "title": "阿里巨变进行中：确定的和未知的",
+      "quality_score": 95,
+      "reference_value_score": 96,
+      "publishability_score": 98
+    },
+    {
+      "id": "2e479b13d96c",
+      "title": "给互联网人的反侦查手册 2.0",
+      "quality_score": 95,
+      "reference_value_score": 98,
+      "publishability_score": 98
+    },
+    {
+      "id": "ea6f1ded5ceb",
+      "title": "2025丨四年极限自救，变成一个有吸引力的筹码",
+      "quality_score": 95,
+      "reference_value_score": 96,
+      "publishability_score": 98
+    },
+    {
+      "id": "4ff40965d302",
+      "title": "更强的 GPT-4，更封闭的 OpenAI丨TECH TUESDAY 特别版",
+      "quality_score": 96,
+      "reference_value_score": 95,
+      "publishability_score": 98
+    },
+    {
+      "id": "c91a0b781fb1",
+      "title": "新阿里、旧阿里：有些事变了，有些事没变",
+      "quality_score": 95,
+      "reference_value_score": 96,
+      "publishability_score": 98
+    },
+    {
+      "id": "b8cf6a19e3a3",
+      "title": "“人们常常低估了五年能有的改变”丨晚点小数据 2025",
+      "quality_score": 95,
+      "reference_value_score": 98,
+      "publishability_score": 98
+    },
+    {
+      "id": "30e0b75b016b",
+      "title": "还原字节跳动 HR 体系：中国互联网最极致人才工厂的起落",
+      "quality_score": 94,
+      "reference_value_score": 96,
+      "publishability_score": 98
+    },
+    {
+      "id": "39382f87bd9b",
+      "title": "RISC-V 加速：以开源反抗芯片封锁",
+      "quality_score": 94,
+      "reference_value_score": 96,
+      "publishability_score": 98
+    },
+    {
+      "id": "c1661f93a016",
+      "title": "淘宝闪购双十一作战计划，和零售持久战的新开始",
+      "quality_score": 95,
+      "reference_value_score": 96,
+      "publishability_score": 98
+    },
+    {
+      "id": "ce20b80d5b1e",
+      "title": "社保的经济账和公平账，到底该怎么算？",
+      "quality_score": 95,
+      "reference_value_score": 96,
+      "publishability_score": 98
+    },
+    {
+      "id": "f88009886629",
+      "title": "新冠重复感染难以避免，但没那么可怕丨TECH TUESDAY",
+      "quality_score": 96,
+      "reference_value_score": 94,
+      "publishability_score": 96
+    },
+    {
+      "id": "aa8691feea47",
+      "title": "中国汽车出海图景：壁垒、跳板和窄门",
+      "quality_score": 94,
+      "reference_value_score": 96,
+      "publishability_score": 98
+    },
+    {
+      "id": "c88188b7a011",
+      "title": "被竞业之后，把工资加倍还给前公司的人",
+      "quality_score": 96,
+      "reference_value_score": 95,
+      "publishability_score": 98
+    },
+    {
+      "id": "bcb2fce4c3b4",
+      "title": "晚点独家丨极兔正与顺丰洽谈入股，详解交易背后的逻辑",
+      "quality_score": 95,
+      "reference_value_score": 96,
+      "publishability_score": 98
+    },
+    {
+      "id": "57a4d0f4675d",
+      "title": "年末 AI 回顾：从模型到应用，从技术到商战，拽住洪流中的意义之线",
+      "quality_score": 94,
+      "reference_value_score": 96,
+      "publishability_score": 98
+    },
+    {
+      "id": "27238d7dbb2e",
+      "title": "星巴克中国交易：激进的扩张，韩国的剧本，未决的根本问题",
+      "quality_score": 94,
+      "reference_value_score": 96,
+      "publishability_score": 98
+    },
+    {
+      "id": "7f2926a4c1d2",
+      "title": "库迪咖啡的极限游戏",
+      "quality_score": 93,
+      "reference_value_score": 96,
+      "publishability_score": 98
+    },
+    {
+      "id": "45d9b9ac1614",
+      "title": "刘强东详解京东低价战略：一个共识、两条公式和三大痛点",
+      "quality_score": 95,
+      "reference_value_score": 96,
+      "publishability_score": 98
+    },
+    {
+      "id": "a2c406950e54",
+      "title": "关税闹剧下，20 多位全球贸易参与者的 72 小时",
+      "quality_score": 95,
+      "reference_value_score": 97,
+      "publishability_score": 98
+    },
+    {
+      "id": "8b1782d2ca76",
+      "title": "汽车供应链格局生变，新军崛起",
+      "quality_score": 94,
+      "reference_value_score": 96,
+      "publishability_score": 98
+    },
+    {
+      "id": "c9aa82c37f03",
+      "title": "开城！开城！中国车企自动驾驶最激进的时刻丨TECH TUESDAY",
+      "quality_score": 94,
+      "reference_value_score": 96,
+      "publishability_score": 98
+    },
+    {
+      "id": "d114d4b74c88",
+      "title": "晚点对话吴欣鸿：重生之我在美图做 CEO",
+      "quality_score": 96,
+      "reference_value_score": 95,
+      "publishability_score": 98
+    },
+    {
+      "id": "7730b1077a93",
+      "title": "寻梦拉美：100 种向往和 101 种落差",
+      "quality_score": 94,
+      "reference_value_score": 96,
+      "publishability_score": 98
+    },
+    {
+      "id": "5e18cf984b84",
+      "title": "喜茶开放加盟：可规模化的生意，难复制的灵感",
+      "quality_score": 95,
+      "reference_value_score": 96,
+      "publishability_score": 98
+    },
+    {
+      "id": "5061e571744d",
+      "title": "1 亿人的小红书：时机、摇摆和决心",
+      "quality_score": 95,
+      "reference_value_score": 96,
+      "publishability_score": 98
+    },
+    {
+      "id": "cdb0110bb8a4",
+      "title": "晚点独家丨阿里电商一年复盘：国内做减法，海外发力三个 C 端业务",
+      "quality_score": 94,
+      "reference_value_score": 96,
+      "publishability_score": 98
+    },
+    {
+      "id": "0978bc3c48cb",
+      "title": "4680 的艰难诞生，只有特斯拉才敢这样造电池丨TECH TUESDAY",
+      "quality_score": 94,
+      "reference_value_score": 96,
+      "publishability_score": 98
+    },
+    {
+      "id": "0831cb8d74a6",
+      "title": "胖东来宇宙",
+      "quality_score": 94,
+      "reference_value_score": 96,
+      "publishability_score": 98
+    }
+  ]
+}

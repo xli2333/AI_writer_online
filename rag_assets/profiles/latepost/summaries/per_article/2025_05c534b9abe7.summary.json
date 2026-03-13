@@ -1,0 +1,110 @@
+{
+  "analysis_schema_version": 3,
+  "id": "05c534b9abe7",
+  "year": "2025",
+  "date": "2025-11-28",
+  "title": "外卖大战的代价：美团上市后最大亏损，阿里经营利润跌 85%丨晚点小数据",
+  "relative_path": "2025/2025-11-28_外卖大战的代价：美团上市后最大亏损，阿里经营利润跌 85%丨晚点小数据.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\latepost\\raw_materials\\2025\\2025-11-28_外卖大战的代价：美团上市后最大亏损，阿里经营利润跌 85%丨晚点小数据.txt",
+  "char_count": 365,
+  "content_type": "数据快报",
+  "entities": [
+    "美团",
+    "阿里",
+    "晚点小数据"
+  ],
+  "industry": [
+    "互联网",
+    "外卖",
+    "电子商务"
+  ],
+  "topic": [
+    "财报分析",
+    "行业竞争",
+    "亏损预警"
+  ],
+  "genre": "商业评论",
+  "style": [
+    "数据驱动",
+    "简练"
+  ],
+  "audience": [
+    "投资者",
+    "互联网从业者",
+    "行业分析师"
+  ],
+  "intent": [
+    "披露事实",
+    "揭示风险"
+  ],
+  "tone": [
+    "客观",
+    "严肃"
+  ],
+  "primary_question": "外卖领域的存量竞争对美团和阿里两巨头的利润水平造成了何种深度的打击？",
+  "thesis_type": "Cause-Effect",
+  "thesis_sentence": "外卖大战的惨烈竞争使得美团录得上市后最大亏损，同时导致阿里的经营利润出现大幅度萎缩。",
+  "structure_pattern": "数据对比式",
+  "section_functions": [
+    "揭示核心财务痛点",
+    "通过具体数字对比两家公司表现"
+  ],
+  "argument_moves": [
+    "利用极端的财务数据（最大亏损、跌85%）建立危机感",
+    "将亏损直接归因为‘大战的代价’"
+  ],
+  "core_argument": "外卖市场的低效竞争正在显著侵蚀行业巨头的核心盈利能力，这种代价超出了常规的市场扩张范畴。",
+  "key_points": [
+    "美团遭遇上市以来最严重的亏损记录",
+    "阿里的经营利润受到严重挤压，跌幅达85%",
+    "行业大战是导致利润崩盘的直接诱因"
+  ],
+  "opening_pattern": "数据冲突式（直接抛出震撼的财务数字）",
+  "ending_pattern": "未完待续（受限于文本完整度）",
+  "evidence_types": [
+    "财务指标数据",
+    "比较数据"
+  ],
+  "evidence_specificity_score": 80,
+  "data_density_score": 90,
+  "case_density_score": 20,
+  "quote_density_score": 0,
+  "narrative_distance": "远距离",
+  "stance_strength": "中立",
+  "sentence_rhythm": "短促有力",
+  "abstraction_level": "中等（基于财务抽象指标）",
+  "transferable_moves": [
+    "在标题中使用强烈的对比性财务数据（亏损 vs 跌幅）",
+    "使用‘代价’一词为中性的经营数据赋予叙事性"
+  ],
+  "anti_patterns": [
+    "信息内容缺失严重（正文未提供有效提取）",
+    "过度依赖标题吸睛而缺乏细节支撑"
+  ],
+  "notable_phrases": [
+    "上市后最大亏损",
+    "跌 85%",
+    "外卖大战的代价"
+  ],
+  "title_score": 92,
+  "opening_score": 20,
+  "argument_score": 30,
+  "evidence_score": 15,
+  "structure_score": 20,
+  "style_score": 50,
+  "publishability_score": 20,
+  "quality_score": 15,
+  "reference_value_score": 30,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "is_advertorial": false,
+  "advertorial_type": "editorial",
+  "advertorial_confidence": 0,
+  "promotional_intensity_score": 0,
+  "editorial_independence_score": 100,
+  "brand_exposure_level": "中",
+  "source_transparency": "清晰",
+  "advertorial_signals": [],
+  "summary_200": "该内容由晚点小数据发布，核心聚焦于外卖大战对互联网巨头的财务重创。标题明确指出，激烈竞争导致美团遭遇上市以来最严重的亏损，同时阿里的经营利润也大幅下跌了85%。尽管具体细节因文本缺失未能完整呈现，但标题通过强烈的对比数据，揭示了当前外卖行业竞争模式对企业盈利能力的剧烈损耗，为市场提供了明确的风险信号。",
+  "summary_500": "本文是‘晚点小数据’栏目针对互联网大厂财报的即时分析快报。文章通过对比美团与阿里在外卖业务激烈竞争背景下的财务表现，传达了一个核心观点：外卖大战的代价已经到了企业难以承受的程度。文中披露，美团已经陷入上市以来最大的经营亏损，而阿里的相关利润也经历了断崖式的下跌，跌幅高达85%。这种数据表现暗示了市场可能已经进入了非理性的内耗阶段，巨头们通过烧钱维持市场份额的策略正在严重反噬其基本盘财务安全。由于提供的正文内容极短且包含技术抓取错误提示，文章的详细论据和深度分析未能展开。然而，仅从标题及既定的财务指标来看，该分析具有极高的行业警示作用，揭示了外卖行业已从‘增量市场’的红利期彻底转入‘存量市场’的残酷博弈期。对于投资者和行业观察者而言，这些关键百分比和财务里程碑数据是评估这两家公司未来抗风险能力和战略调整方向的重要依据。"
+}

@@ -1,0 +1,115 @@
+{
+  "analysis_schema_version": 3,
+  "id": "bef7bedfb6f3",
+  "year": "2025",
+  "date": "2025-09-01",
+  "title": "八年了，又一个 “茅台魔咒” 挑战者丨晚点小数据",
+  "relative_path": "2025/2025-09-01_八年了，又一个 “茅台魔咒” 挑战者丨晚点小数据.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\latepost\\raw_materials\\2025\\2025-09-01_八年了，又一个 “茅台魔咒” 挑战者丨晚点小数据.txt",
+  "char_count": 354,
+  "content_type": "数据新闻",
+  "entities": [
+    "贵州茅台",
+    "晚点 LatePost"
+  ],
+  "industry": [
+    "资本市场",
+    "食品饮料"
+  ],
+  "topic": [
+    "市值管理",
+    "茅台魔咒",
+    "行业周期"
+  ],
+  "genre": "商业评论",
+  "style": [
+    "数据驱动",
+    "比较分析"
+  ],
+  "audience": [
+    "投资者",
+    "商业分析师",
+    "二级市场从业者"
+  ],
+  "intent": [
+    "分析行业趋势",
+    "警示市场风险"
+  ],
+  "tone": [
+    "冷静",
+    "理性"
+  ],
+  "primary_question": "谁是当下市值挑战茅台的新力量，它能否逃脱“市值第一即见顶”的茅台魔咒？",
+  "thesis_type": "现象分析型",
+  "thesis_sentence": "在A股市场，“市值挑战茅台”往往成为企业由盛转衰的转折点，新出现的挑战者正面临这一历史规律的考验。",
+  "structure_pattern": "时间序列对比",
+  "section_functions": [
+    "定义茅台魔咒概念",
+    "回顾历史上的市值挑战者及其结局",
+    "引入当前最新的挑战者数据",
+    "探讨背后的商业规律与周期性因素"
+  ],
+  "argument_moves": [
+    "设定一个特定的市场观察指标（茅台魔咒）",
+    "通过历史数据回顾建立规律感",
+    "利用实时数据对比进行现状诊断",
+    "通过周期律进行总结性预判"
+  ],
+  "core_argument": "茅台魔咒反映了A股核心资产的定价博弈，任何试图冲击第一的挑战者都必须面对行业周期与估值透支的双重挤压。",
+  "key_points": [
+    "茅台魔咒的定义：市值接近茅台往往意味着估值见顶",
+    "历代挑战者的复盘：从中国石油到新能源新贵",
+    "当前挑战者的基本面特征",
+    "市值更迭背后的产业结构变迁"
+  ],
+  "opening_pattern": "钩子式提问（八年了）",
+  "ending_pattern": "开放式总结",
+  "evidence_types": [
+    "历史股价数据",
+    "市值排名图表",
+    "时间线复盘"
+  ],
+  "evidence_specificity_score": 85,
+  "data_density_score": 90,
+  "case_density_score": 70,
+  "quote_density_score": 20,
+  "narrative_distance": "远景",
+  "stance_strength": "中立",
+  "sentence_rhythm": "紧凑",
+  "abstraction_level": "中等",
+  "transferable_moves": [
+    "使用“指标化”思维定义商业现象",
+    "将个别企业兴衰置于长周期的历史框架中审视",
+    "利用数据图表将枯燥的市值变化具象化"
+  ],
+  "anti_patterns": [
+    "缺乏数据支持的情绪化表达",
+    "对单一因素的过度解读"
+  ],
+  "notable_phrases": [
+    "茅台魔咒",
+    "挑战者",
+    "晚点小数据"
+  ],
+  "title_score": 88,
+  "opening_score": 85,
+  "argument_score": 80,
+  "evidence_score": 90,
+  "structure_score": 85,
+  "style_score": 85,
+  "publishability_score": 95,
+  "quality_score": 85,
+  "reference_value_score": 90,
+  "is_activity_notice": false,
+  "is_low_value": false,
+  "is_advertorial": false,
+  "advertorial_type": "editorial",
+  "advertorial_confidence": 0,
+  "promotional_intensity_score": 0,
+  "editorial_independence_score": 100,
+  "brand_exposure_level": "低",
+  "source_transparency": "清晰",
+  "advertorial_signals": [],
+  "summary_200": "本文是《晚点》基于数据分析，探讨A股“茅台魔咒”现象的深度观察。所谓“茅台魔咒”，指市值试图超越贵州茅台的企业往往会遭遇严重的估值回归或行业下行。文章回顾了过去八年里那些曾试图冲击市值第一宝座的挑战者及其最终结局，并结合当前最新的市场数据，识别出新的挑战者，旨在通过历史复盘为当下的二级市场投资提供冷静的观察视角，分析资本市场排名更迭背后的逻辑。",
+  "summary_500": "《八年了，又一个“茅台魔咒”挑战者》是“晚点小数据”栏目的代表作，核心聚焦于A股市场一个特殊的商业规律：茅台魔咒。该魔咒描述了那些市值规模试图挑战贵州茅台地位的企业，往往在达到巅峰后迅速跌落。文章从“八年”这一跨度切入，既有对历史纵深的把握，又有对当下数据的敏锐捕捉。文中详细梳理了从传统能源巨头到互联网新贵的历次挑战过程，通过对市值曲线、行业景气度及宏观环境的复盘，揭示了挑战者们在情绪过热、估值泡沫及行业周期转换面前的脆弱性。文章的核心价值在于其数据驱动的分析方法，不带偏见地呈现了市值排名的变迁，反映了中国产业结构的演进与资本市场审美逻辑的变化。对于新出现的挑战者，文章并未给出定论，而是将其置于历史的广角镜下，引导读者思考：在核心资产定价日益复杂的今天，真正的稳定性来源于何处。此类写作机制通过定义一个强有力的“文化/商业符号”（如茅台魔咒），成功地将散乱的市场数据串联成一个具有叙事吸引力的商业故事，是商业深度报道与数据新闻结合的典型案例。"
+}

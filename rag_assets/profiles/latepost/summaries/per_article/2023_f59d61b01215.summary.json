@@ -1,0 +1,128 @@
+{
+  "id": "f59d61b01215",
+  "year": "2023",
+  "date": "2023-03-29",
+  "title": "晚点独家丨腾讯副总裁郄小虎离职，曾任小红书和滴滴 CTO",
+  "relative_path": "2023/2023-03-29_晚点独家丨腾讯副总裁郄小虎离职，曾任小红书和滴滴 CTO.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\latepost\\raw_materials\\2023\\2023-03-29_晚点独家丨腾讯副总裁郄小虎离职，曾任小红书和滴滴 CTO.txt",
+  "char_count": 2386,
+  "content_type": "深度报道",
+  "entities": [
+    "郄小虎",
+    "腾讯",
+    "晚点 LatePost",
+    "小红书",
+    "滴滴",
+    "Google",
+    "曾宇",
+    "任宇昕",
+    "黄峥"
+  ],
+  "industry": [
+    "互联网",
+    "信息技术"
+  ],
+  "topic": [
+    "高管变动",
+    "组织架构调整",
+    "技术管理",
+    "企业改革"
+  ],
+  "genre": "商业新闻",
+  "style": [
+    "简练",
+    "叙事性",
+    "事实导向"
+  ],
+  "audience": [
+    "科技行业从业者",
+    "互联网观察者",
+    "企业管理人员"
+  ],
+  "intent": [
+    "信息传播",
+    "深度解读"
+  ],
+  "tone": [
+    "客观",
+    "冷静"
+  ],
+  "primary_question": "腾讯副总裁郄小虎为何离职，他在腾讯期间完成了哪些技术与组织使命？",
+  "thesis_type": "解释性论证",
+  "thesis_sentence": "郄小虎作为顶级技术专家，其离职既是个体职业选择，也反映了互联网巨头在完成阶段性技术改革后，在AI新浪潮下面临的人才重新流动。",
+  "structure_pattern": "时事导向型-人物回顾式",
+  "section_functions": [
+    "核心新闻告知：宣布郄小虎离职及其继任者",
+    "背景梳理：追溯其在Google、小红书、滴滴的过往履历",
+    "价值评估：分析其在腾讯PCG技术改革中的具体贡献（中台化、算法化）",
+    "管理风格刻画：通过下属评价勾勒其沉默、务实的硅谷式管理特征",
+    "成果展示：列举PCG及信服线扭亏为盈的经营数据",
+    "结语展望：以AI革命作为行业变局的宏观注脚"
+  ],
+  "argument_moves": [
+    "引用权威评价建立人物高度（国内最想挖的三个工程师之一）",
+    "对比不同时期的职涯挑战阐述个人价值（从小红书到腾讯的差异）",
+    "使用具体业务数据背书管理成效（搜狗输入法DAU、PCG利润情况）",
+    "揭秘内部细节还原改革难度（挤水分用了两年多）"
+  ],
+  "core_argument": "郄小虎在腾讯的任期内完成了PCG从分散到中台化的技术基建夯实，并在信服线实现了业务盈利，其离职处于技术周期交替的关键节点。",
+  "key_points": [
+    "腾讯副总裁郄小虎已离职，业务由曾宇接管",
+    "郄小虎曾是Google广告系统核心成员，具备极强的硅谷技术基因",
+    "在腾讯期间推动了PCG的“中台制”改革和算法推荐模式",
+    "主导了搜狗搜索、搜狗输入法的整合与信服线盈利转化",
+    "其管理风格崇尚简单高效，通过“渐进式”改革解决重复造轮子问题"
+  ],
+  "opening_pattern": "结论先行+独家信源申明",
+  "ending_pattern": "宏观升华+趋势预判",
+  "evidence_types": [
+    "独家内部访谈",
+    "财务数据",
+    "业务经营指标",
+    "公开论文记录"
+  ],
+  "evidence_specificity_score": 85,
+  "data_density_score": 70,
+  "case_density_score": 60,
+  "quote_density_score": 75,
+  "narrative_distance": "近距离观察",
+  "stance_strength": "中立",
+  "sentence_rhythm": "长短句交替，节奏感强",
+  "abstraction_level": "中等（兼顾具体业务与技术战略）",
+  "transferable_moves": [
+    "如何描写高端人才的职业履历（对比与铺垫手法）",
+    "如何将抽象的“技术改革”通过“挤水分”等隐喻具象化",
+    "在报道高管离职时结合行业大背景（AI浪潮）进行升华"
+  ],
+  "anti_patterns": [
+    "避免盲目吹捧，记录了其在滴滴时期空间不大的真实局限",
+    "避免空洞口号，通过利润数字和DAU实证业务能力"
+  ],
+  "notable_phrases": [
+    "挤水分就用两年多",
+    "零基思维",
+    "国内互联网企业最想从 Google 挖走的三个工程师之一"
+  ],
+  "title_score": 90,
+  "opening_score": 88,
+  "argument_score": 85,
+  "evidence_score": 88,
+  "structure_score": 90,
+  "style_score": 87,
+  "publishability_score": 95,
+  "quality_score": 92,
+  "reference_value_score": 85,
+  "is_activity_notice": false,
+  "is_low_value": false,
+  "is_advertorial": false,
+  "advertorial_type": "editorial",
+  "advertorial_confidence": 0,
+  "promotional_intensity_score": 5,
+  "editorial_independence_score": 95,
+  "brand_exposure_level": "中",
+  "source_transparency": "清晰",
+  "advertorial_signals": [],
+  "summary_200": "《晚点 LatePost》独家报道，腾讯副总裁、PCG信息与服务线负责人郄小虎离职。这位曾任职于Google、小红书和滴滴的资深技术专家，在腾讯任职期间主导了PCG的技术中台改革及搜狗相关业务的整合，推动了PCG全面盈利。报道分析了其硅谷式管理风格及对腾讯技术文化的冲击。在当前AI浪潮背景下，郄小虎的离开象征着互联网顶尖人才在产业周期更迭时的重新选择。",
+  "summary_500": "本文是《晚点 LatePost》关于腾讯高管变动的独家报道。核心内容聚焦于腾讯副总裁、PCG技术大拿郄小虎的离职。郄小虎作为“国内最想从Google挖走的工程师”之一，履历极其耀眼，曾先后出任小红书和滴滴的CTO。2020年加入腾讯后，他在COO任宇昕的主导下，深入参与了PCG事业群的技术大改革，通过推行中台制和算法模式，解决了腾讯长期以来技术重复建设、“造轮子”的问题。在管理信服线（QQ浏览器、搜狗业务）期间，他推崇“零基思维”，在降本增效的大环境下实现了业务的扭亏为盈，搜狗输入法DAU稳定在6-7亿。文章还披露了郄小虎独特的人格特征：不苟言笑、崇尚硅谷简单高效文化、在技术上克制而务实。尽管其在腾讯期间通过“渐进式”改革取得了显著成效，包括推动PCG全线业务在2022年底盈利，但他仍保持着对前沿科研的参与。文章最后指出，随着OpenAI引发的AI革命，像郄小虎这样的技术顶级人才正迎来全新的市场机会。本报道展现了深度商业新闻的典型特征：信源可靠、细节丰富，既有宏观的企业战略透视，又有微观的人物管理细节，是研究腾讯技术组织变革的重要参考资料。",
+  "analysis_schema_version": 3
+}

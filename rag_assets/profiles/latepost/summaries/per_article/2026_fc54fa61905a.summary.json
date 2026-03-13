@@ -1,0 +1,109 @@
+{
+  "analysis_schema_version": 3,
+  "id": "fc54fa61905a",
+  "year": "2026",
+  "date": "2026-02-04",
+  "title": "港股的非典型 IPO 大年丨晚点小数据",
+  "relative_path": "2026/2026-02-04_港股的非典型 IPO 大年丨晚点小数据.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\latepost\\raw_materials\\2026\\2026-02-04_港股的非典型 IPO 大年丨晚点小数据.txt",
+  "char_count": 349,
+  "content_type": "数据简报",
+  "entities": [
+    "晚点",
+    "港交所"
+  ],
+  "industry": [
+    "金融",
+    "证券",
+    "资本市场"
+  ],
+  "topic": [
+    "港股IPO",
+    "资本流动",
+    "市场趋势"
+  ],
+  "genre": "商业数据评论",
+  "style": [
+    "数据驱动",
+    "简约"
+  ],
+  "audience": [
+    "投资者",
+    "金融从业者",
+    "企业高管"
+  ],
+  "intent": [
+    "信息传递",
+    "趋势解读"
+  ],
+  "tone": [
+    "客观",
+    "专业"
+  ],
+  "primary_question": "2026年港股IPO市场的整体表现及其“非典型”特征体现在哪里？",
+  "thesis_type": "现象描述型",
+  "thesis_sentence": "港股市场在2026年迎来了IPO大年，但其增长逻辑与市场结构呈现出与以往不同的非典型特征。",
+  "structure_pattern": "由于正文内容缺失，仅能推断其遵循“晚点小数据”常用的“核心指标+数据解读+行业分布”的结构。",
+  "section_functions": [
+    "展示年度IPO核心数据",
+    "对比历史同期增长率",
+    "分析非典型特征的具体成因",
+    "总结市场未来展望"
+  ],
+  "argument_moves": [
+    "通过宏观数据建立现状背景",
+    "利用‘非典型’这一关键词制造反差",
+    "通过行业细分揭示结构性变化"
+  ],
+  "core_argument": "港股IPO市场正在经历一场结构性的回暖，但驱动力、行业分布或估值逻辑已发生显著变化。",
+  "key_points": [
+    "港股2026年IPO规模显著增长",
+    "市场呈现‘非典型’特征（推测为行业重心转移或募资模式变化）"
+  ],
+  "opening_pattern": "直陈事实/数据切入",
+  "ending_pattern": "数据总结/趋势预判",
+  "evidence_types": [
+    "统计数据",
+    "历史对比"
+  ],
+  "evidence_specificity_score": 10,
+  "data_density_score": 10,
+  "case_density_score": 5,
+  "quote_density_score": 0,
+  "narrative_distance": "第三人称客观叙述",
+  "stance_strength": "中立",
+  "sentence_rhythm": "短促有力",
+  "abstraction_level": "中等（侧重具体财务数据）",
+  "transferable_moves": [
+    "使用‘非典型’作为标签来定义复杂市场现象",
+    "以‘小数据’视角切入宏观宏大叙事"
+  ],
+  "anti_patterns": [
+    "信息缺失（仅有标题和链接，缺乏实质性论证内容）"
+  ],
+  "notable_phrases": [
+    "非典型 IPO 大年",
+    "晚点小数据"
+  ],
+  "title_score": 85,
+  "opening_score": 10,
+  "argument_score": 5,
+  "evidence_score": 5,
+  "structure_score": 10,
+  "style_score": 20,
+  "publishability_score": 10,
+  "quality_score": 15,
+  "reference_value_score": 20,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "is_advertorial": false,
+  "advertorial_type": "editorial",
+  "advertorial_confidence": 0,
+  "promotional_intensity_score": 0,
+  "editorial_independence_score": 100,
+  "brand_exposure_level": "低",
+  "source_transparency": "清晰",
+  "advertorial_signals": [],
+  "summary_200": "本文为《晚点》旗下‘小数据’专栏的文章。标题指出2026年是港股IPO的‘非典型大年’，预示着该年港股上市动态在量能上有所爆发，但在结构或逻辑上与传统‘大年’存在差异。由于输入内容仅包含标题及外部链接，具体正文论据缺失。此类文章通常以高信息密度的图表和数据对比为核心，旨在为投资者提供快速的市场扫描。鉴于正文缺失，其作为写作素材的参考价值目前仅限于标题命名策略。",
+  "summary_500": "本条目记录了《晚点》于2026年2月4日发布的一篇关于港股IPO市场动态的数据分析文章。文章标题《港股的非典型 IPO 大年》体现了其对2026年香港资本市场回暖态势的高度关注，并使用了‘非典型’这一修饰词，暗示该年度的上市企业构成、估值表现或募资环境可能打破了往年的常态模式。从专栏性质推断，其内容应涵盖了港交所的全年IPO企业数量、融资总额、重点破发率或新股行业分布等硬性指标，并可能对背后的政策导向或全球资本流动趋势进行了简要剖析。然而，由于所提供的文本内容仅显示了抓取过程中的提示信息（触发全局图片搜索模式），缺乏实际的正文描述和论证过程，因此无法对具体的论点强度、证据链条进行详细评估。该内容的质量分和参考价值分被判定为极低，主要原因在于信息实体的严重缺失，导致无法进行实质性的结构化分析。对于研究港股历史趋势的分析师而言，此条目仅可作为文章索引，提示2026年年初港股市场曾出现过显著的IPO波动现象。"
+}

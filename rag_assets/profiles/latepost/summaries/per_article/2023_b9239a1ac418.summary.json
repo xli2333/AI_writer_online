@@ -1,0 +1,118 @@
+{
+  "id": "b9239a1ac418",
+  "year": "2023",
+  "date": "2023-10-31",
+  "title": "《晚点》招聘商务、设计等岗位",
+  "relative_path": "2023/2023-10-31_《晚点》招聘商务、设计等岗位.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\latepost\\raw_materials\\2023\\2023-10-31_《晚点》招聘商务、设计等岗位.txt",
+  "char_count": 1550,
+  "content_type": "招聘启事",
+  "entities": [
+    "晚点 LatePost",
+    "chenhao@latepost.com"
+  ],
+  "industry": [
+    "新媒体",
+    "广告营销",
+    "商业服务"
+  ],
+  "topic": [
+    "人才招聘",
+    "公司扩张",
+    "职业发展"
+  ],
+  "genre": "应用文",
+  "style": [
+    "职场",
+    "简约",
+    "结构化"
+  ],
+  "audience": [
+    "求职者",
+    "媒体从业者",
+    "广告商务人士",
+    "设计师"
+  ],
+  "intent": [
+    "招募人才",
+    "品牌展示"
+  ],
+  "tone": [
+    "专业",
+    "诚恳"
+  ],
+  "primary_question": "《晚点 LatePost》近期有哪些岗位空缺以及对人才的具体要求是什么？",
+  "thesis_type": "描述性",
+  "thesis_sentence": "《晚点 LatePost》通过发布多个商业化、设计及运营岗位的招聘需求，展示其在保持商业洞察力的同时，正持续加强商业化建设与内容影响力扩展。",
+  "structure_pattern": "总分结构",
+  "section_functions": [
+    "开篇：明确招聘目的与公司愿景",
+    "主体：按岗位分类详述职责与任职期望",
+    "结尾：提供投递渠道与附属信息"
+  ],
+  "argument_moves": [
+    "强调机构愿景（提供最好的商业洞见）以吸引价值观契合的人才",
+    "通过具体的职责描述界定岗位边界",
+    "利用过往作品集要求进行初步人才筛选"
+  ],
+  "core_argument": "通过招募具备互联网广告、媒体运营及设计经验的专业人士，进一步提升机构的商业化效率和视觉传播深度。",
+  "key_points": [
+    "招聘重点在于商业化（商务经理、商务编辑、商务执行）和设计岗位",
+    "强调对汽车、消费、科技等特定行业的资源与洞察力",
+    "内容运营岗位关注全平台（B站、视频号、抖音等）的协同与品牌形象树立",
+    "工作地点主要集中在北京，部分岗位可选上海"
+  ],
+  "opening_pattern": "愿景陈述",
+  "ending_pattern": "补充说明",
+  "evidence_types": [
+    "岗位说明"
+  ],
+  "evidence_specificity_score": 85,
+  "data_density_score": 20,
+  "case_density_score": 10,
+  "quote_density_score": 0,
+  "narrative_distance": "第一人称",
+  "stance_strength": "中立",
+  "sentence_rhythm": "短促有力",
+  "abstraction_level": "具象",
+  "transferable_moves": [
+    "标准化的岗位职责与期望写法",
+    "将招聘作为雇主品牌传播的机会",
+    "明确行业导向（汽车、消费、科技）的招聘策略"
+  ],
+  "anti_patterns": [
+    "缺乏薪资范围标注（信息透明度不足）",
+    "部分岗位描述较为宽泛（如“沟通协调能力”）"
+  ],
+  "notable_phrases": [
+    "提供最好的商业洞见",
+    "让专业内容产生更大的影响力",
+    "树立独特的栏目标签和个性化形象"
+  ],
+  "title_score": 75,
+  "opening_score": 70,
+  "argument_score": 50,
+  "evidence_score": 60,
+  "structure_score": 90,
+  "style_score": 80,
+  "publishability_score": 95,
+  "quality_score": 55,
+  "reference_value_score": 40,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "is_advertorial": true,
+  "advertorial_type": "event_promotion",
+  "advertorial_confidence": 95,
+  "promotional_intensity_score": 80,
+  "editorial_independence_score": 10,
+  "brand_exposure_level": "高",
+  "source_transparency": "清晰",
+  "advertorial_signals": [
+    "典型的人才招募文案",
+    "包含明确的公司愿景包装",
+    "引导至特定的商务联系邮箱"
+  ],
+  "summary_200": "《晚点 LatePost》发布2023年10月招聘启事，重点招募商业化与设计相关岗位，包括资深商务经理、视觉设计师、内容运营、商务编辑、市场策划、商务执行及长期实习生。文章明确了各岗位的职责与任职要求，特别看重候选人在互联网广告销售、媒体运营、行业资源（汽车、消费、科技）以及内容策划方面的经验。此举旨在通过专业人才的加入，增强机构的商业变现能力和视觉内容的影响力，办公地点以北京为主。",
+  "summary_500": "该文章是知名商业媒体《晚点 LatePost》发布的招聘公告。文章首先重申了机构自2019年成立以来致力于提供优质商业洞见的愿景，并表达了通过吸引专业人士共同推动公司进步、扩大内容影响力的愿望。本次招聘涵盖了商业化链条的多个环节：1. 资深商务经理，侧重销售全过程与行业资源；2. 视觉设计师，负责全平台视觉改进及数据图表设计；3. 内容运营，负责多平台策略及品牌形象树立；4. 商务编辑，要求具备深度沟通与数千字广告内容撰写能力；5. 市场策划与商务执行，分别负责营销活动创意与项目交付。此外还长期招募相关岗位的实习生。岗位要求普遍看重2-3年以上的相关领域工作经验，以及对消费、科技等行业的熟悉程度。投递方式为邮件联系。文章结构清晰，属于典型的企业自媒体功能性发文，既是人力资源补充的渠道，也起到了展示公司业务扩张状态和品牌价值观的作用。虽不具备深度商业分析价值，但对于研究媒体商业化路径和雇主品牌建设具有参考意义。",
+  "analysis_schema_version": 3
+}

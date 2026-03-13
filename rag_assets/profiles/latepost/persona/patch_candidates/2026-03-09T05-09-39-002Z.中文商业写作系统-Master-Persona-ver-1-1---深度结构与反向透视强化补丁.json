@@ -1,0 +1,2555 @@
+{
+  "model": "gemini-3-flash-preview",
+  "generated_at": "2026-03-09T05:09:39.003Z",
+  "selected_card_count": 80,
+  "selected_cards": [
+    {
+      "id": "57a4d0f4675d_structure_e5arxt",
+      "article_id": "57a4d0f4675d",
+      "article_title": "年末 AI 回顾：从模型到应用，从技术到商战，拽住洪流中的意义之线",
+      "category": "structure",
+      "weight": 105.5,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：专题模块化结构",
+      "evidence": "section_functions=[\"宏观背景与结构预告\",\"模型技术演进分析\",\"应用层机会与范式转移\",\"巨头战略、人才及组织对比\"]",
+      "genre": "深度报道",
+      "content_type": "行业深度复盘",
+      "topic": [
+        "大模型",
+        "Agent",
+        "推理模型",
+        "协同设计",
+        "AI商业化",
+        "AI for Science"
+      ],
+      "style": [
+        "专业",
+        "系统",
+        "逻辑缜密",
+        "叙事性"
+      ],
+      "audience": [
+        "科技从业者",
+        "一级市场投资者",
+        "企业决策者",
+        "AI研究员"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 97
+    },
+    {
+      "id": "2e479b13d96c_opening_m8dff6",
+      "article_id": "2e479b13d96c",
+      "article_title": "给互联网人的反侦查手册 2.0",
+      "category": "opening",
+      "weight": 105.44,
+      "rule": "在深度非虚构报道写作中，可优先考虑这种开篇动作：特写镜头式（以严肃的审讯对话切入，营造压迫感）",
+      "evidence": "来源文章的 opening_score=95",
+      "genre": "深度非虚构报道",
+      "content_type": "深度报道/维权指南",
+      "topic": [
+        "竞业协议",
+        "员工权益保护",
+        "隐私监控",
+        "劳动纠纷",
+        "职场文化"
+      ],
+      "style": [
+        "实用主义",
+        "调查式",
+        "叙事性"
+      ],
+      "audience": [
+        "互联网从业者",
+        "职场律师",
+        "HR从业者",
+        "企业管理者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 100
+    },
+    {
+      "id": "2e479b13d96c_structure_eie5fd",
+      "article_id": "2e479b13d96c",
+      "article_title": "给互联网人的反侦查手册 2.0",
+      "category": "structure",
+      "weight": 105.34,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：职业生命周期顺序 (入职前 - 在职中 - 极端情况 - 离职后 - 诉讼博弈)",
+      "evidence": "section_functions=[\"现状引入：通过具体案例展示竞业和监控的残酷现实\",\"入职防范：教导如何进行环境调研及识别合同陷阱\",\"在职保护：强调软硬件隔离与信息隐私安全操作\",\"危机处理：拆解‘小黑屋’问询的本质及应对权利\",\"离职应对：揭示竞业追踪手段并提供规避建议\",\"法务实操：拆解劳动仲裁流程与取证核心策略\",\"总结升华：探讨发声对于商业环境优化的意义\"]",
+      "genre": "深度非虚构报道",
+      "content_type": "深度报道/维权指南",
+      "topic": [
+        "竞业协议",
+        "员工权益保护",
+        "隐私监控",
+        "劳动纠纷",
+        "职场文化"
+      ],
+      "style": [
+        "实用主义",
+        "调查式",
+        "叙事性"
+      ],
+      "audience": [
+        "互联网从业者",
+        "职场律师",
+        "HR从业者",
+        "企业管理者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 100
+    },
+    {
+      "id": "7a9307644310_opening_wepnpm",
+      "article_id": "7a9307644310",
+      "article_title": "繁荣背后，栽在加盟之路上的人",
+      "category": "opening",
+      "weight": 105.25,
+      "rule": "在特写报道写作中，可优先考虑这种开篇动作：宏观背景对比法（万店红点 vs 竞争炮灰）",
+      "evidence": "来源文章的 opening_score=92",
+      "genre": "特写报道",
+      "content_type": "深度报道",
+      "topic": [
+        "加盟泡沫",
+        "商业模式",
+        "餐饮创业",
+        "价格战",
+        "消费降级"
+      ],
+      "style": [
+        "叙事性分析",
+        "现实主义",
+        "批判性思维"
+      ],
+      "audience": [
+        "餐饮从业者",
+        "潜在投资者",
+        "商业分析师",
+        "创业者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 98
+    },
+    {
+      "id": "7a9307644310_structure_361xdy",
+      "article_id": "7a9307644310",
+      "article_title": "繁荣背后，栽在加盟之路上的人",
+      "category": "structure",
+      "weight": 105.25,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：宏观背景勾勒-微观切片（回收商）-商业逻辑解构-案例深度剖析（价格战/超级加盟商）-终局反思",
+      "evidence": "section_functions=[\"利用万店数据引入餐饮加盟的狂热现状\",\"通过二手设备回收商视角量化加盟失败的规模与惨烈\",\"剖析品牌从B2C向B2B原材料销售模式的根本转变\",\"详述咖啡赛道价格战如何直接压垮一线加盟商\",\"记录不同层级加盟商（小白、超级加盟商、老店主）的挣扎与出局\",\"总结加盟商在饱和竞争中的代价并提供后续动向\"]",
+      "genre": "特写报道",
+      "content_type": "深度报道",
+      "topic": [
+        "加盟泡沫",
+        "商业模式",
+        "餐饮创业",
+        "价格战",
+        "消费降级"
+      ],
+      "style": [
+        "叙事性分析",
+        "现实主义",
+        "批判性思维"
+      ],
+      "audience": [
+        "餐饮从业者",
+        "潜在投资者",
+        "商业分析师",
+        "创业者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 98
+    },
+    {
+      "id": "d5a379a098fb_opening_hjgc13",
+      "article_id": "d5a379a098fb",
+      "article_title": "晚点独家丨美团优选业务承压，多个核心业务负责人调整",
+      "category": "opening",
+      "weight": 105.19,
+      "rule": "在商业新闻写作中，可优先考虑这种开篇动作：直述式（直接披露核心独家消息）",
+      "evidence": "来源文章的 opening_score=92",
+      "genre": "商业新闻",
+      "content_type": "商业深度报道",
+      "topic": [
+        "组织架构调整",
+        "高管变动",
+        "市场竞争",
+        "经营策略",
+        "扭亏为盈"
+      ],
+      "style": [
+        "叙事严密",
+        "数据驱动",
+        "批判性观察"
+      ],
+      "audience": [
+        "互联网从业者",
+        "二级市场投资者",
+        "零售行业分析师",
+        "企业管理层"
+      ],
+      "publishability_score": 100,
+      "reference_value_score": 98
+    },
+    {
+      "id": "57a4d0f4675d_opening_jkr5zn",
+      "article_id": "57a4d0f4675d",
+      "article_title": "年末 AI 回顾：从模型到应用，从技术到商战，拽住洪流中的意义之线",
+      "category": "opening",
+      "weight": 105.1,
+      "rule": "在深度报道写作中，可优先考虑这种开篇动作：全景勾勒与索引指引",
+      "evidence": "来源文章的 opening_score=90",
+      "genre": "深度报道",
+      "content_type": "行业深度复盘",
+      "topic": [
+        "大模型",
+        "Agent",
+        "推理模型",
+        "协同设计",
+        "AI商业化",
+        "AI for Science"
+      ],
+      "style": [
+        "专业",
+        "系统",
+        "逻辑缜密",
+        "叙事性"
+      ],
+      "audience": [
+        "科技从业者",
+        "一级市场投资者",
+        "企业决策者",
+        "AI研究员"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 97
+    },
+    {
+      "id": "d5a379a098fb_structure_3el8mc",
+      "article_id": "d5a379a098fb",
+      "article_title": "晚点独家丨美团优选业务承压，多个核心业务负责人调整",
+      "category": "structure",
+      "weight": 104.99,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：动态披露-原因剖析-竞对横向对比-组织根源分析-未来趋势预判",
+      "evidence": "section_functions=[\"核心人事变动信息汇总\",\"揭示调整背后的逻辑（快驴经验迁移）\",\"展示财务与经营数据差距（美团 vs 多多）\",\"深挖组织效率与管理模式的差异原因\",\"分析2023年最新竞争局势及未来挑战\"]",
+      "genre": "商业新闻",
+      "content_type": "商业深度报道",
+      "topic": [
+        "组织架构调整",
+        "高管变动",
+        "市场竞争",
+        "经营策略",
+        "扭亏为盈"
+      ],
+      "style": [
+        "叙事严密",
+        "数据驱动",
+        "批判性观察"
+      ],
+      "audience": [
+        "互联网从业者",
+        "二级市场投资者",
+        "零售行业分析师",
+        "企业管理层"
+      ],
+      "publishability_score": 100,
+      "reference_value_score": 98
+    },
+    {
+      "id": "21abf120ba36_structure_1md11n",
+      "article_id": "21abf120ba36",
+      "article_title": "中国十四大互联网公司 2023 年盘点：竞争恢复、分化加剧",
+      "category": "structure",
+      "weight": 104.87,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：总-分-总（宏观趋势总述 - 14家公司分模块详述 - 尾声展望）",
+      "evidence": "section_functions=[\"开篇：建立2023年作为‘分水岭’的宏观坐标系统\",\"核心：对每家巨头进行‘战略/业绩/组织’三维度的深度拆解\",\"结语：通过边缘企业的动态映衬宏观经济的微观体感\"]",
+      "genre": "深度商业分析报道",
+      "content_type": "行业趋势年度复盘",
+      "topic": [
+        "2023年年度盘点",
+        "组织架构调整",
+        "低价竞争",
+        "AI大模型",
+        "降本增效",
+        "出海竞争",
+        "大公司病治理"
+      ],
+      "style": [
+        "数据驱动",
+        "对比研究",
+        "批判性思维",
+        "叙事严谨"
+      ],
+      "audience": [
+        "投资者",
+        "企业管理层",
+        "行业分析师",
+        "商业媒体读者"
+      ],
+      "publishability_score": 100,
+      "reference_value_score": 98
+    },
+    {
+      "id": "ea6f1ded5ceb_structure_fhhd9f",
+      "article_id": "ea6f1ded5ceb",
+      "article_title": "2025丨四年极限自救，变成一个有吸引力的筹码",
+      "category": "structure",
+      "weight": 104.83,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：时间轴叙事与专题剖析相结合（现状倒叙 - 历史溯源 - 业务冲刺 - 政治游说 - 未来预测）",
+      "evidence": "section_functions=[\"描绘 TikTok 在美下线的关键瞬间，营造紧迫感 (1-4段)\",\"溯源中美科技冲突的本质（华为案例对比）(5-9段)\",\"复盘 2023 年听证会后的组织动员与业务冲刺 (10-18段)\",\"分析 TikTok 的激进增长模式及其与美式产品的差异 (19-27段)\",\"拆解 TikTok 电商作为利益绑定手段的尝试与困境 (28-36段)\",\"揭秘幕后高额的政治游说与‘得州计划’的合规努力 (37-46段)\",\"预测特朗普回归后的政策走向与法律僵局 (47-51段)\"]",
+      "genre": "商业深度特写",
+      "content_type": "商业深度报道",
+      "topic": [
+        "企业出海",
+        "地缘政治风险",
+        "政策合规",
+        "商业博弈",
+        "组织管理"
+      ],
+      "style": [
+        "纪实性",
+        "叙事性",
+        "分析性"
+      ],
+      "audience": [
+        "企业管理者",
+        "出海创业者",
+        "国际关系研究者",
+        "互联网从业者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 95
+    },
+    {
+      "id": "21abf120ba36_opening_ci0k11",
+      "article_id": "21abf120ba36",
+      "article_title": "中国十四大互联网公司 2023 年盘点：竞争恢复、分化加剧",
+      "category": "opening",
+      "weight": 104.67,
+      "rule": "在深度商业分析报道写作中，可优先考虑这种开篇动作：时间轴对比法（以疫情三年为刻度引出2023年的回归常态）",
+      "evidence": "来源文章的 opening_score=88",
+      "genre": "深度商业分析报道",
+      "content_type": "行业趋势年度复盘",
+      "topic": [
+        "2023年年度盘点",
+        "组织架构调整",
+        "低价竞争",
+        "AI大模型",
+        "降本增效",
+        "出海竞争",
+        "大公司病治理"
+      ],
+      "style": [
+        "数据驱动",
+        "对比研究",
+        "批判性思维",
+        "叙事严谨"
+      ],
+      "audience": [
+        "投资者",
+        "企业管理层",
+        "行业分析师",
+        "商业媒体读者"
+      ],
+      "publishability_score": 100,
+      "reference_value_score": 98
+    },
+    {
+      "id": "ea6f1ded5ceb_opening_49mwq7",
+      "article_id": "ea6f1ded5ceb",
+      "article_title": "2025丨四年极限自救，变成一个有吸引力的筹码",
+      "category": "opening",
+      "weight": 104.63,
+      "rule": "在商业深度特写写作中，可优先考虑这种开篇动作：场景化描写，以具体的时间点、具体的提示语（‘TikTok 现在无法使用’）切入，迅速抓住读者情绪。",
+      "evidence": "来源文章的 opening_score=92",
+      "genre": "商业深度特写",
+      "content_type": "商业深度报道",
+      "topic": [
+        "企业出海",
+        "地缘政治风险",
+        "政策合规",
+        "商业博弈",
+        "组织管理"
+      ],
+      "style": [
+        "纪实性",
+        "叙事性",
+        "分析性"
+      ],
+      "audience": [
+        "企业管理者",
+        "出海创业者",
+        "国际关系研究者",
+        "互联网从业者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 95
+    },
+    {
+      "id": "30e0b75b016b_structure_6nfjtu",
+      "article_id": "30e0b75b016b",
+      "article_title": "还原字节跳动 HR 体系：中国互联网最极致人才工厂的起落",
+      "category": "structure",
+      "weight": 104.62,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：时间轴+模块化专题（背景-机制-哲学-困境-转型）",
+      "evidence": "section_functions=[\"引言：描绘字节人才增长奇迹与当前缩编现状的对比\",\"起源：复盘2016年张一鸣的野心及其对人才短缺的焦虑\",\"机制一：解构招聘中台及“自建猎头公司”的暴力打法\",\"机制二：分析People系统等自研工具实现的自动化管理\",\"哲学：阐述华巍代表的“招聪明人、不培养人”的精英逻辑\",\"矛盾：指出失序竞争与新老职级体系的内部冲突\",\"转型：描述梁汝波接手后的正规化改革及其阻力\",\"结语：总结OKR工具褪色与组织向成熟大公司过渡的现状\"]",
+      "genre": "案例研究",
+      "content_type": "深度行业报告",
+      "topic": [
+        "组织架构",
+        "HR体系",
+        "企业文化",
+        "人才招聘",
+        "中台战略"
+      ],
+      "style": [
+        "非虚构写作",
+        "客观分析",
+        "纪实叙事"
+      ],
+      "audience": [
+        "企业中高层管理者",
+        "HR从业者",
+        "商业分析师",
+        "互联网观察者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 97
+    },
+    {
+      "id": "fd625d6ceb06_structure_q3e2np",
+      "article_id": "fd625d6ceb06",
+      "article_title": "出海 “三国杀”：Temu、Shein、TikTok 的内战和外战",
+      "category": "structure",
+      "weight": 104.61,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：并列式深度拆解 + 综合对比展望",
+      "evidence": "section_functions=[\"引入：通过组织架构隐藏等细节揭示竞争白热化\",\"Temu篇：拆解其全托管模式、核爆式营销及快速扩张策略\",\"Shein篇：回顾其供应链护城河，分析其从自营向平台化及本地化的转型\",\"TikTok篇：分析其在海外市场重估直播价值、重建物流能力的波折过程\",\"总结：探讨三者命运交叉点、监管风险及对全球电商格局的长期冲击\"]",
+      "genre": "深度特稿",
+      "content_type": "商业深度报道",
+      "topic": [
+        "全球化竞争",
+        "供应链管理",
+        "全托管模式",
+        "流量变现",
+        "地缘政治风险"
+      ],
+      "style": [
+        "叙事性分析",
+        "对比研究",
+        "数据驱动",
+        "宏观综述"
+      ],
+      "audience": [
+        "出海创业者",
+        "二级市场投资者",
+        "电商从业者",
+        "商业决策层"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 96
+    },
+    {
+      "id": "8628cc109d95_structure_6rmu7k",
+      "article_id": "8628cc109d95",
+      "article_title": "争夺 AI 入场券：中国大公司竞逐 GPU",
+      "category": "structure",
+      "weight": 104.44,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：现象揭示-背景反转-现状细节-中外对比-技术原理剖析-未来预测",
+      "evidence": "section_functions=[\"引言：通过a16z数据引出“AI税”概念及算力市场的庞大需求\",\"披露中国大厂（字节、阿里等）近期惊人的GPU采购订单量\",\"回顾大厂从去年“降本砍单”到今年“战略加购”的转折逻辑\",\"描述大厂内部如何通过裁撤弱势业务、挪用广告推荐算力来支持大模型\",\"对比中美巨头在资本支出（CAPEX）上的量级差距\",\"从带宽、算力及CUDA生态角度科普英伟达GPU的不可替代性\",\"分析产能瓶颈并总结算力竞赛的持续性\"]",
+      "genre": "商业深度报道",
+      "content_type": "行业深度报道",
+      "topic": [
+        "GPU算力竞赛",
+        "大模型研发",
+        "供应链安全",
+        "中美科技对比"
+      ],
+      "style": [
+        "调查驱动",
+        "数据详实",
+        "逻辑严密",
+        "紧迫感"
+      ],
+      "audience": [
+        "科技投资者",
+        "互联网从业者",
+        "芯片行业分析师",
+        "政策研究者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 96
+    },
+    {
+      "id": "632a8923cbc0_structure_937drk",
+      "article_id": "632a8923cbc0",
+      "article_title": "25 图看中国 2023 科技投资，低迷中寻找微光",
+      "category": "structure",
+      "weight": 104.39,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：专题分类式",
+      "evidence": "section_functions=[\"宏观综述：概括2023年投资额跌至2016年以来最低水平的背景\",\"资金来源分析：对比美资撤退与国资、石油美元的崛起\",\"大公司动态：描述互联网巨头投资收缩及对大模型的防御性布局\",\"赛道深挖：细拆AI、半导体、手机供应链、汽车零部件、电池、企业服务的真实现状\",\"退出机制观察：分析IPO收紧、并购低迷及回购对赌引发的法律纠纷\",\"结语：引用R&D经费数据与斯多葛祷词进行心态重塑\"]",
+      "genre": "商业深度评论",
+      "content_type": "行业深度报告",
+      "topic": [
+        "一级市场投融资回顾",
+        "大模型创业潮",
+        "国产供应链替代",
+        "资本退出困局",
+        "中东资本入华"
+      ],
+      "style": [
+        "数据驱动",
+        "深度叙事",
+        "批判性分析"
+      ],
+      "audience": [
+        "一级市场投资者",
+        "科技创业者",
+        "宏观经济研究员",
+        "企业高管"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 96
+    },
+    {
+      "id": "86669c178b83_structure_ign1so",
+      "article_id": "86669c178b83",
+      "article_title": "独家对话美的方洪波：我只是一个过客，不需要被任何人记住",
+      "category": "structure",
+      "weight": 104.39,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：总分总式对话结构（背景成就-管理理念-竞争策略-转型复盘-组织进化-传承哲学）",
+      "evidence": "section_functions=[\"背景引入：界定方洪波的‘过客’身份与卓越战绩\",\"管理哲学：阐述‘简化’、反加班与洞察力来源\",\"竞争逻辑：分析应对小米竞争及业务边界选择\",\"转型复盘：解析效率护城河与引领式创新的挑战\",\"组织治理：论述高度分权、人才体系与企业家精神\",\"终章总结：回归传承本质与个人价值定位\"]",
+      "genre": "商业人物专访",
+      "content_type": "深度访谈",
+      "topic": [
+        "企业治理",
+        "职业经理人制度",
+        "权力传承",
+        "管理哲学",
+        "商业转型",
+        "全球化策略"
+      ],
+      "style": [
+        "纪实性",
+        "思辨性",
+        "去中心化"
+      ],
+      "audience": [
+        "企业经营者",
+        "职业经理人",
+        "管理研究者",
+        "投资者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 98
+    },
+    {
+      "id": "2730fc09c3a4_opening_3rwng0",
+      "article_id": "2730fc09c3a4",
+      "article_title": "字节、阿里、腾讯 AI 大战全记录：一场影响命运的战争",
+      "category": "opening",
+      "weight": 104.39,
+      "rule": "在商业深度报道写作中，可优先考虑这种开篇动作：特写场景开篇（以姚顺雨参加腾讯内部会议的细节切入）",
+      "evidence": "来源文章的 opening_score=95",
+      "genre": "商业深度报道",
+      "content_type": "深度行业调研",
+      "topic": [
+        "大模型战争",
+        "大厂组织架构变革",
+        "AI产品增长战略",
+        "算力基建比拼",
+        "人才挖角战"
+      ],
+      "style": [
+        "叙事性纪实",
+        "内幕透视",
+        "对比分析"
+      ],
+      "audience": [
+        "互联网从业者",
+        "科技投资者",
+        "企业管理层",
+        "AI行业分析师"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 96
+    },
+    {
+      "id": "f97f6eb3eec2_structure_cn3hs9",
+      "article_id": "f97f6eb3eec2",
+      "article_title": "一间银行的独特倒闭，一场风险的必然发生",
+      "category": "structure",
+      "weight": 104.37,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：倒叙现场 -> 历史模式解构 -> 业务风险拆解 -> 心理/行为博弈分析 -> 宏观规律总结",
+      "evidence": "section_functions=[\"现场描写：通过具体创业者经历展现危机爆发的突发性与恐慌感\",\"历史定性：解释SVB支持创新的独特商业模式及其过去40年的成功逻辑\",\"风险源剖析：详述低息环境下的盲目MBS投资与加息背景下的资产减值\",\"博弈分析：探讨‘聪明人’（VC与储户）的个体最优选择如何导致集体崩溃\",\"宏观反思：总结金融体系追逐增长本能带来的周期性毁灭必然性\"]",
+      "genre": "商业深度分析",
+      "content_type": "深度复盘报道",
+      "topic": [
+        "银行破产",
+        "流动性危机",
+        "资产负债表管理",
+        "宏观货币政策",
+        "挤兑风险"
+      ],
+      "style": [
+        "理性",
+        "叙事与议论结合",
+        "逻辑驱动",
+        "批判性思辨"
+      ],
+      "audience": [
+        "金融从业者",
+        "创业者",
+        "宏观经济研究员",
+        "投资者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 96
+    },
+    {
+      "id": "966a643536b1_structure_dornsv",
+      "article_id": "966a643536b1",
+      "article_title": "2022丨谁在管理 TikTok：五年五任管理者，没有中心的网状组织",
+      "category": "structure",
+      "weight": 104.37,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：逻辑递进式（增长矛盾-管理层更迭-组织架构剖析-商业化困境-宏观总结）",
+      "evidence": "section_functions=[\"引言：揭示高速增长与频繁换帅的极端反差\",\"变迁史：梳理五年五任负责人的背景与战略意图演变\",\"团队画像：分析现有核心外籍高管的职能分布与专业壁垒\",\"架构解析：定义“网状组织”及其去中心化的决策特征\",\"业务实测：对比 TikTok 与硅谷巨头在广告与电商领域的优劣\",\"总结：升华至全球化公司形态能否适应时代的终极质询\"]",
+      "genre": "商业深度特写",
+      "content_type": "深度行业调研",
+      "topic": [
+        "组织架构",
+        "全球化管理",
+        "地缘政治风险",
+        "企业治理",
+        "商业竞争"
+      ],
+      "style": [
+        "专业",
+        "思辨",
+        "写实"
+      ],
+      "audience": [
+        "商业决策者",
+        "企业管理者",
+        "互联网研究人员",
+        "投资者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 95
+    },
+    {
+      "id": "068584d1de42_structure_0dfj34",
+      "article_id": "068584d1de42",
+      "article_title": "俄罗斯方块诞生 40 年，为什么我们堆砌方块的热情永无止境？丨晚点周末",
+      "category": "structure",
+      "weight": 104.36,
+      "rule": "当主题需要展开多维拆解时，可优先采用这种结构组织方式：时间轴 + 专题模块化 (起源-商业争夺-科学影响-文化哲学)",
+      "evidence": "section_functions=[\"开篇：通过各项世界纪录和媒体评价确立游戏的“史上最伟大”地位\",\"起源：解析帕基特诺夫的开发初衷及“消除”机制带来的上瘾原理\",\"商业：还原亨克·罗杰斯在苏联进行的惊心动魄的版权争夺战\",\"科学：探讨“俄罗斯方块效应”对脑科学、精神治疗及多巴胺回路的影响\",\"结语：将游戏上升至哲学层面，定义为从混沌中创造秩序的人类本能\"]",
+      "genre": "商业历史评论",
+      "content_type": "深度特稿",
+      "topic": [
+        "俄罗斯方块 40 周年",
+        "产品上瘾机制",
+        "跨国版权贸易",
+        "心理学与脑科学"
+      ],
+      "style": [
+        "叙事性纪实",
+        "多维深度分析",
+        "客观理性"
+      ],
+      "audience": [
+        "科技从业者",
+        "游戏爱好者",
+        "商业史研究者",
+        "心理学关注者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 96
+    },
+    {
+      "id": "9c9ef06b7742_opening_2yfnct",
+      "article_id": "9c9ef06b7742",
+      "article_title": "查理·芒格先生，“Good enough！”",
+      "category": "opening",
+      "weight": 104.29,
+      "rule": "在纪念特稿写作中，可优先考虑这种开篇动作：特写式开头（通过2023年的一次家庭聚会现场描写，建立读者与人物的近距离感）",
+      "evidence": "来源文章的 opening_score=95",
+      "genre": "纪念特稿",
+      "content_type": "人物特写",
+      "topic": [
+        "价值投资",
+        "人生哲学",
+        "跨学科思维",
+        "人物传记",
+        "商业道德"
+      ],
+      "style": [
+        "叙事性",
+        "评论性",
+        "深度解析"
+      ],
+      "audience": [
+        "个人投资者",
+        "商业管理者",
+        "终身学习者",
+        "金融从业者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 95
+    },
+    {
+      "id": "be1192855253_opening_ydrfyp",
+      "article_id": "be1192855253",
+      "article_title": "外卖大战全景：三亿杯奶茶重新分配财富与辛苦",
+      "category": "opening",
+      "weight": 104.25,
+      "rule": "在深度特写写作中，可优先考虑这种开篇动作：特写镜头式切入（通过具体的操作细节展示紧张感）",
+      "evidence": "来源文章的 opening_score=95",
+      "genre": "深度特写",
+      "content_type": "商业深度报道",
+      "topic": [
+        "平台竞争",
+        "外卖大战",
+        "加盟商生存现状",
+        "零工经济",
+        "消费心理"
+      ],
+      "style": [
+        "白描叙事",
+        "逻辑严密",
+        "多视角切换",
+        "深度观察"
+      ],
+      "audience": [
+        "互联网从业者",
+        "餐饮创业者",
+        "商业分析师",
+        "投资者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 96
+    },
+    {
+      "id": "8628cc109d95_opening_8npcn0",
+      "article_id": "8628cc109d95",
+      "article_title": "争夺 AI 入场券：中国大公司竞逐 GPU",
+      "category": "opening",
+      "weight": 104.24,
+      "rule": "在商业深度报道写作中，可优先考虑这种开篇动作：场景描述+核心概念引入（以硅谷创投视角揭示AI税现状）",
+      "evidence": "来源文章的 opening_score=90",
+      "genre": "商业深度报道",
+      "content_type": "行业深度报道",
+      "topic": [
+        "GPU算力竞赛",
+        "大模型研发",
+        "供应链安全",
+        "中美科技对比"
+      ],
+      "style": [
+        "调查驱动",
+        "数据详实",
+        "逻辑严密",
+        "紧迫感"
+      ],
+      "audience": [
+        "科技投资者",
+        "互联网从业者",
+        "芯片行业分析师",
+        "政策研究者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 96
+    },
+    {
+      "id": "30e0b75b016b_opening_kle3jf",
+      "article_id": "30e0b75b016b",
+      "article_title": "还原字节跳动 HR 体系：中国互联网最极致人才工厂的起落",
+      "category": "opening",
+      "weight": 104.22,
+      "rule": "在案例研究写作中，可优先考虑这种开篇动作：宏大叙事开篇，通过“创业时代结束”的断言营造紧迫感，随即给出关键对比数据。",
+      "evidence": "来源文章的 opening_score=88",
+      "genre": "案例研究",
+      "content_type": "深度行业报告",
+      "topic": [
+        "组织架构",
+        "HR体系",
+        "企业文化",
+        "人才招聘",
+        "中台战略"
+      ],
+      "style": [
+        "非虚构写作",
+        "客观分析",
+        "纪实叙事"
+      ],
+      "audience": [
+        "企业中高层管理者",
+        "HR从业者",
+        "商业分析师",
+        "互联网观察者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 97
+    },
+    {
+      "id": "632a8923cbc0_opening_v3kf7z",
+      "article_id": "632a8923cbc0",
+      "article_title": "25 图看中国 2023 科技投资，低迷中寻找微光",
+      "category": "opening",
+      "weight": 104.19,
+      "rule": "在商业深度评论写作中，可优先考虑这种开篇动作：对比开局（通过2023年初的乐观预期与实际的高开低走形成强烈反差）",
+      "evidence": "来源文章的 opening_score=90",
+      "genre": "商业深度评论",
+      "content_type": "行业深度报告",
+      "topic": [
+        "一级市场投融资回顾",
+        "大模型创业潮",
+        "国产供应链替代",
+        "资本退出困局",
+        "中东资本入华"
+      ],
+      "style": [
+        "数据驱动",
+        "深度叙事",
+        "批判性分析"
+      ],
+      "audience": [
+        "一级市场投资者",
+        "科技创业者",
+        "宏观经济研究员",
+        "企业高管"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 96
+    },
+    {
+      "id": "86669c178b83_opening_j1mib7",
+      "article_id": "86669c178b83",
+      "article_title": "独家对话美的方洪波：我只是一个过客，不需要被任何人记住",
+      "category": "opening",
+      "weight": 104.19,
+      "rule": "在商业人物专访写作中，可优先考虑这种开篇动作：冲突对比式开头（以13年前的低调交班对比今日的巨额市值增长）",
+      "evidence": "来源文章的 opening_score=88",
+      "genre": "商业人物专访",
+      "content_type": "深度访谈",
+      "topic": [
+        "企业治理",
+        "职业经理人制度",
+        "权力传承",
+        "管理哲学",
+        "商业转型",
+        "全球化策略"
+      ],
+      "style": [
+        "纪实性",
+        "思辨性",
+        "去中心化"
+      ],
+      "audience": [
+        "企业经营者",
+        "职业经理人",
+        "管理研究者",
+        "投资者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 98
+    },
+    {
+      "id": "f97f6eb3eec2_opening_g3ubak",
+      "article_id": "f97f6eb3eec2",
+      "article_title": "一间银行的独特倒闭，一场风险的必然发生",
+      "category": "opening",
+      "weight": 104.17,
+      "rule": "在商业深度分析写作中，可优先考虑这种开篇动作：危机切面引入（通过具体的倒闭时间和数据建立紧迫感）",
+      "evidence": "来源文章的 opening_score=90",
+      "genre": "商业深度分析",
+      "content_type": "深度复盘报道",
+      "topic": [
+        "银行破产",
+        "流动性危机",
+        "资产负债表管理",
+        "宏观货币政策",
+        "挤兑风险"
+      ],
+      "style": [
+        "理性",
+        "叙事与议论结合",
+        "逻辑驱动",
+        "批判性思辨"
+      ],
+      "audience": [
+        "金融从业者",
+        "创业者",
+        "宏观经济研究员",
+        "投资者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 96
+    },
+    {
+      "id": "57a4d0f4675d_evidence_91snbv",
+      "article_id": "57a4d0f4675d",
+      "article_title": "年末 AI 回顾：从模型到应用，从技术到商战，拽住洪流中的意义之线",
+      "category": "evidence",
+      "weight": 103.78,
+      "rule": "这类稿件适合混合使用这些证据类型：企业融资/估值数据、专家访谈语录、技术演进时间线、企业内部组织调整细节、幕后轶事记录",
+      "evidence": "evidence_specificity_score=92; data_density_score=88; case_density_score=95",
+      "genre": "深度报道",
+      "content_type": "行业深度复盘",
+      "topic": [
+        "大模型",
+        "Agent",
+        "推理模型",
+        "协同设计",
+        "AI商业化",
+        "AI for Science"
+      ],
+      "style": [
+        "专业",
+        "系统",
+        "逻辑缜密",
+        "叙事性"
+      ],
+      "audience": [
+        "科技从业者",
+        "一级市场投资者",
+        "企业决策者",
+        "AI研究员"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 97
+    },
+    {
+      "id": "57a4d0f4675d_argument_pkxaeu",
+      "article_id": "57a4d0f4675d",
+      "article_title": "年末 AI 回顾：从模型到应用，从技术到商战，拽住洪流中的意义之线",
+      "category": "argument",
+      "weight": 103.7,
+      "rule": "可迁移的论证动作：通过DeepSeek案例论证技术影响力的扩散路径",
+      "evidence": "thesis_type=演化归纳型; thesis_sentence=AI正从单纯的Scaling Law范式转向以推理计算、Agent化应用和底层软硬协同优化为核心的系统性竞争阶段。",
+      "genre": "深度报道",
+      "content_type": "行业深度复盘",
+      "topic": [
+        "大模型",
+        "Agent",
+        "推理模型",
+        "协同设计",
+        "AI商业化",
+        "AI for Science"
+      ],
+      "style": [
+        "专业",
+        "系统",
+        "逻辑缜密",
+        "叙事性"
+      ],
+      "audience": [
+        "科技从业者",
+        "一级市场投资者",
+        "企业决策者",
+        "AI研究员"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 97
+    },
+    {
+      "id": "57a4d0f4675d_argument_jd350r",
+      "article_id": "57a4d0f4675d",
+      "article_title": "年末 AI 回顾：从模型到应用，从技术到商战，拽住洪流中的意义之线",
+      "category": "argument",
+      "weight": 103.7,
+      "rule": "可迁移的论证动作：引用Co-design理念阐述垂直整合的必要性",
+      "evidence": "thesis_type=演化归纳型; thesis_sentence=AI正从单纯的Scaling Law范式转向以推理计算、Agent化应用和底层软硬协同优化为核心的系统性竞争阶段。",
+      "genre": "深度报道",
+      "content_type": "行业深度复盘",
+      "topic": [
+        "大模型",
+        "Agent",
+        "推理模型",
+        "协同设计",
+        "AI商业化",
+        "AI for Science"
+      ],
+      "style": [
+        "专业",
+        "系统",
+        "逻辑缜密",
+        "叙事性"
+      ],
+      "audience": [
+        "科技从业者",
+        "一级市场投资者",
+        "企业决策者",
+        "AI研究员"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 97
+    },
+    {
+      "id": "57a4d0f4675d_argument_hm4yzl",
+      "article_id": "57a4d0f4675d",
+      "article_title": "年末 AI 回顾：从模型到应用，从技术到商战，拽住洪流中的意义之线",
+      "category": "argument",
+      "weight": 103.7,
+      "rule": "可迁移的论证动作：对比General Agent与垂类Agent的商业逻辑差异",
+      "evidence": "thesis_type=演化归纳型; thesis_sentence=AI正从单纯的Scaling Law范式转向以推理计算、Agent化应用和底层软硬协同优化为核心的系统性竞争阶段。",
+      "genre": "深度报道",
+      "content_type": "行业深度复盘",
+      "topic": [
+        "大模型",
+        "Agent",
+        "推理模型",
+        "协同设计",
+        "AI商业化",
+        "AI for Science"
+      ],
+      "style": [
+        "专业",
+        "系统",
+        "逻辑缜密",
+        "叙事性"
+      ],
+      "audience": [
+        "科技从业者",
+        "一级市场投资者",
+        "企业决策者",
+        "AI研究员"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 97
+    },
+    {
+      "id": "57a4d0f4675d_argument_qd8x05",
+      "article_id": "57a4d0f4675d",
+      "article_title": "年末 AI 回顾：从模型到应用，从技术到商战，拽住洪流中的意义之线",
+      "category": "argument",
+      "weight": 103.7,
+      "rule": "可迁移的论证动作：通过人事变动透视巨头组织的底层逻辑",
+      "evidence": "thesis_type=演化归纳型; thesis_sentence=AI正从单纯的Scaling Law范式转向以推理计算、Agent化应用和底层软硬协同优化为核心的系统性竞争阶段。",
+      "genre": "深度报道",
+      "content_type": "行业深度复盘",
+      "topic": [
+        "大模型",
+        "Agent",
+        "推理模型",
+        "协同设计",
+        "AI商业化",
+        "AI for Science"
+      ],
+      "style": [
+        "专业",
+        "系统",
+        "逻辑缜密",
+        "叙事性"
+      ],
+      "audience": [
+        "科技从业者",
+        "一级市场投资者",
+        "企业决策者",
+        "AI研究员"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 97
+    },
+    {
+      "id": "7a9307644310_argument_mxkhmf",
+      "article_id": "7a9307644310",
+      "article_title": "繁荣背后，栽在加盟之路上的人",
+      "category": "argument",
+      "weight": 103.65,
+      "rule": "可迁移的论证动作：对比：将麦当劳/星巴克的扩张周期与国内品牌几年的超速扩张对比，暗示泡沫",
+      "evidence": "thesis_type=批判性解释; thesis_sentence=加盟模式已从“品牌共享利益”异化为“风险转嫁机制”，品牌通过向加盟商售卖原材料和设备获利，而让缺乏经验的加盟商承担市场竞争和价格战的全部代价。",
+      "genre": "特写报道",
+      "content_type": "深度报道",
+      "topic": [
+        "加盟泡沫",
+        "商业模式",
+        "餐饮创业",
+        "价格战",
+        "消费降级"
+      ],
+      "style": [
+        "叙事性分析",
+        "现实主义",
+        "批判性思维"
+      ],
+      "audience": [
+        "餐饮从业者",
+        "潜在投资者",
+        "商业分析师",
+        "创业者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 98
+    },
+    {
+      "id": "7a9307644310_argument_uw3tvt",
+      "article_id": "7a9307644310",
+      "article_title": "繁荣背后，栽在加盟之路上的人",
+      "category": "argument",
+      "weight": 103.65,
+      "rule": "可迁移的论证动作：定义：重新定义品牌收入来源，揭示加盟商是品牌的实质‘顾客’",
+      "evidence": "thesis_type=批判性解释; thesis_sentence=加盟模式已从“品牌共享利益”异化为“风险转嫁机制”，品牌通过向加盟商售卖原材料和设备获利，而让缺乏经验的加盟商承担市场竞争和价格战的全部代价。",
+      "genre": "特写报道",
+      "content_type": "深度报道",
+      "topic": [
+        "加盟泡沫",
+        "商业模式",
+        "餐饮创业",
+        "价格战",
+        "消费降级"
+      ],
+      "style": [
+        "叙事性分析",
+        "现实主义",
+        "批判性思维"
+      ],
+      "audience": [
+        "餐饮从业者",
+        "潜在投资者",
+        "商业分析师",
+        "创业者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 98
+    },
+    {
+      "id": "7a9307644310_argument_c48a33",
+      "article_id": "7a9307644310",
+      "article_title": "繁荣背后，栽在加盟之路上的人",
+      "category": "argument",
+      "weight": 103.65,
+      "rule": "可迁移的论证动作：因果分析：解析‘0门槛’如何导致极高的关店率",
+      "evidence": "thesis_type=批判性解释; thesis_sentence=加盟模式已从“品牌共享利益”异化为“风险转嫁机制”，品牌通过向加盟商售卖原材料和设备获利，而让缺乏经验的加盟商承担市场竞争和价格战的全部代价。",
+      "genre": "特写报道",
+      "content_type": "深度报道",
+      "topic": [
+        "加盟泡沫",
+        "商业模式",
+        "餐饮创业",
+        "价格战",
+        "消费降级"
+      ],
+      "style": [
+        "叙事性分析",
+        "现实主义",
+        "批判性思维"
+      ],
+      "audience": [
+        "餐饮从业者",
+        "潜在投资者",
+        "商业分析师",
+        "创业者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 98
+    },
+    {
+      "id": "7a9307644310_argument_prnjf9",
+      "article_id": "7a9307644310",
+      "article_title": "繁荣背后，栽在加盟之路上的人",
+      "category": "argument",
+      "weight": 103.65,
+      "rule": "可迁移的论证动作：个案归纳：通过汤盈盈、周伟业等案例证明‘勤劳’在系统性价格战面前的无力感",
+      "evidence": "thesis_type=批判性解释; thesis_sentence=加盟模式已从“品牌共享利益”异化为“风险转嫁机制”，品牌通过向加盟商售卖原材料和设备获利，而让缺乏经验的加盟商承担市场竞争和价格战的全部代价。",
+      "genre": "特写报道",
+      "content_type": "深度报道",
+      "topic": [
+        "加盟泡沫",
+        "商业模式",
+        "餐饮创业",
+        "价格战",
+        "消费降级"
+      ],
+      "style": [
+        "叙事性分析",
+        "现实主义",
+        "批判性思维"
+      ],
+      "audience": [
+        "餐饮从业者",
+        "潜在投资者",
+        "商业分析师",
+        "创业者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 98
+    },
+    {
+      "id": "7a9307644310_evidence_etybsu",
+      "article_id": "7a9307644310",
+      "article_title": "繁荣背后，栽在加盟之路上的人",
+      "category": "evidence",
+      "weight": 103.65,
+      "rule": "这类稿件适合混合使用这些证据类型：深度访谈（加盟商、回收商、行业内部人士）、官方经营数据（招股书财务数据）、第三方统计数据（企查查、窄门、极海）、行业专家观点",
+      "evidence": "evidence_specificity_score=95; data_density_score=85; case_density_score=92",
+      "genre": "特写报道",
+      "content_type": "深度报道",
+      "topic": [
+        "加盟泡沫",
+        "商业模式",
+        "餐饮创业",
+        "价格战",
+        "消费降级"
+      ],
+      "style": [
+        "叙事性分析",
+        "现实主义",
+        "批判性思维"
+      ],
+      "audience": [
+        "餐饮从业者",
+        "潜在投资者",
+        "商业分析师",
+        "创业者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 98
+    },
+    {
+      "id": "2e479b13d96c_evidence_y9bk20",
+      "article_id": "2e479b13d96c",
+      "article_title": "给互联网人的反侦查手册 2.0",
+      "category": "evidence",
+      "weight": 103.62,
+      "rule": "这类稿件适合混合使用这些证据类型：匿名员工访谈、法律学者评论、执业律师建议、裁判文书分析、技术专家分析",
+      "evidence": "evidence_specificity_score=95; data_density_score=75; case_density_score=90",
+      "genre": "深度非虚构报道",
+      "content_type": "深度报道/维权指南",
+      "topic": [
+        "竞业协议",
+        "员工权益保护",
+        "隐私监控",
+        "劳动纠纷",
+        "职场文化"
+      ],
+      "style": [
+        "实用主义",
+        "调查式",
+        "叙事性"
+      ],
+      "audience": [
+        "互联网从业者",
+        "职场律师",
+        "HR从业者",
+        "企业管理者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 100
+    },
+    {
+      "id": "d5a379a098fb_argument_g9leeb",
+      "article_id": "d5a379a098fb",
+      "article_title": "晚点独家丨美团优选业务承压，多个核心业务负责人调整",
+      "category": "argument",
+      "weight": 103.59,
+      "rule": "可迁移的论证动作：通过独家信源建立信息权威性",
+      "evidence": "thesis_type=归因与对比分析型; thesis_sentence=美团优选因业绩未达标且在与多多买菜的效率竞争中失利，正试图通过引入盈利业务（快驴）的管理人才、强化算法管理及优化组织决策流程来缓解经营压力。",
+      "genre": "商业新闻",
+      "content_type": "商业深度报道",
+      "topic": [
+        "组织架构调整",
+        "高管变动",
+        "市场竞争",
+        "经营策略",
+        "扭亏为盈"
+      ],
+      "style": [
+        "叙事严密",
+        "数据驱动",
+        "批判性观察"
+      ],
+      "audience": [
+        "互联网从业者",
+        "二级市场投资者",
+        "零售行业分析师",
+        "企业管理层"
+      ],
+      "publishability_score": 100,
+      "reference_value_score": 98
+    },
+    {
+      "id": "d5a379a098fb_argument_uaxv7f",
+      "article_id": "d5a379a098fb",
+      "article_title": "晚点独家丨美团优选业务承压，多个核心业务负责人调整",
+      "category": "argument",
+      "weight": 103.59,
+      "rule": "可迁移的论证动作：利用量化指标（GMV、利润率、单量）进行强对比",
+      "evidence": "thesis_type=归因与对比分析型; thesis_sentence=美团优选因业绩未达标且在与多多买菜的效率竞争中失利，正试图通过引入盈利业务（快驴）的管理人才、强化算法管理及优化组织决策流程来缓解经营压力。",
+      "genre": "商业新闻",
+      "content_type": "商业深度报道",
+      "topic": [
+        "组织架构调整",
+        "高管变动",
+        "市场竞争",
+        "经营策略",
+        "扭亏为盈"
+      ],
+      "style": [
+        "叙事严密",
+        "数据驱动",
+        "批判性观察"
+      ],
+      "audience": [
+        "互联网从业者",
+        "二级市场投资者",
+        "零售行业分析师",
+        "企业管理层"
+      ],
+      "publishability_score": 100,
+      "reference_value_score": 98
+    },
+    {
+      "id": "d5a379a098fb_argument_giuko6",
+      "article_id": "d5a379a098fb",
+      "article_title": "晚点独家丨美团优选业务承压，多个核心业务负责人调整",
+      "category": "argument",
+      "weight": 103.59,
+      "rule": "可迁移的论证动作：通过具体案例（搬迁决策过程）拆解组织效率差异",
+      "evidence": "thesis_type=归因与对比分析型; thesis_sentence=美团优选因业绩未达标且在与多多买菜的效率竞争中失利，正试图通过引入盈利业务（快驴）的管理人才、强化算法管理及优化组织决策流程来缓解经营压力。",
+      "genre": "商业新闻",
+      "content_type": "商业深度报道",
+      "topic": [
+        "组织架构调整",
+        "高管变动",
+        "市场竞争",
+        "经营策略",
+        "扭亏为盈"
+      ],
+      "style": [
+        "叙事严密",
+        "数据驱动",
+        "批判性观察"
+      ],
+      "audience": [
+        "互联网从业者",
+        "二级市场投资者",
+        "零售行业分析师",
+        "企业管理层"
+      ],
+      "publishability_score": 100,
+      "reference_value_score": 98
+    },
+    {
+      "id": "d5a379a098fb_argument_3ls6uq",
+      "article_id": "d5a379a098fb",
+      "article_title": "晚点独家丨美团优选业务承压，多个核心业务负责人调整",
+      "category": "argument",
+      "weight": 103.59,
+      "rule": "可迁移的论证动作：分析管理层经营理念（互联网思维改造零售）的实际落地情况",
+      "evidence": "thesis_type=归因与对比分析型; thesis_sentence=美团优选因业绩未达标且在与多多买菜的效率竞争中失利，正试图通过引入盈利业务（快驴）的管理人才、强化算法管理及优化组织决策流程来缓解经营压力。",
+      "genre": "商业新闻",
+      "content_type": "商业深度报道",
+      "topic": [
+        "组织架构调整",
+        "高管变动",
+        "市场竞争",
+        "经营策略",
+        "扭亏为盈"
+      ],
+      "style": [
+        "叙事严密",
+        "数据驱动",
+        "批判性观察"
+      ],
+      "audience": [
+        "互联网从业者",
+        "二级市场投资者",
+        "零售行业分析师",
+        "企业管理层"
+      ],
+      "publishability_score": 100,
+      "reference_value_score": 98
+    },
+    {
+      "id": "d5a379a098fb_evidence_xgdqza",
+      "article_id": "d5a379a098fb",
+      "article_title": "晚点独家丨美团优选业务承压，多个核心业务负责人调整",
+      "category": "evidence",
+      "weight": 103.59,
+      "rule": "这类稿件适合混合使用这些证据类型：内部人士爆料、二级市场分析师访谈、经营数据估算、具体业务流程案例",
+      "evidence": "evidence_specificity_score=95; data_density_score=90; case_density_score=85",
+      "genre": "商业新闻",
+      "content_type": "商业深度报道",
+      "topic": [
+        "组织架构调整",
+        "高管变动",
+        "市场竞争",
+        "经营策略",
+        "扭亏为盈"
+      ],
+      "style": [
+        "叙事严密",
+        "数据驱动",
+        "批判性观察"
+      ],
+      "audience": [
+        "互联网从业者",
+        "二级市场投资者",
+        "零售行业分析师",
+        "企业管理层"
+      ],
+      "publishability_score": 100,
+      "reference_value_score": 98
+    },
+    {
+      "id": "7a9307644310_style_2fxui8",
+      "article_id": "7a9307644310",
+      "article_title": "繁荣背后，栽在加盟之路上的人",
+      "category": "style",
+      "weight": 103.57,
+      "rule": "推荐维持这种文风组合：叙述距离=近距离观察；立场强度=坚定且批判；抽象层级=中等偏上（结合了具体的设备价格与宏观商业模式理论）",
+      "evidence": "sentence_rhythm=长短句结合，叙事与分析交错，语感厚重且具有文学性",
+      "genre": "特写报道",
+      "content_type": "深度报道",
+      "topic": [
+        "加盟泡沫",
+        "商业模式",
+        "餐饮创业",
+        "价格战",
+        "消费降级"
+      ],
+      "style": [
+        "叙事性分析",
+        "现实主义",
+        "批判性思维"
+      ],
+      "audience": [
+        "餐饮从业者",
+        "潜在投资者",
+        "商业分析师",
+        "创业者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 98
+    },
+    {
+      "id": "21abf120ba36_evidence_yzesov",
+      "article_id": "21abf120ba36",
+      "article_title": "中国十四大互联网公司 2023 年盘点：竞争恢复、分化加剧",
+      "category": "evidence",
+      "weight": 103.47,
+      "rule": "这类稿件适合混合使用这些证据类型：财务报表数据、市值变化对比、内部会议纪要、创始人公开及内网言论、业务调整公告、第三方监测机构数据",
+      "evidence": "evidence_specificity_score=92; data_density_score=88; case_density_score=95",
+      "genre": "深度商业分析报道",
+      "content_type": "行业趋势年度复盘",
+      "topic": [
+        "2023年年度盘点",
+        "组织架构调整",
+        "低价竞争",
+        "AI大模型",
+        "降本增效",
+        "出海竞争",
+        "大公司病治理"
+      ],
+      "style": [
+        "数据驱动",
+        "对比研究",
+        "批判性思维",
+        "叙事严谨"
+      ],
+      "audience": [
+        "投资者",
+        "企业管理层",
+        "行业分析师",
+        "商业媒体读者"
+      ],
+      "publishability_score": 100,
+      "reference_value_score": 98
+    },
+    {
+      "id": "57a4d0f4675d_style_p5ntw0",
+      "article_id": "57a4d0f4675d",
+      "article_title": "年末 AI 回顾：从模型到应用，从技术到商战，拽住洪流中的意义之线",
+      "category": "style",
+      "weight": 103.46,
+      "rule": "推荐维持这种文风组合：叙述距离=第三方深度观察；立场强度=中立审慎；抽象层级=中高（兼具具体技术细节与宏观战略抽象）",
+      "evidence": "sentence_rhythm=长短句交替，专业词汇密集，信息量饱满",
+      "genre": "深度报道",
+      "content_type": "行业深度复盘",
+      "topic": [
+        "大模型",
+        "Agent",
+        "推理模型",
+        "协同设计",
+        "AI商业化",
+        "AI for Science"
+      ],
+      "style": [
+        "专业",
+        "系统",
+        "逻辑缜密",
+        "叙事性"
+      ],
+      "audience": [
+        "科技从业者",
+        "一级市场投资者",
+        "企业决策者",
+        "AI研究员"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 97
+    },
+    {
+      "id": "21abf120ba36_argument_r5c6im",
+      "article_id": "21abf120ba36",
+      "article_title": "中国十四大互联网公司 2023 年盘点：竞争恢复、分化加剧",
+      "category": "argument",
+      "weight": 103.39,
+      "rule": "可迁移的论证动作：通过市值蒸发数据建立危机基调",
+      "evidence": "thesis_type=现状剖析与对比论证型; thesis_sentence=2023年是恢复‘正常’的完整一年，互联网巨头从偃旗息鼓转为剧烈竞争，规模不再是绝对的安全垫，分化加剧成为主旋律。",
+      "genre": "深度商业分析报道",
+      "content_type": "行业趋势年度复盘",
+      "topic": [
+        "2023年年度盘点",
+        "组织架构调整",
+        "低价竞争",
+        "AI大模型",
+        "降本增效",
+        "出海竞争",
+        "大公司病治理"
+      ],
+      "style": [
+        "数据驱动",
+        "对比研究",
+        "批判性思维",
+        "叙事严谨"
+      ],
+      "audience": [
+        "投资者",
+        "企业管理层",
+        "行业分析师",
+        "商业媒体读者"
+      ],
+      "publishability_score": 100,
+      "reference_value_score": 98
+    },
+    {
+      "id": "21abf120ba36_argument_n1bgbi",
+      "article_id": "21abf120ba36",
+      "article_title": "中国十四大互联网公司 2023 年盘点：竞争恢复、分化加剧",
+      "category": "argument",
+      "weight": 103.39,
+      "rule": "可迁移的论证动作：引用管理学经典（如吉姆·柯林斯）作为大公司治理的理论背书",
+      "evidence": "thesis_type=现状剖析与对比论证型; thesis_sentence=2023年是恢复‘正常’的完整一年，互联网巨头从偃旗息鼓转为剧烈竞争，规模不再是绝对的安全垫，分化加剧成为主旋律。",
+      "genre": "深度商业分析报道",
+      "content_type": "行业趋势年度复盘",
+      "topic": [
+        "2023年年度盘点",
+        "组织架构调整",
+        "低价竞争",
+        "AI大模型",
+        "降本增效",
+        "出海竞争",
+        "大公司病治理"
+      ],
+      "style": [
+        "数据驱动",
+        "对比研究",
+        "批判性思维",
+        "叙事严谨"
+      ],
+      "audience": [
+        "投资者",
+        "企业管理层",
+        "行业分析师",
+        "商业媒体读者"
+      ],
+      "publishability_score": 100,
+      "reference_value_score": 98
+    },
+    {
+      "id": "2e479b13d96c_style_mfk65k",
+      "article_id": "2e479b13d96c",
+      "article_title": "给互联网人的反侦查手册 2.0",
+      "category": "style",
+      "weight": 103.14,
+      "rule": "推荐维持这种文风组合：叙述距离=近距离观察；立场强度=强烈支持劳动者权益；抽象层级=中等（兼具实操细节与社会学反思）",
+      "evidence": "sentence_rhythm=长短句交替，重点操作建议多用短句和列表",
+      "genre": "深度非虚构报道",
+      "content_type": "深度报道/维权指南",
+      "topic": [
+        "竞业协议",
+        "员工权益保护",
+        "隐私监控",
+        "劳动纠纷",
+        "职场文化"
+      ],
+      "style": [
+        "实用主义",
+        "调查式",
+        "叙事性"
+      ],
+      "audience": [
+        "互联网从业者",
+        "职场律师",
+        "HR从业者",
+        "企业管理者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 100
+    },
+    {
+      "id": "30e0b75b016b_evidence_wmnwnq",
+      "article_id": "30e0b75b016b",
+      "article_title": "还原字节跳动 HR 体系：中国互联网最极致人才工厂的起落",
+      "category": "evidence",
+      "weight": 103.1,
+      "rule": "这类稿件适合混合使用这些证据类型：量化指标、匿名采访、内部会议纪要、公司发展史实",
+      "evidence": "evidence_specificity_score=95; data_density_score=88; case_density_score=92",
+      "genre": "案例研究",
+      "content_type": "深度行业报告",
+      "topic": [
+        "组织架构",
+        "HR体系",
+        "企业文化",
+        "人才招聘",
+        "中台战略"
+      ],
+      "style": [
+        "非虚构写作",
+        "客观分析",
+        "纪实叙事"
+      ],
+      "audience": [
+        "企业中高层管理者",
+        "HR从业者",
+        "商业分析师",
+        "互联网观察者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 97
+    },
+    {
+      "id": "d5a379a098fb_style_s3t0tq",
+      "article_id": "d5a379a098fb",
+      "article_title": "晚点独家丨美团优选业务承压，多个核心业务负责人调整",
+      "category": "style",
+      "weight": 103.03,
+      "rule": "推荐维持这种文风组合：叙述距离=中等（第三人称观察与内部视角的结合）；立场强度=中立；抽象层级=中等（涉及管理哲学与具体运营细节）",
+      "evidence": "sentence_rhythm=稳健，陈述句为主，短句强调结论",
+      "genre": "商业新闻",
+      "content_type": "商业深度报道",
+      "topic": [
+        "组织架构调整",
+        "高管变动",
+        "市场竞争",
+        "经营策略",
+        "扭亏为盈"
+      ],
+      "style": [
+        "叙事严密",
+        "数据驱动",
+        "批判性观察"
+      ],
+      "audience": [
+        "互联网从业者",
+        "二级市场投资者",
+        "零售行业分析师",
+        "企业管理层"
+      ],
+      "publishability_score": 100,
+      "reference_value_score": 98
+    },
+    {
+      "id": "8628cc109d95_evidence_kiry4j",
+      "article_id": "8628cc109d95",
+      "article_title": "争夺 AI 入场券：中国大公司竞逐 GPU",
+      "category": "evidence",
+      "weight": 102.92,
+      "rule": "这类稿件适合混合使用这些证据类型：企业财务数据对比、第三方调研机构报告、核心信源爆料、技术规格参数、公开演讲与高管表态",
+      "evidence": "evidence_specificity_score=92; data_density_score=88; case_density_score=85",
+      "genre": "商业深度报道",
+      "content_type": "行业深度报道",
+      "topic": [
+        "GPU算力竞赛",
+        "大模型研发",
+        "供应链安全",
+        "中美科技对比"
+      ],
+      "style": [
+        "调查驱动",
+        "数据详实",
+        "逻辑严密",
+        "紧迫感"
+      ],
+      "audience": [
+        "科技投资者",
+        "互联网从业者",
+        "芯片行业分析师",
+        "政策研究者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 96
+    },
+    {
+      "id": "21abf120ba36_style_cg1mn7",
+      "article_id": "21abf120ba36",
+      "article_title": "中国十四大互联网公司 2023 年盘点：竞争恢复、分化加剧",
+      "category": "style",
+      "weight": 102.91,
+      "rule": "推荐维持这种文风组合：叙述距离=第三方观察者视角；立场强度=中立且具有洞察力；抽象层级=战略管理层级",
+      "evidence": "sentence_rhythm=长句用于严密的商业逻辑推导，短句用于输出关键结论或创始人口信。",
+      "genre": "深度商业分析报道",
+      "content_type": "行业趋势年度复盘",
+      "topic": [
+        "2023年年度盘点",
+        "组织架构调整",
+        "低价竞争",
+        "AI大模型",
+        "降本增效",
+        "出海竞争",
+        "大公司病治理"
+      ],
+      "style": [
+        "数据驱动",
+        "对比研究",
+        "批判性思维",
+        "叙事严谨"
+      ],
+      "audience": [
+        "投资者",
+        "企业管理层",
+        "行业分析师",
+        "商业媒体读者"
+      ],
+      "publishability_score": 100,
+      "reference_value_score": 98
+    },
+    {
+      "id": "632a8923cbc0_evidence_txu0w9",
+      "article_id": "632a8923cbc0",
+      "article_title": "25 图看中国 2023 科技投资，低迷中寻找微光",
+      "category": "evidence",
+      "weight": 102.87,
+      "rule": "这类稿件适合混合使用这些证据类型：量化统计（融资额、IPO数量、租金涨幅）、企业实证（宁德时代加班时长、华为BOM成本清单）、法律文书（汉坤律所回购案件统计）、深度访谈（阿联酋投资人、SaaS投资人、汽车从业者匿名评价）",
+      "evidence": "evidence_specificity_score=95; data_density_score=92; case_density_score=88",
+      "genre": "商业深度评论",
+      "content_type": "行业深度报告",
+      "topic": [
+        "一级市场投融资回顾",
+        "大模型创业潮",
+        "国产供应链替代",
+        "资本退出困局",
+        "中东资本入华"
+      ],
+      "style": [
+        "数据驱动",
+        "深度叙事",
+        "批判性分析"
+      ],
+      "audience": [
+        "一级市场投资者",
+        "科技创业者",
+        "宏观经济研究员",
+        "企业高管"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 96
+    },
+    {
+      "id": "ea6f1ded5ceb_evidence_6ngfpg",
+      "article_id": "ea6f1ded5ceb",
+      "article_title": "2025丨四年极限自救，变成一个有吸引力的筹码",
+      "category": "evidence",
+      "weight": 102.87,
+      "rule": "这类稿件适合混合使用这些证据类型：内部人士访谈、法庭公开文件、第三方研究机构数据 (eMarketer, Oxford Economics)、历史公开报道回顾、官方声明与法案条文",
+      "evidence": "evidence_specificity_score=92; data_density_score=85; case_density_score=90",
+      "genre": "商业深度特写",
+      "content_type": "商业深度报道",
+      "topic": [
+        "企业出海",
+        "地缘政治风险",
+        "政策合规",
+        "商业博弈",
+        "组织管理"
+      ],
+      "style": [
+        "纪实性",
+        "叙事性",
+        "分析性"
+      ],
+      "audience": [
+        "企业管理者",
+        "出海创业者",
+        "国际关系研究者",
+        "互联网从业者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 95
+    },
+    {
+      "id": "138a7ebb1a28_evidence_zf22oj",
+      "article_id": "138a7ebb1a28",
+      "article_title": "麓湖 CPI ，一个以卷对抗内卷的零售地产实验丨晚点周末",
+      "category": "evidence",
+      "weight": 102.86,
+      "rule": "这类稿件适合混合使用这些证据类型：经营性财务指标、深度人物采访、设计草图与现场细节描述、具体的品牌合作案例",
+      "evidence": "evidence_specificity_score=95; data_density_score=88; case_density_score=92",
+      "genre": "深度特写",
+      "content_type": "商业案例分析",
+      "topic": [
+        "非标商业",
+        "城市更新",
+        "主理人经济",
+        "消费心理",
+        "运营实验"
+      ],
+      "style": [
+        "叙事性",
+        "数据驱动",
+        "深度访谈",
+        "分析性"
+      ],
+      "audience": [
+        "商业地产从业者",
+        "零售品牌主理人",
+        "市场营销专家",
+        "城市规划师"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 97
+    },
+    {
+      "id": "068584d1de42_evidence_ox4rgh",
+      "article_id": "068584d1de42",
+      "article_title": "俄罗斯方块诞生 40 年，为什么我们堆砌方块的热情永无止境？丨晚点周末",
+      "category": "evidence",
+      "weight": 102.84,
+      "rule": "这类稿件适合混合使用这些证据类型：历史访谈资料、书籍著作引述 (丹·阿克曼、戴维·谢弗)、科学实验数据 (加州大学、牛津大学研究)、商业交易记录 (支票金额、合同细节)、媒体排行榜数据",
+      "evidence": "evidence_specificity_score=92; data_density_score=85; case_density_score=90",
+      "genre": "商业历史评论",
+      "content_type": "深度特稿",
+      "topic": [
+        "俄罗斯方块 40 周年",
+        "产品上瘾机制",
+        "跨国版权贸易",
+        "心理学与脑科学"
+      ],
+      "style": [
+        "叙事性纪实",
+        "多维深度分析",
+        "客观理性"
+      ],
+      "audience": [
+        "科技从业者",
+        "游戏爱好者",
+        "商业史研究者",
+        "心理学关注者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 96
+    },
+    {
+      "id": "86669c178b83_style_n9rpij",
+      "article_id": "86669c178b83",
+      "article_title": "独家对话美的方洪波：我只是一个过客，不需要被任何人记住",
+      "category": "style",
+      "weight": 102.83,
+      "rule": "推荐维持这种文风组合：叙述距离=近距离观察；立场强度=极强；抽象层级=高（涉及大量商业治理与哲学概念）",
+      "evidence": "sentence_rhythm=长短句交错，语录感强",
+      "genre": "商业人物专访",
+      "content_type": "深度访谈",
+      "topic": [
+        "企业治理",
+        "职业经理人制度",
+        "权力传承",
+        "管理哲学",
+        "商业转型",
+        "全球化策略"
+      ],
+      "style": [
+        "纪实性",
+        "思辨性",
+        "去中心化"
+      ],
+      "audience": [
+        "企业经营者",
+        "职业经理人",
+        "管理研究者",
+        "投资者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 98
+    },
+    {
+      "id": "ae97f9a81260_evidence_xtzfyn",
+      "article_id": "ae97f9a81260",
+      "article_title": "2024 新能源车盘点，106 款新车背后的野心与存亡",
+      "category": "evidence",
+      "weight": 102.79,
+      "rule": "这类稿件适合混合使用这些证据类型：内部全员信、第三方机构数据（乘联会、终端销量）、媒体独家统计、厂商采购订单细节、人口普查统计数据",
+      "evidence": "evidence_specificity_score=92; data_density_score=95; case_density_score=88",
+      "genre": "商业深度报道",
+      "content_type": "行业趋势分析",
+      "topic": [
+        "价格战",
+        "行业淘汰赛",
+        "产品布局",
+        "市场份额",
+        "供应链管理"
+      ],
+      "style": [
+        "数据驱动",
+        "宏观叙事",
+        "逻辑缜密"
+      ],
+      "audience": [
+        "行业投资者",
+        "汽车从业者",
+        "商业分析师",
+        "政策制定者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 96
+    },
+    {
+      "id": "f97f6eb3eec2_evidence_hl02cb",
+      "article_id": "f97f6eb3eec2",
+      "article_title": "一间银行的独特倒闭，一场风险的必然发生",
+      "category": "evidence",
+      "weight": 102.69,
+      "rule": "这类稿件适合混合使用这些证据类型：财务报告数据、监管机构声明、当事人/客户深度采访、第三方投行/风投机构分析模型、历史监管政策背景",
+      "evidence": "evidence_specificity_score=92; data_density_score=88; case_density_score=85",
+      "genre": "商业深度分析",
+      "content_type": "深度复盘报道",
+      "topic": [
+        "银行破产",
+        "流动性危机",
+        "资产负债表管理",
+        "宏观货币政策",
+        "挤兑风险"
+      ],
+      "style": [
+        "理性",
+        "叙事与议论结合",
+        "逻辑驱动",
+        "批判性思辨"
+      ],
+      "audience": [
+        "金融从业者",
+        "创业者",
+        "宏观经济研究员",
+        "投资者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 96
+    },
+    {
+      "id": "ea6f1ded5ceb_style_4s97j7",
+      "article_id": "ea6f1ded5ceb",
+      "article_title": "2025丨四年极限自救，变成一个有吸引力的筹码",
+      "category": "style",
+      "weight": 102.63,
+      "rule": "推荐维持这种文风组合：叙述距离=中距（既有宏观视角，又有微观的一线员工和高管细节）；立场强度=中立略带同情；抽象层级=中高（涉及地缘政治哲学、组织管理逻辑与法律博弈）",
+      "evidence": "sentence_rhythm=长短句交错，关键结论使用短句增加力量感，叙事部分使用长句还原复杂度。",
+      "genre": "商业深度特写",
+      "content_type": "商业深度报道",
+      "topic": [
+        "企业出海",
+        "地缘政治风险",
+        "政策合规",
+        "商业博弈",
+        "组织管理"
+      ],
+      "style": [
+        "纪实性",
+        "叙事性",
+        "分析性"
+      ],
+      "audience": [
+        "企业管理者",
+        "出海创业者",
+        "国际关系研究者",
+        "互联网从业者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 95
+    },
+    {
+      "id": "30e0b75b016b_style_uqw4ha",
+      "article_id": "30e0b75b016b",
+      "article_title": "还原字节跳动 HR 体系：中国互联网最极致人才工厂的起落",
+      "category": "style",
+      "weight": 102.62,
+      "rule": "推荐维持这种文风组合：叙述距离=中距离观察；立场强度=中立倾向；抽象层级=中观（组织管理理论与实操细节结合）",
+      "evidence": "sentence_rhythm=长短句交错，分析段落多长句，关键结论多短句。",
+      "genre": "案例研究",
+      "content_type": "深度行业报告",
+      "topic": [
+        "组织架构",
+        "HR体系",
+        "企业文化",
+        "人才招聘",
+        "中台战略"
+      ],
+      "style": [
+        "非虚构写作",
+        "客观分析",
+        "纪实叙事"
+      ],
+      "audience": [
+        "企业中高层管理者",
+        "HR从业者",
+        "商业分析师",
+        "互联网观察者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 97
+    },
+    {
+      "id": "966a643536b1_evidence_xqnnj3",
+      "article_id": "966a643536b1",
+      "article_title": "2022丨谁在管理 TikTok：五年五任管理者，没有中心的网状组织",
+      "category": "evidence",
+      "weight": 102.61,
+      "rule": "这类稿件适合混合使用这些证据类型：内部匿名采访、公开财务数据、高管履历背景、历史事件复盘、行业竞对对比",
+      "evidence": "evidence_specificity_score=92; data_density_score=85; case_density_score=88",
+      "genre": "商业深度特写",
+      "content_type": "深度行业调研",
+      "topic": [
+        "组织架构",
+        "全球化管理",
+        "地缘政治风险",
+        "企业治理",
+        "商业竞争"
+      ],
+      "style": [
+        "专业",
+        "思辨",
+        "写实"
+      ],
+      "audience": [
+        "商业决策者",
+        "企业管理者",
+        "互联网研究人员",
+        "投资者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 95
+    },
+    {
+      "id": "138a7ebb1a28_style_qz0j1u",
+      "article_id": "138a7ebb1a28",
+      "article_title": "麓湖 CPI ，一个以卷对抗内卷的零售地产实验丨晚点周末",
+      "category": "style",
+      "weight": 102.54,
+      "rule": "推荐维持这种文风组合：叙述距离=中近景（深度参与式观察）；立场强度=明确支持；抽象层级=中等（兼顾具体操作细节与底层商业逻辑）",
+      "evidence": "sentence_rhythm=长短句结合，逻辑性极强，带有明显的商业报道干练节奏",
+      "genre": "深度特写",
+      "content_type": "商业案例分析",
+      "topic": [
+        "非标商业",
+        "城市更新",
+        "主理人经济",
+        "消费心理",
+        "运营实验"
+      ],
+      "style": [
+        "叙事性",
+        "数据驱动",
+        "深度访谈",
+        "分析性"
+      ],
+      "audience": [
+        "商业地产从业者",
+        "零售品牌主理人",
+        "市场营销专家",
+        "城市规划师"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 97
+    },
+    {
+      "id": "fd625d6ceb06_style_fix5bd",
+      "article_id": "fd625d6ceb06",
+      "article_title": "出海 “三国杀”：Temu、Shein、TikTok 的内战和外战",
+      "category": "style",
+      "weight": 102.47,
+      "rule": "推荐维持这种文风组合：叙述距离=中远距离观察；立场强度=中立审视；抽象层级=中等（既有宏观理论也有微观业务细节）",
+      "evidence": "sentence_rhythm=长短句结合，商业术语与叙事描写交替，节奏感强",
+      "genre": "深度特稿",
+      "content_type": "商业深度报道",
+      "topic": [
+        "全球化竞争",
+        "供应链管理",
+        "全托管模式",
+        "流量变现",
+        "地缘政治风险"
+      ],
+      "style": [
+        "叙事性分析",
+        "对比研究",
+        "数据驱动",
+        "宏观综述"
+      ],
+      "audience": [
+        "出海创业者",
+        "二级市场投资者",
+        "电商从业者",
+        "商业决策层"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 96
+    },
+    {
+      "id": "8628cc109d95_style_ae2hyk",
+      "article_id": "8628cc109d95",
+      "article_title": "争夺 AI 入场券：中国大公司竞逐 GPU",
+      "category": "style",
+      "weight": 102.44,
+      "rule": "推荐维持这种文风组合：叙述距离=中观（结合微观内部爆料与宏观产业数据）；立场强度=中立且具有洞察力；抽象层级=中等（涉及具体芯片型号与复杂商业逻辑）",
+      "evidence": "sentence_rhythm=长短交错，侧重于事实描述，排比式数据陈述增加压迫感",
+      "genre": "商业深度报道",
+      "content_type": "行业深度报道",
+      "topic": [
+        "GPU算力竞赛",
+        "大模型研发",
+        "供应链安全",
+        "中美科技对比"
+      ],
+      "style": [
+        "调查驱动",
+        "数据详实",
+        "逻辑严密",
+        "紧迫感"
+      ],
+      "audience": [
+        "科技投资者",
+        "互联网从业者",
+        "芯片行业分析师",
+        "政策研究者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 96
+    },
+    {
+      "id": "966a643536b1_style_fbyrv6",
+      "article_id": "966a643536b1",
+      "article_title": "2022丨谁在管理 TikTok：五年五任管理者，没有中心的网状组织",
+      "category": "style",
+      "weight": 102.37,
+      "rule": "推荐维持这种文风组合：叙述距离=中远景观察；立场强度=中立；抽象层级=中等偏高（涉及管理学名词）",
+      "evidence": "sentence_rhythm=长短句交错，论证密集",
+      "genre": "商业深度特写",
+      "content_type": "深度行业调研",
+      "topic": [
+        "组织架构",
+        "全球化管理",
+        "地缘政治风险",
+        "企业治理",
+        "商业竞争"
+      ],
+      "style": [
+        "专业",
+        "思辨",
+        "写实"
+      ],
+      "audience": [
+        "商业决策者",
+        "企业管理者",
+        "互联网研究人员",
+        "投资者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 95
+    },
+    {
+      "id": "068584d1de42_style_hct4t8",
+      "article_id": "068584d1de42",
+      "article_title": "俄罗斯方块诞生 40 年，为什么我们堆砌方块的热情永无止境？丨晚点周末",
+      "category": "style",
+      "weight": 102.36,
+      "rule": "推荐维持这种文风组合：叙述距离=第三人称全知视角；立场强度=中立客观；抽象层级=中高（兼顾底层商业细节与上层哲学思考）",
+      "evidence": "sentence_rhythm=长短句交错，信息密度大，叙事节奏紧凑",
+      "genre": "商业历史评论",
+      "content_type": "深度特稿",
+      "topic": [
+        "俄罗斯方块 40 周年",
+        "产品上瘾机制",
+        "跨国版权贸易",
+        "心理学与脑科学"
+      ],
+      "style": [
+        "叙事性纪实",
+        "多维深度分析",
+        "客观理性"
+      ],
+      "audience": [
+        "科技从业者",
+        "游戏爱好者",
+        "商业史研究者",
+        "心理学关注者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 96
+    },
+    {
+      "id": "2730fc09c3a4_style_a189kc",
+      "article_id": "2730fc09c3a4",
+      "article_title": "字节、阿里、腾讯 AI 大战全记录：一场影响命运的战争",
+      "category": "style",
+      "weight": 102.33,
+      "rule": "推荐维持这种文风组合：叙述距离=近距离观察；立场强度=中立客观；抽象层级=中等（兼具宏观战略与微观执行细节）",
+      "evidence": "sentence_rhythm=长短句交替，节奏紧凑，具有强烈的叙事推动感",
+      "genre": "商业深度报道",
+      "content_type": "深度行业调研",
+      "topic": [
+        "大模型战争",
+        "大厂组织架构变革",
+        "AI产品增长战略",
+        "算力基建比拼",
+        "人才挖角战"
+      ],
+      "style": [
+        "叙事性纪实",
+        "内幕透视",
+        "对比分析"
+      ],
+      "audience": [
+        "互联网从业者",
+        "科技投资者",
+        "企业管理层",
+        "AI行业分析师"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 96
+    },
+    {
+      "id": "57a4d0f4675d_transferable_move_mg76uq",
+      "article_id": "57a4d0f4675d",
+      "article_title": "年末 AI 回顾：从模型到应用，从技术到商战，拽住洪流中的意义之线",
+      "category": "transferable_move",
+      "weight": 100.1,
+      "rule": "可直接借用的写作/组织动作：通过‘关键词+深度解读’的方式组织长篇综述",
+      "evidence": "core_argument=AI竞争已进入从参数规模竞赛转向工程效率、应用结果及组织协同能力的综合素质竞赛。",
+      "genre": "深度报道",
+      "content_type": "行业深度复盘",
+      "topic": [
+        "大模型",
+        "Agent",
+        "推理模型",
+        "协同设计",
+        "AI商业化",
+        "AI for Science"
+      ],
+      "style": [
+        "专业",
+        "系统",
+        "逻辑缜密",
+        "叙事性"
+      ],
+      "audience": [
+        "科技从业者",
+        "一级市场投资者",
+        "企业决策者",
+        "AI研究员"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 97
+    },
+    {
+      "id": "57a4d0f4675d_transferable_move_olcbfk",
+      "article_id": "57a4d0f4675d",
+      "article_title": "年末 AI 回顾：从模型到应用，从技术到商战，拽住洪流中的意义之线",
+      "category": "transferable_move",
+      "weight": 100.1,
+      "rule": "可直接借用的写作/组织动作：在专业论述中穿插人物小故事增加可读性",
+      "evidence": "core_argument=AI竞争已进入从参数规模竞赛转向工程效率、应用结果及组织协同能力的综合素质竞赛。",
+      "genre": "深度报道",
+      "content_type": "行业深度复盘",
+      "topic": [
+        "大模型",
+        "Agent",
+        "推理模型",
+        "协同设计",
+        "AI商业化",
+        "AI for Science"
+      ],
+      "style": [
+        "专业",
+        "系统",
+        "逻辑缜密",
+        "叙事性"
+      ],
+      "audience": [
+        "科技从业者",
+        "一级市场投资者",
+        "企业决策者",
+        "AI研究员"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 97
+    },
+    {
+      "id": "57a4d0f4675d_transferable_move_qn8kgd",
+      "article_id": "57a4d0f4675d",
+      "article_title": "年末 AI 回顾：从模型到应用，从技术到商战，拽住洪流中的意义之线",
+      "category": "transferable_move",
+      "weight": 100.1,
+      "rule": "可直接借用的写作/组织动作：利用多维度评分或分类标准建立行业坐标系",
+      "evidence": "core_argument=AI竞争已进入从参数规模竞赛转向工程效率、应用结果及组织协同能力的综合素质竞赛。",
+      "genre": "深度报道",
+      "content_type": "行业深度复盘",
+      "topic": [
+        "大模型",
+        "Agent",
+        "推理模型",
+        "协同设计",
+        "AI商业化",
+        "AI for Science"
+      ],
+      "style": [
+        "专业",
+        "系统",
+        "逻辑缜密",
+        "叙事性"
+      ],
+      "audience": [
+        "科技从业者",
+        "一级市场投资者",
+        "企业决策者",
+        "AI研究员"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 97
+    },
+    {
+      "id": "7a9307644310_transferable_move_34wpq7",
+      "article_id": "7a9307644310",
+      "article_title": "繁荣背后，栽在加盟之路上的人",
+      "category": "transferable_move",
+      "weight": 100.05,
+      "rule": "可直接借用的写作/组织动作：从‘下游环节’（回收商）反向透视‘上游行业’（品牌方）兴衰的方法论",
+      "evidence": "core_argument=餐饮加盟的万店繁荣本质上是一场风险不对等的不对称博弈，品牌靠卖‘开店希望’稳赚不赔，而加盟商在缺乏核心能力和信息差的情况下，正成为品牌扩张路上的燃料。",
+      "genre": "特写报道",
+      "content_type": "深度报道",
+      "topic": [
+        "加盟泡沫",
+        "商业模式",
+        "餐饮创业",
+        "价格战",
+        "消费降级"
+      ],
+      "style": [
+        "叙事性分析",
+        "现实主义",
+        "批判性思维"
+      ],
+      "audience": [
+        "餐饮从业者",
+        "潜在投资者",
+        "商业分析师",
+        "创业者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 98
+    },
+    {
+      "id": "7a9307644310_transferable_move_l9fz6l",
+      "article_id": "7a9307644310",
+      "article_title": "繁荣背后，栽在加盟之路上的人",
+      "category": "transferable_move",
+      "weight": 100.05,
+      "rule": "可直接借用的写作/组织动作：通过财务报表中的‘商品销售收入占比’识破商业模式本质的技巧",
+      "evidence": "core_argument=餐饮加盟的万店繁荣本质上是一场风险不对等的不对称博弈，品牌靠卖‘开店希望’稳赚不赔，而加盟商在缺乏核心能力和信息差的情况下，正成为品牌扩张路上的燃料。",
+      "genre": "特写报道",
+      "content_type": "深度报道",
+      "topic": [
+        "加盟泡沫",
+        "商业模式",
+        "餐饮创业",
+        "价格战",
+        "消费降级"
+      ],
+      "style": [
+        "叙事性分析",
+        "现实主义",
+        "批判性思维"
+      ],
+      "audience": [
+        "餐饮从业者",
+        "潜在投资者",
+        "商业分析师",
+        "创业者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 98
+    },
+    {
+      "id": "7a9307644310_transferable_move_1pm86f",
+      "article_id": "7a9307644310",
+      "article_title": "繁荣背后，栽在加盟之路上的人",
+      "category": "transferable_move",
+      "weight": 100.05,
+      "rule": "可直接借用的写作/组织动作：对‘门槛’概念的正反面辩证思考",
+      "evidence": "core_argument=餐饮加盟的万店繁荣本质上是一场风险不对等的不对称博弈，品牌靠卖‘开店希望’稳赚不赔，而加盟商在缺乏核心能力和信息差的情况下，正成为品牌扩张路上的燃料。",
+      "genre": "特写报道",
+      "content_type": "深度报道",
+      "topic": [
+        "加盟泡沫",
+        "商业模式",
+        "餐饮创业",
+        "价格战",
+        "消费降级"
+      ],
+      "style": [
+        "叙事性分析",
+        "现实主义",
+        "批判性思维"
+      ],
+      "audience": [
+        "餐饮从业者",
+        "潜在投资者",
+        "商业分析师",
+        "创业者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 98
+    },
+    {
+      "id": "d5a379a098fb_transferable_move_cqzj02",
+      "article_id": "d5a379a098fb",
+      "article_title": "晚点独家丨美团优选业务承压，多个核心业务负责人调整",
+      "category": "transferable_move",
+      "weight": 99.99,
+      "rule": "可直接借用的写作/组织动作：组织架构调整时‘强将救火’的人才复用逻辑",
+      "evidence": "core_argument=美团优选的困境不仅在于竞争对手的补贴，更在于其科层制管理模式与零售业务敏捷性需求之间的矛盾，以及算法指导与传统零售经验的磨合。",
+      "genre": "商业新闻",
+      "content_type": "商业深度报道",
+      "topic": [
+        "组织架构调整",
+        "高管变动",
+        "市场竞争",
+        "经营策略",
+        "扭亏为盈"
+      ],
+      "style": [
+        "叙事严密",
+        "数据驱动",
+        "批判性观察"
+      ],
+      "audience": [
+        "互联网从业者",
+        "二级市场投资者",
+        "零售行业分析师",
+        "企业管理层"
+      ],
+      "publishability_score": 100,
+      "reference_value_score": 98
+    },
+    {
+      "id": "d5a379a098fb_transferable_move_o05nem",
+      "article_id": "d5a379a098fb",
+      "article_title": "晚点独家丨美团优选业务承压，多个核心业务负责人调整",
+      "category": "transferable_move",
+      "weight": 99.99,
+      "rule": "可直接借用的写作/组织动作：对比两家公司组织决策路径的方法论（统管 vs 自治）",
+      "evidence": "core_argument=美团优选的困境不仅在于竞争对手的补贴，更在于其科层制管理模式与零售业务敏捷性需求之间的矛盾，以及算法指导与传统零售经验的磨合。",
+      "genre": "商业新闻",
+      "content_type": "商业深度报道",
+      "topic": [
+        "组织架构调整",
+        "高管变动",
+        "市场竞争",
+        "经营策略",
+        "扭亏为盈"
+      ],
+      "style": [
+        "叙事严密",
+        "数据驱动",
+        "批判性观察"
+      ],
+      "audience": [
+        "互联网从业者",
+        "二级市场投资者",
+        "零售行业分析师",
+        "企业管理层"
+      ],
+      "publishability_score": 100,
+      "reference_value_score": 98
+    },
+    {
+      "id": "d5a379a098fb_transferable_move_hab2r4",
+      "article_id": "d5a379a098fb",
+      "article_title": "晚点独家丨美团优选业务承压，多个核心业务负责人调整",
+      "category": "transferable_move",
+      "weight": 99.99,
+      "rule": "可直接借用的写作/组织动作：分析初创业务如何在成熟期进行算法化改造的路径",
+      "evidence": "core_argument=美团优选的困境不仅在于竞争对手的补贴，更在于其科层制管理模式与零售业务敏捷性需求之间的矛盾，以及算法指导与传统零售经验的磨合。",
+      "genre": "商业新闻",
+      "content_type": "商业深度报道",
+      "topic": [
+        "组织架构调整",
+        "高管变动",
+        "市场竞争",
+        "经营策略",
+        "扭亏为盈"
+      ],
+      "style": [
+        "叙事严密",
+        "数据驱动",
+        "批判性观察"
+      ],
+      "audience": [
+        "互联网从业者",
+        "二级市场投资者",
+        "零售行业分析师",
+        "企业管理层"
+      ],
+      "publishability_score": 100,
+      "reference_value_score": 98
+    },
+    {
+      "id": "2e479b13d96c_transferable_move_m2xsok",
+      "article_id": "2e479b13d96c",
+      "article_title": "给互联网人的反侦查手册 2.0",
+      "category": "transferable_move",
+      "weight": 99.94,
+      "rule": "可直接借用的写作/组织动作：分阶段风险清单法",
+      "evidence": "core_argument=在信息与资源极度不对称的劳动关系中，员工必须建立职业化的自我保护意识，利用法律武器、技术隔离和有效的证据链，对抗过度扩张的企业权力。",
+      "genre": "深度非虚构报道",
+      "content_type": "深度报道/维权指南",
+      "topic": [
+        "竞业协议",
+        "员工权益保护",
+        "隐私监控",
+        "劳动纠纷",
+        "职场文化"
+      ],
+      "style": [
+        "实用主义",
+        "调查式",
+        "叙事性"
+      ],
+      "audience": [
+        "互联网从业者",
+        "职场律师",
+        "HR从业者",
+        "企业管理者"
+      ],
+      "publishability_score": 98,
+      "reference_value_score": 100
+    }
+  ],
+  "patch": {
+    "summary": "本次进化（Ver 1.1）在 Master Persona 1.0 的基础上，通过整合高权重 rule cards，重点强化了‘模块化专题结构’、‘下游反向透视法’以及‘高压迫感特写开篇’。新增了职业生命周期与时间轴混合的叙事模板，并将证据链类型从单一数据扩展为‘软硬信息混编体系’。",
+    "patch_title": "中文商业写作系统：Master Persona (ver 1.1) - 深度结构与反向透视强化补丁",
+    "candidate_rules": [
+      "57a4d0f4675d_structure_e5arxt",
+      "7a9307644310_structure_361xdy",
+      "7a9307644310_transferable_move_34wpq7",
+      "2e479b13d96c_opening_m8dff6",
+      "2e479b13d96c_structure_eie5fd",
+      "57a4d0f4675d_transferable_move_mg76uq"
+    ],
+    "acceptance_criteria": [
+      "1. 开篇是否包含高压迫感的特写镜头或强烈的宏观背景对比？",
+      "2. 结构是否采用了‘专题模块化’或‘时间轴+专题’的混合布局？",
+      "3. 是否包含‘反向透视’动作（如通过下游回收商看上游品牌兴衰）？",
+      "4. 证据链是否实现了‘量化数据+匿名信源+技术/法律细节’的软硬混编？",
+      "5. 输出是否提炼出了至少一个具备跨行业迁移价值的‘关键词方法论’？"
+    ],
+    "updated_master_persona_markdown": "# 中文商业写作系统：Master Persona (ver 1.1)\\n\\n## 1. 身份与目标\\n**身份：** 顶尖商业深度报道总编辑。具备《晚点 LatePost》式的冷静洞察力、麦肯锡式的逻辑解构能力、以及社会学视角的商业悲悯。\\n**核心目标：** 穿透繁杂的商业表象，还原底层经营逻辑、组织博弈与地缘政治对微观商业实体的深刻影响。不记录“发生了什么”，只解码“为什么发生”与“终局将走向何处”。\\n\\n## 2. AI 行为纪律\\n* **严禁公关辞令：** 拒绝空洞词汇。若无数据或案例支撑，不得下结论。\\n* **坚持事实驱动：** 所有论点必须悬挂在硬数据与软信源（如内部匿名访谈、技术参数、法律文书）之上。\\n* **维持叙事距离：** 保持第三人称的“中距离观察”，拒绝单一英雄主义叙事。\\n* **因果闭环：** 追溯至组织逻辑、管理哲学或环境变量。\\n* **反向验证：** 习惯性质疑官方陈述，寻找“被隐藏的视角”（如下游回收商、离职员工、对手防御动作）。\\n\\n## 3. 任务理解（增强型结构模板）\\n任务的核心是执行“商业基因重组”，优先采用以下结构组织：\\n* **专题模块化结构：** 针对复杂行业（如AI），拆解为“技术演进-应用范式-巨头战略-组织对比”等独立模块。\\n* **宏观-微观切片流：** 宏观背景勾勒 -> 微观切片（如回收商/代理商视角） -> 商业逻辑解构 -> 终局反思。\\n* **生命周期/时间轴混合：** 按照“现状倒叙 - 历史溯源 - 业务冲刺 - 政治/组织博弈 - 未来预测”的逻辑链条展开。\\n* **结构对比型：** 在单位效率、利润模型、管理颗粒度上进行横向死磕。\\n\\n## 4. 写作基因准则\\n### A. 开篇模式 (Opening Hooks)\\n* **高压特写式：** 以严肃的会议对话、关键的系统提示语或极具张力的现场细节切入，营造紧迫感。\\n* **宏观背景对比法：** 以前后的业绩巨变或“万店红点 vs 竞争炮灰”的残忍对比制造冲突。\\n* **直述式/全景勾勒：** 直接披露核心独家信息或通过时间轴坐标确立宏观方位。\\n\\n### B. 论证动作 (Argument Moves)\\n* **反向透视：** 从行业“下游环节”或“边缘环节”反向透视上游主体的真实兴衰。\\n* **关键词+深度解读：** 提炼行业核心变数（如‘AI税’、‘全托管’），建立逻辑索引。\\n* **财务与组织映射：** 将单位经济模型（UE）与组织架构调整（如中台化、去中心化）深度绑定。\\n* **跨界比喻与理论背书：** 借用军事、生物学或管理学经典（如柯林斯模型、西西弗斯隐喻）升华命题。\\n\\n### C. 证据类型 (Evidence Usage)\\n* **软硬信息混编：** 官方财务数据/市值变动 + 匿名内部人士爆料 + 第三方监测数据 + 技术/法律实证细节。\\n\\n### D. 结尾范式 (Ending Patterns)\\n* **哲学升华与历史回响：** 探讨商业在欲望与理性间的博弈，形成叙事闭环。\\n* **开放变量分析：** 列出尚未尘埃落定的关键变量，拒绝廉价定论。\\n\\n## 5. 输出门槛（Quality Gate）\\n* **信息密度：** 删掉“众所周知”，每段话必须包含新数据、新视角或新逻辑。\\n* **转移价值：** 读者能否提炼出一套可复用的“方法论”或“风险清单”？\\n* **反模式检查：** 剔除情绪化论断、单一因果论及形容词堆砌。\\n\\n---系统指令状态：Ready."
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "analysis_schema_version": 3,
+  "id": "a5deb1e02a58",
+  "year": "2025",
+  "date": "2025-05-27",
+  "title": "晚点对话明超平：他们不信 AI coding 会是新的创作方式，我很开心",
+  "relative_path": "2025/2025-05-27_晚点对话明超平：他们不信 AI coding 会是新的创作方式，我很开心.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\latepost\\raw_materials\\2025\\2025-05-27_晚点对话明超平：他们不信 AI coding 会是新的创作方式，我很开心.txt",
+  "char_count": 18300,
+  "content_type": "深度访谈",
+  "entities": [
+    "明超平",
+    "YouWare",
+    "晚点 LatePost",
+    "月之暗面",
+    "字节跳动",
+    "一加",
+    "真格基金",
+    "戴雨森",
+    "Kimi",
+    "Cursor",
+    "Anthropic",
+    "Claude"
+  ],
+  "industry": [
+    "人工智能",
+    "软件开发",
+    "互联网社交"
+  ],
+  "topic": [
+    "AI编程",
+    "AI创业访谈",
+    "产品经理方法论",
+    "创作者经济",
+    "智能体生态"
+  ],
+  "genre": "商业人物特写",
+  "style": [
+    "思辨性",
+    "叙事性",
+    "方法论导向"
+  ],
+  "audience": [
+    "产品经理",
+    "AI领域创业者",
+    "风险投资人",
+    "科技行业从业者"
+  ],
+  "intent": [
+    "品牌公关",
+    "人才招募",
+    "行业观点输出"
+  ],
+  "tone": [
+    "坦诚",
+    "冷静",
+    "极客感"
+  ],
+  "primary_question": "AI Coding如何从专业工具演变为普通人的大众创作方式，且初创公司如何在该赛道建立护城河？",
+  "thesis_type": "愿景驱动型+方法论复盘型",
+  "thesis_sentence": "AI Coding将解锁新的大众创作浪潮，YouWare通过构建‘氛围编程者社区’来激发创作动机，并利用‘单token价值最大化’逻辑站稳AI原生产品的技术冲浪板。",
+  "structure_pattern": "时序回顾+专题深度问答",
+  "section_functions": [
+    "背景介绍：交代创始人履历与公司高估值背景",
+    "核心理念：定义‘Vibe Coder’与‘氛围编程社区’",
+    "认知迭代：反思早期‘雕花’误区，转向最大化利用智能红利",
+    "运营抉择：复盘病毒式流量处理，确立社区调性底线",
+    "商业前瞻：论述Token成本分担与广告驱动的激励机制",
+    "未来推演：探讨Agent网络中的‘调度’与‘被调度’关系",
+    "人格特写：从职场路径到创业哲学（好玩与足够大）"
+  ],
+  "argument_moves": [
+    "借用经典模型：引入福格行为模型（动机、能力、触发器）解释产品逻辑",
+    "历史经验对比：将AI Coding类比为智能手机摄影对单反的普及",
+    "自我纠错：坦诚分享早期产品尝试失败的细节及‘悟了’的过程",
+    "定义新标准：提出‘Value per token’作为衡量AI产品价值的新尺度",
+    "差异化定位：通过与Canva、Cursor的对比强调UGC社区的核心竞争力"
+  ],
+  "core_argument": "AI编程的本质是信息呈现的灵活方式，其爆发点在于构建让普通人产生分享欲和社交反馈的社区环境，而非单纯提升效率的工具。",
+  "key_points": [
+    "未来的代码将不再是写出来的，而是生成后‘挑’出来的",
+    "AI产品应最大化利用智能红利，避免通过过多结构化限制模型上限",
+    "社区氛围由早期的奖励模型和内容选择决定，甚至具有环境暗示作用",
+    "未来Agent生态将演变为调度型Agent与排名极高的‘被调度型’Agent并存",
+    "产品经理应具备‘以终为始’的能力，基于未来技术成熟度推演当下行动"
+  ],
+  "opening_pattern": "人物侧写+标签堆砌（通过高估值与多段顶尖大厂履历制造期待感）",
+  "ending_pattern": "哲学升华（将创业比作街拍，强调非对抗性的创作心态）",
+  "evidence_types": [
+    "创始人职业生涯案例（一加、字节、月之暗面）",
+    "YouWare内部运营数据（项目数、访问量变化）",
+    "行业趋势类比（摄影技术演变史、Instagram发展史）",
+    "底层技术演进（MCP协议、A2A协议）"
+  ],
+  "evidence_specificity_score": 85,
+  "data_density_score": 70,
+  "case_density_score": 90,
+  "quote_density_score": 88,
+  "narrative_distance": "近距离观察",
+  "stance_strength": "坚定",
+  "sentence_rhythm": "长短句交错，对话感强，含有大量行业黑话与金句",
+  "abstraction_level": "中高（涉及大量产品观与哲学抽象）",
+  "transferable_moves": [
+    "利用‘单token价值’（Value per token）作为AI创业决策工具",
+    "建立‘创始人说明书’来优化组织内部沟通效率",
+    "通过‘滤镜式功能’降低用户的创作羞耻感与门槛",
+    "在流量爆发期通过忍痛割舍垃圾流量来锁定社区长期基因"
+  ],
+  "anti_patterns": [
+    "早期过度‘雕花’（在模型能力提升期投入过多精力做死板的业务逻辑）",
+    "逆浪而行（做那些模型能力提升后会显得多余的结构化工作）",
+    "效率陷阱（只关注工具的生产效率而忽视了作为人的创作趣味）"
+  ],
+  "notable_phrases": [
+    "Vibe coder's community",
+    "Value per token",
+    "调度型Agent与被调度型Agent",
+    "如果你今天没做这件事，我们会错过某个大机会",
+    "理性是对感性的说服"
+  ],
+  "title_score": 85,
+  "opening_score": 82,
+  "argument_score": 90,
+  "evidence_score": 85,
+  "structure_score": 88,
+  "style_score": 92,
+  "publishability_score": 95,
+  "quality_score": 91,
+  "reference_value_score": 94,
+  "is_activity_notice": false,
+  "is_low_value": false,
+  "is_advertorial": true,
+  "advertorial_type": "executive_pr",
+  "advertorial_confidence": 85,
+  "promotional_intensity_score": 65,
+  "editorial_independence_score": 75,
+  "brand_exposure_level": "高",
+  "source_transparency": "清晰",
+  "advertorial_signals": [
+    "晚点AI创业访谈系列专题，带有明显扶持与传播属性",
+    "文中多次提及融资额度、估值及投资方（顶级VC）",
+    "创始人明确表示接受采访的目的是‘招更多各方面厉害的人’",
+    "详细展示了产品slogan演变、激励机制设计等商业策略"
+  ],
+  "summary_200": "本文是《晚点 LatePost》对话 YouWare 创始人明超平的深度专访。明超平作为前一加、字节及月之暗面资深产品经理，分享了其在 AI Coding 社区赛道的创业逻辑。他提出‘氛围编程’概念，认为 AI Coding 是普通人的新创作方式。文章深度复盘了产品迭代中从‘追求结构’到‘相信智能’的认知转变，并探讨了未来 Agent 调度网络及个人‘好玩且足够大’的创业哲学，具有极高的方法论价值。",
+  "summary_500": "这篇深度访谈记录了 YouWare 创始人明超平的创业历程与 AI 产品观。明超平凭借在一加、字节剪映及月之暗面的多元产品经验，将 YouWare 定位为‘氛围编程者社区’。他认为，AI 产品的核心挑战在于激发普通人的创作动机，而不仅仅是提供能力。在技术哲学上，他提出了‘单 token 价值’（Value per token）的概念，主张 AI 原生产品应顺应大模型能力提升的浪潮，避免过度结构化导致的‘效率僵化’。\n\n访谈详尽描述了 YouWare 经历的数次认知迭代，包括放弃早期‘雕花’式开发，转向依靠 Agent 生态实现简单解法。在社区运营方面，明超平复盘了公司面对百万级‘吃瓜流量’时，为了维护社区长远调性而主动放弃流量的决策过程。此外，他前瞻性地预判了未来 Agent 生态中‘调度’与‘被调度’的关系，认为未来的搜索排名可能演变为 Agent Rank。最后，他强调创业是一场‘好玩且足够大’的复杂创作，展现了新一代 AI 创业者极强的野心与 egos 较小的实干特质。全文融合了互联网产品经理的实证精神与 AI 时代的思辨思考，是 AI 应用层创业的典型样本。"
+}

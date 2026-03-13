@@ -1,0 +1,126 @@
+{
+  "id": "ef3263b47b9b",
+  "year": "2023",
+  "date": "2023-06-30",
+  "title": "晚点视频丨字节跳动：中国互联网最极致的 “人才工厂”",
+  "relative_path": "2023/2023-06-30_晚点视频丨字节跳动：中国互联网最极致的 “人才工厂”.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\latepost\\raw_materials\\2023\\2023-06-30_晚点视频丨字节跳动：中国互联网最极致的 “人才工厂”.txt",
+  "char_count": 749,
+  "content_type": "栏目上线通知",
+  "entities": [
+    "字节跳动",
+    "LatePost",
+    "晚点",
+    "HR体系"
+  ],
+  "industry": [
+    "互联网",
+    "传媒",
+    "人力资源"
+  ],
+  "topic": [
+    "企业文化",
+    "内容创业",
+    "招聘机制",
+    "媒体转型"
+  ],
+  "genre": "新闻通稿",
+  "style": [
+    "简洁",
+    "宣传性",
+    "报道风格"
+  ],
+  "audience": [
+    "互联网从业者",
+    "职场人士",
+    "晚点读者",
+    "媒体同行"
+  ],
+  "intent": [
+    "品牌推广",
+    "用户引流",
+    "内容预告"
+  ],
+  "tone": [
+    "专业",
+    "期待",
+    "诚恳"
+  ],
+  "primary_question": "晚点视频如何通过多媒体形式重新演绎字节跳动的商业故事并实现品牌升级？",
+  "thesis_type": "媒体转型与产品发布",
+  "thesis_sentence": "晚点推出视频栏目，通过影像、动画与声音等丰富载体赋予深度商业报道新的生命力，实现从文字阅读到视觉体验的迁移。",
+  "structure_pattern": "总-分-总（公告-内容推介-行动引导）",
+  "section_functions": [
+    "宣布新栏目上线",
+    "回顾深度报道背景并引出视频主题",
+    "阐述视频载体的独特价值",
+    "多平台引流及互动征集"
+  ],
+  "argument_moves": [
+    "建立新旧关联（引用过往深度报道）",
+    "阐述差异化价值（视频vs文字的感官丰富性）",
+    "发起行动号召（CTA：关注、搜索、留言）"
+  ],
+  "core_argument": "深度商业叙事不仅需要文字的严谨，更需要视频载体来提升复杂世界的呈现力和感受力。",
+  "key_points": [
+    "晚点视频栏目正式上线",
+    "首期视频复用字节跳动HR体系的爆款选题",
+    "强调视频在呈现复杂商业逻辑中的优势",
+    "引导读者完成向视频观众的身份转化"
+  ],
+  "opening_pattern": "直接宣布式",
+  "ending_pattern": "行动引导式",
+  "evidence_types": [
+    "媒体自述",
+    "过往报道引用"
+  ],
+  "evidence_specificity_score": 40,
+  "data_density_score": 20,
+  "case_density_score": 30,
+  "quote_density_score": 10,
+  "narrative_distance": "第一人称",
+  "stance_strength": "中等",
+  "sentence_rhythm": "平稳短促",
+  "abstraction_level": "中等",
+  "transferable_moves": [
+    "利用存量深度内容进行多媒介二次开发",
+    "阐述媒介转型理由时强调‘生命力’与‘感受力’的感性诉求",
+    "全渠道矩阵式引流的标准话术"
+  ],
+  "anti_patterns": [
+    "信息量不足，过度依赖视频外部链接",
+    "缺乏对视频核心结论的文字摘要，导致纯通知感过强"
+  ],
+  "notable_phrases": [
+    "最极致的人才工厂",
+    "不仅值得被读到，更值得被看到",
+    "让被讲过一遍的故事有了新的生命力"
+  ],
+  "title_score": 85,
+  "opening_score": 75,
+  "argument_score": 40,
+  "evidence_score": 30,
+  "structure_score": 80,
+  "style_score": 75,
+  "publishability_score": 70,
+  "quality_score": 45,
+  "reference_value_score": 40,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "is_advertorial": true,
+  "advertorial_type": "event_promotion",
+  "advertorial_confidence": 95,
+  "promotional_intensity_score": 90,
+  "editorial_independence_score": 30,
+  "brand_exposure_level": "高",
+  "source_transparency": "清晰",
+  "advertorial_signals": [
+    "晚点视频栏目正式上线",
+    "话不多说，点击下方，看视频",
+    "欢迎大家关注我们的微信视频号",
+    "在各大平台搜索...找到并关注我们"
+  ],
+  "summary_200": "晚点 LatePost 宣布其“晚点视频”栏目正式上线。首期视频重制了其 2 月发布的深度文章《还原字节跳动 HR 体系》，旨在通过影像、动画和声音更直观地呈现字节跳动作为“人才工厂”的建立与运转机制。文章强调了视频载体在呈现复杂商业故事时的独特价值，指出视频能赋予旧故事新的生命力，并引导读者在全平台搜索关注晚点，实现从读者向观众的媒体接触习惯转变。",
+  "summary_500": "2023 年 6 月 30 日，知名商业媒体《晚点 LatePost》发布公告，宣布其全新的视频栏目“晚点视频”正式上线。此次栏目创办的核心理念是认为优秀的商业故事不仅应被阅读，更值得被视觉化呈现。首期视频内容选材于该媒体同年 2 月引发广泛讨论的深度报道《还原字节跳动 HR 体系：中国互联网最极致人才工厂的起落》。文章指出，视频版将通过影像、动画、声音等更丰富的维度，清晰直观地拆解字节跳动这一“人才工厂”的建立逻辑、运转模式及其中的关键人物。在行业大背景下，视频还探讨了“降本增效”趋势对字节跳动体系的影响。这篇推文的本质是一则产品发布与渠道引流通知。文中阐述了媒体从文字向视频转型的思考：利用视频多感官的特性赋予报道“新的生命力”。文末提供了明确的行动指引（CTA），包括引导点击视频号、全网搜索“晚点 LatePost”并关注，以及向读者征集视频题材建议。对于商业内容创作者而言，本文展示了深度媒体如何进行存量内容（旧文）的增量开发（视频化），以及在社交媒体上进行跨平台引流的标准操作。由于该文主要是通告性质，其实际信息密度和独立论证价值有限。",
+  "analysis_schema_version": 3
+}

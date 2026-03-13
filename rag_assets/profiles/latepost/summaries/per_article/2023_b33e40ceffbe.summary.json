@@ -1,0 +1,124 @@
+{
+  "id": "b33e40ceffbe",
+  "year": "2023",
+  "date": "2023-07-20",
+  "title": "晚点视频丨揭秘 SHEIN：中国最低调的独角兽公司",
+  "relative_path": "2023/2023-07-20_晚点视频丨揭秘 SHEIN：中国最低调的独角兽公司.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\latepost\\raw_materials\\2023\\2023-07-20_晚点视频丨揭秘 SHEIN：中国最低调的独角兽公司.txt",
+  "char_count": 749,
+  "content_type": "视频预告",
+  "entities": [
+    "SHEIN",
+    "字节跳动",
+    "蚂蚁集团",
+    "SpaceX",
+    "ZARA",
+    "晚点 LatePost"
+  ],
+  "industry": [
+    "跨境电商",
+    "快时尚",
+    "新媒体"
+  ],
+  "topic": [
+    "独角兽企业",
+    "企业研究",
+    "媒体转型"
+  ],
+  "genre": "推广引流",
+  "style": [
+    "精炼",
+    "悬念感"
+  ],
+  "audience": [
+    "投资者",
+    "电商从业者",
+    "商业内容消费者"
+  ],
+  "intent": [
+    "流量引导",
+    "渠道订阅",
+    "品牌宣传"
+  ],
+  "tone": [
+    "专业",
+    "好奇诱导"
+  ],
+  "primary_question": "全球估值排名第四的神秘中国公司 SHEIN 究竟是如何崛起的？",
+  "thesis_type": "描述型",
+  "thesis_sentence": "晚点将通过视频形式，深度揭秘 SHEIN 这家低调、神秘且估值超千亿美元的中国跨境电商独角兽的崛起路径。",
+  "structure_pattern": "认知反差-价值锚定-行动导引",
+  "section_functions": [
+    "利用巨头排名建立参照系",
+    "揭示核心主角及其行业地位",
+    "交代报道背景与形式转化",
+    "多平台订阅引导与互动号召"
+  ],
+  "argument_moves": [
+    "建立权威参照（对比字节、SpaceX）",
+    "制造认知盲区（大部分人没听说过）",
+    "提供证据支持（估值数据、行业排名）",
+    "媒介价值宣示（商业故事值得被看到）"
+  ],
+  "core_argument": "SHEIN 是一家被严重低估知名度但极具商业影响力的全球化公司，通过视频媒介能更立体地呈现其复杂的商业逻辑。",
+  "key_points": [
+    "SHEIN 是全球估值最高的三大独角兽之后的第四位",
+    "SHEIN 海外销售额直逼 ZARA，估值一度超千亿美金",
+    "晚点通过视频化手段对复杂商业故事进行重塑和呈现"
+  ],
+  "opening_pattern": "排比对比式（通过列举已知巨头引出未知主角）",
+  "ending_pattern": "价值申明式（阐述视频化载体的意义并引导关注）",
+  "evidence_types": [
+    "行业排名数据",
+    "估值数据",
+    "历史报道记录"
+  ],
+  "evidence_specificity_score": 60,
+  "data_density_score": 40,
+  "case_density_score": 30,
+  "quote_density_score": 10,
+  "narrative_distance": "第三人称旁观",
+  "stance_strength": "坚定",
+  "sentence_rhythm": "短促有力",
+  "abstraction_level": "中等",
+  "transferable_moves": [
+    "利用知名实体作为参照物快速定位未知实体的地位",
+    "通过‘认知缺口’激发读者的求知欲",
+    "将内容价值与媒介形式的升级进行关联说服"
+  ],
+  "anti_patterns": [
+    "信息量过低（全文仅为导流，无实质分析数据）",
+    "结构过于模板化（典型的推文导流结构）"
+  ],
+  "notable_phrases": [
+    "中国最低调的独角兽公司",
+    "用更多的耐心，换更大的野心",
+    "让被讲过一遍的故事有了新的生命力"
+  ],
+  "title_score": 85,
+  "opening_score": 80,
+  "argument_score": 40,
+  "evidence_score": 40,
+  "structure_score": 70,
+  "style_score": 75,
+  "publishability_score": 50,
+  "quality_score": 45,
+  "reference_value_score": 40,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "is_advertorial": true,
+  "advertorial_type": "event_promotion",
+  "advertorial_confidence": 100,
+  "promotional_intensity_score": 90,
+  "editorial_independence_score": 40,
+  "brand_exposure_level": "高",
+  "source_transparency": "清晰",
+  "advertorial_signals": [
+    "点击下方观看视频",
+    "欢迎关注我们的微信视频号",
+    "在各大平台搜索晚点 LatePost"
+  ],
+  "summary_200": "本文是‘晚点 LatePost’为其 SHEIN 专题视频发布的引流推文。文章通过对比字节跳动、SpaceX 等顶尖独角兽，引出低调的跨境电商巨头 SHEIN，强调其千亿美金估值与行业地位。核心目的是引导读者从文字阅读转向视频号订阅。虽然提供了基础的行业坐标，但本质属于渠道推广性质的短讯，信息密度较低，主要价值在于展示媒体机构的内容多态化分发策略。",
+  "summary_500": "这篇推文是《晚点 LatePost》针对其原创视频节目《揭秘 SHEIN》制作的预告与导流内容。文章起笔极具冲击力，将 SHEIN 与字节跳动、蚂蚁集团、SpaceX 等全球顶级独角兽并列，利用读者对这些巨头的认知与对 SHEIN 相对陌生的‘认知反差’，成功制造了阅读悬念。文章随后列举了 SHEIN 在海外女装市场的统治力（销售额直逼 ZARA）及其曾达千亿美元的估值，为其‘中国最低调独角兽’的标签提供了事实支撑。在写作机制上，本文采用了典型的‘挂钩-对比-呼吁’结构，旨在将现有的文字读者转化为视频观众。文中明确提到，晚点自 2020 年起便持续追踪 SHEIN，此次视频化尝试是为了通过影像、动画、声音等更丰富的感官维度来呈现复杂的商业世界。尽管文章本身不包含深度的商业分析细节，但其作为媒体品牌自我营销和多媒介分发的案例，展现了如何利用头部公司 IP 进行渠道引流的技巧。对于商业分析师而言，该文的参考价值主要在于观察媒体如何包装和定义 SHEIN 这一研究对象，而非获取 SHEIN 本身的底层数据。",
+  "analysis_schema_version": 3
+}

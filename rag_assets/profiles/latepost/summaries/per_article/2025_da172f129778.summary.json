@@ -1,0 +1,104 @@
+{
+  "analysis_schema_version": 3,
+  "id": "da172f129778",
+  "year": "2025",
+  "date": "2025-12-25",
+  "title": "大模型公司的烧钱账",
+  "relative_path": "2025/2025-12-25_大模型公司的烧钱账.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\latepost\\raw_materials\\2025\\2025-12-25_大模型公司的烧钱账.txt",
+  "char_count": 339,
+  "content_type": "行业简讯",
+  "entities": [
+    "大模型公司"
+  ],
+  "industry": [
+    "人工智能",
+    "科技金融"
+  ],
+  "topic": [
+    "大模型",
+    "财务分析",
+    "成本控制"
+  ],
+  "genre": "深度报道（仅标题可见）",
+  "style": [
+    "简洁"
+  ],
+  "audience": [
+    "投资者",
+    "科技从业者",
+    "商业分析师"
+  ],
+  "intent": [
+    "信息发布"
+  ],
+  "tone": [
+    "严肃"
+  ],
+  "primary_question": "大模型公司在发展过程中的财务消耗和成本结构是怎样的？",
+  "thesis_type": "解释性论证",
+  "thesis_sentence": "由于正文缺失，推测该文旨在揭示大模型行业巨大的资金投入现状及其背后的财务账目。",
+  "structure_pattern": "总分式（推测）",
+  "section_functions": [
+    "提出大模型烧钱的背景",
+    "分析具体成本构成",
+    "探讨资金可持续性"
+  ],
+  "argument_moves": [
+    "提出核心问题",
+    "引用（推测存在的）财务数据",
+    "得出行业现状结论"
+  ],
+  "core_argument": "大模型行业具有极高的资金门槛和持续的投入需求。",
+  "key_points": [
+    "算力投入成本",
+    "人才激励成本",
+    "数据获取与标注成本",
+    "商业化变现的滞后性"
+  ],
+  "opening_pattern": "问题引入式",
+  "ending_pattern": "趋势预测式",
+  "evidence_types": [
+    "财务数据",
+    "行业观察"
+  ],
+  "evidence_specificity_score": 0,
+  "data_density_score": 0,
+  "case_density_score": 0,
+  "quote_density_score": 0,
+  "narrative_distance": "远距离",
+  "stance_strength": "中立",
+  "sentence_rhythm": "平稳",
+  "abstraction_level": "中等",
+  "transferable_moves": [
+    "从财务视角切入技术行业分析"
+  ],
+  "anti_patterns": [
+    "正文完全缺失",
+    "内容承载量极低"
+  ],
+  "notable_phrases": [
+    "烧钱账"
+  ],
+  "title_score": 85,
+  "opening_score": 0,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 0,
+  "style_score": 0,
+  "publishability_score": 10,
+  "quality_score": 5,
+  "reference_value_score": 5,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "is_advertorial": false,
+  "advertorial_type": "editorial",
+  "advertorial_confidence": 0,
+  "promotional_intensity_score": 0,
+  "editorial_independence_score": 100,
+  "brand_exposure_level": "低",
+  "source_transparency": "清晰",
+  "advertorial_signals": [],
+  "summary_200": "该内容仅包含标题“大模型公司的烧钱账”及发布元数据。标题具有较强的吸引力，预示着文章将深度剖析人工智能大模型领域的成本支出与财务现状。然而，由于正文内容完全缺失（仅显示图片搜索模式触发），目前无法对具体事实、论点或数据进行结构化分析。该条目目前仅作为待补全的线索处理。",
+  "summary_500": "本分析对象仅为一个包含标题“大模型公司的烧钱账”的网页存根。从标题判断，该文属于科技商业领域的成本分析类报道，重点关注AI大模型企业的财务压力、资金流向以及商业模式的可持续性。通常此类文章会涉及算力成本（GPU采购/云服务租赁）、研发投入、数据获取费用以及人才抢夺成本等核心议题。但由于提供的文本中除了标题、日期和链接外，正文内容缺失，仅提示触发了图片搜索模式，因此无法获取到具体的论据、数据支撑或核心观点。在当前的结构化分析中，除标题吸引力评分较高外，其余关于论证机制、证据密度、叙事节奏等维度均因信息不足而标记为极低分或不可用。该内容目前标记为“低价值”，原因在于其作为信息载体的功能失效，不具备独立研究或RAG参考价值，需获取正文后重新评估。"
+}

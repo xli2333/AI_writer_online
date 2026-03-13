@@ -1,0 +1,18 @@
+{
+  "profile": "latepost",
+  "source_dir": "C:\\Users\\LXG\\AI_writer\\晚点LatePost",
+  "target_raw_dir": "C:\\Users\\LXG\\AI_writer\\style_corpora\\latepost\\raw_materials",
+  "scanned_article_dirs": 1136,
+  "imported_articles": 1134,
+  "missing_content_count": 2,
+  "empty_content_count": 0,
+  "ignored_image_files": 10529,
+  "ignored_image_extensions": {
+    ".jpg": 1899,
+    ".png": 8513,
+    ".gif": 117
+  },
+  "workflow_assets_dir": "C:\\Users\\LXG\\AI_writer\\rag_assets\\profiles\\latepost\\workflows",
+  "benchmark_dir": "C:\\Users\\LXG\\AI_writer\\rag_assets\\profiles\\latepost\\evals\\benchmark_tasks",
+  "generated_at": "2026-03-09T03:57:59.587Z"
+}

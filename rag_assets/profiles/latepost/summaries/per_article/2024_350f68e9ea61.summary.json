@@ -1,0 +1,124 @@
+{
+  "analysis_schema_version": 3,
+  "id": "350f68e9ea61",
+  "year": "2024",
+  "date": "2024-01-03",
+  "title": "《晚点》持续招人",
+  "relative_path": "2024/2024-01-03_《晚点》持续招人.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\latepost\\raw_materials\\2024\\2024-01-03_《晚点》持续招人.txt",
+  "char_count": 3441,
+  "content_type": "招聘公告",
+  "entities": [
+    "晚点 LatePost",
+    "北京",
+    "上海"
+  ],
+  "industry": [
+    "传媒/媒体",
+    "互联网"
+  ],
+  "topic": [
+    "人才招募",
+    "媒体运营",
+    "内容创作"
+  ],
+  "genre": "告示",
+  "style": [
+    "平实",
+    "专业",
+    "务实"
+  ],
+  "audience": [
+    "媒体从业者",
+    "内容创作者",
+    "商务人员",
+    "高校毕业生"
+  ],
+  "intent": [
+    "人才招聘",
+    "品牌展示"
+  ],
+  "tone": [
+    "诚恳",
+    "职业"
+  ],
+  "primary_question": "《晚点 LatePost》目前有哪些岗位空缺，以及他们对理想候选人的要求是什么？",
+  "thesis_type": "信息告知",
+  "thesis_sentence": "《晚点 LatePost》面向全行业寻找具备独立思考能力、解决问题决心及专业技能的伙伴，提供具有竞争力的薪资与自由的创作空间。",
+  "structure_pattern": "模块化列表结构",
+  "section_functions": [
+    "品牌价值观导入：强调独立思考与作品自豪感",
+    "视频制作类岗位：详细罗列视频作者、分镜及动效设计需求",
+    "运营与设计类岗位：涵盖新媒体运营及视觉设计",
+    "商务与策划类岗位：明确商务经理、编辑及执行职责",
+    "采编类岗位：细分行业报道作者及新闻编辑需求",
+    "投递指引：提供简历投递邮箱及附件要求"
+  ],
+  "argument_moves": [
+    "建立品牌认同：通过“朋友与同行者”定位拉近距离",
+    "界定核心品质：强调独立思考而非单纯工作年限",
+    "展示资源优势：承诺行业竞争力薪资及创作自由",
+    "精细化岗位职责：对每个细分领域提出具体可操作的要求"
+  ],
+  "core_argument": "通过对人才品质的高度筛选和对专业岗位的精细拆解，吸引符合其独立思考价值观的高素质人才加入。",
+  "key_points": [
+    "核心看重独立思考和解决开放问题的决心",
+    "全方位布局视频内容，对视觉传达和审美有高要求",
+    "报道领域细分至汽车、消费、科技及商业人物",
+    "商务岗位强调对内容的理解力和行业资源积累"
+  ],
+  "opening_pattern": "直接切入，以品牌愿景吸引志同道合者",
+  "ending_pattern": "行动导向，清晰告知投递路径",
+  "evidence_types": [
+    "岗位职责描述",
+    "任职资格要求",
+    "工作地点说明"
+  ],
+  "evidence_specificity_score": 85,
+  "data_density_score": 20,
+  "case_density_score": 10,
+  "quote_density_score": 0,
+  "narrative_distance": "中等",
+  "stance_strength": "中等",
+  "sentence_rhythm": "平稳且务实",
+  "abstraction_level": "低",
+  "transferable_moves": [
+    "岗位期望中“加分项”的设置方式",
+    "将品牌价值观融入招聘文案开头的写法",
+    "根据职能细分各领域的垂直招聘逻辑"
+  ],
+  "anti_patterns": [
+    "薪资描述较为笼统（仅称“最有竞争力”）",
+    "岗位数量较多导致信息堆砌感较强"
+  ],
+  "notable_phrases": [
+    "对自己工作与作品的骄傲",
+    "充足的自由与空间来写作真正重要的选题",
+    "追踪消费品牌的诞生与消亡"
+  ],
+  "title_score": 75,
+  "opening_score": 80,
+  "argument_score": 40,
+  "evidence_score": 60,
+  "structure_score": 90,
+  "style_score": 70,
+  "publishability_score": 60,
+  "quality_score": 50,
+  "reference_value_score": 45,
+  "is_activity_notice": true,
+  "is_low_value": true,
+  "is_advertorial": true,
+  "advertorial_type": "event_promotion",
+  "advertorial_confidence": 90,
+  "promotional_intensity_score": 85,
+  "editorial_independence_score": 20,
+  "brand_exposure_level": "高",
+  "source_transparency": "清晰",
+  "advertorial_signals": [
+    "明确的岗位招聘信息",
+    "对品牌福利和行业地位的自我背书",
+    "直接呼吁投递简历的转化导向"
+  ],
+  "summary_200": "该文章是《晚点 LatePost》发布的长期招聘公告。文案系统梳理了包括视频制作、平面/动效设计、多平台运营、商务拓展及深度采编在内的数十个岗位。其核心选人标准强调独立思考和作品自豪感，而非单纯的新闻背景。文章通过清晰的职责划分和期望描述，展示了其作为深度报道媒体对专业主义的追求。由于是纯功能性的招聘通知，其文学写作和深度分析价值有限，主要用于人才引流和品牌雇主形象展示。",
+  "summary_500": "本文为深度商业媒体《晚点 LatePost》的2024年初招聘合集。文章开篇通过对往期报道的回顾，定义了“同行者”的身份认同，并明确提出了核心人才观：看重独立思考、解决问题的决心以及对作品的骄傲感。在具体岗位设置上，体现了该媒体向视频化、矩阵化转型的趋势，重点招募视频内容作者、分镜设计师及小红书运营等职位。在采编岗位方面，进一步细分了互联网、消费、汽车、科技及商业故事等垂直赛道，对求职者的行业理解力和逻辑学习能力提出了具体要求。商务侧则更看重对内容价值的理解及行业资源的变现能力。文案整体风格平实、职业，具有典型的媒体招聘特色。作为招聘信息，其数据密度和论证深度较低，主要参考价值在于观察该媒体的业务布局方向（如强化视频和新媒体运营）以及其对人才能力的画像设定。对于分析媒体行业的人才需求趋势及品牌雇主公关策略具有一定的参考意义。"
+}

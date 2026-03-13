@@ -1,0 +1,127 @@
+{
+  "analysis_schema_version": 3,
+  "id": "5eb28b1d37ee",
+  "year": "2023",
+  "date": "2023-12-26",
+  "title": "晚点独家｜问界 2024 年的销量目标为 60 万辆",
+  "relative_path": "2023/2023-12-26_晚点独家｜问界 2024 年的销量目标为 60 万辆.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\latepost\\raw_materials\\2023\\2023-12-26_晚点独家｜问界 2024 年的销量目标为 60 万辆.txt",
+  "char_count": 1708,
+  "content_type": "商业快讯",
+  "entities": [
+    "华为",
+    "赛力斯",
+    "AITO 问界",
+    "余承东",
+    "何利扬",
+    "王连军",
+    "长安汽车"
+  ],
+  "industry": [
+    "新能源汽车",
+    "智能硬件",
+    "制造业"
+  ],
+  "topic": [
+    "销量目标",
+    "企业战略",
+    "供应链管理",
+    "财务表现"
+  ],
+  "genre": "行业报道",
+  "style": [
+    "客观",
+    "简洁",
+    "事实导向"
+  ],
+  "audience": [
+    "投资者",
+    "汽车行业从业者",
+    "商业分析师",
+    "竞争对手"
+  ],
+  "intent": [
+    "披露独家消息",
+    "行业观察"
+  ],
+  "tone": [
+    "专业",
+    "理智"
+  ],
+  "primary_question": "问界品牌在2024年的销售野心及目前的经营底色是什么？",
+  "thesis_type": "事实披露型",
+  "thesis_sentence": "问界已向供应链传达2024年60万辆的销量目标，并计划通过扩充产品线及提升产能来实现其长期百万产销愿景。",
+  "structure_pattern": "核心事实-官方回应-历史数据-现状分析-战略背景",
+  "section_functions": [
+    "披露核心销量目标与新车计划",
+    "呈现华为与赛力斯官方反馈",
+    "对比历史交付表现与当前大定数据",
+    "揭示赛力斯财务亏损状况",
+    "解释华为智选车业务模式与架构变动"
+  ],
+  "argument_moves": [
+    "通过知情人士信源建立核心事实",
+    "引用官方财报数据揭露经营压力",
+    "对比预期目标与历史交付量的差距",
+    "梳理公司公告阐明合作关系的稳定性"
+  ],
+  "core_argument": "虽然问界设定了极具挑战性的销量目标，但其面临着历史交付基数低、合作伙伴持续亏损以及业务架构重组等多重变数。",
+  "key_points": [
+    "2024年销量目标为60万辆，已传达至供应链",
+    "明年将形成由M5、M7、M8、M9组成的四款车型矩阵",
+    "赛力斯产能已达30秒下线一辆，但财务累计亏损严重",
+    "华为智选车业务已升级为“鸿蒙智行”，并涉及车BU分拆重组"
+  ],
+  "opening_pattern": "直奔主题（独家信源披露核心数据）",
+  "ending_pattern": "背景补充（交代合作协议与架构调整现状）",
+  "evidence_types": [
+    "独家信源消息",
+    "官方访谈",
+    "历史销售统计",
+    "公司财务报表",
+    "企业公开公告"
+  ],
+  "evidence_specificity_score": 92,
+  "data_density_score": 88,
+  "case_density_score": 40,
+  "quote_density_score": 75,
+  "narrative_distance": "中立观察",
+  "stance_strength": "中立",
+  "sentence_rhythm": "短促、信息量密集",
+  "abstraction_level": "具象事实",
+  "transferable_moves": [
+    "使用‘知情人士’信源披露行业前瞻数据",
+    "在利好消息后紧跟财务/交付数据进行冷平衡",
+    "对复杂商业模式（如三种模式）进行清晰的分类定义"
+  ],
+  "anti_patterns": [
+    "避免单一引用品牌公关稿件",
+    "拒绝空洞描述，用具体月度数据和单价支撑"
+  ],
+  "notable_phrases": [
+    "30秒下线一辆新车",
+    "冲高回落",
+    "鸿蒙智行"
+  ],
+  "title_score": 90,
+  "opening_score": 95,
+  "argument_score": 85,
+  "evidence_score": 90,
+  "structure_score": 85,
+  "style_score": 88,
+  "publishability_score": 95,
+  "quality_score": 92,
+  "reference_value_score": 95,
+  "is_activity_notice": false,
+  "is_low_value": false,
+  "is_advertorial": false,
+  "advertorial_type": "editorial",
+  "advertorial_confidence": 10,
+  "promotional_intensity_score": 25,
+  "editorial_independence_score": 95,
+  "brand_exposure_level": "高",
+  "source_transparency": "清晰",
+  "advertorial_signals": [],
+  "summary_200": "《晚点 Auto》独家披露 AITO 问界 2024 年销量目标为 60 万辆。为达成目标，问界明年将拥有至少 4 款车型在售，包括已发布的 M9 和计划发布的 M8。尽管 M7 近期表现强劲、产能大幅提升，但文章也指出了赛力斯面临的经营压力，其 2023 年三季度累计亏损约 73.1 亿元。此外，报道梳理了华为智选车升级为“鸿蒙智行”后的业务版图，以及车 BU 资产拆分对赛力斯合作关系的影响。",
+  "summary_500": "本文为《晚点 Auto》针对 AITO 问界 2024 年销量计划的深度独家报道。核心信息指出，问界已向上游传达 60 万辆的全年销售目标，这相较于其 2023 年前 11 个月仅 6.8 万辆的交付量具有极大的跃升。文章从产品矩阵、产能现状、财务经营及华为业务模式四个维度进行了详细剖析。产品上，明年问界将拥有 M5、M7、M8、M9 四款车型；产能方面，赛力斯宣称已可实现每 30 秒下线一辆新车。财务上，报道直言不讳地指出了赛力斯当前的盈利困境，披露其 2023 年前三季度累计亏损达 73.1 亿元。针对华为车业务的变动，文章厘清了三种合作模式的差异，并强调了“鸿蒙智行”作为最深度合作模式的地位。在华为筹划车 BU 分拆、引入长安汽车投资的背景下，赛力斯虽表达了积极论证投资的意向，但也强调了现有合作关系的稳定。全文通过多维事实与数据对比，勾勒出一个在野心勃勃的目标与沉重经营成本之间博弈的商业案例，不仅具有重磅消息价值，也提供了深入的行业洞察。"
+}

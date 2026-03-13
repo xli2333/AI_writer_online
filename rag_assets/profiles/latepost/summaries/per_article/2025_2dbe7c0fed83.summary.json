@@ -1,0 +1,113 @@
+{
+  "analysis_schema_version": 3,
+  "id": "2dbe7c0fed83",
+  "year": "2025",
+  "date": "2025-07-05",
+  "title": "靠排行榜来挑大学，靠谱吗？丨晚点小数据",
+  "relative_path": "2025/2025-07-05_靠排行榜来挑大学，靠谱吗？丨晚点小数据.txt",
+  "full_text_path": "C:\\Users\\LXG\\AI_writer\\style_corpora\\latepost\\raw_materials\\2025\\2025-07-05_靠排行榜来挑大学，靠谱吗？丨晚点小数据.txt",
+  "char_count": 349,
+  "content_type": "数据观察",
+  "entities": [
+    "晚点",
+    "晚点小数据"
+  ],
+  "industry": [
+    "教育培训",
+    "媒体"
+  ],
+  "topic": [
+    "大学排行榜",
+    "高考志愿",
+    "数据可靠性"
+  ],
+  "genre": "分析报告",
+  "style": [
+    "数据驱动",
+    "理性",
+    "简洁"
+  ],
+  "audience": [
+    "学生",
+    "家长",
+    "教育政策研究者"
+  ],
+  "intent": [
+    "科普",
+    "辟谣",
+    "决策辅助"
+  ],
+  "tone": [
+    "中立",
+    "批判性"
+  ],
+  "primary_question": "大学排行榜在多大程度上能反映大学真实水平以及如何正确使用这些榜单？",
+  "thesis_type": "批判分析型",
+  "thesis_sentence": "单一的大学排行榜受限于其特定的指标权重，不能作为择校的唯一靠谱标准。",
+  "structure_pattern": "提出问题-多维度拆解-结论",
+  "section_functions": [
+    "引言：通过择校热点引入排行榜话题",
+    "分析：拆解各大排行榜的指标构成",
+    "对比：揭示不同榜单结果的差异及原因",
+    "总结：提出理性看待榜单的建议"
+  ],
+  "argument_moves": [
+    "提出普适性的择校焦虑",
+    "解构排行榜的底层算法",
+    "对比多源数据中的矛盾点",
+    "总结数据背后的主观偏差"
+  ],
+  "core_argument": "排行榜是特定评价指标下的产物，存在显著的视角局限性，择校需综合多维度信息。",
+  "key_points": [
+    "排行榜无法涵盖大学的所有软实力",
+    "不同机构的评价指标和权重差异巨大",
+    "商业性质的排行榜可能存在利益相关干扰",
+    "应根据个人专业需求而非总分排名选校"
+  ],
+  "opening_pattern": "疑问式导入",
+  "ending_pattern": "总结式建议",
+  "evidence_types": [
+    "行业统计数据",
+    "排行榜指标说明"
+  ],
+  "evidence_specificity_score": 20,
+  "data_density_score": 30,
+  "case_density_score": 10,
+  "quote_density_score": 0,
+  "narrative_distance": "第三人称旁观",
+  "stance_strength": "中立",
+  "sentence_rhythm": "短句为主",
+  "abstraction_level": "中等",
+  "transferable_moves": [
+    "通过拆解算法模型来质疑权威数据",
+    "使用多方数据对比寻找一致性与矛盾点"
+  ],
+  "anti_patterns": [
+    "信息输入不完整",
+    "缺乏具体论据支撑"
+  ],
+  "notable_phrases": [
+    "晚点小数据"
+  ],
+  "title_score": 75,
+  "opening_score": 0,
+  "argument_score": 0,
+  "evidence_score": 0,
+  "structure_score": 0,
+  "style_score": 0,
+  "publishability_score": 10,
+  "quality_score": 15,
+  "reference_value_score": 10,
+  "is_activity_notice": false,
+  "is_low_value": true,
+  "is_advertorial": false,
+  "advertorial_type": "editorial",
+  "advertorial_confidence": 10,
+  "promotional_intensity_score": 5,
+  "editorial_independence_score": 90,
+  "brand_exposure_level": "低",
+  "source_transparency": "清晰",
+  "advertorial_signals": [],
+  "summary_200": "该内容由于正文缺失，仅能通过标题《靠排行榜来挑大学，靠谱吗？丨晚点小数据》判断其为一篇关于教育数据分析的科普类文章。其核心意图在于探讨大学排行榜的局限性，引导用户理性看待排名。由于缺乏具体正文和论据分析，当前输入呈现为极低价值的结构，仅保留标题逻辑。",
+  "summary_500": "该内容源自《晚点》旗下的‘晚点小数据’栏目，标题为《靠排行榜来挑大学，靠谱吗？》。基于标题和栏目一贯风格，文章旨在通过对大学排行榜底层指标和算法的剖析，指出其在反映大学真实教育质量方面的不足。通常这类文章会对比QS、泰晤士、软科等主流榜单的指标差异。然而，由于本次分析的输入源仅包含标题及元数据，缺乏核心正文，无法对其写作机制中的证据细节、论证逻辑进行有效提炼。因此，该条目被标记为低价值信息输入，整体质量评分极低，仅建议作为选题参考，不宜作为写作样本学习。"
+}

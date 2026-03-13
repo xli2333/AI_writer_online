@@ -28,6 +28,10 @@ dist-ssr
 .tmp_illustration_server_pid
 generated_assets/
 *LatePost/
+!rag_assets/profiles/latepost/
+!rag_assets/profiles/latepost/**
+!style_corpora/latepost/
+!style_corpora/latepost/**
 tmp_*.json
 tmp_*.out
 tmp_*.err
