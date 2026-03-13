@@ -180,12 +180,22 @@ export interface ArticleIllustrationAsset {
 }
 
 export type ArticleIllustrationProgressPhase = 'queued' | 'planning' | 'rendering' | 'finalizing' | 'ready' | 'error' | 'canceled';
+export type ArticleIllustrationProgressActivity =
+  | 'planning'
+  | 'rendering_image'
+  | 'captioning'
+  | 'finalizing'
+  | 'ready'
+  | 'error'
+  | 'canceled';
 
 export interface ArticleIllustrationProgress {
   phase: ArticleIllustrationProgressPhase;
+  activity?: ArticleIllustrationProgressActivity;
   currentStep: string;
   completedCount: number;
   totalCount: number;
+  currentItemIndex?: number;
   currentSlotId?: string;
   currentSlotOrder?: number;
   currentSlotTitle?: string;
@@ -228,9 +238,11 @@ export interface ArticleIllustrationJobStatus {
   sourceHash: string;
   runId?: string;
   status: ArticleIllustrationProgressPhase;
+  activity?: ArticleIllustrationProgressActivity;
   currentStep: string;
   completedCount: number;
   totalCount: number;
+  currentItemIndex?: number;
   currentSlotId?: string;
   currentSlotOrder?: number;
   currentSlotTitle?: string;

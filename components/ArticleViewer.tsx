@@ -14,6 +14,7 @@ import {
   ArticleIllustrationAsset,
   ArticleIllustrationBundle,
   ArticleIllustrationJobStatus,
+  ArticleIllustrationProgressActivity,
   ArticleIllustrationSlot,
   ArticleIllustrationStyleReferenceImage,
   WechatDraftRecord,
@@ -345,7 +346,29 @@ const isIllustrationJobActive = (job?: ArticleIllustrationJobStatus | null) => {
   return true;
 };
 
-const resolveIllustrationPhaseLabel = (job?: ArticleIllustrationJobStatus | null) => {
+const resolveIllustrationPhaseLabel = (
+  job?: ArticleIllustrationJobStatus | null,
+  activity?: ArticleIllustrationProgressActivity
+) => {
+  switch (activity) {
+    case 'planning':
+      return '正在规划';
+    case 'rendering_image':
+      return '正在生图';
+    case 'captioning':
+      return '正在补图释';
+    case 'finalizing':
+      return '正在整理';
+    case 'ready':
+      return '全部完成';
+    case 'canceled':
+      return '已停止';
+    case 'error':
+      return '生成失败';
+    default:
+      break;
+  }
+
   switch (job?.status) {
     case 'queued':
       return '已进入队列';
@@ -364,6 +387,25 @@ const resolveIllustrationPhaseLabel = (job?: ArticleIllustrationJobStatus | null
     default:
       return '待生成';
   }
+};
+
+const resolveIllustrationCurrentItemIndex = (bundle?: ArticleIllustrationBundle, job?: ArticleIllustrationJobStatus | null) => {
+  const rawIndex =
+    job?.currentItemIndex ??
+    bundle?.progress?.currentItemIndex ??
+    job?.currentSlotOrder ??
+    bundle?.progress?.currentSlotOrder;
+  if (Number.isFinite(Number(rawIndex)) && Number(rawIndex) > 0) {
+    return Number(rawIndex);
+  }
+
+  const completedCount = job?.completedCount ?? bundle?.progress?.completedCount ?? bundle?.assets.length ?? 0;
+  const totalCount = job?.totalCount ?? bundle?.progress?.totalCount ?? bundle?.targetImageCount ?? 0;
+  if (Number.isFinite(Number(completedCount)) && Number(completedCount) > 0 && Number(totalCount) > 0) {
+    return Math.min(Number(totalCount), Number(completedCount));
+  }
+
+  return undefined;
 };
 
 const decodeHtmlEntities = (value: string) =>
@@ -1022,7 +1064,7 @@ const ModernIllustrationGalleryPanel: React.FC<{
   const completedCount = job?.completedCount ?? bundle?.assets.length ?? 0;
   const totalCount = job?.totalCount ?? bundle?.targetImageCount ?? 0;
   const currentStep = job?.currentStep || bundle?.progress?.currentStep || '';
-  const phaseLabel = resolveIllustrationPhaseLabel(job);
+  const phaseLabel = resolveIllustrationPhaseLabel(job, job?.activity ?? bundle?.progress?.activity);
 
   return (
     <PanelShell title="配图" description="根据最终定稿自动规划并生成的整篇文章配图。">
@@ -1128,17 +1170,23 @@ const ProgressiveIllustrationGalleryPanel: React.FC<{
   slotActions: IllustrationSlotActions;
 }> = ({ bundle, job, isGenerating, isCanceling, status, errorMessage, onRegenerateAll, onCancelAll, slotActions }) => {
   const activeAssetMap = resolveActiveIllustrationAssetMap(bundle);
+  const activity = job?.activity ?? bundle?.progress?.activity;
   const completedCount = job?.completedCount ?? bundle?.assets.length ?? 0;
   const totalCount = job?.totalCount ?? bundle?.targetImageCount ?? 0;
+  const currentItemIndex = resolveIllustrationCurrentItemIndex(bundle, job);
   const currentStep = job?.currentStep || bundle?.progress?.currentStep || '';
-  const phaseLabel = resolveIllustrationPhaseLabel(job);
+  const phaseLabel = resolveIllustrationPhaseLabel(job, activity);
   const progressPercent = totalCount > 0 ? Math.min(100, Math.round((completedCount / totalCount) * 100)) : 0;
   const isRunning = isGenerating || isCanceling;
   const isStopped = status === 'canceled' || job?.status === 'canceled' || bundle?.status === 'canceled';
+  const runningCountText =
+    totalCount > 0 && currentItemIndex
+      ? `${Math.min(totalCount, currentItemIndex)}/${totalCount} 张`
+      : `${completedCount}/${totalCount || '?'} 张`;
   const statusText = isCanceling
     ? '正在停止本轮配图…'
     : isGenerating
-      ? `${phaseLabel} ${completedCount}/${totalCount || '?'} 张`
+      ? `${phaseLabel} ${runningCountText}`
     : isStopped
       ? '本轮配图已停止'
       : bundle
@@ -1415,6 +1463,7 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
   const illustrationRequestAbortRef = useRef<AbortController | null>(null);
   const illustrationStatusPollRef = useRef<number | null>(null);
   const illustrationStatusFailureCountRef = useRef(0);
+  const illustrationStatusRequestSeqRef = useRef(0);
   const illustrationFlowTokenRef = useRef(0);
   const activeIllustrationBundleRef = useRef<ArticleIllustrationBundle | undefined>(data.illustrationBundle);
   const articleExportRef = useRef<HTMLDivElement>(null);
@@ -1435,6 +1484,7 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
   );
   const beginIllustrationFlow = () => {
     illustrationFlowTokenRef.current += 1;
+    illustrationStatusRequestSeqRef.current += 1;
     return illustrationFlowTokenRef.current;
   };
   const isIllustrationFlowCurrent = (token: number) => illustrationFlowTokenRef.current === token;
@@ -1473,17 +1523,21 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
     stopIllustrationPolling();
     const run = async () => {
       if (!isIllustrationFlowCurrent(flowToken)) return;
+      const requestSeq = illustrationStatusRequestSeqRef.current + 1;
+      illustrationStatusRequestSeqRef.current = requestSeq;
       const controller = new AbortController();
       illustrationRequestAbortRef.current = controller;
       try {
         const payload = await getArticleIllustrationStatus({
           sourceHash,
           knownAssetCount: activeIllustrationBundleRef.current?.assets?.length || 0,
+          knownBundleUpdatedAt: activeIllustrationBundleRef.current?.updatedAt,
           signal: controller.signal,
         });
+        if (!isIllustrationFlowCurrent(flowToken) || requestSeq !== illustrationStatusRequestSeqRef.current) return;
         illustrationStatusFailureCountRef.current = 0;
-        if (!isIllustrationFlowCurrent(flowToken)) return;
         if (payload.bundle) {
+          activeIllustrationBundleRef.current = payload.bundle;
           onUpdateIllustrationBundle(payload.bundle);
         }
         if (payload.job) {
@@ -1512,7 +1566,7 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
           void pollIllustrationStatus(sourceHash, false, flowToken);
         }, 1800);
       } catch (error: any) {
-        if (!isIllustrationFlowCurrent(flowToken)) return;
+        if (!isIllustrationFlowCurrent(flowToken) || requestSeq !== illustrationStatusRequestSeqRef.current) return;
         if (error?.message !== '已取消本次生图请求。') {
           if (shouldRetryIllustrationStatusError(error)) {
             illustrationStatusFailureCountRef.current += 1;
@@ -1576,6 +1630,7 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
       });
       if (!isIllustrationFlowCurrent(flowToken)) return false;
       if (result.bundle) {
+        activeIllustrationBundleRef.current = result.bundle;
         onUpdateIllustrationBundle(result.bundle);
       }
       if (result.job) {
@@ -1651,6 +1706,7 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
       });
       if (!isIllustrationFlowCurrent(flowToken)) return;
       if (result.bundle) {
+        activeIllustrationBundleRef.current = result.bundle;
         onUpdateIllustrationBundle(result.bundle);
       }
       if (result.job) {

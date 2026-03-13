@@ -605,9 +605,19 @@ const overlayIllustrationBundleJobState = (bundle, job) => {
     progress: {
       ...(bundle.progress || {}),
       phase: String(job.status || bundle.progress?.phase || 'queued'),
+      activity: String(job.activity || bundle.progress?.activity || '').trim() || undefined,
       currentStep: String(job.currentStep || bundle.progress?.currentStep || ''),
       completedCount: Number(job.completedCount || bundle.progress?.completedCount || 0),
       totalCount: Number(job.totalCount || bundle.progress?.totalCount || bundle.targetImageCount || 0),
+      currentItemIndex: Number(job.currentItemIndex || bundle.progress?.currentItemIndex || 0) || undefined,
+      currentSlotId: String(job.currentSlotId || bundle.progress?.currentSlotId || '').trim() || undefined,
+      currentSlotOrder:
+        Number.isFinite(Number(job.currentSlotOrder))
+          ? Number(job.currentSlotOrder)
+          : Number.isFinite(Number(bundle.progress?.currentSlotOrder))
+            ? Number(bundle.progress.currentSlotOrder)
+            : undefined,
+      currentSlotTitle: String(job.currentSlotTitle || bundle.progress?.currentSlotTitle || '').trim() || undefined,
       startedAt: String(job.startedAt || bundle.progress?.startedAt || bundle.generatedAt || '').trim() || undefined,
       updatedAt: String(job.updatedAt || bundle.progress?.updatedAt || new Date().toISOString()).trim() || undefined,
     },
@@ -623,9 +633,16 @@ const normalizeIllustrationJob = (jobLike, defaults = {}) => {
     sourceHash,
     runId: String(jobLike?.runId || defaults.runId || '').trim() || undefined,
     status: String(jobLike?.status || defaults.status || 'queued').trim(),
+    activity: String(jobLike?.activity || defaults.activity || '').trim() || undefined,
     currentStep: String(jobLike?.currentStep || defaults.currentStep || '').trim(),
     completedCount: Number(jobLike?.completedCount || defaults.completedCount || 0),
     totalCount: Number(jobLike?.totalCount || defaults.totalCount || 0),
+    currentItemIndex:
+      Number.isFinite(Number(jobLike?.currentItemIndex))
+        ? Number(jobLike.currentItemIndex)
+        : Number.isFinite(Number(defaults.currentItemIndex))
+          ? Number(defaults.currentItemIndex)
+          : undefined,
     currentSlotId: String(jobLike?.currentSlotId || defaults.currentSlotId || '').trim() || undefined,
     currentSlotOrder:
       Number.isFinite(Number(jobLike?.currentSlotOrder))
@@ -646,9 +663,11 @@ const deriveIllustrationJobFromBundle = (sourceHash, bundle, defaults = {}) => {
     {
       sourceHash,
       status: progress.phase || bundle?.status || 'queued',
+      activity: progress.activity,
       currentStep: progress.currentStep || '',
       completedCount: progress.completedCount ?? bundle?.assets?.length ?? 0,
       totalCount: progress.totalCount ?? bundle?.targetImageCount ?? 0,
+      currentItemIndex: progress.currentItemIndex,
       currentSlotId: progress.currentSlotId,
       currentSlotOrder: progress.currentSlotOrder,
       currentSlotTitle: progress.currentSlotTitle,
@@ -823,6 +842,7 @@ const server = http.createServer(async (request, response) => {
       setIllustrationRunState(sourceHash, runId);
       updateIllustrationJobForRun(sourceHash, runId, {
         status: 'queued',
+        activity: 'planning',
         currentStep: '任务已创建，准备分析全文',
         completedCount: existingManifest?.assets?.length || 0,
         totalCount: existingManifest?.targetImageCount || targetImageCount,
@@ -863,6 +883,7 @@ const server = http.createServer(async (request, response) => {
                   ? deriveIllustrationJobFromBundle(sourceHash, latestManifest, { runId })
                   : {
                       status: 'canceled',
+                      activity: 'canceled',
                       currentStep: error instanceof Error ? error.message : ILLUSTRATION_CANCELED_MESSAGE,
                       completedCount: 0,
                       totalCount: targetImageCount,
@@ -871,6 +892,7 @@ const server = http.createServer(async (request, response) => {
                     },
                 {
                   status: 'canceled',
+                  activity: 'canceled',
                   currentStep: error instanceof Error ? error.message : ILLUSTRATION_CANCELED_MESSAGE,
                   completedCount: latestManifest?.assets?.length || 0,
                   totalCount: latestManifest?.targetImageCount || targetImageCount,
@@ -894,6 +916,7 @@ const server = http.createServer(async (request, response) => {
             latestManifest ? deriveIllustrationJobFromBundle(sourceHash, latestManifest, { runId }) : {},
             {
               status: 'error',
+              activity: 'error',
               currentStep: error instanceof Error ? error.message : String(error),
               completedCount: latestManifest?.assets?.length || 0,
               totalCount: latestManifest?.targetImageCount || targetImageCount,
@@ -942,12 +965,17 @@ const server = http.createServer(async (request, response) => {
           sourceHash,
           runId: activeRunId || memoryJob?.runId,
           status: shouldCancel ? 'canceled' : memoryJob?.status || bundle?.status || 'queued',
+          activity: shouldCancel ? 'canceled' : memoryJob?.activity || bundle?.progress?.activity,
           currentStep:
             shouldCancel
               ? ILLUSTRATION_CANCELED_MESSAGE
               : memoryJob?.currentStep || bundle?.progress?.currentStep || '',
           completedCount: bundle?.assets?.length || memoryJob?.completedCount || 0,
           totalCount: bundle?.targetImageCount || memoryJob?.totalCount || 0,
+          currentItemIndex: bundle?.progress?.currentItemIndex || memoryJob?.currentItemIndex,
+          currentSlotId: bundle?.progress?.currentSlotId || memoryJob?.currentSlotId,
+          currentSlotOrder: bundle?.progress?.currentSlotOrder || memoryJob?.currentSlotOrder,
+          currentSlotTitle: bundle?.progress?.currentSlotTitle || memoryJob?.currentSlotTitle,
           startedAt: memoryJob?.startedAt || bundle?.generatedAt,
           updatedAt: new Date().toISOString(),
         }
@@ -965,6 +993,7 @@ const server = http.createServer(async (request, response) => {
     if (request.method === 'GET' && route === '/api/article-illustrations/status') {
       const sourceHash = String(url.searchParams.get('sourceHash') || '').trim();
       const knownAssetCount = parseNonNegativeInteger(url.searchParams.get('knownAssetCount'), 0);
+      const knownBundleUpdatedAt = String(url.searchParams.get('knownBundleUpdatedAt') || '').trim();
       if (!sourceHash) {
         sendJson(response, 400, { error: 'Missing sourceHash.' });
         return;
@@ -981,6 +1010,7 @@ const server = http.createServer(async (request, response) => {
             {
               sourceHash,
               status: 'canceled',
+              activity: 'canceled',
               currentStep: ILLUSTRATION_SESSION_MISSING_MESSAGE,
               completedCount: 0,
               totalCount: 0,
@@ -994,14 +1024,22 @@ const server = http.createServer(async (request, response) => {
       const job = normalizeIllustrationJob((shouldUseMemoryJob ? memoryJob : null) || deriveIllustrationJobFromBundle(sourceHash, manifest), {
         sourceHash,
         status: manifest?.status || 'queued',
+        activity: manifest?.progress?.activity,
         currentStep: manifest?.progress?.currentStep || '',
         completedCount: manifest?.assets?.length || 0,
         totalCount: manifest?.targetImageCount || 0,
+        currentItemIndex: manifest?.progress?.currentItemIndex,
+        currentSlotId: manifest?.progress?.currentSlotId,
+        currentSlotOrder: manifest?.progress?.currentSlotOrder,
+        currentSlotTitle: manifest?.progress?.currentSlotTitle,
         startedAt: manifest?.generatedAt,
         updatedAt: manifest?.updatedAt,
         error: manifest?.error,
       });
-      const shouldIncludeBundle = Boolean(manifest) && Number(manifest?.assets?.length || 0) > knownAssetCount;
+      const shouldIncludeBundle =
+        Boolean(manifest) &&
+        (Number(manifest?.assets?.length || 0) > knownAssetCount ||
+          String(manifest?.updatedAt || '') !== knownBundleUpdatedAt);
       sendJson(response, 200, {
         sourceHash,
         job,

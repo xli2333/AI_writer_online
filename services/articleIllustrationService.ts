@@ -240,15 +240,20 @@ export const startArticleIllustrationGeneration = async ({
 export const getArticleIllustrationStatus = async ({
   sourceHash,
   knownAssetCount,
+  knownBundleUpdatedAt,
   signal,
 }: {
   sourceHash: string;
   knownAssetCount?: number;
+  knownBundleUpdatedAt?: string;
   signal?: AbortSignal;
 }) => {
   const params = new URLSearchParams({ sourceHash });
   if (Number.isFinite(knownAssetCount)) {
     params.set('knownAssetCount', String(Math.max(0, Number(knownAssetCount || 0))));
+  }
+  if (String(knownBundleUpdatedAt || '').trim()) {
+    params.set('knownBundleUpdatedAt', String(knownBundleUpdatedAt).trim());
   }
   const payload = normalizeIllustrationPayload(
     await fetchJson<IllustrationPayload>(

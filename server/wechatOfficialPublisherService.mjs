@@ -2117,8 +2117,8 @@ const renderWechatBeautyImageBlock = (image, blockIndex, context) => {
   if (variant === 'shadow_card') {
     return createWechatRenderedBlock(
       `
-        <figure style="margin: 36px -12px 32px; padding: 10px; border-radius: 24px; background: #FFFFFF; border: 1px solid ${context.theme.cardBorder};">
-          <img src="${escapeHtml(image.url)}" alt="${escapeHtml(image.title || 'Illustration')}" style="display: block; width: 100%; border-radius: 16px; background: #F8FAFC;" />
+        <figure style="margin: 36px 0 32px; width: 100%; box-sizing: border-box; padding: 10px; border-radius: 24px; background: #FFFFFF; border: 1px solid ${context.theme.cardBorder};">
+          <img src="${escapeHtml(image.url)}" alt="${escapeHtml(image.title || 'Illustration')}" style="display: block; width: 100%; max-width: 100%; height: auto; border-radius: 16px; background: #F8FAFC;" />
           ${image.caption ? `<figcaption style="margin-top: 12px; color: ${context.theme.mutedColor}; font-size: 13px; line-height: 1.75;">${escapeHtml(image.caption)}</figcaption>` : ''}
         </figure>
       `.trim()
@@ -2127,8 +2127,8 @@ const renderWechatBeautyImageBlock = (image, blockIndex, context) => {
   if (variant === 'caption_band') {
     return createWechatRenderedBlock(
       `
-        <figure style="margin: 36px -14px 30px; overflow: hidden; border-radius: 22px; background: #FFFFFF; border: 1px solid ${context.theme.cardBorder};">
-          <img src="${escapeHtml(image.url)}" alt="${escapeHtml(image.title || 'Illustration')}" style="display: block; width: 100%; background: #F8FAFC;" />
+        <figure style="margin: 36px 0 30px; width: 100%; box-sizing: border-box; overflow: hidden; border-radius: 22px; background: #FFFFFF; border: 1px solid ${context.theme.cardBorder};">
+          <img src="${escapeHtml(image.url)}" alt="${escapeHtml(image.title || 'Illustration')}" style="display: block; width: 100%; max-width: 100%; height: auto; background: #F8FAFC;" />
           ${image.caption ? `<figcaption style="padding: 12px 14px 13px; background: ${context.theme.sectionBackground}; color: ${context.theme.bodyColor}; font-size: 13px; line-height: 1.72;">${escapeHtml(image.caption)}</figcaption>` : ''}
         </figure>
       `.trim()
@@ -2137,8 +2137,8 @@ const renderWechatBeautyImageBlock = (image, blockIndex, context) => {
   if (variant === 'border_frame') {
     return createWechatRenderedBlock(
       `
-        <figure style="margin: 36px -10px 30px; padding: 8px; border-radius: 24px; border: 1px solid ${context.theme.cardBorder}; background: #FFFFFF;">
-          <img src="${escapeHtml(image.url)}" alt="${escapeHtml(image.title || 'Illustration')}" style="display: block; width: 100%; border-radius: 16px; background: #F8FAFC;" />
+        <figure style="margin: 36px 0 30px; width: 100%; box-sizing: border-box; padding: 8px; border-radius: 24px; border: 1px solid ${context.theme.cardBorder}; background: #FFFFFF;">
+          <img src="${escapeHtml(image.url)}" alt="${escapeHtml(image.title || 'Illustration')}" style="display: block; width: 100%; max-width: 100%; height: auto; border-radius: 16px; background: #F8FAFC;" />
           ${image.caption ? `<figcaption style="margin-top: 10px; color: ${context.theme.mutedColor}; font-size: 13px; line-height: 1.75;">${escapeHtml(image.caption)}</figcaption>` : ''}
         </figure>
       `.trim()
@@ -2147,8 +2147,8 @@ const renderWechatBeautyImageBlock = (image, blockIndex, context) => {
   if (variant === 'editorial_card') {
     return createWechatRenderedBlock(
       `
-        <figure style="margin: 34px -12px 30px; padding: 10px; border: 1px solid ${context.theme.cardBorder}; border-radius: 22px; background: #FFFFFF;">
-          <img src="${escapeHtml(image.url)}" alt="${escapeHtml(image.title || 'Illustration')}" style="display: block; width: 100%; border-radius: 14px; background: #F8FAFC;" />
+        <figure style="margin: 34px 0 30px; width: 100%; box-sizing: border-box; padding: 10px; border: 1px solid ${context.theme.cardBorder}; border-radius: 22px; background: #FFFFFF;">
+          <img src="${escapeHtml(image.url)}" alt="${escapeHtml(image.title || 'Illustration')}" style="display: block; width: 100%; max-width: 100%; height: auto; border-radius: 14px; background: #F8FAFC;" />
           ${image.caption ? `<figcaption style="margin-top: 12px; color: ${context.theme.mutedColor}; font-size: 13px; line-height: 1.75;">${escapeHtml(image.caption)}</figcaption>` : ''}
         </figure>
       `.trim()
@@ -2158,8 +2158,8 @@ const renderWechatBeautyImageBlock = (image, blockIndex, context) => {
   if (variant === 'full_bleed') {
     return createWechatRenderedBlock(
       `
-        <figure style="margin: 38px -18px 32px;">
-          <img src="${escapeHtml(image.url)}" alt="${escapeHtml(image.title || 'Illustration')}" style="display: block; width: 100%; border-radius: 20px; background: #F8FAFC;" />
+        <figure style="margin: 38px 0 32px; width: 100%; box-sizing: border-box;">
+          <img src="${escapeHtml(image.url)}" alt="${escapeHtml(image.title || 'Illustration')}" style="display: block; width: 100%; max-width: 100%; height: auto; border-radius: 20px; background: #F8FAFC;" />
           ${image.caption ? `<figcaption style="margin-top: 10px; padding-left: 2px; color: ${context.theme.mutedColor}; font-size: 12px; line-height: 1.7;">${escapeHtml(image.caption)}</figcaption>` : ''}
         </figure>
       `.trim()
@@ -2168,8 +2168,8 @@ const renderWechatBeautyImageBlock = (image, blockIndex, context) => {
 
   return createWechatRenderedBlock(
     `
-      <figure style="margin: 34px -14px 30px;">
-        <img src="${escapeHtml(image.url)}" alt="${escapeHtml(image.title || 'Illustration')}" style="display: block; width: 100%; border-radius: 18px; background: #F8FAFC;" />
+      <figure style="margin: 34px 0 30px; width: 100%; box-sizing: border-box;">
+        <img src="${escapeHtml(image.url)}" alt="${escapeHtml(image.title || 'Illustration')}" style="display: block; width: 100%; max-width: 100%; height: auto; border-radius: 18px; background: #F8FAFC;" />
         ${image.caption ? `<figcaption style="margin-top: 12px; padding-top: 10px; border-top: 1px solid ${context.theme.cardBorder}; color: ${context.theme.mutedColor}; font-size: 13px; line-height: 1.75;">${escapeHtml(image.caption)}</figcaption>` : ''}
       </figure>
     `.trim()
@@ -2308,7 +2308,7 @@ const renderWechatArticleHtmlWithPlan = ({ title, blocks, theme, layout, renderP
   return {
     contentHtml: `
       <section style="padding: 18px 10px 26px; background: #FFFFFF;">
-        <article style="margin: 0 auto; max-width: 700px;">
+        <article style="margin: 0 auto; width: 100%; max-width: 700px;">
           ${creditsHtml}
           ${openingHighlightHtml}
           <div style="color: ${theme.titleColor};">${bodyHtml}</div>
@@ -2326,9 +2326,10 @@ const buildWechatPreviewDocument = ({ title, contentHtml, theme }) => `<!doctype
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>${escapeHtml(title)}</title>
     <style>
+      * { box-sizing: border-box; }
       body { margin: 0; padding: 12px 8px 20px; background: ${theme.pageBackground}; font-family: "PingFang SC","Microsoft YaHei",sans-serif; }
       .wechat-preview-shell { max-width: 760px; margin: 0 auto; background: #FFFFFF; border-radius: 28px; box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08); overflow: hidden; }
-      img { max-width: 100%; }
+      img { display: block; max-width: 100%; height: auto; }
     </style>
   </head>
   <body>

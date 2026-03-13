@@ -369,18 +369,22 @@ const buildIllustrationStyleReferenceParts = (value) => {
 
 const buildIllustrationProgress = ({
   phase,
+  activity,
   currentStep,
   completedCount = 0,
   totalCount = 0,
+  currentItemIndex,
   currentSlotId,
   currentSlotOrder,
   currentSlotTitle,
   startedAt,
 }) => ({
   phase,
+  activity: cleanText(activity) || undefined,
   currentStep: cleanText(currentStep),
   completedCount: Number(completedCount || 0),
   totalCount: Number(totalCount || 0),
+  currentItemIndex: Number.isFinite(Number(currentItemIndex)) ? Number(currentItemIndex) : undefined,
   currentSlotId: cleanText(currentSlotId) || undefined,
   currentSlotOrder: Number.isFinite(Number(currentSlotOrder)) ? Number(currentSlotOrder) : undefined,
   currentSlotTitle: cleanText(currentSlotTitle) || undefined,
@@ -415,6 +419,7 @@ const buildCanceledIllustrationManifest = (manifest, currentStep = ILLUSTRATION_
     slots: nextSlots,
     progress: buildIllustrationProgress({
       phase: 'canceled',
+      activity: 'canceled',
       currentStep: normalizedCurrentStep,
       completedCount,
       totalCount,
@@ -2492,6 +2497,7 @@ export const generateArticleIllustrationsProgressive = async ({
     assetVersions: {},
     progress: buildIllustrationProgress({
       phase: 'planning',
+      activity: 'planning',
       currentStep: '正在分析全文并规划图位',
       completedCount: 0,
       totalCount: targetImageCount,
@@ -2598,16 +2604,26 @@ export const generateArticleIllustrationsProgressive = async ({
         texture: (normalizedPlan.visualSystem.texture_rules || []).join(' / '),
         negativeRules: normalizedPlan.visualSystem.forbidden_elements,
       },
-      slots: seededSlots,
+      slots: seededSlots.map((slot, slotIndex) =>
+        slotIndex === 0
+          ? {
+              ...slot,
+              status: 'rendering',
+              error: undefined,
+            }
+          : slot
+      ),
       assetVersions: seededSlots.reduce((acc, slot) => {
         acc[slot.id] = [];
         return acc;
       }, {}),
       progress: buildIllustrationProgress({
         phase: 'rendering',
-        currentStep: `图位规划完成，共 ${seededSlots.length} 张图，准备开始生成`,
+        activity: 'rendering_image',
+        currentStep: `正在生成第 1/${seededSlots.length} 张图：${seededSlots[0]?.sectionTitle || seededSlots[0]?.title || '未命名图位'}`,
         completedCount: 0,
         totalCount: seededSlots.length,
+        currentItemIndex: seededSlots.length > 0 ? 1 : undefined,
         currentSlotId: seededSlots[0]?.id,
         currentSlotOrder: seededSlots[0]?.order,
         currentSlotTitle: seededSlots[0]?.sectionTitle || seededSlots[0]?.title,
@@ -2619,31 +2635,6 @@ export const generateArticleIllustrationsProgressive = async ({
 
     for (let index = 0; index < seededSlots.length; index += 1) {
       const slotSeed = seededSlots[index];
-      const renderingStep = `正在生成第 ${index + 1}/${seededSlots.length} 张图：${slotSeed.sectionTitle || slotSeed.title}`;
-      await abortIfCanceled(renderingStep);
-      manifest = await publish({
-        ...manifest,
-        slots: manifest.slots.map((slot) =>
-          slot.id === slotSeed.id
-            ? {
-                ...slot,
-                status: 'rendering',
-                error: undefined,
-              }
-            : slot
-        ),
-        progress: buildIllustrationProgress({
-          phase: 'rendering',
-          currentStep: renderingStep,
-          completedCount: index,
-          totalCount: seededSlots.length,
-          currentSlotId: slotSeed.id,
-          currentSlotOrder: slotSeed.order,
-          currentSlotTitle: slotSeed.sectionTitle || slotSeed.title,
-          startedAt,
-        }),
-      });
-
       const rendered = await renderSlotVersion({
         apiKey,
         plannerModel,
@@ -2684,9 +2675,11 @@ export const generateArticleIllustrationsProgressive = async ({
             assetVersions: interimVersions,
             progress: buildIllustrationProgress({
               phase: 'rendering',
+              activity: 'captioning',
               currentStep: captionStep,
               completedCount: index,
               totalCount: seededSlots.length,
+              currentItemIndex: index + 1,
               currentSlotId: interimSlot.id,
               currentSlotOrder: interimSlot.order,
               currentSlotTitle: interimSlot.sectionTitle || interimSlot.title,
@@ -2698,23 +2691,55 @@ export const generateArticleIllustrationsProgressive = async ({
 
       warnings.push(...rendered.warnings);
       manifest = updateManifestSlotVersion(manifest, rendered.slot, rendered.asset);
-      const nextStep =
-        index === seededSlots.length - 1
-          ? '正在整理最后的图释和版本信息'
-          : `已完成 ${index + 1}/${seededSlots.length} 张，继续下一张`;
-      await abortIfCanceled(nextStep);
+      if (index === seededSlots.length - 1) {
+        const finalizingStep = `第 ${index + 1}/${seededSlots.length} 张图与图释已完成，正在整理最终结果`;
+        await abortIfCanceled(finalizingStep);
+        manifest = await publish({
+          ...manifest,
+          status: 'partial',
+          warnings: warnings.length > 0 ? warnings : undefined,
+          progress: buildIllustrationProgress({
+            phase: 'finalizing',
+            activity: 'finalizing',
+            currentStep: finalizingStep,
+            completedCount: index + 1,
+            totalCount: seededSlots.length,
+            currentItemIndex: index + 1,
+            currentSlotId: slotSeed.id,
+            currentSlotOrder: slotSeed.order,
+            currentSlotTitle: slotSeed.sectionTitle || slotSeed.title,
+            startedAt,
+          }),
+        });
+        continue;
+      }
+
+      const nextSlotSeed = seededSlots[index + 1];
+      const nextRenderingStep = `正在生成第 ${index + 2}/${seededSlots.length} 张图：${nextSlotSeed.sectionTitle || nextSlotSeed.title}`;
+      await abortIfCanceled(nextRenderingStep);
       manifest = await publish({
         ...manifest,
-        status: index === seededSlots.length - 1 ? 'partial' : 'rendering',
+        status: 'rendering',
         warnings: warnings.length > 0 ? warnings : undefined,
+        slots: manifest.slots.map((slot) =>
+          slot.id === nextSlotSeed.id
+            ? {
+                ...slot,
+                status: 'rendering',
+                error: undefined,
+              }
+            : slot
+        ),
         progress: buildIllustrationProgress({
-          phase: index === seededSlots.length - 1 ? 'finalizing' : 'rendering',
-          currentStep: nextStep,
+          phase: 'rendering',
+          activity: 'rendering_image',
+          currentStep: nextRenderingStep,
           completedCount: index + 1,
           totalCount: seededSlots.length,
-          currentSlotId: seededSlots[index + 1]?.id,
-          currentSlotOrder: seededSlots[index + 1]?.order,
-          currentSlotTitle: seededSlots[index + 1]?.sectionTitle || seededSlots[index + 1]?.title,
+          currentItemIndex: index + 2,
+          currentSlotId: nextSlotSeed.id,
+          currentSlotOrder: nextSlotSeed.order,
+          currentSlotTitle: nextSlotSeed.sectionTitle || nextSlotSeed.title,
           startedAt,
         }),
       });
@@ -2727,9 +2752,11 @@ export const generateArticleIllustrationsProgressive = async ({
       warnings: manifest.warnings,
       progress: buildIllustrationProgress({
         phase: 'ready',
+        activity: 'ready',
         currentStep: `全部 ${seededSlots.length} 张图已生成完成`,
         completedCount: seededSlots.length,
         totalCount: seededSlots.length,
+        currentItemIndex: seededSlots.length,
         startedAt,
       }),
     });
@@ -2749,6 +2776,7 @@ export const generateArticleIllustrationsProgressive = async ({
       error: error instanceof Error ? error.message : String(error),
       progress: buildIllustrationProgress({
         phase: 'error',
+        activity: 'error',
         currentStep: error instanceof Error ? error.message : String(error),
         completedCount: manifest?.assets?.length || 0,
         totalCount: manifest?.targetImageCount || targetImageCount,
