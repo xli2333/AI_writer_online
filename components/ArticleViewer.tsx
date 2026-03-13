@@ -15,6 +15,7 @@ import {
   ArticleIllustrationBundle,
   ArticleIllustrationJobStatus,
   ArticleIllustrationSlot,
+  ArticleIllustrationStyleReferenceImage,
   WechatDraftRecord,
   WechatLayoutSettings,
   WritingProjectData,
@@ -68,6 +69,26 @@ interface ReferenceTemplateArticle {
 type ViewerData = WritingProjectData & {
   referenceArticles?: ReferenceTemplateArticle[];
 };
+
+const ILLUSTRATION_STYLE_REFERENCE_ACCEPT = 'image/png,image/jpeg,image/webp';
+const ILLUSTRATION_STYLE_REFERENCE_MAX_BYTES = 4 * 1024 * 1024;
+
+const readFileAsDataUrl = (file: File) =>
+  new Promise<string>((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(String(reader.result || ''));
+    reader.onerror = () => reject(new Error(`Failed to read image: ${file.name}`));
+    reader.readAsDataURL(file);
+  });
+
+const createIllustrationStyleReferenceImage = async (
+  file: File
+): Promise<ArticleIllustrationStyleReferenceImage> => ({
+  id: `illustration-style-reference-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+  name: file.name,
+  mimeType: file.type || 'image/png',
+  dataUrl: await readFileAsDataUrl(file),
+});
 
 type ViewerPanel =
   | 'article'
@@ -292,7 +313,7 @@ const resolveIllustrationVersionState = (bundle: ArticleIllustrationBundle | und
 
 const bundleNeedsRefresh = (bundle?: ArticleIllustrationBundle) => {
   if (!bundle) return false;
-  if (bundle.promptVersion !== 'illustration-v3') return true;
+  if (bundle.promptVersion !== 'illustration-v5') return true;
   if (!bundle.sourceHash) return true;
   if (!bundle.assetVersions || Object.keys(bundle.assetVersions).length === 0) return true;
 
@@ -748,7 +769,7 @@ const IllustrationHero: React.FC<{ bundle?: ArticleIllustrationBundle }> = ({ bu
       <img
         src={resolveGeneratedAssetUrl(hero.asset.url)}
         alt={hero.slot?.title || '文章首图'}
-        className="aspect-[16/9] w-full object-cover"
+        className="aspect-square w-full object-cover"
       />
       <figcaption className="grid gap-2 border-t border-slate-200 bg-white px-5 py-4 text-sm text-slate-600 md:grid-cols-[1fr_auto] md:items-center">
         <div>
@@ -830,7 +851,7 @@ const IllustrationGalleryPanel: React.FC<{
         </div>
 
         {bundle?.assets?.length ? (
-          <div className="grid gap-5 lg:grid-cols-2">
+          <div className="grid gap-6">
             {bundle.assets.map((asset) => {
               const slot = slotMap.get(asset.slotId) as ArticleIllustrationSlot | undefined;
               return (
@@ -838,7 +859,7 @@ const IllustrationGalleryPanel: React.FC<{
                   <img
                     src={resolveGeneratedAssetUrl(asset.url)}
                     alt={slot?.title || asset.title}
-                    className="aspect-[16/9] w-full object-cover"
+                    className="aspect-square w-full object-cover"
                   />
                   <div className="space-y-3 px-5 py-4">
                     <div className="flex items-center justify-between gap-4">
@@ -956,10 +977,10 @@ const ModernIllustrationCard: React.FC<{
       <img
         src={resolveGeneratedAssetUrl(asset.url)}
         alt={slot.title || asset.title}
-        className="aspect-[16/9] w-full object-cover"
+        className="aspect-square w-full object-cover"
       />
     ) : (
-      <div className="flex aspect-[16/9] items-center justify-center bg-slate-100 text-sm text-slate-500">当前图位暂无图片</div>
+      <div className="flex aspect-square items-center justify-center bg-slate-100 text-sm text-slate-500">当前图位暂无图片</div>
     )}
 
     <figcaption className="px-5 py-4">
@@ -1064,7 +1085,7 @@ const ModernIllustrationGalleryPanel: React.FC<{
         </div>
 
         {bundle?.slots?.length ? (
-          <div className="grid gap-5 lg:grid-cols-2">
+          <div className="grid gap-6">
             {bundle.slots
               .slice()
               .sort((left, right) => left.order - right.order)
@@ -1204,7 +1225,7 @@ const ProgressiveIllustrationGalleryPanel: React.FC<{
         </div>
 
         {bundle?.slots?.length ? (
-          <div className="grid gap-5 lg:grid-cols-2">
+          <div className="grid gap-6">
             {bundle.slots
               .slice()
               .sort((left, right) => left.order - right.order)
@@ -1378,6 +1399,8 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
   const [illustrationMutationKind, setIllustrationMutationKind] = useState<'regenerate' | 'caption' | 'delete' | 'switch' | null>(null);
   const [illustrationPromptDraft, setIllustrationPromptDraft] = useState('');
   const [illustrationCountPromptDraft, setIllustrationCountPromptDraft] = useState('');
+  const [illustrationStyleReference, setIllustrationStyleReference] = useState<ArticleIllustrationStyleReferenceImage | null>(null);
+  const [illustrationStyleReferenceError, setIllustrationStyleReferenceError] = useState<string | null>(null);
   const [illustrationPromptMode, setIllustrationPromptMode] = useState<'initial' | 'regenerate' | null>(null);
   const [regeneratePromptDraft, setRegeneratePromptDraft] = useState('');
   const [regeneratePromptSlotId, setRegeneratePromptSlotId] = useState<string | null>(null);
@@ -1432,6 +1455,12 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
   useEffect(() => {
     activeIllustrationBundleRef.current = data.illustrationBundle;
   }, [data.illustrationBundle]);
+
+  useEffect(() => {
+    if (illustrationPromptMode) return;
+    setIllustrationStyleReference(data.illustrationBundle?.styleReferenceImage || null);
+    setIllustrationStyleReferenceError(null);
+  }, [data.illustrationBundle?.styleReferenceImage, illustrationPromptMode]);
 
   const stopIllustrationPolling = () => {
     if (illustrationStatusPollRef.current !== null) {
@@ -1518,7 +1547,12 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
     }, 1800);
   };
 
-  const requestIllustrations = async (regenerate = false, userPrompt = '', imageCountPrompt = '') => {
+  const requestIllustrations = async (
+    regenerate = false,
+    userPrompt = '',
+    imageCountPrompt = '',
+    styleReferenceImage?: ArticleIllustrationStyleReferenceImage | null
+  ) => {
     if (!data.articleContent) return false;
     const flowToken = beginIllustrationFlow();
     stopIllustrationPolling();
@@ -1536,6 +1570,7 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
         options: data.options,
         userPrompt,
         imageCountPrompt,
+        styleReferenceImage: styleReferenceImage || undefined,
         regenerate,
         signal: controller.signal,
       });
@@ -1563,6 +1598,37 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
         illustrationRequestAbortRef.current = null;
       }
     }
+  };
+
+  const handleIllustrationStyleReferenceUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    event.target.value = '';
+    if (!file) {
+      return;
+    }
+
+    if (!ILLUSTRATION_STYLE_REFERENCE_ACCEPT.split(',').includes(file.type)) {
+      setIllustrationStyleReferenceError('仅支持 PNG / JPG / WEBP 样张。');
+      return;
+    }
+
+    if (file.size > ILLUSTRATION_STYLE_REFERENCE_MAX_BYTES) {
+      setIllustrationStyleReferenceError('样张单张不能超过 4MB。');
+      return;
+    }
+
+    try {
+      const nextReference = await createIllustrationStyleReferenceImage(file);
+      setIllustrationStyleReference(nextReference);
+      setIllustrationStyleReferenceError(null);
+    } catch (error: any) {
+      setIllustrationStyleReferenceError(error?.message || '样张读取失败。');
+    }
+  };
+
+  const handleRemoveIllustrationStyleReference = () => {
+    setIllustrationStyleReference(null);
+    setIllustrationStyleReferenceError(null);
   };
 
   const handleCancelIllustrations = async () => {
@@ -1614,12 +1680,16 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
     setIllustrationPromptMode(mode);
     setIllustrationPromptDraft(activeIllustrationBundle?.globalUserPrompt || '');
     setIllustrationCountPromptDraft(activeIllustrationBundle?.imageCountPrompt || '');
+    setIllustrationStyleReference(activeIllustrationBundle?.styleReferenceImage || null);
+    setIllustrationStyleReferenceError(null);
   };
 
   const closeIllustrationPromptDialog = () => {
     setIllustrationPromptMode(null);
     setIllustrationPromptDraft(activeIllustrationBundle?.globalUserPrompt || '');
     setIllustrationCountPromptDraft(activeIllustrationBundle?.imageCountPrompt || '');
+    setIllustrationStyleReference(activeIllustrationBundle?.styleReferenceImage || null);
+    setIllustrationStyleReferenceError(null);
   };
 
   const handleIllustrationPromptSubmit = () => {
@@ -1628,9 +1698,10 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
       illustrationPromptMode === 'regenerate' || Boolean(String(illustrationPromptDraft || '').trim());
     const nextPrompt = illustrationPromptDraft;
     const nextImageCountPrompt = illustrationCountPromptDraft;
+    const nextStyleReferenceImage = illustrationStyleReference;
     setIllustrationPromptMode(null);
     setActivePanel('illustrations');
-    void requestIllustrations(shouldRegenerate, nextPrompt, nextImageCountPrompt);
+    void requestIllustrations(shouldRegenerate, nextPrompt, nextImageCountPrompt, nextStyleReferenceImage);
   };
 
   const openRegeneratePromptDialog = (slot: ArticleIllustrationSlot) => {
@@ -2577,6 +2648,54 @@ export const ArticleViewer: React.FC<ArticleViewerProps> = ({
             <label className="mt-5 block text-sm font-medium text-slate-700" htmlFor="illustration-batch-prompt">
               整组配图要求
             </label>
+            <div className="mt-5 rounded-2xl border border-dashed border-slate-200 bg-slate-50/70 p-4">
+              <div className="flex flex-wrap items-center justify-between gap-3">
+                <div>
+                  <div className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">Style Sample</div>
+                  <div className="mt-1 text-sm text-slate-600">
+                    上传 1 张风格样张，AI 会参考它的构图、色彩、质感和视觉气质，但不会照搬里面的具体主体。
+                  </div>
+                </div>
+                <label className="inline-flex cursor-pointer items-center rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-100">
+                  上传样张
+                  <input
+                    type="file"
+                    accept={ILLUSTRATION_STYLE_REFERENCE_ACCEPT}
+                    className="hidden"
+                    onChange={(event) => void handleIllustrationStyleReferenceUpload(event)}
+                  />
+                </label>
+              </div>
+              <div className="mt-2 text-xs leading-relaxed text-slate-400">仅支持 PNG / JPG / WEBP，单张不超过 4MB。</div>
+              {illustrationStyleReferenceError ? (
+                <div className="mt-2 text-xs leading-relaxed text-rose-500">{illustrationStyleReferenceError}</div>
+              ) : null}
+              {illustrationStyleReference ? (
+                <div className="mt-4 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+                  <div className="relative aspect-[4/3] bg-slate-100">
+                    <img
+                      src={illustrationStyleReference.dataUrl}
+                      alt={illustrationStyleReference.name}
+                      className="h-full w-full object-cover"
+                    />
+                    <button
+                      type="button"
+                      onClick={handleRemoveIllustrationStyleReference}
+                      className="absolute right-2 top-2 rounded-full bg-slate-950/70 px-2 py-1 text-xs font-medium text-white"
+                    >
+                      移除
+                    </button>
+                  </div>
+                  <div className="px-3 py-3">
+                    <div className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">Current Sample</div>
+                    <div className="mt-1 truncate text-sm text-slate-600" title={illustrationStyleReference.name}>
+                      {illustrationStyleReference.name}
+                    </div>
+                  </div>
+                </div>
+              ) : null}
+            </div>
+
             <textarea
               id="illustration-batch-prompt"
               value={illustrationPromptDraft}

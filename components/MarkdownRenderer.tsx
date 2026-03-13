@@ -13,6 +13,9 @@ const parseInline = (text: string) => {
 };
 
 const cleanCell = (cell: string) => cell.trim();
+const TABLE_CAPTION_PATTERN = /^\*\*(图表|Table|Figure|Exhibit).*\*\*$/;
+const TABLE_SEPARATOR_PATTERN = /^\|?[\s\-:|]+\|?$/;
+type TableAlignment = 'left' | 'center' | 'right';
 
 const isLikelyCssArtifactLine = (line: string) => {
   const trimmed = line.trim();
@@ -34,10 +37,45 @@ const splitRow = (row: string) => {
   return content.split('|').map(cleanCell);
 };
 
+const parseTableAlignment = (cell: string): TableAlignment => {
+  const trimmed = cell.trim();
+  const leftAligned = trimmed.startsWith(':');
+  const rightAligned = trimmed.endsWith(':');
+
+  if (leftAligned && rightAligned) return 'center';
+  if (rightAligned) return 'right';
+  return 'left';
+};
+
+const isNumericLikeCell = (value: string) => {
+  const normalized = value.replace(/[,\s]/g, '').trim();
+  if (!normalized) return false;
+  return /^[<>~≈]?[$€£¥]?-?\d+(?:\.\d+)?(?:%|x|X|倍|万|亿|年|天|元|美元|m|M|k|K)?$/.test(normalized);
+};
+
+const resolveAlignmentClass = (alignment: TableAlignment) => {
+  if (alignment === 'center') return 'text-center';
+  if (alignment === 'right') return 'text-right';
+  return 'text-left';
+};
+
+const collectTableLines = (sourceLines: string[], startIndex: number) => {
+  const tableLines = [sourceLines[startIndex], sourceLines[startIndex + 1]];
+  let nextIndex = startIndex + 2;
+
+  while (nextIndex < sourceLines.length && sourceLines[nextIndex].trim().includes('|')) {
+    tableLines.push(sourceLines[nextIndex]);
+    nextIndex += 1;
+  }
+
+  return { tableLines, nextIndex };
+};
+
 const TableRenderer: React.FC<{ lines: string[]; caption?: string }> = ({ lines, caption }) => {
   if (lines.length < 2) return null;
 
   const headerRow = splitRow(lines[0]);
+  const alignmentRow = splitRow(lines[1]);
   const bodyRows = lines.slice(2).map(splitRow);
 
   let maxCols = headerRow.length;
@@ -52,42 +90,54 @@ const TableRenderer: React.FC<{ lines: string[]; caption?: string }> = ({ lines,
 
   const normalizedHeader = normalize(headerRow);
   const normalizedBody = bodyRows.map(normalize);
+  const normalizedAlignments = normalize(alignmentRow.map(parseTableAlignment));
+  const numericColumns = Array.from({ length: maxCols }, (_, colIndex) => {
+    const values = normalizedBody.map((row) => row[colIndex]).filter(Boolean);
+    return values.length > 0 && values.every(isNumericLikeCell);
+  });
+  const minTableWidth = maxCols >= 5 ? `${Math.min(84, maxCols * 10)}rem` : undefined;
 
   return (
-    <div className="pdf-avoid-break my-8 w-full overflow-x-auto rounded-xl border border-slate-200 bg-white shadow-sm">
+    <div className="pdf-avoid-break my-8 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
       {caption && (
-        <div className="border-b border-slate-200 bg-slate-50 px-4 py-2 text-center">
-          <span className="text-xs font-bold uppercase tracking-wider text-slate-700">{caption}</span>
+        <div className="border-b border-slate-200 bg-slate-50 px-4 py-2.5 text-center">
+          <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-slate-700">{caption}</span>
         </div>
       )}
-      <table className="w-full border-collapse text-left text-sm">
-        <thead>
+      <div className="w-full overflow-x-auto">
+        <table className="min-w-full border-collapse text-sm" style={minTableWidth ? { minWidth: minTableWidth } : undefined}>
+          <thead>
           <tr>
             {normalizedHeader.map((header, index) => (
               <th
                 key={index}
-                className="border-b-2 border-slate-300 border-r border-slate-200 bg-slate-100 px-4 py-3 font-bold text-slate-700 last:border-r-0"
+                className={`border-b-2 border-slate-300 border-r border-slate-200 bg-slate-100 px-4 py-3 font-bold text-slate-700 last:border-r-0 ${resolveAlignmentClass(
+                  normalizedAlignments[index]
+                )} ${numericColumns[index] ? 'whitespace-nowrap' : 'break-words'}`}
               >
                 <span dangerouslySetInnerHTML={{ __html: parseInline(header) }} />
               </th>
             ))}
           </tr>
-        </thead>
-        <tbody>
+          </thead>
+          <tbody>
           {normalizedBody.map((row, rowIndex) => (
             <tr key={rowIndex} className="even:bg-slate-50/40 hover:bg-blue-50/30 transition-colors">
               {row.map((cell, colIndex) => (
                 <td
                   key={colIndex}
-                  className="border-b border-r border-slate-200 px-4 py-2.5 align-top text-slate-700 last:border-r-0"
+                  className={`border-b border-r border-slate-200 px-4 py-2.5 align-top text-slate-700 last:border-r-0 ${resolveAlignmentClass(
+                    normalizedAlignments[colIndex]
+                  )} ${numericColumns[colIndex] ? 'whitespace-nowrap font-medium tabular-nums' : 'break-words'}`}
                 >
                   <span dangerouslySetInnerHTML={{ __html: parseInline(cell) }} />
                 </td>
               ))}
             </tr>
           ))}
-        </tbody>
-      </table>
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
@@ -142,23 +192,31 @@ export const MarkdownRenderer: React.FC<{
       }
     }
 
-    if (line.includes('|') && index + 1 < lines.length && lines[index + 1].trim().match(/^\|?[\s\-:|]+\|?$/)) {
-      let caption: string | undefined;
-      const prevLine = index > 0 ? lines[index - 1].trim() : '';
-      if (prevLine.match(/^\*\*(图表|Table|Figure|Exhibit).*\*\*$/)) {
-        caption = prevLine.replace(/\*\*/g, '');
-      }
-
-      const tableLines = [line, lines[index + 1]];
-      index += 2;
-      while (index < lines.length && lines[index].trim().includes('|')) {
-        tableLines.push(lines[index]);
-        index += 1;
-      }
+    if (
+      TABLE_CAPTION_PATTERN.test(line) &&
+      index + 2 < lines.length &&
+      lines[index + 1].trim().includes('|') &&
+      TABLE_SEPARATOR_PATTERN.test(lines[index + 2].trim())
+    ) {
+      const caption = line.replace(/\*\*/g, '');
+      const { tableLines, nextIndex } = collectTableLines(lines, index + 1);
+      index = nextIndex;
 
       const rangeStart = paragraphCursor;
       const rangeEnd = paragraphCursor + Math.max(0, tableLines.length - 1);
       blocks.push(<TableRenderer key={`table-${index}`} lines={tableLines} caption={caption} />);
+      pushAfterRange(rangeStart, rangeEnd, `after-table-${index}`);
+      paragraphCursor = rangeEnd + 1;
+      continue;
+    }
+
+    if (line.includes('|') && index + 1 < lines.length && TABLE_SEPARATOR_PATTERN.test(lines[index + 1].trim())) {
+      const { tableLines, nextIndex } = collectTableLines(lines, index);
+      index = nextIndex;
+
+      const rangeStart = paragraphCursor;
+      const rangeEnd = paragraphCursor + Math.max(0, tableLines.length - 1);
+      blocks.push(<TableRenderer key={`table-${index}`} lines={tableLines} />);
       pushAfterRange(rangeStart, rangeEnd, `after-table-${index}`);
       paragraphCursor = rangeEnd + 1;
       continue;
@@ -260,7 +318,7 @@ export const MarkdownRenderer: React.FC<{
       continue;
     }
 
-    if (line.match(/^\*\*(图表|Table|Figure|Exhibit).*\*\*$/)) {
+    if (line.match(TABLE_CAPTION_PATTERN)) {
       blocks.push(
         <p key={index} className="mb-2 mt-6 text-center text-sm font-bold uppercase tracking-wide text-slate-800">
           {line.replace(/\*\*/g, '')}

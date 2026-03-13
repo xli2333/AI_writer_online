@@ -176,6 +176,23 @@ const DEFAULT_COMMERCIAL_HUMANIZER_QUICK_CHECKS = [
   '是否用模糊主体、黑话或抽象大词代替具体事实和动作。',
 ];
 
+const MARKDOWN_TABLE_STYLE_RULE =
+  '当对比维度、参数、时间线或多项数据用表格比散文更清晰时，可以在正文中使用简洁的 Markdown 表格，不要为了“像文章”强行改写成散文。';
+const MARKDOWN_TABLE_FORMAT_RULE =
+  '如果使用表格，只用标准 Markdown 表格语法，尽量控制在 2-5 列，单元格用短语或短句，不要把整段大段落塞进表格。';
+const MARKDOWN_TABLE_PRESERVE_RULE =
+  '已有的 Markdown 表格如果确实承载了对比、参数或数据信息，就保留表格结构，不要在终审或去 AI 化时把它强行打散成散文。';
+
+const appendUniqueRules = (rules: string[], additions: string[]) => {
+  const nextRules = [...rules];
+  additions.forEach((rule) => {
+    if (!nextRules.includes(rule)) {
+      nextRules.push(rule);
+    }
+  });
+  return nextRules;
+};
+
 let runtimeMasterPersona = DEFAULT_MASTER_PERSONA;
 let runtimeAntiAiStyleRules = [...DEFAULT_ANTI_AI_STYLE_RULES];
 let runtimeCommercialHumanizerRules = [...DEFAULT_COMMERCIAL_HUMANIZER_RULES];
@@ -238,7 +255,26 @@ const applyRuntimePromptAssets = (assets: Awaited<ReturnType<typeof loadRuntimeP
   if (runtimeCommercialHumanizerQuickChecks.length === 0) {
     runtimeCommercialHumanizerQuickChecks = [...DEFAULT_COMMERCIAL_HUMANIZER_QUICK_CHECKS];
   }
+
+  runtimeAntiAiStyleRules = appendUniqueRules(runtimeAntiAiStyleRules, [MARKDOWN_TABLE_STYLE_RULE, MARKDOWN_TABLE_FORMAT_RULE]);
+  runtimeCommercialHumanizerRules = appendUniqueRules(runtimeCommercialHumanizerRules, [
+    MARKDOWN_TABLE_STYLE_RULE,
+    MARKDOWN_TABLE_FORMAT_RULE,
+    MARKDOWN_TABLE_PRESERVE_RULE,
+  ]);
+  runtimeCommercialHumanizerQuickChecks = appendUniqueRules(runtimeCommercialHumanizerQuickChecks, [
+    '如果正文里出现 Markdown 表格，它是否真的让对比或数据更清楚，而不是徒增形式感。',
+    '如果已有表格承载参数或对比信息，修订时是否错误地把它打散回散文。',
+  ]);
 };
+
+const buildMarkdownTableGuidanceBlock = () =>
+  [
+    'Markdown 表格使用规则：',
+    `1. ${MARKDOWN_TABLE_STYLE_RULE}`,
+    `2. ${MARKDOWN_TABLE_FORMAT_RULE}`,
+    `3. ${MARKDOWN_TABLE_PRESERVE_RULE}`,
+  ].join('\n');
 
 const ensureRuntimePromptAssets = async (profile = 'fdsm') => {
   const normalizedProfile = String(profile || 'fdsm');
@@ -2095,6 +2131,62 @@ const buildFallbackChunkPlan = (
   });
 };
 
+const reconcileChunkPlanToExpectedCount = ({
+  normalized,
+  fallbackPlan,
+  expectedChunkCount,
+}: {
+  normalized: WritingChunkPlanItem[];
+  fallbackPlan: WritingChunkPlanItem[];
+  expectedChunkCount: number;
+}): WritingChunkPlanItem[] => {
+  if (normalized.length === expectedChunkCount) {
+    return normalized;
+  }
+
+  const buckets = Array.from({ length: expectedChunkCount }, () => [] as WritingChunkPlanItem[]);
+  normalized.forEach((item, index) => {
+    const bucketIndex = Math.min(expectedChunkCount - 1, Math.floor((index * expectedChunkCount) / normalized.length));
+    buckets[bucketIndex].push(item);
+  });
+
+  return fallbackPlan.map((fallback, index) => {
+    const bucket = buckets[index];
+    if (!bucket || bucket.length === 0) {
+      return fallback;
+    }
+
+    const mergedSections = uniqueStrings([...bucket.flatMap((item) => item.sections || []), ...fallback.sections], 6);
+    if (bucket.length === 1) {
+      const [item] = bucket;
+      return {
+        ...fallback,
+        title: sanitizeChunkText(item.title, fallback.title),
+        sections: mergedSections.length > 0 ? mergedSections : fallback.sections,
+        targetLength: fallback.targetLength,
+        purpose: sanitizeChunkText(item.purpose, fallback.purpose),
+      };
+    }
+
+    const titleCandidates = bucket
+      .map((item) => sanitizeChunkText(item.title))
+      .filter(Boolean)
+      .filter((title) => !isGenericChunkTitle(title));
+    const mergedTitleSeed =
+      titleCandidates.length >= 2
+        ? `${titleCandidates[0]} / ${titleCandidates[titleCandidates.length - 1]}`
+        : titleCandidates[0] || fallback.title;
+
+    return {
+      ...fallback,
+      title: sanitizeChunkText(mergedTitleSeed, fallback.title),
+      sections: mergedSections.length > 0 ? mergedSections : fallback.sections,
+      targetLength: fallback.targetLength,
+      purpose: fallback.purpose,
+    };
+  });
+};
+
 const normalizeChunkPlanStrict = (raw: unknown, outline: string, options: WritingTaskOptions): WritingChunkPlanItem[] => {
   const expectedChunkCount = hasExplicitDesiredLength(options)
     ? getExpectedChunkCount(options)
@@ -2112,13 +2204,20 @@ const normalizeChunkPlanStrict = (raw: unknown, outline: string, options: Writin
 
   const normalized = normalizeChunkPlan(raw, outline, options);
   if (normalized.length !== expectedChunkCount) {
-    console.warn('[chunk-plan] model returned unexpected chunk count, using fallback plan', {
+    const reconciled = reconcileChunkPlanToExpectedCount({
+      normalized,
+      fallbackPlan,
+      expectedChunkCount,
+    });
+    console.warn('[chunk-plan] model returned unexpected chunk count, using reconciled plan', {
       expectedChunkCount,
       actualChunkCount: normalized.length,
+      returnedTitles: normalized.map((item) => item.title),
+      returnedSections: normalized.map((item) => item.sections),
       desiredLength: options.desiredLength,
       chunkLength: options.chunkLength,
     });
-    return fallbackPlan;
+    return reconciled;
   }
 
   return normalized.map((item, index) => ({
@@ -2606,11 +2705,13 @@ const buildChunkPlan = async (
   const prompt = [
     buildTaskBrief(topic, direction, options),
     `Strict chunk count: return exactly ${expectedChunks} chunks, no more and no less.`,
+    `The top-level JSON array length must be exactly ${expectedChunks}. Returning ${expectedChunks - 1}, ${expectedChunks + 1}, or wrapping the array in an object is invalid.`,
     hasExplicitDesiredLength(options)
       ? `Keep the sum of all targetLength values close to ${options.desiredLength}.`
       : `If total length is not specified, let the article expand naturally and use roughly ${getPreferredChunkLength(options)} characters per chunk as a soft reference.`,
     `请把这份大纲严格拆成 ${expectedChunks} 个写作 chunk，不多不少。`,
     '每个 chunk 返回：title、sections、targetLength、purpose。',
+    '每个 chunk 对象都必须包含这 4 个字段，不能省略，不能返回别名，不能额外包一层 chunks 字段。',
     'sections 只能写大纲里真实存在的小节名。',
     'purpose 必须是一句正常中文，说明本轮写作要解决什么。',
     '只输出 JSON 数组。',
@@ -2633,6 +2734,7 @@ const buildChunkPlan = async (
           targetLength: { type: Type.INTEGER },
           purpose: { type: Type.STRING },
         },
+        required: ['title', 'sections', 'targetLength', 'purpose'],
       },
     },
   });
@@ -2681,9 +2783,10 @@ const generateChunk = async ({
     '1. 全文使用简体中文。',
     '2. 不要重复前文观点和段落。',
     '3. 不要使用明显 AI 套话和装饰性修辞。',
-    '4. 句子要自然，段落要推进，不要把正文写成条列。',
+    '4. 句子要自然，段落要推进，不要把正文写成条列；但如果对比、参数或多维数据更适合表格，可以在正文中写简洁的 Markdown 表格。',
     '5. 本轮只完成分配给你的部分，不要抢写后文。',
     '6. 参考模板文的节奏、密度和气质，但不要照抄模板句子。',
+    buildMarkdownTableGuidanceBlock(),
     '参考模板文：',
     formatReferenceTemplatesForPrompt(referenceArticles),
     'writing_insights.md：',
@@ -2743,7 +2846,8 @@ const assembleArticleDraft = async ({
     '5. 重点处理 chunk 接缝：重复开头、重复收束、转场突兀、段落断裂、信息堆叠。',
     '6. 除非为了衔接绝对必要，不要整段重写；能删一句、并一句、补一句过渡，就不要大改。',
     '7. 不要引入当前稿件之外的新事实、新论点、新例子。',
-    '8. 正文保持自然段推进，不要改写成条目列表。',
+    '8. 正文保持自然段推进，不要改写成条目列表；但如果某段信息天然适合对比、参数或时间线表格，可以保留或整理成简洁的 Markdown 表格。',
+    buildMarkdownTableGuidanceBlock(),
     '结构检查：',
     buildArticleStructureChecklist(draft, outline, chunkPlan),
     headingPlan.length > 0 ? `小标题计划：\n${headingPlan.map((item, index) => `${index + 1}. ${item}`).join('\n')}` : '',
@@ -2972,6 +3076,7 @@ const reviewArticleEditorialPass = async ({
     '你的职责是诊断剩余问题，不是要求另写一篇。',
     '终审目标：在原文基础上做最小必要修改，让分段写出的内容成为一篇完整、自然、可发布的文章。',
     '你必须把当前稿件与参考模板文直接对比，重点检查：是否已经是一篇完整文章、是否有明确且自然的 ## 子标题、chunk 接缝、重复开头/收束、段落推进、语气统一、遣词克制、是否自然。',
+    '如果正文里出现简洁的 Markdown 表格，并且它确实承担了对比、参数或数据整理功能，不要把它误判为格式噪音或 AI 版式痕迹。',
     '如果子标题出现“第一部分”“一、”“1.”“尾声”“总结：”这类编号、阶段标签或冒号前缀，要明确判为问题。',
     '这是渐进式审稿。如果前一轮已经解决的问题，本轮不要重复提出。',
     `最多返回 ${MAGAZINE_MAX_ISSUES_PER_PASS} 个当前真正阻塞发布的问题。`,
@@ -2982,6 +3087,7 @@ const reviewArticleEditorialPass = async ({
     '如果只剩句级用词、节奏、AI 腔问题，strategy 用 micro_polish。',
     'issues 中每项必须含有：severity, scope, title, diagnosis, instruction, excerpt。',
     '输出内容使用简体中文。',
+    buildMarkdownTableGuidanceBlock(),
     '此前终审记录：',
     formatEditorialHistoryForPrompt(reviewHistory),
     '结构检查：',
@@ -3082,10 +3188,12 @@ const reviseArticleEditorialPass = async ({
     '4. 用参考模板文统一语气、段落密度和开头节奏。',
     '5. 只解决下列仍未解决的问题，不要打扰已经成立的段落。',
     '6. 默认保留当前标题、整体论证顺序和大部分原句。',
+    `6a. ${MARKDOWN_TABLE_PRESERVE_RULE}`,
     revisionMode === 'structure_tune'
       ? `7. 如果需要补子标题，只能在以下计划和大纲范围内落出 ${TARGET_ARTICLE_H2_MIN}-${TARGET_ARTICLE_H2_MAX} 个 ## 子标题。`
       : '7. 除非问题明确要求，否则不要改动既有子标题和段落顺序。',
     '8. 子标题必须写成自然短句，不要带“第一部分”“一、”“1.”“尾声”“总结：”这类编号、阶段标签或冒号前缀。',
+    buildMarkdownTableGuidanceBlock(),
     '终审意见：',
     formatEditorialReviewMarkdown(review, passIndex),
     '结构检查：',
@@ -3141,8 +3249,10 @@ const reviewCommercialHumanizationPass = async ({
     '只检查会直接影响“像成熟编辑写成的商业文章”这一发布感的问题。',
     '重点检查：模板化连接句、万能商业黑话、模糊主体归因、过度工整排比、空泛总结、聊天式客套、装饰性引号和万能积极结尾。',
     '同时检查：知名度堆砌、挑战与未来展望公式段、协作式套话、知识截止免责声明、破折号/粗体/emoji/标题列表等格式残留。',
+    '如果正文里出现简洁的 Markdown 表格，并且它确实承担了对比、参数或数据整理功能，不要把它误判为 AI 版式痕迹。',
     '如果某处只是正常商业写作表达，不要误判为 AI 腔。',
     `最多返回 ${COMMERCIAL_HUMANIZER_MAX_ISSUES} 个问题。`,
+    buildMarkdownTableGuidanceBlock(),
     '返回 JSON 对象，字段为：summary, ready, toneGuardrail, unresolvedRisk, issues。',
     'issues 中每项必须含有：category, severity, title, diagnosis, instruction, excerpt。',
     '输出内容使用简体中文。',
@@ -3236,6 +3346,8 @@ const reviseCommercialHumanizationPass = async ({
     '6. 结尾只允许回到文中已经建立的判断，不补“未来已来”“值得思考”这类万能积极收束。',
     '7. 如果出现破折号、粗体、emoji、内联标题列表等版式痕迹，优先去掉格式腔，而不是新增装饰。',
     '8. 不要引入 humanizer 原文里“适当使用我”“允许一些混乱”那类会把商业文章改成个人随笔的处理。',
+    `9. ${MARKDOWN_TABLE_PRESERVE_RULE}`,
+    buildMarkdownTableGuidanceBlock(),
     '商业稿去AI化诊断：',
     formatCommercialHumanizerMarkdown(report),
     '结构检查：',

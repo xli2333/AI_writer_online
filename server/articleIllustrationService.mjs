@@ -14,10 +14,11 @@ const GENERATED_ROOT = path.join(
 );
 const DEFAULT_IMAGE_MODEL = 'gemini-3-pro-image-preview';
 const DEFAULT_PLANNER_MODEL = 'gemini-3.1-pro-preview';
+const IMAGE_ASPECT_RATIO = '1:1';
 const IMAGE_WIDTH = 3840;
-const IMAGE_HEIGHT = 2160;
+const IMAGE_HEIGHT = 3840;
 const CHART_VIEWBOX = `0 0 ${IMAGE_WIDTH} ${IMAGE_HEIGHT}`;
-const ILLUSTRATION_PROMPT_VERSION = 'illustration-v3';
+const ILLUSTRATION_PROMPT_VERSION = 'illustration-v5';
 const TARGET_CHARS_PER_ILLUSTRATION = 1000;
 const PLANNER_TIMEOUT_MS = 10 * 60 * 1000;
 const IMAGE_TIMEOUT_MS = 12 * 60 * 1000;
@@ -299,12 +300,72 @@ const normalizeHexColor = (value, fallback) => {
   return /^#[0-9a-f]{6}$/i.test(normalized) ? normalized : fallback;
 };
 
-const buildSourceHash = ({ profileId, title, articleContent }) =>
+const buildSourceHash = ({ profileId, title, articleContent, styleReferenceImage }) =>
   crypto
     .createHash('sha1')
-    .update(`${profileId}\n${cleanText(title)}\n${cleanText(articleContent)}`, 'utf8')
+    .update(
+      `${profileId}\n${cleanText(title)}\n${cleanText(articleContent)}\n${buildIllustrationStyleReferenceFingerprint(styleReferenceImage)}`,
+      'utf8'
+    )
     .digest('hex')
     .slice(0, 16);
+
+const parseInlineImageDataUrl = (value) => {
+  const matched = String(value || '').match(/^data:([^;]+);base64,(.+)$/);
+  if (!matched) {
+    return null;
+  }
+  return {
+    mimeType: matched[1],
+    base64: matched[2],
+    buffer: Buffer.from(matched[2], 'base64'),
+  };
+};
+
+const normalizeIllustrationStyleReferenceImage = (value) => {
+  if (!value || typeof value !== 'object') {
+    return undefined;
+  }
+  const dataUrl = cleanText(value.dataUrl);
+  const parsed = parseInlineImageDataUrl(dataUrl);
+  if (!parsed) {
+    return undefined;
+  }
+  const name = cleanText(value.name) || 'style-reference';
+  const mimeType = cleanText(value.mimeType || parsed.mimeType) || parsed.mimeType || 'image/png';
+  const idSeed = `${name}\n${mimeType}\n${dataUrl}`;
+  return {
+    id: cleanText(value.id) || crypto.createHash('sha1').update(idSeed, 'utf8').digest('hex').slice(0, 12),
+    name,
+    mimeType,
+    dataUrl,
+  };
+};
+
+const buildIllustrationStyleReferenceFingerprint = (value) => {
+  const normalized = normalizeIllustrationStyleReferenceImage(value);
+  if (!normalized) {
+    return '';
+  }
+  return crypto
+    .createHash('sha1')
+    .update(`${normalized.name}\n${normalized.mimeType}\n${normalized.dataUrl}`, 'utf8')
+    .digest('hex');
+};
+
+const buildIllustrationStyleReferenceParts = (value) => {
+  const normalized = normalizeIllustrationStyleReferenceImage(value);
+  const parsed = normalized ? parseInlineImageDataUrl(normalized.dataUrl) : null;
+  if (!normalized || !parsed) {
+    return [];
+  }
+  return [
+    {
+      text: `Style reference image: ${normalized.name}. Learn its crop, composition, palette, texture, lighting, and editorial feel. Use it only as style guidance, not as literal subject matter.`,
+    },
+    createPartFromBase64(parsed.base64, normalized.mimeType || parsed.mimeType || 'image/png'),
+  ];
+};
 
 const buildIllustrationProgress = ({
   phase,
@@ -384,9 +445,10 @@ const extractArticleTitle = (fallback, content) => {
   return cleanText(fallback) || '未命名文章';
 };
 
-export const resolveIllustrationRequestIdentity = ({ profileId, articleTitle, articleContent }) => {
+export const resolveIllustrationRequestIdentity = ({ profileId, articleTitle, articleContent, styleReferenceImage }) => {
   const normalizedProfileId = resolveStyleProfileId(profileId);
   const resolvedTitle = extractArticleTitle(articleTitle, articleContent);
+  const normalizedStyleReferenceImage = normalizeIllustrationStyleReferenceImage(styleReferenceImage);
   return {
     normalizedProfileId,
     resolvedTitle,
@@ -394,8 +456,10 @@ export const resolveIllustrationRequestIdentity = ({ profileId, articleTitle, ar
       profileId: normalizedProfileId,
       title: resolvedTitle,
       articleContent,
+      styleReferenceImage: normalizedStyleReferenceImage,
     }),
     articleHash: computeArticleHash(normalizedProfileId, articleContent),
+    styleReferenceImage: normalizedStyleReferenceImage,
   };
 };
 
@@ -650,6 +714,7 @@ const buildIllustrationPlanPrompt = ({
   dataHints,
   normalizedUserPrompt,
   normalizedImageCountPrompt,
+  hasStyleReferenceImage = false,
 }) => {
   let planPrompt = [
     `目标图数：${targetImageCount}`,
@@ -672,6 +737,9 @@ const buildIllustrationPlanPrompt = ({
     normalizedImageCountPrompt
       ? `配图数量 / 规则：${normalizedImageCountPrompt}`
       : 'No extra image-count rule was provided.',
+    hasStyleReferenceImage
+      ? 'A style reference image is attached. Extract its visual language and apply that art direction consistently across the whole illustration set.'
+      : 'No style reference image is attached.',
     'Return planned_image_count as an integer from 1 to 10.',
     normalizedImageCountPrompt
       ? 'If the user gave an explicit number, obey it exactly. If the user gave a rule, infer the final count from article structure and make slots.length exactly match planned_image_count.'
@@ -1179,7 +1247,7 @@ const buildImagePrompt = ({ articleTitle, slot, visualSystem, profileId, targetI
     `禁止元素：${promptAssets.negativePrompt}`,
   ].join('\n');
 
-const generateJson = async ({ apiKey, model, systemInstruction, prompt, schema }) => {
+const generateJson = async ({ apiKey, model, systemInstruction, prompt, schema, referenceParts = [] }) => {
   const client = createGenAiClient(apiKey, PLANNER_TIMEOUT_MS + 60_000);
   const candidates = [...new Set([model, DEFAULT_PLANNER_MODEL, 'gemini-2.5-flash'].filter(Boolean))];
   let lastError;
@@ -1190,7 +1258,7 @@ const generateJson = async ({ apiKey, model, systemInstruction, prompt, schema }
         callWithRetry(() =>
           client.models.generateContent({
             model: candidateModel,
-            contents: [{ role: 'user', parts: [{ text: prompt }] }],
+            contents: [{ role: 'user', parts: [{ text: prompt }, ...referenceParts] }],
             config: {
               systemInstruction,
               responseMimeType: 'application/json',
@@ -1213,7 +1281,7 @@ const generateJson = async ({ apiKey, model, systemInstruction, prompt, schema }
   throw lastError;
 };
 
-const generateImageBuffer = async ({ apiKey, prompt, model = DEFAULT_IMAGE_MODEL, fallbackSvg }) => {
+const generateImageBuffer = async ({ apiKey, prompt, model = DEFAULT_IMAGE_MODEL, fallbackSvg, referenceParts = [] }) => {
   if (shouldUseMockProvider()) {
     const buffer = await sharp(Buffer.from(fallbackSvg, 'utf8')).png({ compressionLevel: 0, palette: false }).toBuffer();
     return {
@@ -1228,11 +1296,11 @@ const generateImageBuffer = async ({ apiKey, prompt, model = DEFAULT_IMAGE_MODEL
       () =>
         client.models.generateContent({
           model,
-          contents: [{ role: 'user', parts: [{ text: prompt }] }],
+          contents: [{ role: 'user', parts: [{ text: prompt }, ...referenceParts] }],
           config: {
             responseModalities: [Modality.IMAGE],
             imageConfig: {
-              aspectRatio: '16:9',
+              aspectRatio: IMAGE_ASPECT_RATIO,
               imageSize: '4K',
             },
           },
@@ -1571,13 +1639,13 @@ const resolveIllustrationAssetPath = ({ sourceHash, assetUrl }) => {
 };
 
 const decodeInlineImageDataUrl = (value) => {
-  const matched = String(value || '').match(/^data:([^;]+);base64,(.+)$/);
-  if (!matched) {
+  const parsed = parseInlineImageDataUrl(value);
+  if (!parsed) {
     return null;
   }
   return {
-    mimeType: matched[1],
-    buffer: Buffer.from(matched[2], 'base64'),
+    mimeType: parsed.mimeType,
+    buffer: parsed.buffer,
   };
 };
 
@@ -1711,6 +1779,9 @@ const normalizeIllustrationManifest = (manifest, defaults = {}) => {
 
   const normalizedSlots = slots.map((slot) => syncSlotWithActiveAsset(slot, assetVersions[slot.id]));
   const assets = buildActiveAssetList(normalizedSlots, assetVersions);
+  const styleReferenceImage = normalizeIllustrationStyleReferenceImage(
+    manifest?.styleReferenceImage || defaults.styleReferenceImage
+  );
 
   return {
     promptVersion: cleanText(manifest?.promptVersion || defaults.promptVersion) || ILLUSTRATION_PROMPT_VERSION,
@@ -1723,6 +1794,7 @@ const normalizeIllustrationManifest = (manifest, defaults = {}) => {
     targetImageCount: Number(manifest?.targetImageCount || defaults.targetImageCount || normalizedSlots.length || 1),
     globalUserPrompt: cleanText(manifest?.globalUserPrompt || defaults.globalUserPrompt) || undefined,
     imageCountPrompt: cleanText(manifest?.imageCountPrompt || defaults.imageCountPrompt) || undefined,
+    styleReferenceImage,
     status: cleanText(manifest?.status || defaults.status) || 'ready',
     generatedAt: cleanText(manifest?.generatedAt || defaults.generatedAt) || undefined,
     updatedAt: cleanText(manifest?.updatedAt || defaults.updatedAt) || undefined,
@@ -1851,6 +1923,7 @@ const renderSlotVersion = async ({
   slot,
   visualSystem,
   userPrompt,
+  styleReferenceImage,
   onImageSaved,
   abortIfCanceled,
 }) => {
@@ -1911,11 +1984,22 @@ const renderSlotVersion = async ({
     prompt = `${prompt}\n\n用户追加要求：${cleanText(userPrompt)}`;
   }
 
+  prompt = prompt
+    .replaceAll('横版', '方形')
+    .replaceAll('横图', '方图')
+    .replaceAll('16:9', IMAGE_ASPECT_RATIO)
+    .replaceAll('3840x2160', '3840x3840');
+  const styleReferenceParts = buildIllustrationStyleReferenceParts(styleReferenceImage);
+  if (styleReferenceParts.length > 0) {
+    prompt = `${prompt}\n\nA style reference image is attached. Match its crop discipline, palette, texture, lighting, and editorial mood without copying unrelated literal subjects.`;
+  }
+
   await abortIfCanceled?.();
   const generated = await generateImageBuffer({
     apiKey,
     prompt,
     model: imageModel || DEFAULT_IMAGE_MODEL,
+    referenceParts: styleReferenceParts,
     fallbackSvg: renderMockSceneSvg({
       articleTitle,
       slot: {
@@ -2037,15 +2121,19 @@ export const generateArticleIllustrations = async ({
   options = {},
   userPrompt = '',
   imageCountPrompt = '',
+  styleReferenceImage,
   force = false,
 }) => {
   const normalizedProfileId = resolveStyleProfileId(profileId);
   const profile = getStyleProfile(normalizedProfileId);
   const resolvedTitle = extractArticleTitle(articleTitle, articleContent);
+  const normalizedStyleReferenceImage = normalizeIllustrationStyleReferenceImage(styleReferenceImage);
+  const requestedStyleReferenceFingerprint = buildIllustrationStyleReferenceFingerprint(normalizedStyleReferenceImage);
   const sourceHash = buildSourceHash({
     profileId: normalizedProfileId,
     title: resolvedTitle,
     articleContent,
+    styleReferenceImage: normalizedStyleReferenceImage,
   });
   const articleHash = computeArticleHash(normalizedProfileId, articleContent);
   const targetDir = path.join(GENERATED_ROOT, sourceHash);
@@ -2064,12 +2152,15 @@ export const generateArticleIllustrations = async ({
     );
     const hasMissingExplanation = Boolean(existing?.slots?.some((slot) => !cleanText(slot.explanation)));
     const isLegacyManifest = existing?.promptVersion !== ILLUSTRATION_PROMPT_VERSION || !existing?.assetVersions;
+    const hasStyleReferenceMismatch =
+      buildIllustrationStyleReferenceFingerprint(existing?.styleReferenceImage) !== requestedStyleReferenceFingerprint;
     if (
       existing &&
       (!existing.sourceHash || existing.sourceHash === sourceHash) &&
       !hasSvgAsset &&
       !hasMissingExplanation &&
-      !isLegacyManifest
+      !isLegacyManifest &&
+      !hasStyleReferenceMismatch
     ) {
       return existing;
     }
@@ -2085,6 +2176,7 @@ export const generateArticleIllustrations = async ({
   });
   const dataHints = extractDataHints(paragraphs);
   const normalizedUserPrompt = cleanText(userPrompt);
+  const styleReferenceParts = buildIllustrationStyleReferenceParts(normalizedStyleReferenceImage);
   const promptAssets = await readIllustrationPrompts(normalizedProfileId);
   const { system, guardrails, dataRules, profileStyle, negativePrompt } = promptAssets;
 
@@ -2122,6 +2214,7 @@ export const generateArticleIllustrations = async ({
     dataHints,
     normalizedUserPrompt,
     normalizedImageCountPrompt,
+    hasStyleReferenceImage: Boolean(normalizedStyleReferenceImage),
   });
 
   const rawPlan =
@@ -2138,6 +2231,7 @@ export const generateArticleIllustrations = async ({
           systemInstruction: `${system}\n\n${guardrails}\n\n${dataRules}\n\n风格补充：\n${profileStyle}`,
           prompt: planPrompt,
           schema: PLAN_SCHEMA,
+          referenceParts: styleReferenceParts,
         });
 
   const finalizedTargetImageCount = clampSlotCount(Number(rawPlan?.planned_image_count) || targetImageCount);
@@ -2160,6 +2254,7 @@ export const generateArticleIllustrations = async ({
     targetImageCount: finalizedTargetImageCount,
     globalUserPrompt: normalizedUserPrompt || undefined,
     imageCountPrompt: normalizedImageCountPrompt || undefined,
+    styleReferenceImage: normalizedStyleReferenceImage,
     status: 'rendering',
     generatedAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),
@@ -2213,6 +2308,7 @@ export const generateArticleIllustrations = async ({
       },
       visualSystem: normalizedPlan.visualSystem,
       userPrompt: normalizedUserPrompt,
+      styleReferenceImage: normalizedStyleReferenceImage,
     });
 
     warnings.push(...rendered.warnings);
@@ -2248,17 +2344,26 @@ export const generateArticleIllustrationsProgressive = async ({
   options = {},
   userPrompt = '',
   imageCountPrompt = '',
+  styleReferenceImage,
   force = false,
   onProgress,
   isCanceled,
   shouldPersistCancellation,
 }) => {
-  const { normalizedProfileId, resolvedTitle, sourceHash, articleHash } = resolveIllustrationRequestIdentity({
+  const {
+    normalizedProfileId,
+    resolvedTitle,
+    sourceHash,
+    articleHash,
+    styleReferenceImage: normalizedStyleReferenceImage,
+  } = resolveIllustrationRequestIdentity({
     profileId,
     articleTitle,
     articleContent,
+    styleReferenceImage,
   });
   const profile = getStyleProfile(normalizedProfileId);
+  const styleReferenceParts = buildIllustrationStyleReferenceParts(normalizedStyleReferenceImage);
   const targetDir = path.join(GENERATED_ROOT, sourceHash);
   const manifestPath = path.join(targetDir, 'manifest.json');
   const startedAt = new Date().toISOString();
@@ -2295,6 +2400,7 @@ export const generateArticleIllustrationsProgressive = async ({
         targetImageCount,
         globalUserPrompt: normalizedUserPrompt || undefined,
         imageCountPrompt: normalizedImageCountPrompt || undefined,
+        styleReferenceImage: normalizedStyleReferenceImage,
         status: 'canceled',
         generatedAt: startedAt,
         updatedAt: startedAt,
@@ -2363,6 +2469,7 @@ export const generateArticleIllustrationsProgressive = async ({
     targetImageCount,
     globalUserPrompt: normalizedUserPrompt || undefined,
     imageCountPrompt: normalizedImageCountPrompt || undefined,
+    styleReferenceImage: normalizedStyleReferenceImage,
     status: 'planning',
     generatedAt: startedAt,
     updatedAt: startedAt,
@@ -2429,6 +2536,7 @@ export const generateArticleIllustrationsProgressive = async ({
       dataHints,
       normalizedUserPrompt,
       normalizedImageCountPrompt,
+      hasStyleReferenceImage: Boolean(normalizedStyleReferenceImage),
     });
 
     const rawPlan =
@@ -2445,6 +2553,7 @@ export const generateArticleIllustrationsProgressive = async ({
             systemInstruction: `${system}\n\n${guardrails}\n\n${dataRules}\n\n风格补充：\n${profileStyle}`,
             prompt: planPrompt,
             schema: PLAN_SCHEMA,
+            referenceParts: styleReferenceParts,
           });
 
     await abortIfCanceled('图位规划完成，正在整理生成队列');
@@ -2549,6 +2658,7 @@ export const generateArticleIllustrationsProgressive = async ({
         },
         visualSystem: normalizedPlan.visualSystem,
         userPrompt: normalizedUserPrompt,
+        styleReferenceImage: normalizedStyleReferenceImage,
         abortIfCanceled,
         onImageSaved: async ({ slot: interimSlot, asset: interimAsset }) => {
           const interimVersions = {
@@ -2733,6 +2843,7 @@ export const regenerateIllustrationSlot = async ({
       forbidden_elements: Array.isArray(manifest.visualSystem.negativeRules) ? manifest.visualSystem.negativeRules : [],
     },
     userPrompt,
+    styleReferenceImage: manifest.styleReferenceImage,
   });
 
   const nextManifest = normalizeIllustrationManifest({

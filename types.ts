@@ -193,6 +193,13 @@ export interface ArticleIllustrationProgress {
   updatedAt?: string;
 }
 
+export interface ArticleIllustrationStyleReferenceImage {
+  id: string;
+  name: string;
+  mimeType: string;
+  dataUrl: string;
+}
+
 export interface ArticleIllustrationBundle {
   promptVersion: string;
   sourceHash: string;
@@ -204,6 +211,7 @@ export interface ArticleIllustrationBundle {
   targetImageCount: number;
   globalUserPrompt?: string;
   imageCountPrompt?: string;
+  styleReferenceImage?: ArticleIllustrationStyleReferenceImage;
   status: 'idle' | 'planning' | 'rendering' | 'ready' | 'partial' | 'error' | 'canceled';
   generatedAt?: string;
   updatedAt?: string;
@@ -235,21 +243,28 @@ export type WechatTemplateId = 'latepost_report' | 'insight_brief' | 'warm_colum
 
 export type WechatDraftStatus = 'idle' | 'preview_ready' | 'draft_ready' | 'publishing' | 'published' | 'error';
 
-export type WechatCreditsVariant = 'stacked_labels' | 'minimal_labels';
+export type WechatCreditsVariant = 'stacked_labels' | 'minimal_labels' | 'inline_meta_bar';
 
-export type WechatHeadingVariant = 'chapter_marker' | 'red_bar' | 'underline' | 'plain';
+export type WechatHeadingVariant =
+  | 'chapter_marker'
+  | 'red_bar'
+  | 'underline'
+  | 'plain'
+  | 'section_band'
+  | 'accent_tag'
+  | 'number_badge';
 
-export type WechatParagraphVariant = 'body' | 'lead' | 'callout' | 'closing';
+export type WechatParagraphVariant = 'body' | 'lead' | 'callout' | 'closing' | 'spotlight' | 'compact' | 'data_callout';
 
-export type WechatQuoteVariant = 'editorial_quote' | 'plain_quote';
+export type WechatQuoteVariant = 'editorial_quote' | 'plain_quote' | 'accent_panel' | 'centered_pull';
 
-export type WechatListVariant = 'bullet_brief' | 'numbered_steps' | 'plain_list';
+export type WechatListVariant = 'bullet_brief' | 'numbered_steps' | 'plain_list' | 'check_grid' | 'card_list';
 
-export type WechatTableVariant = 'data_grid' | 'compact_grid';
+export type WechatTableVariant = 'data_grid' | 'compact_grid' | 'matrix_panel' | 'minimal_rows';
 
-export type WechatImageVariant = 'full_bleed' | 'editorial_card' | 'caption_focus';
+export type WechatImageVariant = 'full_bleed' | 'editorial_card' | 'caption_focus' | 'shadow_card' | 'caption_band' | 'border_frame';
 
-export type WechatHighlightVariant = 'marker' | 'underline' | 'ink';
+export type WechatHighlightVariant = 'marker' | 'underline' | 'ink' | 'accent_bar';
 
 export interface WechatBlockVariantSelection<TVariant extends string> {
   blockIndex: number;
@@ -282,6 +297,13 @@ export interface WechatRenderPlan {
   beautyAgent: WechatBeautyAgentInfo;
 }
 
+export interface WechatStyleReferenceImage {
+  id: string;
+  name: string;
+  mimeType: string;
+  dataUrl: string;
+}
+
 export interface WechatLayoutSettings {
   templateId: WechatTemplateId;
   author: string;
@@ -295,6 +317,7 @@ export interface WechatLayoutSettings {
   needOpenComment: boolean;
   onlyFansCanComment: boolean;
   artDirectionPrompt?: string;
+  styleReferenceImages?: WechatStyleReferenceImage[];
 }
 
 export interface WechatDraftRecord {

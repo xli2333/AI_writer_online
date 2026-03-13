@@ -5,6 +5,7 @@ import type {
   WechatLayoutSettings,
   WechatPublisherConfigStatus,
   WechatRenderPlan,
+  WechatStyleReferenceImage,
   WechatTemplateId,
 } from '../types';
 import {
@@ -43,6 +44,7 @@ const createDefaultLayout = (
   needOpenComment: previous?.needOpenComment ?? false,
   onlyFansCanComment: previous?.onlyFansCanComment ?? false,
   artDirectionPrompt: previous?.artDirectionPrompt || '',
+  styleReferenceImages: previous?.styleReferenceImages || [],
 });
 
 const resolveDraftStatusLabel = (draft?: WechatDraftRecord) => {
@@ -61,6 +63,7 @@ const resolveDraftStatusLabel = (draft?: WechatDraftRecord) => {
 };
 
 type BusyAction = 'preview' | 'draft' | 'draft_get' | 'publish' | 'publish_get';
+type PreviewRequestMode = 'standard' | 'feedback';
 
 interface WechatActionErrorViewModel {
   title: string;
@@ -68,6 +71,34 @@ interface WechatActionErrorViewModel {
   details: string[];
   rawMessage: string;
 }
+
+const RELAYOUT_FEEDBACK_EXAMPLES = [
+  '\u4f8b\uff1a\u4e8c\u7ea7\u6807\u9898\u6536\u655b\u4e00\u70b9\uff0c\u51cf\u5c11\u7ea2\u8272\u5f3a\u8c03\u3002',
+  '\u4f8b\uff1a\u9996\u5c4f\u7559\u767d\u518d\u5927\u4e00\u70b9\uff0c\u56fe\u6ce8\u66f4\u50cf\u5546\u4e1a\u6742\u5fd7\u3002',
+  '\u4f8b\uff1a\u6570\u636e\u6bb5\u843d\u505a\u6210\u4fe1\u606f\u5361\uff0c\u4f46\u4e0d\u8981\u6539\u5199\u539f\u6587\u3002',
+];
+
+const STYLE_REFERENCE_ACCEPT = 'image/png,image/jpeg,image/webp';
+const STYLE_REFERENCE_LIMIT = 3;
+const STYLE_REFERENCE_MAX_BYTES = 4 * 1024 * 1024;
+
+const readFileAsDataUrl = (file: File) =>
+  new Promise<string>((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(String(reader.result || ''));
+    reader.onerror = () => reject(new Error(`Failed to read image: ${file.name}`));
+    reader.readAsDataURL(file);
+  });
+
+const createStyleReferenceImage = async (file: File): Promise<WechatStyleReferenceImage> => ({
+  id:
+    typeof crypto !== 'undefined' && typeof crypto.randomUUID === 'function'
+      ? crypto.randomUUID()
+      : `${Date.now()}-${Math.random().toString(36).slice(2, 10)}`,
+  name: file.name,
+  mimeType: file.type,
+  dataUrl: await readFileAsDataUrl(file),
+});
 
 const BUSY_ACTION_STAGES: Record<
   BusyAction,
@@ -208,8 +239,12 @@ export const WechatPublisherPanel: React.FC<{
   const [actionError, setActionError] = useState<WechatActionErrorViewModel | null>(null);
   const [busyStartedAt, setBusyStartedAt] = useState<number | null>(null);
   const [busyNow, setBusyNow] = useState<number>(Date.now());
+  const [artDirectionDraft, setArtDirectionDraft] = useState(layout?.artDirectionPrompt || '');
+  const [styleReferenceError, setStyleReferenceError] = useState<string | null>(null);
+  const [previewRequestMode, setPreviewRequestMode] = useState<PreviewRequestMode>('standard');
   const initializedRef = useRef(false);
   const lastPreviewFingerprintRef = useRef('');
+  const artDirectionDraftRef = useRef(layout?.artDirectionPrompt || '');
 
   useEffect(() => {
     let cancelled = false;
@@ -243,13 +278,9 @@ export const WechatPublisherPanel: React.FC<{
     [config, illustrationBundle, layout]
   );
 
-  const currentRequestFingerprint = useMemo(
+  const requestImageFingerprint = useMemo(
     () =>
-      JSON.stringify({
-        topic: topic.trim(),
-        articleContent: articleContent.trim(),
-        layout: currentLayout,
-        images: illustrationBundle?.slots?.map((slot) => {
+      illustrationBundle?.slots?.map((slot) => {
           const versions = illustrationBundle.assetVersions?.[slot.id] || [];
           const activeAsset = versions.find((asset) => asset.id === slot.activeAssetId) || versions[versions.length - 1];
           return {
@@ -260,8 +291,7 @@ export const WechatPublisherPanel: React.FC<{
             order: slot.order,
           };
         }),
-      }),
-    [articleContent, currentLayout, illustrationBundle, topic]
+    [illustrationBundle]
   );
 
   const coverCandidates = useMemo(() => {
@@ -288,10 +318,96 @@ export const WechatPublisherPanel: React.FC<{
     });
   };
 
-  const reusableRenderPlan = lastPreviewFingerprintRef.current === currentRequestFingerprint ? renderPlan : undefined;
+  useEffect(() => {
+    const nextDraft = currentLayout.artDirectionPrompt || '';
+    setArtDirectionDraft((previous) => (previous === nextDraft ? previous : nextDraft));
+    artDirectionDraftRef.current = nextDraft;
+  }, [currentLayout.artDirectionPrompt]);
+
+  const buildLayoutSnapshot = (): WechatLayoutSettings => ({
+    ...currentLayout,
+    artDirectionPrompt: artDirectionDraftRef.current,
+  });
+
+  const buildRequestFingerprint = (layoutSnapshot: WechatLayoutSettings) =>
+    JSON.stringify({
+      topic: topic.trim(),
+      articleContent: articleContent.trim(),
+      layout: layoutSnapshot,
+      images: requestImageFingerprint,
+    });
+
+  const resolveReusableRenderPlan = (requestFingerprint: string) =>
+    lastPreviewFingerprintRef.current === requestFingerprint ? renderPlan : undefined;
+
+  const styleReferenceImages = currentLayout.styleReferenceImages || [];
+
+  const handleArtDirectionPromptChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+    const nextValue = event.target.value;
+    setArtDirectionDraft(nextValue);
+    artDirectionDraftRef.current = nextValue;
+    updateLayout({ artDirectionPrompt: nextValue });
+  };
+
+  const handleArtDirectionExampleClick = (example: string) => {
+    setArtDirectionDraft(example);
+    artDirectionDraftRef.current = example;
+    updateLayout({ artDirectionPrompt: example });
+  };
+
+  const handleStyleReferenceUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
+    const files = Array.from(event.target.files || []);
+    event.target.value = '';
+    if (!files.length) {
+      return;
+    }
+
+    const slotsRemaining = Math.max(0, STYLE_REFERENCE_LIMIT - styleReferenceImages.length);
+    if (slotsRemaining <= 0) {
+      setStyleReferenceError(`最多上传 ${STYLE_REFERENCE_LIMIT} 张样式参考图。`);
+      return;
+    }
+
+    const validFiles = files
+      .filter((file) => STYLE_REFERENCE_ACCEPT.split(',').includes(file.type))
+      .filter((file) => file.size <= STYLE_REFERENCE_MAX_BYTES)
+      .slice(0, slotsRemaining);
+
+    if (!validFiles.length) {
+      setStyleReferenceError('只支持 PNG / JPG / WEBP，且单张不超过 4MB。');
+      return;
+    }
+
+    try {
+      const nextImages = await Promise.all(validFiles.map((file) => createStyleReferenceImage(file)));
+      updateLayout({
+        styleReferenceImages: [...styleReferenceImages, ...nextImages],
+      });
+      setStyleReferenceError(null);
+    } catch (error: any) {
+      setStyleReferenceError(error?.message || '样式参考图读取失败。');
+    }
+  };
+
+  const handleRemoveStyleReference = (referenceId: string) => {
+    updateLayout({
+      styleReferenceImages: styleReferenceImages.filter((item) => item.id !== referenceId),
+    });
+    setStyleReferenceError(null);
+  };
+
+  const hasArtDirectionFeedback = artDirectionDraft.trim().length > 0;
   const currentBusyPresentation = busyAction ? BUSY_ACTION_STAGES[busyAction] : null;
   const busyElapsedMs = busyAction && busyStartedAt ? Math.max(0, busyNow - busyStartedAt) : 0;
   const busyStageIndex = busyAction ? resolveBusyStageIndex(busyAction, busyElapsedMs) : 0;
+  const standardPreviewButtonLabel =
+    busyAction === 'preview' && previewRequestMode === 'standard'
+      ? '\u751f\u6210\u4e2d...'
+      : '\u6309\u5f53\u524d\u8bbe\u7f6e\u751f\u6210\u9884\u89c8';
+  const feedbackRelayoutButtonLabel =
+    busyAction === 'preview' && previewRequestMode === 'feedback'
+      ? '\u91cd\u6392\u4e2d...'
+      : '\u6309\u53cd\u9988\u91cd\u65b0\u6392\u7248';
 
   useEffect(() => {
     if (!busyAction) {
@@ -304,7 +420,11 @@ export const WechatPublisherPanel: React.FC<{
     return () => window.clearInterval(timer);
   }, [busyAction]);
 
-  const handlePreview = async () => {
+  const handlePreview = async (mode: PreviewRequestMode = 'standard') => {
+    const layoutSnapshot = buildLayoutSnapshot();
+    const requestFingerprint = buildRequestFingerprint(layoutSnapshot);
+    const reusableRenderPlan = resolveReusableRenderPlan(requestFingerprint);
+    setPreviewRequestMode(mode);
     setBusyAction('preview');
     setActionError(null);
     try {
@@ -312,13 +432,14 @@ export const WechatPublisherPanel: React.FC<{
         topic,
         articleContent,
         illustrationBundle,
-        layout: currentLayout,
+        layout: layoutSnapshot,
+        renderPlan: reusableRenderPlan,
       });
       setPreviewHtml(payload.previewHtml);
       setPreviewWarnings(payload.warnings || payload.metadata.warnings || []);
       setPreviewRendererVersion(payload.metadata.rendererVersion || 'legacy_or_unknown');
-      setRenderPlan(payload.renderPlan || payload.metadata.renderPlan);
-      lastPreviewFingerprintRef.current = currentRequestFingerprint;
+      setRenderPlan(payload.renderPlan || payload.metadata.renderPlan || reusableRenderPlan);
+      lastPreviewFingerprintRef.current = requestFingerprint;
     } catch (error: any) {
       setActionError(buildWechatActionError(error, 'preview'));
     } finally {
@@ -351,6 +472,10 @@ export const WechatPublisherPanel: React.FC<{
       return;
     }
 
+    const layoutSnapshot = buildLayoutSnapshot();
+    const requestFingerprint = buildRequestFingerprint(layoutSnapshot);
+    const reusableRenderPlan = resolveReusableRenderPlan(requestFingerprint);
+
     setBusyAction('draft');
     setActionError(null);
     try {
@@ -358,7 +483,7 @@ export const WechatPublisherPanel: React.FC<{
         topic,
         articleContent,
         illustrationBundle,
-        layout: currentLayout,
+        layout: layoutSnapshot,
         mediaId: draft?.mediaId,
         renderPlan: reusableRenderPlan,
       });
@@ -366,7 +491,7 @@ export const WechatPublisherPanel: React.FC<{
       setPreviewWarnings(payload.warnings || payload.metadata.warnings || []);
       setPreviewRendererVersion(payload.metadata.rendererVersion || 'legacy_or_unknown');
       setRenderPlan(payload.renderPlan || payload.metadata.renderPlan || reusableRenderPlan);
-      lastPreviewFingerprintRef.current = currentRequestFingerprint;
+      lastPreviewFingerprintRef.current = requestFingerprint;
       onUpdateDraft(payload.draft);
     } catch (error: any) {
       const normalizedError = buildWechatActionError(error, 'draft');
@@ -575,17 +700,6 @@ export const WechatPublisherPanel: React.FC<{
           </label>
 
           <label className="block text-sm font-medium text-slate-700">
-            {'AI \u6392\u7248\u4fee\u6539\u6307\u4ee4'}
-            <textarea
-              value={currentLayout.artDirectionPrompt || ''}
-              onChange={(event) => updateLayout({ artDirectionPrompt: event.target.value })}
-              rows={5}
-              className="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-3 py-3 text-sm leading-relaxed text-slate-700 outline-none focus:border-report-accent"
-              placeholder={'\u544a\u8bc9 AI \u8fd9\u4e00\u7248\u8fd8\u8981\u600e\u4e48\u8c03\u6574\uff0c\u4f8b\u5982\uff1a\u4e8c\u7ea7\u6807\u9898\u6539\u6210\u7ea2\u6761\u65b0\u95fb\u98ce\uff0c\u91cd\u70b9\u53e5\u518d\u514b\u5236\u4e00\u70b9\uff0c\u56fe\u6ce8\u66f4\u50cf\u5546\u4e1a\u6742\u5fd7\u3002'}
-            />
-          </label>
-
-          <label className="block text-sm font-medium text-slate-700">
             {'\u6458\u8981'}
             <textarea
               value={currentLayout.digest}
@@ -654,10 +768,14 @@ export const WechatPublisherPanel: React.FC<{
 
           <div className="flex flex-wrap gap-3">
             <button
-              onClick={() => void handlePreview()}
+              onClick={() => void handlePreview('standard')}
               disabled={busyAction !== null}
-              className="rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-50 disabled:opacity-50"
+              aria-label={standardPreviewButtonLabel}
+              className="relative rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-transparent transition-colors hover:bg-slate-50 disabled:opacity-50"
             >
+              <span aria-hidden="true" className="pointer-events-none absolute inset-0 flex items-center justify-center px-4 text-sm font-medium text-slate-700">
+                {standardPreviewButtonLabel}
+              </span>
               {busyAction === 'preview' ? '生成中...' : '生成预览'}
             </button>
             <button
@@ -736,6 +854,104 @@ export const WechatPublisherPanel: React.FC<{
                 先点击“生成预览”，这里会显示公众号模板排版结果。
               </div>
             )}
+          </div>
+          <div className="mt-4 rounded-[24px] border border-slate-200 bg-white p-5 shadow-sm">
+            <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+              <div className="min-w-0">
+                <div className="text-sm font-semibold text-slate-900">{'\u9884\u89c8\u53cd\u9988 / AI \u91cd\u6392'}</div>
+                <div className="mt-1 text-sm leading-relaxed text-slate-500">
+                  {
+                    '\u628a\u4f60\u60f3\u8c03\u6574\u7684\u89c6\u89c9\u53cd\u9988\u5199\u5728\u8fd9\u91cc\uff0c\u5185\u5bb9\u4f1a\u4fdd\u5b58\u5230 AI \u6392\u7248\u6307\u4ee4\uff0c\u540e\u7eed\u9884\u89c8\u548c\u63d0\u4ea4\u8349\u7a3f\u90fd\u4f1a\u6cbf\u7528\u3002'
+                  }
+                </div>
+                <div className="mt-2 text-xs leading-relaxed text-slate-400">
+                  {
+                    '\u53ea\u8c03\u6574\u6807\u9898\u98ce\u683c\uff0c\u5f3a\u8c03\u7a0b\u5ea6\uff0c\u7559\u767d\uff0c\u56fe\u7247/\u56fe\u6ce8\u5448\u73b0\u7b49\u6392\u7248\u8868\u8fbe\uff0c\u4e0d\u4f1a\u6539\u5199\u6b63\u6587\u5185\u5bb9\u3002'
+                  }
+                </div>
+              </div>
+              <button
+                onClick={() => void handlePreview('feedback')}
+                disabled={busyAction !== null || !hasArtDirectionFeedback}
+                className="shrink-0 rounded-xl bg-report-accent px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-teal-800 disabled:opacity-50"
+              >
+                {feedbackRelayoutButtonLabel}
+              </button>
+            </div>
+            <textarea
+              value={artDirectionDraft}
+              onChange={handleArtDirectionPromptChange}
+              rows={5}
+              className="mt-4 w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm leading-relaxed text-slate-700 outline-none focus:border-report-accent"
+              placeholder={
+                '\u4f8b\u5982\uff1a\u4e8c\u7ea7\u6807\u9898\u518d\u514b\u5236\u4e00\u70b9\uff0c\u9996\u5c4f\u7559\u767d\u589e\u52a0\uff0c\u56fe\u6ce8\u66f4\u50cf\u5546\u4e1a\u6742\u5fd7\uff0c\u6570\u636e\u6bb5\u843d\u4f18\u5148\u505a\u6210\u4fe1\u606f\u5361\u3002'
+              }
+            />
+            <div className="mt-4 rounded-2xl border border-dashed border-slate-200 bg-slate-50/70 p-4">
+              <div className="flex flex-wrap items-center justify-between gap-3">
+                <div>
+                  <div className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">{'Style References'}</div>
+                  <div className="mt-1 text-sm text-slate-600">
+                    {'上传你喜欢的版式截图，让 AI 参考其中的首段强调、标题节奏、图片边框、图注和留白方式。'}
+                  </div>
+                </div>
+                <label className="inline-flex cursor-pointer items-center rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-100">
+                  {'上传参考图'}
+                  <input
+                    type="file"
+                    accept={STYLE_REFERENCE_ACCEPT}
+                    multiple
+                    className="hidden"
+                    onChange={(event) => void handleStyleReferenceUpload(event)}
+                  />
+                </label>
+              </div>
+              <div className="mt-2 text-xs leading-relaxed text-slate-400">
+                {`最多 ${STYLE_REFERENCE_LIMIT} 张，仅支持 PNG / JPG / WEBP，单张不超过 4MB。`}
+              </div>
+              {styleReferenceError ? <div className="mt-2 text-xs leading-relaxed text-rose-500">{styleReferenceError}</div> : null}
+              {styleReferenceImages.length ? (
+                <div className="mt-4 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+                  {styleReferenceImages.map((reference, index) => (
+                    <div key={reference.id} className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+                      <div className="relative aspect-[4/3] bg-slate-100">
+                        <img src={reference.dataUrl} alt={reference.name} className="h-full w-full object-cover" />
+                        <button
+                          type="button"
+                          onClick={() => handleRemoveStyleReference(reference.id)}
+                          className="absolute right-2 top-2 rounded-full bg-slate-950/70 px-2 py-1 text-xs font-medium text-white"
+                        >
+                          {'移除'}
+                        </button>
+                      </div>
+                      <div className="px-3 py-3">
+                        <div className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">{`Ref ${index + 1}`}</div>
+                        <div className="mt-1 truncate text-sm text-slate-600" title={reference.name}>
+                          {reference.name}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ) : null}
+            </div>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {RELAYOUT_FEEDBACK_EXAMPLES.map((example) => (
+                <button
+                  key={example}
+                  type="button"
+                  onClick={() => handleArtDirectionExampleClick(example)}
+                  className="rounded-full bg-slate-100 px-3 py-1 text-left text-xs leading-5 text-slate-500 transition-colors hover:bg-slate-200"
+                >
+                  {example}
+                </button>
+              ))}
+            </div>
+            <div className="mt-3 text-xs leading-relaxed text-slate-400">
+              {
+                '\u9700\u8981\u505a\u57fa\u7840\u7248\u9884\u89c8\u65f6\uff0c\u4f7f\u7528\u5de6\u4fa7\u7684\u300c\u6309\u5f53\u524d\u8bbe\u7f6e\u751f\u6210\u9884\u89c8\u300d\uff1b\u9700\u8981\u57fa\u4e8e\u53cd\u9988\u91cd\u65b0\u8c03\u6574\u65f6\uff0c\u5c31\u5728\u8fd9\u91cc\u76f4\u63a5\u91cd\u6392\u3002'
+              }
+            </div>
           </div>
         </div>
       </div>

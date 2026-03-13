@@ -1,6 +1,7 @@
 import type {
   ArticleIllustrationBundle,
   ArticleIllustrationJobStatus,
+  ArticleIllustrationStyleReferenceImage,
   WritingTaskOptions,
 } from '../types';
 import { getStoredGeminiApiKey } from './geminiService';
@@ -187,6 +188,7 @@ export const startArticleIllustrationGeneration = async ({
   options,
   userPrompt,
   imageCountPrompt,
+  styleReferenceImage,
   regenerate = false,
   signal,
 }: {
@@ -195,6 +197,7 @@ export const startArticleIllustrationGeneration = async ({
   options: WritingTaskOptions;
   userPrompt?: string;
   imageCountPrompt?: string;
+  styleReferenceImage?: ArticleIllustrationStyleReferenceImage;
   regenerate?: boolean;
   signal?: AbortSignal;
 }) => {
@@ -215,6 +218,7 @@ export const startArticleIllustrationGeneration = async ({
           options,
           userPrompt: String(userPrompt || '').trim(),
           imageCountPrompt: String(imageCountPrompt || '').trim(),
+          styleReferenceImage,
           regenerate,
         }),
       },

@@ -770,6 +770,8 @@ const server = http.createServer(async (request, response) => {
       const apiKey = String(body.apiKey || '').trim();
       const userPrompt = String(body.userPrompt || '').trim();
       const imageCountPrompt = String(body.imageCountPrompt || '').trim();
+      const styleReferenceImage =
+        body.styleReferenceImage && typeof body.styleReferenceImage === 'object' ? body.styleReferenceImage : undefined;
       const regenerate = Boolean(body.regenerate);
 
       if (!apiKey) {
@@ -786,6 +788,7 @@ const server = http.createServer(async (request, response) => {
         profileId,
         articleTitle: topic,
         articleContent,
+        styleReferenceImage,
       });
       const sourceHash = identity.sourceHash;
       const existingManifest = await getIllustrationManifestBySourceHash(sourceHash);
@@ -837,6 +840,7 @@ const server = http.createServer(async (request, response) => {
         options: body.options && typeof body.options === 'object' ? body.options : {},
         userPrompt,
         imageCountPrompt,
+        styleReferenceImage,
         force: regenerate,
         isCanceled: () => !isIllustrationRunCurrent(sourceHash, runId),
         shouldPersistCancellation: () => getIllustrationRunState(sourceHash).activeRunId === null,
