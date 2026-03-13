@@ -234,6 +234,9 @@ export const WechatPublisherPanel: React.FC<{
   const [previewWarnings, setPreviewWarnings] = useState<string[]>([]);
   const [previewRendererVersion, setPreviewRendererVersion] = useState<string>('');
   const [renderPlan, setRenderPlan] = useState<WechatRenderPlan | undefined>();
+  const [previewFrameVersion, setPreviewFrameVersion] = useState(0);
+  const [appliedArtDirectionPrompt, setAppliedArtDirectionPrompt] = useState('');
+  const [previewPlanHash, setPreviewPlanHash] = useState('');
   const [remoteDraftInfo, setRemoteDraftInfo] = useState<any>(null);
   const [busyAction, setBusyAction] = useState<BusyAction | null>(null);
   const [actionError, setActionError] = useState<WechatActionErrorViewModel | null>(null);
@@ -341,6 +344,8 @@ export const WechatPublisherPanel: React.FC<{
     lastPreviewFingerprintRef.current === requestFingerprint ? renderPlan : undefined;
 
   const styleReferenceImages = currentLayout.styleReferenceImages || [];
+  const previewBeautyAgentUsed = Boolean(renderPlan?.beautyAgent?.used);
+  const previewFrameKey = `wechat-preview-${previewFrameVersion}-${previewPlanHash || 'no-plan'}`;
 
   const handleArtDirectionPromptChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     const nextValue = event.target.value;
@@ -424,6 +429,7 @@ export const WechatPublisherPanel: React.FC<{
     const layoutSnapshot = buildLayoutSnapshot();
     const requestFingerprint = buildRequestFingerprint(layoutSnapshot);
     const reusableRenderPlan = mode === 'feedback' ? undefined : resolveReusableRenderPlan(requestFingerprint);
+    const previousPlanHash = renderPlan?.beautyAgent?.planHash || '';
     setPreviewRequestMode(mode);
     setBusyAction('preview');
     setActionError(null);
@@ -435,10 +441,22 @@ export const WechatPublisherPanel: React.FC<{
         layout: layoutSnapshot,
         renderPlan: reusableRenderPlan,
       });
+      const nextRenderPlan = payload.renderPlan || payload.metadata.renderPlan || reusableRenderPlan;
+      const nextPlanHash = nextRenderPlan?.beautyAgent?.planHash || '';
+      const nextWarnings = [...(payload.warnings || payload.metadata.warnings || [])];
+      if (mode === 'feedback' && nextRenderPlan && previousPlanHash && nextPlanHash === previousPlanHash) {
+        nextWarnings.push('本次“按反馈重新排版”已经重新请求，但返回的排版方案与上一版完全一致。更像是模型没有产出新方案，不是前端没发请求。');
+      }
+      if (mode === 'feedback' && nextRenderPlan && !nextRenderPlan.beautyAgent?.used) {
+        nextWarnings.push('本次“按反馈重新排版”未启用 AI 重排，当前看到的是基础排版回退结果。');
+      }
       setPreviewHtml(payload.previewHtml);
-      setPreviewWarnings(payload.warnings || payload.metadata.warnings || []);
+      setPreviewWarnings(nextWarnings);
       setPreviewRendererVersion(payload.metadata.rendererVersion || 'legacy_or_unknown');
-      setRenderPlan(payload.renderPlan || payload.metadata.renderPlan || reusableRenderPlan);
+      setRenderPlan(nextRenderPlan);
+      setPreviewPlanHash(nextPlanHash);
+      setAppliedArtDirectionPrompt(layoutSnapshot.artDirectionPrompt || '');
+      setPreviewFrameVersion((previous) => previous + 1);
       lastPreviewFingerprintRef.current = requestFingerprint;
     } catch (error: any) {
       setActionError(buildWechatActionError(error, 'preview'));
@@ -487,10 +505,15 @@ export const WechatPublisherPanel: React.FC<{
         mediaId: draft?.mediaId,
         renderPlan: reusableRenderPlan,
       });
+      const nextRenderPlan = payload.renderPlan || payload.metadata.renderPlan || reusableRenderPlan;
+      const nextPlanHash = nextRenderPlan?.beautyAgent?.planHash || '';
       setPreviewHtml(payload.previewHtml);
       setPreviewWarnings(payload.warnings || payload.metadata.warnings || []);
       setPreviewRendererVersion(payload.metadata.rendererVersion || 'legacy_or_unknown');
-      setRenderPlan(payload.renderPlan || payload.metadata.renderPlan || reusableRenderPlan);
+      setRenderPlan(nextRenderPlan);
+      setPreviewPlanHash(nextPlanHash);
+      setAppliedArtDirectionPrompt(layoutSnapshot.artDirectionPrompt || '');
+      setPreviewFrameVersion((previous) => previous + 1);
       lastPreviewFingerprintRef.current = requestFingerprint;
       onUpdateDraft(payload.draft);
     } catch (error: any) {
@@ -846,9 +869,22 @@ export const WechatPublisherPanel: React.FC<{
                 : '未生成'}
             </div>
           </div>
+          {previewHtml ? (
+            <div className="mb-3 flex flex-wrap items-center gap-2 px-2 text-xs text-slate-500">
+              <span className="rounded-full bg-white px-3 py-1 font-medium ring-1 ring-slate-200">
+                AI 重排: {previewBeautyAgentUsed ? '已启用' : '未启用'}
+              </span>
+              <span className="rounded-full bg-white px-3 py-1 font-medium ring-1 ring-slate-200">
+                Plan Hash: {previewPlanHash || 'none'}
+              </span>
+              <span className="rounded-full bg-white px-3 py-1 font-medium ring-1 ring-slate-200">
+                生效反馈: {appliedArtDirectionPrompt || '无'}
+              </span>
+            </div>
+          ) : null}
           <div className="overflow-hidden rounded-[24px] border border-slate-200 bg-white shadow-sm">
             {previewHtml ? (
-              <iframe title="wechat-preview" className="h-[900px] w-full" srcDoc={previewHtml} />
+              <iframe key={previewFrameKey} title="wechat-preview" className="h-[900px] w-full" srcDoc={previewHtml} />
             ) : (
               <div className="flex h-[900px] items-center justify-center px-6 text-center text-sm leading-relaxed text-slate-500">
                 先点击“生成预览”，这里会显示公众号模板排版结果。

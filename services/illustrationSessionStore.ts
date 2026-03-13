@@ -2,12 +2,11 @@ import type { ArticleIllustrationBundle } from '../types';
 
 const DB_NAME = 'illustration-session-db';
 const STORE_NAME = 'bundles';
-const SESSION_ID_STORAGE_KEY = 'ILLUSTRATION_SESSION_ID_V1';
 const STALE_RECORD_TTL_MS = 12 * 60 * 60 * 1000;
 
 interface IllustrationSessionRecord {
   id: string;
-  sessionId: string;
+  sessionId?: string;
   bundleKey: string;
   bundle: ArticleIllustrationBundle;
   updatedAt: string;
@@ -25,21 +24,6 @@ const buildSessionBundleHash = (styleProfile: string, articleContent: string) =>
     hash = Math.imul(hash, 16777619);
   }
   return Math.abs(hash >>> 0).toString(16);
-};
-
-const getSessionId = (createIfMissing = false) => {
-  if (typeof window === 'undefined') return null;
-
-  const existing = window.sessionStorage.getItem(SESSION_ID_STORAGE_KEY);
-  if (existing) return existing;
-  if (!createIfMissing) return null;
-
-  const nextId =
-    typeof window.crypto?.randomUUID === 'function'
-      ? window.crypto.randomUUID()
-      : `illustration-session-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
-  window.sessionStorage.setItem(SESSION_ID_STORAGE_KEY, nextId);
-  return nextId;
 };
 
 const openDb = (): Promise<IDBDatabase> =>
@@ -126,16 +110,48 @@ export const computeIllustrationSessionBundleKey = (styleProfile: string, articl
 
 export const loadIllustrationSessionBundle = async (bundleKey: string): Promise<ArticleIllustrationBundle | null> => {
   const normalizedKey = cleanText(bundleKey);
-  const sessionId = getSessionId(false);
-  if (!normalizedKey || !sessionId || !hasIndexedDb()) return null;
+  if (!normalizedKey || !hasIndexedDb()) return null;
 
   try {
     const record = await withStore<IllustrationSessionRecord | null>('readonly', (store, resolve, reject) => {
-      const request = store.get(`${sessionId}:${normalizedKey}`);
-      request.onsuccess = () => resolve((request.result as IllustrationSessionRecord | undefined) || null);
+      const request = store.get(normalizedKey);
+      request.onsuccess = () => {
+        const directHit = (request.result as IllustrationSessionRecord | undefined) || null;
+        if (directHit) {
+          resolve(directHit);
+          return;
+        }
+
+        const cursorRequest = store.openCursor();
+        let latestLegacyRecord: IllustrationSessionRecord | null = null;
+
+        cursorRequest.onsuccess = () => {
+          const cursor = cursorRequest.result;
+          if (!cursor) {
+            resolve(latestLegacyRecord);
+            return;
+          }
+
+          const current = cursor.value as IllustrationSessionRecord;
+          if (current.bundleKey === normalizedKey) {
+            const currentUpdatedAt = new Date(current.updatedAt || 0).getTime();
+            const latestUpdatedAt = latestLegacyRecord ? new Date(latestLegacyRecord.updatedAt || 0).getTime() : 0;
+            if (!latestLegacyRecord || currentUpdatedAt >= latestUpdatedAt) {
+              latestLegacyRecord = current;
+            }
+          }
+          cursor.continue();
+        };
+
+        cursorRequest.onerror = () =>
+          reject(cursorRequest.error || new Error('Failed to scan illustration session bundle records.'));
+      };
       request.onerror = () => reject(request.error || new Error('Failed to load illustration session bundle.'));
     });
     void pruneStaleRecords();
+    if (record && record.id !== normalizedKey) {
+      void saveIllustrationSessionBundle(normalizedKey, record.bundle);
+    }
     return record?.bundle || null;
   } catch {
     return null;
@@ -144,12 +160,10 @@ export const loadIllustrationSessionBundle = async (bundleKey: string): Promise<
 
 export const saveIllustrationSessionBundle = async (bundleKey: string, bundle: ArticleIllustrationBundle): Promise<void> => {
   const normalizedKey = cleanText(bundleKey);
-  const sessionId = getSessionId(true);
-  if (!normalizedKey || !sessionId || !hasIndexedDb()) return;
+  if (!normalizedKey || !hasIndexedDb()) return;
 
   const record: IllustrationSessionRecord = {
-    id: `${sessionId}:${normalizedKey}`,
-    sessionId,
+    id: normalizedKey,
     bundleKey: normalizedKey,
     bundle,
     updatedAt: new Date().toISOString(),
@@ -169,13 +183,26 @@ export const saveIllustrationSessionBundle = async (bundleKey: string, bundle: A
 
 export const clearIllustrationSessionBundle = async (bundleKey: string): Promise<void> => {
   const normalizedKey = cleanText(bundleKey);
-  const sessionId = getSessionId(false);
-  if (!normalizedKey || !sessionId || !hasIndexedDb()) return;
+  if (!normalizedKey || !hasIndexedDb()) return;
 
   try {
     await withStore<void>('readwrite', (store, resolve, reject) => {
-      const request = store.delete(`${sessionId}:${normalizedKey}`);
-      request.onsuccess = () => resolve();
+      const request = store.openCursor();
+
+      request.onsuccess = () => {
+        const cursor = request.result;
+        if (!cursor) {
+          resolve();
+          return;
+        }
+
+        const current = cursor.value as IllustrationSessionRecord;
+        if (current.id === normalizedKey || current.bundleKey === normalizedKey) {
+          cursor.delete();
+        }
+        cursor.continue();
+      };
+
       request.onerror = () => reject(request.error || new Error('Failed to clear illustration session bundle.'));
     });
   } catch {

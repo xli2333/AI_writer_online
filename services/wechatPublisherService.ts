@@ -83,6 +83,7 @@ export const previewWechatDraft = ({
 }) =>
   fetchJson<WechatPreviewPayload>('/api/wechat-official/preview', {
     method: 'POST',
+    cache: 'no-store',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       topic,
@@ -111,6 +112,7 @@ export const upsertWechatDraft = ({
 }) =>
   fetchJson<WechatDraftUpsertPayload>('/api/wechat-official/draft/upsert', {
     method: 'POST',
+    cache: 'no-store',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       topic,
@@ -126,6 +128,7 @@ export const upsertWechatDraft = ({
 export const getWechatDraft = (mediaId: string) =>
   fetchJson<WechatDraftGetPayload>('/api/wechat-official/draft/get', {
     method: 'POST',
+    cache: 'no-store',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ mediaId }),
   });
@@ -133,6 +136,7 @@ export const getWechatDraft = (mediaId: string) =>
 export const submitWechatPublish = (mediaId: string) =>
   fetchJson<WechatPublishSubmitPayload>('/api/wechat-official/publish/submit', {
     method: 'POST',
+    cache: 'no-store',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ mediaId }),
   });
@@ -140,6 +144,7 @@ export const submitWechatPublish = (mediaId: string) =>
 export const getWechatPublishStatus = (publishId: string) =>
   fetchJson<WechatPublishStatusPayload>('/api/wechat-official/publish/get', {
     method: 'POST',
+    cache: 'no-store',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ publishId }),
   });
