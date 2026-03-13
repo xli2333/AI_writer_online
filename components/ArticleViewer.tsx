@@ -769,7 +769,7 @@ const IllustrationHero: React.FC<{ bundle?: ArticleIllustrationBundle }> = ({ bu
       <img
         src={resolveGeneratedAssetUrl(hero.asset.url)}
         alt={hero.slot?.title || '文章首图'}
-        className="aspect-square w-full object-cover"
+        className="aspect-[16/9] w-full object-cover"
       />
       <figcaption className="grid gap-2 border-t border-slate-200 bg-white px-5 py-4 text-sm text-slate-600 md:grid-cols-[1fr_auto] md:items-center">
         <div>
@@ -851,7 +851,7 @@ const IllustrationGalleryPanel: React.FC<{
         </div>
 
         {bundle?.assets?.length ? (
-          <div className="grid gap-6">
+          <div className="grid gap-5 lg:grid-cols-2">
             {bundle.assets.map((asset) => {
               const slot = slotMap.get(asset.slotId) as ArticleIllustrationSlot | undefined;
               return (
@@ -859,7 +859,7 @@ const IllustrationGalleryPanel: React.FC<{
                   <img
                     src={resolveGeneratedAssetUrl(asset.url)}
                     alt={slot?.title || asset.title}
-                    className="aspect-square w-full object-cover"
+                    className="aspect-[16/9] w-full object-cover"
                   />
                   <div className="space-y-3 px-5 py-4">
                     <div className="flex items-center justify-between gap-4">
@@ -977,10 +977,10 @@ const ModernIllustrationCard: React.FC<{
       <img
         src={resolveGeneratedAssetUrl(asset.url)}
         alt={slot.title || asset.title}
-        className="aspect-square w-full object-cover"
+        className="aspect-[16/9] w-full object-cover"
       />
     ) : (
-      <div className="flex aspect-square items-center justify-center bg-slate-100 text-sm text-slate-500">当前图位暂无图片</div>
+      <div className="flex aspect-[16/9] items-center justify-center bg-slate-100 text-sm text-slate-500">当前图位暂无图片</div>
     )}
 
     <figcaption className="px-5 py-4">
@@ -1085,7 +1085,7 @@ const ModernIllustrationGalleryPanel: React.FC<{
         </div>
 
         {bundle?.slots?.length ? (
-          <div className="grid gap-6">
+          <div className="grid gap-5 lg:grid-cols-2">
             {bundle.slots
               .slice()
               .sort((left, right) => left.order - right.order)
@@ -1225,7 +1225,7 @@ const ProgressiveIllustrationGalleryPanel: React.FC<{
         </div>
 
         {bundle?.slots?.length ? (
-          <div className="grid gap-6">
+          <div className="grid gap-5 lg:grid-cols-2">
             {bundle.slots
               .slice()
               .sort((left, right) => left.order - right.order)

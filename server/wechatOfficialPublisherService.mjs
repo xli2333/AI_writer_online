@@ -17,7 +17,7 @@ const INLINE_IMAGE_WIDTH = 1280;
 const COVER_IMAGE_WIDTH = 900;
 const WECHAT_BEAUTY_AGENT_MODEL = 'gemini-3.1-pro-preview';
 const WECHAT_BEAUTY_AGENT_TIMEOUT_MS = 45 * 1000;
-const WECHAT_RENDERER_VERSION = 'beauty_plan_v4';
+const WECHAT_RENDERER_VERSION = 'beauty_plan_v5';
 const WECHAT_OPENING_HIGHLIGHT_MODES = new Set(['off', 'first_sentence', 'smart_lead']);
 
 const proxyUrl = process.env.HTTPS_PROXY || process.env.HTTP_PROXY || '';
@@ -792,8 +792,6 @@ const collectWechatOpeningHighlightCandidates = (blocks) => {
         blockOffset: candidateBlocks.length,
         sentences,
       });
-    }
-    if (candidateBlocks.length >= 4) {
       break;
     }
   }
@@ -887,6 +885,21 @@ const selectWechatOpeningHighlightSentences = ({ blocks, mode }) => {
     .slice(0, 2);
 };
 
+const resolveWechatOpeningHighlightSourceBlockIndex = (blocks) =>
+  blocks.findIndex((block) => block?.type === 'paragraph' || block?.type === 'quote');
+
+const stripLeadingWechatOpeningHighlightSentences = (text, sentences = []) => {
+  let remaining = normalizeWechatPlainText(text);
+  for (const sentence of Array.isArray(sentences) ? sentences : []) {
+    const normalizedSentence = normalizeWechatPlainText(sentence);
+    if (!normalizedSentence || !remaining.startsWith(normalizedSentence)) {
+      break;
+    }
+    remaining = normalizeWechatPlainText(remaining.slice(normalizedSentence.length)).replace(/^[，。；：、\s]+/, '');
+  }
+  return remaining;
+};
+
 const renderWechatOpeningHighlightBlock = ({ blocks, layout, theme }) => {
   const sentences = selectWechatOpeningHighlightSentences({
     blocks,
@@ -898,9 +911,9 @@ const renderWechatOpeningHighlightBlock = ({ blocks, layout, theme }) => {
 
   const label = sentences.length > 1 ? 'Lead' : 'Focus';
   return `
-    <section style="margin: 0 0 24px; padding: 18px 18px 16px; border: 1px solid ${theme.cardBorder}; border-radius: 22px; background: linear-gradient(180deg, ${theme.accentSoft} 0%, #FFFFFF 100%); box-shadow: 0 12px 28px rgba(15, 23, 42, 0.06);">
+    <section style="margin: 0 0 24px; padding: 16px 16px 14px; border: 1px solid ${theme.cardBorder}; border-radius: 18px; background: #FFFFFF;">
       <div data-wechat-decoration="true" style="display: inline-flex; align-items: center; gap: 8px; margin-bottom: 12px; color: ${theme.sectionColor}; font-size: 12px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase;">
-        <span style="display: inline-block; width: 28px; height: 2px; background: ${theme.accent};"></span>
+        <span style="display: inline-block; width: 18px; height: 2px; background: ${theme.cardBorder};"></span>
         <span>${label}</span>
       </div>
       ${sentences
@@ -1158,28 +1171,7 @@ const buildDefaultWechatHeadingSelections = (blocks) => {
     return [];
   }
 
-  const majorHeadingCount = headingIndexes.filter(({ block }) => block.type === 'heading').length;
-  const usageCounts = new Map();
-  let previousVariant = '';
-  let chapterMarkerUsed = false;
-
-  return headingIndexes.map(({ block, index }, itemIndex) => {
-    let variant = '';
-    if (block.type === 'heading' && !chapterMarkerUsed && majorHeadingCount >= 2 && itemIndex === 0) {
-      variant = 'chapter_marker';
-      chapterMarkerUsed = true;
-    } else {
-      variant = chooseBalancedWechatHeadingVariant({
-        blockType: block.type,
-        previousVariant,
-        usageCounts,
-        chapterMarkerUsed,
-      });
-    }
-    usageCounts.set(variant, (usageCounts.get(variant) || 0) + 1);
-    previousVariant = variant;
-    return { blockIndex: index, variant };
-  });
+  return headingIndexes.map(({ index }) => ({ blockIndex: index, variant: 'underline' }));
 };
 
 const buildDefaultWechatParagraphSelections = (blocks, layout = {}) => {
@@ -1211,26 +1203,9 @@ const buildDefaultWechatParagraphSelections = (blocks, layout = {}) => {
     addVariant(firstParagraphIndex, 'lead');
   }
 
-  const spotlightIndex = paragraphIndexes.find((blockIndex) => {
-    if (seen.has(blockIndex) || blockIndex === lastParagraphIndex) return false;
-    const previousType = blocks[blockIndex - 1]?.type;
-    return previousType === 'heading' || previousType === 'subheading';
-  });
-  if (spotlightIndex !== undefined) {
-    addVariant(spotlightIndex, 'spotlight');
-  }
-
-  const dataCalloutIndex = paragraphIndexes.find((blockIndex) => {
-    if (seen.has(blockIndex) || blockIndex === lastParagraphIndex) return false;
-    return dataPattern.test(getText(blockIndex));
-  });
-  if (dataCalloutIndex !== undefined) {
-    addVariant(dataCalloutIndex, 'data_callout');
-  }
-
   const calloutIndex = paragraphIndexes.find((blockIndex) => {
     if (seen.has(blockIndex) || blockIndex === lastParagraphIndex) return false;
-    return emphasisPattern.test(getText(blockIndex));
+    return emphasisPattern.test(getText(blockIndex)) || dataPattern.test(getText(blockIndex));
   });
   if (calloutIndex !== undefined) {
     addVariant(calloutIndex, 'callout');
@@ -1259,12 +1234,12 @@ const buildDefaultWechatQuoteSelections = (blocks) =>
     .map(({ index }, itemIndex, quoteBlocks) => {
       const textLength = getWechatBlockPlainText(blocks[index]).length;
       if (itemIndex === 0) {
-        return { blockIndex: index, variant: textLength <= 56 ? 'centered_pull' : 'accent_panel' };
+        return { blockIndex: index, variant: textLength <= 56 ? 'plain_quote' : 'editorial_quote' };
       }
       if (itemIndex === quoteBlocks.length - 1) {
         return { blockIndex: index, variant: 'plain_quote' };
       }
-      return { blockIndex: index, variant: itemIndex % 2 === 0 ? 'editorial_quote' : 'accent_panel' };
+      return { blockIndex: index, variant: 'editorial_quote' };
     });
 
 const buildDefaultWechatListSelections = (blocks) =>
@@ -1274,15 +1249,8 @@ const buildDefaultWechatListSelections = (blocks) =>
     .map(({ block, index }, itemIndex) => {
       const items = Array.isArray(block.items) ? block.items : [];
       const maxItemLength = items.reduce((maxLength, item) => Math.max(maxLength, cleanText(item).length), 0);
-      const shortItemGrid = items.length >= 2 && items.length <= 6 && maxItemLength <= 16;
       if (block.type === 'ordered_list') {
-        return { blockIndex: index, variant: itemIndex === 0 ? 'numbered_steps' : items.length <= 4 ? 'card_list' : 'plain_list' };
-      }
-      if (shortItemGrid) {
-        return { blockIndex: index, variant: 'check_grid' };
-      }
-      if (items.length <= 4 && maxItemLength <= 40) {
-        return { blockIndex: index, variant: 'card_list' };
+        return { blockIndex: index, variant: itemIndex === 0 ? 'numbered_steps' : 'plain_list' };
       }
       if (maxItemLength >= 36) {
         return { blockIndex: index, variant: 'plain_list' };
@@ -1298,9 +1266,6 @@ const buildDefaultWechatTableSelections = (blocks) =>
       const headers = Array.isArray(block.headers) ? block.headers : [];
       const rows = Array.isArray(block.rows) ? block.rows : [];
       const columnCount = Math.max(headers.length, ...rows.map((row) => row.length), 0);
-      if (itemIndex === 0 && columnCount <= 4 && rows.length <= 5) {
-        return { blockIndex: index, variant: 'matrix_panel' };
-      }
       if (columnCount >= 5 || rows.length >= 6) {
         return { blockIndex: index, variant: 'minimal_rows' };
       }
@@ -1325,7 +1290,7 @@ const buildDefaultWechatImageSelections = (blocks) =>
       if (itemIndex % 2 === 0) {
         return { blockIndex: index, variant: 'full_bleed' };
       }
-      return { blockIndex: index, variant: itemIndex % 3 === 0 ? 'border_frame' : 'shadow_card' };
+      return { blockIndex: index, variant: 'editorial_card' };
     });
 
 const buildDefaultWechatDividerSelections = (blocks) => {
@@ -1395,6 +1360,14 @@ const normalizeWechatBodyBlocks = ({ blocks, layout }) => {
   return trimCount > 0 ? sourceBlocks.slice(trimCount) : sourceBlocks;
 };
 
+const normalizeWechatHeadingSystemVariant = (variant) => {
+  const normalized = cleanText(variant);
+  if (normalized === 'plain' || normalized === 'section_band' || normalized === 'underline') {
+    return normalized;
+  }
+  return 'underline';
+};
+
 const chooseBalancedWechatHeadingVariant = ({ blockType, previousVariant, usageCounts, chapterMarkerUsed }) => {
   const candidates =
     blockType === 'heading'
@@ -1416,9 +1389,7 @@ const chooseBalancedWechatHeadingVariant = ({ blockType, previousVariant, usageC
 
 const balanceWechatHeadingSelections = ({ selections, blocks }) => {
   const items = [...(Array.isArray(selections) ? selections : [])].sort((left, right) => left.blockIndex - right.blockIndex);
-  const usageCounts = new Map();
-  let previousVariant = '';
-  let chapterMarkerUsed = false;
+  const anchorVariant = normalizeWechatHeadingSystemVariant(items[0]?.variant || 'underline');
 
   return items.map((item) => {
     const blockType = blocks[item.blockIndex]?.type;
@@ -1426,32 +1397,7 @@ const balanceWechatHeadingSelections = ({ selections, blocks }) => {
     if (!blockType) {
       return item;
     }
-
-    if (variant === 'chapter_marker' && blockType !== 'heading') {
-      variant = chooseBalancedWechatHeadingVariant({
-        blockType,
-        previousVariant,
-        usageCounts,
-        chapterMarkerUsed,
-      });
-    } else if (
-      (variant === 'chapter_marker' && chapterMarkerUsed) ||
-      variant === previousVariant ||
-      (usageCounts.get(variant) || 0) >= 3
-    ) {
-      variant = chooseBalancedWechatHeadingVariant({
-        blockType,
-        previousVariant,
-        usageCounts,
-        chapterMarkerUsed,
-      });
-    }
-
-    if (variant === 'chapter_marker') {
-      chapterMarkerUsed = true;
-    }
-    usageCounts.set(variant, (usageCounts.get(variant) || 0) + 1);
-    previousVariant = variant;
+    variant = anchorVariant;
     return { ...item, variant };
   });
 };
@@ -1654,7 +1600,9 @@ const buildWechatBeautyAgentPrompt = ({ title, digest, layout, templateLabel, bl
     'Use highlight_sentences for key data, key conclusions, key changes, and meaningful risks or turning points.',
     'Within one subsection, highlight at most 3 sentences. Within one paragraph, highlight at most 1 sentence.',
     'Use chapter_marker at most once, and only for one major section heading.',
-    'Mix heading treatments across the article. Do not style every section with the same decorative heading treatment.',
+    'Use one consistent heading treatment across the whole article. Do not mix different heading variants in the same article.',
+    'Prefer restrained editorial layout. If you use cards, use simple outlined cards with light borders. Avoid heavy gradients, shadows, decorative dots, and flashy badges.',
+    'If opening highlight is enabled, the highlighted sentence(s) should not be repeated again at the start of the body content.',
     ...(openingHighlightActive
       ? ['Opening highlight is enabled. The first body paragraph must remain a normal body paragraph, not lead or callout.']
       : []),
@@ -1666,8 +1614,7 @@ const buildWechatBeautyAgentPrompt = ({ title, digest, layout, templateLabel, bl
     'Allowed table variants: data_grid, compact_grid, matrix_panel, minimal_rows.',
     'Allowed image variants: full_bleed, editorial_card, caption_focus, shadow_card, caption_band, border_frame.',
     'Allowed highlight variants: marker, underline, ink, accent_bar.',
-    'At most 1 lead paragraph, at most 2 callout paragraphs, at most 2 spotlight/data_callout paragraphs each, at most 3 highlight sentences per subsection, and at most 3 dividers.',
-    'Avoid repeating the same heading treatment in adjacent sections. Use different components to create rhythm, not just bigger bold text.',
+    'At most 1 lead paragraph, at most 2 callout paragraphs, at most 1 spotlight or data_callout paragraph total, at most 3 highlight sentences per subsection, and at most 3 dividers.',
     `Article title for context only: ${title || ''}`,
     `Digest for context only: ${digest || ''}`,
     `Author credit: ${layout.author || ''}`,
@@ -1765,7 +1712,7 @@ const resolveWechatRenderPlanWithAgent = async ({ apiKey, title, digest, layout,
   }
 };
 
-const buildWechatBeautyRenderContext = ({ blocks, renderPlan, theme }) => {
+const buildWechatBeautyRenderContext = ({ blocks, renderPlan, theme, layout }) => {
   const headingOrdinals = new Map();
   let headingCount = 0;
   for (let index = 0; index < blocks.length; index += 1) {
@@ -1776,9 +1723,21 @@ const buildWechatBeautyRenderContext = ({ blocks, renderPlan, theme }) => {
     }
   }
 
+  const openingHighlightSentences = hasWechatOpeningHighlight({ blocks, layout })
+    ? selectWechatOpeningHighlightSentences({
+        blocks,
+        mode: layout?.openingHighlightMode || 'smart_lead',
+      })
+    : [];
+  const openingHighlightBlockIndex = openingHighlightSentences.length
+    ? resolveWechatOpeningHighlightSourceBlockIndex(blocks)
+    : -1;
+
   return {
     theme,
     headingOrdinals,
+    openingHighlightSentences,
+    openingHighlightBlockIndex,
     dividerSet: new Set(renderPlan.dividerAfterBlocks || []),
     headingMap: new Map((renderPlan.headingStyles || []).map((item) => [item.blockIndex, item.variant])),
     paragraphMap: new Map((renderPlan.paragraphStyles || []).map((item) => [item.blockIndex, item.variant])),
@@ -1869,7 +1828,14 @@ const buildWechatRenderValidationError = ({ block, blockIndex, expected, actual 
 
 const renderWechatBeautyParagraphBlock = (block, blockIndex, context) => {
   const variant = context.paragraphMap.get(blockIndex) || 'body';
-  const textHtml = renderWechatTextWithHighlights(block.text, context.highlightMap.get(blockIndex), context.theme);
+  const renderedText =
+    blockIndex === context.openingHighlightBlockIndex
+      ? stripLeadingWechatOpeningHighlightSentences(block.text, context.openingHighlightSentences)
+      : block.text;
+  if (!cleanText(renderedText)) {
+    return createWechatRenderedBlock('', block.text);
+  }
+  const textHtml = renderWechatTextWithHighlights(renderedText, context.highlightMap.get(blockIndex), context.theme);
   if (variant === 'lead') {
     return createWechatRenderedBlock(
       `<p style="margin: 0 0 20px; color: ${context.theme.titleColor}; font-size: 17px; line-height: 1.92; letter-spacing: 0.01em; font-weight: 500;">${textHtml}</p>`,
@@ -1878,18 +1844,14 @@ const renderWechatBeautyParagraphBlock = (block, blockIndex, context) => {
   }
   if (variant === 'callout') {
     return createWechatRenderedBlock(
-      `<div style="margin: 4px 0 22px; padding: 14px 16px; border-left: 4px solid ${context.theme.accent}; border-radius: 0 18px 18px 0; background: ${context.theme.accentSoft};"><p style="margin: 0; color: ${context.theme.titleColor}; font-size: 15px; line-height: 1.9; letter-spacing: 0.01em;">${textHtml}</p></div>`,
+      `<div style="margin: 4px 0 22px; padding: 14px 16px; border: 1px solid ${context.theme.cardBorder}; border-left: 3px solid ${context.theme.accent}; border-radius: 18px; background: #FFFFFF;"><p style="margin: 0; color: ${context.theme.titleColor}; font-size: 15px; line-height: 1.9; letter-spacing: 0.01em;">${textHtml}</p></div>`,
       block.text
     );
   }
   if (variant === 'spotlight') {
     return createWechatRenderedBlock(
       `
-        <div style="margin: 8px 0 24px; padding: 16px 18px; border: 1px solid ${context.theme.cardBorder}; border-radius: 22px; background: linear-gradient(180deg, ${context.theme.accentSoft} 0%, #FFFFFF 100%);">
-          <div style="display: inline-flex; align-items: center; gap: 8px; margin-bottom: 10px;">
-            <span data-wechat-decoration="true" style="display: inline-block; width: 10px; height: 10px; border-radius: 999px; background: ${context.theme.accent};"></span>
-            <span data-wechat-decoration="true" style="display: inline-block; color: ${context.theme.sectionColor}; font-size: 12px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase;">Focus</span>
-          </div>
+        <div style="margin: 8px 0 24px; padding: 16px 18px; border: 1px solid ${context.theme.cardBorder}; border-radius: 18px; background: #FFFFFF;">
           <p style="margin: 0; color: ${context.theme.titleColor}; font-size: 16px; line-height: 1.88; letter-spacing: 0.01em; font-weight: 550;">${textHtml}</p>
         </div>
       `.trim(),
@@ -1905,8 +1867,7 @@ const renderWechatBeautyParagraphBlock = (block, blockIndex, context) => {
   if (variant === 'data_callout') {
     return createWechatRenderedBlock(
       `
-        <div style="margin: 10px 0 24px; padding: 14px 16px 16px; border-radius: 20px; background: ${context.theme.sectionBackground}; border: 1px solid ${context.theme.cardBorder};">
-          <div data-wechat-decoration="true" style="width: 72px; height: 3px; margin-bottom: 12px; border-radius: 999px; background: linear-gradient(90deg, ${context.theme.accent} 0%, rgba(255,255,255,0) 100%);"></div>
+        <div style="margin: 10px 0 24px; padding: 14px 16px 16px; border-radius: 18px; background: #FFFFFF; border: 1px solid ${context.theme.cardBorder};">
           <p style="margin: 0; color: ${context.theme.titleColor}; font-size: 15px; line-height: 1.88; letter-spacing: 0.01em; font-weight: 550;">${textHtml}</p>
         </div>
       `.trim(),
@@ -2016,12 +1977,18 @@ const renderWechatBeautyHeadingBlock = (block, blockIndex, context) => {
 
 const renderWechatBeautyQuoteBlock = (block, blockIndex, context) => {
   const variant = context.quoteMap.get(blockIndex) || 'editorial_quote';
-  const textHtml = renderWechatTextWithHighlights(block.text, context.highlightMap.get(blockIndex), context.theme);
+  const renderedText =
+    blockIndex === context.openingHighlightBlockIndex
+      ? stripLeadingWechatOpeningHighlightSentences(block.text, context.openingHighlightSentences)
+      : block.text;
+  if (!cleanText(renderedText)) {
+    return createWechatRenderedBlock('', block.text);
+  }
+  const textHtml = renderWechatTextWithHighlights(renderedText, context.highlightMap.get(blockIndex), context.theme);
   if (variant === 'accent_panel') {
     return createWechatRenderedBlock(
       `
-        <blockquote style="margin: 28px 0; padding: 18px 18px 18px 20px; border-radius: 22px; background: linear-gradient(180deg, ${context.theme.accentSoft} 0%, #FFFFFF 100%); border: 1px solid ${context.theme.cardBorder}; color: ${context.theme.titleColor}; font-size: 16px; line-height: 1.92;">
-          <div data-wechat-decoration="true" style="width: 72px; height: 3px; margin-bottom: 12px; border-radius: 999px; background: ${context.theme.accent};"></div>
+        <blockquote style="margin: 28px 0; padding: 18px 18px 18px 20px; border-radius: 18px; background: #FFFFFF; border: 1px solid ${context.theme.cardBorder}; color: ${context.theme.titleColor}; font-size: 16px; line-height: 1.92;">
           ${textHtml}
         </blockquote>
       `.trim(),
@@ -2031,8 +1998,7 @@ const renderWechatBeautyQuoteBlock = (block, blockIndex, context) => {
   if (variant === 'centered_pull') {
     return createWechatRenderedBlock(
       `
-        <blockquote style="margin: 30px 0; padding: 10px 6px; text-align: center;">
-          <div data-wechat-decoration="true" style="margin-bottom: 12px; color: ${context.theme.accent}; font-size: 34px; line-height: 1;">"</div>
+        <blockquote style="margin: 30px 0; padding: 16px 14px; text-align: center; border: 1px solid ${context.theme.cardBorder}; border-radius: 18px; background: #FFFFFF;">
           <p style="margin: 0; color: ${context.theme.titleColor}; font-size: 18px; line-height: 1.85; font-weight: 650;">${textHtml}</p>
         </blockquote>
       `.trim(),
@@ -2070,7 +2036,7 @@ const renderWechatBeautyListBlock = (block, blockIndex, context) => {
       `<${tag} style="display: grid; grid-template-columns: 1fr; gap: 10px; margin: 4px 0 22px; padding: 0; list-style: none;">${(block.items || [])
         .map((item, itemIndex) => {
           const marker = block.type === 'ordered_list' ? String(itemIndex + 1).padStart(2, '0') : '*';
-          return `<li style="display: flex; gap: 12px; align-items: flex-start; padding: 14px 14px 13px; border: 1px solid ${context.theme.cardBorder}; border-radius: 18px; background: #FFFFFF;"><span data-wechat-decoration="true" style="display: inline-flex; flex: 0 0 auto; align-items: center; justify-content: center; min-width: 28px; height: 28px; border-radius: 10px; background: ${context.theme.accentSoft}; color: ${context.theme.sectionColor}; font-size: 12px; font-weight: 800; line-height: 1;">${marker}</span><span style="display: inline-block; color: ${context.theme.bodyColor}; font-size: 15px; line-height: 1.82;">${escapeHtml(item)}</span></li>`;
+          return `<li style="display: flex; gap: 12px; align-items: flex-start; padding: 14px 14px 13px; border: 1px solid ${context.theme.cardBorder}; border-radius: 18px; background: #FFFFFF;"><span data-wechat-decoration="true" style="display: inline-flex; flex: 0 0 auto; align-items: center; justify-content: center; min-width: 28px; height: 28px; border-radius: 10px; border: 1px solid ${context.theme.cardBorder}; background: #FFFFFF; color: ${context.theme.sectionColor}; font-size: 12px; font-weight: 800; line-height: 1;">${marker}</span><span style="display: inline-block; color: ${context.theme.bodyColor}; font-size: 15px; line-height: 1.82;">${escapeHtml(item)}</span></li>`;
         })
         .join('')}</${tag}>`,
       (block.items || []).join(' ')
@@ -2081,7 +2047,7 @@ const renderWechatBeautyListBlock = (block, blockIndex, context) => {
       `<${tag} style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px 12px; margin: 4px 0 22px; padding: 0; list-style: none;">${(block.items || [])
         .map(
           (item) =>
-            `<li style="display: flex; gap: 10px; align-items: flex-start; min-width: 0; padding: 10px 12px; border-radius: 16px; background: ${context.theme.sectionBackground};"><span data-wechat-decoration="true" style="display: inline-flex; flex: 0 0 auto; align-items: center; justify-content: center; width: 20px; height: 20px; border-radius: 999px; background: #FFFFFF; color: ${context.theme.accent}; font-size: 12px; font-weight: 800; line-height: 1;">+</span><span style="display: inline-block; min-width: 0; color: ${context.theme.bodyColor}; font-size: 14px; line-height: 1.75;">${escapeHtml(item)}</span></li>`
+            `<li style="display: flex; gap: 10px; align-items: flex-start; min-width: 0; padding: 10px 12px; border-radius: 16px; border: 1px solid ${context.theme.cardBorder}; background: #FFFFFF;"><span data-wechat-decoration="true" style="display: inline-flex; flex: 0 0 auto; align-items: center; justify-content: center; width: 20px; height: 20px; border-radius: 999px; border: 1px solid ${context.theme.cardBorder}; background: #FFFFFF; color: ${context.theme.accent}; font-size: 12px; font-weight: 800; line-height: 1;">+</span><span style="display: inline-block; min-width: 0; color: ${context.theme.bodyColor}; font-size: 14px; line-height: 1.75;">${escapeHtml(item)}</span></li>`
         )
         .join('')}</${tag}>`,
       (block.items || []).join(' ')
@@ -2116,7 +2082,7 @@ const renderWechatBeautyTableBlock = (block, blockIndex, context) => {
   };
   return createWechatRenderedBlock(
     `
-      <div style="margin: 28px 0; overflow-x: auto; border: 1px solid ${context.theme.cardBorder}; border-radius: ${radius}px; background: ${containerBackground}; box-shadow: ${variant === 'matrix_panel' ? '0 12px 24px rgba(15, 23, 42, 0.05)' : 'none'};">
+      <div style="margin: 28px 0; overflow-x: auto; border: 1px solid ${context.theme.cardBorder}; border-radius: ${radius}px; background: ${containerBackground}; box-shadow: none;">
         <table style="width: 100%; border-collapse: collapse; font-size: 13px; line-height: 1.75; color: ${context.theme.bodyColor};">
           <thead style="background: ${headerBackground};">
             <tr>${block.headers
@@ -2151,7 +2117,7 @@ const renderWechatBeautyImageBlock = (image, blockIndex, context) => {
   if (variant === 'shadow_card') {
     return createWechatRenderedBlock(
       `
-        <figure style="margin: 36px -12px 32px; padding: 10px; border-radius: 24px; background: #FFFFFF; box-shadow: 0 16px 32px rgba(15, 23, 42, 0.08);">
+        <figure style="margin: 36px -12px 32px; padding: 10px; border-radius: 24px; background: #FFFFFF; border: 1px solid ${context.theme.cardBorder};">
           <img src="${escapeHtml(image.url)}" alt="${escapeHtml(image.title || 'Illustration')}" style="display: block; width: 100%; border-radius: 16px; background: #F8FAFC;" />
           ${image.caption ? `<figcaption style="margin-top: 12px; color: ${context.theme.mutedColor}; font-size: 13px; line-height: 1.75;">${escapeHtml(image.caption)}</figcaption>` : ''}
         </figure>
@@ -2171,7 +2137,7 @@ const renderWechatBeautyImageBlock = (image, blockIndex, context) => {
   if (variant === 'border_frame') {
     return createWechatRenderedBlock(
       `
-        <figure style="margin: 36px -10px 30px; padding: 8px; border-radius: 24px; border: 2px solid ${context.theme.cardBorder}; background: linear-gradient(180deg, #FFFFFF 0%, ${context.theme.sectionBackground} 100%);">
+        <figure style="margin: 36px -10px 30px; padding: 8px; border-radius: 24px; border: 1px solid ${context.theme.cardBorder}; background: #FFFFFF;">
           <img src="${escapeHtml(image.url)}" alt="${escapeHtml(image.title || 'Illustration')}" style="display: block; width: 100%; border-radius: 16px; background: #F8FAFC;" />
           ${image.caption ? `<figcaption style="margin-top: 10px; color: ${context.theme.mutedColor}; font-size: 13px; line-height: 1.75;">${escapeHtml(image.caption)}</figcaption>` : ''}
         </figure>
@@ -2181,7 +2147,7 @@ const renderWechatBeautyImageBlock = (image, blockIndex, context) => {
   if (variant === 'editorial_card') {
     return createWechatRenderedBlock(
       `
-        <figure style="margin: 34px -12px 30px; padding: 10px; border: 1px solid ${context.theme.cardBorder}; border-radius: 22px; background: ${context.theme.cardBackground};">
+        <figure style="margin: 34px -12px 30px; padding: 10px; border: 1px solid ${context.theme.cardBorder}; border-radius: 22px; background: #FFFFFF;">
           <img src="${escapeHtml(image.url)}" alt="${escapeHtml(image.title || 'Illustration')}" style="display: block; width: 100%; border-radius: 14px; background: #F8FAFC;" />
           ${image.caption ? `<figcaption style="margin-top: 12px; color: ${context.theme.mutedColor}; font-size: 13px; line-height: 1.75;">${escapeHtml(image.caption)}</figcaption>` : ''}
         </figure>
@@ -2250,10 +2216,16 @@ const validateWechatRenderedBlocksPreserveText = (blocks, renderedBlocks) => {
   }
 };
 
-const collectWechatRenderedBlockDiagnostics = (blocks, renderedBlocks) => {
+const collectWechatRenderedBlockDiagnostics = (blocks, renderedBlocks, layout = {}) => {
   const warnings = [];
+  const openingHighlightBlockIndex = hasWechatOpeningHighlight({ blocks, layout })
+    ? resolveWechatOpeningHighlightSourceBlockIndex(blocks)
+    : -1;
   for (let index = 0; index < blocks.length; index += 1) {
     if (blocks[index].type === 'image') {
+      continue;
+    }
+    if (index === openingHighlightBlockIndex) {
       continue;
     }
     const expected = normalizeWechatPlainText(getWechatBlockPlainText(blocks[index]));
@@ -2324,10 +2296,10 @@ const renderWechatCreditsBlock = ({ layout, theme, renderPlan }) => {
 };
 
 const renderWechatArticleHtmlWithPlan = ({ title, blocks, theme, layout, renderPlan }) => {
-  const context = buildWechatBeautyRenderContext({ blocks, renderPlan, theme });
+  const context = buildWechatBeautyRenderContext({ blocks, renderPlan, theme, layout });
   const renderedBlocks = blocks.map((block, blockIndex) => renderWechatBeautyBlockHtml(block, blockIndex, context));
   validateWechatRenderedBlocksPreserveText(blocks, renderedBlocks);
-  const diagnosticWarnings = collectWechatRenderedBlockDiagnostics(blocks, renderedBlocks);
+  const diagnosticWarnings = collectWechatRenderedBlockDiagnostics(blocks, renderedBlocks, layout);
   const bodyHtml = renderedBlocks
     .map(({ html }, blockIndex) => `${html}${context.dividerSet.has(blockIndex) ? renderWechatBeautyDivider(theme) : ''}`)
     .join('\n');

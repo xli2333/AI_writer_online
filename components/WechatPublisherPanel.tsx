@@ -423,7 +423,7 @@ export const WechatPublisherPanel: React.FC<{
   const handlePreview = async (mode: PreviewRequestMode = 'standard') => {
     const layoutSnapshot = buildLayoutSnapshot();
     const requestFingerprint = buildRequestFingerprint(layoutSnapshot);
-    const reusableRenderPlan = resolveReusableRenderPlan(requestFingerprint);
+    const reusableRenderPlan = mode === 'feedback' ? undefined : resolveReusableRenderPlan(requestFingerprint);
     setPreviewRequestMode(mode);
     setBusyAction('preview');
     setActionError(null);
