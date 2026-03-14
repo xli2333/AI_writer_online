@@ -205,6 +205,14 @@ assert.equal(config.publishEnabled, true);
 
 const blocks = __wechatPublisherTestUtils.buildArticleBlocks(articleContent);
 assert.ok(blocks.length >= 8, 'article blocks should be parsed');
+const spacingAuditBlocks = __wechatPublisherTestUtils.buildArticleBlocks(
+  '\u0032\u0030\u0032\u0033 \u5e74\uff0c\u4e2d\u56fd App Store \u4fc3\u6210\u7684 \u0033\u002e\u0037\u0036 \u4e07\u4ebf\u5143\u4ea4\u6613\u989d\u4e2d\uff0c\u957f\u671f\u5b58\u5728\u4e8e\u89c6\u9891\u4f1a\u5458\u3001\u7f51\u6e38\u5145\u503c\u4e2d\u7684 iOS \u6ea2\u4ef7\uff08\u901a\u5e38\u6bd4\u5b89\u5353\u7aef\u9ad8\u51fa \u0032\u0030% \u81f3 \u0033\u0030%\uff09\u5c06\u88ab\u62b9\u5e73\uff0c\u666e\u901a\u6d88\u8d39\u8005\u5c06\u76f4\u63a5\u4eab\u53d7\u5230\u7ea6 \u0031\u0030 \u4ebf\u5143\u7684\u964d\u4ef7\u7ea2\u5229\u3002'
+);
+assert.equal(
+  spacingAuditBlocks[0]?.text,
+  '\u0032\u0030\u0032\u0033\u5e74\uff0c\u4e2d\u56fdApp Store\u4fc3\u6210\u7684\u0033\u002e\u0037\u0036\u4e07\u4ebf\u5143\u4ea4\u6613\u989d\u4e2d\uff0c\u957f\u671f\u5b58\u5728\u4e8e\u89c6\u9891\u4f1a\u5458\u3001\u7f51\u6e38\u5145\u503c\u4e2d\u7684iOS\u6ea2\u4ef7\uff08\u901a\u5e38\u6bd4\u5b89\u5353\u7aef\u9ad8\u51fa\u0032\u0030%\u81f3\u0033\u0030%\uff09\u5c06\u88ab\u62b9\u5e73\uff0c\u666e\u901a\u6d88\u8d39\u8005\u5c06\u76f4\u63a5\u4eab\u53d7\u5230\u7ea6\u0031\u0030\u4ebf\u5143\u7684\u964d\u4ef7\u7ea2\u5229\u3002',
+  'format audit should remove extra spaces around Chinese-number and Chinese-English boundaries while preserving spaces inside English phrases'
+);
 
 const preview = await generateWechatDraftPreview({
   topic: 'AI 模型价格战的下一站',
@@ -218,13 +226,14 @@ assert.equal(preview.metadata.rendererVersion, 'beauty_plan_v5');
 assert.equal(preview.metadata.imageCount, 2);
 assert.equal(preview.metadata.author, 'WeChat QA');
 assert.ok(preview.metadata.blockCount >= 8, 'preview should include parsed blocks');
-assert.match(preview.previewHtml, /AI 模型价格战的下一站/);
+assert.match(preview.previewHtml, /AI模型价格战的下一站/);
 assert.match(preview.previewHtml, /单位成本差异正在重写平台分发逻辑/);
 assert.ok(preview.renderPlan, 'preview should return a reusable render plan');
 assert.ok(preview.metadata.renderPlan, 'preview metadata should include render plan details');
 assert.equal(preview.metadata.beautyAgent?.used, false);
 assert.ok(preview.renderPlan?.beautyAgent?.planHash, 'render plan should carry a stable hash');
 assert.doesNotMatch(preview.previewHtml, /<h1\b/i, 'wechat body should no longer render a standalone main title');
+assert.doesNotMatch(preview.previewHtml, /Summary|Focus|Lead \/|\/ note/i, 'opening highlight should not render helper labels');
 
 const themedExpectations = {
   bauhaus: { creditsVariant: 'stacked_editorial', headingVariants: ['offset_block', 'double_rule'] },

@@ -665,6 +665,25 @@ const WECHAT_BEAUTY_PLAN_SCHEMA = {
 };
 
 const cleanText = (value) => String(value || '').replace(/\r\n/g, '\n').trim();
+const WECHAT_EDITORIAL_CJK_CONTEXT_CHARS =
+  '\\p{Script=Han}\\u3001\\u3002\\uFF0C\\uFF1B\\uFF1A\\uFF01\\uFF1F\\uFF08\\uFF09\\u300A\\u300B\\u3008\\u3009\\u300C\\u300D\\u300E\\u300F\\u3010\\u3011\\u201C\\u201D\\u2018\\u2019';
+const WECHAT_EDITORIAL_CJK_CONTEXT = `[${WECHAT_EDITORIAL_CJK_CONTEXT_CHARS}]`;
+const WECHAT_EDITORIAL_LATIN_PHRASE = '(?:[A-Za-z]+[A-Za-z0-9+&./:-]*)(?:\\s+[A-Za-z0-9+&./:-]+)*';
+const WECHAT_EDITORIAL_NUMERIC_TOKEN = '[-+]?\\d[\\d.,]*(?:%|\\uFF05|\\u2030|bp|bps)?';
+const WECHAT_EDITORIAL_SPACE_RULES = [
+  [new RegExp(`(${WECHAT_EDITORIAL_CJK_CONTEXT})\\s+(${WECHAT_EDITORIAL_NUMERIC_TOKEN})`, 'gu'), '$1$2'],
+  [new RegExp(`(${WECHAT_EDITORIAL_NUMERIC_TOKEN})\\s+(${WECHAT_EDITORIAL_CJK_CONTEXT})`, 'gu'), '$1$2'],
+  [new RegExp(`(${WECHAT_EDITORIAL_CJK_CONTEXT})\\s+(${WECHAT_EDITORIAL_LATIN_PHRASE})`, 'gu'), '$1$2'],
+  [new RegExp(`(${WECHAT_EDITORIAL_LATIN_PHRASE})\\s+(${WECHAT_EDITORIAL_CJK_CONTEXT})`, 'gu'), '$1$2'],
+];
+
+const normalizeWechatEditorialText = (value) => {
+  let text = cleanText(value).replace(/[ \t]+/g, ' ');
+  for (const [pattern, replacement] of WECHAT_EDITORIAL_SPACE_RULES) {
+    text = text.replace(pattern, replacement);
+  }
+  return text;
+};
 
 const clip = (value, maxLength = 120) => {
   const normalized = cleanText(value);
@@ -680,7 +699,7 @@ const escapeHtml = (value) =>
     .replace(/'/g, '&#39;');
 
 const stripMarkdownInline = (value) =>
-  cleanText(
+  normalizeWechatEditorialText(
     String(value || '')
       .replace(/!\[[^\]]*\]\([^)]+\)/g, '')
       .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '$1')
@@ -711,12 +730,12 @@ const safeUrl = (value) => {
 
 const normalizeCreditLines = (value) => {
   if (Array.isArray(value)) {
-    return value.map((line) => cleanText(line)).filter(Boolean).slice(0, 6);
+    return value.map((line) => normalizeWechatEditorialText(line)).filter(Boolean).slice(0, 6);
   }
   if (typeof value === 'string') {
     return value
       .split('\n')
-      .map((line) => cleanText(line))
+      .map((line) => normalizeWechatEditorialText(line))
       .filter(Boolean)
       .slice(0, 6);
   }
@@ -836,7 +855,7 @@ const normalizeWechatLayoutSettings = (layout = {}) => ({
   author: cleanText(layout.author) || DEFAULT_AUTHOR,
   editor: cleanText(layout.editor) || undefined,
   creditLines: normalizeCreditLines(layout.creditLines),
-  digest: cleanText(layout.digest),
+  digest: normalizeWechatEditorialText(layout.digest),
   contentSourceUrl: safeUrl(layout.contentSourceUrl || DEFAULT_SOURCE_URL),
   coverStrategy: ['hero', 'first_ready', 'manual'].includes(String(layout.coverStrategy)) ? String(layout.coverStrategy) : 'hero',
   preferredCoverAssetId: cleanText(layout.preferredCoverAssetId) || undefined,
@@ -1038,10 +1057,10 @@ const resolveActiveIllustrationEntries = (bundle) => {
         assetId: activeAsset.id,
         order: slot.order,
         role: slot.role,
-        title: slot.title || activeAsset.title,
-        sectionTitle: slot.sectionTitle,
+        title: normalizeWechatEditorialText(slot.title || activeAsset.title),
+        sectionTitle: normalizeWechatEditorialText(slot.sectionTitle),
         anchorParagraphIndex: Number(slot.anchorParagraphIndex || 0),
-        caption: cleanText(activeAsset.editorCaption || slot.explanation || slot.purpose),
+        caption: normalizeWechatEditorialText(activeAsset.editorCaption || slot.explanation || slot.purpose),
         url: activeAsset.url,
         mimeType: activeAsset.mimeType,
         dataSpec: slot.dataSpec,
@@ -1209,6 +1228,9 @@ const WECHAT_IMAGE_VARIANTS = new Set([
   'border_frame',
 ]);
 const WECHAT_HIGHLIGHT_VARIANTS = new Set(['marker', 'underline', 'ink', 'accent_bar', 'corner', 'band', 'reverse', 'soft_tab']);
+const WECHAT_BODY_FONT_SIZE_PX = 15;
+const WECHAT_BODY_LINE_HEIGHT = 1.9;
+const WECHAT_PARAGRAPH_BREAK_AFTER_PX = Math.round(WECHAT_BODY_FONT_SIZE_PX * WECHAT_BODY_LINE_HEIGHT);
 
 const getWechatBlockPlainText = (block) => {
   if (!block) return '';
@@ -1388,110 +1410,86 @@ const renderWechatOpeningHighlightBlock = ({ blocks, layout, theme }) => {
 
   const preset = resolveTemplateRenderPreset(layout?.templateId);
   const typography = resolveWechatTypography(layout?.templateId);
-  const label = sentences.length > 1 ? 'Summary' : 'Focus';
   const mainSentence = escapeHtml(sentences[0]);
   const secondarySentences = sentences
     .slice(1)
     .map(
       (sentence) =>
-        `<p style="margin: 8px 0 0; color: ${theme.bodyColor}; font-family: ${typography.body}; font-size: 14px; line-height: 1.82;">${escapeHtml(sentence)}</p>`
+        `<p style="margin: 8px 0 0; color: ${theme.bodyColor}; font-family: ${typography.body}; font-size: 15px; line-height: 1.82;">${escapeHtml(sentence)}</p>`
     )
     .join('');
 
   if (preset.openingHighlightVariant === 'corner_flag') {
     return `
-      <section style="position: relative; margin: 0 0 26px; padding: 14px 0 14px 18px; border-top: 3px solid ${theme.accent}; border-bottom: 1px solid ${theme.cardBorder};">
-        <div data-wechat-decoration="true" style="position: absolute; left: 0; top: -3px; width: 34px; height: 14px; background: ${theme.accentSoft}; border-right: 2px solid ${theme.cardBorder};"></div>
-        <div data-wechat-decoration="true" style="display: inline-flex; align-items: center; gap: 10px; margin-bottom: 10px; color: ${theme.sectionColor}; font-family: ${typography.meta}; font-size: 11px; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase;">
-          <span>${label}</span>
-          <span style="display: inline-block; width: 26px; height: 2px; background: ${theme.accent};"></span>
-        </div>
-        <p style="display: inline; margin: 0; padding: 0 10px 2px 0; color: ${theme.titleColor}; font-family: ${typography.display}; font-size: 20px; line-height: 1.8; font-weight: 700; box-shadow: inset -12px -0.72em 0 ${theme.accentSoft};">${mainSentence}</p>
-        ${secondarySentences}
+      <section style="margin: 0 0 30px; padding: 18px 18px 16px 20px; border: 2px solid ${theme.cardBorder}; background: linear-gradient(135deg, ${theme.accentSoft} 0%, rgba(255,255,255,0) 72%), #FFFFFF;">
+        <p style="margin: 0; color: ${theme.titleColor}; font-family: ${typography.display}; font-size: 23px; line-height: 1.72; font-weight: 800; letter-spacing: 0.01em;">${mainSentence}</p>
+        ${secondarySentences ? `<div style="margin-top: 12px; padding-top: 10px; border-top: 1px solid ${theme.cardBorder};">${secondarySentences}</div>` : ''}
       </section>
     `.trim();
   }
 
   if (preset.openingHighlightVariant === 'soft_pillar') {
     return `
-      <section style="margin: 0 0 26px; padding: 4px 0 4px 18px; border-left: 3px solid ${theme.accent}; background: linear-gradient(90deg, ${theme.accentSoft} 0%, rgba(255,255,255,0) 62%);">
-        <div data-wechat-decoration="true" style="margin-bottom: 8px; color: ${theme.mutedColor}; font-family: ${typography.meta}; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;">${label}</div>
-        <p style="margin: 0; color: ${theme.titleColor}; font-family: ${typography.display}; font-size: 19px; line-height: 1.86; font-weight: 600;">${mainSentence}</p>
-        ${secondarySentences}
+      <section style="margin: 0 0 30px; padding: 16px 18px 15px 20px; border-left: 4px solid ${theme.accent}; background: linear-gradient(90deg, ${theme.accentSoft} 0%, rgba(255,255,255,0.96) 86%);">
+        <p style="margin: 0; color: ${theme.titleColor}; font-family: ${typography.display}; font-size: 22px; line-height: 1.76; font-weight: 600;">${mainSentence}</p>
+        ${secondarySentences ? `<div style="max-width: 92%; margin-top: 10px;">${secondarySentences}</div>` : ''}
       </section>
     `.trim();
   }
 
   if (preset.openingHighlightVariant === 'brutal_banner') {
     return `
-      <section style="margin: 0 0 28px; padding: 12px 0 14px; border-top: 4px solid ${theme.cardBorder}; border-bottom: 4px solid ${theme.cardBorder};">
-        <div data-wechat-decoration="true" style="display: inline-flex; align-items: center; margin-bottom: 10px; padding: 4px 10px; border: 2px solid ${theme.cardBorder}; background: ${theme.accentSoft}; color: ${theme.titleColor}; font-family: ${typography.meta}; font-size: 11px; font-weight: 900; letter-spacing: 0.14em; text-transform: uppercase;">${label}</div>
-        <p style="display: inline; margin: 0; padding: 0 6px 2px; color: ${theme.titleColor}; font-family: ${typography.display}; font-size: 20px; line-height: 1.74; font-weight: 800; background: linear-gradient(180deg, transparent 0%, transparent 38%, ${theme.accentSoft} 38%, ${theme.accentSoft} 100%);">${mainSentence}</p>
-        ${secondarySentences}
+      <section style="margin: 0 0 30px; padding: 16px 18px 15px; border: 3px solid ${theme.cardBorder}; background: ${theme.accentSoft};">
+        <p style="margin: 0; color: ${theme.titleColor}; font-family: ${typography.display}; font-size: 23px; line-height: 1.68; font-weight: 900; letter-spacing: -0.01em;">${mainSentence}</p>
+        ${secondarySentences ? `<div style="margin-top: 12px; padding-top: 10px; border-top: 2px solid ${theme.cardBorder};">${secondarySentences}</div>` : ''}
       </section>
     `.trim();
   }
 
   if (preset.openingHighlightVariant === 'ledger_stub') {
     return `
-      <section style="margin: 0 0 26px; padding: 12px 0; border-top: 1px dashed ${theme.cardBorder}; border-bottom: 1px dashed ${theme.cardBorder};">
-        <div data-wechat-decoration="true" style="margin-bottom: 8px; color: ${theme.mutedColor}; font-family: ${typography.mono}; font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;">${label} / note</div>
-        <p style="margin: 0; color: ${theme.titleColor}; font-family: ${typography.mono}; font-size: 17px; line-height: 1.86; font-weight: 700;">${mainSentence}</p>
+      <section style="margin: 0 0 28px; padding: 14px 16px 13px; border: 1px dashed ${theme.cardBorder}; background: #FAFAF7;">
+        <p style="margin: 0; color: ${theme.titleColor}; font-family: ${typography.mono}; font-size: 18px; line-height: 1.82; font-weight: 700;">${mainSentence}</p>
         ${secondarySentences
-          .replaceAll(`font-family: ${typography.body};`, `font-family: ${typography.mono};`)
-          .replaceAll('font-size: 14px;', 'font-size: 13px;')}
+          ? `<div style="margin-top: 10px; padding-top: 9px; border-top: 1px dashed ${theme.cardBorder};">${secondarySentences
+              .replaceAll(`font-family: ${typography.body};`, `font-family: ${typography.mono};`)
+              .replaceAll('font-size: 15px;', 'font-size: 13px;')}</div>`
+          : ''}
       </section>
     `.trim();
   }
 
   if (preset.openingHighlightVariant === 'cinema_lead') {
     return `
-      <section style="margin: 0 0 28px; padding: 6px 0 14px;">
-        <div data-wechat-decoration="true" style="display: inline-flex; align-items: center; gap: 10px; margin-bottom: 10px; color: ${theme.sectionColor}; font-family: ${typography.meta}; font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;">
-          <span>${label}</span>
-          <span style="display: inline-block; width: 38px; height: 1px; background: ${theme.accent};"></span>
-        </div>
-        <p style="margin: 0; color: ${theme.titleColor}; font-family: ${typography.display}; font-size: 21px; line-height: 1.78; font-weight: 700;">${mainSentence}</p>
-        <div data-wechat-decoration="true" style="width: 100%; max-width: 148px; height: 1px; margin-top: 12px; background: linear-gradient(90deg, ${theme.accent} 0%, rgba(255,255,255,0) 100%);"></div>
-        ${secondarySentences}
+      <section style="margin: 0 0 30px; padding: 18px 18px 16px; border-top: 1px solid ${theme.accent}; border-bottom: 1px solid ${theme.cardBorder}; background: linear-gradient(180deg, ${theme.sectionBackground} 0%, rgba(255,255,255,0.92) 100%);">
+        <p style="margin: 0; color: ${theme.titleColor}; font-family: ${typography.display}; font-size: 24px; line-height: 1.66; font-weight: 700;">${mainSentence}</p>
+        ${secondarySentences ? `<div style="max-width: 90%; margin-top: 12px; padding-top: 10px; border-top: 1px solid ${theme.cardBorder};">${secondarySentences}</div>` : ''}
       </section>
     `.trim();
   }
 
   if (preset.openingHighlightVariant === 'executive_summary') {
     return `
-      <section style="margin: 0 0 28px; padding: 12px 0 14px; border-top: 2px solid ${theme.titleColor}; border-bottom: 1px solid ${theme.cardBorder};">
-        <div data-wechat-decoration="true" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 10px; color: ${theme.mutedColor}; font-family: ${typography.meta}; font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;">
-          <span>${label}</span>
-          <span style="display: inline-block; flex: 1; height: 1px; background: ${theme.cardBorder};"></span>
-        </div>
-        <p style="margin: 0; color: ${theme.titleColor}; font-family: ${typography.display}; font-size: 21px; line-height: 1.78; font-weight: 700;">${mainSentence}</p>
-        ${secondarySentences ? `<div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid ${theme.cardBorder};">${secondarySentences}</div>` : ''}
+      <section style="margin: 0 0 30px; padding: 18px 20px 16px; border-top: 2px solid ${theme.titleColor}; border-bottom: 1px solid ${theme.cardBorder}; background: linear-gradient(180deg, ${theme.sectionBackground} 0%, rgba(255,255,255,0.96) 100%);">
+        <p style="margin: 0; color: ${theme.titleColor}; font-family: ${typography.display}; font-size: 24px; line-height: 1.66; font-weight: 700;">${mainSentence}</p>
+        ${secondarySentences ? `<div style="margin-top: 12px; padding-top: 10px; border-top: 1px solid ${theme.cardBorder};">${secondarySentences}</div>` : ''}
       </section>
     `.trim();
   }
 
   if (preset.openingHighlightVariant === 'summary_rules') {
     return `
-      <section style="margin: 0 0 24px; padding: 12px 0 14px; border-top: 1px solid ${theme.cardBorder}; border-bottom: 1px solid ${theme.cardBorder};">
-        <div data-wechat-decoration="true" style="display: inline-flex; align-items: center; gap: 10px; margin-bottom: 10px; color: ${theme.sectionColor}; font-family: ${typography.meta}; font-size: 11px; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase;">
-          <span style="display: inline-block; width: 24px; height: 2px; background: ${theme.accent};"></span>
-          <span>${label}</span>
-        </div>
-        <p style="margin: 0; color: ${theme.titleColor}; font-family: ${typography.display}; font-size: 19px; line-height: 1.84; font-weight: 650;">${mainSentence}</p>
-        ${secondarySentences}
+      <section style="margin: 0 0 28px; padding: 16px 18px 14px; border-top: 1px solid ${theme.cardBorder}; border-bottom: 1px solid ${theme.cardBorder}; background: linear-gradient(180deg, ${theme.sectionBackground} 0%, rgba(255,255,255,0.96) 100%);">
+        <p style="margin: 0; color: ${theme.titleColor}; font-family: ${typography.display}; font-size: 22px; line-height: 1.74; font-weight: 680;">${mainSentence}</p>
+        ${secondarySentences ? `<div style="max-width: 92%; margin-top: 10px;">${secondarySentences}</div>` : ''}
       </section>
     `.trim();
   }
 
   return `
-    <section style="margin: 0 0 24px; padding: 12px 0 14px; border-top: 1px solid ${theme.cardBorder}; border-bottom: 1px solid ${theme.cardBorder};">
-      <div data-wechat-decoration="true" style="display: inline-flex; align-items: center; gap: 8px; margin-bottom: 12px; color: ${theme.sectionColor}; font-family: ${typography.meta}; font-size: 11px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase;">
-        <span style="display: inline-block; width: 18px; height: 2px; background: ${theme.cardBorder};"></span>
-        <span>${label}</span>
-      </div>
-      <p style="margin: 0; color: ${theme.titleColor}; font-family: ${typography.display}; font-size: 18px; line-height: 1.85; font-weight: 650;">${mainSentence}</p>
-      ${secondarySentences}
+    <section style="margin: 0 0 28px; padding: 16px 18px 14px; border-top: 1px solid ${theme.cardBorder}; border-bottom: 1px solid ${theme.cardBorder}; background: linear-gradient(180deg, ${theme.sectionBackground} 0%, rgba(255,255,255,0.96) 100%);">
+      <p style="margin: 0; color: ${theme.titleColor}; font-family: ${typography.display}; font-size: 21px; line-height: 1.76; font-weight: 680;">${mainSentence}</p>
+      ${secondarySentences ? `<div style="max-width: 92%; margin-top: 10px;">${secondarySentences}</div>` : ''}
     </section>
   `.trim();
 };
@@ -2472,20 +2470,20 @@ const renderWechatBeautyParagraphBlock = (block, blockIndex, context) => {
   const textHtml = renderWechatTextWithHighlights(renderedText, context.highlightMap.get(blockIndex), context.theme);
   if (variant === 'lead') {
     return createWechatRenderedBlock(
-      `<p style="margin: 0 0 20px; color: ${context.theme.titleColor}; font-family: ${context.typography.display}; font-size: 17px; line-height: 1.92; letter-spacing: 0.01em; font-weight: 500;">${textHtml}</p>`,
+      `<p style="margin: 0 0 ${WECHAT_PARAGRAPH_BREAK_AFTER_PX}px; color: ${context.theme.titleColor}; font-family: ${context.typography.display}; font-size: 17px; line-height: 1.92; letter-spacing: 0.01em; font-weight: 500;">${textHtml}</p>`,
       block.text
     );
   }
   if (variant === 'callout') {
     return createWechatRenderedBlock(
-      `<div style="margin: 6px 0 22px; padding: 0 0 0 14px; border-left: 2px solid ${context.theme.accent}; background: linear-gradient(90deg, ${context.theme.accentSoft} 0%, rgba(255,255,255,0) 68%);"><p style="margin: 0; color: ${context.theme.titleColor}; font-size: 15px; line-height: 1.9; letter-spacing: 0.01em;">${textHtml}</p></div>`,
+      `<div style="margin: 0 0 ${WECHAT_PARAGRAPH_BREAK_AFTER_PX}px; padding: 0 0 0 14px; border-left: 2px solid ${context.theme.accent}; background: linear-gradient(90deg, ${context.theme.accentSoft} 0%, rgba(255,255,255,0) 68%);"><p style="margin: 0; color: ${context.theme.titleColor}; font-size: 15px; line-height: 1.9; letter-spacing: 0.01em;">${textHtml}</p></div>`,
       block.text
     );
   }
   if (variant === 'spotlight') {
     return createWechatRenderedBlock(
       `
-        <div style="margin: 10px 0 24px; padding: 12px 0 14px; border-top: 2px solid ${context.theme.accent}; border-bottom: 1px solid ${context.theme.cardBorder}; background: linear-gradient(180deg, ${context.theme.accentSoft} 0%, rgba(255,255,255,0) 100%);">
+        <div style="margin: 0 0 ${WECHAT_PARAGRAPH_BREAK_AFTER_PX}px; padding: 12px 0 14px; border-top: 2px solid ${context.theme.accent}; border-bottom: 1px solid ${context.theme.cardBorder}; background: linear-gradient(180deg, ${context.theme.accentSoft} 0%, rgba(255,255,255,0) 100%);">
           <p style="margin: 0; color: ${context.theme.titleColor}; font-size: 16px; line-height: 1.88; letter-spacing: 0.01em; font-weight: 600;">${textHtml}</p>
         </div>
       `.trim(),
@@ -2494,14 +2492,14 @@ const renderWechatBeautyParagraphBlock = (block, blockIndex, context) => {
   }
   if (variant === 'compact') {
     return createWechatRenderedBlock(
-      `<p style="max-width: 92%; margin: 0 0 16px; padding-left: 14px; border-left: 2px solid ${context.theme.cardBorder}; color: ${context.theme.bodyColor}; font-size: 14px; line-height: 1.82; letter-spacing: 0.01em;">${textHtml}</p>`,
+      `<p style="max-width: 92%; margin: 0 0 ${WECHAT_PARAGRAPH_BREAK_AFTER_PX}px; padding-left: 14px; border-left: 2px solid ${context.theme.cardBorder}; color: ${context.theme.bodyColor}; font-size: 14px; line-height: 1.82; letter-spacing: 0.01em;">${textHtml}</p>`,
       block.text
     );
   }
   if (variant === 'data_callout') {
     return createWechatRenderedBlock(
       `
-        <div style="margin: 10px 0 24px; padding: 12px 0 14px; border-top: 1px solid ${context.theme.cardBorder}; border-bottom: 1px solid ${context.theme.cardBorder};">
+        <div style="margin: 0 0 ${WECHAT_PARAGRAPH_BREAK_AFTER_PX}px; padding: 12px 0 14px; border-top: 1px solid ${context.theme.cardBorder}; border-bottom: 1px solid ${context.theme.cardBorder};">
           <div data-wechat-decoration="true" style="display: inline-flex; align-items: center; gap: 8px; margin-bottom: 8px; color: ${context.theme.sectionColor}; font-family: ${context.typography.meta}; font-size: 11px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase;">
             <span style="display: inline-block; width: 24px; height: 2px; background: ${context.theme.accent};"></span>
             <span>Key Data</span>
@@ -2514,12 +2512,12 @@ const renderWechatBeautyParagraphBlock = (block, blockIndex, context) => {
   }
   if (variant === 'closing') {
     return createWechatRenderedBlock(
-      `<p style="margin: 26px 0 0; padding-top: 16px; border-top: 1px solid ${context.theme.cardBorder}; color: ${context.theme.bodyColor}; font-size: 15px; line-height: 1.9; letter-spacing: 0.01em;">${textHtml}</p>`,
+      `<p style="margin: 0 0 ${WECHAT_PARAGRAPH_BREAK_AFTER_PX}px; padding-top: 16px; border-top: 1px solid ${context.theme.cardBorder}; color: ${context.theme.bodyColor}; font-size: 15px; line-height: 1.9; letter-spacing: 0.01em;">${textHtml}</p>`,
       block.text
     );
   }
   return createWechatRenderedBlock(
-    `<p style="margin: 0 0 16px; color: ${context.theme.bodyColor}; font-family: ${context.typography.body}; font-size: 15px; line-height: 1.9; letter-spacing: 0.01em;">${textHtml}</p>`,
+    `<p style="margin: 0 0 ${WECHAT_PARAGRAPH_BREAK_AFTER_PX}px; color: ${context.theme.bodyColor}; font-family: ${context.typography.body}; font-size: 15px; line-height: 1.9; letter-spacing: 0.01em;">${textHtml}</p>`,
     block.text
   );
 };
@@ -2538,7 +2536,7 @@ const renderWechatBeautyHeadingBlock = (block, blockIndex, context) => {
   if (variant === 'chapter_marker') {
     return createWechatRenderedBlock(
       `
-        <div style="margin: 40px 0 22px;">
+        <div style="margin: 40px 0 ${WECHAT_PARAGRAPH_BREAK_AFTER_PX}px;">
           <${tag} style="margin: 0; color: ${context.theme.accent}; font-family: ${displayFont}; font-size: ${isPrimaryHeading ? 28 : 22}px; line-height: 1.45; font-weight: 800;">
             ${ordinal ? `<span data-wechat-decoration="true" style="display: inline-block; margin-right: 10px; color: ${context.theme.accent}; font-weight: 800;">#${ordinal}</span>` : ''}
             <span>${textHtml}</span>
@@ -2553,7 +2551,7 @@ const renderWechatBeautyHeadingBlock = (block, blockIndex, context) => {
   if (variant === 'red_bar') {
     return createWechatRenderedBlock(
       `
-        <div style="margin: 34px 0 18px; padding-left: 16px; border-left: 6px solid ${context.theme.accent};">
+        <div style="margin: 34px 0 ${WECHAT_PARAGRAPH_BREAK_AFTER_PX}px; padding-left: 16px; border-left: 6px solid ${context.theme.accent};">
           <${tag} style="margin: 0; color: ${context.theme.titleColor}; font-family: ${displayFont}; font-size: ${isPrimaryHeading ? 24 : 20}px; line-height: 1.45; font-weight: 800;">${textHtml}</${tag}>
         </div>
       `.trim(),
@@ -2564,7 +2562,7 @@ const renderWechatBeautyHeadingBlock = (block, blockIndex, context) => {
   if (variant === 'section_band') {
     return createWechatRenderedBlock(
       `
-        <div style="margin: 34px 0 18px; padding: 10px 0; border-top: 1px solid ${context.theme.cardBorder}; border-bottom: 1px solid ${context.theme.cardBorder}; background: linear-gradient(90deg, ${context.theme.sectionBackground} 0%, rgba(255,255,255,0) 76%);">
+        <div style="margin: 34px 0 ${WECHAT_PARAGRAPH_BREAK_AFTER_PX}px; padding: 10px 0; border-top: 1px solid ${context.theme.cardBorder}; border-bottom: 1px solid ${context.theme.cardBorder}; background: linear-gradient(90deg, ${context.theme.sectionBackground} 0%, rgba(255,255,255,0) 76%);">
           <${tag} style="margin: 0; color: ${context.theme.sectionColor}; font-family: ${displayFont}; font-size: ${isPrimaryHeading ? 24 : 20}px; line-height: 1.45; font-weight: 800;">${textHtml}</${tag}>
         </div>
       `.trim(),
@@ -2575,7 +2573,7 @@ const renderWechatBeautyHeadingBlock = (block, blockIndex, context) => {
   if (variant === 'underline') {
     return createWechatRenderedBlock(
       `
-        <div style="margin: 32px 0 18px;">
+        <div style="margin: 32px 0 ${WECHAT_PARAGRAPH_BREAK_AFTER_PX}px;">
           <${tag} style="margin: 0; color: ${context.theme.titleColor}; font-family: ${displayFont}; font-size: ${isPrimaryHeading ? 23 : 19}px; line-height: 1.45; font-weight: 700;">${textHtml}</${tag}>
           <div data-wechat-decoration="true" style="width: ${block.type === 'heading' ? 84 : 64}px; height: 2px; margin-top: 10px; background: ${context.theme.accent};"></div>
         </div>
@@ -2587,7 +2585,7 @@ const renderWechatBeautyHeadingBlock = (block, blockIndex, context) => {
   if (variant === 'accent_tag') {
     return createWechatRenderedBlock(
       `
-        <div style="margin: 28px 0 14px;">
+        <div style="margin: 28px 0 ${WECHAT_PARAGRAPH_BREAK_AFTER_PX}px;">
           <div style="display: inline-flex; align-items: center; gap: 8px; margin-bottom: 8px;">
             <span data-wechat-decoration="true" style="display: inline-block; width: 26px; height: 8px; border-radius: 999px; background: ${context.theme.accent};"></span>
             <span data-wechat-decoration="true" style="display: inline-block; width: 8px; height: 8px; border-radius: 999px; background: ${context.theme.cardBorder};"></span>
@@ -2603,7 +2601,7 @@ const renderWechatBeautyHeadingBlock = (block, blockIndex, context) => {
     const badgeText = ordinal ? String(ordinal).padStart(2, '0') : '+';
     return createWechatRenderedBlock(
       `
-        <div style="display: flex; align-items: flex-start; gap: 12px; margin: 32px 0 18px;">
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin: 32px 0 ${WECHAT_PARAGRAPH_BREAK_AFTER_PX}px;">
           <span data-wechat-decoration="true" style="display: inline-flex; flex: 0 0 auto; align-items: center; justify-content: center; min-width: ${block.type === 'heading' ? 38 : 34}px; height: ${block.type === 'heading' ? 38 : 34}px; border-radius: 14px; background: ${context.theme.accentSoft}; color: ${context.theme.sectionColor}; font-size: ${block.type === 'heading' ? 14 : 13}px; font-weight: 800; line-height: 1;">${badgeText}</span>
           <${tag} style="margin: 2px 0 0; color: ${context.theme.titleColor}; font-family: ${displayFont}; font-size: ${isPrimaryHeading ? 22 : 18}px; line-height: 1.5; font-weight: 780;">${textHtml}</${tag}>
         </div>
@@ -2615,7 +2613,7 @@ const renderWechatBeautyHeadingBlock = (block, blockIndex, context) => {
   if (variant === 'overline') {
     return createWechatRenderedBlock(
       `
-        <div style="margin: ${isPrimaryHeading ? '30px' : '24px'} 0 14px;">
+        <div style="margin: ${isPrimaryHeading ? '30px' : '24px'} 0 ${WECHAT_PARAGRAPH_BREAK_AFTER_PX}px;">
           <div data-wechat-decoration="true" style="display: inline-flex; align-items: center; gap: 10px; margin-bottom: 8px; color: ${context.theme.mutedColor}; font-family: ${metaFont}; font-size: 11px; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase;">
             <span>${isPrimaryHeading ? 'Section' : 'Note'}</span>
             <span style="display: inline-block; width: ${isPrimaryHeading ? 28 : 20}px; height: 1px; background: ${context.theme.cardBorder};"></span>
@@ -2630,7 +2628,7 @@ const renderWechatBeautyHeadingBlock = (block, blockIndex, context) => {
   if (variant === 'double_rule') {
     return createWechatRenderedBlock(
       `
-        <div style="margin: ${isPrimaryHeading ? '34px' : '28px'} 0 16px; padding: 10px 0 8px; border-top: 1px solid ${context.theme.cardBorder}; border-bottom: 1px solid ${context.theme.cardBorder};">
+        <div style="margin: ${isPrimaryHeading ? '34px' : '28px'} 0 ${WECHAT_PARAGRAPH_BREAK_AFTER_PX}px; padding: 10px 0 8px; border-top: 1px solid ${context.theme.cardBorder}; border-bottom: 1px solid ${context.theme.cardBorder};">
           <${tag} style="margin: 0; color: ${context.theme.titleColor}; font-family: ${displayFont}; font-size: ${isPrimaryHeading ? 23 : 18}px; line-height: 1.5; font-weight: ${isPrimaryHeading ? 760 : 700};">${textHtml}</${tag}>
         </div>
       `.trim(),
@@ -2641,7 +2639,7 @@ const renderWechatBeautyHeadingBlock = (block, blockIndex, context) => {
   if (variant === 'offset_block') {
     return createWechatRenderedBlock(
       `
-        <div style="margin: ${isPrimaryHeading ? '34px' : '26px'} 0 16px;">
+        <div style="margin: ${isPrimaryHeading ? '34px' : '26px'} 0 ${WECHAT_PARAGRAPH_BREAK_AFTER_PX}px;">
           <${tag} style="display: inline; margin: 0; padding: 0 10px 2px 0; color: ${context.theme.titleColor}; font-family: ${displayFont}; font-size: ${isPrimaryHeading ? 24 : 18}px; line-height: 1.5; font-weight: ${isPrimaryHeading ? 780 : 720}; box-shadow: inset -14px -0.72em 0 ${context.theme.accentSoft};">${textHtml}</${tag}>
         </div>
       `.trim(),
@@ -2652,7 +2650,7 @@ const renderWechatBeautyHeadingBlock = (block, blockIndex, context) => {
   if (variant === 'ledger_rule') {
     return createWechatRenderedBlock(
       `
-        <div style="margin: ${isPrimaryHeading ? '30px' : '24px'} 0 14px; padding: 8px 0 10px; border-top: 1px dashed ${context.theme.cardBorder}; border-bottom: 1px dashed ${context.theme.cardBorder};">
+        <div style="margin: ${isPrimaryHeading ? '30px' : '24px'} 0 ${WECHAT_PARAGRAPH_BREAK_AFTER_PX}px; padding: 8px 0 10px; border-top: 1px dashed ${context.theme.cardBorder}; border-bottom: 1px dashed ${context.theme.cardBorder};">
           <div data-wechat-decoration="true" style="margin-bottom: 6px; color: ${context.theme.mutedColor}; font-family: ${monoFont}; font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;">${ordinal ? `0${ordinal}`.slice(-2) : '00'} / section</div>
           <${tag} style="margin: 0; color: ${context.theme.titleColor}; font-family: ${monoFont}; font-size: ${isPrimaryHeading ? 20 : 16}px; line-height: 1.56; font-weight: 700;">${textHtml}</${tag}>
         </div>
@@ -2664,7 +2662,7 @@ const renderWechatBeautyHeadingBlock = (block, blockIndex, context) => {
   if (variant === 'cinema_caption') {
     return createWechatRenderedBlock(
       `
-        <div style="margin: ${isPrimaryHeading ? '34px' : '28px'} 0 16px;">
+        <div style="margin: ${isPrimaryHeading ? '34px' : '28px'} 0 ${WECHAT_PARAGRAPH_BREAK_AFTER_PX}px;">
           <div data-wechat-decoration="true" style="display: inline-flex; align-items: center; gap: 10px; margin-bottom: 8px; color: ${context.theme.sectionColor}; font-family: ${metaFont}; font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;">
             <span>${isPrimaryHeading ? 'Scene' : 'Frame'}</span>
             <span style="display: inline-block; width: ${isPrimaryHeading ? 40 : 28}px; height: 1px; background: ${context.theme.accent};"></span>
@@ -2679,7 +2677,7 @@ const renderWechatBeautyHeadingBlock = (block, blockIndex, context) => {
   if (variant === 'executive_rule') {
     return createWechatRenderedBlock(
       `
-        <div style="margin: ${isPrimaryHeading ? '36px' : '28px'} 0 16px; padding-top: 10px; border-top: 1px solid ${context.theme.titleColor};">
+        <div style="margin: ${isPrimaryHeading ? '36px' : '28px'} 0 ${WECHAT_PARAGRAPH_BREAK_AFTER_PX}px; padding-top: 10px; border-top: 1px solid ${context.theme.titleColor};">
           <div data-wechat-decoration="true" style="display: inline-flex; align-items: center; gap: 10px; margin-bottom: 8px; color: ${context.theme.mutedColor}; font-family: ${metaFont}; font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;">
             <span>${isPrimaryHeading ? 'Review' : 'Point'}</span>
             <span style="display: inline-block; width: 32px; height: 1px; background: ${context.theme.cardBorder};"></span>
@@ -2693,7 +2691,7 @@ const renderWechatBeautyHeadingBlock = (block, blockIndex, context) => {
   }
 
   return createWechatRenderedBlock(
-    `<${tag} style="margin: ${block.type === 'heading' ? '30px 0 16px' : '24px 0 12px'}; color: ${context.theme.titleColor}; font-family: ${displayFont}; font-size: ${block.type === 'heading' ? 22 : 18}px; line-height: 1.5; font-weight: 700;">${textHtml}</${tag}>`,
+    `<${tag} style="margin: ${block.type === 'heading' ? `30px 0 ${WECHAT_PARAGRAPH_BREAK_AFTER_PX}px` : `24px 0 ${WECHAT_PARAGRAPH_BREAK_AFTER_PX}px`}; color: ${context.theme.titleColor}; font-family: ${displayFont}; font-size: ${block.type === 'heading' ? 22 : 18}px; line-height: 1.5; font-weight: 700;">${textHtml}</${tag}>`,
     block.text
   );
 };
@@ -2711,7 +2709,7 @@ const renderWechatBeautyQuoteBlock = (block, blockIndex, context) => {
   if (variant === 'accent_panel') {
     return createWechatRenderedBlock(
       `
-        <blockquote style="margin: 28px 0; padding: 14px 0 14px 18px; border-left: 3px solid ${context.theme.accent}; border-top: 1px solid ${context.theme.cardBorder}; border-bottom: 1px solid ${context.theme.cardBorder}; color: ${context.theme.titleColor}; font-size: 16px; line-height: 1.92;">
+        <blockquote style="margin: 0 0 ${WECHAT_PARAGRAPH_BREAK_AFTER_PX}px; padding: 14px 0 14px 18px; border-left: 3px solid ${context.theme.accent}; border-top: 1px solid ${context.theme.cardBorder}; border-bottom: 1px solid ${context.theme.cardBorder}; color: ${context.theme.titleColor}; font-size: 16px; line-height: 1.92;">
           ${textHtml}
         </blockquote>
       `.trim(),
@@ -2721,7 +2719,7 @@ const renderWechatBeautyQuoteBlock = (block, blockIndex, context) => {
   if (variant === 'centered_pull') {
     return createWechatRenderedBlock(
       `
-        <blockquote style="margin: 30px 0; padding: 12px 0; text-align: center; border-top: 1px solid ${context.theme.cardBorder}; border-bottom: 1px solid ${context.theme.cardBorder};">
+        <blockquote style="margin: 0 0 ${WECHAT_PARAGRAPH_BREAK_AFTER_PX}px; padding: 12px 0; text-align: center; border-top: 1px solid ${context.theme.cardBorder}; border-bottom: 1px solid ${context.theme.cardBorder};">
           <p style="margin: 0; color: ${context.theme.titleColor}; font-family: ${context.typography.display}; font-size: 18px; line-height: 1.85; font-weight: 650;">${textHtml}</p>
         </blockquote>
       `.trim(),
@@ -2730,12 +2728,12 @@ const renderWechatBeautyQuoteBlock = (block, blockIndex, context) => {
   }
   if (variant === 'plain_quote') {
     return createWechatRenderedBlock(
-      `<blockquote style="margin: 24px 0; padding-left: 16px; border-left: 3px solid ${context.theme.cardBorder}; color: ${context.theme.bodyColor}; font-size: 15px; line-height: 1.9;">${textHtml}</blockquote>`,
+      `<blockquote style="margin: 0 0 ${WECHAT_PARAGRAPH_BREAK_AFTER_PX}px; padding-left: 16px; border-left: 3px solid ${context.theme.cardBorder}; color: ${context.theme.bodyColor}; font-size: 15px; line-height: 1.9;">${textHtml}</blockquote>`,
       block.text
     );
   }
   return createWechatRenderedBlock(
-    `<blockquote style="margin: 26px 0; padding: 18px 20px; border-left: 4px solid ${context.theme.quoteBorder}; border-radius: 0 20px 20px 0; background: ${context.theme.quoteBackground}; color: ${context.theme.titleColor}; font-size: 16px; line-height: 1.92;">${textHtml}</blockquote>`,
+    `<blockquote style="margin: 0 0 ${WECHAT_PARAGRAPH_BREAK_AFTER_PX}px; padding: 18px 20px; border-left: 4px solid ${context.theme.quoteBorder}; border-radius: 0 20px 20px 0; background: ${context.theme.quoteBackground}; color: ${context.theme.titleColor}; font-size: 16px; line-height: 1.92;">${textHtml}</blockquote>`,
     block.text
   );
 };
@@ -2745,7 +2743,7 @@ const renderWechatBeautyListBlock = (block, blockIndex, context) => {
   const tag = block.type === 'ordered_list' ? 'ol' : 'ul';
   if (variant === 'numbered_steps') {
     return createWechatRenderedBlock(
-      `<ol style="display: grid; grid-template-columns: 1fr; gap: 10px; margin: 4px 0 22px; padding: 0; list-style: none;">${(block.items || [])
+      `<ol style="display: grid; grid-template-columns: 1fr; gap: 10px; margin: 0 0 ${WECHAT_PARAGRAPH_BREAK_AFTER_PX}px; padding: 0; list-style: none;">${(block.items || [])
         .map(
           (item, itemIndex) =>
             `<li style="display: flex; gap: 12px; align-items: flex-start; padding: 12px 0 12px; border-bottom: 1px solid ${context.theme.cardBorder};"><span data-wechat-decoration="true" style="display: inline-flex; flex: 0 0 auto; align-items: center; justify-content: center; min-width: 28px; height: 28px; border-radius: 999px; background: ${context.theme.accentSoft}; color: ${context.theme.sectionColor}; font-size: 12px; font-weight: 800; line-height: 1;">${itemIndex + 1}</span><span style="display: inline-block; color: ${context.theme.bodyColor}; font-size: 15px; line-height: 1.82;">${escapeHtml(item)}</span></li>`
@@ -2756,7 +2754,7 @@ const renderWechatBeautyListBlock = (block, blockIndex, context) => {
   }
   if (variant === 'card_list') {
     return createWechatRenderedBlock(
-      `<${tag} style="display: grid; grid-template-columns: 1fr; gap: 10px; margin: 4px 0 22px; padding: 0; list-style: none;">${(block.items || [])
+      `<${tag} style="display: grid; grid-template-columns: 1fr; gap: 10px; margin: 0 0 ${WECHAT_PARAGRAPH_BREAK_AFTER_PX}px; padding: 0; list-style: none;">${(block.items || [])
         .map((item, itemIndex) => {
           const marker = block.type === 'ordered_list' ? String(itemIndex + 1).padStart(2, '0') : '*';
           return `<li style="display: flex; gap: 12px; align-items: flex-start; padding: 12px 0; border-top: 1px solid ${context.theme.cardBorder}; border-bottom: 1px solid ${context.theme.cardBorder};"><span data-wechat-decoration="true" style="display: inline-flex; flex: 0 0 auto; align-items: center; justify-content: center; min-width: 28px; height: 28px; border-radius: 8px; border: 1px solid ${context.theme.cardBorder}; background: ${context.theme.accentSoft}; color: ${context.theme.sectionColor}; font-size: 12px; font-weight: 800; line-height: 1;">${marker}</span><span style="display: inline-block; color: ${context.theme.bodyColor}; font-size: 15px; line-height: 1.82;">${escapeHtml(item)}</span></li>`;
@@ -2767,7 +2765,7 @@ const renderWechatBeautyListBlock = (block, blockIndex, context) => {
   }
   if (variant === 'check_grid') {
     return createWechatRenderedBlock(
-      `<${tag} style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px 12px; margin: 4px 0 22px; padding: 0; list-style: none;">${(block.items || [])
+      `<${tag} style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px 12px; margin: 0 0 ${WECHAT_PARAGRAPH_BREAK_AFTER_PX}px; padding: 0; list-style: none;">${(block.items || [])
         .map(
           (item) =>
             `<li style="display: flex; gap: 10px; align-items: flex-start; min-width: 0; padding: 10px 0; border-bottom: 1px solid ${context.theme.cardBorder};"><span data-wechat-decoration="true" style="display: inline-flex; flex: 0 0 auto; align-items: center; justify-content: center; width: 20px; height: 20px; border-radius: 999px; border: 1px solid ${context.theme.cardBorder}; background: ${context.theme.accentSoft}; color: ${context.theme.accent}; font-size: 12px; font-weight: 800; line-height: 1;">+</span><span style="display: inline-block; min-width: 0; color: ${context.theme.bodyColor}; font-size: 14px; line-height: 1.75;">${escapeHtml(item)}</span></li>`
@@ -2778,8 +2776,8 @@ const renderWechatBeautyListBlock = (block, blockIndex, context) => {
   }
   const baseStyle =
     variant === 'plain_list'
-      ? `margin: 0 0 18px; padding-left: 1.35em; color: ${context.theme.bodyColor}; font-size: 15px; line-height: 1.9;`
-      : `margin: 2px 0 20px; padding-left: 1.45em; color: ${context.theme.bodyColor}; font-size: 15px; line-height: 1.95;`;
+      ? `margin: 0 0 ${WECHAT_PARAGRAPH_BREAK_AFTER_PX}px; padding-left: 1.35em; color: ${context.theme.bodyColor}; font-size: 15px; line-height: 1.9;`
+      : `margin: 0 0 ${WECHAT_PARAGRAPH_BREAK_AFTER_PX}px; padding-left: 1.45em; color: ${context.theme.bodyColor}; font-size: 15px; line-height: 1.95;`;
   return createWechatRenderedBlock(
     `<${tag} style="${baseStyle}">${block.items
       .map((item) => `<li style="margin: 0 0 10px;">${escapeHtml(item)}</li>`)
@@ -2806,7 +2804,7 @@ const renderWechatBeautyTableBlock = (block, blockIndex, context) => {
   };
   return createWechatRenderedBlock(
     `
-      <div style="width: 100%; max-width: 100%; margin: 28px 0; overflow: hidden; border: 1px solid ${context.theme.cardBorder}; border-radius: ${radius}px; background: ${containerBackground}; box-shadow: none;">
+      <div style="width: 100%; max-width: 100%; margin: 0 0 ${WECHAT_PARAGRAPH_BREAK_AFTER_PX}px; overflow: hidden; border: 1px solid ${context.theme.cardBorder}; border-radius: ${radius}px; background: ${containerBackground}; box-shadow: none;">
         <table style="width: 100%; max-width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 13px; line-height: 1.75; color: ${context.theme.bodyColor};">
           <thead style="background: ${headerBackground};">
             <tr>${block.headers
@@ -2841,7 +2839,7 @@ const renderWechatBeautyImageBlock = (image, blockIndex, context) => {
   if (variant === 'shadow_card') {
     return createWechatRenderedBlock(
       `
-        <figure style="margin: 36px 0 32px; width: 100%; box-sizing: border-box; padding: 10px; border-radius: 24px; background: #FFFFFF; border: 1px solid ${context.theme.cardBorder};">
+        <figure style="margin: 0 0 ${WECHAT_PARAGRAPH_BREAK_AFTER_PX}px; width: 100%; box-sizing: border-box; padding: 10px; border-radius: 24px; background: #FFFFFF; border: 1px solid ${context.theme.cardBorder};">
           <img src="${escapeHtml(image.url)}" alt="${escapeHtml(image.title || 'Illustration')}" style="display: block; width: 100%; max-width: 100%; height: auto; border-radius: 16px; background: #F8FAFC;" />
           ${image.caption ? `<figcaption style="margin-top: 12px; color: ${context.theme.mutedColor}; font-size: 13px; line-height: 1.75;">${escapeHtml(image.caption)}</figcaption>` : ''}
         </figure>
@@ -2851,7 +2849,7 @@ const renderWechatBeautyImageBlock = (image, blockIndex, context) => {
   if (variant === 'caption_band') {
     return createWechatRenderedBlock(
       `
-        <figure style="margin: 36px 0 30px; width: 100%; box-sizing: border-box; overflow: hidden; border-radius: 22px; background: #FFFFFF; border: 1px solid ${context.theme.cardBorder};">
+        <figure style="margin: 0 0 ${WECHAT_PARAGRAPH_BREAK_AFTER_PX}px; width: 100%; box-sizing: border-box; overflow: hidden; border-radius: 22px; background: #FFFFFF; border: 1px solid ${context.theme.cardBorder};">
           <img src="${escapeHtml(image.url)}" alt="${escapeHtml(image.title || 'Illustration')}" style="display: block; width: 100%; max-width: 100%; height: auto; background: #F8FAFC;" />
           ${image.caption ? `<figcaption style="padding: 12px 14px 13px; background: ${context.theme.sectionBackground}; color: ${context.theme.bodyColor}; font-size: 13px; line-height: 1.72;">${escapeHtml(image.caption)}</figcaption>` : ''}
         </figure>
@@ -2861,7 +2859,7 @@ const renderWechatBeautyImageBlock = (image, blockIndex, context) => {
   if (variant === 'border_frame') {
     return createWechatRenderedBlock(
       `
-        <figure style="margin: 36px 0 30px; width: 100%; box-sizing: border-box; padding: 8px; border-radius: 24px; border: 1px solid ${context.theme.cardBorder}; background: #FFFFFF;">
+        <figure style="margin: 0 0 ${WECHAT_PARAGRAPH_BREAK_AFTER_PX}px; width: 100%; box-sizing: border-box; padding: 8px; border-radius: 24px; border: 1px solid ${context.theme.cardBorder}; background: #FFFFFF;">
           <img src="${escapeHtml(image.url)}" alt="${escapeHtml(image.title || 'Illustration')}" style="display: block; width: 100%; max-width: 100%; height: auto; border-radius: 16px; background: #F8FAFC;" />
           ${image.caption ? `<figcaption style="margin-top: 10px; color: ${context.theme.mutedColor}; font-size: 13px; line-height: 1.75;">${escapeHtml(image.caption)}</figcaption>` : ''}
         </figure>
@@ -2871,7 +2869,7 @@ const renderWechatBeautyImageBlock = (image, blockIndex, context) => {
   if (variant === 'editorial_card') {
     return createWechatRenderedBlock(
       `
-        <figure style="margin: 34px 0 30px; width: 100%; box-sizing: border-box; padding: 10px; border: 1px solid ${context.theme.cardBorder}; border-radius: 22px; background: #FFFFFF;">
+        <figure style="margin: 0 0 ${WECHAT_PARAGRAPH_BREAK_AFTER_PX}px; width: 100%; box-sizing: border-box; padding: 10px; border: 1px solid ${context.theme.cardBorder}; border-radius: 22px; background: #FFFFFF;">
           <img src="${escapeHtml(image.url)}" alt="${escapeHtml(image.title || 'Illustration')}" style="display: block; width: 100%; max-width: 100%; height: auto; border-radius: 14px; background: #F8FAFC;" />
           ${image.caption ? `<figcaption style="margin-top: 12px; color: ${context.theme.mutedColor}; font-size: 13px; line-height: 1.75;">${escapeHtml(image.caption)}</figcaption>` : ''}
         </figure>
@@ -2882,7 +2880,7 @@ const renderWechatBeautyImageBlock = (image, blockIndex, context) => {
   if (variant === 'full_bleed') {
     return createWechatRenderedBlock(
       `
-        <figure style="margin: 38px 0 32px; width: 100%; box-sizing: border-box;">
+        <figure style="margin: 0 0 ${WECHAT_PARAGRAPH_BREAK_AFTER_PX}px; width: 100%; box-sizing: border-box;">
           <img src="${escapeHtml(image.url)}" alt="${escapeHtml(image.title || 'Illustration')}" style="display: block; width: 100%; max-width: 100%; height: auto; border-radius: 20px; background: #F8FAFC;" />
           ${image.caption ? `<figcaption style="margin-top: 10px; padding-left: 2px; color: ${context.theme.mutedColor}; font-size: 12px; line-height: 1.7;">${escapeHtml(image.caption)}</figcaption>` : ''}
         </figure>
@@ -2892,7 +2890,7 @@ const renderWechatBeautyImageBlock = (image, blockIndex, context) => {
 
   return createWechatRenderedBlock(
     `
-      <figure style="margin: 34px 0 30px; width: 100%; box-sizing: border-box;">
+      <figure style="margin: 0 0 ${WECHAT_PARAGRAPH_BREAK_AFTER_PX}px; width: 100%; box-sizing: border-box;">
         <img src="${escapeHtml(image.url)}" alt="${escapeHtml(image.title || 'Illustration')}" style="display: block; width: 100%; max-width: 100%; height: auto; border-radius: 18px; background: #F8FAFC;" />
         ${image.caption ? `<figcaption style="margin-top: 12px; padding-top: 10px; border-top: 1px solid ${context.theme.cardBorder}; color: ${context.theme.mutedColor}; font-size: 13px; line-height: 1.75;">${escapeHtml(image.caption)}</figcaption>` : ''}
       </figure>
@@ -2901,7 +2899,7 @@ const renderWechatBeautyImageBlock = (image, blockIndex, context) => {
 };
 
 const renderWechatBeautyDivider = (theme) =>
-  `<div data-wechat-decoration="true" style="width: 100%; height: 1px; margin: 28px 0; background: linear-gradient(90deg, transparent 0%, ${theme.cardBorder} 18%, ${theme.cardBorder} 82%, transparent 100%);"></div>`;
+  `<div data-wechat-decoration="true" style="width: 100%; height: 1px; margin: ${WECHAT_PARAGRAPH_BREAK_AFTER_PX}px 0; background: linear-gradient(90deg, transparent 0%, ${theme.cardBorder} 18%, ${theme.cardBorder} 82%, transparent 100%);"></div>`;
 
 const renderWechatBeautyBlockHtml = (block, blockIndex, context) => {
   if (block.type === 'heading' || block.type === 'subheading') {
