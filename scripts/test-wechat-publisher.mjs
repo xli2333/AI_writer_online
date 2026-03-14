@@ -235,6 +235,36 @@ assert.ok(preview.renderPlan?.beautyAgent?.planHash, 'render plan should carry a
 assert.doesNotMatch(preview.previewHtml, /<h1\b/i, 'wechat body should no longer render a standalone main title');
 assert.doesNotMatch(preview.previewHtml, /Summary|Focus|Lead \/|\/ note/i, 'opening highlight should not render helper labels');
 
+const endingAuditContent = [
+  '# xAI role shift',
+  '\u7b2c\u4e00\u6bb5\u4ea4\u4ee3\u80cc\u666f\uff0c\u8bf4\u660e\u56e2\u961f\u3001\u4ea7\u54c1\u548c\u7ec4\u7ec7\u8c03\u6574\u7684\u57fa\u672c\u8f6e\u5ed3\u3002',
+  '',
+  '\u7b2c\u4e8c\u6bb5\u8865\u5145\u67b6\u6784\u3001\u4eba\u624d\u548c\u5de5\u7a0b\u4f53\u7cfb\u7684\u53d8\u5316\uff0c\u8ba9\u8bba\u8ff0\u8fdb\u5165\u5230\u5173\u952e\u62d0\u70b9\u3002',
+  '',
+  'xAI\u7684\u5b9a\u4f4d\u6b63\u5728\u53d1\u751f\u8f6c\u79fb\uff1a\u5b83\u4e0d\u518d\u662f\u4e00\u4e2a\u7eaf\u7cb9\u7684\u901a\u7528\u4eba\u5de5\u667a\u80fd\u5b9e\u9a8c\u5ba4\uff0c\u800c\u662f\u6210\u4e3a\u6267\u884c\u661f\u9645\u6c11\u4e0e\u5177\u8eab\u667a\u80fd\u613f\u666f\u7684\u57fa\u7840\u8bbe\u65bd\u8f66\u95f4\u3002',
+].join('\n');
+const endingAuditBlocks = __wechatPublisherTestUtils.buildArticleBlocks(endingAuditContent);
+const endingAuditLastParagraphIndex = endingAuditBlocks.reduce(
+  (current, block, index) => (block.type === 'paragraph' ? index : current),
+  -1
+);
+const endingAuditPreview = await generateWechatDraftPreview({
+  topic: 'xAI role shift',
+  articleContent: endingAuditContent,
+  illustrationBundle: { slots: [], assets: [], assetVersions: {} },
+  layout,
+});
+assert.ok(
+  !endingAuditPreview.renderPlan.paragraphStyles.some(
+    (item) => item.blockIndex === endingAuditLastParagraphIndex && item.variant === 'closing'
+  ),
+  'long ending paragraphs should not be auto-promoted to closing style'
+);
+assert.ok(
+  endingAuditPreview.renderPlan.highlightSentences.some((item) => item.blockIndex === endingAuditLastParagraphIndex),
+  'last paragraph should still be eligible for automatic inline highlight'
+);
+
 const themedExpectations = {
   bauhaus: { creditsVariant: 'stacked_editorial', headingVariants: ['offset_block', 'double_rule'] },
   knowledge_base: { creditsVariant: 'rule_meta', headingVariants: ['double_rule', 'overline'] },

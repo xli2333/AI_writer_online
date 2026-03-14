@@ -1766,6 +1766,9 @@ const buildDefaultWechatParagraphSelections = (blocks, layout = {}) => {
   const seen = new Set();
   const firstParagraphIndex = paragraphIndexes[0];
   const lastParagraphIndex = paragraphIndexes[paragraphIndexes.length - 1];
+  const lastParagraphText = getWechatBlockPlainText(blocks[lastParagraphIndex]);
+  const closingPattern =
+    /(?:\u603b\u7684\u6765\u770b|\u5f52\u6839\u7ed3\u5e95|\u6362\u53e5\u8bdd\u8bf4|\u5199\u5728\u6700\u540e|\u6700\u7ec8|\u6700\u540e|\u8fd9\u610f\u5473\u7740|\u4ece\u8fd9\u4e2a\u89d2\u5ea6\u770b|\u67d0\u79cd\u610f\u4e49\u4e0a|\u8bf4\u5230\u5e95|\u672c\u8d28\u4e0a)/;
   const addVariant = (blockIndex, variant) => {
     if (!Number.isInteger(blockIndex) || seen.has(blockIndex)) return;
     selections.push({ blockIndex, variant });
@@ -1798,7 +1801,12 @@ const buildDefaultWechatParagraphSelections = (blocks, layout = {}) => {
     addVariant(compactIndex, preset.compactParagraphVariant || 'compact');
   }
 
-  if (lastParagraphIndex !== firstParagraphIndex) {
+  if (
+    lastParagraphIndex !== firstParagraphIndex &&
+    lastParagraphText.length > 0 &&
+    lastParagraphText.length <= 96 &&
+    closingPattern.test(lastParagraphText)
+  ) {
     addVariant(lastParagraphIndex, 'closing');
   }
 
@@ -2470,13 +2478,13 @@ const renderWechatBeautyParagraphBlock = (block, blockIndex, context) => {
   const textHtml = renderWechatTextWithHighlights(renderedText, context.highlightMap.get(blockIndex), context.theme);
   if (variant === 'lead') {
     return createWechatRenderedBlock(
-      `<p style="margin: 0 0 ${WECHAT_PARAGRAPH_BREAK_AFTER_PX}px; color: ${context.theme.titleColor}; font-family: ${context.typography.display}; font-size: 17px; line-height: 1.92; letter-spacing: 0.01em; font-weight: 500;">${textHtml}</p>`,
+      `<p style="margin: 0 0 ${WECHAT_PARAGRAPH_BREAK_AFTER_PX}px; color: ${context.theme.titleColor}; font-family: ${context.typography.body}; font-size: 17px; line-height: 1.92; letter-spacing: 0.01em; font-weight: 500;">${textHtml}</p>`,
       block.text
     );
   }
   if (variant === 'callout') {
     return createWechatRenderedBlock(
-      `<div style="margin: 0 0 ${WECHAT_PARAGRAPH_BREAK_AFTER_PX}px; padding: 0 0 0 14px; border-left: 2px solid ${context.theme.accent}; background: linear-gradient(90deg, ${context.theme.accentSoft} 0%, rgba(255,255,255,0) 68%);"><p style="margin: 0; color: ${context.theme.titleColor}; font-size: 15px; line-height: 1.9; letter-spacing: 0.01em;">${textHtml}</p></div>`,
+      `<div style="margin: 0 0 ${WECHAT_PARAGRAPH_BREAK_AFTER_PX}px; padding: 0 0 0 14px; border-left: 2px solid ${context.theme.accent}; background: linear-gradient(90deg, ${context.theme.accentSoft} 0%, rgba(255,255,255,0) 68%);"><p style="margin: 0; color: ${context.theme.titleColor}; font-family: ${context.typography.body}; font-size: 15px; line-height: 1.9; letter-spacing: 0.01em;">${textHtml}</p></div>`,
       block.text
     );
   }
@@ -2484,7 +2492,7 @@ const renderWechatBeautyParagraphBlock = (block, blockIndex, context) => {
     return createWechatRenderedBlock(
       `
         <div style="margin: 0 0 ${WECHAT_PARAGRAPH_BREAK_AFTER_PX}px; padding: 12px 0 14px; border-top: 2px solid ${context.theme.accent}; border-bottom: 1px solid ${context.theme.cardBorder}; background: linear-gradient(180deg, ${context.theme.accentSoft} 0%, rgba(255,255,255,0) 100%);">
-          <p style="margin: 0; color: ${context.theme.titleColor}; font-size: 16px; line-height: 1.88; letter-spacing: 0.01em; font-weight: 600;">${textHtml}</p>
+          <p style="margin: 0; color: ${context.theme.titleColor}; font-family: ${context.typography.body}; font-size: 16px; line-height: 1.88; letter-spacing: 0.01em; font-weight: 600;">${textHtml}</p>
         </div>
       `.trim(),
       block.text
@@ -2492,7 +2500,7 @@ const renderWechatBeautyParagraphBlock = (block, blockIndex, context) => {
   }
   if (variant === 'compact') {
     return createWechatRenderedBlock(
-      `<p style="max-width: 92%; margin: 0 0 ${WECHAT_PARAGRAPH_BREAK_AFTER_PX}px; padding-left: 14px; border-left: 2px solid ${context.theme.cardBorder}; color: ${context.theme.bodyColor}; font-size: 14px; line-height: 1.82; letter-spacing: 0.01em;">${textHtml}</p>`,
+      `<p style="max-width: 92%; margin: 0 0 ${WECHAT_PARAGRAPH_BREAK_AFTER_PX}px; padding-left: 14px; border-left: 2px solid ${context.theme.cardBorder}; color: ${context.theme.bodyColor}; font-family: ${context.typography.body}; font-size: 14px; line-height: 1.82; letter-spacing: 0.01em;">${textHtml}</p>`,
       block.text
     );
   }
@@ -2504,7 +2512,7 @@ const renderWechatBeautyParagraphBlock = (block, blockIndex, context) => {
             <span style="display: inline-block; width: 24px; height: 2px; background: ${context.theme.accent};"></span>
             <span>Key Data</span>
           </div>
-          <p style="margin: 0; color: ${context.theme.titleColor}; font-size: 15px; line-height: 1.88; letter-spacing: 0.01em; font-weight: 600;">${textHtml}</p>
+          <p style="margin: 0; color: ${context.theme.titleColor}; font-family: ${context.typography.body}; font-size: 15px; line-height: 1.88; letter-spacing: 0.01em; font-weight: 600;">${textHtml}</p>
         </div>
       `.trim(),
       block.text
@@ -2512,7 +2520,7 @@ const renderWechatBeautyParagraphBlock = (block, blockIndex, context) => {
   }
   if (variant === 'closing') {
     return createWechatRenderedBlock(
-      `<p style="margin: 0 0 ${WECHAT_PARAGRAPH_BREAK_AFTER_PX}px; padding-top: 16px; border-top: 1px solid ${context.theme.cardBorder}; color: ${context.theme.bodyColor}; font-size: 15px; line-height: 1.9; letter-spacing: 0.01em;">${textHtml}</p>`,
+      `<p style="margin: 0 0 ${WECHAT_PARAGRAPH_BREAK_AFTER_PX}px; padding-top: 16px; border-top: 1px solid ${context.theme.cardBorder}; color: ${context.theme.bodyColor}; font-family: ${context.typography.body}; font-size: 15px; line-height: 1.9; letter-spacing: 0.01em;">${textHtml}</p>`,
       block.text
     );
   }
