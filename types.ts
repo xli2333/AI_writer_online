@@ -251,7 +251,17 @@ export interface ArticleIllustrationJobStatus {
   error?: string;
 }
 
-export type WechatTemplateId = 'latepost_report' | 'insight_brief' | 'warm_column';
+export type WechatTemplateId =
+  | 'latepost_report'
+  | 'insight_brief'
+  | 'warm_column'
+  | 'bauhaus'
+  | 'knowledge_base'
+  | 'morandi_forest'
+  | 'neo_brutalism'
+  | 'receipt'
+  | 'sunset_film'
+  | 'capital_review';
 
 export type WechatDraftStatus = 'idle' | 'preview_ready' | 'draft_ready' | 'publishing' | 'published' | 'error';
 

@@ -43,6 +43,46 @@ const WECHAT_TEMPLATE_OPTIONS = [
   },
 ];
 
+const ADDITIONAL_WECHAT_TEMPLATE_OPTIONS = [
+  {
+    id: 'bauhaus',
+    label: '\u5305\u8c6a\u65af',
+    description: '\u51e0\u4f55\u8272\u5757\u3001\u786c\u8fb9\u6846\u548c\u5f3a\u5bf9\u6bd4\uff0c\u9002\u5408\u89c2\u70b9\u578b\u5546\u4e1a\u6587\u7ae0\u3002',
+  },
+  {
+    id: 'knowledge_base',
+    label: '\u77e5\u8bc6\u5e93',
+    description: '\u66f4\u5f3a\u7684\u6587\u6863\u7ed3\u6784\u611f\uff0c\u9002\u5408\u7ed3\u6784\u5316\u89e3\u8bfb\u548c\u65b9\u6cd5\u8bba\u7a3f\u4ef6\u3002',
+  },
+  {
+    id: 'morandi_forest',
+    label: '\u83ab\u5170\u8fea\u68ee\u6797',
+    description: '\u4f4e\u9971\u548c\u7070\u7eff\u8bed\u6c14\uff0c\u9002\u5408\u4eba\u7269\u3001\u6848\u4f8b\u548c\u8212\u7f13\u53d9\u4e8b\u3002',
+  },
+  {
+    id: 'neo_brutalism',
+    label: '\u65b0\u7c97\u91ce\u4e3b\u4e49',
+    description: '\u7c97\u8fb9\u6846\u3001\u9ad8\u5bf9\u6bd4\u3001\u6807\u7b7e\u5f0f\u5f3a\u8c03\uff0c\u9002\u5408\u9c9c\u660e\u89c2\u70b9\u3002',
+  },
+  {
+    id: 'receipt',
+    label: '\u8d2d\u7269\u5c0f\u7968',
+    description: '\u6253\u5370\u5355\u548c\u6e05\u5355\u611f\u66f4\u5f3a\uff0c\u9002\u5408\u6570\u636e\u6574\u7406\u548c\u7ed3\u8bba\u679a\u4e3e\u3002',
+  },
+  {
+    id: 'sunset_film',
+    label: '\u843d\u65e5\u80f6\u7247',
+    description: '\u6696\u8272\u590d\u53e4\u6742\u5fd7\u6c14\u8d28\uff0c\u9002\u5408\u6848\u4f8b\u3001\u4eba\u7269\u548c\u957f\u53d9\u4e8b\u3002',
+  },
+  {
+    id: 'capital_review',
+    label: '\u8d44\u672c\u8bc4\u8bba',
+    description: '\u9ad8\u7ea7\u5546\u52a1\u516c\u53f7\u98ce\u683c\uff0c\u9002\u5408\u91d1\u878d\u3001\u516c\u53f8\u7814\u7a76\u548c\u8443\u4e8b\u4f1a\u89c6\u89d2\u6587\u7ae0\u3002',
+  },
+];
+
+const ALL_WECHAT_TEMPLATE_OPTIONS = [...WECHAT_TEMPLATE_OPTIONS, ...ADDITIONAL_WECHAT_TEMPLATE_OPTIONS];
+
 const WECHAT_TEMPLATE_THEMES = {
   latepost_report: {
     pageBackground: '#F5F7FB',
@@ -99,6 +139,420 @@ const WECHAT_TEMPLATE_THEMES = {
     tableStripeBackground: '#FDF9F4',
   },
 };
+
+const ADDITIONAL_WECHAT_TEMPLATE_THEMES = {
+  bauhaus: {
+    pageBackground: '#F4F0E8',
+    cardBackground: '#FFFFFF',
+    cardBorder: '#111111',
+    headerGradient: 'linear-gradient(135deg, #D32F2F 0%, #1976D2 68%, #FBC02D 100%)',
+    headerText: '#FFFFFF',
+    titleColor: '#111111',
+    bodyColor: '#2F2F2F',
+    mutedColor: '#5F6368',
+    accent: '#1976D2',
+    accentSoft: '#FBC02D',
+    quoteBorder: '#D32F2F',
+    quoteBackground: '#FFF8E7',
+    sectionBackground: '#FDE68A',
+    sectionColor: '#111111',
+    tableHeaderBackground: '#F6E7A8',
+    tableStripeBackground: '#FAFAF7',
+  },
+  knowledge_base: {
+    pageBackground: '#F7F6F3',
+    cardBackground: '#FFFFFF',
+    cardBorder: '#E3E2E0',
+    headerGradient: 'linear-gradient(135deg, #6366F1 0%, #94A3B8 100%)',
+    headerText: '#FFFFFF',
+    titleColor: '#37352F',
+    bodyColor: '#37352F',
+    mutedColor: '#78716C',
+    accent: '#2D9CDB',
+    accentSoft: '#FDECC8',
+    quoteBorder: '#37352F',
+    quoteBackground: '#F1F1EF',
+    sectionBackground: '#F7F6F3',
+    sectionColor: '#37352F',
+    tableHeaderBackground: '#F1EFEB',
+    tableStripeBackground: '#FBFAF8',
+  },
+  morandi_forest: {
+    pageBackground: '#F4F6F2',
+    cardBackground: '#FFFFFF',
+    cardBorder: '#D7DFD4',
+    headerGradient: 'linear-gradient(135deg, #4F6F52 0%, #86A789 100%)',
+    headerText: '#F8FBF8',
+    titleColor: '#1A261D',
+    bodyColor: '#3A4D39',
+    mutedColor: '#7E8F80',
+    accent: '#4F6F52',
+    accentSoft: '#E8EFE7',
+    quoteBorder: '#739072',
+    quoteBackground: '#F6F8F6',
+    sectionBackground: '#F1F4F0',
+    sectionColor: '#4F6F52',
+    tableHeaderBackground: '#EBF0EA',
+    tableStripeBackground: '#FAFBFA',
+  },
+  neo_brutalism: {
+    pageBackground: '#FFFFFF',
+    cardBackground: '#FFFFFF',
+    cardBorder: '#000000',
+    headerGradient: 'linear-gradient(135deg, #CCFF00 0%, #6A00FF 100%)',
+    headerText: '#111111',
+    titleColor: '#000000',
+    bodyColor: '#111111',
+    mutedColor: '#4B5563',
+    accent: '#6A00FF',
+    accentSoft: '#CCFF00',
+    quoteBorder: '#000000',
+    quoteBackground: '#F4F4F4',
+    sectionBackground: '#CCFF00',
+    sectionColor: '#000000',
+    tableHeaderBackground: '#EFE7FF',
+    tableStripeBackground: '#FAFAFA',
+  },
+  receipt: {
+    pageBackground: '#F7F7F5',
+    cardBackground: '#FFFFFF',
+    cardBorder: '#111111',
+    headerGradient: 'linear-gradient(135deg, #111111 0%, #424242 100%)',
+    headerText: '#FFFFFF',
+    titleColor: '#111111',
+    bodyColor: '#222222',
+    mutedColor: '#6B7280',
+    accent: '#111111',
+    accentSoft: '#E5E7EB',
+    quoteBorder: '#111111',
+    quoteBackground: '#F8F8F8',
+    sectionBackground: '#111111',
+    sectionColor: '#FFFFFF',
+    tableHeaderBackground: '#F0F0F0',
+    tableStripeBackground: '#FBFBFB',
+  },
+  sunset_film: {
+    pageBackground: '#FBF6EF',
+    cardBackground: '#FFFCF6',
+    cardBorder: '#E7D8C9',
+    headerGradient: 'linear-gradient(135deg, #B33D25 0%, #D98C45 100%)',
+    headerText: '#FFF7EC',
+    titleColor: '#4A3B32',
+    bodyColor: '#5D4037',
+    mutedColor: '#8D6E63',
+    accent: '#B33D25',
+    accentSoft: '#F5E1C7',
+    quoteBorder: '#8D5B4C',
+    quoteBackground: '#F7EED6',
+    sectionBackground: '#F6E7D5',
+    sectionColor: '#7A4433',
+    tableHeaderBackground: '#F2E0CC',
+    tableStripeBackground: '#FFF8F0',
+  },
+  capital_review: {
+    pageBackground: '#F2EFE8',
+    cardBackground: '#FFFFFF',
+    cardBorder: '#D5DDE7',
+    headerGradient: 'linear-gradient(135deg, #0F1B2C 0%, #455A73 100%)',
+    headerText: '#FFFFFF',
+    titleColor: '#0F1B2C',
+    bodyColor: '#283447',
+    mutedColor: '#6A7688',
+    accent: '#B59457',
+    accentSoft: '#F5E8D2',
+    quoteBorder: '#B59457',
+    quoteBackground: '#FAF6EE',
+    sectionBackground: '#F8F4EC',
+    sectionColor: '#6F5A35',
+    tableHeaderBackground: '#F3EEE3',
+    tableStripeBackground: '#FBF9F5',
+  },
+};
+
+const ALL_WECHAT_TEMPLATE_THEMES = {
+  ...WECHAT_TEMPLATE_THEMES,
+  ...ADDITIONAL_WECHAT_TEMPLATE_THEMES,
+};
+
+const WECHAT_TEMPLATE_STYLE_GUIDES = {
+  latepost_report:
+    'Restrained Chinese business reporting. Use calm hierarchy, generous whitespace, understated emphasis, and polished but quiet editorial pacing.',
+  insight_brief:
+    'Information-first business brief. Push key conclusions forward, use compact cards for important data, and keep scanning efficiency high.',
+  warm_column:
+    'Warm long-form column. Use softer rhythm, more breathing room, humane pacing, and a literary editorial tone.',
+  bauhaus:
+    'Bauhaus poster logic. Use offset heading blocks, geometric underlays, hard edges, strict alignment, and assertive primary-color accents without turning sections into rounded cards.',
+  knowledge_base:
+    'Knowledge-base logic. Favor documented hierarchy, ruled headings, note-like metadata, precise tables, and efficient annotation rather than decorative containers.',
+  morandi_forest:
+    'Morandi-forest logic. Favor muted greens, light underlines, quiet lead-ins, soft emphasis bands, airy spacing, and restrained literary warmth.',
+  neo_brutalism:
+    'Neo-brutalist logic. Allow loud contrast, thick rules, offset headings, reversed highlights, and aggressive emphasis, but avoid bloated card stacks.',
+  receipt:
+    'Receipt logic. Favor monochrome utility, monospace hierarchy, dashed rules, ledger-style metadata, and printout rhythm with tight clarity.',
+  sunset_film:
+    'Sunset-film logic. Favor warm terracotta tone, serif headline rhythm, film-caption style section headers, elegant lead decks, and nostalgic editorial pacing.',
+  capital_review:
+    'Capital-review logic. Favor premium business editorial tone, serif authority, rule-based hierarchy, restrained executive metadata, and a boardroom-grade opening summary.',
+};
+
+const WECHAT_TEMPLATE_RENDER_PRESETS = {
+  latepost_report: {
+    creditsVariant: 'stacked_labels',
+    headingVariant: 'underline',
+    subheadingVariant: 'overline',
+    emphasisParagraphVariant: 'callout',
+    compactParagraphVariant: 'compact',
+    quoteVariant: 'editorial_quote',
+    shortQuoteVariant: 'plain_quote',
+    unorderedListVariant: 'plain_list',
+    longUnorderedListVariant: 'plain_list',
+    orderedListVariant: 'numbered_steps',
+    secondaryOrderedListVariant: 'plain_list',
+    tableVariant: 'compact_grid',
+    denseTableVariant: 'minimal_rows',
+    imageHeroVariant: 'full_bleed',
+    imageCaptionVariant: 'caption_band',
+    imageAltVariant: 'editorial_card',
+    openingHighlightVariant: 'summary_rules',
+    highlightVariantMode: 'default',
+  },
+  insight_brief: {
+    creditsVariant: 'inline_meta_bar',
+    headingVariant: 'double_rule',
+    subheadingVariant: 'overline',
+    emphasisParagraphVariant: 'data_callout',
+    compactParagraphVariant: 'compact',
+    quoteVariant: 'accent_panel',
+    shortQuoteVariant: 'plain_quote',
+    unorderedListVariant: 'check_grid',
+    longUnorderedListVariant: 'plain_list',
+    orderedListVariant: 'numbered_steps',
+    secondaryOrderedListVariant: 'card_list',
+    tableVariant: 'matrix_panel',
+    denseTableVariant: 'minimal_rows',
+    imageHeroVariant: 'shadow_card',
+    imageCaptionVariant: 'border_frame',
+    imageAltVariant: 'shadow_card',
+    openingHighlightVariant: 'summary_rules',
+    highlightVariantMode: 'marker',
+  },
+  warm_column: {
+    creditsVariant: 'minimal_labels',
+    headingVariant: 'underline',
+    subheadingVariant: 'overline',
+    emphasisParagraphVariant: 'callout',
+    compactParagraphVariant: 'compact',
+    quoteVariant: 'centered_pull',
+    shortQuoteVariant: 'plain_quote',
+    unorderedListVariant: 'plain_list',
+    longUnorderedListVariant: 'plain_list',
+    orderedListVariant: 'numbered_steps',
+    secondaryOrderedListVariant: 'plain_list',
+    tableVariant: 'compact_grid',
+    denseTableVariant: 'minimal_rows',
+    imageHeroVariant: 'caption_focus',
+    imageCaptionVariant: 'editorial_card',
+    imageAltVariant: 'caption_focus',
+    openingHighlightVariant: 'soft_pillar',
+    highlightVariantMode: 'ink',
+  },
+  bauhaus: {
+    creditsVariant: 'stacked_editorial',
+    headingVariant: 'offset_block',
+    subheadingVariant: 'double_rule',
+    emphasisParagraphVariant: 'spotlight',
+    compactParagraphVariant: 'compact',
+    quoteVariant: 'accent_panel',
+    shortQuoteVariant: 'plain_quote',
+    unorderedListVariant: 'plain_list',
+    longUnorderedListVariant: 'plain_list',
+    orderedListVariant: 'numbered_steps',
+    secondaryOrderedListVariant: 'plain_list',
+    tableVariant: 'matrix_panel',
+    denseTableVariant: 'matrix_panel',
+    imageHeroVariant: 'border_frame',
+    imageCaptionVariant: 'border_frame',
+    imageAltVariant: 'shadow_card',
+    openingHighlightVariant: 'corner_flag',
+    highlightVariantMode: 'corner',
+  },
+  knowledge_base: {
+    creditsVariant: 'rule_meta',
+    headingVariant: 'double_rule',
+    subheadingVariant: 'overline',
+    emphasisParagraphVariant: 'data_callout',
+    compactParagraphVariant: 'compact',
+    quoteVariant: 'accent_panel',
+    shortQuoteVariant: 'plain_quote',
+    unorderedListVariant: 'check_grid',
+    longUnorderedListVariant: 'plain_list',
+    orderedListVariant: 'numbered_steps',
+    secondaryOrderedListVariant: 'plain_list',
+    tableVariant: 'data_grid',
+    denseTableVariant: 'minimal_rows',
+    imageHeroVariant: 'caption_focus',
+    imageCaptionVariant: 'caption_band',
+    imageAltVariant: 'editorial_card',
+    openingHighlightVariant: 'summary_rules',
+    highlightVariantMode: 'band',
+  },
+  morandi_forest: {
+    creditsVariant: 'minimal_labels',
+    headingVariant: 'underline',
+    subheadingVariant: 'overline',
+    emphasisParagraphVariant: 'callout',
+    compactParagraphVariant: 'compact',
+    quoteVariant: 'centered_pull',
+    shortQuoteVariant: 'plain_quote',
+    unorderedListVariant: 'plain_list',
+    longUnorderedListVariant: 'plain_list',
+    orderedListVariant: 'plain_list',
+    secondaryOrderedListVariant: 'plain_list',
+    tableVariant: 'minimal_rows',
+    denseTableVariant: 'minimal_rows',
+    imageHeroVariant: 'caption_focus',
+    imageCaptionVariant: 'caption_focus',
+    imageAltVariant: 'editorial_card',
+    openingHighlightVariant: 'soft_pillar',
+    highlightVariantMode: 'soft_tab',
+  },
+  neo_brutalism: {
+    creditsVariant: 'brutal_meta',
+    headingVariant: 'number_badge',
+    subheadingVariant: 'offset_block',
+    emphasisParagraphVariant: 'spotlight',
+    compactParagraphVariant: 'compact',
+    quoteVariant: 'accent_panel',
+    shortQuoteVariant: 'accent_panel',
+    unorderedListVariant: 'card_list',
+    longUnorderedListVariant: 'card_list',
+    orderedListVariant: 'numbered_steps',
+    secondaryOrderedListVariant: 'card_list',
+    tableVariant: 'matrix_panel',
+    denseTableVariant: 'matrix_panel',
+    imageHeroVariant: 'border_frame',
+    imageCaptionVariant: 'shadow_card',
+    imageAltVariant: 'border_frame',
+    openingHighlightVariant: 'brutal_banner',
+    highlightVariantMode: 'reverse',
+  },
+  receipt: {
+    creditsVariant: 'ledger_meta',
+    headingVariant: 'ledger_rule',
+    subheadingVariant: 'plain',
+    emphasisParagraphVariant: 'compact',
+    compactParagraphVariant: 'compact',
+    quoteVariant: 'plain_quote',
+    shortQuoteVariant: 'plain_quote',
+    unorderedListVariant: 'plain_list',
+    longUnorderedListVariant: 'plain_list',
+    orderedListVariant: 'plain_list',
+    secondaryOrderedListVariant: 'plain_list',
+    tableVariant: 'minimal_rows',
+    denseTableVariant: 'minimal_rows',
+    imageHeroVariant: 'border_frame',
+    imageCaptionVariant: 'caption_band',
+    imageAltVariant: 'border_frame',
+    openingHighlightVariant: 'ledger_stub',
+    highlightVariantMode: 'band',
+  },
+  sunset_film: {
+    creditsVariant: 'film_meta',
+    headingVariant: 'cinema_caption',
+    subheadingVariant: 'overline',
+    emphasisParagraphVariant: 'callout',
+    compactParagraphVariant: 'compact',
+    quoteVariant: 'plain_quote',
+    shortQuoteVariant: 'plain_quote',
+    unorderedListVariant: 'plain_list',
+    longUnorderedListVariant: 'plain_list',
+    orderedListVariant: 'plain_list',
+    secondaryOrderedListVariant: 'plain_list',
+    tableVariant: 'compact_grid',
+    denseTableVariant: 'minimal_rows',
+    imageHeroVariant: 'caption_band',
+    imageCaptionVariant: 'caption_focus',
+    imageAltVariant: 'editorial_card',
+    openingHighlightVariant: 'cinema_lead',
+    highlightVariantMode: 'band',
+  },
+  capital_review: {
+    creditsVariant: 'executive_meta',
+    headingVariant: 'executive_rule',
+    subheadingVariant: 'underline',
+    emphasisParagraphVariant: 'data_callout',
+    compactParagraphVariant: 'compact',
+    quoteVariant: 'plain_quote',
+    shortQuoteVariant: 'plain_quote',
+    unorderedListVariant: 'plain_list',
+    longUnorderedListVariant: 'plain_list',
+    orderedListVariant: 'plain_list',
+    secondaryOrderedListVariant: 'plain_list',
+    tableVariant: 'compact_grid',
+    denseTableVariant: 'minimal_rows',
+    imageHeroVariant: 'caption_focus',
+    imageCaptionVariant: 'editorial_card',
+    imageAltVariant: 'caption_focus',
+    openingHighlightVariant: 'executive_summary',
+    highlightVariantMode: 'soft_tab',
+  },
+};
+
+const WECHAT_TYPOGRAPHY_PRESETS = {
+  default: {
+    display: "'Helvetica Neue', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif",
+    body: "'Helvetica Neue', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif",
+    meta: "'Helvetica Neue', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif",
+    mono: "'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace",
+  },
+  bauhaus: {
+    display: "'Helvetica Neue', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif",
+    body: "'Helvetica Neue', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif",
+    meta: "'Helvetica Neue', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif",
+    mono: "'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace",
+  },
+  knowledge_base: {
+    display: "'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif",
+    body: "'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif",
+    meta: "'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif",
+    mono: "'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace",
+  },
+  morandi_forest: {
+    display: "Georgia, 'Times New Roman', 'Songti SC', serif",
+    body: "'Helvetica Neue', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif",
+    meta: "'Helvetica Neue', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif",
+    mono: "'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace",
+  },
+  neo_brutalism: {
+    display: "'Arial Black', 'Helvetica Neue', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif",
+    body: "'Helvetica Neue', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif",
+    meta: "'Helvetica Neue', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif",
+    mono: "'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace",
+  },
+  receipt: {
+    display: "'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace",
+    body: "'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace",
+    meta: "'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace",
+    mono: "'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace",
+  },
+  sunset_film: {
+    display: "Georgia, 'Times New Roman', 'Songti SC', serif",
+    body: "'Helvetica Neue', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif",
+    meta: "'Helvetica Neue', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif",
+    mono: "'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace",
+  },
+  capital_review: {
+    display: "Georgia, 'Times New Roman', 'Songti SC', serif",
+    body: "'Helvetica Neue', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif",
+    meta: "'Helvetica Neue', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif",
+    mono: "'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace",
+  },
+};
+
+const resolveWechatTypography = (templateId) =>
+  WECHAT_TYPOGRAPHY_PRESETS[templateId] || WECHAT_TYPOGRAPHY_PRESETS.default;
 
 let accessTokenCache = {
   accessToken: '',
@@ -348,7 +802,7 @@ const createGenAiClient = (apiKey, timeoutMs) =>
 const buildStableHash = (value) => crypto.createHash('sha1').update(JSON.stringify(value)).digest('hex').slice(0, 12);
 
 const resolveTemplateOption = (templateId) =>
-  WECHAT_TEMPLATE_OPTIONS.find((option) => option.id === templateId) || WECHAT_TEMPLATE_OPTIONS[0];
+  ALL_WECHAT_TEMPLATE_OPTIONS.find((option) => option.id === templateId) || ALL_WECHAT_TEMPLATE_OPTIONS[0];
 
 const extractTitle = (fallback, content) => {
   const lines = String(content || '')
@@ -368,7 +822,14 @@ const inferDigest = (content) => {
   return clip(lines.slice(0, 2).join(' '), 110);
 };
 
-const resolveTemplateTheme = (templateId) => WECHAT_TEMPLATE_THEMES[templateId] || WECHAT_TEMPLATE_THEMES[DEFAULT_TEMPLATE_ID];
+const resolveTemplateTheme = (templateId) =>
+  ALL_WECHAT_TEMPLATE_THEMES[templateId] || ALL_WECHAT_TEMPLATE_THEMES[DEFAULT_TEMPLATE_ID];
+
+const resolveTemplateStyleGuide = (templateId) =>
+  WECHAT_TEMPLATE_STYLE_GUIDES[templateId] || WECHAT_TEMPLATE_STYLE_GUIDES[DEFAULT_TEMPLATE_ID];
+
+const resolveTemplateRenderPreset = (templateId) =>
+  WECHAT_TEMPLATE_RENDER_PRESETS[templateId] || WECHAT_TEMPLATE_RENDER_PRESETS[DEFAULT_TEMPLATE_ID];
 
 const normalizeWechatLayoutSettings = (layout = {}) => ({
   templateId: resolveTemplateOption(layout.templateId).id,
@@ -709,7 +1170,17 @@ const renderWechatArticleHtml = ({ title, digest, blocks, theme, author, templat
   `.trim();
 };
 
-const WECHAT_CREDITS_VARIANTS = new Set(['stacked_labels', 'minimal_labels', 'inline_meta_bar']);
+const WECHAT_CREDITS_VARIANTS = new Set([
+  'stacked_labels',
+  'minimal_labels',
+  'inline_meta_bar',
+  'stacked_editorial',
+  'rule_meta',
+  'brutal_meta',
+  'ledger_meta',
+  'film_meta',
+  'executive_meta',
+]);
 const WECHAT_HEADING_VARIANTS = new Set([
   'chapter_marker',
   'section_band',
@@ -717,6 +1188,12 @@ const WECHAT_HEADING_VARIANTS = new Set([
   'underline',
   'accent_tag',
   'number_badge',
+  'overline',
+  'double_rule',
+  'offset_block',
+  'ledger_rule',
+  'cinema_caption',
+  'executive_rule',
   'plain',
 ]);
 const WECHAT_PARAGRAPH_VARIANTS = new Set(['body', 'lead', 'callout', 'closing', 'spotlight', 'compact', 'data_callout']);
@@ -731,7 +1208,7 @@ const WECHAT_IMAGE_VARIANTS = new Set([
   'caption_band',
   'border_frame',
 ]);
-const WECHAT_HIGHLIGHT_VARIANTS = new Set(['marker', 'underline', 'ink', 'accent_bar']);
+const WECHAT_HIGHLIGHT_VARIANTS = new Set(['marker', 'underline', 'ink', 'accent_bar', 'corner', 'band', 'reverse', 'soft_tab']);
 
 const getWechatBlockPlainText = (block) => {
   if (!block) return '';
@@ -909,18 +1386,112 @@ const renderWechatOpeningHighlightBlock = ({ blocks, layout, theme }) => {
     return '';
   }
 
-  const label = sentences.length > 1 ? 'Lead' : 'Focus';
+  const preset = resolveTemplateRenderPreset(layout?.templateId);
+  const typography = resolveWechatTypography(layout?.templateId);
+  const label = sentences.length > 1 ? 'Summary' : 'Focus';
+  const mainSentence = escapeHtml(sentences[0]);
+  const secondarySentences = sentences
+    .slice(1)
+    .map(
+      (sentence) =>
+        `<p style="margin: 8px 0 0; color: ${theme.bodyColor}; font-family: ${typography.body}; font-size: 14px; line-height: 1.82;">${escapeHtml(sentence)}</p>`
+    )
+    .join('');
+
+  if (preset.openingHighlightVariant === 'corner_flag') {
+    return `
+      <section style="position: relative; margin: 0 0 26px; padding: 14px 0 14px 18px; border-top: 3px solid ${theme.accent}; border-bottom: 1px solid ${theme.cardBorder};">
+        <div data-wechat-decoration="true" style="position: absolute; left: 0; top: -3px; width: 34px; height: 14px; background: ${theme.accentSoft}; border-right: 2px solid ${theme.cardBorder};"></div>
+        <div data-wechat-decoration="true" style="display: inline-flex; align-items: center; gap: 10px; margin-bottom: 10px; color: ${theme.sectionColor}; font-family: ${typography.meta}; font-size: 11px; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase;">
+          <span>${label}</span>
+          <span style="display: inline-block; width: 26px; height: 2px; background: ${theme.accent};"></span>
+        </div>
+        <p style="display: inline; margin: 0; padding: 0 10px 2px 0; color: ${theme.titleColor}; font-family: ${typography.display}; font-size: 20px; line-height: 1.8; font-weight: 700; box-shadow: inset -12px -0.72em 0 ${theme.accentSoft};">${mainSentence}</p>
+        ${secondarySentences}
+      </section>
+    `.trim();
+  }
+
+  if (preset.openingHighlightVariant === 'soft_pillar') {
+    return `
+      <section style="margin: 0 0 26px; padding: 4px 0 4px 18px; border-left: 3px solid ${theme.accent}; background: linear-gradient(90deg, ${theme.accentSoft} 0%, rgba(255,255,255,0) 62%);">
+        <div data-wechat-decoration="true" style="margin-bottom: 8px; color: ${theme.mutedColor}; font-family: ${typography.meta}; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;">${label}</div>
+        <p style="margin: 0; color: ${theme.titleColor}; font-family: ${typography.display}; font-size: 19px; line-height: 1.86; font-weight: 600;">${mainSentence}</p>
+        ${secondarySentences}
+      </section>
+    `.trim();
+  }
+
+  if (preset.openingHighlightVariant === 'brutal_banner') {
+    return `
+      <section style="margin: 0 0 28px; padding: 12px 0 14px; border-top: 4px solid ${theme.cardBorder}; border-bottom: 4px solid ${theme.cardBorder};">
+        <div data-wechat-decoration="true" style="display: inline-flex; align-items: center; margin-bottom: 10px; padding: 4px 10px; border: 2px solid ${theme.cardBorder}; background: ${theme.accentSoft}; color: ${theme.titleColor}; font-family: ${typography.meta}; font-size: 11px; font-weight: 900; letter-spacing: 0.14em; text-transform: uppercase;">${label}</div>
+        <p style="display: inline; margin: 0; padding: 0 6px 2px; color: ${theme.titleColor}; font-family: ${typography.display}; font-size: 20px; line-height: 1.74; font-weight: 800; background: linear-gradient(180deg, transparent 0%, transparent 38%, ${theme.accentSoft} 38%, ${theme.accentSoft} 100%);">${mainSentence}</p>
+        ${secondarySentences}
+      </section>
+    `.trim();
+  }
+
+  if (preset.openingHighlightVariant === 'ledger_stub') {
+    return `
+      <section style="margin: 0 0 26px; padding: 12px 0; border-top: 1px dashed ${theme.cardBorder}; border-bottom: 1px dashed ${theme.cardBorder};">
+        <div data-wechat-decoration="true" style="margin-bottom: 8px; color: ${theme.mutedColor}; font-family: ${typography.mono}; font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;">${label} / note</div>
+        <p style="margin: 0; color: ${theme.titleColor}; font-family: ${typography.mono}; font-size: 17px; line-height: 1.86; font-weight: 700;">${mainSentence}</p>
+        ${secondarySentences
+          .replaceAll(`font-family: ${typography.body};`, `font-family: ${typography.mono};`)
+          .replaceAll('font-size: 14px;', 'font-size: 13px;')}
+      </section>
+    `.trim();
+  }
+
+  if (preset.openingHighlightVariant === 'cinema_lead') {
+    return `
+      <section style="margin: 0 0 28px; padding: 6px 0 14px;">
+        <div data-wechat-decoration="true" style="display: inline-flex; align-items: center; gap: 10px; margin-bottom: 10px; color: ${theme.sectionColor}; font-family: ${typography.meta}; font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;">
+          <span>${label}</span>
+          <span style="display: inline-block; width: 38px; height: 1px; background: ${theme.accent};"></span>
+        </div>
+        <p style="margin: 0; color: ${theme.titleColor}; font-family: ${typography.display}; font-size: 21px; line-height: 1.78; font-weight: 700;">${mainSentence}</p>
+        <div data-wechat-decoration="true" style="width: 100%; max-width: 148px; height: 1px; margin-top: 12px; background: linear-gradient(90deg, ${theme.accent} 0%, rgba(255,255,255,0) 100%);"></div>
+        ${secondarySentences}
+      </section>
+    `.trim();
+  }
+
+  if (preset.openingHighlightVariant === 'executive_summary') {
+    return `
+      <section style="margin: 0 0 28px; padding: 12px 0 14px; border-top: 2px solid ${theme.titleColor}; border-bottom: 1px solid ${theme.cardBorder};">
+        <div data-wechat-decoration="true" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 10px; color: ${theme.mutedColor}; font-family: ${typography.meta}; font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;">
+          <span>${label}</span>
+          <span style="display: inline-block; flex: 1; height: 1px; background: ${theme.cardBorder};"></span>
+        </div>
+        <p style="margin: 0; color: ${theme.titleColor}; font-family: ${typography.display}; font-size: 21px; line-height: 1.78; font-weight: 700;">${mainSentence}</p>
+        ${secondarySentences ? `<div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid ${theme.cardBorder};">${secondarySentences}</div>` : ''}
+      </section>
+    `.trim();
+  }
+
+  if (preset.openingHighlightVariant === 'summary_rules') {
+    return `
+      <section style="margin: 0 0 24px; padding: 12px 0 14px; border-top: 1px solid ${theme.cardBorder}; border-bottom: 1px solid ${theme.cardBorder};">
+        <div data-wechat-decoration="true" style="display: inline-flex; align-items: center; gap: 10px; margin-bottom: 10px; color: ${theme.sectionColor}; font-family: ${typography.meta}; font-size: 11px; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase;">
+          <span style="display: inline-block; width: 24px; height: 2px; background: ${theme.accent};"></span>
+          <span>${label}</span>
+        </div>
+        <p style="margin: 0; color: ${theme.titleColor}; font-family: ${typography.display}; font-size: 19px; line-height: 1.84; font-weight: 650;">${mainSentence}</p>
+        ${secondarySentences}
+      </section>
+    `.trim();
+  }
+
   return `
-    <section style="margin: 0 0 24px; padding: 16px 16px 14px; border: 1px solid ${theme.cardBorder}; border-radius: 18px; background: #FFFFFF;">
-      <div data-wechat-decoration="true" style="display: inline-flex; align-items: center; gap: 8px; margin-bottom: 12px; color: ${theme.sectionColor}; font-size: 12px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase;">
+    <section style="margin: 0 0 24px; padding: 12px 0 14px; border-top: 1px solid ${theme.cardBorder}; border-bottom: 1px solid ${theme.cardBorder};">
+      <div data-wechat-decoration="true" style="display: inline-flex; align-items: center; gap: 8px; margin-bottom: 12px; color: ${theme.sectionColor}; font-family: ${typography.meta}; font-size: 11px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase;">
         <span style="display: inline-block; width: 18px; height: 2px; background: ${theme.cardBorder};"></span>
         <span>${label}</span>
       </div>
-      ${sentences
-        .map((sentence, sentenceIndex) =>
-          `<p style="margin: ${sentenceIndex === 0 ? '0' : '10px 0 0'}; color: ${theme.titleColor}; font-size: ${sentenceIndex === 0 ? 18 : 15}px; line-height: ${sentenceIndex === 0 ? 1.85 : 1.82}; font-weight: ${sentenceIndex === 0 ? 650 : 500}; letter-spacing: 0.01em;">${escapeHtml(sentence)}</p>`
-        )
-        .join('')}
+      <p style="margin: 0; color: ${theme.titleColor}; font-family: ${typography.display}; font-size: 18px; line-height: 1.85; font-weight: 650;">${mainSentence}</p>
+      ${secondarySentences}
     </section>
   `.trim();
 };
@@ -1007,7 +1578,10 @@ const scoreWechatHighlightCandidate = ({ block, text, sentenceIndex }) => {
   return score;
 };
 
-const pickWechatHighlightVariant = (text) => {
+const pickWechatHighlightVariant = (text, mode = 'default') => {
+  if (WECHAT_HIGHLIGHT_VARIANTS.has(mode)) {
+    return mode;
+  }
   const source = cleanText(text);
   if (/(?:\d+(?:\.\d+)?(?:%|\u500d|\u4e07|\u4ebf|\u5e74|\u5929|\u5143|\u7f8e\u5143)|ROI|Token|GPU|AI|H100|H200|B200|R100|Feynman|Dynamo|SerDes)/i.test(source)) {
     return 'marker';
@@ -1059,7 +1633,8 @@ const enforceWechatHighlightSelectionRules = ({ selections, blocks, totalLimit =
   return output;
 };
 
-const buildDefaultWechatHighlightSelections = (blocks) => {
+const buildDefaultWechatHighlightSelections = (blocks, layout = {}) => {
+  const preset = resolveTemplateRenderPreset(layout?.templateId);
   const sectionMap = buildWechatHighlightSectionMap(blocks);
   const candidates = [];
 
@@ -1079,7 +1654,7 @@ const buildDefaultWechatHighlightSelections = (blocks) => {
       candidates.push({
         blockIndex,
         text,
-        variant: pickWechatHighlightVariant(text),
+        variant: pickWechatHighlightVariant(text, preset.highlightVariantMode),
         score,
         sectionId: sectionMap.get(blockIndex) || 0,
         sentenceIndex,
@@ -1163,7 +1738,8 @@ const mergeWechatVariantSelections = ({ primary, fallback, limit = Number.POSITI
   return output;
 };
 
-const buildDefaultWechatHeadingSelections = (blocks) => {
+const buildDefaultWechatHeadingSelections = (blocks, layout = {}) => {
+  const preset = resolveTemplateRenderPreset(layout?.templateId);
   const headingIndexes = blocks
     .map((block, index) => ({ block, index }))
     .filter(({ block }) => block.type === 'heading' || block.type === 'subheading');
@@ -1171,10 +1747,14 @@ const buildDefaultWechatHeadingSelections = (blocks) => {
     return [];
   }
 
-  return headingIndexes.map(({ index }) => ({ blockIndex: index, variant: 'underline' }));
+  return headingIndexes.map(({ index }) => ({
+    blockIndex: index,
+    variant: blocks[index]?.type === 'subheading' ? preset.subheadingVariant || preset.headingVariant || 'underline' : preset.headingVariant || 'underline',
+  }));
 };
 
 const buildDefaultWechatParagraphSelections = (blocks, layout = {}) => {
+  const preset = resolveTemplateRenderPreset(layout?.templateId);
   const paragraphIndexes = blocks
     .map((block, index) => ({ block, index }))
     .filter(({ block }) => block.type === 'paragraph')
@@ -1208,7 +1788,7 @@ const buildDefaultWechatParagraphSelections = (blocks, layout = {}) => {
     return emphasisPattern.test(getText(blockIndex)) || dataPattern.test(getText(blockIndex));
   });
   if (calloutIndex !== undefined) {
-    addVariant(calloutIndex, 'callout');
+    addVariant(calloutIndex, preset.emphasisParagraphVariant || 'callout');
   }
 
   const compactIndex = paragraphIndexes.find((blockIndex) => {
@@ -1217,7 +1797,7 @@ const buildDefaultWechatParagraphSelections = (blocks, layout = {}) => {
     return text.length >= 36 && text.length <= 96;
   });
   if (compactIndex !== undefined) {
-    addVariant(compactIndex, 'compact');
+    addVariant(compactIndex, preset.compactParagraphVariant || 'compact');
   }
 
   if (lastParagraphIndex !== firstParagraphIndex) {
@@ -1227,39 +1807,50 @@ const buildDefaultWechatParagraphSelections = (blocks, layout = {}) => {
   return selections.sort((left, right) => left.blockIndex - right.blockIndex);
 };
 
-const buildDefaultWechatQuoteSelections = (blocks) =>
-  blocks
+const buildDefaultWechatQuoteSelections = (blocks, layout = {}) => {
+  const preset = resolveTemplateRenderPreset(layout?.templateId);
+  return blocks
     .map((block, index) => ({ block, index }))
     .filter(({ block }) => block.type === 'quote')
     .map(({ index }, itemIndex, quoteBlocks) => {
       const textLength = getWechatBlockPlainText(blocks[index]).length;
       if (itemIndex === 0) {
-        return { blockIndex: index, variant: textLength <= 56 ? 'plain_quote' : 'editorial_quote' };
+        return {
+          blockIndex: index,
+          variant: textLength <= 56 ? preset.shortQuoteVariant || 'plain_quote' : preset.quoteVariant || 'editorial_quote',
+        };
       }
       if (itemIndex === quoteBlocks.length - 1) {
-        return { blockIndex: index, variant: 'plain_quote' };
+        return { blockIndex: index, variant: preset.shortQuoteVariant || 'plain_quote' };
       }
-      return { blockIndex: index, variant: 'editorial_quote' };
+      return { blockIndex: index, variant: preset.quoteVariant || 'editorial_quote' };
     });
+};
 
-const buildDefaultWechatListSelections = (blocks) =>
-  blocks
+const buildDefaultWechatListSelections = (blocks, layout = {}) => {
+  const preset = resolveTemplateRenderPreset(layout?.templateId);
+  return blocks
     .map((block, index) => ({ block, index }))
     .filter(({ block }) => block.type === 'unordered_list' || block.type === 'ordered_list')
     .map(({ block, index }, itemIndex) => {
       const items = Array.isArray(block.items) ? block.items : [];
       const maxItemLength = items.reduce((maxLength, item) => Math.max(maxLength, cleanText(item).length), 0);
       if (block.type === 'ordered_list') {
-        return { blockIndex: index, variant: itemIndex === 0 ? 'numbered_steps' : 'plain_list' };
+        return {
+          blockIndex: index,
+          variant: itemIndex === 0 ? preset.orderedListVariant || 'numbered_steps' : preset.secondaryOrderedListVariant || 'plain_list',
+        };
       }
       if (maxItemLength >= 36) {
-        return { blockIndex: index, variant: 'plain_list' };
+        return { blockIndex: index, variant: preset.longUnorderedListVariant || 'plain_list' };
       }
-      return { blockIndex: index, variant: 'bullet_brief' };
+      return { blockIndex: index, variant: preset.unorderedListVariant || 'bullet_brief' };
     });
+};
 
-const buildDefaultWechatTableSelections = (blocks) =>
-  blocks
+const buildDefaultWechatTableSelections = (blocks, layout = {}) => {
+  const preset = resolveTemplateRenderPreset(layout?.templateId);
+  return blocks
     .map((block, index) => ({ block, index }))
     .filter(({ block }) => block.type === 'table')
     .map(({ block, index }, itemIndex) => {
@@ -1267,31 +1858,31 @@ const buildDefaultWechatTableSelections = (blocks) =>
       const rows = Array.isArray(block.rows) ? block.rows : [];
       const columnCount = Math.max(headers.length, ...rows.map((row) => row.length), 0);
       if (columnCount >= 5 || rows.length >= 6) {
-        return { blockIndex: index, variant: 'minimal_rows' };
+        return { blockIndex: index, variant: preset.denseTableVariant || 'minimal_rows' };
       }
-      if (columnCount >= 4) {
-        return { blockIndex: index, variant: 'compact_grid' };
-      }
-      return { blockIndex: index, variant: 'data_grid' };
+      return { blockIndex: index, variant: preset.tableVariant || (columnCount >= 4 ? 'compact_grid' : 'data_grid') };
     });
+};
 
-const buildDefaultWechatImageSelections = (blocks) =>
-  blocks
+const buildDefaultWechatImageSelections = (blocks, layout = {}) => {
+  const preset = resolveTemplateRenderPreset(layout?.templateId);
+  return blocks
     .map((block, index) => ({ block, index }))
     .filter(({ block }) => block.type === 'image')
     .map(({ block, index }, itemIndex) => {
       const caption = cleanText(block.image?.caption);
       if (itemIndex === 0) {
-        return { blockIndex: index, variant: 'full_bleed' };
+        return { blockIndex: index, variant: preset.imageHeroVariant || 'full_bleed' };
       }
-      if (caption && itemIndex <= 1) {
-        return { blockIndex: index, variant: 'caption_band' };
+      if (caption) {
+        return { blockIndex: index, variant: preset.imageCaptionVariant || 'caption_band' };
       }
-      if (itemIndex % 2 === 0) {
-        return { blockIndex: index, variant: 'full_bleed' };
-      }
-      return { blockIndex: index, variant: 'editorial_card' };
+      return {
+        blockIndex: index,
+        variant: itemIndex % 2 === 0 ? preset.imageAltVariant || 'editorial_card' : preset.imageHeroVariant || 'full_bleed',
+      };
     });
+};
 
 const buildDefaultWechatDividerSelections = (blocks) => {
   const candidates = [];
@@ -1362,7 +1953,21 @@ const normalizeWechatBodyBlocks = ({ blocks, layout }) => {
 
 const normalizeWechatHeadingSystemVariant = (variant) => {
   const normalized = cleanText(variant);
-  if (normalized === 'plain' || normalized === 'section_band' || normalized === 'underline') {
+  if (
+    normalized === 'chapter_marker' ||
+    normalized === 'plain' ||
+    normalized === 'section_band' ||
+    normalized === 'underline' ||
+    normalized === 'red_bar' ||
+    normalized === 'accent_tag' ||
+    normalized === 'number_badge' ||
+    normalized === 'overline' ||
+    normalized === 'double_rule' ||
+    normalized === 'offset_block' ||
+    normalized === 'ledger_rule' ||
+    normalized === 'cinema_caption' ||
+    normalized === 'executive_rule'
+  ) {
     return normalized;
   }
   return 'underline';
@@ -1389,15 +1994,24 @@ const chooseBalancedWechatHeadingVariant = ({ blockType, previousVariant, usageC
 
 const balanceWechatHeadingSelections = ({ selections, blocks }) => {
   const items = [...(Array.isArray(selections) ? selections : [])].sort((left, right) => left.blockIndex - right.blockIndex);
-  const anchorVariant = normalizeWechatHeadingSystemVariant(items[0]?.variant || 'underline');
+  const headingAnchorVariant = normalizeWechatHeadingSystemVariant(
+    items.find((item) => blocks[item.blockIndex]?.type === 'heading')?.variant || 'underline'
+  );
+  const subheadingAnchorVariant = normalizeWechatHeadingSystemVariant(
+    items.find((item) => blocks[item.blockIndex]?.type === 'subheading')?.variant || 'overline'
+  );
+  let chapterMarkerUsed = false;
 
   return items.map((item) => {
     const blockType = blocks[item.blockIndex]?.type;
-    let variant = item.variant;
     if (!blockType) {
       return item;
     }
-    variant = anchorVariant;
+    let variant = blockType === 'subheading' ? subheadingAnchorVariant : headingAnchorVariant;
+    if (item.variant === 'chapter_marker' && blockType === 'heading' && !chapterMarkerUsed) {
+      variant = 'chapter_marker';
+      chapterMarkerUsed = true;
+    }
     return { ...item, variant };
   });
 };
@@ -1419,17 +2033,18 @@ const enforceWechatOpeningHighlightPlanRules = ({ renderPlan, blocks, layout }) 
 };
 
 const buildDefaultWechatRenderPlan = (blocks, layout = {}, beautyAgent = {}) => {
+  const preset = resolveTemplateRenderPreset(layout?.templateId);
   const creditLineCount = (layout.creditLines || []).filter((line) => cleanText(line)).length;
 
   return {
-    creditsVariant: creditLineCount >= 2 ? 'inline_meta_bar' : 'stacked_labels',
-    headingStyles: buildDefaultWechatHeadingSelections(blocks),
+    creditsVariant: preset.creditsVariant || (creditLineCount >= 2 ? 'inline_meta_bar' : 'stacked_labels'),
+    headingStyles: buildDefaultWechatHeadingSelections(blocks, layout),
     paragraphStyles: buildDefaultWechatParagraphSelections(blocks, layout),
-    quoteStyles: buildDefaultWechatQuoteSelections(blocks),
-    listStyles: buildDefaultWechatListSelections(blocks),
-    tableStyles: buildDefaultWechatTableSelections(blocks),
-    imageStyles: buildDefaultWechatImageSelections(blocks),
-    highlightSentences: buildDefaultWechatHighlightSelections(blocks),
+    quoteStyles: buildDefaultWechatQuoteSelections(blocks, layout),
+    listStyles: buildDefaultWechatListSelections(blocks, layout),
+    tableStyles: buildDefaultWechatTableSelections(blocks, layout),
+    imageStyles: buildDefaultWechatImageSelections(blocks, layout),
+    highlightSentences: buildDefaultWechatHighlightSelections(blocks, layout),
     dividerAfterBlocks: buildDefaultWechatDividerSelections(blocks),
     beautyAgent: {
       used: Boolean(beautyAgent.used),
@@ -1548,6 +2163,8 @@ const normalizeWechatRenderPlan = (inputPlan, blocks, layout = {}, beautyAgent =
 const buildWechatBeautyAgentPrompt = ({ title, digest, layout, templateLabel, blocks }) => {
   const openingHighlightActive = hasWechatOpeningHighlight({ blocks, layout });
   const styleReferenceImages = Array.isArray(layout?.styleReferenceImages) ? layout.styleReferenceImages : [];
+  const templateStyleGuide = resolveTemplateStyleGuide(layout?.templateId);
+  const allowsBoldGeometry = ['bauhaus', 'neo_brutalism'].includes(cleanText(layout?.templateId));
   const blocksForPrompt = blocks.map((block, blockIndex) => {
     if (block.type === 'image') {
       return {
@@ -1584,6 +2201,7 @@ const buildWechatBeautyAgentPrompt = ({ title, digest, layout, templateLabel, bl
     'You are the top art director for premium WeChat business articles.',
     'Your job is to decide layout treatments only. Never rewrite, add, delete, summarize, translate, or paraphrase body text.',
     'The template is only a loose palette and tone reference, not a fixed layout.',
+    `Template design note: ${templateStyleGuide}`,
     'Treat this as a full-article relayout task. Improve structure, pacing, emphasis, hierarchy, images, lists, tables, quotes, credits, and section transitions together.',
     'User art direction is current-round feedback for this preview. Follow it when possible without breaking text preservation rules.',
     ...(styleReferenceImages.length
@@ -1600,20 +2218,22 @@ const buildWechatBeautyAgentPrompt = ({ title, digest, layout, templateLabel, bl
     'Use highlight_sentences for key data, key conclusions, key changes, and meaningful risks or turning points.',
     'Within one subsection, highlight at most 3 sentences. Within one paragraph, highlight at most 1 sentence.',
     'Use chapter_marker at most once, and only for one major section heading.',
-    'Use one consistent heading treatment across the whole article. Do not mix different heading variants in the same article.',
-    'Prefer restrained editorial layout. If you use cards, use simple outlined cards with light borders. Avoid heavy gradients, shadows, decorative dots, and flashy badges.',
+    'Use one consistent primary-heading treatment for h2 blocks and one consistent secondary-heading treatment for h3 blocks. Do not randomly mix multiple variants within the same heading level.',
+    allowsBoldGeometry
+      ? 'This template allows stronger contrast, geometry, and badges. Use them with discipline, but do not flatten the layout back into a generic restrained style.'
+      : 'Prefer restrained editorial layout. If you use cards, use simple outlined cards with light borders. Avoid heavy gradients, shadows, decorative dots, and flashy badges.',
     'If opening highlight is enabled, the highlighted sentence(s) should not be repeated again at the start of the body content.',
     ...(openingHighlightActive
       ? ['Opening highlight is enabled. The first body paragraph must remain a normal body paragraph, not lead or callout.']
       : []),
-    'Allowed credits_variant: stacked_labels, minimal_labels, inline_meta_bar.',
-    'Allowed heading variants: chapter_marker, section_band, red_bar, underline, accent_tag, number_badge, plain.',
+    'Allowed credits_variant: stacked_labels, minimal_labels, inline_meta_bar, stacked_editorial, rule_meta, brutal_meta, ledger_meta, film_meta, executive_meta.',
+    'Allowed heading variants: chapter_marker, section_band, red_bar, underline, accent_tag, number_badge, overline, double_rule, offset_block, ledger_rule, cinema_caption, executive_rule, plain.',
     'Allowed paragraph variants: body, lead, callout, closing, spotlight, compact, data_callout.',
     'Allowed quote variants: editorial_quote, plain_quote, accent_panel, centered_pull.',
     'Allowed list variants: bullet_brief, numbered_steps, plain_list, check_grid, card_list.',
     'Allowed table variants: data_grid, compact_grid, matrix_panel, minimal_rows.',
     'Allowed image variants: full_bleed, editorial_card, caption_focus, shadow_card, caption_band, border_frame.',
-    'Allowed highlight variants: marker, underline, ink, accent_bar.',
+    'Allowed highlight variants: marker, underline, ink, accent_bar, corner, band, reverse, soft_tab.',
     'At most 1 lead paragraph, at most 2 callout paragraphs, at most 1 spotlight or data_callout paragraph total, at most 3 highlight sentences per subsection, and at most 3 dividers.',
     `Article title for context only: ${title || ''}`,
     `Digest for context only: ${digest || ''}`,
@@ -1735,6 +2355,8 @@ const buildWechatBeautyRenderContext = ({ blocks, renderPlan, theme, layout }) =
 
   return {
     theme,
+    layout,
+    typography: resolveWechatTypography(layout?.templateId),
     headingOrdinals,
     openingHighlightSentences,
     openingHighlightBlockIndex,
@@ -1756,15 +2378,27 @@ const buildWechatBeautyRenderContext = ({ blocks, renderPlan, theme, layout }) =
 
 const resolveWechatHighlightStyle = (variant, theme) => {
   if (variant === 'underline') {
-    return `padding-bottom: 1px; box-shadow: inset 0 -0.34em 0 ${theme.accentSoft}; font-weight: 600;`;
+    return `padding: 0 2px 1px; box-shadow: inset 0 -0.34em 0 ${theme.accentSoft}; font-weight: 650;`;
   }
   if (variant === 'accent_bar') {
-    return `padding: 0 5px 0 10px; border-left: 3px solid ${theme.accent}; border-radius: 6px; background: linear-gradient(90deg, ${theme.accentSoft} 0%, rgba(255,255,255,0) 100%); color: ${theme.titleColor}; font-weight: 700;`;
+    return `padding: 0 6px 1px 10px; border-left: 3px solid ${theme.accent}; border-radius: 6px; background: linear-gradient(90deg, ${theme.accentSoft} 0%, rgba(255,255,255,0) 100%); color: ${theme.titleColor}; font-weight: 700;`;
   }
   if (variant === 'ink') {
-    return `padding: 0 2px; border-radius: 4px; background: rgba(15, 23, 42, 0.08); color: ${theme.titleColor}; font-weight: 700;`;
+    return `padding: 0 4px 1px; border-radius: 4px; background: rgba(15, 23, 42, 0.08); color: ${theme.titleColor}; font-weight: 700;`;
   }
-  return `padding: 0 3px; border-radius: 4px; background: rgba(241, 143, 37, 0.22); color: ${theme.titleColor}; font-weight: 700;`;
+  if (variant === 'corner') {
+    return `display: inline; padding: 0 6px 1px 8px; border-top-left-radius: 8px; box-shadow: inset 2px 0 0 ${theme.accent}, inset 0 2px 0 ${theme.accent}, inset 0 -0.56em 0 ${theme.accentSoft}; color: ${theme.titleColor}; font-weight: 700;`;
+  }
+  if (variant === 'band') {
+    return `padding: 0 6px 2px; background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 42%, ${theme.accentSoft} 42%, ${theme.accentSoft} 100%); box-shadow: inset 0 -1px 0 ${theme.accent}; color: ${theme.titleColor}; font-weight: 700;`;
+  }
+  if (variant === 'reverse') {
+    return `padding: 0 6px 1px; border-radius: 4px; background: ${theme.titleColor}; color: ${theme.cardBackground}; font-weight: 800;`;
+  }
+  if (variant === 'soft_tab') {
+    return `padding: 0 6px 2px; border-top: 1px solid ${theme.cardBorder}; border-bottom: 1px solid ${theme.accent}; background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 26%, ${theme.accentSoft} 26%, ${theme.accentSoft} 100%); color: ${theme.titleColor}; font-weight: 700;`;
+  }
+  return `padding: 0 4px 1px; border-radius: 4px; background: rgba(241, 143, 37, 0.22); color: ${theme.titleColor}; font-weight: 700;`;
 };
 
 const renderWechatTextWithHighlights = (text, highlights, theme) => {
@@ -1838,21 +2472,21 @@ const renderWechatBeautyParagraphBlock = (block, blockIndex, context) => {
   const textHtml = renderWechatTextWithHighlights(renderedText, context.highlightMap.get(blockIndex), context.theme);
   if (variant === 'lead') {
     return createWechatRenderedBlock(
-      `<p style="margin: 0 0 20px; color: ${context.theme.titleColor}; font-size: 17px; line-height: 1.92; letter-spacing: 0.01em; font-weight: 500;">${textHtml}</p>`,
+      `<p style="margin: 0 0 20px; color: ${context.theme.titleColor}; font-family: ${context.typography.display}; font-size: 17px; line-height: 1.92; letter-spacing: 0.01em; font-weight: 500;">${textHtml}</p>`,
       block.text
     );
   }
   if (variant === 'callout') {
     return createWechatRenderedBlock(
-      `<div style="margin: 4px 0 22px; padding: 14px 16px; border: 1px solid ${context.theme.cardBorder}; border-left: 3px solid ${context.theme.accent}; border-radius: 18px; background: #FFFFFF;"><p style="margin: 0; color: ${context.theme.titleColor}; font-size: 15px; line-height: 1.9; letter-spacing: 0.01em;">${textHtml}</p></div>`,
+      `<div style="margin: 6px 0 22px; padding: 0 0 0 14px; border-left: 2px solid ${context.theme.accent}; background: linear-gradient(90deg, ${context.theme.accentSoft} 0%, rgba(255,255,255,0) 68%);"><p style="margin: 0; color: ${context.theme.titleColor}; font-size: 15px; line-height: 1.9; letter-spacing: 0.01em;">${textHtml}</p></div>`,
       block.text
     );
   }
   if (variant === 'spotlight') {
     return createWechatRenderedBlock(
       `
-        <div style="margin: 8px 0 24px; padding: 16px 18px; border: 1px solid ${context.theme.cardBorder}; border-radius: 18px; background: #FFFFFF;">
-          <p style="margin: 0; color: ${context.theme.titleColor}; font-size: 16px; line-height: 1.88; letter-spacing: 0.01em; font-weight: 550;">${textHtml}</p>
+        <div style="margin: 10px 0 24px; padding: 12px 0 14px; border-top: 2px solid ${context.theme.accent}; border-bottom: 1px solid ${context.theme.cardBorder}; background: linear-gradient(180deg, ${context.theme.accentSoft} 0%, rgba(255,255,255,0) 100%);">
+          <p style="margin: 0; color: ${context.theme.titleColor}; font-size: 16px; line-height: 1.88; letter-spacing: 0.01em; font-weight: 600;">${textHtml}</p>
         </div>
       `.trim(),
       block.text
@@ -1867,8 +2501,12 @@ const renderWechatBeautyParagraphBlock = (block, blockIndex, context) => {
   if (variant === 'data_callout') {
     return createWechatRenderedBlock(
       `
-        <div style="margin: 10px 0 24px; padding: 14px 16px 16px; border-radius: 18px; background: #FFFFFF; border: 1px solid ${context.theme.cardBorder};">
-          <p style="margin: 0; color: ${context.theme.titleColor}; font-size: 15px; line-height: 1.88; letter-spacing: 0.01em; font-weight: 550;">${textHtml}</p>
+        <div style="margin: 10px 0 24px; padding: 12px 0 14px; border-top: 1px solid ${context.theme.cardBorder}; border-bottom: 1px solid ${context.theme.cardBorder};">
+          <div data-wechat-decoration="true" style="display: inline-flex; align-items: center; gap: 8px; margin-bottom: 8px; color: ${context.theme.sectionColor}; font-family: ${context.typography.meta}; font-size: 11px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase;">
+            <span style="display: inline-block; width: 24px; height: 2px; background: ${context.theme.accent};"></span>
+            <span>Key Data</span>
+          </div>
+          <p style="margin: 0; color: ${context.theme.titleColor}; font-size: 15px; line-height: 1.88; letter-spacing: 0.01em; font-weight: 600;">${textHtml}</p>
         </div>
       `.trim(),
       block.text
@@ -1881,7 +2519,7 @@ const renderWechatBeautyParagraphBlock = (block, blockIndex, context) => {
     );
   }
   return createWechatRenderedBlock(
-    `<p style="margin: 0 0 16px; color: ${context.theme.bodyColor}; font-size: 15px; line-height: 1.9; letter-spacing: 0.01em;">${textHtml}</p>`,
+    `<p style="margin: 0 0 16px; color: ${context.theme.bodyColor}; font-family: ${context.typography.body}; font-size: 15px; line-height: 1.9; letter-spacing: 0.01em;">${textHtml}</p>`,
     block.text
   );
 };
@@ -1891,16 +2529,21 @@ const renderWechatBeautyHeadingBlock = (block, blockIndex, context) => {
   const tag = block.type === 'heading' ? 'h2' : 'h3';
   const ordinal = context.headingOrdinals.get(blockIndex);
   const textHtml = renderWechatTextWithHighlights(block.text, context.highlightMap.get(blockIndex), context.theme);
+  const isPrimaryHeading = block.type === 'heading';
+  const headingFontSize = isPrimaryHeading ? 24 : 18;
+  const displayFont = context.typography.display;
+  const metaFont = context.typography.meta;
+  const monoFont = context.typography.mono;
 
   if (variant === 'chapter_marker') {
     return createWechatRenderedBlock(
       `
         <div style="margin: 40px 0 22px;">
-          <${tag} style="margin: 0; color: #F17724; font-size: ${block.type === 'heading' ? 28 : 22}px; line-height: 1.45; font-weight: 800;">
-            ${ordinal ? `<span data-wechat-decoration="true" style="display: inline-block; margin-right: 10px; color: #F17724; font-weight: 800;">#${ordinal}</span>` : ''}
+          <${tag} style="margin: 0; color: ${context.theme.accent}; font-family: ${displayFont}; font-size: ${isPrimaryHeading ? 28 : 22}px; line-height: 1.45; font-weight: 800;">
+            ${ordinal ? `<span data-wechat-decoration="true" style="display: inline-block; margin-right: 10px; color: ${context.theme.accent}; font-weight: 800;">#${ordinal}</span>` : ''}
             <span>${textHtml}</span>
           </${tag}>
-          <div data-wechat-decoration="true" style="width: ${block.type === 'heading' ? 108 : 82}px; height: 2px; margin-top: 12px; background: linear-gradient(90deg, #F17724 0%, rgba(241, 119, 36, 0.28) 100%);"></div>
+          <div data-wechat-decoration="true" style="width: ${block.type === 'heading' ? 108 : 82}px; height: 2px; margin-top: 12px; background: linear-gradient(90deg, ${context.theme.accent} 0%, ${context.theme.accentSoft} 100%);"></div>
         </div>
       `.trim(),
       block.text
@@ -1910,8 +2553,8 @@ const renderWechatBeautyHeadingBlock = (block, blockIndex, context) => {
   if (variant === 'red_bar') {
     return createWechatRenderedBlock(
       `
-        <div style="margin: 34px 0 18px; padding-left: 16px; border-left: 6px solid #D92D20;">
-          <${tag} style="margin: 0; color: ${context.theme.titleColor}; font-size: ${block.type === 'heading' ? 24 : 20}px; line-height: 1.45; font-weight: 800;">${textHtml}</${tag}>
+        <div style="margin: 34px 0 18px; padding-left: 16px; border-left: 6px solid ${context.theme.accent};">
+          <${tag} style="margin: 0; color: ${context.theme.titleColor}; font-family: ${displayFont}; font-size: ${isPrimaryHeading ? 24 : 20}px; line-height: 1.45; font-weight: 800;">${textHtml}</${tag}>
         </div>
       `.trim(),
       block.text
@@ -1921,8 +2564,8 @@ const renderWechatBeautyHeadingBlock = (block, blockIndex, context) => {
   if (variant === 'section_band') {
     return createWechatRenderedBlock(
       `
-        <div style="margin: 36px 0 18px; padding: 16px 18px; border-radius: 22px; background: ${context.theme.sectionBackground}; border: 1px solid ${context.theme.cardBorder};">
-          <${tag} style="margin: 0; color: ${context.theme.sectionColor}; font-size: ${block.type === 'heading' ? 24 : 20}px; line-height: 1.45; font-weight: 800;">${textHtml}</${tag}>
+        <div style="margin: 34px 0 18px; padding: 10px 0; border-top: 1px solid ${context.theme.cardBorder}; border-bottom: 1px solid ${context.theme.cardBorder}; background: linear-gradient(90deg, ${context.theme.sectionBackground} 0%, rgba(255,255,255,0) 76%);">
+          <${tag} style="margin: 0; color: ${context.theme.sectionColor}; font-family: ${displayFont}; font-size: ${isPrimaryHeading ? 24 : 20}px; line-height: 1.45; font-weight: 800;">${textHtml}</${tag}>
         </div>
       `.trim(),
       block.text
@@ -1933,7 +2576,7 @@ const renderWechatBeautyHeadingBlock = (block, blockIndex, context) => {
     return createWechatRenderedBlock(
       `
         <div style="margin: 32px 0 18px;">
-          <${tag} style="margin: 0; color: ${context.theme.titleColor}; font-size: ${block.type === 'heading' ? 23 : 19}px; line-height: 1.45; font-weight: 700;">${textHtml}</${tag}>
+          <${tag} style="margin: 0; color: ${context.theme.titleColor}; font-family: ${displayFont}; font-size: ${isPrimaryHeading ? 23 : 19}px; line-height: 1.45; font-weight: 700;">${textHtml}</${tag}>
           <div data-wechat-decoration="true" style="width: ${block.type === 'heading' ? 84 : 64}px; height: 2px; margin-top: 10px; background: ${context.theme.accent};"></div>
         </div>
       `.trim(),
@@ -1949,7 +2592,7 @@ const renderWechatBeautyHeadingBlock = (block, blockIndex, context) => {
             <span data-wechat-decoration="true" style="display: inline-block; width: 26px; height: 8px; border-radius: 999px; background: ${context.theme.accent};"></span>
             <span data-wechat-decoration="true" style="display: inline-block; width: 8px; height: 8px; border-radius: 999px; background: ${context.theme.cardBorder};"></span>
           </div>
-          <${tag} style="margin: 0; color: ${context.theme.titleColor}; font-size: ${block.type === 'heading' ? 22 : 18}px; line-height: 1.48; font-weight: 760;">${textHtml}</${tag}>
+          <${tag} style="margin: 0; color: ${context.theme.titleColor}; font-family: ${displayFont}; font-size: ${isPrimaryHeading ? 22 : 18}px; line-height: 1.48; font-weight: 760;">${textHtml}</${tag}>
         </div>
       `.trim(),
       block.text
@@ -1962,7 +2605,87 @@ const renderWechatBeautyHeadingBlock = (block, blockIndex, context) => {
       `
         <div style="display: flex; align-items: flex-start; gap: 12px; margin: 32px 0 18px;">
           <span data-wechat-decoration="true" style="display: inline-flex; flex: 0 0 auto; align-items: center; justify-content: center; min-width: ${block.type === 'heading' ? 38 : 34}px; height: ${block.type === 'heading' ? 38 : 34}px; border-radius: 14px; background: ${context.theme.accentSoft}; color: ${context.theme.sectionColor}; font-size: ${block.type === 'heading' ? 14 : 13}px; font-weight: 800; line-height: 1;">${badgeText}</span>
-          <${tag} style="margin: 2px 0 0; color: ${context.theme.titleColor}; font-size: ${block.type === 'heading' ? 22 : 18}px; line-height: 1.5; font-weight: 780;">${textHtml}</${tag}>
+          <${tag} style="margin: 2px 0 0; color: ${context.theme.titleColor}; font-family: ${displayFont}; font-size: ${isPrimaryHeading ? 22 : 18}px; line-height: 1.5; font-weight: 780;">${textHtml}</${tag}>
+        </div>
+      `.trim(),
+      block.text
+    );
+  }
+
+  if (variant === 'overline') {
+    return createWechatRenderedBlock(
+      `
+        <div style="margin: ${isPrimaryHeading ? '30px' : '24px'} 0 14px;">
+          <div data-wechat-decoration="true" style="display: inline-flex; align-items: center; gap: 10px; margin-bottom: 8px; color: ${context.theme.mutedColor}; font-family: ${metaFont}; font-size: 11px; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase;">
+            <span>${isPrimaryHeading ? 'Section' : 'Note'}</span>
+            <span style="display: inline-block; width: ${isPrimaryHeading ? 28 : 20}px; height: 1px; background: ${context.theme.cardBorder};"></span>
+          </div>
+          <${tag} style="margin: 0; color: ${context.theme.titleColor}; font-family: ${displayFont}; font-size: ${isPrimaryHeading ? 22 : 17}px; line-height: 1.52; font-weight: ${isPrimaryHeading ? 700 : 680};">${textHtml}</${tag}>
+        </div>
+      `.trim(),
+      block.text
+    );
+  }
+
+  if (variant === 'double_rule') {
+    return createWechatRenderedBlock(
+      `
+        <div style="margin: ${isPrimaryHeading ? '34px' : '28px'} 0 16px; padding: 10px 0 8px; border-top: 1px solid ${context.theme.cardBorder}; border-bottom: 1px solid ${context.theme.cardBorder};">
+          <${tag} style="margin: 0; color: ${context.theme.titleColor}; font-family: ${displayFont}; font-size: ${isPrimaryHeading ? 23 : 18}px; line-height: 1.5; font-weight: ${isPrimaryHeading ? 760 : 700};">${textHtml}</${tag}>
+        </div>
+      `.trim(),
+      block.text
+    );
+  }
+
+  if (variant === 'offset_block') {
+    return createWechatRenderedBlock(
+      `
+        <div style="margin: ${isPrimaryHeading ? '34px' : '26px'} 0 16px;">
+          <${tag} style="display: inline; margin: 0; padding: 0 10px 2px 0; color: ${context.theme.titleColor}; font-family: ${displayFont}; font-size: ${isPrimaryHeading ? 24 : 18}px; line-height: 1.5; font-weight: ${isPrimaryHeading ? 780 : 720}; box-shadow: inset -14px -0.72em 0 ${context.theme.accentSoft};">${textHtml}</${tag}>
+        </div>
+      `.trim(),
+      block.text
+    );
+  }
+
+  if (variant === 'ledger_rule') {
+    return createWechatRenderedBlock(
+      `
+        <div style="margin: ${isPrimaryHeading ? '30px' : '24px'} 0 14px; padding: 8px 0 10px; border-top: 1px dashed ${context.theme.cardBorder}; border-bottom: 1px dashed ${context.theme.cardBorder};">
+          <div data-wechat-decoration="true" style="margin-bottom: 6px; color: ${context.theme.mutedColor}; font-family: ${monoFont}; font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;">${ordinal ? `0${ordinal}`.slice(-2) : '00'} / section</div>
+          <${tag} style="margin: 0; color: ${context.theme.titleColor}; font-family: ${monoFont}; font-size: ${isPrimaryHeading ? 20 : 16}px; line-height: 1.56; font-weight: 700;">${textHtml}</${tag}>
+        </div>
+      `.trim(),
+      block.text
+    );
+  }
+
+  if (variant === 'cinema_caption') {
+    return createWechatRenderedBlock(
+      `
+        <div style="margin: ${isPrimaryHeading ? '34px' : '28px'} 0 16px;">
+          <div data-wechat-decoration="true" style="display: inline-flex; align-items: center; gap: 10px; margin-bottom: 8px; color: ${context.theme.sectionColor}; font-family: ${metaFont}; font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;">
+            <span>${isPrimaryHeading ? 'Scene' : 'Frame'}</span>
+            <span style="display: inline-block; width: ${isPrimaryHeading ? 40 : 28}px; height: 1px; background: ${context.theme.accent};"></span>
+          </div>
+          <${tag} style="margin: 0; color: ${context.theme.titleColor}; font-family: ${displayFont}; font-size: ${isPrimaryHeading ? 24 : 18}px; line-height: 1.52; font-weight: 700;">${textHtml}</${tag}>
+        </div>
+      `.trim(),
+      block.text
+    );
+  }
+
+  if (variant === 'executive_rule') {
+    return createWechatRenderedBlock(
+      `
+        <div style="margin: ${isPrimaryHeading ? '36px' : '28px'} 0 16px; padding-top: 10px; border-top: 1px solid ${context.theme.titleColor};">
+          <div data-wechat-decoration="true" style="display: inline-flex; align-items: center; gap: 10px; margin-bottom: 8px; color: ${context.theme.mutedColor}; font-family: ${metaFont}; font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;">
+            <span>${isPrimaryHeading ? 'Review' : 'Point'}</span>
+            <span style="display: inline-block; width: 32px; height: 1px; background: ${context.theme.cardBorder};"></span>
+          </div>
+          <${tag} style="margin: 0; color: ${context.theme.titleColor}; font-family: ${displayFont}; font-size: ${isPrimaryHeading ? 24 : 18}px; line-height: 1.5; font-weight: ${isPrimaryHeading ? 700 : 680};">${textHtml}</${tag}>
+          <div data-wechat-decoration="true" style="width: ${isPrimaryHeading ? 108 : 72}px; height: 1px; margin-top: 10px; background: ${context.theme.accent};"></div>
         </div>
       `.trim(),
       block.text
@@ -1970,7 +2693,7 @@ const renderWechatBeautyHeadingBlock = (block, blockIndex, context) => {
   }
 
   return createWechatRenderedBlock(
-    `<${tag} style="margin: ${block.type === 'heading' ? '30px 0 16px' : '24px 0 12px'}; color: ${context.theme.titleColor}; font-size: ${block.type === 'heading' ? 22 : 18}px; line-height: 1.5; font-weight: 700;">${textHtml}</${tag}>`,
+    `<${tag} style="margin: ${block.type === 'heading' ? '30px 0 16px' : '24px 0 12px'}; color: ${context.theme.titleColor}; font-family: ${displayFont}; font-size: ${block.type === 'heading' ? 22 : 18}px; line-height: 1.5; font-weight: 700;">${textHtml}</${tag}>`,
     block.text
   );
 };
@@ -1988,7 +2711,7 @@ const renderWechatBeautyQuoteBlock = (block, blockIndex, context) => {
   if (variant === 'accent_panel') {
     return createWechatRenderedBlock(
       `
-        <blockquote style="margin: 28px 0; padding: 18px 18px 18px 20px; border-radius: 18px; background: #FFFFFF; border: 1px solid ${context.theme.cardBorder}; color: ${context.theme.titleColor}; font-size: 16px; line-height: 1.92;">
+        <blockquote style="margin: 28px 0; padding: 14px 0 14px 18px; border-left: 3px solid ${context.theme.accent}; border-top: 1px solid ${context.theme.cardBorder}; border-bottom: 1px solid ${context.theme.cardBorder}; color: ${context.theme.titleColor}; font-size: 16px; line-height: 1.92;">
           ${textHtml}
         </blockquote>
       `.trim(),
@@ -1998,8 +2721,8 @@ const renderWechatBeautyQuoteBlock = (block, blockIndex, context) => {
   if (variant === 'centered_pull') {
     return createWechatRenderedBlock(
       `
-        <blockquote style="margin: 30px 0; padding: 16px 14px; text-align: center; border: 1px solid ${context.theme.cardBorder}; border-radius: 18px; background: #FFFFFF;">
-          <p style="margin: 0; color: ${context.theme.titleColor}; font-size: 18px; line-height: 1.85; font-weight: 650;">${textHtml}</p>
+        <blockquote style="margin: 30px 0; padding: 12px 0; text-align: center; border-top: 1px solid ${context.theme.cardBorder}; border-bottom: 1px solid ${context.theme.cardBorder};">
+          <p style="margin: 0; color: ${context.theme.titleColor}; font-family: ${context.typography.display}; font-size: 18px; line-height: 1.85; font-weight: 650;">${textHtml}</p>
         </blockquote>
       `.trim(),
       block.text
@@ -2036,7 +2759,7 @@ const renderWechatBeautyListBlock = (block, blockIndex, context) => {
       `<${tag} style="display: grid; grid-template-columns: 1fr; gap: 10px; margin: 4px 0 22px; padding: 0; list-style: none;">${(block.items || [])
         .map((item, itemIndex) => {
           const marker = block.type === 'ordered_list' ? String(itemIndex + 1).padStart(2, '0') : '*';
-          return `<li style="display: flex; gap: 12px; align-items: flex-start; padding: 14px 14px 13px; border: 1px solid ${context.theme.cardBorder}; border-radius: 18px; background: #FFFFFF;"><span data-wechat-decoration="true" style="display: inline-flex; flex: 0 0 auto; align-items: center; justify-content: center; min-width: 28px; height: 28px; border-radius: 10px; border: 1px solid ${context.theme.cardBorder}; background: #FFFFFF; color: ${context.theme.sectionColor}; font-size: 12px; font-weight: 800; line-height: 1;">${marker}</span><span style="display: inline-block; color: ${context.theme.bodyColor}; font-size: 15px; line-height: 1.82;">${escapeHtml(item)}</span></li>`;
+          return `<li style="display: flex; gap: 12px; align-items: flex-start; padding: 12px 0; border-top: 1px solid ${context.theme.cardBorder}; border-bottom: 1px solid ${context.theme.cardBorder};"><span data-wechat-decoration="true" style="display: inline-flex; flex: 0 0 auto; align-items: center; justify-content: center; min-width: 28px; height: 28px; border-radius: 8px; border: 1px solid ${context.theme.cardBorder}; background: ${context.theme.accentSoft}; color: ${context.theme.sectionColor}; font-size: 12px; font-weight: 800; line-height: 1;">${marker}</span><span style="display: inline-block; color: ${context.theme.bodyColor}; font-size: 15px; line-height: 1.82;">${escapeHtml(item)}</span></li>`;
         })
         .join('')}</${tag}>`,
       (block.items || []).join(' ')
@@ -2047,7 +2770,7 @@ const renderWechatBeautyListBlock = (block, blockIndex, context) => {
       `<${tag} style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px 12px; margin: 4px 0 22px; padding: 0; list-style: none;">${(block.items || [])
         .map(
           (item) =>
-            `<li style="display: flex; gap: 10px; align-items: flex-start; min-width: 0; padding: 10px 12px; border-radius: 16px; border: 1px solid ${context.theme.cardBorder}; background: #FFFFFF;"><span data-wechat-decoration="true" style="display: inline-flex; flex: 0 0 auto; align-items: center; justify-content: center; width: 20px; height: 20px; border-radius: 999px; border: 1px solid ${context.theme.cardBorder}; background: #FFFFFF; color: ${context.theme.accent}; font-size: 12px; font-weight: 800; line-height: 1;">+</span><span style="display: inline-block; min-width: 0; color: ${context.theme.bodyColor}; font-size: 14px; line-height: 1.75;">${escapeHtml(item)}</span></li>`
+            `<li style="display: flex; gap: 10px; align-items: flex-start; min-width: 0; padding: 10px 0; border-bottom: 1px solid ${context.theme.cardBorder};"><span data-wechat-decoration="true" style="display: inline-flex; flex: 0 0 auto; align-items: center; justify-content: center; width: 20px; height: 20px; border-radius: 999px; border: 1px solid ${context.theme.cardBorder}; background: ${context.theme.accentSoft}; color: ${context.theme.accent}; font-size: 12px; font-weight: 800; line-height: 1;">+</span><span style="display: inline-block; min-width: 0; color: ${context.theme.bodyColor}; font-size: 14px; line-height: 1.75;">${escapeHtml(item)}</span></li>`
         )
         .join('')}</${tag}>`,
       (block.items || []).join(' ')
@@ -2241,6 +2964,7 @@ const collectWechatRenderedBlockDiagnostics = (blocks, renderedBlocks, layout = 
 };
 
 const renderWechatCreditsBlock = ({ layout, theme, renderPlan }) => {
+  const typography = resolveWechatTypography(layout?.templateId);
   const lines = [];
   if (layout.author) {
     lines.push({ label: '\u4f5c\u8005', value: layout.author });
@@ -2253,44 +2977,133 @@ const renderWechatCreditsBlock = ({ layout, theme, renderPlan }) => {
   }
 
   const creditsVariant = renderPlan?.creditsVariant || 'stacked_labels';
-  if (creditsVariant === 'inline_meta_bar') {
-    const inlineItems = [
-      ...lines.map(
-        (line) =>
-          `<div style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 999px; background: ${theme.sectionBackground};"><span data-wechat-decoration="true" style="color: ${theme.sectionColor}; font-size: 12px; font-weight: 800; letter-spacing: 0.04em;">${escapeHtml(line.label)}</span><span style="color: ${theme.titleColor}; font-size: 14px; line-height: 1.5; font-weight: 600;">${escapeHtml(line.value)}</span></div>`
-      ),
-      ...(layout.creditLines || []).map(
-        (line) =>
-          `<div style="display: inline-flex; align-items: center; padding: 8px 12px; border-radius: 999px; border: 1px solid ${theme.cardBorder}; color: ${theme.mutedColor}; font-size: 13px; line-height: 1.5;">${escapeHtml(line)}</div>`
-      ),
-    ].join('');
+  const creditLinesHtml = (layout.creditLines || [])
+    .map(
+      (line) =>
+        `<div style="margin: 0 0 8px; color: ${theme.mutedColor}; font-family: ${typography.meta}; font-size: 13px; line-height: 1.7;">${escapeHtml(line)}</div>`
+    )
+    .join('');
 
+  if (creditsVariant === 'ledger_meta') {
     return `
-      <section style="display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 20px; padding: 0;">
-        ${inlineItems}
+      <section style="margin: 0 0 20px; padding: 0 0 10px; border-bottom: 1px dashed ${theme.cardBorder};">
+        ${lines
+          .map(
+            (line) =>
+              `<div style="margin: 0 0 8px; color: ${theme.titleColor}; font-family: ${typography.mono}; font-size: 13px; line-height: 1.7;"><span data-wechat-decoration="true" style="display: inline-block; min-width: 64px; color: ${theme.mutedColor}; letter-spacing: 0.08em;">${escapeHtml(line.label.toUpperCase())}</span><span style="display: inline-block;">${escapeHtml(line.value)}</span></div>`
+          )
+          .join('')}
+        ${creditLinesHtml}
       </section>
     `.trim();
   }
 
-  const lineHtml = lines
-    .map((line) => {
-      if (creditsVariant === 'minimal_labels') {
-        return `<div style="margin: 0 0 8px;"><span data-wechat-decoration="true" style="display: inline-block; min-width: 34px; margin-right: 8px; color: ${theme.accent}; font-size: 13px; font-weight: 700; vertical-align: baseline;">${escapeHtml(line.label)}</span><span style="display: inline-block; color: ${theme.titleColor}; font-size: 15px; line-height: 1.65; font-weight: 600; vertical-align: baseline;">${escapeHtml(line.value)}</span></div>`;
-      }
-      return `<div style="margin: 0 0 10px;"><span data-wechat-decoration="true" style="display: inline-block; min-width: 44px; margin-right: 8px; padding: 2px 9px; background: #F17724; color: #FFFFFF; font-size: 13px; font-weight: 800; line-height: 1.35; text-align: center; vertical-align: baseline;">${escapeHtml(line.label)}</span><span style="display: inline-block; color: ${theme.titleColor}; font-size: 15px; line-height: 1.65; font-weight: 600; vertical-align: baseline;">${escapeHtml(line.value)}</span></div>`;
-    })
-    .join('');
+  if (creditsVariant === 'film_meta') {
+    return `
+      <section style="margin: 0 0 22px; padding: 0 0 10px;">
+        ${lines
+          .map(
+            (line) =>
+              `<div style="margin: 0 0 12px; padding-left: 12px; border-left: 2px solid ${theme.accent};"><div data-wechat-decoration="true" style="margin-bottom: 3px; color: ${theme.mutedColor}; font-family: ${typography.meta}; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;">${escapeHtml(line.label)}</div><div style="color: ${theme.titleColor}; font-family: ${typography.display}; font-size: 16px; line-height: 1.65; font-weight: 600;">${escapeHtml(line.value)}</div></div>`
+          )
+          .join('')}
+        ${creditLinesHtml}
+      </section>
+    `.trim();
+  }
 
-  const creditLinesHtml = (layout.creditLines || [])
-    .map(
-      (line) =>
-        `<div style="margin: 0 0 8px; color: ${theme.mutedColor}; font-size: 13px; line-height: 1.7;">${escapeHtml(line)}</div>`
-    )
-    .join('');
+  if (creditsVariant === 'executive_meta') {
+    return `
+      <section style="margin: 0 0 20px; padding: 0 0 10px; border-bottom: 1px solid ${theme.cardBorder};">
+        ${lines
+          .map(
+            (line) =>
+              `<div style="margin: 0 0 12px;"><div data-wechat-decoration="true" style="margin-bottom: 4px; color: ${theme.mutedColor}; font-family: ${typography.meta}; font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;">${escapeHtml(line.label)}</div><div style="color: ${theme.titleColor}; font-family: ${typography.display}; font-size: 16px; line-height: 1.6; font-weight: 600;">${escapeHtml(line.value)}</div></div>`
+          )
+          .join('')}
+        ${creditLinesHtml}
+      </section>
+    `.trim();
+  }
+
+  if (creditsVariant === 'rule_meta') {
+    return `
+      <section style="margin: 0 0 20px; padding: 10px 0 8px; border-top: 1px solid ${theme.cardBorder}; border-bottom: 1px solid ${theme.cardBorder};">
+        ${lines
+          .map(
+            (line) =>
+              `<div style="margin: 0 0 10px;"><div data-wechat-decoration="true" style="margin-bottom: 4px; color: ${theme.mutedColor}; font-family: ${typography.meta}; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;">${escapeHtml(line.label)}</div><div style="color: ${theme.titleColor}; font-size: 15px; line-height: 1.65; font-weight: 600;">${escapeHtml(line.value)}</div></div>`
+          )
+          .join('')}
+        ${creditLinesHtml}
+      </section>
+    `.trim();
+  }
+
+  if (creditsVariant === 'brutal_meta') {
+    return `
+      <section style="margin: 0 0 22px; padding: 12px 0 8px; border-top: 3px solid ${theme.cardBorder}; border-bottom: 3px solid ${theme.cardBorder};">
+        ${lines
+          .map(
+            (line) =>
+              `<div style="margin: 0 0 12px;"><span data-wechat-decoration="true" style="display: inline-block; margin-bottom: 5px; padding: 2px 8px; border: 2px solid ${theme.cardBorder}; background: ${theme.accentSoft}; color: ${theme.titleColor}; font-family: ${typography.meta}; font-size: 11px; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase;">${escapeHtml(line.label)}</span><div style="color: ${theme.titleColor}; font-family: ${typography.display}; font-size: 16px; line-height: 1.65; font-weight: 700;">${escapeHtml(line.value)}</div></div>`
+          )
+          .join('')}
+        ${creditLinesHtml}
+      </section>
+    `.trim();
+  }
+
+  if (creditsVariant === 'stacked_editorial') {
+    return `
+      <section style="margin: 0 0 20px; padding: 0 0 8px;">
+        ${lines
+          .map(
+            (line) =>
+              `<div style="margin: 0 0 12px;"><span data-wechat-decoration="true" style="display: inline-block; margin-bottom: 4px; padding: 2px 8px; background: ${theme.accent}; color: #FFFFFF; font-family: ${typography.meta}; font-size: 11px; font-weight: 800; letter-spacing: 0.08em;">${escapeHtml(line.label)}</span><div style="color: ${theme.titleColor}; font-size: 15px; line-height: 1.65; font-weight: 600;">${escapeHtml(line.value)}</div></div>`
+          )
+          .join('')}
+        ${creditLinesHtml}
+      </section>
+    `.trim();
+  }
+
+  if (creditsVariant === 'inline_meta_bar') {
+    return `
+      <section style="display: grid; gap: 10px; margin: 0 0 20px; padding: 0;">
+        ${lines
+          .map(
+            (line) =>
+              `<div style="display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid ${theme.cardBorder};"><span data-wechat-decoration="true" style="display: inline-flex; min-width: 48px; justify-content: center; padding: 4px 10px; border-radius: 999px; background: ${theme.sectionBackground}; color: ${theme.sectionColor}; font-family: ${typography.meta}; font-size: 11px; font-weight: 800; letter-spacing: 0.06em;">${escapeHtml(line.label)}</span><span style="display: inline-block; color: ${theme.titleColor}; font-size: 14px; line-height: 1.6; font-weight: 600;">${escapeHtml(line.value)}</span></div>`
+          )
+          .join('')}
+        ${creditLinesHtml}
+      </section>
+    `.trim();
+  }
+
+  if (creditsVariant === 'minimal_labels') {
+    return `
+      <section style="margin: 0 0 18px; padding: 0 0 8px;">
+        ${lines
+          .map(
+            (line) =>
+              `<div style="margin: 0 0 10px;"><div data-wechat-decoration="true" style="margin-bottom: 2px; color: ${theme.accent}; font-family: ${typography.meta}; font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;">${escapeHtml(line.label)}</div><div style="color: ${theme.titleColor}; font-size: 15px; line-height: 1.65; font-weight: 600;">${escapeHtml(line.value)}</div></div>`
+          )
+          .join('')}
+        ${creditLinesHtml}
+      </section>
+    `.trim();
+  }
 
   return `
     <section style="margin: 0 0 18px; padding: 0 0 8px;">
-      ${lineHtml}
+      ${lines
+        .map(
+          (line) =>
+            `<div style="margin: 0 0 12px;"><span data-wechat-decoration="true" style="display: inline-block; margin-bottom: 4px; padding: 2px 9px; background: ${theme.accent}; color: #FFFFFF; font-family: ${typography.meta}; font-size: 11px; font-weight: 800; line-height: 1.35; letter-spacing: 0.08em;">${escapeHtml(line.label)}</span><div style="color: ${theme.titleColor}; font-size: 15px; line-height: 1.65; font-weight: 600;">${escapeHtml(line.value)}</div></div>`
+        )
+        .join('')}
       ${creditLinesHtml}
     </section>
   `.trim();

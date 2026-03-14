@@ -214,7 +214,7 @@ const preview = await generateWechatDraftPreview({
 });
 
 assert.equal(preview.metadata.templateId, 'latepost_report');
-assert.equal(preview.metadata.rendererVersion, 'beauty_plan_v2');
+assert.equal(preview.metadata.rendererVersion, 'beauty_plan_v5');
 assert.equal(preview.metadata.imageCount, 2);
 assert.equal(preview.metadata.author, 'WeChat QA');
 assert.ok(preview.metadata.blockCount >= 8, 'preview should include parsed blocks');
@@ -225,6 +225,45 @@ assert.ok(preview.metadata.renderPlan, 'preview metadata should include render p
 assert.equal(preview.metadata.beautyAgent?.used, false);
 assert.ok(preview.renderPlan?.beautyAgent?.planHash, 'render plan should carry a stable hash');
 assert.doesNotMatch(preview.previewHtml, /<h1\b/i, 'wechat body should no longer render a standalone main title');
+
+const themedExpectations = {
+  bauhaus: { creditsVariant: 'stacked_editorial', headingVariants: ['offset_block', 'double_rule'] },
+  knowledge_base: { creditsVariant: 'rule_meta', headingVariants: ['double_rule', 'overline'] },
+  morandi_forest: { creditsVariant: 'minimal_labels', headingVariants: ['underline', 'overline'] },
+  neo_brutalism: { creditsVariant: 'brutal_meta', headingVariants: ['number_badge', 'offset_block'] },
+  receipt: { creditsVariant: 'ledger_meta', headingVariants: ['ledger_rule', 'plain'] },
+  sunset_film: { creditsVariant: 'film_meta', headingVariants: ['cinema_caption', 'overline'] },
+  capital_review: { creditsVariant: 'executive_meta', headingVariants: ['executive_rule', 'underline'] },
+};
+
+for (const [templateId, expectation] of Object.entries(themedExpectations)) {
+  const themedPreview = await generateWechatDraftPreview({
+    topic: 'AI pricing war next stage',
+    articleContent,
+    illustrationBundle,
+    layout: {
+      ...layout,
+      templateId,
+    },
+  });
+
+  assert.equal(themedPreview.metadata.templateId, templateId);
+  assert.equal(themedPreview.renderPlan.creditsVariant, expectation.creditsVariant);
+  assert.ok(
+    themedPreview.renderPlan.headingStyles.length > 0,
+    `heading styles should exist for ${templateId}`
+  );
+  for (const headingVariant of expectation.headingVariants) {
+    assert.ok(
+      themedPreview.renderPlan.headingStyles.some((item) => item.variant === headingVariant),
+      `heading system should include ${headingVariant} for ${templateId}`
+    );
+  }
+  assert.ok(
+    themedPreview.previewHtml.length > 0,
+    `preview html should be generated for ${templateId}`
+  );
+}
 
 const explicitRenderPlanPreview = await generateWechatDraftPreview({
   topic: 'AI 模型价格战的下一站',

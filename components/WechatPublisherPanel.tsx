@@ -24,6 +24,46 @@ const TEMPLATE_OPTIONS: Array<{ id: WechatTemplateId; label: string; description
   { id: 'warm_column', label: '专栏长文版', description: '更柔和，适合人物、案例和长叙事。' },
 ];
 
+const ADDITIONAL_TEMPLATE_OPTIONS: Array<{ id: WechatTemplateId; label: string; description: string }> = [
+  {
+    id: 'bauhaus',
+    label: '\u5305\u8c6a\u65af',
+    description: '\u51e0\u4f55\u8272\u5757\u3001\u786c\u8fb9\u6846\u3001\u5f3a\u89c2\u70b9\u5c42\u7ea7\u3002',
+  },
+  {
+    id: 'knowledge_base',
+    label: '\u77e5\u8bc6\u5e93',
+    description: '\u6587\u6863\u611f\u3001\u4fe1\u606f\u5361\u7247\u548c\u6e05\u6670\u7ed3\u6784\u3002',
+  },
+  {
+    id: 'morandi_forest',
+    label: '\u83ab\u5170\u8fea\u68ee\u6797',
+    description: '\u4f4e\u9971\u548c\u7070\u7eff\u3001\u5b89\u9759\u6587\u7ae0\u8282\u594f\u3002',
+  },
+  {
+    id: 'neo_brutalism',
+    label: '\u65b0\u7c97\u91ce\u4e3b\u4e49',
+    description: '\u7c97\u8fb9\u6846\u3001\u5f3a\u5bf9\u6bd4\u3001\u6807\u7b7e\u5316\u5f3a\u8c03\u3002',
+  },
+  {
+    id: 'receipt',
+    label: '\u8d2d\u7269\u5c0f\u7968',
+    description: '\u5355\u8272\u6253\u5370\u611f\u3001\u6e05\u5355\u5f0f\u7ed3\u8bba\u8282\u594f\u3002',
+  },
+  {
+    id: 'sunset_film',
+    label: '\u843d\u65e5\u80f6\u7247',
+    description: '\u6696\u8272\u590d\u53e4\u3001\u6742\u5fd7\u5f0f\u56fe\u6ce8\u548c\u5206\u680f\u6c14\u8d28\u3002',
+  },
+  {
+    id: 'capital_review',
+    label: '\u8d44\u672c\u8bc4\u8bba',
+    description: '\u5546\u52a1\u520a\u7269\u611f\uff0c\u5f3a\u8c03\u4f5c\u8005\u3001\u7f16\u8f91\u548c\u5934\u90e8\u9ad8\u4eae\u3002',
+  },
+];
+
+const ALL_TEMPLATE_OPTIONS = [...TEMPLATE_OPTIONS, ...ADDITIONAL_TEMPLATE_OPTIONS];
+
 const createDefaultLayout = (
   config?: Partial<WechatPublisherConfigStatus> | null,
   previous?: WechatLayoutSettings,
@@ -629,10 +669,31 @@ export const WechatPublisherPanel: React.FC<{
           </div>
 
           <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
-            <div className="text-sm font-semibold text-slate-900">{'\u7edf\u4e00\u5fae\u4fe1\u6392\u7248\u6a21\u5f0f'}</div>
-            <div className="mt-2 text-sm leading-relaxed text-slate-500">{'\u4e0d\u518d\u624b\u52a8\u5207\u6a21\u677f\uff0c\u7531 AI \u6839\u636e\u6587\u7ae0\u5185\u5bb9\u81ea\u52a8\u9009\u62e9\u6700\u5408\u9002\u7684\u6807\u9898\u3001\u91cd\u70b9\u53e5\u3001\u56fe\u7247\u548c\u7559\u767d\u5904\u7406\u3002'}</div>
+            <div className="text-sm font-semibold text-slate-900">{'\u516c\u4f17\u53f7\u6392\u7248\u4e3b\u9898'}</div>
+            <div className="mt-2 text-sm leading-relaxed text-slate-500">{'\u4fdd\u7559\u73b0\u6709\u9ed8\u8ba4\u4e3b\u9898\u4f5c\u4e3a\u57fa\u7ebf\uff0c\u540c\u65f6\u5141\u8bb8\u5728\u6307\u5b9a\u4e3b\u9898\u5185\u7531 AI \u81ea\u52a8\u5904\u7406\u6807\u9898\u5c42\u7ea7\u3001\u91cd\u70b9\u53e5\u3001\u56fe\u7247\u548c\u7559\u767d\u8282\u594f\u3002'}</div>
           </div>
-          <div className="grid gap-4 sm:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-4">
+            <label className="block text-sm font-medium text-slate-700">
+              {'\u6392\u7248\u4e3b\u9898'}
+              <select
+                value={currentLayout.templateId}
+                onChange={(event) =>
+                  updateLayout({
+                    templateId: event.target.value as WechatLayoutSettings['templateId'],
+                  })
+                }
+                className="mt-2 w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-700 outline-none focus:border-report-accent"
+              >
+                {ALL_TEMPLATE_OPTIONS.map((option) => (
+                  <option key={option.id} value={option.id}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+              <div className="mt-2 text-xs leading-relaxed text-slate-500">
+                {ALL_TEMPLATE_OPTIONS.find((option) => option.id === currentLayout.templateId)?.description}
+              </div>
+            </label>
             <label className="block text-sm font-medium text-slate-700">
               {'\u4f5c\u8005'}
               <input
