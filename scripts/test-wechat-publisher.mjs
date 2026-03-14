@@ -272,6 +272,13 @@ for (const [templateId, expectation] of Object.entries(themedExpectations)) {
     themedPreview.previewHtml.length > 0,
     `preview html should be generated for ${templateId}`
   );
+  if (templateId === 'receipt') {
+    assert.doesNotMatch(
+      themedPreview.previewHtml,
+      /background: #111111; color: #222222;/,
+      'receipt image captions should not render dark text on a dark caption band'
+    );
+  }
 }
 
 const explicitRenderPlanPreview = await generateWechatDraftPreview({

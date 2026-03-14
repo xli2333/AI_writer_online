@@ -453,7 +453,7 @@ const WECHAT_TEMPLATE_RENDER_PRESETS = {
     tableVariant: 'minimal_rows',
     denseTableVariant: 'minimal_rows',
     imageHeroVariant: 'border_frame',
-    imageCaptionVariant: 'caption_band',
+    imageCaptionVariant: 'border_frame',
     imageAltVariant: 'border_frame',
     openingHighlightVariant: 'ledger_stub',
     highlightVariantMode: 'band',
@@ -2836,6 +2836,7 @@ const renderWechatBeautyTableBlock = (block, blockIndex, context) => {
 
 const renderWechatBeautyImageBlock = (image, blockIndex, context) => {
   const variant = context.imageMap.get(blockIndex) || 'caption_focus';
+  const isReceiptTemplate = context.layout?.templateId === 'receipt';
   if (variant === 'shadow_card') {
     return createWechatRenderedBlock(
       `
@@ -2847,11 +2848,15 @@ const renderWechatBeautyImageBlock = (image, blockIndex, context) => {
     );
   }
   if (variant === 'caption_band') {
+    const captionBandBackground = isReceiptTemplate ? context.theme.tableHeaderBackground : context.theme.sectionBackground;
+    const captionBandColor = isReceiptTemplate ? context.theme.titleColor : context.theme.sectionColor || context.theme.bodyColor;
+    const captionBandFont = isReceiptTemplate ? context.typography.mono : context.typography.body;
+    const captionBandBorder = isReceiptTemplate ? `border-top: 1px dashed ${context.theme.cardBorder};` : '';
     return createWechatRenderedBlock(
       `
         <figure style="margin: 0 0 ${WECHAT_PARAGRAPH_BREAK_AFTER_PX}px; width: 100%; box-sizing: border-box; overflow: hidden; border-radius: 22px; background: #FFFFFF; border: 1px solid ${context.theme.cardBorder};">
           <img src="${escapeHtml(image.url)}" alt="${escapeHtml(image.title || 'Illustration')}" style="display: block; width: 100%; max-width: 100%; height: auto; background: #F8FAFC;" />
-          ${image.caption ? `<figcaption style="padding: 12px 14px 13px; background: ${context.theme.sectionBackground}; color: ${context.theme.bodyColor}; font-size: 13px; line-height: 1.72;">${escapeHtml(image.caption)}</figcaption>` : ''}
+          ${image.caption ? `<figcaption style="padding: 12px 14px 13px; background: ${captionBandBackground}; color: ${captionBandColor}; font-family: ${captionBandFont}; font-size: 13px; line-height: 1.72; ${captionBandBorder}">${escapeHtml(image.caption)}</figcaption>` : ''}
         </figure>
       `.trim()
     );
