@@ -1637,19 +1637,14 @@ const pickWechatHighlightVariant = (text, mode = 'default') => {
   return 'ink';
 };
 
-const resolveWechatHighlightPerBlockLimit = (block) => {
-  const text = getWechatBlockPlainText(block);
-  const sentenceCount = splitWechatTextIntoSentences(text).length;
-  if (!text || text.length <= 90 || sentenceCount <= 2) {
-    return 1;
-  }
-  return 2;
-};
-
 const enforceWechatHighlightSelectionRules = ({ selections, blocks }) => {
   const output = [];
   const seen = new Set();
+  const sectionMap = buildWechatHighlightSectionMap(blocks);
+  const sectionCounts = new Map();
   const blockCounts = new Map();
+  const perSectionLimit = 4;
+  const perBlockLimit = 1;
   const items = Array.isArray(selections) ? selections : [];
 
   for (const item of items) {
@@ -1665,11 +1660,13 @@ const enforceWechatHighlightSelectionRules = ({ selections, blocks }) => {
     const dedupeKey = `${blockIndex}:${text}`;
     if (seen.has(dedupeKey)) continue;
 
-    const perBlockLimit = resolveWechatHighlightPerBlockLimit(blocks[blockIndex]);
+    const sectionId = sectionMap.get(blockIndex) || 0;
+    if ((sectionCounts.get(sectionId) || 0) >= perSectionLimit) continue;
     if ((blockCounts.get(blockIndex) || 0) >= perBlockLimit) continue;
 
     output.push({ blockIndex, text, variant });
     seen.add(dedupeKey);
+    sectionCounts.set(sectionId, (sectionCounts.get(sectionId) || 0) + 1);
     blockCounts.set(blockIndex, (blockCounts.get(blockIndex) || 0) + 1);
   }
 
@@ -2278,12 +2275,13 @@ const buildWechatBeautyAgentPrompt = ({ title, digest, layout, templateLabel, bl
       : []),
     'Do not inject numbered section wording into any subheading. If section rhythm is needed, express it only through decorative layout choices.',
     'The body must not render a standalone title block. The article starts from credits and the first body block.',
-    'Use highlights sparingly. Choose only the most important sentences.',
+    'Stay objective with highlights. Emphasize only when a sentence materially carries factual judgment, concrete risk, key data, or a real turning point.',
+    'If a sentence clearly deserves emphasis for reader judgment, do not skip it just to look restrained; but never add decorative or repetitive emphasis.',
     'When opening highlight is enabled, return opening_highlight_sentences with 1-3 exact sentences chosen from the first eligible paragraph or quote. Do not default to two. Use one when a single hook is enough, two when the opening benefits from an added echo, and three only when the opening genuinely has a layered setup.',
     'When you return opening_highlight_sentences, every sentence must be copied exactly from the source opening block.',
     'When you return highlight_sentences.text, copy exact substrings from the target block.',
     'Use highlight_sentences for key data, key conclusions, key changes, and meaningful risks or turning points.',
-    'Within one paragraph, highlight at most 2 sentences. For short paragraphs or short quotes, highlight at most 1 sentence. Do not impose a fixed whole-article quota; judge by article length and actual information density.',
+    'Within one paragraph or quote, highlight at most 1 sentence. Within one subsection, highlight at most 4 sentences. Do not impose a fixed whole-article quota; judge by article length and actual information density.',
     'Use chapter_marker at most once, and only for one major section heading.',
     'Use one consistent primary-heading treatment for h2 blocks and one consistent secondary-heading treatment for h3 blocks. Do not randomly mix multiple variants within the same heading level.',
     allowsBoldGeometry
