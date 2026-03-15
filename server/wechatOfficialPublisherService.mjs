@@ -16,7 +16,7 @@ const COVER_IMAGE_MAX_BYTES = 1200 * 1024;
 const INLINE_IMAGE_WIDTH = 1280;
 const COVER_IMAGE_WIDTH = 900;
 const WECHAT_BEAUTY_AGENT_MODEL = 'gemini-3.1-pro-preview';
-const WECHAT_BEAUTY_AGENT_TIMEOUT_MS = 45 * 1000;
+const WECHAT_BEAUTY_AGENT_TIMEOUT_MS = 5 * 60 * 1000;
 const WECHAT_RENDERER_VERSION = 'beauty_plan_v5';
 const WECHAT_OPENING_HIGHLIGHT_MODES = new Set(['off', 'first_sentence', 'smart_lead']);
 
