@@ -17,6 +17,7 @@ import {
   submitWechatPublish,
   upsertWechatDraft,
 } from '../services/wechatPublisherService';
+import { getStoredGeminiApiKey } from '../services/geminiService';
 
 const TEMPLATE_OPTIONS: Array<{ id: WechatTemplateId; label: string; description: string }> = [
   { id: 'latepost_report', label: '晚点报道版', description: '克制留白、蓝灰标题条，适合报道和公司观察。' },
@@ -110,6 +111,12 @@ interface WechatActionErrorViewModel {
   message: string;
   details: string[];
   rawMessage: string;
+}
+
+interface WechatPreviewDiagnostics {
+  requestMode: PreviewRequestMode;
+  reusedRenderPlan: boolean;
+  geminiApiKeyPresent: boolean;
 }
 
 const RELAYOUT_FEEDBACK_EXAMPLES = [
@@ -285,6 +292,11 @@ export const WechatPublisherPanel: React.FC<{
   const [artDirectionDraft, setArtDirectionDraft] = useState(layout?.artDirectionPrompt || '');
   const [styleReferenceError, setStyleReferenceError] = useState<string | null>(null);
   const [previewRequestMode, setPreviewRequestMode] = useState<PreviewRequestMode>('standard');
+  const [previewDiagnostics, setPreviewDiagnostics] = useState<WechatPreviewDiagnostics>({
+    requestMode: 'standard',
+    reusedRenderPlan: false,
+    geminiApiKeyPresent: Boolean(getStoredGeminiApiKey().trim()),
+  });
   const initializedRef = useRef(false);
   const lastPreviewFingerprintRef = useRef('');
   const artDirectionDraftRef = useRef(layout?.artDirectionPrompt || '');
@@ -383,8 +395,19 @@ export const WechatPublisherPanel: React.FC<{
   const resolveReusableRenderPlan = (requestFingerprint: string) =>
     lastPreviewFingerprintRef.current === requestFingerprint ? renderPlan : undefined;
 
+  const appendBeautyAgentWarnings = (warnings: string[], plan?: WechatRenderPlan) => {
+    const nextWarnings = [...warnings];
+    const fallbackReason = String(plan?.beautyAgent?.fallbackReason || '').trim();
+    if (fallbackReason && !nextWarnings.some((warning) => warning.includes(fallbackReason))) {
+      nextWarnings.push(`AI 重排回退原因：${fallbackReason}`);
+    }
+    return nextWarnings;
+  };
+
   const styleReferenceImages = currentLayout.styleReferenceImages || [];
   const previewBeautyAgentUsed = Boolean(renderPlan?.beautyAgent?.used);
+  const previewBeautyAgentModel = String(renderPlan?.beautyAgent?.model || '').trim();
+  const previewBeautyFallbackReason = String(renderPlan?.beautyAgent?.fallbackReason || '').trim();
   const previewFrameKey = `wechat-preview-${previewFrameVersion}-${previewPlanHash || 'no-plan'}`;
 
   const handleArtDirectionPromptChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -468,9 +491,19 @@ export const WechatPublisherPanel: React.FC<{
   const handlePreview = async (mode: PreviewRequestMode = 'standard') => {
     const layoutSnapshot = buildLayoutSnapshot();
     const requestFingerprint = buildRequestFingerprint(layoutSnapshot);
-    const reusableRenderPlan = mode === 'feedback' ? undefined : resolveReusableRenderPlan(requestFingerprint);
+    const geminiApiKeyPresent = Boolean(getStoredGeminiApiKey().trim());
+    const cachedRenderPlan = mode === 'feedback' ? undefined : resolveReusableRenderPlan(requestFingerprint);
+    const shouldForceRetryFallbackPlan =
+      mode === 'standard' && geminiApiKeyPresent && Boolean(cachedRenderPlan) && !cachedRenderPlan?.beautyAgent?.used;
+    const reusableRenderPlan = shouldForceRetryFallbackPlan ? undefined : cachedRenderPlan;
     const previousPlanHash = renderPlan?.beautyAgent?.planHash || '';
+    const reusedRenderPlan = Boolean(reusableRenderPlan);
     setPreviewRequestMode(mode);
+    setPreviewDiagnostics({
+      requestMode: mode,
+      reusedRenderPlan,
+      geminiApiKeyPresent,
+    });
     setBusyAction('preview');
     setActionError(null);
     try {
@@ -483,12 +516,15 @@ export const WechatPublisherPanel: React.FC<{
       });
       const nextRenderPlan = payload.renderPlan || payload.metadata.renderPlan || reusableRenderPlan;
       const nextPlanHash = nextRenderPlan?.beautyAgent?.planHash || '';
-      const nextWarnings = [...(payload.warnings || payload.metadata.warnings || [])];
+      const nextWarnings = appendBeautyAgentWarnings([...(payload.warnings || payload.metadata.warnings || [])], nextRenderPlan);
       if (mode === 'feedback' && nextRenderPlan && previousPlanHash && nextPlanHash === previousPlanHash) {
         nextWarnings.push('本次“按反馈重新排版”已经重新请求，但返回的排版方案与上一版完全一致。更像是模型没有产出新方案，不是前端没发请求。');
       }
       if (mode === 'feedback' && nextRenderPlan && !nextRenderPlan.beautyAgent?.used) {
         nextWarnings.push('本次“按反馈重新排版”未启用 AI 重排，当前看到的是基础排版回退结果。');
+      }
+      if (shouldForceRetryFallbackPlan) {
+        nextWarnings.unshift('检测到前端已存在 Gemini API key，且上一版是未启用 AI 的回退方案；本次标准预览已自动重新尝试 AI 重排。');
       }
       setPreviewHtml(payload.previewHtml);
       setPreviewWarnings(nextWarnings);
@@ -548,7 +584,7 @@ export const WechatPublisherPanel: React.FC<{
       const nextRenderPlan = payload.renderPlan || payload.metadata.renderPlan || reusableRenderPlan;
       const nextPlanHash = nextRenderPlan?.beautyAgent?.planHash || '';
       setPreviewHtml(payload.previewHtml);
-      setPreviewWarnings(payload.warnings || payload.metadata.warnings || []);
+      setPreviewWarnings(appendBeautyAgentWarnings(payload.warnings || payload.metadata.warnings || [], nextRenderPlan));
       setPreviewRendererVersion(payload.metadata.rendererVersion || 'legacy_or_unknown');
       setRenderPlan(nextRenderPlan);
       setPreviewPlanHash(nextPlanHash);
@@ -941,6 +977,44 @@ export const WechatPublisherPanel: React.FC<{
               <span className="rounded-full bg-white px-3 py-1 font-medium ring-1 ring-slate-200">
                 生效反馈: {appliedArtDirectionPrompt || '无'}
               </span>
+            </div>
+          ) : null}
+          {previewHtml ? (
+            <div
+              className={`mb-3 rounded-2xl border px-4 py-3 text-sm leading-relaxed ${
+                previewBeautyAgentUsed
+                  ? 'border-emerald-200 bg-emerald-50 text-emerald-800'
+                  : 'border-amber-200 bg-amber-50 text-amber-900'
+              }`}
+            >
+              <div className="text-xs font-bold uppercase tracking-wider">
+                AI 重排诊断
+              </div>
+              <div className="mt-2 grid gap-2 sm:grid-cols-2">
+                <div>前端 Gemini Key：{previewDiagnostics.geminiApiKeyPresent ? '已检测到' : '未检测到'}</div>
+                <div>本轮请求：{previewDiagnostics.requestMode === 'feedback' ? '按反馈重新排版' : '按当前设置预览'}</div>
+                <div>
+                  排版方案来源：
+                  {previewDiagnostics.reusedRenderPlan
+                    ? '复用上一版 plan'
+                    : previewBeautyAgentUsed
+                      ? '本轮 AI 生成'
+                      : '本轮基础排版回退'}
+                </div>
+                <div>Beauty Agent 模型：{previewBeautyAgentModel || '未返回'}</div>
+              </div>
+              {previewBeautyFallbackReason ? (
+                <div className="mt-3 rounded-xl bg-white/70 px-3 py-2 text-[13px] leading-relaxed text-amber-900">
+                  <div className="font-semibold">回退原因</div>
+                  <div className="mt-1 break-words">{previewBeautyFallbackReason}</div>
+                </div>
+              ) : null}
+              {previewDiagnostics.reusedRenderPlan && !previewBeautyAgentUsed ? (
+                <div className="mt-3 text-[13px] leading-relaxed">
+                  当前预览直接复用了上一版未启用 AI 的排版方案。现在标准预览已经做了保护：如果前端已检测到 Gemini
+                  key 且上一版是 fallback，下一次同内容预览会自动重新尝试 AI 重排，不再静默复用旧结果。
+                </div>
+              ) : null}
             </div>
           ) : null}
           <div className="overflow-hidden rounded-[24px] border border-slate-200 bg-white shadow-sm">
