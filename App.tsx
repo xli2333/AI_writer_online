@@ -1460,10 +1460,6 @@ const App: React.FC = () => {
                 生成商业文章终稿
               </span>
             </h1>
-            <p className="mx-auto mb-12 max-w-3xl text-lg leading-relaxed text-slate-500">
-              这条流程保留原来的研究、方向选择、大纲、成文与审查骨架，但输出对象已经从 case 切换为商业文章，TN / 讨论指南可以按任务选择是否生成。
-            </p>
-
             <div className="group rounded-3xl bg-white p-3 shadow-[0_20px_50px_rgba(0,0,0,0.08)] ring-1 ring-slate-100 transition-all duration-300 hover:-translate-y-1">
               <form onSubmit={handleStartResearch} className="flex flex-col">
                 <div className="relative flex w-full items-center">
