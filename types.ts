@@ -314,6 +314,7 @@ export interface WechatRenderPlan {
   listStyles: Array<WechatBlockVariantSelection<WechatListVariant>>;
   tableStyles: Array<WechatBlockVariantSelection<WechatTableVariant>>;
   imageStyles: Array<WechatBlockVariantSelection<WechatImageVariant>>;
+  openingHighlightSentences: string[];
   highlightSentences: WechatHighlightSelection[];
   dividerAfterBlocks: number[];
   beautyAgent: WechatBeautyAgentInfo;

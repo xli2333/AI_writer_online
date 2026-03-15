@@ -629,6 +629,10 @@ const WECHAT_BEAUTY_PLAN_SCHEMA = {
         required: ['block_index', 'variant'],
       },
     },
+    opening_highlight_sentences: {
+      type: Type.ARRAY,
+      items: { type: Type.STRING },
+    },
     highlight_sentences: {
       type: Type.ARRAY,
       items: {
@@ -658,6 +662,7 @@ const WECHAT_BEAUTY_PLAN_SCHEMA = {
     'list_styles',
     'table_styles',
     'image_styles',
+    'opening_highlight_sentences',
     'highlight_sentences',
     'divider_after_blocks',
     'notes',
@@ -1341,7 +1346,11 @@ const scoreWechatOpeningHighlightCandidate = (candidate) => {
   return score;
 };
 
-const selectWechatOpeningHighlightSentences = ({ blocks, mode }) => {
+const selectWechatOpeningHighlightSentences = ({ blocks, mode, selections }) => {
+  const normalizedSelections = normalizeWechatOpeningHighlightSelections({ selections, blocks, mode });
+  if (normalizedSelections.length) {
+    return normalizedSelections;
+  }
   if (mode === 'off') {
     return [];
   }
@@ -1362,14 +1371,21 @@ const selectWechatOpeningHighlightSentences = ({ blocks, mode }) => {
 
   const selected = [];
   for (const candidate of ranked) {
-    if (selected.length >= 2) {
+    if (selected.length >= 3) {
       break;
     }
     if (selected.some((item) => item.text === candidate.text)) {
       continue;
     }
-    if (selected.length > 0 && candidate.score < 18) {
-      continue;
+    if (selected.length === 1) {
+      if (candidate.score < 32 || selected[0].score - candidate.score > 18) {
+        continue;
+      }
+    }
+    if (selected.length === 2) {
+      if (candidate.score < 40 || selected[0].score - candidate.score > 12) {
+        continue;
+      }
     }
     selected.push(candidate);
   }
@@ -1381,7 +1397,34 @@ const selectWechatOpeningHighlightSentences = ({ blocks, mode }) => {
   return selected
     .sort((left, right) => left.blockOffset - right.blockOffset || left.sentenceOffset - right.sentenceOffset)
     .map((candidate) => candidate.text)
-    .slice(0, 2);
+    .slice(0, 3);
+};
+
+const normalizeWechatOpeningHighlightSelections = ({ selections, blocks, mode }) => {
+  if (mode === 'off') {
+    return [];
+  }
+  const candidates = collectWechatOpeningHighlightCandidates(blocks);
+  if (!candidates.length) {
+    return [];
+  }
+  if (mode === 'first_sentence') {
+    return [candidates[0].text];
+  }
+  const allowed = new Set(candidates.map((candidate) => candidate.text));
+  const output = [];
+  const seen = new Set();
+  const items = Array.isArray(selections) ? selections : [];
+  for (const item of items) {
+    const text = cleanText(item);
+    if (!text || seen.has(text) || !allowed.has(text)) continue;
+    output.push(text);
+    seen.add(text);
+    if (output.length >= 3) {
+      break;
+    }
+  }
+  return output;
 };
 
 const resolveWechatOpeningHighlightSourceBlockIndex = (blocks) =>
@@ -1399,10 +1442,11 @@ const stripLeadingWechatOpeningHighlightSentences = (text, sentences = []) => {
   return remaining;
 };
 
-const renderWechatOpeningHighlightBlock = ({ blocks, layout, theme }) => {
+const renderWechatOpeningHighlightBlock = ({ blocks, layout, theme, renderPlan }) => {
   const sentences = selectWechatOpeningHighlightSentences({
     blocks,
     mode: layout?.openingHighlightMode || 'smart_lead',
+    selections: renderPlan?.openingHighlightSentences,
   });
   if (!sentences.length) {
     return '';
@@ -1593,11 +1637,18 @@ const pickWechatHighlightVariant = (text, mode = 'default') => {
   return 'ink';
 };
 
-const enforceWechatHighlightSelectionRules = ({ selections, blocks, totalLimit = 12, perSectionLimit = 3, perBlockLimit = 1 }) => {
+const resolveWechatHighlightPerBlockLimit = (block) => {
+  const text = getWechatBlockPlainText(block);
+  const sentenceCount = splitWechatTextIntoSentences(text).length;
+  if (!text || text.length <= 90 || sentenceCount <= 2) {
+    return 1;
+  }
+  return 2;
+};
+
+const enforceWechatHighlightSelectionRules = ({ selections, blocks }) => {
   const output = [];
   const seen = new Set();
-  const sectionMap = buildWechatHighlightSectionMap(blocks);
-  const sectionCounts = new Map();
   const blockCounts = new Map();
   const items = Array.isArray(selections) ? selections : [];
 
@@ -1614,18 +1665,12 @@ const enforceWechatHighlightSelectionRules = ({ selections, blocks, totalLimit =
     const dedupeKey = `${blockIndex}:${text}`;
     if (seen.has(dedupeKey)) continue;
 
-    const sectionId = sectionMap.get(blockIndex) || 0;
-    if ((sectionCounts.get(sectionId) || 0) >= perSectionLimit) continue;
+    const perBlockLimit = resolveWechatHighlightPerBlockLimit(blocks[blockIndex]);
     if ((blockCounts.get(blockIndex) || 0) >= perBlockLimit) continue;
 
     output.push({ blockIndex, text, variant });
     seen.add(dedupeKey);
-    sectionCounts.set(sectionId, (sectionCounts.get(sectionId) || 0) + 1);
     blockCounts.set(blockIndex, (blockCounts.get(blockIndex) || 0) + 1);
-
-    if (output.length >= totalLimit) {
-      break;
-    }
   }
 
   return output;
@@ -1695,9 +1740,6 @@ const normalizeWechatHighlightSelections = ({ selections, blocks }) => {
     if (seen.has(dedupeKey)) continue;
     output.push({ blockIndex, text, variant });
     seen.add(dedupeKey);
-    if (output.length >= 24) {
-      break;
-    }
   }
   return output;
 };
@@ -1926,6 +1968,7 @@ const buildWechatRenderPlanHash = (plan) =>
     listStyles: plan.listStyles,
     tableStyles: plan.tableStyles,
     imageStyles: plan.imageStyles,
+    openingHighlightSentences: plan.openingHighlightSentences,
     highlightSentences: plan.highlightSentences,
     dividerAfterBlocks: plan.dividerAfterBlocks,
   });
@@ -2050,6 +2093,10 @@ const buildDefaultWechatRenderPlan = (blocks, layout = {}, beautyAgent = {}) => 
     listStyles: buildDefaultWechatListSelections(blocks, layout),
     tableStyles: buildDefaultWechatTableSelections(blocks, layout),
     imageStyles: buildDefaultWechatImageSelections(blocks, layout),
+    openingHighlightSentences: selectWechatOpeningHighlightSentences({
+      blocks,
+      mode: layout?.openingHighlightMode || 'smart_lead',
+    }),
     highlightSentences: buildDefaultWechatHighlightSelections(blocks, layout),
     dividerAfterBlocks: buildDefaultWechatDividerSelections(blocks),
     beautyAgent: {
@@ -2135,6 +2182,18 @@ const normalizeWechatRenderPlan = (inputPlan, blocks, layout = {}, beautyAgent =
       fallback: basePlan.imageStyles,
       limit: 16,
     }),
+    openingHighlightSentences: (() => {
+      const providedSelections = inputPlan?.opening_highlight_sentences ?? inputPlan?.openingHighlightSentences;
+      const normalizedSelections = normalizeWechatOpeningHighlightSelections({
+        selections: providedSelections,
+        blocks,
+        mode: layout?.openingHighlightMode || 'smart_lead',
+      });
+      if (normalizedSelections.length) {
+        return normalizedSelections;
+      }
+      return basePlan.openingHighlightSentences;
+    })(),
     highlightSentences: mergeWechatHighlightSelections({
       primary: normalizeWechatHighlightSelections({
         selections: inputPlan?.highlight_sentences ?? inputPlan?.highlightSentences,
@@ -2220,9 +2279,11 @@ const buildWechatBeautyAgentPrompt = ({ title, digest, layout, templateLabel, bl
     'Do not inject numbered section wording into any subheading. If section rhythm is needed, express it only through decorative layout choices.',
     'The body must not render a standalone title block. The article starts from credits and the first body block.',
     'Use highlights sparingly. Choose only the most important sentences.',
+    'When opening highlight is enabled, return opening_highlight_sentences with 1-3 exact sentences chosen from the first eligible paragraph or quote. Do not default to two. Use one when a single hook is enough, two when the opening benefits from an added echo, and three only when the opening genuinely has a layered setup.',
+    'When you return opening_highlight_sentences, every sentence must be copied exactly from the source opening block.',
     'When you return highlight_sentences.text, copy exact substrings from the target block.',
     'Use highlight_sentences for key data, key conclusions, key changes, and meaningful risks or turning points.',
-    'Within one subsection, highlight at most 3 sentences. Within one paragraph, highlight at most 1 sentence.',
+    'Within one paragraph, highlight at most 2 sentences. For short paragraphs or short quotes, highlight at most 1 sentence. Do not impose a fixed whole-article quota; judge by article length and actual information density.',
     'Use chapter_marker at most once, and only for one major section heading.',
     'Use one consistent primary-heading treatment for h2 blocks and one consistent secondary-heading treatment for h3 blocks. Do not randomly mix multiple variants within the same heading level.',
     allowsBoldGeometry
@@ -2240,7 +2301,7 @@ const buildWechatBeautyAgentPrompt = ({ title, digest, layout, templateLabel, bl
     'Allowed table variants: data_grid, compact_grid, matrix_panel, minimal_rows.',
     'Allowed image variants: full_bleed, editorial_card, caption_focus, shadow_card, caption_band, border_frame.',
     'Allowed highlight variants: marker, underline, ink, accent_bar, corner, band, reverse, soft_tab.',
-    'At most 1 lead paragraph, at most 2 callout paragraphs, at most 1 spotlight or data_callout paragraph total, at most 3 highlight sentences per subsection, and at most 3 dividers.',
+    'At most 1 lead paragraph, at most 2 callout paragraphs, at most 1 spotlight or data_callout paragraph total, and at most 3 dividers.',
     `Article title for context only: ${title || ''}`,
     `Digest for context only: ${digest || ''}`,
     `Author credit: ${layout.author || ''}`,
@@ -2353,6 +2414,7 @@ const buildWechatBeautyRenderContext = ({ blocks, renderPlan, theme, layout }) =
     ? selectWechatOpeningHighlightSentences({
         blocks,
         mode: layout?.openingHighlightMode || 'smart_lead',
+        selections: renderPlan?.openingHighlightSentences,
       })
     : [];
   const openingHighlightBlockIndex = openingHighlightSentences.length
@@ -2951,11 +3013,16 @@ const validateWechatRenderedBlocksPreserveText = (blocks, renderedBlocks) => {
   }
 };
 
-const collectWechatRenderedBlockDiagnostics = (blocks, renderedBlocks, layout = {}) => {
+const collectWechatRenderedBlockDiagnostics = (blocks, renderedBlocks, layout = {}, renderPlan = {}) => {
   const warnings = [];
-  const openingHighlightBlockIndex = hasWechatOpeningHighlight({ blocks, layout })
-    ? resolveWechatOpeningHighlightSourceBlockIndex(blocks)
-    : -1;
+  const openingHighlightSentences = hasWechatOpeningHighlight({ blocks, layout })
+    ? selectWechatOpeningHighlightSentences({
+        blocks,
+        mode: layout?.openingHighlightMode || 'smart_lead',
+        selections: renderPlan?.openingHighlightSentences,
+      })
+    : [];
+  const openingHighlightBlockIndex = openingHighlightSentences.length ? resolveWechatOpeningHighlightSourceBlockIndex(blocks) : -1;
   for (let index = 0; index < blocks.length; index += 1) {
     if (blocks[index].type === 'image') {
       continue;
@@ -3124,12 +3191,12 @@ const renderWechatArticleHtmlWithPlan = ({ title, blocks, theme, layout, renderP
   const context = buildWechatBeautyRenderContext({ blocks, renderPlan, theme, layout });
   const renderedBlocks = blocks.map((block, blockIndex) => renderWechatBeautyBlockHtml(block, blockIndex, context));
   validateWechatRenderedBlocksPreserveText(blocks, renderedBlocks);
-  const diagnosticWarnings = collectWechatRenderedBlockDiagnostics(blocks, renderedBlocks, layout);
+  const diagnosticWarnings = collectWechatRenderedBlockDiagnostics(blocks, renderedBlocks, layout, renderPlan);
   const bodyHtml = renderedBlocks
     .map(({ html }, blockIndex) => `${html}${context.dividerSet.has(blockIndex) ? renderWechatBeautyDivider(theme) : ''}`)
     .join('\n');
   const creditsHtml = renderWechatCreditsBlock({ layout, theme, renderPlan });
-  const openingHighlightHtml = renderWechatOpeningHighlightBlock({ blocks, layout, theme });
+  const openingHighlightHtml = renderWechatOpeningHighlightBlock({ blocks, layout, theme, renderPlan });
   return {
     contentHtml: `
       <section style="padding: 18px 10px 26px; background: #FFFFFF;">
